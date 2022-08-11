@@ -4,10 +4,8 @@ editor: visual
 ---
 
 ```{r}
-library(palmerpenguins)
+library(here)
 library(tidyverse)
-library(tidymodels)
-library(knitr)
 ```
 
 ## Simple linear regression

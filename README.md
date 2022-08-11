@@ -9,4 +9,4 @@ link to where deployed
 
 # Attribution
 
-Much of the content is based on STA 210 - Fall 2022 by Dr. Mine Cetinkaya Rundel .
+Much of the content of this wesbite is based on STA 210 - Fall 2022 by Dr. Mine Cetinkaya Rundel.
