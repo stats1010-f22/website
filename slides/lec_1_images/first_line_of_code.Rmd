@@ -1,6 +1,7 @@
 ---
 title: "Introduction to the diamonds dataset"
-editor: visual
+output: 
+   html_document
 ---
 
 # Scenario
@@ -38,6 +39,4 @@ ggplot(data = diamonds, aes(x = price)) +
 
 ## What should the price of your diamonds be?
 
-Based upon the above plot, and since the diamonds are nice, they should all cost above $150,000, right?
-
-
+Based upon the above plot, and since the diamonds are nice, they should all cost above \$150,000, right?
