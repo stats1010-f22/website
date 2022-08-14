@@ -38,6 +38,6 @@ ggplot(data = diamonds, aes(x = price)) +
 
 ## What should the price of your diamonds be?
 
-Based upon the above plot, and since the diamonds are nice, they should all cost above $150,000. Is this a good idea or not?
+Based upon the above plot, and since the diamonds are nice, they should all cost above $150,000, right?
 
 
