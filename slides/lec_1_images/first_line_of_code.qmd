@@ -1,5 +1,5 @@
 ---
-title: "lec_01"
+title: "Introduction to the diamonds dataset"
 editor: visual
 ---
 
@@ -17,7 +17,7 @@ You own a jewelry business and are working to price your [diamonds](tps://www.lo
 
 -   Comments are really important and are notes to your future self to remind you about steps that you took and decisions that you made.
 
-```{r}
+```{r, eval=FALSE, echo=TRUE}
 ## loading library
 library(tidyverse)
 
@@ -25,12 +25,12 @@ library(tidyverse)
 View(diamonds)
 ```
 
-```{r}
+```{r, eval=FALSE, echo=TRUE}
 ## What is in this dataset?
 ?diamonds
 ```
 
-```{r}
+```{r, eval=FALSE, echo=TRUE}
 ## What is the distribution of price?
 ggplot(data = diamonds, aes(x = price)) +
   geom_dotplot(stackratio = 0.009, alpha = 0.05, stackdir = "centerwhole") 

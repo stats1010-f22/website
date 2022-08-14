@@ -415,21 +415,21 @@
   {
     "objectID": "slides/01_introduction.html#new-directory",
     "href": "slides/01_introduction.html#new-directory",
-    "title": "Lec 1 - Downloading software and creating a project",
+    "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "New directory",
     "text": "New directory\n\nFigure @ref(fig:2) Select “New Directory”"
   },
   {
     "objectID": "slides/01_introduction.html#directory-type",
     "href": "slides/01_introduction.html#directory-type",
-    "title": "Lec 1 - Downloading software and creating a project",
+    "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Directory type",
     "text": "Directory type\n\nFigure @ref(fig:3) Then select “New Project”"
   },
   {
     "objectID": "slides/01_introduction.html#new-folder",
     "href": "slides/01_introduction.html#new-folder",
-    "title": "Lec 1 - Downloading software and creating a project",
+    "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "New folder",
     "text": "New folder\nHit the “Browse” button, then the “New Folder” button and name it “Stats1010.” All work related to this class will be in this folder, and we will create a new document for each chapter and homework.\n\nthen hit “Create project.”"
   },
@@ -453,5 +453,117 @@
     "title": "Lec 1 - Downloading software and creating a project",
     "section": "Importing data",
     "text": "Importing data\n\n\n\nDouble click on the data you would like to install in the data folder in your project and select “Import Dataset.”\n\n\nIf this is the first time you are importing data, you may be prompted to download a package first. Follow the Graphical User Interface (GUI) to import the data. Check that the data is as you expect and update “Import Options” until it seems reasonable. Copy the coding from “Code Preview” and save put it in your document “so that when you restart R, you have coding that will import the data.\n\n\n\nWhen the data is imported, check the “Data Preview” to make sure it is what you expect. If not, change the “Import Options.”\n\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "slides/lec_1_images/first_line_of_code.html",
+    "href": "slides/lec_1_images/first_line_of_code.html",
+    "title": "Introduction to the diamonds dataset",
+    "section": "",
+    "text": "You own a jewelry business and are working to price your diamonds. To facilitate, you explore the diamond dataset in R and pay special attention to the cost of the diamond. Let’s explore together."
+  },
+  {
+    "objectID": "slides/lec_1_images/first_line_of_code.html#what-should-the-price-of-your-diamonds-be",
+    "href": "slides/lec_1_images/first_line_of_code.html#what-should-the-price-of-your-diamonds-be",
+    "title": "Introduction to the diamonds dataset",
+    "section": "What should the price of your diamonds be?",
+    "text": "What should the price of your diamonds be?\nBased upon the above plot, and since the diamonds are nice, they should all cost above $150,000, right?"
+  },
+  {
+    "objectID": "slides/01_introduction.html#name-the-document",
+    "href": "slides/01_introduction.html#name-the-document",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Name the document",
+    "text": "Name the document\nName the document “lec_01” and hit create\n\nFigure @ref(fig:2) Naming the document"
+  },
+  {
+    "objectID": "slides/01_introduction.html#insert-an-r-code-chuck",
+    "href": "slides/01_introduction.html#insert-an-r-code-chuck",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Insert an R code chuck",
+    "text": "Insert an R code chuck\nInsert a code chunk\n\nFigure @ref(fig:2) Insert code chunk"
+  },
+  {
+    "objectID": "slides/01_introduction.html#write-your-first-line-of-coding",
+    "href": "slides/01_introduction.html#write-your-first-line-of-coding",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Write your first line of coding",
+    "text": "Write your first line of coding"
+  },
+  {
+    "objectID": "slides/01_introduction.html#what-if-it-breaks",
+    "href": "slides/01_introduction.html#what-if-it-breaks",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "What if it breaks?",
+    "text": "What if it breaks?\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "slides/lect_02.html#why",
+    "href": "slides/lect_02.html#why",
+    "title": "Lec 2 - The here package and adding your own data",
+    "section": "Why?",
+    "text": "Why?\nToday we will explore the here package. This package is used to organize files within R:\n\ninstall.packages(\"here\")"
+  },
+  {
+    "objectID": "slides/lect_02.html#including-your-own-data",
+    "href": "slides/lect_02.html#including-your-own-data",
+    "title": "Lec 2 - The here package and adding your own data",
+    "section": "Including your own data",
+    "text": "Including your own data\nTo add data to your directory, first create a folder that\n\nFigure @ref(fig:3) Adding a folder.and name it “data”. All data related to this chapter should be contained in this folder. In your file management system place your data in this folder. Then in the “Files” menu double-click on the dataset that you would like to import into R."
+  },
+  {
+    "objectID": "slides/lect_02.html#importing-data",
+    "href": "slides/lect_02.html#importing-data",
+    "title": "Lec 2 - The here package and adding your own data",
+    "section": "Importing data",
+    "text": "Importing data\n\n\n\nDouble click on the data you would like to install in the data folder in your project and select “Import Dataset.”\n\n\nIf this is the first time you are importing data, you may be prompted to download a package first. Follow the Graphical User Interface (GUI) to import the data. Check that the data is as you expect and update “Import Options” until it seems reasonable. Copy the coding from “Code Preview” and save put it in your document “so that when you restart R, you have coding that will import the data.\n\n\n\nWhen the data is imported, check the “Data Preview” to make sure it is what you expect. If not, change the “Import Options.”\n\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "documents/about_R.html",
+    "href": "documents/about_R.html",
+    "title": "About R",
+    "section": "",
+    "text": "The R programming language was first released on [29 February 2000](https://www.hermetic.ch/y2k/feb29.htm). [Ross Ihaka](https://en.wikipedia.org/wiki/Ross_Ihaka) and [Robert Gentleman](https://en.wikipedia.org/wiki/Robert_Gentleman_(statistician)) wanted a free, open-source language that their statistics students at the University of Auckland could use to fit statistical models. [R is now an internationally recognized language used all over the world](https://www.nytimes.com/2009/01/07/technology/business-computing/07program.html). It is possible to do a multitude of advanced computations in R but to keep R nimble, we don’t download all of the things at once. Instead, coding is bundled together into something called “packages” that are stored on [CRAN](https://cran.r-project.org/)."
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources for the introductory data science courses offered by the Department of Data Science and Statistics at Wharton go to the UPDATE website, UPDATE."
+  },
+  {
+    "objectID": "ae/ae-0-movies.html",
+    "href": "ae/ae-0-movies.html",
+    "title": "Movie budgets and revenues",
+    "section": "",
+    "text": "Important\n\n\n\nThis application exercise is a demo only. You do not have a corresponding repository for it and you’re not expected to turn in anything for it.\nWe will look at the relationship between budget and revenue for movies made in the United States in 1986 to 2020. The dataset is created based on data from the Internet Movie Database (IMDB)."
+  },
+  {
+    "objectID": "ae/ae-0-movies.html#data",
+    "href": "ae/ae-0-movies.html#data",
+    "title": "Movie budgets and revenues",
+    "section": "Data",
+    "text": "Data\nThe movies data set includes basic information about each movie including budget, genre, movie studio, director, etc. A full list of the variables may be found here.\n\nmovies <- read_csv(\"https://raw.githubusercontent.com/danielgrijalva/movie-stats/master/movies.csv\")\n\nView the first 10 rows of data.\n\nmovies\n\n# A tibble: 7,668 × 15\n   name   rating genre  year released score  votes director writer star  country\n   <chr>  <chr>  <chr> <dbl> <chr>    <dbl>  <dbl> <chr>    <chr>  <chr> <chr>  \n 1 The S… R      Drama  1980 June 13…   8.4 9.27e5 Stanley… Steph… Jack… United…\n 2 The B… R      Adve…  1980 July 2,…   5.8 6.5 e4 Randal … Henry… Broo… United…\n 3 Star … PG     Acti…  1980 June 20…   8.7 1.2 e6 Irvin K… Leigh… Mark… United…\n 4 Airpl… PG     Come…  1980 July 2,…   7.7 2.21e5 Jim Abr… Jim A… Robe… United…\n 5 Caddy… R      Come…  1980 July 25…   7.3 1.08e5 Harold … Brian… Chev… United…\n 6 Frida… R      Horr…  1980 May 9, …   6.4 1.23e5 Sean S.… Victo… Bets… United…\n 7 The B… R      Acti…  1980 June 20…   7.9 1.88e5 John La… Dan A… John… United…\n 8 Ragin… R      Biog…  1980 Decembe…   8.2 3.3 e5 Martin … Jake … Robe… United…\n 9 Super… PG     Acti…  1980 June 19…   6.8 1.01e5 Richard… Jerry… Gene… United…\n10 The L… R      Biog…  1980 May 16,…   7   1   e4 Walter … Bill … Davi… United…\n# … with 7,658 more rows, and 4 more variables: budget <dbl>, gross <dbl>,\n#   company <chr>, runtime <dbl>\n\n\nThe ___ dataset has ___ observations and ___ variables."
+  },
+  {
+    "objectID": "ae/ae-0-movies.html#analysis",
+    "href": "ae/ae-0-movies.html#analysis",
+    "title": "Movie budgets and revenues",
+    "section": "Analysis",
+    "text": "Analysis\n\nGross over time\nWe begin by looking at how the average gross revenue (gross) has changed over time. Since we want to visualize the results, we will choose a few genres of interest for the analysis.\n\ngenre_list <- c(\"Comedy\", \"Action\", \"Animation\", \"Horror\")\n\nThen, we will filter for these genres and visualize the average gross revenue over time.\n\nmovies %>%\n  filter(genre %in% genre_list) %>% \n  group_by(genre,year) %>%\n  summarise(avg_gross = mean(gross)) %>%\n  ggplot(mapping = aes(x = year, y = avg_gross, color= genre)) +\n    geom_point() + \n    geom_line() +\n    scale_color_viridis_d() +\n    scale_y_continuous(labels = label_dollar()) +\n    labs(\n      x = \"Year\",\n      y = \"Average Gross Revenue (US Dollars)\",\n      color = \"Genre\",\n      title = \"Gross Revenue Over Time\"\n    )\n\n`summarise()` has grouped output by 'genre'. You can override using the\n`.groups` argument.\n\n\nWarning: Removed 47 rows containing missing values (geom_point).\n\n\nWarning: Removed 23 row(s) containing missing values (geom_path).\n\n\n\n\n\nThe plot suggests …\n\n\nBudget and gross\nNext, let’s see the relationship between a movie’s budget and its gross revenue.\n\nmovies %>%\n  filter(genre %in% genre_list, budget > 0) %>% \n  ggplot(mapping = aes(x=log(budget), y = log(gross), color=genre)) +\n  geom_point(alpha = 0.6) +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  facet_wrap(~ genre) + \n  scale_color_viridis_d() +\n  labs(\n    x = \"Log-transformed Budget\",\n    y = \"Log-transformed Gross Revenue\"\n  )\n\n`geom_smooth()` using formula 'y ~ x'\n\n\nWarning: Removed 35 rows containing non-finite values (stat_smooth).\n\n\nWarning: Removed 35 rows containing missing values (geom_point)."
+  },
+  {
+    "objectID": "ae/ae-0-movies.html#exercises",
+    "href": "ae/ae-0-movies.html#exercises",
+    "title": "Movie budgets and revenues",
+    "section": "Exercises",
+    "text": "Exercises\n\nSuppose we fit a regression model for each genre that uses budget to predict gross revenue. What are the signs of the correlation between budget and gross and the slope in each regression equation?\nSuppose we fit the regression model from the previous question. Which genre would you expect to have the smallest residuals, on average (residual = observed revenue - predicted revenue)?\nIn the remaining time, discuss the following: Notice in the graph above that budget and gross are log-transformed. Why are the log-transformed values of the variables displayed rather than the original values (in U.S. dollars)?"
+  },
+  {
+    "objectID": "ae/ae-0-movies.html#appendix",
+    "href": "ae/ae-0-movies.html#appendix",
+    "title": "Movie budgets and revenues",
+    "section": "Appendix",
+    "text": "Appendix\nBelow is a list of genres in the data set:\n\nmovies %>% \n  distinct(genre) %>%\n  arrange(genre) %>% \n  datatable()"
   }
 ]
