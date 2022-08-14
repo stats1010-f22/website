@@ -1,0 +1,6 @@
+---
+title: "About R"
+editor: visual
+---
+
+The R programming language was first released on \[29 February 2000\](https://www.hermetic.ch/y2k/feb29.htm). \[Ross Ihaka\](https://en.wikipedia.org/wiki/Ross_Ihaka) and \[Robert Gentleman\](https://en.wikipedia.org/wiki/Robert_Gentleman\_(statistician)) wanted a free, open-source language that their statistics students at the University of Auckland could use to fit statistical models. \[R is now an internationally recognized language used all over the world\](https://www.nytimes.com/2009/01/07/technology/business-computing/07program.html). It is possible to do a multitude of advanced computations in R but to keep R nimble, we don't download all of the things at once. Instead, coding is bundled together into something called "packages" that are stored on \[CRAN\](https://cran.r-project.org/).

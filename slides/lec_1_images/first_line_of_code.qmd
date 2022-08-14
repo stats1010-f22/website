@@ -1,0 +1,43 @@
+---
+title: "lec_01"
+editor: visual
+---
+
+# Scenario
+
+You own a jewelry business and are working to price your [diamonds](tps://www.londonde.com/blogs/worlds-most-famous-diamonds/). To facilitate, you **explore** the diamond dataset in R and pay special attention to the cost of the diamond. Let's **explore** together.
+
+# Coding basics
+
+[Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.](https://style.tidyverse.org/index.html)
+
+-   When writing code, load all libraries first.
+
+-   "\##" is used to write comments in R and should be used to justify next steps and anything unusual or unexpected steps
+
+-   Comments are really important and are notes to your future self to remind you about steps that you took and decisions that you made.
+
+```{r}
+## loading library
+library(tidyverse)
+
+## First look at the dataset
+View(diamonds)
+```
+
+```{r}
+## What is in this dataset?
+?diamonds
+```
+
+```{r}
+## What is the distribution of price?
+ggplot(data = diamonds, aes(x = price)) +
+  geom_dotplot(stackratio = 0.009, alpha = 0.05, stackdir = "centerwhole") 
+```
+
+## What should the price of your diamonds be?
+
+Based upon the above plot, and since the diamonds are nice, they should all cost above $150,000. Is this a good idea or not?
+
+
