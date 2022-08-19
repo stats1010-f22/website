@@ -6,11 +6,15 @@ title: "Teaching team"
 
 ![](images/team/gwynn.jpg){style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of Dr. gwynn sturdevant" width="150"}
 
-[Dr. gwynn sturdevant](http://nzgwynn.com/) (she/her/ella) is a Lecturer at Wharton. gwynn's work focuses on revamping introductory statistics and data science curriculum, connecting recent advances in human computer interaction to statistical programming languages, and community-led research involving those facing entrenched inequalities. 
+[dr. gwynn sturdevant](http://nzgwynn.com/) (she/her/ella) is a Lecturer at Wharton. gwynn's work focuses on revamping introductory statistics and data science curriculum, connecting recent advances in human computer interaction to statistical programming languages, and community-led research involving those facing entrenched inequalities.
 
-| Office hours | Location |
-|--------------|----------|
-| UPDATE       | UPDATE   |
-| UPDATE       | UPDATE   |
+| Office hours       | Location                                                  |
+|--------------------|-----------------------------------------------------------|
+| Tues 11:15 - 12:15 | ARB 327                                                   |
+| Fri 11:00 - 12:00  | [Zoom](https://upenn.zoom.us/j/93698126499?pwd=LzVBOFVjY) |
 
 If these times don't work for you or you'd like to schedule a one-on-one meeting, you can do so by emailing gwynnc\@wharton.upenn.edu. Please put STATS 1010 in the subject line.
+
+|                                   | Name         | Office hours | Location |
+|:---------------------------------:|--------------|--------------|----------|
+| ![](images/team/Chao_Patrick.jpg) | Patrick Chao | TBD          | Zoom     |

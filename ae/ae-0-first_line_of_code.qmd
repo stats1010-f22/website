@@ -1,0 +1,71 @@
+---
+title: "Introduction to the diamonds dataset"
+output: 
+   html_document
+---
+
+::: callout-important
+This application exercise is a demo only. You do not have a corresponding repository for it and you're not expected to turn in anything for it.
+:::
+
+# Scenario
+
+You own a jewelry business and are working to price your [diamonds](tps://www.londonde.com/blogs/worlds-most-famous-diamonds/). To facilitate, you **explore** the diamond dataset in R and pay special attention to the cost of the diamond. Let's **explore** together.
+
+# Coding basics
+
+[Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.](https://style.tidyverse.org/index.html)
+
+-   When writing code, load all libraries first.
+
+-   "\##" is used to write comments in R and should be used to justify next steps and anything unusual or unexpected steps
+
+-   Comments are really important and are notes to your future self to remind you about steps that you took and decisions that you made.
+
+```{r load-packages, eval=FALSE, echo=TRUE}
+#| warning: false
+#| message: false
+
+## loading library
+library(tidyverse) # for data analysis and visualisation
+```
+
+# Data
+
+The `diamonds` dataset includes basic information about 53940 diamonds including price and other characteristics.
+
+```{r read-data, echo=TRUE, eval=FALSE}
+#| message: false
+#| warning: false
+
+## View the dataset in a separate tab
+View(diamonds)
+```
+
+The \_\_\_ dataset has \_\_\_ observations and \_\_\_ variables.
+
+What are these variables and what do they mean?
+
+```{r help-on-dataset, eval=FALSE, echo=TRUE}
+## What are the variables in this dataset?
+## What are they counting?
+?diamonds
+```
+
+```{r plot-price, eval=FALSE, echo=TRUE}
+## What is the distribution of price?
+ggplot(data = diamonds, aes(x = price)) +
+  geom_dotplot(stackratio = 0.009, alpha = 0.05, stackdir = "centerwhole") 
+```
+
+
+
+
+## Exercises
+
+1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help)
+
+2. What do the inputs (stackratio, alpha, and stadir) in the geom_dotplot() function do? (hint: draw multiple plots changing the values)
+
+3. Based upon the above plot, how much should your charge for your diamonds? Why?
+

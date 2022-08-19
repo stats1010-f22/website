@@ -1,0 +1,14 @@
+{
+  "hash": "45db0bcd4d7f56dc40c5155f55d81bcc",
+  "result": {
+    "markdown": "---\ntitle: \"Introduction to the diamonds dataset\"\noutput: \n   html_document\n---\n\n\n::: callout-important\nThis application exercise is a demo only. You do not have a corresponding repository for it and you're not expected to turn in anything for it.\n:::\n\n# Scenario\n\nYou own a jewelry business and are working to price your [diamonds](tps://www.londonde.com/blogs/worlds-most-famous-diamonds/). To facilitate, you **explore** the diamond dataset in R and pay special attention to the cost of the diamond. Let's **explore** together.\n\n# Coding basics\n\n[Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.](https://style.tidyverse.org/index.html)\n\n-   When writing code, load all libraries first.\n\n-   \"\\##\" is used to write comments in R and should be used to justify next steps and anything unusual or unexpected steps\n\n-   Comments are really important and are notes to your future self to remind you about steps that you took and decisions that you made.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n## loading library\nlibrary(tidyverse) # for data analysis and visualisation\n```\n:::\n\n\n# Data\n\nThe `diamonds` dataset includes basic information about 53940 diamonds including price and other characteristics.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n## View the dataset in a separate tab\nView(diamonds)\n```\n:::\n\n\nThe \\_\\_\\_ dataset has \\_\\_\\_ observations and \\_\\_\\_ variables.\n\nWhat are these variables and what do they mean?\n\n\n::: {.cell}\n\n```{.r .cell-code}\n## What are the variables in this dataset?\n## What are they counting?\n?diamonds\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\n## What is the distribution of price?\nggplot(data = diamonds, aes(x = price)) +\n  geom_dotplot(stackratio = 0.009, alpha = 0.05, stackdir = \"centerwhole\") \n```\n:::\n\n\n\n\n\n## Exercises\n\n1.  What do the \"4 c's\" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help)\n\n2. What do the inputs (stackratio, alpha, and stadir) in the geom_dotplot() function do? (hint: draw multiple plots changing the values)\n\n3. Based upon the above plot, how much should your charge for your diamonds? Why?\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
