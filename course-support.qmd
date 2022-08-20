@@ -4,9 +4,9 @@ title: "Course support"
 
 Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help.
 
-## Lectures and labs
+## Lectures
 
-If you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.
+If you have a question during lecture, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.
 
 ## Office hours
 
@@ -18,47 +18,60 @@ Have a question that can't wait for office hours? Prefer to write out your quest
 
 ## Email
 
-Please refrain from emailing any course content questions (those should go ), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Mine Çetinkaya-Rundel at [mc301\@duke.edu](mailto:mc301@duke.edu).
+Please refrain from emailing any course content questions (those should go INSERT LINKE), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email dr. gwynn sturdevant at [gwynnc\@wharton.upenn.edu](mailto:gwynnc@wharton.upenn.edu).
 
-If there is a question that's not appropriate for the public forum, you are welcome to email me directly. **If you email me, please include "STA 210" in the subject line.** Barring extenuating circumstances, I will respond to STA 210 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
+If there is a question that's not appropriate for the public forum, you are welcome to email me directly. **If you email me, please include "STAT 1010" in the subject line.** Barring extenuating circumstances, I will respond to STAT 1010 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
 
 ## Academic support
 
-There are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the **Academic Resource Center**. The [Academic Resource Center (ARC)](https://arc.duke.edu) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. ARC services are available free to any Duke undergraduate student, in any year, studying in any discipline. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact [theARC\@duke.edu](mailto:theARC@duke.edu), 919-684-5917.
+There are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the [**Weingarten learning center**](https://wlrc.vpul.upenn.edu/). The Weingarten Center offers a variety of resources to support all Penn students in reaching their academic goals. They offer [multiple workshops](https://ulife.vpul.upenn.edu/calendar/host/weingarten-center/28) throughout the semester and students can [request workshops](https://wlrc.vpul.upenn.edu/request-a-workshop/). All services are free and confidential. To contact the Weingarten Center, call 215-573-9235. The office is located in Stouffer Commons at 3702 Spruce Street, Suite 300.
+
+[Learning Consultations](https://wlrc.vpul.upenn.edu/lr/) offers individual consultations and group workshops that support students in developing more efficient and effective study skills and learning strategies. Learning specialists work with students to address time and project management, academic reading and writing, note-taking, problem-solving, exam preparation, test-taking, self-regulation, and flexibility.
+
+\
+[Tutoring](https://wlrc.vpul.upenn.edu/tutoring-services/) offers free access to on-campus tutors for many Penn courses in both drop-in and weekly contract format. Tutoring may be individual or in small groups. Tutors will assist with applying course information, understanding key concepts, and developing course-specific strategies. Tutoring support is available throughout the term but is best accessed early in the semester. First-time users must meet with a staff member; returning users may submit their requests online.
+
+\
+Additionally, [Marks Family Writing Center](http://writing.upenn.edu/critical/wc/) provides expert help in writing for undergraduate and graduate students. [Communication Within the Curriculum](http://www.sas.upenn.edu/cwic/) helps students express themselves orally with clarity and confidence. [Language Direct](https://plc.sas.upenn.edu/languagedirect) provides tutoring for foreign languages. [Van \
+Pelt Library](http://commons.library.upenn.edu/student-support/student-assistance-services) supports students in research and instructional technologies through a range of \
+[workshops](http://guides.library.upenn.edu/workshops) and [consultations](http://gethelp.library.upenn.edu/).
 
 ## Mental health and wellness
 
-Student mental health and wellness is of primary importance at Duke, and the university offers resources to support students in managing daily stress and self-care. Duke offers several resources for students to seek assistance on coursework and to nurture daily habits that support overall well-being, some of which are listed below:
+[Counseling and Psychological Services (CAPS)](https://www.vpul.upenn.edu/caps/) provides professional psychological and psychiatric services to students who need support in fulfilling their academic, social, and personal objectives. CAPS directly supports student mental health through counseling, crisis management, consultation, education and outreach, and training. CAPS has [a satellite office in Huntsman Hall](satellite office in  Huntsman Hall), and students with urgent concerns can talk with a CAPS clinician 24/7 at 215.898.7021 (press 1) or visit CAPS\' main office at 3624 Market Street during business hours.
 
--   **The Academic Resource Center**: (919) 684-5917, [theARC\@duke.edu](mailto:theARC@duke.edu), or [arc.duke.edu](https://arc.duke.edu/),
+\
+[Student Health Service](https://www.vpul.upenn.edu/shs/) provides students with accessible, cost-effective, culturally-sensitive, and student-focused healthcare, including care for acute and chronic health problems, preventive health services, and health and wellness education.
 
--   **DuWell**: (919) 681-8421, [duwell\@studentaffairs.duke.edu](mailto:duwell@studentaffairs.duke.edu), or [studentaffairs.duke.edu/duwell](https://studentaffairs.duke.edu/duwell)
+\
+[Alcohol and Other Drug Program Initiatives](https://www.vpul.upenn.edu/alcohol/) (AOD) works to reduce harm related to alcohol and other drug use at Penn.
 
-If your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times. Duke encourages all students to access these resources.
+\
+[Penn Violence Prevention](https://www.vpul.upenn.edu/pvp/index.php) (PVP) engages the Penn community in the prevention of sexual violence, relationship violence, stalking, and sexual harassment on campus. PVP provides education and outreach and the staff serves as confidential resources for students.
 
--   **DukeReach.** Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student's behavior or health visit the website for resources and assistance. [studentaffairs.duke.edu/dukereach](http://studentaffairs.duke.edu/dukereach)
+\
+[Public Safety](https://www.publicsafety.upenn.edu/safety-initiatives/): From riding your bike on campus, to preventing unattended theft, the Division of Public Safety wants to make sure you have the information you need to protect your safety and your belongings.
 
--   **Counseling and Psychological Services (CAPS).** CAPS helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000. [studentaffairs.duke.edu/caps](https://studentaffairs.duke.edu/caps)
+\
+[Penn Recreation](http://www.upenn.edu/recreation/): Penn offers many opportunities for students to participate in competitive team sports and stay physically fit at state-of-the-art, world-class training centers.
 
--   **Blue Devils Care.** A convenient and cost-effective way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling. [bluedevilscare.duke.edu](https://bluedevilscare.duke.edu/)
+\
+[Wharton Wellnes](https://groups.wharton.upenn.edu/wwb/home/)s is a division-sponsored student organization that works to implement initiatives targeted at specific wellness issues in the Wharton community by creating experiences, fostering a positive culture of well-being, and connecting clubs/students to wellness resources.
 
--   **Two-Click Support.** Duke Student Government and DukeReach partnership that connects students to help in just two clicks. [bit.ly/TwoClickSupport](https://bit.ly/TwoClickSupport)
+\
+It is important to me that you have the resources you need to be able to focus on learning in this course -- this includes both the necessary academic materials as well as taking care of your day-to-day needs. Students experiencing difficulty affording the course materials should reach out to the Penn First Plus office ([pennfirstplus\@upenn.edu](mailto:pennfirstplus@upenn.edu)). Students who are struggling to afford sufficient food to eat every day and/or lack a safe and suitable space to live should contact Student Intervention Services ([vpul-sisteam\@pobox.upenn.edu](mailto:vpul-sisteam@pobox.upenn.edu)). Students may also wish to contact their Financial Aid Counselor or Academic Advisor about these concerns. You are welcome to notify me if any of these challenges are affecting your success in this course, as long as you are comfortable doing so -- I may have resources to support you.
 
--   **WellTrack**. Sign up for WellTrack at [app.welltrack.com](https://app.welltrack.com/).
-
-## **Technology accommodations**
+## **Technology accommodations** 
 
 Students with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go [here](https://keeplearning.duke.edu/technical-support/). Please note that supplies are limited.
-
-Note that we will be using Duke's computational resources in this course. These resources are freely available to you. As long as your computer can connect to the internet and open a browser window, you can perform the necessary computing for this course. All software we use is open-source and/or freely available.
 
 ## **Course materials costs**
 
 There are no costs associated with this course. All readings will come from freely available, open resources (open-source textbooks, journal articles, etc.).
 
-## **Assistance with Zoom or Sakai**
+## **Assistance with Zoom or Canvas**
 
-For technical help with Sakai or Zoom, contact the Duke OIT Service Desk at [oit.duke.edu/help](https://oit.duke.edu/help). You can also access the self-service help documentation for Zoom [here](https://oit.duke.edu/help/articles/kb0029318) and for Sakai [here](https://sakai-duke.screenstepslive.com/s/sakai_support).
+For technical help with Canvas or , contact the Duke OIT Service Desk at [oit.duke.edu/help](https://oit.duke.edu/help). You can also access the self-service help documentation for Zoom [here](https://oit.duke.edu/help/articles/kb0029318) and for Sakai [here](https://sakai-duke.screenstepslive.com/s/sakai_support).
 
 Note that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.
 

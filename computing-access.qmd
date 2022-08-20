@@ -1,5 +1,0 @@
----
-title: "Computing access"
----
-
-To access computing resources for the introductory data science courses offered by the Department of Data Science and Statistics at Wharton go to the UPDATE website, UPDATE.

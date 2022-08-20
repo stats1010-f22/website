@@ -1,7 +1,27 @@
 ---
-title: "STA 210: Regression Analysis"
+title: "STA 1010: Introduction to Business Statistics"
 ---
 
-Learn approaches for analyzing multivariate data sets, emphasizing analysis of variance, linear regression, and logistic regression. Learn techniques for checking the appropriateness of proposed models, such as residual analyses and case influence diagnostics, and techniques for selecting models. Gain experience dealing with the challenges that arise in practice through assignments that utilize real-world data. This class emphasizes data analysis over mathematical theory.
+\
+This course introduces students to the discipline of statistics as a science of understanding and analyzing data. Throughout the semester, students will learn how to effectively make use\
+of data in the face of uncertainty: how to collect data, how to analyze data, and how to use data to make inferences and conclusions about real world phenomena.
 
-![](images/background-bikeshare.png){fig-alt="A series of six, generic data visualizations: a scatterplot, a density plot, a contour plot, a line plot, a box plot, and another scatterplot." width="700"}
+\
+The course goals are as follows:
+
+1.  Recognize the importance of data collection, identify limitations in data collection methods, and determine how they affect the scope of inference.
+
+2.  Use statistical software to summarize data numerically and visually, and to perform data analysis.
+
+3.  Have a conceptual understanding of the unified nature of statistical inference.
+
+4.  Apply estimation and testing methods to analyze single variables or the relationship between two variables in order to understand natural phenomena and make data-based\
+    decisions.
+
+5.  Model numerical response variables using a single or multiple explanatory variables.
+
+6.  Interpret results correctly, effectively, and in context without relying on statistical jargon.
+
+7.   Critique data-based claims and evaluate data-based decisions.
+
+8.  Complete a research project demonstrating mastery of statistical data analysis from exploratory analysis to inference to modeling.

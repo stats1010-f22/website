@@ -1,6 +1,6 @@
-# Website for STAT 1010 section 1 at Wharton (Fall 2022)
+# Website for STAT 1010 at Wharton (Fall 2022)
 
-link to where deployed
+https://stats1010-f22.github.io/website/
  
 # Colors
 
