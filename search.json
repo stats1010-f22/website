@@ -336,18 +336,46 @@
     "text": "Midori says…"
   },
   {
+    "objectID": "slides/01_introduction.html#workspace-image",
+    "href": "slides/01_introduction.html#workspace-image",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Workspace image",
+    "text": "Workspace image\n\nSaving workspace"
+  },
+  {
+    "objectID": "slides/01_introduction.html#rainbow-parenthesis",
+    "href": "slides/01_introduction.html#rainbow-parenthesis",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Rainbow parenthesis",
+    "text": "Rainbow parenthesis\n\nParenthesis are important"
+  },
+  {
+    "objectID": "slides/01_introduction.html#code-font",
+    "href": "slides/01_introduction.html#code-font",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Code font",
+    "text": "Code font\n\nUpdate background and font color of code"
+  },
+  {
+    "objectID": "slides/01_introduction.html#pane-layout",
+    "href": "slides/01_introduction.html#pane-layout",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Pane layout",
+    "text": "Pane layout\n\nUpdate panes and their layout"
+  },
+  {
     "objectID": "slides/01_introduction.html#new-directory",
     "href": "slides/01_introduction.html#new-directory",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "New directory",
-    "text": "New directory\n\nFigure @ref(fig:2) Select “New Directory”"
+    "text": "New directory\n\nSelect “New Directory”"
   },
   {
     "objectID": "slides/01_introduction.html#directory-type",
     "href": "slides/01_introduction.html#directory-type",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Directory type",
-    "text": "Directory type\n\nFigure @ref(fig:3) Then select “New Project”"
+    "text": "Directory type\n\nThen select “New Project”"
   },
   {
     "objectID": "slides/01_introduction.html#new-folder",
@@ -627,7 +655,7 @@
     "href": "ae/ae-0-first_line_of_code.html#exercises",
     "title": "Introduction to the diamonds dataset",
     "section": "Exercises",
-    "text": "Exercises\n\nWhat do the “4 c’s” of every diamond mean? What kind of variables are they? (hint: This video may help)\nWhat do the inputs (stackratio, alpha, and stadir) in the geom_dotplot() function do? (hint: draw multiple plots changing the values)\nBased upon the above plot, how much should your charge for your diamonds? Why?"
+    "text": "Exercises\n\nWhat do the inputs (stackratio, alpha, and stadir) in the geom_dotplot() function do? (hint: draw multiple plots changing the values)\nBased upon the above plot, how much should your charge for your diamonds? Why?"
   },
   {
     "objectID": "ae/ae-10-flight-delays.html",
@@ -1453,7 +1481,7 @@
     "href": "course-support.html#technology-accommodations",
     "title": "Course support",
     "section": "Technology accommodations",
-    "text": "Technology accommodations\nStudents with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go here. Please note that supplies are limited."
+    "text": "Technology accommodations\nStudents with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go here. Please note that supplies are limited. Additional support is also available through Student Intervention Services."
   },
   {
     "objectID": "course-support.html#course-materials-costs",
@@ -1467,7 +1495,7 @@
     "href": "course-support.html#assistance-with-zoom-or-canvas",
     "title": "Course support",
     "section": "Assistance with Zoom or Canvas",
-    "text": "Assistance with Zoom or Canvas\nFor technical help with Canvas or , contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Sakai here.\nNote that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person."
+    "text": "Assistance with Zoom or Canvas\nFor technical help with Canvas, GradeScope, or Zoom, contact Wharton Student Computing. IYou can also access the self-service help documentation for Zoom here, Canvas here, and for Sakai here.\nNote that we will be making minimal use of Gradescope in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person."
   },
   {
     "objectID": "hw/hw-1.html",
