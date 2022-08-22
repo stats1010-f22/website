@@ -417,14 +417,14 @@
     "href": "slides/01_introduction.html#new-directory",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "New directory",
-    "text": "New directory\n\nFigure @ref(fig:2) Select “New Directory”"
+    "text": "New directory\n\nSelect “New Directory”"
   },
   {
     "objectID": "slides/01_introduction.html#directory-type",
     "href": "slides/01_introduction.html#directory-type",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Directory type",
-    "text": "Directory type\n\nFigure @ref(fig:3) Then select “New Project”"
+    "text": "Directory type\n\nThen select “New Project”"
   },
   {
     "objectID": "slides/01_introduction.html#new-folder",
@@ -593,5 +593,54 @@
     "title": "Syllabus",
     "section": "Name tags",
     "text": "Name tags\nEvery one of you are important to me. To facilitate interactions, I would like to learn your names. To help with this, please wear name tags in class that include pronouns so that I can call you by your name and begin to connect with each of you."
+  },
+  {
+    "objectID": "slides/01_introduction.html#text",
+    "href": "slides/01_introduction.html#text",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Text",
+    "text": "Text"
+  },
+  {
+    "objectID": "slides/01_introduction.html#workspace-image",
+    "href": "slides/01_introduction.html#workspace-image",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Workspace image",
+    "text": "Workspace image\n\nUpdate options"
+  },
+  {
+    "objectID": "slides/01_introduction.html#rainbow-parenthesis",
+    "href": "slides/01_introduction.html#rainbow-parenthesis",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Rainbow parenthesis",
+    "text": "Rainbow parenthesis\n\nUpdate options"
+  },
+  {
+    "objectID": "slides/01_introduction.html#code-font",
+    "href": "slides/01_introduction.html#code-font",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Code font",
+    "text": "Code font\n\nUpdate options"
+  },
+  {
+    "objectID": "slides/01_introduction.html#panel-layout",
+    "href": "slides/01_introduction.html#panel-layout",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Panel layout",
+    "text": "Panel layout\n\nUpdate options"
+  },
+  {
+    "objectID": "slides/01_introduction.html#another-attempt",
+    "href": "slides/01_introduction.html#another-attempt",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Another attempt",
+    "text": "Another attempt\n{background-image=“https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_boston-terrier_desktop.jpg?h=475&la=en&w=825&hash=DC3F38D08CCE086118327D827C002A62” background-size=“cover”}"
+  },
+  {
+    "objectID": "slides/01_introduction.html#text-background-image-httpsgithub.comstats1010-f22websiteblobmainslideslec_1_imageswitten_cs.png-background-sizecover",
+    "href": "slides/01_introduction.html#text-background-image-httpsgithub.comstats1010-f22websiteblobmainslideslec_1_imageswitten_cs.png-background-sizecover",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Text {background-image= “https://github.com/stats1010-f22/website/blob/main/slides/lec_1_images/witten_CS.png” background-size=“cover”}",
+    "text": "Text {background-image= “https://github.com/stats1010-f22/website/blob/main/slides/lec_1_images/witten_CS.png” background-size=“cover”}"
   }
 ]

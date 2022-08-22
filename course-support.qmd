@@ -59,11 +59,11 @@ Pelt Library](http://commons.library.upenn.edu/student-support/student-assistanc
 [Wharton Wellnes](https://groups.wharton.upenn.edu/wwb/home/)s is a division-sponsored student organization that works to implement initiatives targeted at specific wellness issues in the Wharton community by creating experiences, fostering a positive culture of well-being, and connecting clubs/students to wellness resources.
 
 \
-It is important to me that you have the resources you need to be able to focus on learning in this course -- this includes both the necessary academic materials as well as taking care of your day-to-day needs. Students experiencing difficulty affording the course materials should reach out to the Penn First Plus office ([pennfirstplus\@upenn.edu](mailto:pennfirstplus@upenn.edu)). Students who are struggling to afford sufficient food to eat every day and/or lack a safe and suitable space to live should contact Student Intervention Services ([vpul-sisteam\@pobox.upenn.edu](mailto:vpul-sisteam@pobox.upenn.edu)). Students may also wish to contact their Financial Aid Counselor or Academic Advisor about these concerns. You are welcome to notify me if any of these challenges are affecting your success in this course, as long as you are comfortable doing so -- I may have resources to support you.
+It is important to me that you have the resources you need to be able to focus on learning in this course -- this includes both the necessary academic materials as well as taking care of your day-to-day needs. Students experiencing difficulty affording the course materials should reach out to the [Penn First Plus office](mailto:pennfirst) ([pennfirstplus\@upenn.edu](mailto:pennfirstplus@upenn.edu)). Students who are struggling to afford sufficient food to eat every day and/or lack a safe and suitable space to live should contact Student Intervention Services ([vpul-sisteam\@pobox.upenn.edu](mailto:vpul-sisteam@pobox.upenn.edu)). Students may also wish to contact their Financial Aid Counselor or Academic Advisor about these concerns. You are welcome to notify me if any of these challenges are affecting your success in this course, as long as you are comfortable doing so -- I may have resources to support you.
 
 ## **Technology accommodations** 
 
-Students with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go [here](https://keeplearning.duke.edu/technical-support/). Please note that supplies are limited.
+Students with demonstrated high financial need who have limited access to computers may request assistance in the form of loaner laptops. For technology assistance requests, please go [here](https://sis.vpul.upenn.edu/emergency-and-opportunity-funding/). Please note that supplies are limited. Additional support is also available through [Student Intervention Services](mailto:vpul-sisteam@pobox.upenn.edu).
 
 ## **Course materials costs**
 
@@ -71,8 +71,8 @@ There are no costs associated with this course. All readings will come from free
 
 ## **Assistance with Zoom or Canvas**
 
-For technical help with Canvas or , contact the Duke OIT Service Desk at [oit.duke.edu/help](https://oit.duke.edu/help). You can also access the self-service help documentation for Zoom [here](https://oit.duke.edu/help/articles/kb0029318) and for Sakai [here](https://sakai-duke.screenstepslive.com/s/sakai_support).
+For technical help with Canvas, GradeScope, or Zoom, contact [Wharton Student Computing](https://computing.wharton.upenn.edu/). IYou can also access the self-service help documentation for Zoom [here](https://support.wharton.upenn.edu/help/logging-into-zoom), Canvas [here](https://support.wharton.upenn.edu/help/canvas-help-for-students), and for Sakai [here](https://sakai-duke.screenstepslive.com/s/sakai_support).
 
-Note that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.
+Note that we will be making minimal use of Gradescope in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.
 
 Zoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person.

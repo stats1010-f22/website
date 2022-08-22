@@ -26,7 +26,10 @@ By the end of this lesson, you should:
 
 -   Know how to find help in R
 
--   Found hope, tiffany, nassak, and Shah
+-   Found Hope, Tiffany, Nassak, and Shah
+
+# {background-image="lec_1_images/witten_CS.png" background-size="cover"}
+
 
 # Download R
 
@@ -38,19 +41,42 @@ qr <- qr_code("https://raw.githubusercontent.com/stats1010-f22/website/main/docu
 plot(qr)
 ```
 
+# A new IDE
+
+![Update global option](lec_1_images/global_options.png){fig-align="center" width="230"}
+
+## Workspace image
+
+![Saving workspace](lec_1_images/save_workspace.png){fig-align="center" width="230"}
+
+## Rainbow parenthesis
+
+![Parenthesis are important](lec_1_images/rainbow_parenthesis.png){fig-align="center" width="230"}
+
+## Code font
+
+![Update background and font color of code](lec_1_images/code_font.png){fig-align="center" width="230"}
+
+## Pane layout
+
+![Update panes and their layout](lec_1_images/pane_layout.png){fig-align="center" width="230"}
+
+
+
+
 # Start a project
 
 Open RStudio and do the following:
 
-![Figure \@ref(fig:1) Start a new project in RStudio](lec_1_images/new_project.png){fig-align="center" width="230"}
+![Start a new project in RStudio](lec_1_images/new_project.png){fig-align="center" width="230"}
 
 ## New directory
 
-![Figure \@ref(fig:2) Select "New Directory"](lec_1_images/new_directory.png){fig-align="center" width="230"}
+![Select "New Directory"](lec_1_images/new_directory.png){fig-align="center" width="230"}
 
 ## Directory type
 
-![Figure \@ref(fig:3) Then select "New Project"](lec_1_images/directory_type.png){fig-align="center" width="230"}
+![Then select "New Project"](lec_1_images/directory_type.png){fig-align="center" width="230"}
 
 ## New folder
 

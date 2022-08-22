@@ -52,6 +52,10 @@ What are these variables and what do they mean?
 ?diamonds
 ```
 
+1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help)
+
+
+
 ```{r plot-price, eval=FALSE, echo=TRUE}
 ## What is the distribution of price?
 ggplot(data = diamonds, aes(x = price)) +
@@ -63,7 +67,6 @@ ggplot(data = diamonds, aes(x = price)) +
 
 ## Exercises
 
-1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help)
 
 2. What do the inputs (stackratio, alpha, and stadir) in the geom_dotplot() function do? (hint: draw multiple plots changing the values)
 
