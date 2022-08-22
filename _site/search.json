@@ -606,21 +606,21 @@
     "href": "slides/01_introduction.html#workspace-image",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Workspace image",
-    "text": "Workspace image\n\nUpdate options"
+    "text": "Workspace image\n\nSaving workspace"
   },
   {
     "objectID": "slides/01_introduction.html#rainbow-parenthesis",
     "href": "slides/01_introduction.html#rainbow-parenthesis",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Rainbow parenthesis",
-    "text": "Rainbow parenthesis\n\nUpdate options"
+    "text": "Rainbow parenthesis\n\nParenthesis are important"
   },
   {
     "objectID": "slides/01_introduction.html#code-font",
     "href": "slides/01_introduction.html#code-font",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Code font",
-    "text": "Code font\n\nUpdate options"
+    "text": "Code font\n\nUpdate background and font color of code"
   },
   {
     "objectID": "slides/01_introduction.html#panel-layout",
@@ -642,5 +642,12 @@
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Text {background-image= “https://github.com/stats1010-f22/website/blob/main/slides/lec_1_images/witten_CS.png” background-size=“cover”}",
     "text": "Text {background-image= “https://github.com/stats1010-f22/website/blob/main/slides/lec_1_images/witten_CS.png” background-size=“cover”}"
+  },
+  {
+    "objectID": "slides/01_introduction.html#pane-layout",
+    "href": "slides/01_introduction.html#pane-layout",
+    "title": "Lec 1 - Downloading R and plot your first graph",
+    "section": "Pane layout",
+    "text": "Pane layout\n\nUpdate panes and their layout"
   }
 ]
