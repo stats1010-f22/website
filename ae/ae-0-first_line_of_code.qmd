@@ -5,7 +5,7 @@ output:
 ---
 
 ::: callout-important
-This application exercise is a demo only. You do not have a corresponding repository for it and you're not expected to turn in anything for it.
+This application exercise is due at noon on  INSERT DATE HERE.
 :::
 
 # Scenario
@@ -52,23 +52,32 @@ What are these variables and what do they mean?
 ?diamonds
 ```
 
-1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help)
+1. What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help)
+
+```{r diamond-sale, eval=FALSE, echo=TRUE}
+
+diamonds %>% 
+  mutate(discount_300 = price - 300,
+         20\%_off = price * 0.8,
+         
+
+```
+
 
 
 
 ```{r plot-price, eval=FALSE, echo=TRUE}
 ## What is the distribution of price?
 ggplot(data = diamonds, aes(x = price)) +
-  geom_dotplot(stackratio = 0.009, alpha = 0.05, stackdir = "centerwhole") 
+  geom_histogram(binwidth = 1) 
 ```
 
+2. What does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is appropriate?
 
 
 
-## Exercises
 
 
-2. What do the inputs (stackratio, alpha, and stadir) in the geom_dotplot() function do? (hint: draw multiple plots changing the values)
 
 3. Based upon the above plot, how much should your charge for your diamonds? Why?
 
