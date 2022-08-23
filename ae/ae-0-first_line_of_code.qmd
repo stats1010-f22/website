@@ -63,7 +63,7 @@ ggplot(data = diamonds) +
 
 2. What does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is appropriate?
 
-The distribution of diamond prices is right skewed (long right tail). There are no diamonds priced at about $1000.
+The distribution of diamond prices is right skewed (long right tail). There are no diamonds priced at about $1000. Let's explore this a little further...
 
 ```{r, diamonds_about_1000_a, eval=FALSE, echo=TRUE}
 diamonds %>% 
@@ -71,6 +71,7 @@ diamonds %>%
   View()
 ```
 
+3. What does the filter command do?
 
 ```{r diamonds_about_1000_b, eval=FALSE, echo=TRUE}
 diamonds %>% 
