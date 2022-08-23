@@ -473,28 +473,28 @@
     "href": "slides/01_introduction.html#name-the-document",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Name the document",
-    "text": "Name the document\nName the document “lec_01” and hit create\n\nFigure @ref(fig:2) Naming the document"
+    "text": "Name the document\nName the document “lec_01” and hit create\n\nNaming the document"
   },
   {
     "objectID": "slides/01_introduction.html#insert-an-r-code-chuck",
     "href": "slides/01_introduction.html#insert-an-r-code-chuck",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Insert an R code chuck",
-    "text": "Insert an R code chuck\nInsert a code chunk\n\nFigure @ref(fig:2) Insert code chunk"
+    "text": "Insert an R code chuck\nInsert a code chunk\n\nInsert code chunk"
   },
   {
     "objectID": "slides/01_introduction.html#write-your-first-line-of-coding",
     "href": "slides/01_introduction.html#write-your-first-line-of-coding",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Write your first line of coding",
-    "text": "Write your first line of coding"
+    "text": "Write your first line of coding\nUse the QR code below or click here"
   },
   {
     "objectID": "slides/01_introduction.html#what-if-it-breaks",
     "href": "slides/01_introduction.html#what-if-it-breaks",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "What if it breaks?",
-    "text": "What if it breaks?\n\n\n\nstat1010-f22.github.io/website"
+    "text": "What if it breaks?\nUse the QR code below or click here.\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_02.html#why",

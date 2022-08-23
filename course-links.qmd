@@ -4,7 +4,6 @@ title: "Useful links"
 
 |                                  |                                                                                                                                       |
 |-----------------|-------------------------------------------------------|
-| Course GitHub organization       | 🔗 on [GitHub](https://github.com/stats1010-f22)                                                                                      |
 | Discussion forum                 | 🔗 on [Sakai](https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/tool/13b6446a-a6c6-4222-8cfb-c36d1f70802b)      |
 | Lecture streaming and recordings | 🔗 on [Panopto](https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22d6c1d58a-cb6d-4732-9d4b-ae0c011bf767%22) |
 | Gradebook                        | 🔗 on [Sakai](https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/tool/69078433-67a6-4054-a2e7-9e6c202ecdc3/)     |
