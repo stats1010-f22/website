@@ -116,7 +116,7 @@
     "href": "course-links.html",
     "title": "Useful links",
     "section": "",
-    "text": "Course GitHub organization\n🔗 on GitHub\n\n\nDiscussion forum\n🔗 on Sakai\n\n\nLecture streaming and recordings\n🔗 on Panopto\n\n\nGradebook\n🔗 on Sakai\n\n\nVirtual meetings\n🔗 on Sakai"
+    "text": "Discussion forum\n🔗 on Sakai\n\n\nLecture streaming and recordings\n🔗 on Panopto\n\n\nGradebook\n🔗 on Sakai\n\n\nVirtual meetings\n🔗 on Sakai"
   },
   {
     "objectID": "exams/exam-1.html",
@@ -389,28 +389,28 @@
     "href": "slides/01_introduction.html#name-the-document",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Name the document",
-    "text": "Name the document\nName the document “lec_01” and hit create\n\nFigure @ref(fig:2) Naming the document"
+    "text": "Name the document\nName the document “lec_01” and hit create\n\nNaming the document"
   },
   {
     "objectID": "slides/01_introduction.html#insert-an-r-code-chuck",
     "href": "slides/01_introduction.html#insert-an-r-code-chuck",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Insert an R code chuck",
-    "text": "Insert an R code chuck\nInsert a code chunk\n\nFigure @ref(fig:2) Insert code chunk"
+    "text": "Insert an R code chuck\nInsert a code chunk\n\nInsert code chunk"
   },
   {
     "objectID": "slides/01_introduction.html#write-your-first-line-of-coding",
     "href": "slides/01_introduction.html#write-your-first-line-of-coding",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Write your first line of coding",
-    "text": "Write your first line of coding"
+    "text": "Write your first line of coding\nUse the QR code below or click here"
   },
   {
     "objectID": "slides/01_introduction.html#what-if-it-breaks",
     "href": "slides/01_introduction.html#what-if-it-breaks",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "What if it breaks?",
-    "text": "What if it breaks?\n\n\n\nstat1010-f22.github.io/website"
+    "text": "What if it breaks?\nUse the QR code below or click here.\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "ae/ae-7-exam-2-review.html",
@@ -648,14 +648,7 @@
     "href": "ae/ae-0-first_line_of_code.html",
     "title": "Introduction to the diamonds dataset",
     "section": "",
-    "text": "Important\n\n\n\nThis application exercise is a demo only. You do not have a corresponding repository for it and you’re not expected to turn in anything for it."
-  },
-  {
-    "objectID": "ae/ae-0-first_line_of_code.html#exercises",
-    "href": "ae/ae-0-first_line_of_code.html#exercises",
-    "title": "Introduction to the diamonds dataset",
-    "section": "Exercises",
-    "text": "Exercises\n\nWhat do the inputs (stackratio, alpha, and stadir) in the geom_dotplot() function do? (hint: draw multiple plots changing the values)\nBased upon the above plot, how much should your charge for your diamonds? Why?"
+    "text": "Scenario\nYou own a jewelry business and are working to price your diamonds. To facilitate, you explore the diamond dataset in R and pay special attention to the cost of the diamond. Let’s explore together.\n\n\nCoding basics\nGood coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.\n\nWhen writing code, load all libraries first.\n“##” is used to write comments in R and should be used to justify next steps and anything unusual or unexpected steps\nComments are really important and are notes to your future self to remind you about steps that you took and decisions that you made.\n\n\n## loading library\nlibrary(tidyverse) # for data analysis and visualisation\n\n\n\nData\nThe diamonds dataset includes basic information about 53940 diamonds including price and other characteristics.\n\n## View the dataset in a separate tab\nView(diamonds)\n\nThe ___ dataset has ___ observations and ___ variables.\nWhat are these variables and what do they mean?\n\n## What are the variables in this dataset?\n## What are they counting?\n?diamonds\n\n\nWhat do the “4 c’s” of every diamond mean? What kind of variables are they? (hint: This video may help)\n\n\ndiamonds %>% \n  mutate(discount_300 = price - 300,\n         20\\%_off = price * 0.8,\n\n\n## What is the distribution of price?\nggplot(data = diamonds, aes(x = price)) +\n  geom_histogram(binwidth = 1) \n\n\nWhat does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is appropriate?\nBased upon the above plot, how much should your charge for your diamonds? Why?"
   },
   {
     "objectID": "ae/ae-10-flight-delays.html",
