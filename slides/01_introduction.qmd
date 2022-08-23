@@ -22,8 +22,6 @@ By the end of this lesson, you should:
 
 -   Have downloaded R, and know how to start a project
 
--   Know some basic data manipulation commands
-
 -   Drawn your first ggplot in R
 
 -   Know how to find help in R

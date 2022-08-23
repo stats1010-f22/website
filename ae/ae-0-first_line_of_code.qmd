@@ -54,28 +54,52 @@ What are these variables and what do they mean?
 
 1. What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help)
 
-```{r diamond-sale, eval=FALSE, echo=TRUE}
-
-diamonds %>% 
-  mutate(discount_300 = price - 300,
-         20\%_off = price * 0.8,
-         
-
-```
-
-
-
 
 ```{r plot-price, eval=FALSE, echo=TRUE}
 ## What is the distribution of price?
-ggplot(data = diamonds, aes(x = price)) +
-  geom_histogram(binwidth = 1) 
+ggplot(data = diamonds) +
+  geom_histogram(mapping = aes(x = price), binwidth = 1) 
 ```
 
 2. What does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is appropriate?
 
+The distribution of diamond prices is right skewed (long right tail). There are no diamonds priced at about $1000.
+
+```{r, diamonds_about_1000_a, eval=FALSE, echo=TRUE}
+diamonds %>% 
+  filter(price > 750 & price < 1250) %>% 
+  View()
+```
 
 
+```{r diamonds_about_1000_b, eval=FALSE, echo=TRUE}
+diamonds %>% 
+  filter(price > 750 & price < 1250) %>% 
+  mutate(price_hundred = price %/% 100) %>% 
+  select(price, price_hundred) %>% 
+  View()
+```
+
+
+```{r diamonds_about_1000_c, eval=FALSE, echo=TRUE}
+diamonds %>% 
+  filter(price > 750 & price < 1250) %>% 
+  mutate(price_hundred = price %/% 100) %>% 
+  select(price, price_hundred) %>% 
+  count(price_hundred) %>% 
+  View()
+```
+
+
+```{r diamonds_about_1000_d, eval=FALSE, echo=TRUE}
+diamonds %>% 
+  filter(price > 750 & price < 1250) %>% 
+  mutate(price_hundred = price %/% 100) %>% 
+  select(price, price_hundred) %>% 
+  mutate(price_remainder = price %% 100) %>% 
+  count(price_hundred, price_remainder) %>% 
+  View
+```
 
 
 
