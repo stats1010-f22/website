@@ -71,9 +71,20 @@ diamonds %>%
   View()
 ```
 
-3. What does the filter command do?
+3. What does the filter function do?
 
 ```{r diamonds_about_1000_b, eval=FALSE, echo=TRUE}
+diamonds %>% 
+  filter(price > 750 & price < 1250) %>% 
+  mutate(price_hundred = price %/% 100) %>% 
+  View()
+```
+
+4. What does this "%/%" operator do? (hint: run 10 %/% 3, 10 %/% 5, 7 %/% 3, 7 %/% 5 in the console and think carefully about /)
+
+5. What does the mutate function do? (hint: pay special attention to the dimensions of the data)
+
+```{r diamonds_about_1000_c, eval=FALSE, echo=TRUE}
 diamonds %>% 
   filter(price > 750 & price < 1250) %>% 
   mutate(price_hundred = price %/% 100) %>% 
@@ -81,6 +92,7 @@ diamonds %>%
   View()
 ```
 
+6. What does the select function do? 
 
 ```{r diamonds_about_1000_c, eval=FALSE, echo=TRUE}
 diamonds %>% 
@@ -102,6 +114,7 @@ diamonds %>%
   View
 ```
 
+This feature is probably better identified graphically.
 
 
 3. Based upon the above plot, how much should your charge for your diamonds? Why?
