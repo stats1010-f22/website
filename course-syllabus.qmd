@@ -116,13 +116,13 @@ The final course grade will be calculated as follows:
 
 | Category              | Percentage      |
 |-----------------------|-----------------|
-| Application exercises | 3%              |
+| Application exercises | 7%              |
 | Homework              | 35% (7% x 5)    |
 | Project               | 15%             |
 | Exam 01               | 10%             |
 | Exam 02               | 10%             |
 | Exam 03               | 10%             |
-| Teamwork              | 3%              |
+| Teamwork              | 13%              |
 
 The final letter grade will be determined based on the following thresholds:
 

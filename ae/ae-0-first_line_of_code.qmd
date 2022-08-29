@@ -5,7 +5,7 @@ output:
 ---
 
 ::: callout-important
-This application exercise is due at noon on  INSERT DATE HERE.
+This application exercise is due at noon on  6 Sept at 11:59am.
 :::
 
 # Scenario
@@ -94,7 +94,7 @@ diamonds %>%
 
 6. What does the select function do? 
 
-```{r diamonds_about_1000_c, eval=FALSE, echo=TRUE}
+```{r diamonds_about_1000_d, eval=FALSE, echo=TRUE}
 diamonds %>% 
   filter(price > 750 & price < 1250) %>% 
   mutate(price_hundred = price %/% 100) %>% 
@@ -104,7 +104,7 @@ diamonds %>%
 ```
 
 
-```{r diamonds_about_1000_d, eval=FALSE, echo=TRUE}
+```{r diamonds_about_1000_e, eval=FALSE, echo=TRUE}
 diamonds %>% 
   filter(price > 750 & price < 1250) %>% 
   mutate(price_hundred = price %/% 100) %>% 
