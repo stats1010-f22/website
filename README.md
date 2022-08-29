@@ -9,4 +9,4 @@ https://stats1010-f22.github.io/website/
 
 # Attribution
 
-Much of the content of this wesbite is based on STA 210 - Fall 2022 by Dr. Mine Cetinkaya Rundel.
+Much of the content of this wesbite is based on STA 210 - Spring 2022 by Dr. Mine Cetinkaya Rundel.

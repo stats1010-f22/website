@@ -116,6 +116,10 @@ diamonds %>%
 
 This feature is probably better identified graphically.
 
+```{r }
+
+```
+
 
 3. Based upon the above plot, how much should your charge for your diamonds? Why?
 
