@@ -84,7 +84,7 @@ Every one of you are important to me. To facilitate interactions, I would like t
 
 ## Assessment
 
-Assessment for the course is comprised of six components: application exercises, homework assignments, labs, exams, projects, and teamwork.
+Assessment for the course is comprised of five components: application exercises, homework assignments, exams, projects, and teamwork.
 
 ### Application exercises
 
@@ -102,7 +102,7 @@ One homework assignment will be dedicated to a *statistics experience*. The stat
 
 ### Exams
 
-There will be four exams consisting of multiple choice and short answer questions. Through these exams you have the opportunity to demonstrate what you've learned in the course thus far. The exams will focus on the conceptual understanding of the content, and they may also include small analysis. The content of the exam will be related to the content in the prepare, practice, and perform assignments. More detail about the exams will be given during the semester.
+There will be four exams consisting of multiple choice questions. Through these exams you have the opportunity to demonstrate what you've learned in the course thus far. The exams will focus on the conceptual understanding of the content. The content of the exam will be related to the content in the prepare, practice, and perform assignments. More detail about the exams will be given during the semester.
 
 *The lowest exam grade will be dropped at the end of the semester.*
 
