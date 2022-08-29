@@ -7,7 +7,7 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.38">
+  <meta name="generator" content="quarto-1.1.163">
 
   <title>STAT 1010 - Fall 2022 - Lec 1 - Downloading R and plot your first graph</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,10 +18,15 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -312,6 +317,9 @@
       margin-right: 0; 
     }
   </style>
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Lec 1 - Downloading R and plot your first graph">
+<meta property="og:description" content="STAT 1010 - Fall 2022">
+<meta property="og:site-name" content="STAT 1010 - Fall 2022">
 <meta name="twitter:title" content="STAT 1010 - Fall 2022 - Lec 1 - Downloading R and plot your first graph">
 <meta name="twitter:description" content="STAT 1010 - Fall 2022">
 <meta name="twitter:creator" content="@nzgwynn">
@@ -331,7 +339,6 @@
 <p>By the end of this lesson, you should:</p>
 <ul>
 <li><p>Have downloaded R, and know how to start a project</p></li>
-<li><p>Know some basic data manipulation commands</p></li>
 <li><p>Drawn your first ggplot in R</p></li>
 <li><p>Know how to find help in R</p></li>
 </ul>
@@ -416,7 +423,7 @@
 
 
 <img data-src="01_introduction_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"><div class="footer footer-default">
-<p><a href="https://sta210-s22.github.io/website/">stat1010-f22.github.io/website</a></p>
+<p><a href="https://sta1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
 </div>
 </section></section>
     </div>
@@ -740,7 +747,8 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
