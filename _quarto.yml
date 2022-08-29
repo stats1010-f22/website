@@ -29,12 +29,12 @@ website:
         href: https://github.com/sta1010-f22
         text: "GitHub organization"
         menu:
-          - text: Discussion forum
-            url: https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/tool/13b6446a-a6c6-4222-8cfb-c36d1f70802b
+          - text: Discussions
+            url: https://edstem.org/us/courses/27622/discussion/
           - text: Gradescope
-            url: https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/page/aec742dc-2972-4f02-a35b-1dd3315af889
-          - text: Gradebook
-            url: https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/tool/69078433-67a6-4054-a2e7-9e6c202ecdc3/
+            url: https://www.gradescope.com/courses/433175
+          - text: Canvas
+            url: https://canvas.upenn.edu/courses/1680632/grades
 
     style: "docked"
     search: true

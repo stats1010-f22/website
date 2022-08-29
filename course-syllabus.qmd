@@ -108,7 +108,7 @@ There will be four exams consisting of multiple choice questions. Through these 
 
 ### Project
 
-The purpose of the project is to apply what you've learned throughout the semester to analyze an interesting, data-driven research question. The project will be completed with your lab teams, and each team will present their work in video and in writing during the final exam period. More information about the project will be provided during the semester.
+The purpose of the project is to apply what you've learned throughout the semester to analyze an interesting, data-driven research question. The project will be completed with your teams, and each team will present their work. More information about the project will be provided during the semester.
 
 ## Grading
 
@@ -119,7 +119,6 @@ The final course grade will be calculated as follows:
 | Application exercises | 3%              |
 | Homework              | 35% (7% x 5)    |
 | Project               | 15%             |
-| Lab                   | 14% (2.33% x 6) |
 | Exam 01               | 10%             |
 | Exam 02               | 10%             |
 | Exam 03               | 10%             |

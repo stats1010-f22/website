@@ -1,6 +1,6 @@
 ---
 title: "Week 1"
-subtitle: "Welcome to STA 210"
+subtitle: "Welcome to STAT 1010"
 editor: visual
 ---
 
@@ -12,11 +12,11 @@ editor: visual
 
 ## Participate
 
-🖥️ [Lecture 1 - Download R and plotting your first graph](/slides/lec-1.html)
+🖥️ [Lecture 1 - Download R and plotting your first graph](/slides/01_introduction.html)
 
 ## Practice
 
-📋 [diamonds](/ae/ae-first_line_of_code.html)
+📋 [diamonds](/ae/ae-0-first_line_of_code.html)
 
 ## Perform
 
