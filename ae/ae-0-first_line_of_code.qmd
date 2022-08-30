@@ -53,7 +53,7 @@ What are these variables and what do they mean?
 ?diamonds
 ```
 
-1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help, and please copy this into your notes)
+1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help, and please copy this into your notes  under the title data types) 
 
 ```{r plot-price, eval=FALSE, echo=TRUE}
 ## What is the distribution of price?
@@ -61,11 +61,25 @@ ggplot(data = diamonds) +
   geom_histogram(mapping = aes(x = price), binwidth = 1) 
 ```
 
-2.  What does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is appropriate?
+2. What kind of variable is price? What happens if you draw a histogram with another kind of variable?
+
+```{r plot-other, eval=FALSE, echo=TRUE}
+## What is the distribution of price?
+ggplot(data = diamonds) +
+  geom_histogram(mapping = aes(x = OTHER_VAR), binwidth = 1) 
+```
+
+3.  What does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is most appropriate for this data?
+
+```{r plot-other, eval=FALSE, echo=TRUE}
+## What is the distribution of price?
+ggplot(data = diamonds) +
+  geom_histogram(mapping = aes(x = price), binwidth = OTHER_VALUE) 
+```
 
 The distribution of diamond prices is right skewed (long right tail).
 
-3.  In your notes, copy [these histograms](https://www.statology.org/describe-shape-of-histogram/) and the words used to describe them.
+4.  In your notes, copy [these histograms](https://www.statology.org/describe-shape-of-histogram/) and the words used to describe them.
 
 One interesting feature of this graph is the dip in diamonds priced at about \$1000. Let's explore this a little further and look at some basic [dplyr commands](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf).
 
@@ -75,7 +89,7 @@ diamonds %>%
   View()
 ```
 
-3.  What does the filter function do?
+5.  What does the filter function do?
 
 ```{r diamonds_about_1000_b, eval=FALSE, echo=TRUE}
 diamonds %>% 
@@ -84,9 +98,9 @@ diamonds %>%
   View()
 ```
 
-4.  What does this "%/%" operator do? (hint: run 10 %/% 3, 10 %/% 5, 7 %/% 3, 7 %/% 5 in the console)
+6.  What does this "%/%" operator do? (hint: run 10 %/% 3, 10 %/% 5, 7 %/% 3, 7 %/% 5 in the console)
 
-5.  What does the mutate function do? (hint: pay special attention to the dimensions of the data)
+7. What does the mutate function do? (hint: pay special attention to the dimensions of the data)
 
 ```{r diamonds_about_1000_c, eval=FALSE, echo=TRUE}
 diamonds %>% 
@@ -96,7 +110,7 @@ diamonds %>%
   View()
 ```
 
-6.  What does the select function do?
+8. What does the select function do?
 
 ```{r diamonds_about_1000_d, eval=FALSE, echo=TRUE}
 diamonds %>% 
@@ -106,6 +120,8 @@ diamonds %>%
   count(price_hundred) %>% 
   View()
 ```
+
+9. Can you identify the values where the dip is using the information above? Why or why not?
 
 ```{r diamonds_about_1000_e, eval=FALSE, echo=TRUE}
 diamonds %>% 
@@ -117,13 +133,10 @@ diamonds %>%
   View()
 ```
 
-7.  What does the "%%" function find?
+10  What does the "%%" function do?
 
-This feature is probably better identified graphically.
+11. Can you identify the values where the dip is using the information above? Why or why not? 
 
-```{r plotly, eval=FALSE, echo=TRUE}
-
-```
 
 Cut may impact upon price
 
@@ -133,14 +146,14 @@ ggplot(data = diamonds) +
                  binwidth = 100) 
 ```
 
-8.  Which cut do you suspect is the most common in the dataset? How many diamonds with that cut are in the dataset?
+12.  Which cut do you suspect is the most common in the dataset? How many diamonds with that cut are in the dataset?
 
     ```{r cut_count, eval=FALSE, echo=TRUE}
     diamonds %>% 
       INSERT_FUNCTION_HERE(cut)
     ```
 
-9.  The variables color or clarity might impact upon the price. Draw a histogram and color it using one of them.
+13.  The variables color or clarity might impact upon the price. Draw a histogram and color it using one of them.
 
     ```{r cut, eval=FALSE, echo=TRUE}
     ggplot(data = diamonds) +
@@ -149,7 +162,17 @@ ggplot(data = diamonds) +
                      binwidth = YOUR_BIN_WIDTH) 
     ```
 
-10. What do the fill and color inputs do in the above coding?
+14. What do the fill and color inputs do in the above coding?
 
-8.  
-9.  
+15. What kind of variables should we use for the fill and color inputs? What happens if another type of variable is used?
+
+```{r}
+ggplot(data = diamonds) +
+      geom_histogram(mapping = aes(x = price, color = VAR_NAME, 
+                                   fill = VAR_NAME), 
+                     binwidth = YOUR_BIN_WIDTH) 
+```
+
+Statisticians use basic summaries to 
+
+
