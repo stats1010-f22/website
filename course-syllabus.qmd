@@ -53,8 +53,8 @@ I will regularly send course announcements via email and canvas, make sure to ch
 
 -   If you have a question during lecture, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.
 -   The teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
--   Outside of class and office hours, any general questions about course content or assignments should be posted on the course forum INSET FORUM HERE. There is a chance another student has already asked a similar question, so please check the other posts in Conversations before adding a new question. If you know the answer to a question posted in the discussion forum, I encourage you to respond!
--   Emails should be reserved for questions not appropriate for the public forum. **If you email me, please include "STA 1010" in the subject line.** Barring extenuating circumstances, I will respond to STA 1010 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
+-   Outside of class and office hours, any general questions about course content or assignments should be posted on the [Ed discussion](https://edstem.org/us/courses/27622/discussion/) forum. There is a chance another student has already asked a similar question, so please check the other posts in Conversations before adding a new question. If you know the answer to a question posted in the discussion forum, I encourage you to respond!
+-   Emails should be reserved for questions not appropriate for the public forum. **If you email me, please include "STAT 1010" in the subject line and ONLY STAT 1010.** Barring extenuating circumstances, I will respond to STAT 1010 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
 
 Check out the [Support](/course-support.html) page for more resources.
 
@@ -88,7 +88,7 @@ Assessment for the course is comprised of five components: application exercises
 
 ### Application exercises
 
-Parts of some lectures will be dedicated to working on Application Exercises (AEs). These exercises which give you an opportunity to apply the statistical concepts and code introduced in the readings and lectures. These AEs are due within three days of the corresponding lecture period. Specifically, AEs from Monday lectures are due Thursday by 11:59 pm ET, and AEs from Wednesdays lectures are due Saturday by 11:59 pm ET.
+Parts of some lectures will be dedicated to working on Application Exercises (AEs). These exercises give you an opportunity to apply the statistical concepts and code introduced in the readings and lectures. Due dates for AEs will be announced as they are assigned.
 
 Because these AEs are for practice, they will be graded based on completion, i.e., a good-faith effort has been made in attempting all parts. Successful on-time completion of at least 80% of AEs will result in full credit for AEs in the final course grade.
 
@@ -202,7 +202,7 @@ However, there may be many reasons why you cannot be in class on a given day, pa
 
 ### Attendance policy related to COVID symptoms, exposure, or infection
 
-Student health, safety, and well-being are the university's top priorities. To help ensure your well-being and the well-being of those around you, please do not come to class if you have symptoms related to COVID-19, have had a known exposure to COVID-19, or have tested positive for COVID-19. If any of these situations apply to you, [you must follow university guidance](https://coronavirus.upenn.edu/content/faqs-fall-2022) related to the ongoing COVID-19 pandemic and current health and safety protocols. If you are experiencing any COVID-19 symptoms, contact student health at 215-898-0300. To keep the university community as safe and healthy as possible, you will be expected to follow these guidelines. Please reach out to me and your academic dean as soon as possible if you need to quarantine or isolate so that we can discuss arrangements for your continued participation in class. For the safety of all students, ***I require that students wear masks in class***.
+Student health, safety, and well-being are the university's top priorities. To help ensure your well-being and the well-being of those around you, please do not come to class if you have symptoms related to COVID-19, have had a known exposure to COVID-19, or have tested positive for COVID-19. If any of these situations apply to you, [you must follow university guidance](https://coronavirus.upenn.edu/content/faqs-fall-2022) related to the ongoing COVID-19 pandemic and current health and safety protocols. If you are experiencing any COVID-19 symptoms, contact student health at 215-898-0300. To keep the university community as safe and healthy as possible, you will be expected to follow these guidelines. Please reach out to me and your academic dean as soon as possible if you need to quarantine or isolate so that we can discuss arrangements for your continued participation in class. For the safety of all students, ***I require that students wear masks in class*** *and prefer N95 or KN95 masks.*
 
 ### Inclement weather policy
 
@@ -210,7 +210,7 @@ In the event of inclement weather or other connectivity-related events that proh
 
 ### Policy on video recording course content
 
-All lectures will be recorded and available on INSERT LINK HERE, so students should not need to create their own recordings of lectures. If you feel that you need record the lectures yourself, you must get written permission from me ahead of time and these recordings should be used for personal study only, not for distribution. The full policy on recording of lectures falls under the University of Pennsylvania's V.L. Policy on Unauthorized Copying of Copyrighted Media, available at <https://catalog.upenn.edu/faculty-handbook/v/v-l/>. Unauthorized distribution may result in a civil suite, criminal charges, and/or penalties and fines.
+Lectures will be recorded and available on [Canvas](https://canvas.upenn.edu/courses/1680632/external_tools/90311), so students should not need to create their own recordings of lectures. If you feel that you need record the lectures yourself, you must get written permission from me ahead of time and these recordings should be used for personal study only, not for distribution. The full policy on recording of lectures falls under the University of Pennsylvania's V.L. Policy on Unauthorized Copying of Copyrighted Media, available at <https://catalog.upenn.edu/faculty-handbook/v/v-l/>. Unauthorized distribution may result in a civil suite, criminal charges, and/or penalties and fines.
 
 ## **Learning during a pandemic**
 
