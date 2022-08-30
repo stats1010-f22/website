@@ -25,9 +25,9 @@ website:
     pinned: true
     align: center
     tools:
-      - icon: github
+      - icon: link
         href: https://github.com/sta1010-f22
-        text: "GitHub organization"
+        text: Course links
         menu:
           - text: Discussions
             url: https://edstem.org/us/courses/27622/discussion/
