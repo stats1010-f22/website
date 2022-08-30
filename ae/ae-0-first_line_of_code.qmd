@@ -12,6 +12,8 @@ This application exercise is due at noon on 6 Sept at 11:59am.
 
 You own a jewelry business and are working to price your [diamonds](tps://www.londonde.com/blogs/worlds-most-famous-diamonds/). To facilitate, you **explore** the diamond dataset in R and pay special attention to the cost of the diamond. Let's **explore** together.
 
+To accomplish this, please paste each line of code into your RStudio instance, and answer the accompanying questions.
+
 # Coding basics
 
 [Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.](https://style.tidyverse.org/index.html)
@@ -22,13 +24,14 @@ You own a jewelry business and are working to price your [diamonds](tps://www.lo
 
 -   Comments are really important and are notes to your future self to remind you about steps that you took and decisions that you made.
 
+- 
+
 ```{r load-packages, eval=FALSE, echo=TRUE}
 #| warning: false
 #| message: false
 
 ## loading library
 library(tidyverse) # for data analysis and visualisation
-library(plotly) # for interactive plots
 ```
 
 # Data
@@ -56,6 +59,8 @@ What are these variables and what do they mean?
 1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help, and please copy this into your notes  under the title data types) 
 
 ```{r plot-price, eval=FALSE, echo=TRUE}
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
 ## What is the distribution of price?
@@ -66,10 +71,12 @@ ggplot(data = diamonds) +
 2. What kind of variable is price? What happens if you draw a histogram with another kind of variable?
 
 ```{r plot-hist-other, eval=FALSE, echo=TRUE}
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
 
-## What is the distribution of price?
+## What happens if you draw a histogram with a different type of variable?
 ggplot(data = diamonds) +
   geom_histogram(mapping = aes(x = OTHER_VAR), binwidth = 1) 
 ```
@@ -77,10 +84,12 @@ ggplot(data = diamonds) +
 3.  What does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is most appropriate for this data?
 
 ```{r plot-other, eval=FALSE, echo=TRUE}
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
 
-## What is the distribution of price?
+## Find an appropriate binwidth
 ggplot(data = diamonds) +
   geom_histogram(mapping = aes(x = price), binwidth = OTHER_VALUE) 
 ```
@@ -91,11 +100,15 @@ The distribution of diamond prices is right skewed (long right tail).
 
 One interesting feature of this graph is the dip in diamonds priced at about \$1000. Let's explore this a little further and look at some basic [dplyr commands](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf).
 
-```{r, diamonds-about-1000-a, eval=FALSE, echo=TRUE}
+The pipe operator "%>%" tells R to take the output from one function and sends it to the input in the next function.
 
+```{r, diamonds-about-1000-a, eval=FALSE, echo=TRUE}
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
 
+## Filtering on price
 diamonds %>% 
   filter(price > 750 & price < 1250) %>% 
   View()
@@ -104,13 +117,14 @@ diamonds %>%
 5.  What does the filter function do?
 
 ```{r diamonds-about-1000-b, eval=FALSE, echo=TRUE}
-
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
 
 diamonds %>% 
-  filter(price > 750 & price < 1250) %>% 
-  mutate(price_hundred = price %/% 100) %>% 
+  filter(price > 750 & price < 1250) %>% ## Filtering on price
+  mutate(price_hundred = price %/% 100) %>% ## Finding price_hundred
   View()
 ```
 
@@ -119,36 +133,40 @@ diamonds %>%
 7. What does the mutate function do? (hint: pay special attention to the dimensions of the data)
 
 ```{r diamonds-about-1000-c, eval=FALSE, echo=TRUE}
-
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
 
 diamonds %>% 
-  filter(price > 750 & price < 1250) %>% 
-  mutate(price_hundred = price %/% 100) %>% 
-  select(price, price_hundred) %>% 
+  filter(price > 750 & price < 1250) %>% ## Filtering on price
+  mutate(price_hundred = price %/% 100) %>% ## Finding price_hundred
+  select(price, price_hundred) %>% ## Select vars
   View()
 ```
 
 8. What does the select function do?
 
 ```{r diamonds-about-1000-d, eval=FALSE, echo=TRUE}
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
 
 
 diamonds %>% 
-  filter(price > 750 & price < 1250) %>% 
-  mutate(price_hundred = price %/% 100) %>% 
-  select(price, price_hundred) %>% 
-  count(price_hundred) %>% 
+  filter(price > 750 & price < 1250) %>% ## Filtering on price
+  mutate(price_hundred = price %/% 100) %>% ## Finding price_hundred
+  select(price, price_hundred) %>% ## Select vars
+  count(price_hundred) %>% ## Count
   View()
 ```
 
 9. Can you identify the values where the dip is using the information above? Why or why not?
 
 ```{r diamonds-about-1000-e, eval=FALSE, echo=TRUE}
-
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
 
@@ -169,7 +187,8 @@ diamonds %>%
 Cut may impact upon price
 
 ```{r cut-plot, eval=FALSE, echo=TRUE}
-
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
 
@@ -181,10 +200,11 @@ ggplot(data = diamonds) +
 12.  Which cut do you suspect is the most common in the dataset? How many diamonds with that cut are in the dataset?
 
 ```{r cut-count, eval=FALSE, echo=TRUE}
-
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
-#| 
+
 diamonds %>% 
   INSERT_FUNCTION_HERE(cut)
 ```
@@ -192,9 +212,11 @@ diamonds %>%
 13.  The variables color or clarity might impact upon the price. Draw a histogram and color it using one of them.
 
 ```{r cut, eval=FALSE, echo=TRUE}
-
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
+
 ggplot(data = diamonds) +
   geom_histogram(mapping = aes(x = price, color = VAR_NAME, 
                                fill = VAR_NAME), 
@@ -206,6 +228,8 @@ ggplot(data = diamonds) +
 15. What kind of variables should we use for the fill and color inputs? What happens if another type of variable is used?
 
 ```{r other-vars, echo=TRUE, eval=FALSE}
+#| message: false
+#| warning: false
 #| eval: false
 #| echo: true
 

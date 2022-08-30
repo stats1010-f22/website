@@ -24,10 +24,7 @@ By the end of this lesson, you should:
 
 -   Drawn your first ggplot in R
 
--   Know how to find help in R
-
-# {background-image="lec_1_images/witten_CS.png" background-size="cover"}
-
+#  {background-image="lec_1_images/witten_CS.png" background-size="cover"}
 
 # Download R
 
@@ -58,7 +55,6 @@ plot(qr)
 ## Pane layout
 
 ![Update panes and their layout](lec_1_images/pane_layout.png){fig-align="center" width="230"}
-
 
 # Start a project
 
@@ -94,20 +90,13 @@ Name the document "lec_01" and hit create
 
 ![Naming the document](lec_1_images/name_quarto.png){fig-align="center" width="230"}
 
-
 ## Insert an R code chuck
 
 Insert a code chunk
 
 ![Insert code chunk](lec_1_images/insert_code_qmd.png)
 
-
 ## Write your first line of coding
 
-Use the QR code below or [click here](https://github.com/stats1010-f22/website/blob/main/slides/lec_1_images/first_line_of_code.html)
+[Click here](ae/ae-0-first_line_of_code.html) to write your first line of code
 
-```{r, eval=TRUE, echo=FALSE}
-library(qrcode)
-qr <- qr_code("https://github.com/stats1010-f22/website/blob/main/slides/lec_1_images/first_line_of_code.html")
-plot(qr)
-```
