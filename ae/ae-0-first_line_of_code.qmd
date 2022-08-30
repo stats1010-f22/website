@@ -140,7 +140,7 @@ ggplot(data = diamonds) +
       INSERT_FUNCTION_HERE(cut)
     ```
 
-9.  What other variables in the dataset may impact upon the price? Draw a histogram and color it using that variable.
+9.  The variables color or clarity might impact upon the price. Draw a histogram and color it using one of them.
 
     ```{r cut, eval=FALSE, echo=TRUE}
     ggplot(data = diamonds) +
@@ -149,6 +149,7 @@ ggplot(data = diamonds) +
                      binwidth = YOUR_BIN_WIDTH) 
     ```
 
-10. 
+10. What do the fill and color inputs do in the above coding?
 
-11. 
+8.  
+9.  
