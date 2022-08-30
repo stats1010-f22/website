@@ -14,13 +14,13 @@ The teaching team is here to help you be successful in the course. You are encou
 
 ## Discussion forum
 
-Have a question that can't wait for office hours? Prefer to write out your question in detail rather than asking in person? The online discussion forum is the best venue for these! We will use [Conversations](https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/tool/13b6446a-a6c6-4222-8cfb-c36d1f70802b) as the online discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before adding a new question. If you know the answer to a question that is posted, I encourage you to respond!
+Have a question that can't wait for office hours? Prefer to write out your question in detail rather than asking in person? The online discussion forum is the best venue for these! We will use [Ed discussion](https://edstem.org/us/courses/27622/discussion/) as the online discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before adding a new question. If you know the answer to a question that is posted, I encourage you to respond!
 
 ## Email
 
-Please refrain from emailing any course content questions (those should go INSERT LINKE), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email dr. gwynn sturdevant at [gwynnc\@wharton.upenn.edu](mailto:gwynnc@wharton.upenn.edu).
+Please refrain from emailing any course content questions (those should go [Ed discussion](https://edstem.org/us/courses/27622/discussion/)), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email dr. gwynn sturdevant at [gwynnc\@wharton.upenn.edu](mailto:gwynnc@wharton.upenn.edu).
 
-If there is a question that's not appropriate for the public forum, you are welcome to email me directly. **If you email me, please include "STAT 1010" in the subject line.** Barring extenuating circumstances, I will respond to STAT 1010 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
+If there is a question that's not appropriate for the public forum, you are welcome to email me directly. **If you email me, please include "STAT 1010" in the subject line.** You can also contact me privately on INSERT CANVAS LINK HERE Barring extenuating circumstances, I will respond to STAT 1010 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
 
 ## Academic support
 
@@ -33,8 +33,7 @@ There are times you may need help with the class that is beyond what can be prov
 
 \
 Additionally, [Marks Family Writing Center](http://writing.upenn.edu/critical/wc/) provides expert help in writing for undergraduate and graduate students. [Communication Within the Curriculum](http://www.sas.upenn.edu/cwic/) helps students express themselves orally with clarity and confidence. [Language Direct](https://plc.sas.upenn.edu/languagedirect) provides tutoring for foreign languages. [Van \
-Pelt Library](http://commons.library.upenn.edu/student-support/student-assistance-services) supports students in research and instructional technologies through a range of \
-[workshops](http://guides.library.upenn.edu/workshops) and [consultations](http://gethelp.library.upenn.edu/).
+Pelt Library](http://commons.library.upenn.edu/student-support/student-assistance-services) supports students in research and instructional technologies through a range of [workshops](http://guides.library.upenn.edu/workshops) and [consultations](http://gethelp.library.upenn.edu/).
 
 ## Mental health and wellness
 
@@ -71,7 +70,7 @@ There are no costs associated with this course. All readings will come from free
 
 ## **Assistance with Zoom or Canvas**
 
-For technical help with Canvas, GradeScope, or Zoom, contact [Wharton Student Computing](https://computing.wharton.upenn.edu/). IYou can also access the self-service help documentation for Zoom [here](https://support.wharton.upenn.edu/help/logging-into-zoom), Canvas [here](https://support.wharton.upenn.edu/help/canvas-help-for-students), and for Sakai [here](https://sakai-duke.screenstepslive.com/s/sakai_support).
+For technical help with Canvas, Gradescope, or Zoom, contact [Wharton Student Computing](https://computing.wharton.upenn.edu/). You can also access the self-service help documentation for Zoom [here](https://support.wharton.upenn.edu/help/logging-into-zoom), Canvas [here](https://support.wharton.upenn.edu/help/canvas-help-for-students), and for Gradescope [here](https://infocanvas.upenn.edu/guides/gradescope/).
 
 Note that we will be making minimal use of Gradescope in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.
 

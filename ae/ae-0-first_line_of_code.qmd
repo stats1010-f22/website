@@ -5,7 +5,7 @@ output:
 ---
 
 ::: callout-important
-This application exercise is due at noon on  6 Sept at 11:59am.
+This application exercise is due at noon on 6 Sept at 11:59am.
 :::
 
 # Scenario
@@ -28,6 +28,7 @@ You own a jewelry business and are working to price your [diamonds](tps://www.lo
 
 ## loading library
 library(tidyverse) # for data analysis and visualisation
+library(plotly) # for interactive plots
 ```
 
 # Data
@@ -52,8 +53,7 @@ What are these variables and what do they mean?
 ?diamonds
 ```
 
-1. What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help)
-
+1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help, and please copy this into your notes)
 
 ```{r plot-price, eval=FALSE, echo=TRUE}
 ## What is the distribution of price?
@@ -61,9 +61,13 @@ ggplot(data = diamonds) +
   geom_histogram(mapping = aes(x = price), binwidth = 1) 
 ```
 
-2. What does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is appropriate?
+2.  What does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is appropriate?
 
-The distribution of diamond prices is right skewed (long right tail). There are no diamonds priced at about $1000. Let's explore this a little further...
+The distribution of diamond prices is right skewed (long right tail).
+
+3.  In your notes, copy [these histograms](https://www.statology.org/describe-shape-of-histogram/) and the words used to describe them.
+
+One interesting feature of this graph is the dip in diamonds priced at about \$1000. Let's explore this a little further and look at some basic [dplyr commands](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf).
 
 ```{r, diamonds_about_1000_a, eval=FALSE, echo=TRUE}
 diamonds %>% 
@@ -71,7 +75,7 @@ diamonds %>%
   View()
 ```
 
-3. What does the filter function do?
+3.  What does the filter function do?
 
 ```{r diamonds_about_1000_b, eval=FALSE, echo=TRUE}
 diamonds %>% 
@@ -80,9 +84,9 @@ diamonds %>%
   View()
 ```
 
-4. What does this "%/%" operator do? (hint: run 10 %/% 3, 10 %/% 5, 7 %/% 3, 7 %/% 5 in the console and think carefully about /)
+4.  What does this "%/%" operator do? (hint: run 10 %/% 3, 10 %/% 5, 7 %/% 3, 7 %/% 5 in the console)
 
-5. What does the mutate function do? (hint: pay special attention to the dimensions of the data)
+5.  What does the mutate function do? (hint: pay special attention to the dimensions of the data)
 
 ```{r diamonds_about_1000_c, eval=FALSE, echo=TRUE}
 diamonds %>% 
@@ -92,7 +96,7 @@ diamonds %>%
   View()
 ```
 
-6. What does the select function do? 
+6.  What does the select function do?
 
 ```{r diamonds_about_1000_d, eval=FALSE, echo=TRUE}
 diamonds %>% 
@@ -103,7 +107,6 @@ diamonds %>%
   View()
 ```
 
-
 ```{r diamonds_about_1000_e, eval=FALSE, echo=TRUE}
 diamonds %>% 
   filter(price > 750 & price < 1250) %>% 
@@ -111,15 +114,41 @@ diamonds %>%
   select(price, price_hundred) %>% 
   mutate(price_remainder = price %% 100) %>% 
   count(price_hundred, price_remainder) %>% 
-  View
+  View()
 ```
+
+7.  What does the "%%" function find?
 
 This feature is probably better identified graphically.
 
-```{r }
+```{r plotly, eval=FALSE, echo=TRUE}
 
 ```
 
+Cut may impact upon price
 
-3. Based upon the above plot, how much should your charge for your diamonds? Why?
+```{r cut_plot, eval=FALSE, echo=TRUE}
+ggplot(data = diamonds) +
+  geom_histogram(mapping = aes(x = price, color = cut, fill = cut),
+                 binwidth = 100) 
+```
 
+8.  Which cut do you suspect is the most common in the dataset? How many diamonds with that cut are in the dataset?
+
+    ```{r cut_count, eval=FALSE, echo=TRUE}
+    diamonds %>% 
+      INSERT_FUNCTION_HERE(cut)
+    ```
+
+9.  What other variables in the dataset may impact upon the price? Draw a histogram and color it using that variable.
+
+    ```{r cut, eval=FALSE, echo=TRUE}
+    ggplot(data = diamonds) +
+      geom_histogram(mapping = aes(x = price, color = VAR_NAME, 
+                                   fill = VAR_NAME), 
+                     binwidth = YOUR_BIN_WIDTH) 
+    ```
+
+10. 
+
+11. 

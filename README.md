@@ -1,7 +1,7 @@
 # Website for STAT 1010 at Wharton (Fall 2022)
 
 https://stats1010-f22.github.io/website/
- 
+
 # Colors
 
     website background: #D9E3E4
@@ -9,4 +9,4 @@ https://stats1010-f22.github.io/website/
 
 # Attribution
 
-Much of the content of this wesbite is based on STA 210 - Spring 2022 by Dr. Mine Cetinkaya Rundel.
+Based on Dr. Mine Çetinkaya-Rundel's [STA 210 course](https://sta210-s22.github.io/website/) at Duke University
