@@ -403,14 +403,7 @@
     "href": "slides/01_introduction.html#write-your-first-line-of-coding",
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Write your first line of coding",
-    "text": "Write your first line of coding\nUse the QR code below or click here"
-  },
-  {
-    "objectID": "slides/01_introduction.html#what-if-it-breaks",
-    "href": "slides/01_introduction.html#what-if-it-breaks",
-    "title": "Lec 1 - Downloading R and plot your first graph",
-    "section": "What if it breaks?",
-    "text": "What if it breaks?\nUse the QR code below or click here.\n\n\n\nstat1010-f22.github.io/website"
+    "text": "Write your first line of coding\nUse the QR code below or click here\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "ae/ae-7-exam-2-review.html",
@@ -648,7 +641,7 @@
     "href": "ae/ae-0-first_line_of_code.html",
     "title": "Introduction to the diamonds dataset",
     "section": "",
-    "text": "Scenario\nYou own a jewelry business and are working to price your diamonds. To facilitate, you explore the diamond dataset in R and pay special attention to the cost of the diamond. Let’s explore together.\n\n\nCoding basics\nGood coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.\n\nWhen writing code, load all libraries first.\n“##” is used to write comments in R and should be used to justify next steps and anything unusual or unexpected steps\nComments are really important and are notes to your future self to remind you about steps that you took and decisions that you made.\n\n\n## loading library\nlibrary(tidyverse) # for data analysis and visualisation\n\n\n\nData\nThe diamonds dataset includes basic information about 53940 diamonds including price and other characteristics.\n\n## View the dataset in a separate tab\nView(diamonds)\n\nThe ___ dataset has ___ observations and ___ variables.\nWhat are these variables and what do they mean?\n\n## What are the variables in this dataset?\n## What are they counting?\n?diamonds\n\n\nWhat do the “4 c’s” of every diamond mean? What kind of variables are they? (hint: This video may help)\n\n\n## What is the distribution of price?\nggplot(data = diamonds) +\n  geom_histogram(mapping = aes(x = price), binwidth = 1) \n\n\nWhat does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is appropriate?\n\nThe distribution of diamond prices is right skewed (long right tail). There are no diamonds priced at about $1000. Let’s explore this a little further…\n\ndiamonds %>% \n  filter(price > 750 & price < 1250) %>% \n  View()\n\n\nWhat does the filter function do?\n\n\ndiamonds %>% \n  filter(price > 750 & price < 1250) %>% \n  mutate(price_hundred = price %/% 100) %>% \n  View()\n\n\nWhat does this “%/%” operator do? (hint: run 10 %/% 3, 10 %/% 5, 7 %/% 3, 7 %/% 5 in the console and think carefully about /)\nWhat does the mutate function do? (hint: pay special attention to the dimensions of the data)\n\n\ndiamonds %>% \n  filter(price > 750 & price < 1250) %>% \n  mutate(price_hundred = price %/% 100) %>% \n  select(price, price_hundred) %>% \n  View()\n\n\nWhat does the select function do?\n\n\ndiamonds %>% \n  filter(price > 750 & price < 1250) %>% \n  mutate(price_hundred = price %/% 100) %>% \n  select(price, price_hundred) %>% \n  count(price_hundred) %>% \n  View()\n\n\ndiamonds %>% \n  filter(price > 750 & price < 1250) %>% \n  mutate(price_hundred = price %/% 100) %>% \n  select(price, price_hundred) %>% \n  mutate(price_remainder = price %% 100) %>% \n  count(price_hundred, price_remainder) %>% \n  View\n\nThis feature is probably better identified graphically.\n\n\n\n\nBased upon the above plot, how much should your charge for your diamonds? Why?"
+    "text": "Scenario\nYou own a jewelry business and are working to price your diamonds. To facilitate, you explore the diamond dataset in R and pay special attention to the cost of the diamond. Let’s explore together.\n\n\nCoding basics\nGood coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.\n\nWhen writing code, load all libraries first.\n“##” is used to write comments in R and should be used to justify next steps and anything unusual or unexpected steps\nComments are really important and are notes to your future self to remind you about steps that you took and decisions that you made.\n\n\n## loading library\nlibrary(tidyverse) # for data analysis and visualisation\nlibrary(plotly) # for interactive plots\n\n\n\nData\nThe diamonds dataset includes basic information about 53940 diamonds including price and other characteristics.\n\n## View the dataset in a separate tab\nView(diamonds)\n\nThe ___ dataset has ___ observations and ___ variables.\nWhat are these variables and what do they mean?\n\n## What are the variables in this dataset?\n## What are they counting?\n?diamonds\n\n\nWhat do the “4 c’s” of every diamond mean? What kind of variables are they? (hint: This video may help, and please copy this into your notes)\n\n\n## What is the distribution of price?\nggplot(data = diamonds) +\n  geom_histogram(mapping = aes(x = price), binwidth = 1) \n\n\nWhat does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is appropriate?\n\nThe distribution of diamond prices is right skewed (long right tail).\n\nIn your notes, copy these histograms and the words used to describe them.\n\nOne interesting feature of this graph is the dip in diamonds priced at about $1000. Let’s explore this a little further and look at some basic dplyr commands.\n\ndiamonds %>% \n  filter(price > 750 & price < 1250) %>% \n  View()\n\n\nWhat does the filter function do?\n\n\ndiamonds %>% \n  filter(price > 750 & price < 1250) %>% \n  mutate(price_hundred = price %/% 100) %>% \n  View()\n\n\nWhat does this “%/%” operator do? (hint: run 10 %/% 3, 10 %/% 5, 7 %/% 3, 7 %/% 5 in the console)\nWhat does the mutate function do? (hint: pay special attention to the dimensions of the data)\n\n\ndiamonds %>% \n  filter(price > 750 & price < 1250) %>% \n  mutate(price_hundred = price %/% 100) %>% \n  select(price, price_hundred) %>% \n  View()\n\n\nWhat does the select function do?\n\n\ndiamonds %>% \n  filter(price > 750 & price < 1250) %>% \n  mutate(price_hundred = price %/% 100) %>% \n  select(price, price_hundred) %>% \n  count(price_hundred) %>% \n  View()\n\n\ndiamonds %>% \n  filter(price > 750 & price < 1250) %>% \n  mutate(price_hundred = price %/% 100) %>% \n  select(price, price_hundred) %>% \n  mutate(price_remainder = price %% 100) %>% \n  count(price_hundred, price_remainder) %>% \n  View()\n\n\nWhat does the “%%” function find?\n\nThis feature is probably better identified graphically.\n\n\n\nCut may impact upon price\n\nggplot(data = diamonds) +\n  geom_histogram(mapping = aes(x = price, color = cut, fill = cut),\n                 binwidth = 100) \n\n\nWhich cut do you suspect is the most common in the dataset? How many diamonds with that cut are in the dataset?\n\ndiamonds %>% \n  INSERT_FUNCTION_HERE(cut)\n\nWhat other variables in the dataset may impact upon the price? Draw a histogram and color it using that variable.\n\nggplot(data = diamonds) +\n  geom_histogram(mapping = aes(x = price, color = VAR_NAME, \n                               fill = VAR_NAME), \n                 binwidth = YOUR_BIN_WIDTH)"
   },
   {
     "objectID": "ae/ae-10-flight-delays.html",
@@ -1131,7 +1124,7 @@
     "href": "course-syllabus.html#lectures",
     "title": "Syllabus",
     "section": "Lectures",
-    "text": "Lectures\nThe goal of the lectures is for them to be as interactive as possible. My role as instructor is to introduce you new tools and techniques, but it is up to you to take them and make use of them. A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing. Therefore, as much as possible, you will be working on a variety of tasks and activities throughout each lecture and lab. You are expected to attend all lecture and meaningfully contribute to in-class exercises and discussion. Additionally, some lectures will feature application exercises that will be graded. In addition to application exercises will be periodic activities to help build a learning community. These will be short, fun activities that will help everyone in the class connect throughout the semester.\nYou are expected to bring a laptop to each class so that you can take part in the in-class exercises. Please make sure your laptop is fully charged before you come to class as the number of outlets in the classroom will not be sufficient to accommodate everyone. If you are in need of a loaner laptop please contact dr. sturdevant."
+    "text": "Lectures\nThe goal of the lectures is for them to be as interactive as possible. My role as instructor is to introduce you new tools and techniques, but it is up to you to take them and make use of them. A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing. Therefore, as much as possible, you will be working on a variety of tasks and activities throughout each lecture and lab. You are expected to attend all lecture and meaningfully contribute to in-class exercises and discussion. Additionally, some lectures will feature application exercises that will be graded. In addition to application exercises will be periodic activities to help build a learning community. These will be short, fun activities that will help everyone in the class connect throughout the semester.\nYou are expected to bring a laptop to each class so that you can take part in the in-class exercises. Please make sure your laptop is fully charged before you come to class as the number of outlets in the classroom will not be sufficient to accommodate everyone. If you are in need of a loaner laptop please seek support here."
   },
   {
     "objectID": "course-syllabus.html#teams",
@@ -1180,7 +1173,7 @@
     "href": "course-syllabus.html#learning-during-a-pandemic",
     "title": "Syllabus",
     "section": "Learning during a pandemic",
-    "text": "Learning during a pandemic\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded during this crisis.\n\nNote: If you’ve read this far in the syllabus, email me a picture of your pet if you have one or your favourite meme!"
+    "text": "Learning during a pandemic\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded during this crisis.\n\nNote: If you’ve read this far in the syllabus, post a picture of your pet if you have one or your favourite meme to the discussion forum!"
   },
   {
     "objectID": "course-syllabus.html#important-dates",
@@ -1348,35 +1341,28 @@
     "href": "weeks/week-2.html",
     "title": "Week 1",
     "section": "",
-    "text": "Important\n\n\n\nClasses are virtual this week. Find Zoom links here."
-  },
-  {
-    "objectID": "weeks/week-2.html#prepare",
-    "href": "weeks/week-2.html#prepare",
-    "title": "Week 1",
-    "section": "Prepare",
-    "text": "Prepare\n📖 Read the syllabus\n📖 Read the support resources"
+    "text": "📖 Read the syllabus\n📖 Read the support resources"
   },
   {
     "objectID": "weeks/week-2.html#participate",
     "href": "weeks/week-2.html#participate",
     "title": "Week 1",
     "section": "Participate",
-    "text": "Participate\n🖥️ Lab 0 -Meet+ greet\n🖥️ Lecture 1 - Welcome to STA 210"
+    "text": "Participate\n🖥️ Lecture 1 - Download R and plotting your first graph"
   },
   {
     "objectID": "weeks/week-2.html#practice",
     "href": "weeks/week-2.html#practice",
     "title": "Week 1",
     "section": "Practice",
-    "text": "Practice\n📋 AE 0 - Movies"
+    "text": "Practice\n📋 diamonds"
   },
   {
     "objectID": "weeks/week-2.html#perform",
     "href": "weeks/week-2.html#perform",
     "title": "Week 1",
     "section": "Perform",
-    "text": "Perform\n⌨️ Lab 0 - Meet + greet\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n⌨️ Diagnostic test\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-1.html",
@@ -1446,21 +1432,21 @@
     "href": "course-support.html#discussion-forum",
     "title": "Course support",
     "section": "Discussion forum",
-    "text": "Discussion forum\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The online discussion forum is the best venue for these! We will use Conversations as the online discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before adding a new question. If you know the answer to a question that is posted, I encourage you to respond!"
+    "text": "Discussion forum\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The online discussion forum is the best venue for these! We will use Ed discussion as the online discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on Ed Discussion before adding a new question. If you know the answer to a question that is posted, I encourage you to respond!"
   },
   {
     "objectID": "course-support.html#email",
     "href": "course-support.html#email",
     "title": "Course support",
     "section": "Email",
-    "text": "Email\nPlease refrain from emailing any course content questions (those should go INSERT LINKE), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email dr. gwynn sturdevant at gwynnc@wharton.upenn.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STAT 1010” in the subject line. Barring extenuating circumstances, I will respond to STAT 1010 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
+    "text": "Email\nPlease refrain from emailing any course content questions (those should go Ed discussion), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email dr. gwynn sturdevant at gwynnc@wharton.upenn.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STAT 1010” in the subject line. You can also contact me privately on INSERT CANVAS LINK HERE Barring extenuating circumstances, I will respond to STAT 1010 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
   },
   {
     "objectID": "course-support.html#academic-support",
     "href": "course-support.html#academic-support",
     "title": "Course support",
     "section": "Academic support",
-    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Weingarten learning center. The Weingarten Center offers a variety of resources to support all Penn students in reaching their academic goals. They offer multiple workshops throughout the semester and students can request workshops. All services are free and confidential. To contact the Weingarten Center, call 215-573-9235. The office is located in Stouffer Commons at 3702 Spruce Street, Suite 300.\nLearning Consultations offers individual consultations and group workshops that support students in developing more efficient and effective study skills and learning strategies. Learning specialists work with students to address time and project management, academic reading and writing, note-taking, problem-solving, exam preparation, test-taking, self-regulation, and flexibility.\n\nTutoring offers free access to on-campus tutors for many Penn courses in both drop-in and weekly contract format. Tutoring may be individual or in small groups. Tutors will assist with applying course information, understanding key concepts, and developing course-specific strategies. Tutoring support is available throughout the term but is best accessed early in the semester. First-time users must meet with a staff member; returning users may submit their requests online.\n\nAdditionally, Marks Family Writing Center provides expert help in writing for undergraduate and graduate students. Communication Within the Curriculum helps students express themselves orally with clarity and confidence. Language Direct provides tutoring for foreign languages. Van\nPelt Library supports students in research and instructional technologies through a range of\nworkshops and consultations."
+    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Weingarten learning center. The Weingarten Center offers a variety of resources to support all Penn students in reaching their academic goals. They offer multiple workshops throughout the semester and students can request workshops. All services are free and confidential. To contact the Weingarten Center, call 215-573-9235. The office is located in Stouffer Commons at 3702 Spruce Street, Suite 300.\nLearning Consultations offers individual consultations and group workshops that support students in developing more efficient and effective study skills and learning strategies. Learning specialists work with students to address time and project management, academic reading and writing, note-taking, problem-solving, exam preparation, test-taking, self-regulation, and flexibility.\n\nTutoring offers free access to on-campus tutors for many Penn courses in both drop-in and weekly contract format. Tutoring may be individual or in small groups. Tutors will assist with applying course information, understanding key concepts, and developing course-specific strategies. Tutoring support is available throughout the term but is best accessed early in the semester. First-time users must meet with a staff member; returning users may submit their requests online.\n\nAdditionally, Marks Family Writing Center provides expert help in writing for undergraduate and graduate students. Communication Within the Curriculum helps students express themselves orally with clarity and confidence. Language Direct provides tutoring for foreign languages. Van\nPelt Library supports students in research and instructional technologies through a range of workshops and consultations."
   },
   {
     "objectID": "course-support.html#mental-health-and-wellness",
@@ -1488,7 +1474,7 @@
     "href": "course-support.html#assistance-with-zoom-or-canvas",
     "title": "Course support",
     "section": "Assistance with Zoom or Canvas",
-    "text": "Assistance with Zoom or Canvas\nFor technical help with Canvas, GradeScope, or Zoom, contact Wharton Student Computing. IYou can also access the self-service help documentation for Zoom here, Canvas here, and for Sakai here.\nNote that we will be making minimal use of Gradescope in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person."
+    "text": "Assistance with Zoom or Canvas\nFor technical help with Canvas, Gradescope, or Zoom, contact Wharton Student Computing. You can also access the self-service help documentation for Zoom here, Canvas here, and for Gradescope here.\nNote that we will be making minimal use of Gradescope in this course (primarily for announcements and grade book). All assignment submission and discussion will take place on GitHub instead.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person."
   },
   {
     "objectID": "hw/hw-1.html",

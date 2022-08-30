@@ -324,7 +324,8 @@ Important
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## loading library</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># for data analysis and visualisation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># for data analysis and visualisation</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly) <span class="co"># for interactive plots</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="data" class="level1">
@@ -342,7 +343,7 @@ Important
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>?diamonds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol type="1">
-<li>What do the “4 c’s” of every diamond mean? What kind of variables are they? (hint: This <a href="https://www.youtube.com/watch?v=FqB5Es1HXI4">video</a> may help)</li>
+<li>What do the “4 c’s” of every diamond mean? What kind of variables are they? (hint: This <a href="https://www.youtube.com/watch?v=FqB5Es1HXI4">video</a> may help, and please copy this into your notes)</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## What is the distribution of price?</span></span>
@@ -352,7 +353,11 @@ Important
 <ol start="2" type="1">
 <li>What does the binwidth in the geom_histogram() function do? (hint: draw multiple plots changing this value) What binwidth value is appropriate?</li>
 </ol>
-<p>The distribution of diamond prices is right skewed (long right tail). There are no diamonds priced at about $1000. Let’s explore this a little further…</p>
+<p>The distribution of diamond prices is right skewed (long right tail).</p>
+<ol start="3" type="1">
+<li>In your notes, copy <a href="https://www.statology.org/describe-shape-of-histogram/">these histograms</a> and the words used to describe them.</li>
+</ol>
+<p>One interesting feature of this graph is the dip in diamonds priced at about $1000. Let’s explore this a little further and look at some basic <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf">dplyr commands</a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(price <span class="sc">&gt;</span> <span class="dv">750</span> <span class="sc">&amp;</span> price <span class="sc">&lt;</span> <span class="dv">1250</span>) <span class="sc">%&gt;%</span> </span>
@@ -368,7 +373,7 @@ Important
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">View</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
-<li><p>What does this “%/%” operator do? (hint: run 10 %/% 3, 10 %/% 5, 7 %/% 3, 7 %/% 5 in the console and think carefully about /)</p></li>
+<li><p>What does this “%/%” operator do? (hint: run 10 %/% 3, 10 %/% 5, 7 %/% 3, 7 %/% 5 in the console)</p></li>
 <li><p>What does the mutate function do? (hint: pay special attention to the dimensions of the data)</p></li>
 </ol>
 <div class="cell">
@@ -396,14 +401,36 @@ Important
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(price, price_hundred) <span class="sc">%&gt;%</span> </span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">price_remainder =</span> price <span class="sc">%%</span> <span class="dv">100</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(price_hundred, price_remainder) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  View</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">View</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ol start="7" type="1">
+<li>What does the “%%” function find?</li>
+</ol>
 <p>This feature is probably better identified graphically.</p>
 <div class="cell">
 
 </div>
-<ol start="3" type="1">
-<li>Based upon the above plot, how much should your charge for your diamonds? Why?</li>
+<p>Cut may impact upon price</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">color =</span> cut, <span class="at">fill =</span> cut),</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">binwidth =</span> <span class="dv">100</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="8" type="1">
+<li><p>Which cut do you suspect is the most common in the dataset? How many diamonds with that cut are in the dataset?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">INSERT_FUNCTION_HERE</span>(cut)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>What other variables in the dataset may impact upon the price? Draw a histogram and color it using that variable.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">color =</span> VAR_NAME, </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">fill =</span> VAR_NAME), </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">binwidth =</span> YOUR_BIN_WIDTH) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li></li>
+<li></li>
 </ol>
 
 
