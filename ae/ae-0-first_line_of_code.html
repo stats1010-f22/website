@@ -466,9 +466,14 @@ Important
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>                                   <span class="at">fill =</span> VAR_NAME), </span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>                     <span class="at">binwidth =</span> YOUR_BIN_WIDTH) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ol start="16" type="1">
-<li>So far we have been looking at which types of variables?</li>
-</ol>
+<p>So far we have been looking at only 1 continuous variable. To look at two continous variables, we will draw a scatterplot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Color and fill variables</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_histogram</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">color =</span> VAR_NAME, </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>                                   <span class="at">fill =</span> VAR_NAME), </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>                     <span class="at">binwidth =</span> YOUR_BIN_WIDTH) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
