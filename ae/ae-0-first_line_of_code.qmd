@@ -65,7 +65,7 @@ ggplot(data = diamonds) +
 
 2. What kind of variable is price? What happens if you draw a histogram with another kind of variable?
 
-```{r plot-other, eval=FALSE, echo=TRUE}
+```{r plot-hist-other, eval=FALSE, echo=TRUE}
 #| eval: false
 #| echo: true
 
@@ -91,7 +91,7 @@ The distribution of diamond prices is right skewed (long right tail).
 
 One interesting feature of this graph is the dip in diamonds priced at about \$1000. Let's explore this a little further and look at some basic [dplyr commands](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf).
 
-```{r, diamonds_about_1000_a, eval=FALSE, echo=TRUE}
+```{r, diamonds-about-1000-a, eval=FALSE, echo=TRUE}
 
 #| eval: false
 #| echo: true
@@ -103,7 +103,7 @@ diamonds %>%
 
 5.  What does the filter function do?
 
-```{r diamonds_about_1000_b, eval=FALSE, echo=TRUE}
+```{r diamonds-about-1000-b, eval=FALSE, echo=TRUE}
 
 #| eval: false
 #| echo: true
@@ -118,7 +118,7 @@ diamonds %>%
 
 7. What does the mutate function do? (hint: pay special attention to the dimensions of the data)
 
-```{r diamonds_about_1000_c, eval=FALSE, echo=TRUE}
+```{r diamonds-about-1000-c, eval=FALSE, echo=TRUE}
 
 #| eval: false
 #| echo: true
@@ -132,7 +132,7 @@ diamonds %>%
 
 8. What does the select function do?
 
-```{r diamonds_about_1000_d, eval=FALSE, echo=TRUE}
+```{r diamonds-about-1000-d, eval=FALSE, echo=TRUE}
 #| eval: false
 #| echo: true
 
@@ -147,7 +147,7 @@ diamonds %>%
 
 9. Can you identify the values where the dip is using the information above? Why or why not?
 
-```{r diamonds_about_1000_e, eval=FALSE, echo=TRUE}
+```{r diamonds-about-1000-e, eval=FALSE, echo=TRUE}
 
 #| eval: false
 #| echo: true
@@ -168,7 +168,7 @@ diamonds %>%
 
 Cut may impact upon price
 
-```{r cut_plot, eval=FALSE, echo=TRUE}
+```{r cut-plot, eval=FALSE, echo=TRUE}
 
 #| eval: false
 #| echo: true
@@ -180,7 +180,7 @@ ggplot(data = diamonds) +
 
 12.  Which cut do you suspect is the most common in the dataset? How many diamonds with that cut are in the dataset?
 
-```{r cut_count, eval=FALSE, echo=TRUE}
+```{r cut-count, eval=FALSE, echo=TRUE}
 
 #| eval: false
 #| echo: true
@@ -205,7 +205,7 @@ ggplot(data = diamonds) +
 
 15. What kind of variables should we use for the fill and color inputs? What happens if another type of variable is used?
 
-```{r other_vars, echo=TRUE, eval=FALSE}
+```{r other-vars, echo=TRUE, eval=FALSE}
 #| eval: false
 #| echo: true
 
@@ -215,6 +215,6 @@ ggplot(data = diamonds) +
                      binwidth = YOUR_BIN_WIDTH) 
 ```
 
-Statisticians use basic summaries to desribe variables. Some of them are mean, median, and mode. 
+
 
 
