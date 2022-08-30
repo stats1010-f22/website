@@ -48,15 +48,22 @@ View(diamonds)
 
 The \_\_\_ dataset has \_\_\_ observations and \_\_\_ variables.
 
-What are these variables and what do they mean?
-
 ```{r help-on-dataset, eval=FALSE, echo=TRUE}
 ## What are the variables in this dataset?
 ## What are they counting?
 ?diamonds
 ```
 
-1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help, and please copy this into your notes  under the title data types) 
+
+[ggplot](https://ggplot2.tidyverse.org/) is an R package that is used to create data visualizations. We will be using it throughout this course. The basic format for every ggplot command is:
+
+```{r help-on-dataset, eval=FALSE, echo=TRUE}
+ggplot(data = <DATA>) + 
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+```
+
+
+1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help, copy this into your notes under the title data types) 
 
 ```{r plot-price, eval=FALSE, echo=TRUE}
 #| message: false
@@ -171,17 +178,17 @@ diamonds %>%
 #| echo: true
 
 diamonds %>% 
-  filter(price > 750 & price < 1250) %>% 
-  mutate(price_hundred = price %/% 100) %>% 
-  select(price, price_hundred) %>% 
-  mutate(price_remainder = price %% 100) %>% 
-  count(price_hundred, price_remainder) %>% 
+  filter(price > 750 & price < 1250) %>% ## Filtering on price
+  mutate(price_hundred = price %/% 100) %>% ## Finding price_hundred
+  select(price, price_hundred) %>% ## Select vars
+  mutate(price_remainder = price %% 100) %>% ## Finding price_remainder
+  count(price_hundred, price_remainder) %>% ## Count
   View()
 ```
 
 10  What does the "%%" function do?
 
-11. Can you identify the values where the dip is using the information above? Why or why not? We will address this later in the semester.
+11. Can you identify the values where the dip is using the information above? Why or why not? 
 
 
 Cut may impact upon price
@@ -192,6 +199,7 @@ Cut may impact upon price
 #| eval: false
 #| echo: true
 
+## Cut and price
 ggplot(data = diamonds) +
   geom_histogram(mapping = aes(x = price, color = cut, fill = cut),
                  binwidth = 100) 
@@ -205,6 +213,7 @@ ggplot(data = diamonds) +
 #| eval: false
 #| echo: true
 
+## Most common cute
 diamonds %>% 
   INSERT_FUNCTION_HERE(cut)
 ```
@@ -217,6 +226,7 @@ diamonds %>%
 #| eval: false
 #| echo: true
 
+## Impact of color and clarity
 ggplot(data = diamonds) +
   geom_histogram(mapping = aes(x = price, color = VAR_NAME, 
                                fill = VAR_NAME), 
@@ -233,6 +243,7 @@ ggplot(data = diamonds) +
 #| eval: false
 #| echo: true
 
+## Color and fill variables
 ggplot(data = diamonds) +
       geom_histogram(mapping = aes(x = price, color = VAR_NAME, 
                                    fill = VAR_NAME), 
