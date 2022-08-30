@@ -57,7 +57,7 @@ The \_\_\_ dataset has \_\_\_ observations and \_\_\_ variables.
 
 [ggplot](https://ggplot2.tidyverse.org/) is an R package that is used to create data visualizations. We will be using it throughout this course. The basic format for every ggplot command is:
 
-```{r help-on-dataset, eval=FALSE, echo=TRUE}
+```{r ggplot-syntax, eval=FALSE, echo=TRUE}
 ggplot(data = <DATA>) + 
   <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
 ```
@@ -250,6 +250,6 @@ ggplot(data = diamonds) +
                      binwidth = YOUR_BIN_WIDTH) 
 ```
 
-
+16. So far we have been looking at which types of variables? 
 
 
