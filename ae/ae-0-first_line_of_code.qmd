@@ -260,7 +260,5 @@ So far we have been looking at only 1 continuous variable. To look at two contin
 
 ## Color and fill variables
 ggplot(data = diamonds) +
-      geom_histogram(mapping = aes(x = price, color = VAR_NAME, 
-                                   fill = VAR_NAME), 
-                     binwidth = YOUR_BIN_WIDTH) 
+      geom_scatter(mapping = aes(x = price, y = depth)) 
 ```
