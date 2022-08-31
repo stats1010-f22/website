@@ -24,7 +24,7 @@ To accomplish this, please paste each line of code into your RStudio instance, a
 
 -   Comments are really important and are notes to your future self to remind you about steps that you took and decisions that you made.
 
-- 
+-   
 
 ```{r load-packages, eval=FALSE, echo=TRUE}
 #| warning: false
@@ -54,16 +54,16 @@ The \_\_\_ dataset has \_\_\_ observations and \_\_\_ variables.
 ?diamonds
 ```
 
+1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help, copy this into your notes under the title data types)
 
 [ggplot](https://ggplot2.tidyverse.org/) is an R package that is used to create data visualizations. We will be using it throughout this course. The basic format for every ggplot command is:
 
 ```{r ggplot-syntax, eval=FALSE, echo=TRUE}
+## DO NOT COPY INTO FILE THIS INTO YOUR QUARTO DOCUMENT
+## THIS IS TO SHOW YOU THE BASIC FORMAT OF ALL ggplots
 ggplot(data = <DATA>) + 
   <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
 ```
-
-
-1.  What do the "4 c's" of every diamond mean? What kind of variables are they? (hint: This [video](https://www.youtube.com/watch?v=FqB5Es1HXI4) may help, copy this into your notes under the title data types) 
 
 ```{r plot-price, eval=FALSE, echo=TRUE}
 #| message: false
@@ -75,7 +75,7 @@ ggplot(data = diamonds) +
   geom_histogram(mapping = aes(x = price), binwidth = 1) 
 ```
 
-2. What kind of variable is price? What happens if you draw a histogram with another kind of variable?
+2.  What kind of variable is price? What happens if you draw a histogram with another kind of variable?
 
 ```{r plot-hist-other, eval=FALSE, echo=TRUE}
 #| message: false
@@ -107,7 +107,7 @@ The distribution of diamond prices is right skewed (long right tail).
 
 One interesting feature of this graph is the dip in diamonds priced at about \$1000. Let's explore this a little further and look at some basic [dplyr commands](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf).
 
-The pipe operator "%>%" tells R to take the output from one function and sends it to the input in the next function.
+The pipe operator "%\>%" tells R to take the output from one function and sends it to the input in the next function.
 
 ```{r, diamonds-about-1000-a, eval=FALSE, echo=TRUE}
 #| message: false
@@ -137,7 +137,7 @@ diamonds %>%
 
 6.  What does this "%/%" operator do? (hint: run 10 %/% 3, 10 %/% 5, 7 %/% 3, 7 %/% 5 in the console)
 
-7. What does the mutate function do? (hint: pay special attention to the dimensions of the data)
+7.  What does the mutate function do? (hint: pay special attention to the dimensions of the data)
 
 ```{r diamonds-about-1000-c, eval=FALSE, echo=TRUE}
 #| message: false
@@ -152,7 +152,7 @@ diamonds %>%
   View()
 ```
 
-8. What does the select function do?
+8.  What does the select function do?
 
 ```{r diamonds-about-1000-d, eval=FALSE, echo=TRUE}
 #| message: false
@@ -169,7 +169,7 @@ diamonds %>%
   View()
 ```
 
-9. Can you identify the values where the dip is using the information above? Why or why not?
+9.  Can you identify the values where the dip is using the information above? Why or why not?
 
 ```{r diamonds-about-1000-e, eval=FALSE, echo=TRUE}
 #| message: false
@@ -186,10 +186,9 @@ diamonds %>%
   View()
 ```
 
-10  What does the "%%" function do?
+10 What does the "%%" function do?
 
-11. Can you identify the values where the dip is using the information above? Why or why not? 
-
+11. Can you identify the values where the dip is using the information above? Why or why not?
 
 Cut may impact upon price
 
@@ -205,7 +204,7 @@ ggplot(data = diamonds) +
                  binwidth = 100) 
 ```
 
-12.  Which cut do you suspect is the most common in the dataset? How many diamonds with that cut are in the dataset?
+12. Which cut do you suspect is the most common in the dataset? How many diamonds with that cut are in the dataset?
 
 ```{r cut-count, eval=FALSE, echo=TRUE}
 #| message: false
@@ -218,7 +217,7 @@ diamonds %>%
   INSERT_FUNCTION_HERE(cut)
 ```
 
-13.  The variables color or clarity might impact upon the price. Draw a histogram and color it using one of them.
+13. The variables color or clarity might impact upon the price. Draw a histogram and color it using one of them.
 
 ```{r cut, eval=FALSE, echo=TRUE}
 #| message: false
