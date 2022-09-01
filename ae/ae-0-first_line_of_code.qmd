@@ -5,7 +5,7 @@ output:
 ---
 
 ::: callout-important
-This application exercise is due at noon on 6 Sept at 11:59am.
+This application exercise is due at noon on 6 Sept at 4:59pm.
 :::
 
 # Scenario
@@ -50,7 +50,6 @@ The \_\_\_ dataset has \_\_\_ observations and \_\_\_ variables.
 
 ```{r help-on-dataset, eval=FALSE, echo=TRUE}
 ## What are the variables in this dataset?
-## What are they counting?
 ?diamonds
 ```
 
