@@ -186,7 +186,7 @@ diamonds %>%
   View()
 ```
 
-10 What does the "%%" function do?
+10\. What does the "%%" function do?
 
 11. Can you identify the values where the dip is using the information above? Why or why not?
 
@@ -259,7 +259,7 @@ So far we have been looking at only 1 continuous variable. To look at two contin
 
 ## Color and fill variables
 ggplot(data = diamonds) +
-      geom_scatter(mapping = aes(x = price, y = depth)) 
+      geom_point(mapping = aes(x = price, y = depth)) 
 ```
 
 16. What kinds of variables do you think you could use to color this plot? Please use an appropriate variable from diamonds dataset and do so.
