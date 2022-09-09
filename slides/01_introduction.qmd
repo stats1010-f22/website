@@ -105,4 +105,3 @@ library(qrcode)
 qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-0-first_line_of_code.html")
 plot(qr)
 ```
-
