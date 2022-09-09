@@ -1,0 +1,18 @@
+{
+  "hash": "e992160dc36c40c36ef66a4105dff3d2",
+  "result": {
+    "markdown": "---\ntitle: \"Here lecture\"\nsubtitle: \"STAT 1010 - Fall 2022\"\nfooter:  \"[stat1010-f22.github.io/website](https://sta210-s22.github.io/website/)\"\nformat: \n  revealjs: \n    theme: slides.scss\n    transition: fade\n    slide-number: true\neditor: visual\nexecute:\n  freeze: auto\n---\n\n\n\n\n\n# Learning outcomes\n\nBy the end of this lesson, you should:\n\n-   Have downloaded R, and know how to start a project\n\n-   Drawn your first ggplot in R\n\n-   Know how to find help in R\n\n---\n\n## Why?\n\nToday we will explore the [here package](https://here.r-lib.org/). This package is used to organize files within R:\n\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"here\")\n```\n:::\n\n\n## Including your own data\n\nTo add data to your directory, first create a folder that\n\n![Figure \\@ref(fig:3) Adding a folder.](images_intro/new_folder.png){fig-align=\"center\" width=\"116\"}\n\nand name it \"data\". All data related to this chapter should be contained in this folder. In your file management system place your data in this folder. Then in the \"Files\" menu double-click on the dataset that you would like to import into R.\n\n## Importing data\n\n![Double click on the data you would like to install in the data folder in your project and select \"Import Dataset.\"](images_intro/your_own_data.png){fig-align=\"center\" width=\"319\"}\n\nIf this is the first time you are importing data, you may be prompted to download a package first. Follow the Graphical User Interface (GUI) to import the data. Check that the data is as you expect and update \"Import Options\" until it seems reasonable. Copy the coding from \"Code Preview\" and save put it in your document \"so that when you restart R, you have coding that will import the data.\n\n![When the data is imported, check the \"Data Preview\" to make sure it is what you expect. If not, change the \"Import Options.\"](images_intro/import_gui.png){fig-align=\"center\" width=\"396\"}\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    function fireSlideChanged(previousSlide, currentSlide) {\n\n      // dispatch for htmlwidgets\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for reveal\n    if (window.Reveal) {\n      window.Reveal.addEventListener(\"slidechanged\", function(event) {\n        fireSlideChanged(event.previousSlide, event.currentSlide);\n      });\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
