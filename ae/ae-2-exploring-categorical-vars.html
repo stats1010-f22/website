@@ -344,9 +344,10 @@ Important
 <p>Double click on “comics.csv” and click on “Import Dataset…”</p>
 <p><img src="ae-2_images/import_dataset.png" class="img-fluid"></p>
 <p>Check the data in the “Data Preview” pane and ensure that it looks as it should.</p>
+<p><img src="ae-2_images/import_GUI.png" class="img-fluid"></p>
 <p>Next, click on the clipboard icon to copy the code from the “Code Preview” pane, then click “Import”.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#mPASTE THE CODE FROM "Code Preview" HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#PASTE THE CODE FROM "Code Preview" HERE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="data" class="level1">
@@ -360,7 +361,8 @@ Important
 <ol type="1">
 <li><p>Are there any differences between the data on the website above and the one in R? What are they? (Hint: which function can you use to see the whole dataset?)</p></li>
 <li><p>The ___ dataset has ___ observations and ___ variables.</p></li>
-<li><p>Classify all variables in the dataset as either: quantitative discrete, quantitative continuous, qualitative nominal, qualitative ordinal. Which of these variables is also categorical?</p></li>
+<li><p>Classify all variables in the dataset as either: quantitative discrete, quantitative continuous, qualitative nominal, qualitative ordinal. Which of these variables is also categorical?</p>
+<h1 id="counts">Counts</h1></li>
 <li><p>How many publishers are there in this dataset?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## What is the distribution of price?</span></span>
@@ -435,8 +437,20 @@ Important
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">position =</span> INSERT) <span class="sc">+</span> <span class="co"># side_by_side</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Alignment colored with gender"</span>)  <span class="co"># add title</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We have been focusing mostly on counts. Another</p></li>
-<li></li>
+<h1 id="proportions">Proportions</h1>
+<p>We have been focusing mostly on counts. Proportional data is also interesting to explore and it is easy to get <code>R</code> to produce those for us.</p></li>
+<li><p>What combination of Gender and Alignment has the highest proportion? What is it? What is the sum of all of the proportions in the table below? (Note: go through each line of code and ensure you know what each step does)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> <span class="co"># which dataset to use </span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Gender, Alignment) <span class="sc">%&gt;%</span> <span class="co"># counts all combinations</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">%&gt;%</span> <span class="co"># finds proportions</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Gender, Alignment, prop) <span class="co"># selecting which cols to pivot</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Alignment, <span class="co"># the variable to pivot</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> prop) <span class="co"># which values to pivot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><div class="cell">
+
+</div></li>
 </ol>
 
 
