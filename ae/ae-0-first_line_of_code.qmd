@@ -24,8 +24,6 @@ To accomplish this, please paste each line of code into your RStudio instance, a
 
 -   Comments are really important and are notes to your future self to remind you about steps that you took and decisions that you made.
 
--   
-
 ```{r load-packages, eval=FALSE, echo=TRUE}
 #| warning: false
 #| message: false
@@ -43,7 +41,7 @@ The `diamonds` dataset includes basic information about 53940 diamonds including
 #| warning: false
 
 ## View the dataset in a separate tab
-View(diamonds)
+glimpse(diamonds)
 ```
 
 The \_\_\_ dataset has \_\_\_ observations and \_\_\_ variables.

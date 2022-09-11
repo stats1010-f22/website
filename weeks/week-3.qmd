@@ -1,6 +1,6 @@
 ---
-title: "Week 1"
-subtitle: "Starting with R"
+title: "Week 3"
+subtitle: "Exploring categorical data"
 editor: visual
 ---
 
@@ -12,7 +12,7 @@ editor: visual
 
 ## Participate
 
-🖥️ [Lecture 1 - Download R and plotting your first graph](/slides/01_introduction.html)
+🖥️ [Lecture 2](/slides/lect_03.html)
 
 ## Practice
 
@@ -23,6 +23,10 @@ editor: visual
 ⌨️ [Diagnostic test](https://docs.google.com/forms/d/e/1FAIpQLScqUuJ1bRVr2sa5Wy7FjzxMDCQiVOdcI9Qr1P7iJwX9BRwXUQ/viewform?usp=sf_link)
 
 <br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
 
 ::: {style="font-size: 0.875em;"}
 Back to [course schedule](/ "Course schedule") ⏎

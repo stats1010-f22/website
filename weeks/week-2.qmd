@@ -1,6 +1,6 @@
 ---
-title: "Week 1"
-subtitle: "Welcome to STAT 1010"
+title: "Week 2"
+subtitle: "Continuation of Intro to R"
 editor: visual
 ---
 
