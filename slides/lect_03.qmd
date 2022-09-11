@@ -42,7 +42,7 @@ plot(qr)
 
 ## The purpose of exploring categorical variables
 
--   Exploratory Data Analysis is all about learning the structure of a dataset through a series of numerical and graphical techniques.
+-   Exploratory Data Analysis is about learning the structure of a dataset through a series of numerical and graphical techniques.
 
 -   When you do EDA, you\'ll look for both
 
