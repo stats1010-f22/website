@@ -1,22 +1,22 @@
 ---
 title: "Week 3"
-subtitle: "Exploring categorical data"
+subtitle: "Exploring categorical and numerical data"
 editor: visual
 ---
 
 ## Prepare
 
-📖 Read the [syllabus](/course-syllabus.html)
+📖 Read [chapter 4](https://openintro-ims.netlify.app/explore-categorical.html) of Introduction to Modern Statistics
 
-📖 Read the [support](/course-support.html) resources
+📖 Read [chapter 5](https://openintro-ims.netlify.app/explore-numerical.html) of Introduction to Modern Statistics
 
 ## Participate
 
-🖥️ [Lecture 2](/slides/lect_03.html)
+🖥️ [Lecture 3](/slides/lect_03.html)
 
 ## Practice
 
-📋 [diamonds](/ae/ae-0-first_line_of_code.html)
+📋 [Exploring qualitative variables](/ae/ae-2-exploring-categorical-vars.html)
 
 ## Perform
 

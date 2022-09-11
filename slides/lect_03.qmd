@@ -28,7 +28,7 @@ By the end of this lesson you should:
 
 -   Graphical representation of one categorical variable
 
-# Name some categorical variables
+# Word cloud
 
 Use this [link](PollEv.com/gwynnsturdevant155), or the qr code below
 

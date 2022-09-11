@@ -1,0 +1,108 @@
+---
+title: "Exploring categorical data"
+output: 
+   html_document
+---
+
+::: callout-important
+This application exercise is due at noon on 16 Sept at 2:00pm.
+:::
+
+# Load packages, data
+
+```{r load-packages, eval=FALSE, echo=TRUE}
+#| warning: false
+#| message: false
+
+## loading library
+library(tidyverse) # for data analysis and visualisation
+library(here) # to organize files
+```
+
+Let's look at the data [on the web](https://github.com/cosmoduende/r-marvel-vs-dc/blob/main/dataset_shdb/heroesInformation.csv) prior to importing it and also to ensure that we know what it should look like when it is imported into R.
+
+Now press "raw"
+
+![](ae-2_images/click_raw.png)
+
+Then copy the url:
+
+![](ae-2_images/copy_url.png)
+
+Download the file by inserting the URL below:
+
+```{r download-file, eval=FALSE, echo=TRUE}
+#| warning: false
+#| message: false
+
+fs::dir_create(here("data")) # create a data folder 
+download.file(
+  url = URL_HERE, # url of file to download
+  destfile = here("data/comics.csv") # directory/name_of_file
+)
+```
+
+Then click on the data folder in the "Files" panel.
+
+![](ae-2_images/data_folder.png)
+
+Double click on "comics.csv" and click on "Import Dataset..."
+
+![](ae-2_images/import_dataset.png)
+
+Check the data in the "Data Preview" pane and ensure that it looks as it should.
+
+Next, click on the clipboard icon to copy the code from the "Code Preview" pane, then click "Import".
+
+```{r import-data, eval=FALSE, echo=TRUE}
+#| warning: false
+#| message: false
+
+#mPASTE THE CODE FROM "Code Preview" HERE
+```
+
+# Data
+
+The `comics` dataset includes basic information scraped from the [superheroDb](https://www.superherodb.com/) for a [kaggle](https://www.kaggle.com/) competition.
+
+```{r view-data, echo=TRUE, eval=FALSE}
+#| message: false
+#| warning: false
+
+## View the dataset in a separate tab
+glimpse(comics)
+```
+
+The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with no hair. Marvel Comics created him and his skin color is not listed, but his height and weight are.
+
+1.  Are there any differences between the data on the website above and the one in R? What are they? (Hint: which function can you use to see the whole dataset?)
+
+2.  The \_\_\_ dataset has \_\_\_ observations and \_\_\_ variables.
+
+3.  Classify all variables in the dataset as either: quantitative discrete, quantitative continuous, qualitative nominal, qualitative ordinal. Which of these variables is also categorical?
+
+4.  How many publishers are there in this dataset?
+
+    ```{r publisher_levels, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+    ## What is the distribution of price?
+    comics %>% 
+      distinct(Publisher)
+    ```
+
+5.  How many levels of the variable Alignment are there in this dataset?
+
+    ```{r alignment_levels, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+    ## What is the distribution of price?
+    comics %>% 
+      INSERT_FUNCTION(INSERT_VARIABLE)
+    ```
+
+6.  
