@@ -52,13 +52,15 @@ Double click on "comics.csv" and click on "Import Dataset..."
 
 Check the data in the "Data Preview" pane and ensure that it looks as it should.
 
+![](ae-2_images/import_GUI.png)
+
 Next, click on the clipboard icon to copy the code from the "Code Preview" pane, then click "Import".
 
 ```{r import-data, eval=FALSE, echo=TRUE}
 #| warning: false
 #| message: false
 
-#mPASTE THE CODE FROM "Code Preview" HERE
+#PASTE THE CODE FROM "Code Preview" HERE
 ```
 
 # Data
@@ -80,6 +82,8 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
 2.  The \_\_\_ dataset has \_\_\_ observations and \_\_\_ variables.
 
 3.  Classify all variables in the dataset as either: quantitative discrete, quantitative continuous, qualitative nominal, qualitative ordinal. Which of these variables is also categorical?
+
+    # Counts
 
 4.  How many publishers are there in this dataset?
 
@@ -235,6 +239,35 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
       labs(title = "Alignment colored with gender")  # add title
     ```
 
-    We have been focusing mostly on counts. Another
+    # Proportions
 
-13. 
+    We have been focusing mostly on counts. Proportional data is also interesting to explore and it is easy to get `R` to produce those for us.
+
+13. What combination of Gender and Alignment has the highest proportion? What is it? What is the sum of all of the proportions in the table below? (Note: go through each line of code and ensure you know what each step does)
+
+    ```{r proportion, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+    comics %>% # which dataset to use 
+      count(Gender, Alignment) %>% # counts all combinations
+      mutate(prop = n / sum(n)) %>% # finds proportions
+      select(Gender, Alignment, prop) # selecting which cols to pivot
+      pivot_wider(names_from = Alignment, # the variable to pivot
+                  values_from = prop) # which values to pivot
+
+    ```
+
+14. 
+
+    ```{r conditional_proportion, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+
+
+    ```
