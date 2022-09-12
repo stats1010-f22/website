@@ -417,7 +417,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
 
     ```
 
-23. Another way to view the differences in variables is to facet.
+23. Another way to view the differences in variables is to facet. What is the advantage of a facet plot over a stacked barchart?
 
     ```{r facet_plot, eval=FALSE, echo=TRUE}
     #| message: false
