@@ -14,7 +14,7 @@ This application exercise is due at noon on 16 Sept at 2:00pm.
 #| warning: false
 #| message: false
 
-## loading library
+## loading libraries
 library(tidyverse) # for data analysis and visualisation
 library(here) # to organize files
 library(praise) # for ocassional good vibes!
@@ -97,7 +97,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
     #| warning: false
     #| eval: false
     #| echo: true
-    ## What is the distribution of price?
+    
     comics %>% 
       distinct(Publisher) # finds the levels of publisher
     ```
@@ -109,7 +109,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
     #| warning: false
     #| eval: false
     #| echo: true
-    ## What is the distribution of price?
+   
     comics %>% 
       INSERT_FUNCTION(INSERT_VARIABLE)
     ```
@@ -127,7 +127,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
     #| warning: false
     #| eval: false
     #| echo: true
-    ## What is the distribution of price?
+   
     comics %>% 
       count(Publisher, Alignment) %>% # counts all combinations
       View()
