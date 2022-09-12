@@ -8,15 +8,22 @@ title: "Teaching team"
 
 [dr. gwynn sturdevant](http://nzgwynn.com/) (she/her/ella) is a Lecturer at Wharton. gwynn's work focuses on revamping introductory statistics and data science curriculum, connecting recent advances in human computer interaction to statistical programming languages, and community-led research involving those facing entrenched inequalities.
 
++--------------------+-----------------------------------------------------------+
 | Office hours       | Location                                                  |
-|--------------------|-----------------------------------------------------------|
++====================+===========================================================+
 | Tues 11:15 - 12:15 | ARB 327                                                   |
++--------------------+-----------------------------------------------------------+
 | Fri 11:00 - 12:00  | [Zoom](https://upenn.zoom.us/j/93698126499?pwd=LzVBOFVjY) |
++--------------------+-----------------------------------------------------------+
 
 If these times don't work for you or you'd like to schedule a one-on-one meeting, you can do so by emailing gwynnc\@wharton.upenn.edu. Please put STATS 1010 in the subject line.
 
 # Teaching Assistant
 
-|                                   | Name                                            | Office hours | Location |
-|:-------------------------:|------------|------------|------------------------------------|
-| ![](images/team/Chao_Patrick.jpg) | [Patrick Chao](https://patrickrchao.github.io/) | TBD          | Zoom     |
++-----------------------------------+-------------------------------------------------+--------------+----------------------------------------------------------------------------------+
+|                                   | Name                                            | Office hours | Location                                                                         |
++:=================================:+=================================================+==============+==================================================================================+
+| ![](images/team/Chao_Patrick.jpg) | [Patrick Chao](https://patrickrchao.github.io/) | Mon & Wed    | [Zoom](https://upenn.zoom.us/j/91248164850?pwd=MjlXQ1R2Z2tLWHk5eDVVRmNqM2NkUT09) |
+|                                   |                                                 |              |                                                                                  |
+|                                   |                                                 | 4pm - 5pm    |                                                                                  |
++-----------------------------------+-------------------------------------------------+--------------+----------------------------------------------------------------------------------+
