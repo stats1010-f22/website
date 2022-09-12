@@ -40,14 +40,62 @@ plot(qr)
 
 ## Definition of categorical variable
 
+A categorical or qualitative variable is a variable that can not be counted. They are descriptors that are or grouping factors.
+
 ## The purpose of exploring categorical variables
 
 -   Exploratory Data Analysis is about learning the structure of a dataset through a series of numerical and graphical techniques.
 
--   When you do EDA, you\'ll look for both
+-   When you do EDA, you'll look for both
 
     -   general trends and
 
     -   interesting outliers in your data.
 
--   generate questions that will help inform subsequent analysis.
+generate questions that will help inform subsequent analysis.
+
+# Counts & proportions
+
+-   How many freshman are there in our class?
+
+-   What proportion of our class turned in the diamonds assignment?
+
+-   How many transportation stocks are in our portfolio?
+
+-   DOES NOT RESTRICT THE POPULATION
+
+-   Others?
+
+    # Marginal distribution
+
+-   The count of the distribution of one variable.
+
+-   This is referred to asmthe marginal distribution because in a contingency table, we usually compute the column sums and row sums in the **margins**.
+
+    # Conditional probabilities
+
+-   Of all the freshman students in our class what percent turned in the diamonds exercise?
+
+-   Of all the students who turned in the diamonds exercise how many were freshman?
+
+-   How many transportation stocks are in our portfolio that performed well last year?
+
+-   Of all the stocks in our portfolio that performed well last year, how many are transportation stocks?
+
+-   RESTRICTED TO A SUBPOPULATION
+
+Others?
+
+# Words to watch for
+
+-   Mutually exclusive
+
+-   Associated
+
+-   Independence
+
+-   Chi-Squared test
+
+-   $H_0$ and $H_A$
+
+-   Contingency table

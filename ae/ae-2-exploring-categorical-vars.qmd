@@ -17,6 +17,7 @@ This application exercise is due at noon on 16 Sept at 2:00pm.
 ## loading library
 library(tidyverse) # for data analysis and visualisation
 library(here) # to organize files
+library(tidymodels) # for chi-square test
 ```
 
 Let's look at the data [on the web](https://github.com/cosmoduende/r-marvel-vs-dc/blob/main/dataset_shdb/heroesInformation.csv) prior to importing it and also to ensure that we know what it should look like when it is imported into R.
@@ -109,7 +110,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
       INSERT_FUNCTION(INSERT_VARIABLE)
     ```
 
-    A common way to represent the number of cases that fall into each combination of levels of two categorical variables, such as these, is with what's called a "contingency table."
+    A common way to represent the number of cases that fall into each combination of levels of two categorical variables, such as these, is with what's called a "contingency table." Note that each superhero appears in **exactly one cell, s**tatisticians call this **mutually exclusive.**
 
 6.  Which is the most common category in this contingency table? How many superheros are in that category? (note: please look at both of the next two blocks of code.)
 
@@ -150,12 +151,12 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
     #| eval: false
     #| echo: true
 
-    ggplot(data = comics) +
-      geom_bar(mapping = aes(x = Alignment)) 
+    ggplot(data = comics) + # the dataset
+      geom_bar(mapping = aes(x = Alignment)) # a bar chart of Alignment
 
     ```
 
-8.  Look at the next two plots and find the difference between the two. What would make you use one plot over the other? Which plot shows that females are much more likely to be good superheros than bad? Which one shows that good superheros are more likely to be missing gender? And which that females are more likely to be good superheros than males?
+8.  Look at the next two plots and find the difference between them. What would make you use one plot over the other? Which plot shows that females are much more likely to be good superheros than bad? Which one shows that good superheros are more likely to be missing gender? And which that females are more likely to be good superheros than males? All of these mean that the variables gender and alignment are **associated**, the value of one impacts upon the value of the other.
 
     ```{r gender_alignment_plot, eval=FALSE, echo=TRUE}
     #| message: false
@@ -181,9 +182,85 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
       labs(title = "Alignment colored with gender")  # add title
     ```
 
-    We note that the commonly held belief that gender is a binary is no longer the consensus and that [gender is a complex spectrum](https://blogs.scientificamerican.com/sa-visual/visualizing-sex-as-a-spectrum/).
+    We note that the commonly held belief that gender is binary is no longer the scientific consensus and that [gender is a complex spectrum](https://blogs.scientificamerican.com/sa-visual/visualizing-sex-as-a-spectrum/).
 
-9.  There are a few characters with missing data "-" in the Alignment and Gender variables? How many are in each?
+    Statisticians want to discuss the **strength of association** of variables. That want to ensure that this association is not the result of random noise, but instead is a function of the underlying population of interest (all superheros).
+
+    # Chi-Squared test
+
+    To test for independence in 2 categorical variables, statisticians use a **Chi-squared test**. This is a **hypothesis test** so it has both a null hypothesis ($H_0$) and an alternative hypothesis ($H_A$).
+
+    $H_0$ = the variables are independent, there is **no** relationship between the two categorical variables.
+
+    $H_A$ = Knowing the value of one variable does not help to predict the value of the other variable
+
+    Just like a fair court case, where a defendant is assumed to be innocent until proven guilty, here we assume $H_0$ until proven otherwise. The proof that we present at the case is a formula relating the actual values in our sample to what we would expect to get under the independence assumption.
+
+    To perform a Chi-squared test of independence on gender and alignment we must find the marginal distributions of both gender and alignment.
+
+    # Marginal distribution
+
+9.  The marginal distribution is the count of each variable.
+
+    ```{r count_both, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+    comics %>% 
+      count(Alignment, Gender) %>% 
+      pivot_wider(names_from = Alignment, 
+                  values_from = n)
+    ```
+
+    1.  We take the original two-way table (with two categorical variables) and added up the cells across each level of `align` (ie $1+7+19+2 = 29$) to get the marginal distribution for each variable.
+
+    ```{r count_gender, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+    comics %>% # the dataset
+      count(Gender) # and count the gender
+    ```
+
+    ```{r count_Alignmet, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+    comics %>% # the dataset
+      count(Alignment) #  and count the gender
+    ```
+
+    If these are independent, we would expect $\frac{200}{29+200+505}$ of the $207$ (about $56.4$) bad superheros to be female, and the same proportion of $496$ (about $135.1$) good superheros to be female, and so on.
+
+10. Assuming independence of Alignment and Gender, how many good superheros would we expect to be male? (hint: use the "\$\frac{1}{2}\$" to make$\frac{1}{2}$)
+
+    More information, including mathematical notation can be found [here](https://statsandr.com/blog/chi-square-test-of-independence-by-hand/).
+
+    Fortunately, `R` does all of this for us.
+
+    ```{r chi_square, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+    # the "$" sign pulls out the Gender values and Alignment value from the comics dataset
+    chisq.test(comics$Gender, comics$Alignment)
+    ```
+
+    We get a warning because the missing values ("-") expected counts are probably quite small.
+
+    You can safely use the chi-square test with critical values from the chi-square distribution when no more than 20% of the expected counts are less than $5$ and all individual expected counts are 1 or greater. In particular, all four expected counts in a $2 \times 2$ table should be 5 or greater.
+
+    The $p-value$ for this test $0.0003298$ is very small which means that we have very strong evidence against $H_0$ --- that there is independence between Alignment and Gender --- and we can reject the null hypothesis. This suggests that the association between Gender and Alignment is not likely due to chance.
+
+11. There are a few characters with missing data "-" in the Alignment and Gender variables? How many are in each?
 
     ```{r missing_Alignment, eval=FALSE, echo=TRUE}
     #| message: false
@@ -205,7 +282,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
       INSERT_FUNCTION(INSERT_VARIABLE)
     ```
 
-10. Since there are only a few missing values (\<10%) in each category, there is no reason to keep them especially since our analysis is largely about these two variables.
+12. Since there are only a few missing values (\<10%) in each category, there is no reason to keep them especially since our analysis is largely about these two variables.
 
     What does the "!=" function do?
 
@@ -221,9 +298,11 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
                       Gender != "-") # remove "-" values in Gender
     ```
 
-11. Remake the "Alignment colored with gender" plot and the "Gender colored with alignment" plots with this new dataset.
+13. Remake the "Alignment colored with gender" plot and the "Gender colored with alignment" plots with this new dataset.
 
-12. Side-by-side barcharts allow us to represent the counts from a contingency table graphically. Telling `R` to make a side-by-side barchart involves adding the words `position = "dodge`" to the coding from above. Now created the other bar chart side-by-side, the "Gender colored with alignment." use the comics_filter dataset.
+14. Redo the Chi-Squared test for independence between Alignement and Gender. Include all hypotheses, and computations for at least $2$ expected values. Does this change our conclusion?
+
+15. Side-by-side barcharts allow us to represent the counts from a contingency table graphically. Telling `R` to make a side-by-side barchart involves adding the words `position = "dodge`" to the coding from above. Now created the other bar chart side-by-side, the "Gender colored with alignment." use the comics_filter dataset.
 
     ```{r side_by_side, eval=FALSE, echo=TRUE}
     #| message: false
@@ -243,7 +322,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
 
     We have been focusing mostly on counts. Proportional data is also interesting to explore and it is easy to get `R` to produce those for us.
 
-13. What combination of Gender and Alignment has the highest proportion? What is it? What is the sum of all of the proportions in the table below? (Note: go through each line of code and ensure you know what each step does)
+16. What combination of Gender and Alignment has the highest proportion? What is the value? What is the sum of all of the proportions in the table below? (Note: Use the View() function to go through each line of code and ensure you know what each step does.)
 
     ```{r proportion, eval=FALSE, echo=TRUE}
     #| message: false
@@ -254,20 +333,99 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
     comics %>% # which dataset to use 
       count(Gender, Alignment) %>% # counts all combinations
       mutate(prop = n / sum(n)) %>% # finds proportions
-      select(Gender, Alignment, prop) # selecting which cols to pivot
+      select(Gender, Alignment, prop) %>% # selecting which cols to pivot
       pivot_wider(names_from = Alignment, # the variable to pivot
                   values_from = prop) # which values to pivot
-
     ```
 
-14. 
+    # Conditional proportions
 
-    ```{r conditional_proportion, eval=FALSE, echo=TRUE}
+17. If we\'re curious about systematic associations between variables, we
+    should look to conditional proportions. An example of a conditional
+    proportion is the proportion of female superheroes that are
+    good. To build a table of these conditional proportions, we need to
+    specify a grouping variable **before** we calculate the proportions. What proportion of female characters are good? What do the rows sum to? (Note: Use the View() function to go through each line of code and ensure you know what each step does.)
+
+    ```{r conditional_proportion_gender, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+    comics %>% # which dataset to use 
+      count(Gender, Alignment) %>% # counts all combinations
+      group_by(Gender) %>% # conditions on gender
+      mutate(prop = n / sum(n)) %>% # finds proportions
+      select(Gender, Alignment, prop) %>%  # selecting which cols to pivot
+      pivot_wider(names_from = Alignment, # the variable to pivot
+                  values_from = prop) # which values to pivot
+    ```
+
+18. What proportion of good characters are male? What do the columns sum to?
+
+    ```{r conditional_proportion_align, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+    comics %>% # which dataset to use 
+      count(Gender, Alignment) %>% # counts all combinations
+      group_by(Alignment) %>% # conditions on gender
+      mutate(prop = n / sum(n)) %>% # finds proportions
+      select(Gender, Alignment, prop) %>%  # selecting which cols to pivot
+      pivot_wider(names_from = Alignment, # the variable to pivot
+                  values_from = prop) # which values to pivot
+    ```
+
+19. Plotting proportions is similar to the side-by-side bar chart completed earlier. Instead of `position = "dodge"` we use `position = "fill"` . Draw one such plot below using Gender for the `x` axis and color it using Alignment.
+
+    ```{r prop_plot_gender, eval=FALSE, echo=TRUE}
     #| message: false
     #| warning: false
     #| eval: false
     #| echo: true
 
 
+    ggplot(data = INSERT) + # add the data
+      geom_bar(mapping = aes(x = INSERT, # bar chart of ?
+                             fill = INSERT), # colored by ?
+               position = INSERT) # fill
+    ```
 
+20. Now, change the label the `y` axis from `count` by including the coding
+
+        labs(y = "Proportion of superheroes")
+
+21. Does the above plot condition on gender or alignment? How do you know? (hint: what sums to 1?)
+
+22. Condition on the other variable.
+
+    ```{r prop_plot_alignment, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+
+    ggplot(data = INSERT) + # add the data
+      geom_bar(mapping = aes(x = INSERT, # bar chart of ?
+                             fill = INSERT), # colored by ?
+               position = INSERT)  + # fill
+      lab(y = "INSERT Y AXIS TITLE HERE")
+
+
+    ```
+
+23. Another way to view the differences in variables is to facet.
+
+    ```{r prop_plot_alignment, eval=FALSE, echo=TRUE}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+    ggplot(comics) + # which dataset
+      geom_bar(mapping = aes(x = Gender)) + # bar chart of Gender
+      facet_wrap(~Alignment) # broken down by Alignment
     ```
