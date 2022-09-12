@@ -182,9 +182,11 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
       labs(title = "Alignment colored with gender")  # add title
     ```
 
-    We note that the commonly held belief that gender is binary is no longer the scientific consensus and that [gender is a complex spectrum](https://blogs.scientificamerican.com/sa-visual/visualizing-sex-as-a-spectrum/).
+    We note that the commonly held belief that gender is binary is no longer the scientific consensus and that gender is a complex spectrum.
 
-    Statisticians want to discuss the **strength of association** of variables. That want to ensure that this association is not the result of random noise, but instead is a function of the underlying population of interest (all superheros).
+    ![](ae-2_images/beyondXX_XY.webp)
+
+    Statisticians want to discuss the **strength of association** of variables. They want to ensure that this association is not the result of random noise, but instead is a function of the underlying population of interest (all superheros).
 
     # Chi-Squared test
 
