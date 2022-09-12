@@ -40,7 +40,7 @@ plot(qr)
 
 ## Definition of categorical variable
 
-A categorical or qualitative variable is a variable that can not be counted. They are descriptors that are or grouping factors.
+A categorical or qualitative variable is a variable that can not be measured. They are descriptors or grouping factors.
 
 ## The purpose of exploring categorical variables
 
@@ -66,13 +66,13 @@ generate questions that will help inform subsequent analysis.
 
 -   Others?
 
-    # Marginal distribution
+# Marginal distribution
 
 -   The count of the distribution of one variable.
 
--   This is referred to asmthe marginal distribution because in a contingency table, we usually compute the column sums and row sums in the **margins**.
+-   This is referred to as the marginal distribution because in a contingency table, we usually compute the column sums and row sums in the **margins**.
 
-    # Conditional probabilities
+# Conditional probabilities
 
 -   Of all the freshman students in our class what percent turned in the diamonds exercise?
 
