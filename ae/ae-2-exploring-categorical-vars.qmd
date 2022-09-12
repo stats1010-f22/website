@@ -419,7 +419,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
 
 23. Another way to view the differences in variables is to facet.
 
-    ```{r prop_plot_alignment, eval=FALSE, echo=TRUE}
+    ```{r facet_plot, eval=FALSE, echo=TRUE}
     #| message: false
     #| warning: false
     #| eval: false
