@@ -44,6 +44,7 @@ The following packages will be used in this assignment:
 
 ```{r}
 #| message: false
+#| eval: false
 
 library(tidyverse)
 library(tidymodels)
@@ -57,6 +58,7 @@ There are multiple data sets for this assignment. Use the code below to load the
 
 ```{r}
 #| message: false
+#| eval: false
 
 election_nc <- read_csv("data/nc-election-2020.csv") %>%
   mutate(fips = as.integer(FIPS))
@@ -99,6 +101,7 @@ For this part of the analysis, we will focus on counties in North Carolina. We w
 ```{r}
 #| fig.show: hide
 #| message: false
+#| eval: false
 
 election_map_data <- left_join(election_nc, county_map_data)
 
