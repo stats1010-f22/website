@@ -254,9 +254,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
     chisq.test(comics$Gender, comics$Alignment)
     ```
 
-    We get a warning because the missing values ("-") expected counts are probably quite small.
-
-    You can safely use the chi-square test with critical values from the chi-square distribution when no more than 20% of the expected counts are less than $5$ and all individual expected counts are 1 or greater. In particular, all four expected counts in a $2 \times 2$ table should be 5 or greater.
+    We get a warning because the missing values ("-") expected counts are probably quite small. You can safely use the chi-square test with critical values from the chi-square distribution when no more than 20% of the expected counts are less than $5$ and all individual expected counts are 1 or greater. In particular, all four expected counts in a $2 \times 2$ table should be 5 or greater.
 
     The $p-value$ for this test $0.0003298$ is very small which means that we have very strong evidence against $H_0$ --- that there is independence between Alignment and Gender --- and we can reject the null hypothesis. This suggests that the association between Gender and Alignment is not likely due to chance.
 
