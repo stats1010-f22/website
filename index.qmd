@@ -5,13 +5,13 @@ tbl-colwidths: [5,10,30,5,5,5,5,5,5,5]
 
 ::: column-screen-inset-right
 |          Week           | Date         | Topic                        |                            Prepare                            |                                       Slides                                       |                                                           AE                                                            | HW  | Exam | Project |     |
-|:-----:|-------|-------|:-----:|:-----:|:---------:|:-----:|:-----:|:-----:|:-----:|
+|:------:|--------|--------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | [1](/weeks/week-1.html) | Mon, 29 Aug  | No class - opening exercises |                                                               |                                                                                    |                                                                                                                         |     |      |         |     |
 |                         | Wed, 31 Aug  | Starting with R              |                                                               | [🖥️](/slides/01_introduction.html "Lecture slides"){aria-label="Lecture 1 slides"} |     [📋](/ae/ae-0-first_line_of_code.html "Application exercise"){aria-label="Application Exercise 0 instructions"}     |     |      |         |     |
 | [2](/weeks/week-2.html) | Mon, 5 Sept  | No class - Labor Day         |                                                               |                                                                                    |                                                                                                                         |     |      |         |     |
 |                         | Wed, 7 Sept  | Continuation of Intro to R   | [📖](/weeks/week-2.html#prepare){aria-label="Week 2 summary"} |     [🖥️](/slides/lect_02.html "Lecture slides"){aria-label="Lecture 1 slides"}     |                                                                                                                         |     |      |         |     |
-| [3](/weeks/week-3.html) | Mon, 12 Sept | Categorical variables        |                                                               |     [🖥️](/slides/lect_03.html "Lecture slides"){aria-label="Lecture 1 slides"}     | [📋](/ae/ae-2-exploring-categorical-vars.html "Application exercise"){aria-label="Application Exercise 0 instructions"} |     |      |         |     |
-|                         | Wed, 14 Sept |                              | [📖](/weeks/week-2.html#prepare){aria-label="Week 2 summary"} |     [🖥️](/slides/lect_04.html "Lecture slides"){aria-label="Lecture 1 slides"}     |                                                                                                                         |     |      |         |     |
+| [3](/weeks/week-3.html) | Mon, 12 Sept | Categorical variables        | [📖](/weeks/week-3.html#prepare){aria-label="Week 2 summary"} |     [🖥️](/slides/lect_03.html "Lecture slides"){aria-label="Lecture 1 slides"}     | [📋](/ae/ae-2-exploring-categorical-vars.html "Application exercise"){aria-label="Application Exercise 0 instructions"} |     |      |         |     |
+|                         | Wed, 14 Sept |                              |                                                               |     [🖥️](/slides/lect_04.html "Lecture slides"){aria-label="Lecture 1 slides"}     |                                                                                                                         |     |      |         |     |
 :::
 
 ```{r echo = FALSE}
@@ -19,5 +19,5 @@ knitr::knit_exit()
 ```
 
 |      |      |       | Prepare | Slides | AE  |                                                    Labs                                                    | HW  | Exam | Project |
-|-----|-----|-----|:---:|:---:|:---:|:---------------------------:|:---:|:---:|:---:|
+|-------|-------|-------|:-----:|:-----:|:-----:|:-------------:|:-----:|:-----:|:-----:|
 | Week | Date | Topic |   📖    |   🖥️   | 📋  | [💻](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221641094171786) | ✍️  |  ✅  |   📂    |
