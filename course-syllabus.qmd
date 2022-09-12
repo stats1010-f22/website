@@ -2,7 +2,7 @@
 title: "Syllabus"
 ---
 
-[**Click here**](/documents/sta210-s22-syllabus.pdf "PDF of syllabus") **to download a PDF copy of the syllabus.**
+[**Click here**](/documents/syllabus_stat1010_f22.pdf "PDF of syllabus") **to download a PDF copy of the syllabus.**
 
 ## Course info
 
