@@ -5,7 +5,7 @@ output:
 ---
 
 ::: callout-important
-This application exercise is due at noon on 16 Sept at 2:00pm.
+This application exercise is due on 16 Sept at 2:00pm.
 :::
 
 # Load packages, data
