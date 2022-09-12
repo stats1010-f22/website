@@ -88,7 +88,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
 
 3.  Classify all variables in the dataset as either: quantitative discrete, quantitative continuous, qualitative nominal, qualitative ordinal. Which of these variables is also categorical?
 
-    # Counts
+# Counts
 
 4.  How many publishers are there in this dataset?
 
@@ -200,7 +200,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
     praise()
     ```
 
-    # Chi-Squared test
+# Chi-Squared test
 
     To test for independence in 2 categorical variables, statisticians use a **Chi-squared test**. This is a **hypothesis test** so it has both a null hypothesis ($H_0$) and an alternative hypothesis ($H_A$).
 
@@ -212,7 +212,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
 
     To perform a Chi-squared test of independence on gender and alignment we must find the marginal distributions of both gender and alignment.
 
-    # Marginal distribution
+# Marginal distribution
 
 9.  The marginal distribution is the count of each variable.
 
@@ -342,7 +342,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
       labs(title = "Alignment colored with gender")  # add title
     ```
 
-    # Proportions
+# Proportions
 
     We have been focusing mostly on counts. Proportional data is also interesting to explore and it is easy to get `R` to produce those for us.
 
@@ -362,7 +362,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
                   values_from = prop) # which values to pivot
     ```
 
-    # Conditional proportions
+# Conditional proportions
 
 17. If we\'re curious about systematic associations between variables, we
     should look to conditional proportions. An example of a conditional
