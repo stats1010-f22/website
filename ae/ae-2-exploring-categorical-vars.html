@@ -123,6 +123,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="STAT 1010 - Fall 2022 - Exploring categorical data">
 <meta property="og:description" content="Let’s look at the data on the web prior to importing it and also to ensure that we know what it should look like when it is imported into R.">
@@ -324,7 +325,8 @@ Important
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## loading library</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># for data analysis and visualisation</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here) <span class="co"># to organize files</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here) <span class="co"># to organize files</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels) <span class="co"># for chi-square test</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s look at the data <a href="https://github.com/cosmoduende/r-marvel-vs-dc/blob/main/dataset_shdb/heroesInformation.csv">on the web</a> prior to importing it and also to ensure that we know what it should look like when it is imported into R.</p>
 <p>Now press “raw”</p>
@@ -375,7 +377,7 @@ Important
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> </span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">INSERT_FUNCTION</span>(INSERT_VARIABLE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>A common way to represent the number of cases that fall into each combination of levels of two categorical variables, such as these, is with what’s called a “contingency table.”</p></li>
+<p>A common way to represent the number of cases that fall into each combination of levels of two categorical variables, such as these, is with what’s called a “contingency table.” Note that each superhero appears in <strong>exactly one cell, s</strong>tatisticians call this <strong>mutually exclusive.</strong></p></li>
 <li><p>Which is the most common category in this contingency table? How many superheros are in that category? (note: please look at both of the next two blocks of code.)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## What is the distribution of price?</span></span>
@@ -394,10 +396,10 @@ Important
 </div></li>
 <li><p>There are about ___ good superheros for each bad superhero.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> comics) <span class="sc">+</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Alignment)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> comics) <span class="sc">+</span> <span class="co"># the dataset</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Alignment)) <span class="co"># a bar chart of Alignment</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
-<li><p>Look at the next two plots and find the difference between the two. What would make you use one plot over the other? Which plot shows that females are much more likely to be good superheros than bad? Which one shows that good superheros are more likely to be missing gender? And which that females are more likely to be good superheros than males?</p>
+<li><p>Look at the next two plots and find the difference between them. What would make you use one plot over the other? Which plot shows that females are much more likely to be good superheros than bad? Which one shows that good superheros are more likely to be missing gender? And which that females are more likely to be good superheros than males? All of these mean that the variables gender and alignment are <strong>associated</strong>, the value of one impacts upon the value of the other.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> comics) <span class="sc">+</span> <span class="co"># add the data</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Gender, <span class="co"># bar chart of gender</span></span>
@@ -410,46 +412,126 @@ Important
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">fill =</span> Gender)) <span class="sc">+</span> <span class="co"># colored by gender</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Alignment colored with gender"</span>)  <span class="co"># add title</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We note that the commonly held belief that gender is a binary is no longer the consensus and that <a href="https://blogs.scientificamerican.com/sa-visual/visualizing-sex-as-a-spectrum/">gender is a complex spectrum</a>.</p></li>
-<li><p>There are a few characters with missing data “-” in the Alignment and Gender variables? How many are in each?</p>
+<p>We note that the commonly held belief that gender is binary is no longer the scientific consensus and that <a href="https://blogs.scientificamerican.com/sa-visual/visualizing-sex-as-a-spectrum/">gender is a complex spectrum</a>.</p>
+<p>Statisticians want to discuss the <strong>strength of association</strong> of variables. That want to ensure that this association is not the result of random noise, but instead is a function of the underlying population of interest (all superheros).</p>
+<h1 id="chi-squared-test">Chi-Squared test</h1>
+<p>To test for independence in 2 categorical variables, statisticians use a <strong>Chi-squared test</strong>. This is a <strong>hypothesis test</strong> so it has both a null hypothesis (<span class="math inline">\(H_0\)</span>) and an alternative hypothesis (<span class="math inline">\(H_A\)</span>).</p>
+<p><span class="math inline">\(H_0\)</span> = the variables are independent, there is <strong>no</strong> relationship between the two categorical variables.</p>
+<p><span class="math inline">\(H_A\)</span> = Knowing the value of one variable does not help to predict the value of the other variable</p>
+<p>Just like a fair court case, where a defendant is assumed to be innocent until proven guilty, here we assume <span class="math inline">\(H_0\)</span> until proven otherwise. The proof that we present at the case is a formula relating the actual values in our sample to what we would expect to get under the independence assumption.</p>
+<p>To perform a Chi-squared test of independence on gender and alignment we must find the marginal distributions of both gender and alignment.</p>
+<h1 id="marginal-distribution">Marginal distribution</h1></li>
+<li><p>The marginal distribution is the count of each variable.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">INSERT_FUNCTION</span>(INSERT_VARIABLE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Alignment, Gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Alignment, </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol type="1">
+<li>We take the original two-way table (with two categorical variables) and added up the cells across each level of <code>align</code> (ie <span class="math inline">\(1+7+19+2 = 29\)</span>) to get the marginal distribution for each variable.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> <span class="co"># the dataset</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Gender) <span class="co"># and count the gender</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">INSERT_FUNCTION</span>(INSERT_VARIABLE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> <span class="co"># the dataset</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Alignment) <span class="co">#  and count the gender</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If these are independent, we would expect <span class="math inline">\(\frac{200}{29+200+505}\)</span> of the <span class="math inline">\(207\)</span> (about <span class="math inline">\(56.4\)</span>) bad superheros to be female, and the same proportion of <span class="math inline">\(496\)</span> (about <span class="math inline">\(135.1\)</span>) good superheros to be female, and so on.</p></li>
+<li><p>Assuming independence of Alignment and Gender, how many good superheros would we expect to be male? (hint: use the “$$” to make<span class="math inline">\(\frac{1}{2}\)</span>)</p>
+<p>More information, including mathematical notation can be found <a href="https://statsandr.com/blog/chi-square-test-of-independence-by-hand/">here</a>.</p>
+<p>Fortunately, <code>R</code> does all of this for us.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the "$" sign pulls out the Gender values and Alignment value from the comics dataset</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(comics<span class="sc">$</span>Gender, comics<span class="sc">$</span>Alignment)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We get a warning because the missing values (“-”) expected counts are probably quite small.</p>
+<p>You can safely use the chi-square test with critical values from the chi-square distribution when no more than 20% of the expected counts are less than <span class="math inline">\(5\)</span> and all individual expected counts are 1 or greater. In particular, all four expected counts in a <span class="math inline">\(2 \times 2\)</span> table should be 5 or greater.</p>
+<p>The <span class="math inline">\(p-value\)</span> for this test <span class="math inline">\(0.0003298\)</span> is very small which means that we have very strong evidence against <span class="math inline">\(H_0\)</span> — that there is independence between Alignment and Gender — and we can reject the null hypothesis. This suggests that the association between Gender and Alignment is not likely due to chance.</p></li>
+<li><p>There are a few characters with missing data “-” in the Alignment and Gender variables? How many are in each?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">INSERT_FUNCTION</span>(INSERT_VARIABLE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">INSERT_FUNCTION</span>(INSERT_VARIABLE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li><p>Since there are only a few missing values (&lt;10%) in each category, there is no reason to keep them especially since our analysis is largely about these two variables.</p>
 <p>What does the “!=” function do?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>comics_filtered <span class="ot">&lt;-</span> <span class="co"># assign a name to a new dataset</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  comics <span class="sc">%&gt;%</span> <span class="co"># tell R which dataset to start with</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">INSERT_FUNCTION</span>(Alignment <span class="sc">!=</span> <span class="st">"-"</span>, <span class="co"># remove "-" values in Alignment</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>                  Gender <span class="sc">!=</span> <span class="st">"-"</span>) <span class="co"># remove "-" values in Gender</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>comics_filtered <span class="ot">&lt;-</span> <span class="co"># assign a name to a new dataset</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  comics <span class="sc">%&gt;%</span> <span class="co"># tell R which dataset to start with</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">INSERT_FUNCTION</span>(Alignment <span class="sc">!=</span> <span class="st">"-"</span>, <span class="co"># remove "-" values in Alignment</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>                  Gender <span class="sc">!=</span> <span class="st">"-"</span>) <span class="co"># remove "-" values in Gender</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li><p>Remake the “Alignment colored with gender” plot and the “Gender colored with alignment” plots with this new dataset.</p></li>
+<li><p>Redo the Chi-Squared test for independence between Alignement and Gender. Include all hypotheses, and computations for at least <span class="math inline">\(2\)</span> expected values. Does this change our conclusion?</p></li>
 <li><p>Side-by-side barcharts allow us to represent the counts from a contingency table graphically. Telling <code>R</code> to make a side-by-side barchart involves adding the words <code>position = "dodge</code>” to the coding from above. Now created the other bar chart side-by-side, the “Gender colored with alignment.” use the comics_filter dataset.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> INSERT) <span class="sc">+</span> <span class="co"># add the data</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> INSERT, <span class="co"># bar chart of alignment</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">fill =</span> INSERT), <span class="co"># colored by gender</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">position =</span> INSERT) <span class="sc">+</span> <span class="co"># side_by_side</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Alignment colored with gender"</span>)  <span class="co"># add title</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> INSERT) <span class="sc">+</span> <span class="co"># add the data</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> INSERT, <span class="co"># bar chart of alignment</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">fill =</span> INSERT), <span class="co"># colored by gender</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">position =</span> INSERT) <span class="sc">+</span> <span class="co"># side_by_side</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Alignment colored with gender"</span>)  <span class="co"># add title</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <h1 id="proportions">Proportions</h1>
 <p>We have been focusing mostly on counts. Proportional data is also interesting to explore and it is easy to get <code>R</code> to produce those for us.</p></li>
-<li><p>What combination of Gender and Alignment has the highest proportion? What is it? What is the sum of all of the proportions in the table below? (Note: go through each line of code and ensure you know what each step does)</p>
+<li><p>What combination of Gender and Alignment has the highest proportion? What is the value? What is the sum of all of the proportions in the table below? (Note: Use the View() function to go through each line of code and ensure you know what each step does.)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> <span class="co"># which dataset to use </span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Gender, Alignment) <span class="sc">%&gt;%</span> <span class="co"># counts all combinations</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">%&gt;%</span> <span class="co"># finds proportions</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Gender, Alignment, prop) <span class="co"># selecting which cols to pivot</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Alignment, <span class="co"># the variable to pivot</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> prop) <span class="co"># which values to pivot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> <span class="co"># which dataset to use </span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Gender, Alignment) <span class="sc">%&gt;%</span> <span class="co"># counts all combinations</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">%&gt;%</span> <span class="co"># finds proportions</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Gender, Alignment, prop) <span class="sc">%&gt;%</span> <span class="co"># selecting which cols to pivot</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Alignment, <span class="co"># the variable to pivot</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> prop) <span class="co"># which values to pivot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<h1 id="conditional-proportions">Conditional proportions</h1></li>
+<li><p>If we're curious about systematic associations between variables, we should look to conditional proportions. An example of a conditional proportion is the proportion of female superheroes that are good. To build a table of these conditional proportions, we need to specify a grouping variable <strong>before</strong> we calculate the proportions. What proportion of female characters are good? What do the rows sum to? (Note: Use the View() function to go through each line of code and ensure you know what each step does.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> <span class="co"># which dataset to use </span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Gender, Alignment) <span class="sc">%&gt;%</span> <span class="co"># counts all combinations</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Gender) <span class="sc">%&gt;%</span> <span class="co"># conditions on gender</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">%&gt;%</span> <span class="co"># finds proportions</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Gender, Alignment, prop) <span class="sc">%&gt;%</span>  <span class="co"># selecting which cols to pivot</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Alignment, <span class="co"># the variable to pivot</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> prop) <span class="co"># which values to pivot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
-<li><div class="cell">
-
+<li><p>What proportion of good characters are male? What do the columns sum to?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>comics <span class="sc">%&gt;%</span> <span class="co"># which dataset to use </span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Gender, Alignment) <span class="sc">%&gt;%</span> <span class="co"># counts all combinations</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Alignment) <span class="sc">%&gt;%</span> <span class="co"># conditions on gender</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">%&gt;%</span> <span class="co"># finds proportions</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Gender, Alignment, prop) <span class="sc">%&gt;%</span>  <span class="co"># selecting which cols to pivot</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Alignment, <span class="co"># the variable to pivot</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> prop) <span class="co"># which values to pivot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Plotting proportions is similar to the side-by-side bar chart completed earlier. Instead of <code>position = "dodge"</code> we use <code>position = "fill"</code> . Draw one such plot below using Gender for the <code>x</code> axis and color it using Alignment.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> INSERT) <span class="sc">+</span> <span class="co"># add the data</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> INSERT, <span class="co"># bar chart of ?</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">fill =</span> INSERT), <span class="co"># colored by ?</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">position =</span> INSERT) <span class="co"># fill</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Now, change the label the <code>y</code> axis from <code>count</code> by including the coding</p>
+<pre><code>labs(y = "Proportion of superheroes")</code></pre></li>
+<li><p>Does the above plot condition on gender or alignment? How do you know? (hint: what sums to 1?)</p></li>
+<li><p>Condition on the other variable.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> INSERT) <span class="sc">+</span> <span class="co"># add the data</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> INSERT, <span class="co"># bar chart of ?</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">fill =</span> INSERT), <span class="co"># colored by ?</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">position =</span> INSERT)  <span class="sc">+</span> <span class="co"># fill</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lab</span>(<span class="at">y =</span> <span class="st">"INSERT Y AXIS TITLE HERE"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Another way to view the differences in variables is to facet.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(comics) <span class="sc">+</span> <span class="co"># which dataset</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Gender)) <span class="sc">+</span> <span class="co"># bar chart of Gender</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Alignment) <span class="co"># broken down by Alignment</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ol>
 
