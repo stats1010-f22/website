@@ -252,15 +252,14 @@ comics %>% # the dataset
 praise()
 ```
 
-```{r count_Alignmet}
-
+```{r count_alignment}
 #| message: false
 #| warning: false
 #| eval: false
 #| echo: true
 
 comics %>% # the dataset
-  count(Alignment) #  and marginal distribution of the Alignment
+  count(Alignment) # and marginal distribution of the Alignment
 ```
 
 If these are independent, we would expect $\frac{200}{29+200+505}$ of the $207$ (about $56.4$) bad superheros to be female, and the same proportion of $496$ (about $135.1$) good superheros to be female, and so on.
