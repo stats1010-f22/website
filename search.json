@@ -350,11 +350,11 @@
     "text": "Midori says…"
   },
   {
-    "objectID": "slides/lect_04.html#definition-of-categorical-variable",
-    "href": "slides/lect_04.html#definition-of-categorical-variable",
+    "objectID": "slides/lect_04.html#definition-of-numerical-variable",
+    "href": "slides/lect_04.html#definition-of-numerical-variable",
     "title": "Lec 4 - Exploring numerical data",
-    "section": "Definition of categorical variable",
-    "text": "Definition of categorical variable\nA numerical or quantitative variable is a variable that can be measured."
+    "section": "Definition of numerical variable",
+    "text": "Definition of numerical variable\nA numerical or quantitative variable is a variable that can be measured."
   },
   {
     "objectID": "slides/lect_04.html#the-purpose-of-exploratory-data-analysis-eda",
