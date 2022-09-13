@@ -183,7 +183,7 @@ diamonds %>%
   View()
 ```
 
-10\. What does the "%%" function do?
+10\. What does the "%%" operator do?
 
 11. Can you identify the values where the dip is using the information above? Why or why not?
 
