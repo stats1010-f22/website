@@ -315,7 +315,7 @@ The $p-value$ for this test $0.0003298$ is very small which means that we have v
 
 12. Since there are only a few missing values (\<10%) in each category, there is no reason to keep them especially since our analysis is largely about these two variables.
 
-    What does the "!=" function do?
+    What does the "!=" operator do?
 
     ```{r filter_comics, eval=FALSE, echo=TRUE}
     #| message: false
