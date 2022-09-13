@@ -97,7 +97,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
     #| warning: false
     #| eval: false
     #| echo: true
-    
+
     comics %>% 
       distinct(Publisher) # finds the levels of publisher
     ```
@@ -109,7 +109,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
     #| warning: false
     #| eval: false
     #| echo: true
-   
+       
     comics %>% 
       INSERT_FUNCTION(INSERT_VARIABLE)
     ```
@@ -127,7 +127,7 @@ A common way to represent the number of cases that fall into each combination of
     #| warning: false
     #| eval: false
     #| echo: true
-   
+       
     comics %>% 
       count(Publisher, Alignment) %>% # counts all combinations
       View()
@@ -364,11 +364,7 @@ We have been focusing mostly on counts. Proportional data is also interesting to
 
 # Conditional proportions
 
-17. If we\'re curious about systematic associations between variables, we
-    should look to conditional proportions. An example of a conditional
-    proportion is the proportion of female superheroes that are
-    good. To build a table of these conditional proportions, we need to
-    specify a grouping variable **before** we calculate the proportions. What proportion of female characters are good? What do the rows sum to? (Note: Use the View() function to go through each line of code and ensure you know what each step does.)
+17. If we're curious about systematic associations between variables, we should look to conditional proportions. An example of a conditional proportion is the proportion of female superheroes that are good. To build a table of these conditional proportions, we need to specify a grouping variable **before** we calculate the proportions. What proportion of female characters are good? What do the rows sum to? (Note: Use the View() function to go through each line of code and ensure you know what each step does.)
 
     ```{r conditional_proportion_gender, eval=FALSE, echo=TRUE}
     #| message: false
