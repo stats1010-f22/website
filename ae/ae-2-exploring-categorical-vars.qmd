@@ -271,7 +271,6 @@ More information, including mathematical notation can be found [here](https://st
 Fortunately, \`R\` does all of this for us.
 
 ```{r chi_square}
-
 #| message: false
 #| warning: false
 #| eval: false
@@ -279,7 +278,6 @@ Fortunately, \`R\` does all of this for us.
 
 # the "$" sign pulls out the Gender values and Alignment value from the comics dataset
 chisq.test(comics$Gender, comics$Alignment)
-
 ```
 
 We get a warning because the missing values ("-") expected counts are probably quite small. You can safely use the chi-square test with critical values from the chi-square distribution when no more than 20% of the expected counts are less than $5$ and all individual expected counts are 1 or greater. In particular, all four expected counts in a $2 \times 2$ table should be 5 or greater.
@@ -447,7 +445,6 @@ We have been focusing mostly on counts. Proportional data is also interesting to
     #| warning: false
     #| eval: false
     #| echo: true
-
 
     ggplot(data = INSERT) + # add the data
       geom_bar(mapping = aes(x = INSERT, # bar chart of ?
