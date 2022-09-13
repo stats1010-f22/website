@@ -114,7 +114,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
       INSERT_FUNCTION(INSERT_VARIABLE)
     ```
 
-    A common way to represent the number of cases that fall into each combination of levels of two categorical variables, such as these, is with what's called a "contingency table." Note that each superhero appears in **exactly one cell, s**tatisticians call this **mutually exclusive.**
+A common way to represent the number of cases that fall into each combination of levels of two categorical variables, such as these, is with what's called a "contingency table." Note that each superhero appears in **exactly one cell, s**tatisticians call this **mutually exclusive.**
 
     ```{r eval=FALSE, echo=TRUE}
     praise()
@@ -133,9 +133,9 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
       View()
     ```
 
-    The long format above is difficult to see clearly. The format we normally use for contingency tables is the wide format.
+The long format above is difficult to see clearly. The format we normally use for contingency tables is the wide format.
 
-    The third line of coding below takes a long table and makes it wide by moving the `Alignment` variable to the columns, and filling the values of the table with the count variable (`n`). The `names_from` argument tells R where the names of the new columns are coming from (i.e. what variable), and the `values_from` argument tells `R` where the values in the table are coming from. Here, the values we want in our table are stored as a variable labeled `n` in our table.
+The third line of coding below takes a long table and makes it wide by moving the `Alignment` variable to the columns, and filling the values of the table with the count variable (`n`). The `names_from` argument tells R where the names of the new columns are coming from (i.e. what variable), and the `values_from` argument tells `R` where the values in the table are coming from. Here, the values we want in our table are stored as a variable labeled `n` in our table.
 
     ```{r contingency_wide, eval=FALSE, echo=TRUE}
     #| message: false
@@ -190,11 +190,11 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
       labs(title = "Alignment colored with gender")  # add title
     ```
 
-    We note that the commonly held belief that gender is binary is no longer the scientific consensus and that gender is a complex spectrum.
+We note that the commonly held belief that gender is binary is no longer the scientific consensus and that gender is a complex spectrum.
 
-    ![](ae-2_images/beyondXX_XY.webp)
+![](ae-2_images/beyondXX_XY.webp)
 
-    Statisticians want to discuss the **strength of association** of variables. They want to ensure that this association is not the result of random noise, but instead is a function of the underlying population of interest (all superheros).
+Statisticians want to discuss the **strength of association** of variables. They want to ensure that this association is not the result of random noise, but instead is a function of the underlying population of interest (all superheros).
 
     ```{r eval=FALSE, echo=TRUE}
     praise()
@@ -202,15 +202,15 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
 
 # Chi-Squared test
 
-    To test for independence in 2 categorical variables, statisticians use a **Chi-squared test**. This is a **hypothesis test** so it has both a null hypothesis ($H_0$) and an alternative hypothesis ($H_A$).
+To test for independence in 2 categorical variables, statisticians use a **Chi-squared test**. This is a **hypothesis test** so it has both a null hypothesis ($H_0$) and an alternative hypothesis ($H_A$).
 
-    $H_0$ = the variables are independent, there is **no** relationship between the two categorical variables.
+$H_0$ = the variables are independent, there is **no** relationship between the two categorical variables.
 
-    $H_A$ = Knowing the value of one variable does not help to predict the value of the other variable
+$H_A$ = Knowing the value of one variable does not help to predict the value of the other variable
 
-    Just like a fair court case, where a defendant is assumed to be innocent until proven guilty, here we assume $H_0$ until proven otherwise. The proof that we present at the case is a formula relating the actual values in our sample to what we would expect to get under the independence assumption.
+Just like a fair court case, where a defendant is assumed to be innocent until proven guilty, here we assume $H_0$ until proven otherwise. The proof that we present at the case is a formula relating the actual values in our sample to what we would expect to get under the independence assumption.
 
-    To perform a Chi-squared test of independence on gender and alignment we must find the marginal distributions of both gender and alignment.
+To perform a Chi-squared test of independence on gender and alignment we must find the marginal distributions of both gender and alignment.
 
 # Marginal distribution
 
@@ -228,7 +228,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
                   values_from = n)
     ```
 
-    1.  We take the original two-way table (with two categorical variables) and added up the cells across each level of `align` (ie $1+7+19+2 = 29$) to get the marginal distribution for each variable.
+We take the original two-way table (with two categorical variables) and added up the cells across each level of `align` (ie $1+7+19+2 = 29$) to get the marginal distribution for each variable.
 
     ```{r count_gender, eval=FALSE, echo=TRUE}
     #| message: false
@@ -254,11 +254,11 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
       count(Alignment) #  and count the gender
     ```
 
-    If these are independent, we would expect $\frac{200}{29+200+505}$ of the $207$ (about $56.4$) bad superheros to be female, and the same proportion of $496$ (about $135.1$) good superheros to be female, and so on.
+If these are independent, we would expect $\frac{200}{29+200+505}$ of the $207$ (about $56.4$) bad superheros to be female, and the same proportion of $496$ (about $135.1$) good superheros to be female, and so on.
 
 10. Assuming independence of Alignment and Gender, how many good superheros would we expect to be male? (hint: use the "\$\frac{1}{2}\$" to make$\frac{1}{2}$)
 
-    More information, including mathematical notation can be found [here](https://statsandr.com/blog/chi-square-test-of-independence-by-hand/).
+More information, including mathematical notation can be found [here](https://statsandr.com/blog/chi-square-test-of-independence-by-hand/).
 
     Fortunately, `R` does all of this for us.
 
@@ -272,13 +272,13 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
     chisq.test(comics$Gender, comics$Alignment)
     ```
 
-    We get a warning because the missing values ("-") expected counts are probably quite small. You can safely use the chi-square test with critical values from the chi-square distribution when no more than 20% of the expected counts are less than $5$ and all individual expected counts are 1 or greater. In particular, all four expected counts in a $2 \times 2$ table should be 5 or greater.
+We get a warning because the missing values ("-") expected counts are probably quite small. You can safely use the chi-square test with critical values from the chi-square distribution when no more than 20% of the expected counts are less than $5$ and all individual expected counts are 1 or greater. In particular, all four expected counts in a $2 \times 2$ table should be 5 or greater.
 
     ```{r eval=FALSE, echo=TRUE}
     praise()
     ```
 
-    The $p-value$ for this test $0.0003298$ is very small which means that we have very strong evidence against $H_0$ --- that there is independence between Alignment and Gender --- and we can reject the null hypothesis. This suggests that the association between Gender and Alignment is not likely due to chance.
+The $p-value$ for this test $0.0003298$ is very small which means that we have very strong evidence against $H_0$ --- that there is independence between Alignment and Gender --- and we can reject the null hypothesis. This suggests that the association between Gender and Alignment is not likely due to chance.
 
 11. There are a few characters with missing data "-" in the Alignment and Gender variables? How many are in each?
 
@@ -344,7 +344,7 @@ The first superhero is named "A-Bomb" he is male, with yellow eyes, human, with 
 
 # Proportions
 
-    We have been focusing mostly on counts. Proportional data is also interesting to explore and it is easy to get `R` to produce those for us.
+We have been focusing mostly on counts. Proportional data is also interesting to explore and it is easy to get `R` to produce those for us.
 
 16. What combination of Gender and Alignment has the highest proportion? What is the value? What is the sum of all of the proportions in the table below? (Note: Use the View() function to go through each line of code and ensure you know what each step does.)
 
