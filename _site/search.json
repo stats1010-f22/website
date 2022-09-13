@@ -761,5 +761,19 @@
     "title": "Here lecture",
     "section": "Importing data",
     "text": "Importing data\n\n\n\nDouble click on the data you would like to install in the data folder in your project and select “Import Dataset.”\n\n\nIf this is the first time you are importing data, you may be prompted to download a package first. Follow the Graphical User Interface (GUI) to import the data. Check that the data is as you expect and update “Import Options” until it seems reasonable. Copy the coding from “Code Preview” and save put it in your document “so that when you restart R, you have coding that will import the data.\n\n\n\nWhen the data is imported, check the “Data Preview” to make sure it is what you expect. If not, change the “Import Options.”\n\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "slides/lect_04.html#definition-of-numerical-variable",
+    "href": "slides/lect_04.html#definition-of-numerical-variable",
+    "title": "Lec 4 - Exploring numerical data",
+    "section": "Definition of numerical variable",
+    "text": "Definition of numerical variable\nA numerical or quantitative variable is a variable that can be measured."
+  },
+  {
+    "objectID": "slides/lect_04.html#the-purpose-of-exploratory-data-analysis-eda",
+    "href": "slides/lect_04.html#the-purpose-of-exploratory-data-analysis-eda",
+    "title": "Lec 4 - Exploring numerical data",
+    "section": "The purpose of Exploratory Data Analysis (EDA)",
+    "text": "The purpose of Exploratory Data Analysis (EDA)\n\nEDA is about learning the structure of a dataset through a series of numerical and graphical techniques.\nWhen you do EDA, you’ll look for both\n\ngeneral trends and\ninteresting outliers in your data.\n\n\ngenerate questions that will help inform subsequent analysis."
   }
 ]

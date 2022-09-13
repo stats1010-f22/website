@@ -1,0 +1,18 @@
+{
+  "hash": "8c960cdf60a78308b90660d9df3474c6",
+  "result": {
+    "markdown": "---\ntitle: \"Lec 4 - Exploring numerical data\"\nsubtitle: \"STAT 1010 - Fall 2022\"\nfooter:  \"[stat1010-f22.github.io/website](https://stats1010-f22.github.io/website/)\"\nformat: \n  revealjs: \n    theme: slides.scss\n    transition: fade\n    slide-number: true\neditor: visual\nexecute:\n  freeze: auto\n---\n\n\n\n\n# Learning outcomes\n\nBy the end of this lesson you should:\n\n-   Understand measures of center and know how to compute them\n\n-   Understand measures of spread and know how to compute them\n\n-   Graphical representation and interpretation of one numerical variables in R\n\n## Definition of numerical variable\n\nA numerical or quantitative variable is a variable that can be measured.\n\n## The purpose of Exploratory Data Analysis (EDA)\n\n-   EDA is about learning the structure of a dataset through a series of numerical and graphical techniques.\n\n-   When you do EDA, you'll look for both\n\n    -   general trends and\n\n    -   interesting outliers in your data.\n\ngenerate questions that will help inform subsequent analysis.\n\n#  Observations{background-image=\"lect_04_images/observations.png\" background-size=\"contain\"}\n\n#  Variables{background-image=\"lect_04_images/variables.png\" background-size=\"contain\"}\n\n\n# Measures of center\n\n- Mean\n\n- Median ($50\\%th$ percentile)\n\n# Mean\n\n$\\bar{x}_{var} =\\frac{the\\; sum\\; of\\; all\\; the\\; observations\\; in\\; the \\; var}{the \\; number \\;of \\;observations \\; var}$\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    function fireSlideChanged(previousSlide, currentSlide) {\n\n      // dispatch for htmlwidgets\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for reveal\n    if (window.Reveal) {\n      window.Reveal.addEventListener(\"slidechanged\", function(event) {\n        fireSlideChanged(event.previousSlide, event.currentSlide);\n      });\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

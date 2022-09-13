@@ -1,0 +1,21 @@
+---
+title: "Exploring numerical data"
+output: 
+   html_document
+---
+
+::: callout-important
+This application exercise is due on 20 Sept at 2:00pm.
+:::
+
+# Load packages, data
+
+```{r load-packages, eval=FALSE, echo=TRUE}
+#| warning: false
+#| message: false
+
+## loading libraries
+library(tidyverse) # for data analysis and visualisation
+library(here) # to organize files
+library(praise) # for ocassional good vibes!
+```

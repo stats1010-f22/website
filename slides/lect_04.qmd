@@ -42,19 +42,24 @@ A numerical or quantitative variable is a variable that can be measured.
 
 generate questions that will help inform subsequent analysis.
 
-# Observations (1 - n){background-image="lec_04_images/observations.png" background-size="cover"}
+# Observations {background-image="lect_04_images/observations.png" background-size="contain"}
 
-# Variables {background-image="lec_04_images/variables.png" background-size="cover"}
-
+# Variables {background-image="lect_04_images/variables.png" background-size="contain"}
 
 # Measures of center
 
--   mean
+-   Mean
 
--   median
-
--   mode
+-   Median ($50\%th$ percentile)
 
 # Mean
 
-the sum of one variables
+$\bar{x}_{var} =\frac{the\; sum\; of\; all\; the\; observations\; in\; the \; var}{the \; number \;of \;observations}$
+
+# Measures of spread
+
+-   Percentiles
+
+    -   quartiles
+
+-   
