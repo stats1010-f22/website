@@ -20,31 +20,19 @@ library(countdown)
 
 By the end of this lesson you should:
 
--   Be able to identify categorical variables and why they are important
+-   Understand measures of center and know how to compute them
 
--   Graphical representation of two categorical variables in R
+-   Understand measures of spread and know how to compute them
 
--   Tabular representation of two categorical variables
-
--   Graphical representation of one categorical variable
-
-# Word cloud
-
-Use this [link](PollEv.com/gwynnsturdevant155), or the qr code below
-
-```{r, eval=TRUE, echo=FALSE}
-library(qrcode)
-qr <- qr_code("PollEv.com/gwynnsturdevant155")
-plot(qr)
-```
+-   Graphical representation and interpretation of one numerical variables in R
 
 ## Definition of categorical variable
 
-A categorical or qualitative variable is a variable that can not be counted. They are descriptors that are or grouping factors.
+A numerical or quantitative variable is a variable that can be measured.
 
-## The purpose of exploring categorical variables
+## The purpose of Exploratory Data Analysis (EDA)
 
--   Exploratory Data Analysis is about learning the structure of a dataset through a series of numerical and graphical techniques.
+-   EDA is about learning the structure of a dataset through a series of numerical and graphical techniques.
 
 -   When you do EDA, you'll look for both
 
@@ -54,48 +42,22 @@ A categorical or qualitative variable is a variable that can not be counted. The
 
 generate questions that will help inform subsequent analysis.
 
-# Counts & proportions
+# Observations (1 - n)
 
--   How many freshman are there in our class?
+![](lect_04_images/observations.png){width="611"}
 
--   What proportion of our class turned in the diamonds assignment?
+# Variables
 
--   How many transportation stocks are in our portfolio?
+![](lect_04_images/variables.png)
 
--   DOES NOT RESTRICT THE POPULATION
+# Measures of center
 
--   Others?
+-   mean
 
-    # Marginal distribution
+-   median
 
--   The count of the distribution of one variable.
+-   mode
 
--   This is referred to asmthe marginal distribution because in a contingency table, we usually compute the column sums and row sums in the **margins**.
+# Mean
 
-    # Conditional probabilities
-
--   Of all the freshman students in our class what percent turned in the diamonds exercise?
-
--   Of all the students who turned in the diamonds exercise how many were freshman?
-
--   How many transportation stocks are in our portfolio that performed well last year?
-
--   Of all the stocks in our portfolio that performed well last year, how many are transportation stocks?
-
--   RESTRICTED TO A SUBPOPULATION
-
-Others?
-
-# Words to watch for
-
--   Mutually exclusive
-
--   Associated
-
--   Independence
-
--   Chi-Squared test
-
--   $H_0$ and $H_A$
-
--   Contingency table
+the sum of one variables
