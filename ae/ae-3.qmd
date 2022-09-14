@@ -143,6 +143,8 @@ It is not sufficient to only draw plots, we must also know typical values (measu
 
 We use the `summarise()` function when we expect the result to be one number.
 
+### Mean
+
 ```{r diamonds_mean}
 #| message: false
 #| warning: false
@@ -175,8 +177,12 @@ diamonds %>% # the data
 
 10. Compare the average values of price for each level of the cut variable. Considering the distributions of price for each level of cut in question 8, is the grouped mean a good measure of center for each level of cut? Why or why not?
 
+### Median 
+12. How would you find the overall median of price?
+
 ## Measures of spread
 
+### Variance
 R also computes measures of spread.
 
 ```{r var}
@@ -207,6 +213,54 @@ diamonds %>% # the data
       (nrow(diamonds) - 1)) # divide by n - 1
 ```
 
-11. Run each line of the code above and ensure that you understand how this computation was developed. This shows us how to find $s_{price}^2$ directly.
+11. Run each line of code above and ensure that you understand how this computation was developed. This shows us how to find $s_{price}^2$ directly.
 
-12. Find $s_{x}^2$, $s_{y}^2$, and $s_{z}^2$ using both directly, and having `R` do the computation. (hint: you will need to insert 6 code chunks)
+12. Find $s_{x}^2$, $s_{y}^2$, and $s_{z}^2$ both directly, and indirectly: having `R` do the computation. (hint: you will need to insert 6 code chunks)
+
+```{r}
+praise()
+```
+
+### Standard deviation
+
+13. `R` also computes the standard deviation $s$ directly:
+
+    ```{r sd}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+    diamonds %>% # the data
+      summarise(sd = sd(price)) # find the sd
+    ```
+
+Can you use the direct approach (finding the `mean_sq_deviation`) from above to find the standard deviation of price $s_{price}$? (hint: you will need to use the `sqrt()` operator)
+
+### IQR
+
+14. The $IQR$ can also be computed directly or indirectly:
+
+```{r}
+diamonds %>%
+  summarise(
+    q1 = quantile(price, 0.25),
+    q3 = quantile(price, 0.75),
+    iqr = q3 - q1
+  )
+```
+
+### Range
+
+```{r}
+diamonds %>%
+  summarise(
+    min = min(price),
+    max = max(price),
+    range = max - min
+  )
+```
+
+15. Of all of the measures of spread, which do you think are sensitive to skewed data or large outliers?
+
+
