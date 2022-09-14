@@ -63,7 +63,10 @@ $\overline{var} =\frac{the\; sum\; of\; all\; the\; observations\; in\; the \; v
 
 library(tidyverse)
 ggplot(data = diamonds) +
-  geom_histogram(mapping = aes(x = price), binwidth = 250) 
+  geom_histogram(mapping = aes(x = price), binwidth = 250) +
+  geom_vline(aes(xintercept = mean(price)), color = "red") +
+  geom_vline(aes(xintercept = median(price)), color = "green")
+
 ```
 # Mean vs median
 
