@@ -261,6 +261,6 @@ diamonds %>%
   )
 ```
 
-15. Of all of the measures of spread, which do you think are sensitive to skewed data or large outliers?
+15. Of all of the measures of spread, which do you think are sensitive to skewed data and outliers? Why?
 
 
