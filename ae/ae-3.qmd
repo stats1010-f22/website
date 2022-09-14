@@ -1,5 +1,5 @@
 ---
-title: "Exploring numerical data"
+title: "Exploring numerical data (AE-3)"
 output: 
    html_document
 ---
@@ -164,7 +164,7 @@ diamonds %>% # the dataset
   summarise(mean = mean(price)) # function that is used to compute mean of price
 ```
 
-9, Now compute the means of the variables $x$, $y$, $z$, $dbl$, $tbl$, and $carat$. (hint: You will need to insert a code chunk for each of these variables.)
+9, Now compute the means of the variables $x$, $y$, $z$, and $carat$. (hint: You will need to insert a code chunk for each of these variables.)
 
 ```{r}
 #| eval: false

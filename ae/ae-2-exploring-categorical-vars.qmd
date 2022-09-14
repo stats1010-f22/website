@@ -1,5 +1,5 @@
 ---
-title: "Exploring categorical data"
+title: "Exploring categorical data AE-2"
 output: 
    html_document
 ---
@@ -210,7 +210,7 @@ To test for independence in 2 categorical variables, statisticians use a **Chi-s
 
 $H_0$ = the variables are independent, there is **no** relationship between the two categorical variables.
 
-$H_A$ = Knowing the value of one variable does not help to predict the value of the other variable
+$H_A$ = Knowing the value of one variable helps to predict the value of the other variable
 
 Just like a fair court case, where a defendant is assumed to be innocent until proven guilty, here we assume $H_0$ until proven otherwise. The proof that we present at the case is a formula relating the actual values in our sample to what we would expect to get under the independence assumption.
 
