@@ -20,6 +20,8 @@ editor: visual
 
 📋 [Exploring qualitative variables](/ae/ae-2-exploring-categorical-vars.html)
 
+📋 [Exploring numeric variables](/ae/ae-3.html)
+
 ## Perform
 
 ⌨️ [Diagnostic test](404)
