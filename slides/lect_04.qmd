@@ -61,6 +61,7 @@ $\overline{var} =\frac{the\; sum\; of\; all\; the\; observations\; in\; the \; v
 #| echo: false
 #| eval: true
 
+library(tidyverse)
 ggplot(data = diamonds) +
   geom_histogram(mapping = aes(x = price), binwidth = 250) 
 ```
@@ -92,6 +93,8 @@ $s_{var}^2 =\frac{(observation\; 1 \; in\; the \; var - \overline{var})^2 + (obs
 ```{r}
 #| echo: false
 #| eval: true
+
+library(tidyverse)
 ggplot(data = diamonds) +
   geom_histogram(mapping = aes(x = price), binwidth = 250) +
   geom_vline(aes(xintercept = mean(price)), color = "red")
