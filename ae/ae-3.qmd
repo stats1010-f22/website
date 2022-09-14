@@ -115,7 +115,7 @@ ggplot(data = diamonds) + # the data
   facet_wrap(~clarity) # faceting
 ```
 
-7.  What does the above plots suggest about the prices of diamonds for all levels of the variable clarity?
+7.  What does the above plot suggest about the prices of diamonds for all levels of the variable clarity?
 
 ```{r}
 praise()
@@ -123,7 +123,7 @@ praise()
 
 8.  Draw a density plot for each value of cut. Describe the distribution of diamond price for each value of cut.
 
-```{r density_plot_price_facet_clarity}
+```{r density_plot_price_facet_cut}
     #| message: false
     #| warning: false
     #| eval: false
