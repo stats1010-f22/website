@@ -1,5 +1,5 @@
 ---
-title: "Lec 4 - Exploring numerical data"
+title: "Lec 4 - Exploring numeric data"
 subtitle: "STAT 1010 - Fall 2022"
 footer:  "[stat1010-f22.github.io/website](https://stats1010-f22.github.io/website/)"
 format: 
@@ -26,9 +26,9 @@ By the end of this lesson you should:
 
 -   Graphical representation and interpretation of one numerical variable in R
 
-## Definition of numerical variable
+## Definition of numeric variable
 
-A numerical or quantitative variable is a variable that can be measured.
+A numeric or quantitative variable is a variable that can be measured.
 
 ## The purpose of Exploratory Data Analysis (EDA)
 
