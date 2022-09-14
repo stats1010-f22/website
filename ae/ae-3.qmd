@@ -133,10 +133,10 @@ praise()
 8.  Draw a density plot for each value of cut. Describe the distribution of diamond price for each value of cut.
 
 ```{r density_plot_price_facet_cut}
-    #| message: false
-    #| warning: false
-    #| eval: false
-    #| echo: true
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
 
 ggplot(data = diamonds) + # the data
   geom_density(aes(x = price), # plot of price
@@ -214,7 +214,7 @@ We can also do this directly, by using the definition from class involving findi
 #| warning: false
 #| eval: false
 #| echo: true
-#| 
+
 diamonds %>% # the data
   mutate(
     mean_price = mean(price), # mean of price
@@ -256,7 +256,12 @@ Can you use the direct approach (finding the `mean_sq_deviation`) from above to 
 
 14. The $IQR$ can also be computed directly or indirectly:
 
-```{r}
+```{r price_IQR}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
 diamonds %>% # the data
   summarise(
     q1 = quantile(price, 0.25), # find Q1
@@ -267,7 +272,12 @@ diamonds %>% # the data
 
 ### Range
 
-```{r}
+```{r price_range}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
 diamonds %>% # the data
   summarise(
     min = min(price), # find min
