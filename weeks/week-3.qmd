@@ -14,6 +14,8 @@ editor: visual
 
 🖥️ [Lecture 3](/slides/lect_03.html)
 
+🖥️ [Lecture 4](/slides/lect_04.html)
+
 ## Practice
 
 📋 [Exploring qualitative variables](/ae/ae-2-exploring-categorical-vars.html)
