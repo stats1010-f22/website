@@ -18,10 +18,13 @@ This application exercise is due on 20 Sept at 2:00pm.
 library(tidyverse) # for data analysis and visualisation
 library(here) # to organize files
 library(praise) # for ocassional good vibes!
-library(patchwork) # to print multiple plots in one
 ```
 
-# Dotplot
+# Graphical EDA
+
+Plotting is an important skill to learn for effective data analysis.
+
+## Dotplot
 
 1.  Look at the coding below and one at a time remove each of the dotsize, alpha, stackdir, and method from the code. What does each of these inputs do? How does each input impact upon the plot?
 
@@ -38,28 +41,25 @@ ggplot(data = diamonds) + # the data
                stackdir = "center") #
 ```
 
-# Dotplot vs boxplot
+## Dotplot vs boxplot
 
 A boxplot provides summary information for the distribution of a variable. Here are some explanations (using different data) showing the purpose of the box portion of the boxplot.
 
-The left line of the box is the *lower quartile (LQ)* or *Q1*
-![](ae-3-images/first_quartile.png)
+The left line of the box is the *quartile 1* ($Q_1$) or *Q1* ![](ae-3-images/first_quartile.png)
 
 ```{r}
 praise()
 ```
 
-The middle line of the box is the *median*
-![](ae-3-images/second_quartile.png)
+The middle line of the box is the *median* ($Q_2$) ![](ae-3-images/second_quartile.png)
 
-The right line of the box is the *upper quartile (UQ)* or *Q3*
-![](ae-3-images/third_quartile.png)
+The right line of the box is the *quartile 3* ($Q_3$) ![](ae-3-images/third_quartile.png)
 
 2.  Looking at the above plots, count the percentage of yellow dots in each of the dotplots. Is there anything interesting about these values?
 
 3.  Compare and contrast a dotplot and a boxplot? What are the advantages and disadvantages of each? Think carefully about [bimodal data](https://openintro.shinyapps.io/ims-02-explore-02/#section-density-plots-vs.-boxplots) and which plot you would use to show that aspect of a variable. Also think about outliers.
 
-# Boxplots
+## Boxplots
 
 4.  Draw a boxplot of the price data from the diamonds dataset.
 
@@ -70,39 +70,58 @@ The right line of the box is the *upper quartile (UQ)* or *Q3*
     #| echo: true
 
 
-    ggplot(data = INSERT) + 
-       INSERT(mappping = aes(x = INSERT))
+    ggplot(data = INSERT) + # the data
+       INSERT(mappping = aes(x = INSERT)) # the variable
     ```
 
-## Boxplot descriptions
+### Boxplot descriptions
 
 ![](ae-3-images/skewness.png)
 
 5.  Use the information above to describe the boxplot of price.
 
-## Interquartile range (IQR)
+### Interquartile range (IQR)
 
-The IQR of a variable is the length of the box in a boxplot. 
-$$ IQR = UQ - LQ$$
+The IQR of a variable is the length of the box in a boxplot. $$ IQR = Q_3 - Q_1$$
 
     ```{r}
     praise()
     ```
 
-# Density plot
+## Density plot
+
 ```{r density_plot_price}
     #| message: false
     #| warning: false
     #| eval: false
     #| echo: true
 
- ggplot(data = diamonds) + 
-       geom_density(aes(x = price), bw = 1)
-    ```
-
+ ggplot(data = diamonds) + # the data
+       geom_density(aes(x = price), # plot of price
+                    bw = 1) # plot of price
+```
 
 6.  What does the "bw" input in the geom_density function do? What is an appropriate value of "bw" for this data?
 
+```{r density_plot_price_facet_clarity}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+ggplot(data = diamonds) + # the data
+  geom_density(aes(x = price), # plot of price
+               bw = INSERT) + # binwidth
+  facet_wrap(~clarity) # faceting
+```
+
+7.  What does the above plots suggest about the prices of diamonds for all levels of the variable clarity?
+
+```{r}
+praise()
+```
+
+8.  Draw a density plot for each value of cut. Describe the distribution of diamond price for each value of cut.
 
 ```{r density_plot_price_facet_clarity}
     #| message: false
@@ -110,23 +129,84 @@ $$ IQR = UQ - LQ$$
     #| eval: false
     #| echo: true
 
-ggplot(data = diamonds) + 
-  geom_density(aes(x = price), bw = INSERT) +
-  facet_wrap(~clarity)
+ggplot(data = diamonds) + # the data
+  geom_density(aes(x = price), # plot of price
+               bw = INSERT) + # binwidth
+  facet_wrap(~INSERT) # faceting
 ```
 
-7.  What does the above plots suggest about the prices of diamonds for all levels of the variable clarity? 
+# Computing summary statistics
 
-8.Draw a density plot of 
+It is not sufficient to only draw plots, we must also know typical values (measures of center) of the data and how spread out these values (measures of spread).
 
-```{r density_plot_price_facet_clarity}
-    #| message: false
-    #| warning: false
-    #| eval: false
-    #| echo: true
+## Measures of center
 
-ggplot(data = diamonds) + 
-  geom_density(aes(x = price), bw = INSERT) +
-  facet_wrap(~INSERT)
+We use the `summarise()` function when we expect the result to be one number.
+
+```{r diamonds_mean}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
+diamonds %>% # the dataset
+  summarise(mean = mean(price)) # function that is used to compute mean of price
 ```
 
+9, Now compute the means of the variables $x$, $y$, $z$, $dbl$, $tbl$, and $carat$. (hint: You will need to insert a code chunk for each of these variables.)
+
+```{r}
+praise()
+```
+
+Last class we learned about the `group_by()` and used it to compute conditional probabilities. Today we will use it to compare the means of different subgroups.
+
+```{r diamonds_grped_mean}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
+diamonds %>% # the data
+  group_by(cut) %>% # for each value of cut
+  summarise(mean = mean(price), # find the mean
+            median = median(price)) # and the median
+```
+
+10. Compare the average values of price for each level of the cut variable. Considering the distributions of price for each level of cut in question 8, is the grouped mean a good measure of center for each level of cut? Why or why not?
+
+## Measures of spread
+
+R also computes measures of spread.
+
+```{r var}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
+    diamonds %>% # the data
+      summarise(var = var(price)) # find the variance
+```
+
+We can also do this directly, by using the definition from class involving finding the mean, subtracting, and squaring.
+
+```{r var_directly}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+#| 
+diamonds %>% # the data
+  mutate(
+    mean_price = mean(price), # mean of price
+    deviation = price - mean_price, # subtraction from notes
+    deviation_sq = deviation^2) %>% # then square it
+  summarise(
+    mean_sq_deviation = sum(deviation_sq)/ # sum them
+      (nrow(diamonds) - 1)) # divide by n - 1
+```
+
+11. Run each line of the code above and ensure that you understand how this computation was developed. This shows us how to find $s_{price}^2$ directly.
+
+12. Find $s_{x}^2$, $s_{y}^2$, and $s_{z}^2$ using both directly, and having `R` do the computation. (hint: you will need to insert 6 code chunks)

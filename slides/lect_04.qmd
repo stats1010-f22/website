@@ -70,6 +70,8 @@ Mean - sensitive to outliers and skewed distributions
 
 Median - more stable estimate 
 
+Mode - most common value
+
 # Measures of spread
 
 -   Percentiles
@@ -78,7 +80,9 @@ Median - more stable estimate
 
     -   Interquartile range
 
--   variance
+- variance $s^2$
+- standard deviation $s$
+- range
 
 # Variance
 
@@ -94,7 +98,7 @@ ggplot(data = diamonds) +
   
 ```
 
-# A few of the squares
+# A few of the "squares"
 
 ```{r}
 #| echo: false
@@ -103,7 +107,7 @@ ggplot(data = diamonds) +
 x_min <- c(2723, rep(3932.8, 4))
 x_max <- c(3932.8, 5805, 7821, 5204, 5645)
 y_min <- rep(0, 5)
-y_max <- seq(500, 4000, length = 5)
+y_max <- x_max - x_min
 
 df <- data.frame(x_min, x_max, y_min, y_max)
 
@@ -114,8 +118,6 @@ ggplot(data = diamonds) +
   geom_rect(data = df,
             aes(xmin = x_min, xmax = x_max, ymin = y_min, ymax = y_max), 
             colour = "lightblue", fill = "lightblue", alpha = 0.5)
-
-  
 ```
 
 
