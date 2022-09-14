@@ -350,16 +350,16 @@
     "text": "Midori says…"
   },
   {
-    "objectID": "slides/lect_04.html#definition-of-numerical-variable",
-    "href": "slides/lect_04.html#definition-of-numerical-variable",
-    "title": "Lec 4 - Exploring numerical data",
-    "section": "Definition of numerical variable",
-    "text": "Definition of numerical variable\nA numerical or quantitative variable is a variable that can be measured."
+    "objectID": "slides/lect_04.html#definition-of-numeric-variable",
+    "href": "slides/lect_04.html#definition-of-numeric-variable",
+    "title": "Lec 4 - Exploring numeric data",
+    "section": "Definition of numeric variable",
+    "text": "Definition of numeric variable\nA numeric or quantitative variable is a variable that can be measured."
   },
   {
     "objectID": "slides/lect_04.html#the-purpose-of-exploratory-data-analysis-eda",
     "href": "slides/lect_04.html#the-purpose-of-exploratory-data-analysis-eda",
-    "title": "Lec 4 - Exploring numerical data",
+    "title": "Lec 4 - Exploring numeric data",
     "section": "The purpose of Exploratory Data Analysis (EDA)",
     "text": "The purpose of Exploratory Data Analysis (EDA)\n\nEDA is about learning the structure of a dataset through a series of numerical and graphical techniques.\nWhen you do EDA, you’ll look for both\n\ngeneral trends and\ninteresting outliers in your data.\n\n\ngenerate questions that will help inform subsequent analysis."
   },
