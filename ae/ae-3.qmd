@@ -42,18 +42,22 @@ ggplot(data = diamonds) + # the data
 
 A boxplot provides summary information for the distribution of a variable. Here are some explanations (using different data) showing the purpose of the box portion of the boxplot.
 
+The left line of the box is the *lower quartile (LQ)* or *Q1*
 ![](ae-3-images/first_quartile.png)
 
 ```{r}
 praise()
 ```
 
+The middle line of the box is the *median*
 ![](ae-3-images/second_quartile.png)
 
+The right line of the box is the *upper quartile (UQ)* or *Q3*
 ![](ae-3-images/third_quartile.png)
 
-2.  Looking at the above plots, count the percentage of yellow dots in each of the dotplots?
-3.  Compare and contrast a dotplot and a boxplot? What are the advantages and disadvantages of each? Think carefully about bimodal data and how which plot you would use to show that aspect of a variable.
+2.  Looking at the above plots, count the percentage of yellow dots in each of the dotplots. Is there anything interesting about these values?
+
+3.  Compare and contrast a dotplot and a boxplot? What are the advantages and disadvantages of each? Think carefully about [bimodal data](https://openintro.shinyapps.io/ims-02-explore-02/#section-density-plots-vs.-boxplots) and which plot you would use to show that aspect of a variable. Also think about outliers.
 
 # Boxplots
 
@@ -76,8 +80,53 @@ praise()
 
 5.  Use the information above to describe the boxplot of price.
 
+## Interquartile range (IQR)
+
+The IQR of a variable is the length of the box in a boxplot. 
+$$ IQR = UQ - LQ$$
+
     ```{r}
     praise()
     ```
 
-6.  
+# Density plot
+```{r density_plot_price}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+ ggplot(data = diamonds) + 
+       geom_density(aes(x = price), bw = 1)
+    ```
+
+
+6.  What does the "bw" input in the geom_density function do? What is an appropriate value of "bw" for this data?
+
+
+```{r density_plot_price_facet_clarity}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+ggplot(data = diamonds) + 
+  geom_density(aes(x = price), bw = INSERT) +
+  facet_wrap(~clarity)
+```
+
+7.  What does the above plots suggest about the prices of diamonds for all levels of the variable clarity? 
+
+8.Draw a density plot of 
+
+```{r density_plot_price_facet_clarity}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+ggplot(data = diamonds) + 
+  geom_density(aes(x = price), bw = INSERT) +
+  facet_wrap(~INSERT)
+```
+

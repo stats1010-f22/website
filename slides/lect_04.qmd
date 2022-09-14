@@ -24,7 +24,7 @@ By the end of this lesson you should:
 
 -   Understand measures of spread and know how to compute them
 
--   Graphical representation and interpretation of one numerical variables in R
+-   Graphical representation and interpretation of one numerical variable in R
 
 ## Definition of numerical variable
 
@@ -123,4 +123,23 @@ ggplot(data = diamonds) +
 
 $s_{var} =\sqrt{\frac{(observation\; 1 \; in\; the \; var - \overline{var})^2 + (observation\; 2 \; in\; the \; var - \overline{var})^2 + \dots + (observation\; n \; in\; the \; var - \overline{var})^2}{the \; number \;of \;observations - 1}}$
 
-# 
+# Words to know
+
+- mean
+- median or quartile 2 (Q2)
+- lower quartile (LQ) or quartile 1 (Q1)
+- upper quartile (UQ) or quartile 3 (Q3)
+- interquartile range (IQR)
+
+
+# Your turn
+[Click here](https://stats1010-f22.github.io/website/ae/ae-3.html) or the qr code below to write your first line of code
+
+```{r, eval=TRUE, echo=FALSE}
+library(qrcode)
+qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-3.htm")
+plot(qr)
+```
+
+
+
