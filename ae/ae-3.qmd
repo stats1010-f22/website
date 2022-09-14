@@ -18,4 +18,66 @@ This application exercise is due on 20 Sept at 2:00pm.
 library(tidyverse) # for data analysis and visualisation
 library(here) # to organize files
 library(praise) # for ocassional good vibes!
+library(patchwork) # to print multiple plots in one
 ```
+
+# Dotplot
+
+1.  Look at the coding below and one at a time remove each of the dotsize, alpha, stackdir, and method from the code. What does each of these inputs do? How does each input impact upon the plot?
+
+```{r histogram_price}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+#| 
+ggplot(data = diamonds) + # the data
+  geom_dotplot(mapping = aes(x = price), # plot of price
+               dotsize = 0.005, # make the dots tiny
+               alpha = 0.3, # less opaque
+               stackdir = "center") #
+```
+
+# Dotplot vs boxplot
+
+A boxplot provides summary information for the distribution of a variable. Here are some explanations (using different data) showing the purpose of the box portion of the boxplot.
+
+![](ae-3-images/first_quartile.png)
+
+```{r}
+praise()
+```
+
+![](ae-3-images/second_quartile.png)
+
+![](ae-3-images/third_quartile.png)
+
+2.  Looking at the above plots, count the percentage of yellow dots in each of the dotplots?
+3.  Compare and contrast a dotplot and a boxplot? What are the advantages and disadvantages of each? Think carefully about bimodal data and how which plot you would use to show that aspect of a variable.
+
+# Boxplots
+
+4.  Draw a boxplot of the price data from the diamonds dataset.
+
+    ```{r boxplot_price}
+    #| message: false
+    #| warning: false
+    #| eval: false
+    #| echo: true
+
+
+    ggplot(data = INSERT) + 
+       INSERT(mappping = aes(x = INSERT))
+    ```
+
+## Boxplot descriptions
+
+![](ae-3-images/skewness.png)
+
+5.  Use the information above to describe the boxplot of price.
+
+    ```{r}
+    praise()
+    ```
+
+6.  
