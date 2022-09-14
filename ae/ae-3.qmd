@@ -26,7 +26,7 @@ Plotting is an important skill to learn for effective data analysis.
 
 ## Dotplot
 
-1.  Look at the coding below and one at a time remove each of the dotsize, alpha, stackdir, and method from the code. What does each of these inputs do? How does each input impact upon the plot?
+1.  Look at the coding below and one at a time remove each of the dotsize, alpha,  and stackdir from the code. What does each of these inputs do? How does each input impact upon the plot?
 
 ```{r histogram_price}
 #| message: false
@@ -74,7 +74,7 @@ The right line of the box is the *quartile 3* ($Q_3$) ![](ae-3-images/third_quar
 
 
 ggplot(data = INSERT) + # the data
-  INSERT(mappping = aes(x = INSERT)) # the variable
+  INSERT(aes(x = INSERT)) # the variable
 ```
 
 ### Boxplot descriptions
