@@ -48,6 +48,9 @@ A boxplot provides summary information for the distribution of a variable. Here 
 The left line of the box is the *quartile 1* ($Q_1$) or *Q1* ![](ae-3-images/first_quartile.png)
 
 ```{r}
+#| eval: false
+#| echo: true
+
 praise()
 ```
 
@@ -84,8 +87,11 @@ ggplot(data = INSERT) + # the data
 
 The IQR of a variable is the length of the box in a boxplot. $$ IQR = Q_3 - Q_1$$
 
-    ```{r}
-    praise()
+```{r}
+#| eval: false
+#| echo: true
+
+praise()
     ```
 
 ## Density plot
@@ -118,6 +124,9 @@ ggplot(data = diamonds) + # the data
 7.  What does the above plot suggest about the prices of diamonds for all levels of the variable clarity?
 
 ```{r}
+#| eval: false
+#| echo: true
+
 praise()
 ```
 
@@ -158,6 +167,9 @@ diamonds %>% # the dataset
 9, Now compute the means of the variables $x$, $y$, $z$, $dbl$, $tbl$, and $carat$. (hint: You will need to insert a code chunk for each of these variables.)
 
 ```{r}
+#| eval: false
+#| echo: true
+
 praise()
 ```
 
@@ -218,6 +230,9 @@ diamonds %>% # the data
 12. Find $s_{x}^2$, $s_{y}^2$, and $s_{z}^2$ both directly, and indirectly: having `R` do the computation. (hint: you will need to insert 6 code chunks)
 
 ```{r}
+#| eval: false
+#| echo: true
+
 praise()
 ```
 
