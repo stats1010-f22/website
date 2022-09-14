@@ -452,7 +452,7 @@
     "href": "ae/ae-3.html#dotplot",
     "title": "Exploring numerical data",
     "section": "Dotplot",
-    "text": "Dotplot\n\nLook at the coding below and one at a time remove each of the dotsize, alpha, stackdir, and method from the code. What does each of these inputs do? How does each input impact upon the plot?\n\n\nggplot(data = diamonds) + # the data\n  geom_dotplot(mapping = aes(x = price), # plot of price\n               dotsize = 0.005, # make the dots tiny\n               alpha = 0.3, # less opaque\n               stackdir = \"center\") #"
+    "text": "Dotplot\n\nLook at the coding below and one at a time remove each of the dotsize, alpha, and stackdir from the code. What does each of these inputs do? How does each input impact upon the plot?\n\n\nggplot(data = diamonds) + # the data\n  geom_dotplot(mapping = aes(x = price), # plot of price\n               dotsize = 0.005, # make the dots tiny\n               alpha = 0.3, # less opaque\n               stackdir = \"center\") #"
   },
   {
     "objectID": "ae/ae-3.html#dotplot-vs-boxplot",
@@ -466,7 +466,7 @@
     "href": "ae/ae-3.html#boxplots",
     "title": "Exploring numerical data",
     "section": "Boxplots",
-    "text": "Boxplots\n\nDraw a boxplot of the price data from the diamonds dataset.\n\n\nggplot(data = INSERT) + # the data\n  INSERT(mappping = aes(x = INSERT)) # the variable\n\n\nBoxplot descriptions\n\n\nUse the information above to describe the boxplot of price.\n\n\n\nInterquartile range (IQR)\nThe IQR of a variable is the length of the box in a boxplot. \\[ IQR = Q_3 - Q_1\\]\n\npraise()"
+    "text": "Boxplots\n\nDraw a boxplot of the price data from the diamonds dataset.\n\n\nggplot(data = INSERT) + # the data\n  INSERT(aes(x = INSERT)) # the variable\n\n\nBoxplot descriptions\n\n\nUse the information above to describe the boxplot of price.\n\n\n\nInterquartile range (IQR)\nThe IQR of a variable is the length of the box in a boxplot. \\[ IQR = Q_3 - Q_1\\]\n\npraise()"
   },
   {
     "objectID": "ae/ae-3.html#density-plot",
