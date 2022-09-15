@@ -26,7 +26,7 @@ Attend an talk, panel, or conference related to statistics or data science. If y
 
 ### Category 2: Talk with a statistician/ data scientist
 
-Talk with someone who uses statistics in their daily work. This could include a professor, professional in industry, graduate student, etc.
+Talk with someone who uses statistics in their daily work. This could include a professional in industry, a speaker from the [RLadies directory](https://rladies.org/directory/), or other [local](https://www.meetup.com/dataphilly/) [data science groups.](https://www.meetup.com/find/?location=us--pa--Philadelphia&source=GROUPS&keywords=data&distance=twentyFiveMiles)
 
 ### Category 3: Listen to a podcast / watch video
 
