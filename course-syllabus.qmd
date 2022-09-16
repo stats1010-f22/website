@@ -78,10 +78,6 @@ You are expected to bring a laptop to each class so that you can take part in th
 
 You will be assigned to a team at the beginning of the semester. You are encouraged to sit with your teammates in lecture. All team members are expected to contribute equally to the completion of the labs and project and you will be asked to evaluate your team members throughout the semester. Failure to adequately contribute to an assignment will result in a penalty to your mark relative to the team's overall mark.
 
-## Name tags
-
-Every one of you are important to me. To facilitate interactions, I would like to learn your names. To help with this, please wear name tags in class that include pronouns so that I can call you by your name and begin to connect with each of you.
-
 ## Assessment
 
 Assessment for the course is comprised of five components: application exercises, homework assignments, exams, projects, and teamwork.
@@ -117,7 +113,7 @@ The final course grade will be calculated as follows:
 | Category              | Percentage   |
 |-----------------------|--------------|
 | Application exercises | 7%           |
-| Homework              | 35% (7% x 5) |
+| Homework              | 35% (7 x 5%) |
 | Project               | 15%          |
 | Exam 01               | 10%          |
 | Exam 02               | 10%          |
