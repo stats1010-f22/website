@@ -672,13 +672,6 @@
     "text": "Open your Stat1010 project then go to file and open a quarto document. You can add code chunks by clicking on the green button in the IDE and answer some questions directly in the document, and add further code chunks. Hit render and if there are no errors in your code, the pdf should pop up. You can then upload to either Canvas or Gradescope"
   },
   {
-    "objectID": "course-faq.html#how-do-i-find-the-expected-values-for-a-chi-squared-distribution",
-    "href": "course-faq.html#how-do-i-find-the-expected-values-for-a-chi-squared-distribution",
-    "title": "FAQ",
-    "section": "How do I find the expected values for a Chi-Squared distribution?",
-    "text": "How do I find the expected values for a Chi-Squared distribution?\nInformation about the Chi-Squared test can be found here. We have two hypotheses:\n\\(H_0\\) = the variables are independent, there is no relationship between the two categorical variables.\n\\(H_A\\) = Knowing the value of one variable helps to predict the value of the other variable.\nUnder the null hypothesis, the distribution of one variable is independent to the distribution of the other. This means that the expected count for one cell, can be found using the column total times the row total divided by the total number of observations."
-  },
-  {
     "objectID": "supplemental/slr-derivations.html",
     "href": "supplemental/slr-derivations.html",
     "title": "Deriving the Least-Squares Estimates for Simple Linear Regression",
@@ -791,6 +784,13 @@
     "text": "Variance-covariance matrix of the coefficients\nWe will use two properties to derive the form of the variance-covariance matrix of the coefficients:\n\n\\(E[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T] = \\sigma^2I\\)\n\\(\\hat{\\boldsymbol{\\beta}} = \\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1}\\epsilon\\)\n\nFirst, we will show that \\(E[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T] = \\sigma^2I\\)\n\\[\n\\begin{aligned}\nE[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T] &= E \\begin{bmatrix}\\epsilon_1  & \\epsilon_2 & \\dots & \\epsilon_n \\end{bmatrix}\\begin{bmatrix}\\epsilon_1 \\\\ \\epsilon_2 \\\\ \\vdots \\\\ \\epsilon_n \\end{bmatrix}  \\\\\n& = E \\begin{bmatrix} \\epsilon_1^2  & \\epsilon_1 \\epsilon_2 & \\dots & \\epsilon_1 \\epsilon_n \\\\\n\\epsilon_2 \\epsilon_1 & \\epsilon_2^2 & \\dots & \\epsilon_2 \\epsilon_n \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n\\epsilon_n \\epsilon_1 & \\epsilon_n \\epsilon_2 & \\dots & \\epsilon_n^2\n\\end{bmatrix} \\\\\n& = \\begin{bmatrix} E[\\epsilon_1^2]  & E[\\epsilon_1 \\epsilon_2] & \\dots & E[\\epsilon_1 \\epsilon_n] \\\\\nE[\\epsilon_2 \\epsilon_1] & E[\\epsilon_2^2] & \\dots & E[\\epsilon_2 \\epsilon_n] \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nE[\\epsilon_n \\epsilon_1] & E[\\epsilon_n \\epsilon_2] & \\dots & E[\\epsilon_n^2]\n\\end{bmatrix}\n\\end{aligned}\n\\tag{9}\\]\nRecall, the regression assumption that the errors \\(\\epsilon_i's\\) are Normally distributed with mean 0 and variance \\(\\sigma^2\\). Thus, \\(E(\\epsilon_i^2) = Var(\\epsilon_i) = \\sigma^2\\) for all \\(i\\). Additionally, recall the regression assumption that the errors are uncorrelated, i.e. \\(E(\\epsilon_i \\epsilon_j) = Cov(\\epsilon_i, \\epsilon_j) = 0\\) for all \\(i,j\\). Using these assumptions, we can write Equation 9 as\n\\[\nE[\\mathbf{\\epsilon}\\mathbf{\\epsilon}^T]  = \\begin{bmatrix} \\sigma^2  & 0 & \\dots & 0 \\\\\n0 & \\sigma^2  & \\dots & 0 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n0 & 0 & \\dots & \\sigma^2\n\\end{bmatrix} = \\sigma^2 \\mathbf{I}\n\\tag{10}\\]\nwhere \\(\\mathbf{I}\\) is the \\(n \\times n\\) identity matrix.\nNext, we show that \\(\\hat{\\boldsymbol{\\beta}} = \\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1}\\epsilon\\).\nRecall that the \\(\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\\) and \\(\\mathbf{Y} = \\mathbf{X}\\mathbf{\\beta} + \\mathbf{\\epsilon}\\). Then,\n\\[\n\\begin{aligned}\n\\hat{\\boldsymbol{\\beta}} &= (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y} \\\\\n&= (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T(\\mathbf{X}\\boldsymbol{\\beta} + \\boldsymbol{\\epsilon}) \\\\\n&= \\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T \\mathbf{\\epsilon} \\\\\n\\end{aligned}\n\\tag{11}\\]\nUsing these two properties, we derive the form of the variance-covariance matrix for the coefficients. Note that the covariance matrix is \\(E[(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})^T]\\)\n\\[\n\\begin{aligned}\nE[(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})(\\hat{\\boldsymbol{\\beta}} - \\boldsymbol{\\beta})^T] &= E[(\\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T \\boldsymbol{\\epsilon} - \\boldsymbol{\\beta})(\\boldsymbol{\\beta} + (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T \\boldsymbol{\\epsilon} - \\boldsymbol{\\beta})^T]\\\\\n& = E[(\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T \\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}] \\\\\n& = (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T E[\\boldsymbol{\\epsilon}\\boldsymbol{\\epsilon}^T]\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n& = (\\mathbf{X}^T\\mathbf{X})^{-1} \\mathbf{X}^T (\\sigma^2\\mathbf{I})\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n&= \\sigma^2\\mathbf{I}(\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n& = \\sigma^2\\mathbf{I}(\\mathbf{X}^T\\mathbf{X})^{-1}\\\\\n&  = \\sigma^2(\\mathbf{X}^T\\mathbf{X})^{-1} \\\\\n\\end{aligned}\n\\tag{12}\\]"
   },
   {
+    "objectID": "supplemental/chi_square.html",
+    "href": "supplemental/chi_square.html",
+    "title": "Chi-squared test expected values",
+    "section": "",
+    "text": "Information about the Chi-Squared test can be found here. We have two hypotheses:\n\\(H_0\\) = the variables are independent, there is no relationship between the two categorical variables.\n\\(H_A\\) = Knowing the value of one variable helps to predict the value of the other variable.\nUnder the null hypothesis, the distribution of one variable is independent to the distribution of the other. This means that the expected count for one cell, can be found using the column total times the row total divided by the total number of observations."
+  },
+  {
     "objectID": "supplemental/log-transformations.html",
     "href": "supplemental/log-transformations.html",
     "title": "Log Transformations in Linear Regression",
@@ -851,7 +851,7 @@
     "href": "weeks/week-3.html#perform",
     "title": "Week 3",
     "section": "Perform",
-    "text": "Perform\n⌨️ Diagnostic test - week 3\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n⌨️ Diagnostic test - week 3\n✍️ HW 6 - Statistics Experience\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-2.html",
