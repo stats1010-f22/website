@@ -2,12 +2,12 @@
 title: "FAQ"
 ---
 
-## How do I start an quarto file, add code chunks, render, and upload my assignment?
+## How do I start a quarto file, add code chunks, render, and upload my assignment?
 
 Open your Stat1010 project then go to file and open a quarto document. You can add code chunks by clicking on the green button in the IDE and answer some questions directly in the document, and add further code chunks. Hit render and if there are no errors in your code, the pdf should pop up. You can then upload to either Canvas or Gradescope
 
 ```{=html}
-<iframe width="796" height="480" src="https://www.youtube.com/embed/klKtN19DxbM" title="Stat1010 upload video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="718" height="433" src="https://www.youtube.com/embed/klKtN19DxbM" title="Stat1010 upload video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
 ## How do I find the expected values for a Chi-Squared distribution?
