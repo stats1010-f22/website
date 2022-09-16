@@ -26,6 +26,8 @@ editor: visual
 
 ⌨️ [Diagnostic test - week 3](https://docs.google.com/forms/d/e/1FAIpQLSezWerIcWrIaq-JDXrfAJ08DPKLccSXr9wl4VCQk4ej-Kw77Q/viewform?usp=sf_link)
 
+✍️ [HW 6 - Statistics Experience](/hw/hw-6.html)
+
 <br><br>
 
 ::: {style="font-size: 0.875em;"}
