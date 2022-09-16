@@ -100,10 +100,10 @@ website:
           #   text: "Week 14"
           # - href: weeks/week-15.qmd
           #   text: "Week 15"
-       - section: "Supplemental notes"
-         contents:
-           - href: supplemental/chi_squared.qmd
-             text: Chi squared expected counts
+      - section: "Supplemental notes"
+        contents:
+          - href: supplemental/chi_squared.qmd
+            text: Chi squared expected counts
       #     - href: supplemental/model-diagnostics-matrix.qmd
       #       text: Model diagnostics
       #     - href: supplemental/mlr-matrix.qmd
