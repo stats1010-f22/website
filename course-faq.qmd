@@ -10,3 +10,18 @@ Open your Stat1010 project then go to file and open a quarto document. You can a
 <iframe width="718" height="433" src="https://www.youtube.com/embed/klKtN19DxbM" title="Stat1010 upload video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
+## How do I find the expected values for a Chi-Squared distribution?
+
+Information about the Chi-Squared test can be found [here](https://statsandr.com/blog/chi-square-test-of-independence-by-hand/). We have two hypotheses:
+
+$H_0$ = the variables are independent, there is no relationship between the two categorical variables.
+
+$H_A$ = Knowing the value of one variable helps to predict the value of the other variable.
+
+Under the null hypothesis, the distribution of one variable is independent to the distribution of the other. This means that the expected count for one cell, can be found using the column total times the row total divided by the total number of observations. 
+
+```{=html}
+<iframe width="805" height="480" src="https://www.youtube.com/embed/n3Y7i9N4LQQ" title="Expected count in a Chi-Squared distribution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+
+
