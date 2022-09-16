@@ -62,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="STAT 1010 - Fall 2022 - FAQ">
 <meta property="og:description" content="Open your Stat1010 project then go to file and open a quarto document.">
@@ -237,6 +238,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#how-do-i-start-a-quarto-file-add-code-chunks-render-and-upload-my-assignment" id="toc-how-do-i-start-a-quarto-file-add-code-chunks-render-and-upload-my-assignment" class="nav-link active" data-scroll-target="#how-do-i-start-a-quarto-file-add-code-chunks-render-and-upload-my-assignment">How do I start a quarto file, add code chunks, render, and upload my assignment?</a></li>
+  <li><a href="#how-do-i-find-the-expected-values-for-a-chi-squared-distribution" id="toc-how-do-i-find-the-expected-values-for-a-chi-squared-distribution" class="nav-link" data-scroll-target="#how-do-i-find-the-expected-values-for-a-chi-squared-distribution">How do I find the expected values for a Chi-Squared distribution?</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/course-faq.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -263,6 +265,14 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="how-do-i-start-a-quarto-file-add-code-chunks-render-and-upload-my-assignment">How do I start a quarto file, add code chunks, render, and upload my assignment?</h2>
 <p>Open your Stat1010 project then go to file and open a quarto document. You can add code chunks by clicking on the green button in the IDE and answer some questions directly in the document, and add further code chunks. Hit render and if there are no errors in your code, the pdf should pop up. You can then upload to either Canvas or Gradescope</p>
 <iframe width="718" height="433" src="https://www.youtube.com/embed/klKtN19DxbM" title="Stat1010 upload video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</section>
+<section id="how-do-i-find-the-expected-values-for-a-chi-squared-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-i-find-the-expected-values-for-a-chi-squared-distribution">How do I find the expected values for a Chi-Squared distribution?</h2>
+<p>Information about the Chi-Squared test can be found <a href="https://statsandr.com/blog/chi-square-test-of-independence-by-hand/">here</a>. We have two hypotheses:</p>
+<p><span class="math inline">\(H_0\)</span> = the variables are independent, there is no relationship between the two categorical variables.</p>
+<p><span class="math inline">\(H_A\)</span> = Knowing the value of one variable helps to predict the value of the other variable.</p>
+<p>Under the null hypothesis, the distribution of one variable is independent to the distribution of the other. This means that the expected count for one cell, can be found using the column total times the row total divided by the total number of observations.</p>
+<iframe width="805" height="480" src="https://www.youtube.com/embed/n3Y7i9N4LQQ" title="Expected count in a Chi-Squared distribution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 
 </section>
