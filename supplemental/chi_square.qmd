@@ -1,7 +1,5 @@
 ---
-title: "$\chi^2$ Test"
-execute: 
-  echo: false
+title: "Chi-squared test expected values"
 ---
 
 ## How do I find the expected values for a Chi-Squared distribution?
