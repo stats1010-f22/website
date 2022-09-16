@@ -2,12 +2,26 @@
 title: "FAQ"
 ---
 
-## How do I export my assignment PDF from RStudio to upload to Gradescope?
+## How do I start an quarto file, add code chunks, render, and upload my assignment?
 
-Go to your *Files* tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select *Export*... If you have selected multiple files to export, RStudio will zip them up into a single zip file for you.
-If you've selected just a single file, it will only download that.
-The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).
+Open your Stat1010 project then go to file and open a quarto document. You can add code chunks by clicking on the green button in the IDE and answer some questions directly in the document, and add further code chunks. Hit render and if there are no errors in your code, the pdf should pop up. You can then upload to either Canvas or Gradescope
 
 ```{=html}
-<iframe width="700" height="394" src="https://www.youtube.com/embed/cAHCMpPJx3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="796" height="480" src="https://www.youtube.com/embed/klKtN19DxbM" title="Stat1010 upload video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
+
+## How do I find the expected values for a Chi-Squared distribution?
+
+Information about the Chi-Squared test can be found [here](https://statsandr.com/blog/chi-square-test-of-independence-by-hand/). We have two hypotheses:
+
+$H_0$ = the variables are independent, there is no relationship between the two categorical variables.
+
+$H_A$ = Knowing the value of one variable helps to predict the value of the other variable.
+
+Under the null hypothesis, the distribution of one variable is independent to the distribution of the other. This means that the expected count for one cell, can be found using the column total times the row total divided by the total number of observations. 
+
+```{=html}
+<iframe width="805" height="480" src="https://www.youtube.com/embed/n3Y7i9N4LQQ" title="Expected count in a Chi-Squared distribution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+
+
