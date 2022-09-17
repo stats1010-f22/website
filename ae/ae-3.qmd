@@ -26,7 +26,7 @@ Plotting is an important skill to learn for effective data analysis.
 
 ## Dotplot
 
-1.  Look at the coding below and one at a time remove each of the dotsize, alpha,  and stackdir from the code. What does each of these inputs do? How does each input impact upon the plot?
+1.  Look at the coding below and one at a time remove each of the dotsize, alpha, and stackdir from the code. What does each of these inputs do? How does each input impact upon the plot?
 
 ```{r histogram_price}
 #| message: false
@@ -92,7 +92,7 @@ The IQR of a variable is the length of the box in a boxplot. $$ IQR = Q_3 - Q_1$
 #| echo: true
 
 praise()
-    ```
+```
 
 ## Density plot
 
@@ -189,12 +189,14 @@ diamonds %>% # the data
 
 10. Compare the average values of price for each level of the cut variable. Considering the distributions of price for each level of cut in question 8, is the grouped mean a good measure of center for each level of cut? Why or why not?
 
-### Median 
+### Median
+
 12. How would you find the overall median of price?
 
 ## Measures of spread
 
 ### Variance
+
 R also computes measures of spread.
 
 ```{r var}
@@ -207,7 +209,7 @@ diamonds %>% # the data
   summarise(var = var(price)) # find the variance
 ```
 
-We can also do this directly, by using the definition from class involving finding the mean, subtracting, and squaring.
+Besides the direct method above, we can also do this computationally, by using the definition and finding the mean, subtracting, and squaring, then dividing.
 
 ```{r var_directly}
 #| message: false
@@ -227,7 +229,7 @@ diamonds %>% # the data
 
 11. Run each line of code above and ensure that you understand how this computation was developed. This shows us how to find $s_{price}^2$ directly.
 
-12. Find $s_{x}^2$, $s_{y}^2$, and $s_{z}^2$ both directly, and indirectly: having `R` do the computation. (hint: you will need to insert 6 code chunks)
+12. Find $s_{x}^2$, $s_{y}^2$, and $s_{z}^2$ both directly, and computationally: having `R` do the computation. (hint: you will need to insert 6 code chunks)
 
 ```{r}
 #| eval: false
@@ -250,7 +252,7 @@ praise()
       summarise(sd = sd(price)) # find the sd
 ```
 
-Can you use the direct approach (finding the `mean_sq_deviation`) from above to find the standard deviation of price $s_{price}$? (hint: you will need to use the `sqrt()` operator)
+Can you use the computational approach (finding the `mean_sq_deviation`) from above to find the standard deviation of price $s_{price}$? (hint: you will need to use the `sqrt()` operator)
 
 ### IQR
 
@@ -287,5 +289,3 @@ diamonds %>% # the data
 ```
 
 15. Of all of the measures of spread, which do you think are sensitive to skewed data and outliers? Why?
-
-

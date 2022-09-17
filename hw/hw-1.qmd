@@ -1,42 +1,29 @@
 ---
-title: "HW 1 - In-person voting trends"
-subtitle: "Due Friday, January 28, 5pm on Gradescope"
+title: "HW 1 - Titanic dataset"
+subtitle: "Due Friday, 23 September, 2pm on Gradescope"
 editor: visual
 ---
 
 ## Introduction
 
-In this assignment, you'll use simple linear regression to explore the percent of votes cast in-person in the 2020 U.S. election based on the county's political leanings.
+For this homework assignment we will be exploring the [Titanic dataset](For this homework assignment we will be exploring the Titanic dataset.). You will be
 
 ### Learning goals
 
 In this assignment, you will...
 
--   Fit and interpret simple linear regression models
--   Assess the conditions for simple linear regression.
--   Create and interpret spatial data visualizations using R.
--   Continue developing a workflow for reproducible data analysis.
+-   Download and import data into R
+-   Explore both numeric and categorical variables
+-   Perform a $\chi^2$ test on some variables, and find the expected counts
+-   Find measures of center and measures of spread for numeric variables
 
 ## Getting started
 
 ### Log in to RStudio
 
--   Go to <https://vm-manage.oit.duke.edu/containers> and login with your Duke NetID and Password.
--   Click **STA210** to log into the Docker container. You should now see the RStudio environment.
+Click on your *Stat1010.Rproj*.
 
-### Clone the repo & start new RStudio project
-
--   Go to the course organization at [github.com/sta210-s22](https://github.com/sta210-s22 "Course GitHub organization") organization on GitHub. Click on the repo with the prefix **hw-1**. It contains the starter documents you need to complete the lab.
-
--   Click on the green **CODE** button, select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**). Click on the clipboard icon to copy the repo URL.
-
--   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
-
--   Copy and paste the URL of your assignment repo into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
-
--   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
-
--   Click *hw-1-voting.qmd* to open the template R Markdown file. This is where you will write up your code and narrative for the lab.
+Go to *File* ➛ *New File* ➛ *Quarto Document* and name the document *hw-1* click *create*
 
 ## Packages
 
@@ -47,24 +34,9 @@ The following packages will be used in this assignment:
 #| eval: false
 
 library(tidyverse)
-library(tidymodels)
-library(knitr)
-library(scales)
 ```
 
-## Data: 2020 Election
-
-There are multiple data sets for this assignment. Use the code below to load the data.
-
-```{r}
-#| message: false
-#| eval: false
-
-election_nc <- read_csv("data/nc-election-2020.csv") %>%
-  mutate(fips = as.integer(FIPS))
-county_map_data <-  read_csv("data/nc-county-map-data.csv")
-election_sample <- read_csv("data/us-election-2020-sample.csv")
-```
+## Data: Titanic
 
 The county-level election data in `election_nc` and `election_sample` are from [The Economist GitHub repo](https://github.com/TheEconomist/in-person-voting-covid-19). The data were originally analyzed in the July 2021 article [In-person voting really did accelerate covid-19's spread in America](https://www-economist-com.proxy.lib.duke.edu/graphic-detail/2021/07/10/in-person-voting-really-did-accelerate-covid-19s-spread-in-america). For this analysis, we will focus on the following variables:
 
@@ -192,12 +164,9 @@ Remember -- you must turn in a PDF file to the Gradescope page before the submis
 
 To submit your assignment:
 
--   Go to [http://www.gradescope.com](http://www.gradescope.com/) and click *Log in* in the top right corner.
--   Click *School Credentials* ➡️ *Duke NetID* and log in using your NetID credentials.
--   Click on your *STA 210* course.
--   Click on the assignment, and you'll be prompted to submit it.
--   Mark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be "checked").
--   Select the first page of your PDF submission to be associated with the *"Workflow & formatting"* section.
+-   This video
+
+-   Then submit the pdf following the link on the [course website](https://stats1010-f22.github.io/website/course-links.html).
 
 ## Grading
 
