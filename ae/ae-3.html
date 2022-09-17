@@ -499,7 +499,7 @@ Important
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> <span class="co"># the data</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">var =</span> <span class="fu">var</span>(price)) <span class="co"># find the variance</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We can also do this directly, by using the definition from class involving finding the mean, subtracting, and squaring.</p>
+<p>Besides the direct method above, we can also do this computationally, by using the definition and finding the mean, subtracting, and squaring, then dividing.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> <span class="co"># the data</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
@@ -512,7 +512,7 @@ Important
 </div>
 <ol start="11" type="1">
 <li><p>Run each line of code above and ensure that you understand how this computation was developed. This shows us how to find <span class="math inline">\(s_{price}^2\)</span> directly.</p></li>
-<li><p>Find <span class="math inline">\(s_{x}^2\)</span>, <span class="math inline">\(s_{y}^2\)</span>, and <span class="math inline">\(s_{z}^2\)</span> both directly, and indirectly: having <code>R</code> do the computation. (hint: you will need to insert 6 code chunks)</p></li>
+<li><p>Find <span class="math inline">\(s_{x}^2\)</span>, <span class="math inline">\(s_{y}^2\)</span>, and <span class="math inline">\(s_{z}^2\)</span> both directly, and computationally: having <code>R</code> do the computation. (hint: you will need to insert 6 code chunks)</p></li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -527,7 +527,7 @@ Important
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>    diamonds <span class="sc">%&gt;%</span> <span class="co"># the data</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">summarise</span>(<span class="at">sd =</span> <span class="fu">sd</span>(price)) <span class="co"># find the sd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Can you use the direct approach (finding the <code>mean_sq_deviation</code>) from above to find the standard deviation of price <span class="math inline">\(s_{price}\)</span>? (hint: you will need to use the <code>sqrt()</code> operator)</p>
+<p>Can you use the computational approach (finding the <code>mean_sq_deviation</code>) from above to find the standard deviation of price <span class="math inline">\(s_{price}\)</span>? (hint: you will need to use the <code>sqrt()</code> operator)</p>
 </section>
 <section id="iqr" class="level3">
 <h3 class="anchored" data-anchor-id="iqr">IQR</h3>
