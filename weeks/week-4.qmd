@@ -1,0 +1,35 @@
+---
+title: "Week 3"
+subtitle: "Exploring categorical and numerical data"
+editor: visual
+---
+
+## Prepare
+
+📖 Read [chapter 14](https://rafalab.github.io/dsbook/probability.html) of Introduction to Data Science
+
+📖 Read [chapter 2](https://mathstat.slu.edu/~speegle/_book/probchapter.html#probabilitybasics) of Probability, Statistics, and Data: A fresh approach using R
+
+## Participate
+
+🖥️ [Lecture 5](/slides/lect_05.html)
+
+## Practice
+
+📋 [Exploring probabilities](/ae/ae-5.html)
+
+## Perform
+
+⌨️ [Diagnostic test - week 3](https://docs.google.com/forms/d/e/1FAIpQLSezWerIcWrIaq-JDXrfAJ08DPKLccSXr9wl4VCQk4ej-Kw77Q/viewform?usp=sf_link)
+
+✍️ [HW 1 - Titanic](/hw/hw-1.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

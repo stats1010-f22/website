@@ -1,0 +1,86 @@
+---
+title: "Lec 5 - Introduction to probability"
+subtitle: "STAT 1010 - Fall 2022"
+footer:  "[stat1010-f22.github.io/website](https://stats1010-f22.github.io/website/)"
+format: 
+  revealjs: 
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+editor: visual
+execute:
+  freeze: auto
+---
+
+```{r include = FALSE}
+library(countdown)
+```
+
+# Learning outcomes
+
+By the end of this lesson you should:
+
+-   Understand probability and its axioms
+
+-   Know and understand words like union, intersection, and compliment
+
+-   Be able to calculate basic probabilities
+
+# History of probability
+
+-   Gives you an edge in games of chance
+-   Cardano, Fermat, Pascal, Kolmogorov
+-   casinos rely on probability theory for profits
+
+# Word cloud of probability
+
+Use this [link](PollEv.com/gwynnsturdevant155), or the qr code below
+
+```{r, eval=TRUE, echo=FALSE}
+library(qrcode)
+qr <- qr_code("PollEv.com/gwynnsturdevant155")
+plot(qr)
+```
+
+# Basic terminology
+
+-   An *experiment* is a process that produces an *observation*.
+-   An *outcome* is a possible observation.
+-   The set of all possible outcomes is called the *sample space*.
+-   An *event* is a subset of the sample space.
+-   A *trial* is a single running of an experiment.
+-   Events are *disjoint* or *mutually exclusiv*e if they have no outcomes in common.
+
+# An *experiment*
+
+Rolling a fair, 6-sided and observing the number of pips that appear on top.
+
+1.  What is one *outcome* of a *trial*?
+2.  What is the *sample space*?
+3.  What are possible *events*?
+4.  What are some *disjoint* events?
+5.  What are the *probabilities* of the events above?
+
+```{r}
+countdown(minutes = 5, seconds = 0, style = "position: relative; width: min-content;")
+```
+
+# The 3 axioms of probability
+
+1.  The probability of the *sample space* ($S$) is 1 (ie $P(S) = 1$)
+2.  A probability $p$ is always between $0$ and $1$ (ie $0 \leq p \leq 1$)
+3.  If two events $A$ and $B$ are *disjoint*, then $P(A \cup B) = P(A) + P(B)$
+
+# Set theory
+
+
+
+# Your turn
+
+[Click here](https://stats1010-f22.github.io/website/ae/ae-3.html) or the qr code below to write your first line of code
+
+```{r, eval=TRUE, echo=FALSE}
+library(qrcode)
+qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-3.htm")
+plot(qr)
+```

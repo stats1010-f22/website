@@ -428,7 +428,7 @@ We have been focusing mostly on counts. Proportional data is also interesting to
                position = INSERT) # fill
     ```
 
-20. Now, change the label the `y` axis from `count` by including the coding
+20. Now, change the label of the `y` axis from `count` by including the coding
 
         labs(y = "Proportion of superheroes")
 
