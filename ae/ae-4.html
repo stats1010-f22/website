@@ -20,69 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -123,13 +60,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="STAT 1010 - Fall 2022 - Introduction to probability (AE-4)">
-<meta property="og:description" content="Plotting is an important skill to learn for effective data analysis.">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
 <meta name="twitter:title" content="STAT 1010 - Fall 2022 - Introduction to probability (AE-4)">
-<meta name="twitter:description" content="Plotting is an important skill to learn for effective data analysis.">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -294,39 +228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#load-packages-data" id="toc-load-packages-data" class="nav-link active" data-scroll-target="#load-packages-data">Load packages, data</a></li>
-  <li><a href="#graphical-eda" id="toc-graphical-eda" class="nav-link" data-scroll-target="#graphical-eda">Graphical EDA</a>
-  <ul class="collapse">
-  <li><a href="#dotplot" id="toc-dotplot" class="nav-link" data-scroll-target="#dotplot">Dotplot</a></li>
-  <li><a href="#dotplot-vs-boxplot" id="toc-dotplot-vs-boxplot" class="nav-link" data-scroll-target="#dotplot-vs-boxplot">Dotplot vs boxplot</a></li>
-  <li><a href="#boxplots" id="toc-boxplots" class="nav-link" data-scroll-target="#boxplots">Boxplots</a>
-  <ul class="collapse">
-  <li><a href="#boxplot-descriptions" id="toc-boxplot-descriptions" class="nav-link" data-scroll-target="#boxplot-descriptions">Boxplot descriptions</a></li>
-  <li><a href="#interquartile-range-iqr" id="toc-interquartile-range-iqr" class="nav-link" data-scroll-target="#interquartile-range-iqr">Interquartile range (IQR)</a></li>
-  </ul></li>
-  <li><a href="#density-plot" id="toc-density-plot" class="nav-link" data-scroll-target="#density-plot">Density plot</a></li>
-  </ul></li>
-  <li><a href="#computing-summary-statistics" id="toc-computing-summary-statistics" class="nav-link" data-scroll-target="#computing-summary-statistics">Computing summary statistics</a>
-  <ul class="collapse">
-  <li><a href="#measures-of-center" id="toc-measures-of-center" class="nav-link" data-scroll-target="#measures-of-center">Measures of center</a>
-  <ul class="collapse">
-  <li><a href="#mean" id="toc-mean" class="nav-link" data-scroll-target="#mean">Mean</a></li>
-  <li><a href="#median" id="toc-median" class="nav-link" data-scroll-target="#median">Median</a></li>
-  </ul></li>
-  <li><a href="#measures-of-spread" id="toc-measures-of-spread" class="nav-link" data-scroll-target="#measures-of-spread">Measures of spread</a>
-  <ul class="collapse">
-  <li><a href="#variance" id="toc-variance" class="nav-link" data-scroll-target="#variance">Variance</a></li>
-  <li><a href="#standard-deviation" id="toc-standard-deviation" class="nav-link" data-scroll-target="#standard-deviation">Standard deviation</a></li>
-  <li><a href="#iqr" id="toc-iqr" class="nav-link" data-scroll-target="#iqr">IQR</a></li>
-  <li><a href="#range" id="toc-range" class="nav-link" data-scroll-target="#range">Range</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/ae/ae-4.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -360,207 +262,23 @@ Important
 <p>This application exercise is due on 23 Sept at 2:00pm.</p>
 </div>
 </div>
-<section id="load-packages-data" class="level1">
-<h1>Load packages, data</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## loading libraries</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># for data analysis and visualisation</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here) <span class="co"># to organize files</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(praise) <span class="co"># for ocassional good vibes!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="graphical-eda" class="level1">
-<h1>Graphical EDA</h1>
-<p>Plotting is an important skill to learn for effective data analysis.</p>
-<section id="dotplot" class="level2">
-<h2 class="anchored" data-anchor-id="dotplot">Dotplot</h2>
 <ol type="1">
-<li>Look at the coding below and one at a time remove each of the dotsize, alpha, and stackdir from the code. What does each of these inputs do? How does each input impact upon the plot?</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span> <span class="co"># the data</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_dotplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> price), <span class="co"># plot of price</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">dotsize =</span> <span class="fl">0.005</span>, <span class="co"># make the dots tiny</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="co"># less opaque</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">stackdir =</span> <span class="st">"center"</span>) <span class="co">#</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="dotplot-vs-boxplot" class="level2">
-<h2 class="anchored" data-anchor-id="dotplot-vs-boxplot">Dotplot vs boxplot</h2>
-<p>A boxplot provides summary information for the distribution of a variable. Here are some explanations (using different data) showing the purpose of the box portion of the boxplot.</p>
-<p>The left line of the box is the <em>quartile 1</em> (<span class="math inline">\(Q_1\)</span>) or <em>Q1</em> <img src="ae-3-images/first_quartile.png" class="img-fluid"></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The middle line of the box is the <em>median</em> (<span class="math inline">\(Q_2\)</span>) <img src="ae-3-images/second_quartile.png" class="img-fluid"></p>
-<p>The right line of the box is the <em>quartile 3</em> (<span class="math inline">\(Q_3\)</span>) <img src="ae-3-images/third_quartile.png" class="img-fluid"></p>
-<ol start="2" type="1">
-<li><p>Looking at the above plots, count the percentage of yellow dots in each of the dotplots. Is there anything interesting about these values?</p></li>
-<li><p>Compare and contrast a dotplot and a boxplot? What are the advantages and disadvantages of each? Think carefully about <a href="https://openintro.shinyapps.io/ims-02-explore-02/#section-density-plots-vs.-boxplots">bimodal data</a> and which plot you would use to show that aspect of a variable. Also think about outliers.</p></li>
-</ol>
-</section>
-<section id="boxplots" class="level2">
-<h2 class="anchored" data-anchor-id="boxplots">Boxplots</h2>
-<ol start="4" type="1">
-<li>Draw a boxplot of the price data from the diamonds dataset.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> INSERT) <span class="sc">+</span> <span class="co"># the data</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">INSERT</span>(<span class="fu">aes</span>(<span class="at">x =</span> INSERT)) <span class="co"># the variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="boxplot-descriptions" class="level3">
-<h3 class="anchored" data-anchor-id="boxplot-descriptions">Boxplot descriptions</h3>
-<p><img src="ae-3-images/skewness.png" class="img-fluid"></p>
-<ol start="5" type="1">
-<li>Use the information above to describe the boxplot of price.</li>
-</ol>
-</section>
-<section id="interquartile-range-iqr" class="level3">
-<h3 class="anchored" data-anchor-id="interquartile-range-iqr">Interquartile range (IQR)</h3>
-<p>The IQR of a variable is the length of the box in a boxplot. <span class="math display">\[ IQR = Q_3 - Q_1\]</span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="density-plot" class="level2">
-<h2 class="anchored" data-anchor-id="density-plot">Density plot</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span> <span class="co"># the data</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">geom_density</span>(<span class="fu">aes</span>(<span class="at">x =</span> price), <span class="co"># plot of price</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">bw =</span> <span class="dv">1</span>) <span class="co"># plot of price</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="6" type="1">
-<li>What does the “bw” input in the geom_density function do? What is an appropriate value of “bw” for this data?</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span> <span class="co"># the data</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="fu">aes</span>(<span class="at">x =</span> price), <span class="co"># plot of price</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">bw =</span> INSERT) <span class="sc">+</span> <span class="co"># binwidth</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>clarity) <span class="co"># faceting</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="7" type="1">
-<li>What does the above plot suggest about the prices of diamonds for all levels of the variable clarity?</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="8" type="1">
-<li>Draw a density plot for each value of cut. Describe the distribution of diamond price for each value of cut.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span> <span class="co"># the data</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="fu">aes</span>(<span class="at">x =</span> price), <span class="co"># plot of price</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">bw =</span> INSERT) <span class="sc">+</span> <span class="co"># binwidth</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>INSERT) <span class="co"># faceting</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="computing-summary-statistics" class="level1">
-<h1>Computing summary statistics</h1>
-<p>It is not sufficient to only draw plots, we must also know typical values (measures of center) of the data and how spread out these values (measures of spread).</p>
-<section id="measures-of-center" class="level2">
-<h2 class="anchored" data-anchor-id="measures-of-center">Measures of center</h2>
-<p>We use the <code>summarise()</code> function when we expect the result to be one number.</p>
-<section id="mean" class="level3">
-<h3 class="anchored" data-anchor-id="mean">Mean</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> <span class="co"># the dataset</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>(price)) <span class="co"># function that is used to compute mean of price</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>9, Now compute the means of the variables <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(z\)</span>, and <span class="math inline">\(carat\)</span>. (hint: You will need to insert a code chunk for each of these variables.)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Last class we learned about the <code>group_by()</code> and used it to compute conditional probabilities. Today we will use it to compare the means of different subgroups.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> <span class="co"># the data</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(cut) <span class="sc">%&gt;%</span> <span class="co"># for each value of cut</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>(price), <span class="co"># find the mean</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">median =</span> <span class="fu">median</span>(price)) <span class="co"># and the median</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="10" type="1">
-<li>Compare the average values of price for each level of the cut variable. Considering the distributions of price for each level of cut in question 8, is the grouped mean a good measure of center for each level of cut? Why or why not?</li>
-</ol>
-</section>
-<section id="median" class="level3">
-<h3 class="anchored" data-anchor-id="median">Median</h3>
-<ol start="12" type="1">
-<li>How would you find the overall median of price?</li>
-</ol>
-</section>
-</section>
-<section id="measures-of-spread" class="level2">
-<h2 class="anchored" data-anchor-id="measures-of-spread">Measures of spread</h2>
-<section id="variance" class="level3">
-<h3 class="anchored" data-anchor-id="variance">Variance</h3>
-<p>R also computes measures of spread.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> <span class="co"># the data</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">var =</span> <span class="fu">var</span>(price)) <span class="co"># find the variance</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Besides the direct method above, we can also do this computationally, by using the definition and finding the mean, subtracting, and squaring, then dividing.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> <span class="co"># the data</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_price =</span> <span class="fu">mean</span>(price), <span class="co"># mean of price</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">deviation =</span> price <span class="sc">-</span> mean_price, <span class="co"># subtraction from notes</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">deviation_sq =</span> deviation<span class="sc">^</span><span class="dv">2</span>) <span class="sc">%&gt;%</span> <span class="co"># then square it</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_sq_deviation =</span> <span class="fu">sum</span>(deviation_sq)<span class="sc">/</span> <span class="co"># sum them</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>      (<span class="fu">nrow</span>(diamonds) <span class="sc">-</span> <span class="dv">1</span>)) <span class="co"># divide by n - 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="11" type="1">
-<li><p>Run each line of code above and ensure that you understand how this computation was developed. This shows us how to find <span class="math inline">\(s_{price}^2\)</span> directly.</p></li>
-<li><p>Find <span class="math inline">\(s_{x}^2\)</span>, <span class="math inline">\(s_{y}^2\)</span>, and <span class="math inline">\(s_{z}^2\)</span> both directly, and computationally: having <code>R</code> do the computation. (hint: you will need to insert 6 code chunks)</p></li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="standard-deviation" class="level3">
-<h3 class="anchored" data-anchor-id="standard-deviation">Standard deviation</h3>
-<ol start="13" type="1">
-<li><code>R</code> also computes the standard deviation <span class="math inline">\(s\)</span> directly:</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>    diamonds <span class="sc">%&gt;%</span> <span class="co"># the data</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">summarise</span>(<span class="at">sd =</span> <span class="fu">sd</span>(price)) <span class="co"># find the sd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Can you use the computational approach (finding the <code>mean_sq_deviation</code>) from above to find the standard deviation of price <span class="math inline">\(s_{price}\)</span>? (hint: you will need to use the <code>sqrt()</code> operator)</p>
-</section>
-<section id="iqr" class="level3">
-<h3 class="anchored" data-anchor-id="iqr">IQR</h3>
-<ol start="14" type="1">
-<li>The <span class="math inline">\(IQR\)</span> can also be computed directly or indirectly:</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> <span class="co"># the data</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">q1 =</span> <span class="fu">quantile</span>(price, <span class="fl">0.25</span>), <span class="co"># find Q1</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">q3 =</span> <span class="fu">quantile</span>(price, <span class="fl">0.75</span>), <span class="co"># find Q3</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">iqr =</span> q3 <span class="sc">-</span> q1 <span class="co"># now the IQR</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="range" class="level3">
-<h3 class="anchored" data-anchor-id="range">Range</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> <span class="co"># the data</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">min =</span> <span class="fu">min</span>(price), <span class="co"># find min</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">max =</span> <span class="fu">max</span>(price), <span class="co"># find max</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">range =</span> max <span class="sc">-</span> min <span class="co"># and range</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="15" type="1">
-<li>Of all of the measures of spread, which do you think are sensitive to skewed data and outliers? Why?</li>
+<li><p>One ball will be drawn at random from a box containing: 3 cyan balls, 5 magenta balls, and 7 yellow balls. What is the probability that the ball will be cyan?</p></li>
+<li><p>What is the probability that the ball will not be cyan?</p></li>
+<li><p>Instead of taking just one draw, consider taking two draws. You take the second draw without returning the first draw to the box. We call this sampling without replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?</p></li>
+<li><p>Now repeat the experiment, but this time, after taking the first draw and recording the color, return it to the box and shake the box. We call this sampling with replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?</p></li>
+<li><p>Two events A and B are independent if Pr(A and B)=Pr(A)P(B). Under which situation are the draws independent?</p>
+<ol type="a">
+<li>You don’t replace the draw.</li>
+<li>You replace the draw.</li>
+<li>Neither</li>
+<li>Both</li>
+</ol></li>
+<li><p>Say you’ve drawn 5 balls from the box, with replacement, and all have been yellow. What is the probability that the next one is yellow?</p></li>
+<li><p>If you roll a 6-sided die six times, what is the probability of not seeing a 6?</p></li>
 </ol>
 
 
-</section>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
