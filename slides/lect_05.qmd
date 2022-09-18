@@ -85,7 +85,7 @@ countdown(minutes = 5, seconds = 0, style = "position: relative; width: min-cont
 
 #  {background-image="lect_05-images/disjoint_3.png" background-size="contain"}
 
-#  {background-image="lect_05-images/A_union_B.png" background-size="contain"}
+#  {background-image="lect_05-images/A_union_b.png" background-size="contain"}
 
 #  {background-image="lect_05-images/B_subset_A.png" background-size="contain"}
 
