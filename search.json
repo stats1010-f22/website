@@ -490,6 +490,55 @@
     "text": "Measures of spread\n\nVariance\nR also computes measures of spread.\n\ndiamonds %>% # the data\n  summarise(var = var(price)) # find the variance\n\nBesides the direct method above, we can also do this computationally, by using the definition and finding the mean, subtracting, and squaring, then dividing.\n\ndiamonds %>% # the data\n  mutate(\n    mean_price = mean(price), # mean of price\n    deviation = price - mean_price, # subtraction from notes\n    deviation_sq = deviation^2) %>% # then square it\n  summarise(\n    mean_sq_deviation = sum(deviation_sq)/ # sum them\n      (nrow(diamonds) - 1)) # divide by n - 1\n\n\nRun each line of code above and ensure that you understand how this computation was developed. This shows us how to find \\(s_{price}^2\\) directly.\nFind \\(s_{x}^2\\), \\(s_{y}^2\\), and \\(s_{z}^2\\) both directly, and computationally: having R do the computation. (hint: you will need to insert 6 code chunks)\n\n\npraise()\n\n\n\nStandard deviation\n\nR also computes the standard deviation \\(s\\) directly:\n\n\n    diamonds %>% # the data\n      summarise(sd = sd(price)) # find the sd\n\nCan you use the computational approach (finding the mean_sq_deviation) from above to find the standard deviation of price \\(s_{price}\\)? (hint: you will need to use the sqrt() operator)\n\n\nIQR\n\nThe \\(IQR\\) can also be computed directly or indirectly:\n\n\ndiamonds %>% # the data\n  summarise(\n    q1 = quantile(price, 0.25), # find Q1\n    q3 = quantile(price, 0.75), # find Q3\n    iqr = q3 - q1 # now the IQR\n  )\n\n\n\nRange\n\ndiamonds %>% # the data\n  summarise(\n    min = min(price), # find min\n    max = max(price), # find max\n    range = max - min # and range\n  )\n\n\nOf all of the measures of spread, which do you think are sensitive to skewed data and outliers? Why?"
   },
   {
+    "objectID": "ae/ae-4.html",
+    "href": "ae/ae-4.html",
+    "title": "Introduction to probability (AE-4)",
+    "section": "",
+    "text": "Important\n\n\n\nThis application exercise is due on 23 Sept at 2:00pm."
+  },
+  {
+    "objectID": "ae/ae-4.html#dotplot",
+    "href": "ae/ae-4.html#dotplot",
+    "title": "Introduction to probability (AE-4)",
+    "section": "Dotplot",
+    "text": "Dotplot\n\nLook at the coding below and one at a time remove each of the dotsize, alpha, and stackdir from the code. What does each of these inputs do? How does each input impact upon the plot?\n\n\nggplot(data = diamonds) + # the data\n  geom_dotplot(mapping = aes(x = price), # plot of price\n               dotsize = 0.005, # make the dots tiny\n               alpha = 0.3, # less opaque\n               stackdir = \"center\") #"
+  },
+  {
+    "objectID": "ae/ae-4.html#dotplot-vs-boxplot",
+    "href": "ae/ae-4.html#dotplot-vs-boxplot",
+    "title": "Introduction to probability (AE-4)",
+    "section": "Dotplot vs boxplot",
+    "text": "Dotplot vs boxplot\nA boxplot provides summary information for the distribution of a variable. Here are some explanations (using different data) showing the purpose of the box portion of the boxplot.\nThe left line of the box is the quartile 1 (\\(Q_1\\)) or Q1 \n\npraise()\n\nThe middle line of the box is the median (\\(Q_2\\)) \nThe right line of the box is the quartile 3 (\\(Q_3\\)) \n\nLooking at the above plots, count the percentage of yellow dots in each of the dotplots. Is there anything interesting about these values?\nCompare and contrast a dotplot and a boxplot? What are the advantages and disadvantages of each? Think carefully about bimodal data and which plot you would use to show that aspect of a variable. Also think about outliers."
+  },
+  {
+    "objectID": "ae/ae-4.html#boxplots",
+    "href": "ae/ae-4.html#boxplots",
+    "title": "Introduction to probability (AE-4)",
+    "section": "Boxplots",
+    "text": "Boxplots\n\nDraw a boxplot of the price data from the diamonds dataset.\n\n\nggplot(data = INSERT) + # the data\n  INSERT(aes(x = INSERT)) # the variable\n\n\nBoxplot descriptions\n\n\nUse the information above to describe the boxplot of price.\n\n\n\nInterquartile range (IQR)\nThe IQR of a variable is the length of the box in a boxplot. \\[ IQR = Q_3 - Q_1\\]\n\npraise()"
+  },
+  {
+    "objectID": "ae/ae-4.html#density-plot",
+    "href": "ae/ae-4.html#density-plot",
+    "title": "Introduction to probability (AE-4)",
+    "section": "Density plot",
+    "text": "Density plot\n\n ggplot(data = diamonds) + # the data\n       geom_density(aes(x = price), # plot of price\n                    bw = 1) # plot of price\n\n\nWhat does the “bw” input in the geom_density function do? What is an appropriate value of “bw” for this data?\n\n\nggplot(data = diamonds) + # the data\n  geom_density(aes(x = price), # plot of price\n               bw = INSERT) + # binwidth\n  facet_wrap(~clarity) # faceting\n\n\nWhat does the above plot suggest about the prices of diamonds for all levels of the variable clarity?\n\n\npraise()\n\n\nDraw a density plot for each value of cut. Describe the distribution of diamond price for each value of cut.\n\n\nggplot(data = diamonds) + # the data\n  geom_density(aes(x = price), # plot of price\n               bw = INSERT) + # binwidth\n  facet_wrap(~INSERT) # faceting"
+  },
+  {
+    "objectID": "ae/ae-4.html#measures-of-center",
+    "href": "ae/ae-4.html#measures-of-center",
+    "title": "Introduction to probability (AE-4)",
+    "section": "Measures of center",
+    "text": "Measures of center\nWe use the summarise() function when we expect the result to be one number.\n\nMean\n\ndiamonds %>% # the dataset\n  summarise(mean = mean(price)) # function that is used to compute mean of price\n\n9, Now compute the means of the variables \\(x\\), \\(y\\), \\(z\\), and \\(carat\\). (hint: You will need to insert a code chunk for each of these variables.)\n\npraise()\n\nLast class we learned about the group_by() and used it to compute conditional probabilities. Today we will use it to compare the means of different subgroups.\n\ndiamonds %>% # the data\n  group_by(cut) %>% # for each value of cut\n  summarise(mean = mean(price), # find the mean\n            median = median(price)) # and the median\n\n\nCompare the average values of price for each level of the cut variable. Considering the distributions of price for each level of cut in question 8, is the grouped mean a good measure of center for each level of cut? Why or why not?\n\n\n\nMedian\n\nHow would you find the overall median of price?"
+  },
+  {
+    "objectID": "ae/ae-4.html#measures-of-spread",
+    "href": "ae/ae-4.html#measures-of-spread",
+    "title": "Introduction to probability (AE-4)",
+    "section": "Measures of spread",
+    "text": "Measures of spread\n\nVariance\nR also computes measures of spread.\n\ndiamonds %>% # the data\n  summarise(var = var(price)) # find the variance\n\nBesides the direct method above, we can also do this computationally, by using the definition and finding the mean, subtracting, and squaring, then dividing.\n\ndiamonds %>% # the data\n  mutate(\n    mean_price = mean(price), # mean of price\n    deviation = price - mean_price, # subtraction from notes\n    deviation_sq = deviation^2) %>% # then square it\n  summarise(\n    mean_sq_deviation = sum(deviation_sq)/ # sum them\n      (nrow(diamonds) - 1)) # divide by n - 1\n\n\nRun each line of code above and ensure that you understand how this computation was developed. This shows us how to find \\(s_{price}^2\\) directly.\nFind \\(s_{x}^2\\), \\(s_{y}^2\\), and \\(s_{z}^2\\) both directly, and computationally: having R do the computation. (hint: you will need to insert 6 code chunks)\n\n\npraise()\n\n\n\nStandard deviation\n\nR also computes the standard deviation \\(s\\) directly:\n\n\n    diamonds %>% # the data\n      summarise(sd = sd(price)) # find the sd\n\nCan you use the computational approach (finding the mean_sq_deviation) from above to find the standard deviation of price \\(s_{price}\\)? (hint: you will need to use the sqrt() operator)\n\n\nIQR\n\nThe \\(IQR\\) can also be computed directly or indirectly:\n\n\ndiamonds %>% # the data\n  summarise(\n    q1 = quantile(price, 0.25), # find Q1\n    q3 = quantile(price, 0.75), # find Q3\n    iqr = q3 - q1 # now the IQR\n  )\n\n\n\nRange\n\ndiamonds %>% # the data\n  summarise(\n    min = min(price), # find min\n    max = max(price), # find max\n    range = max - min # and range\n  )\n\n\nOf all of the measures of spread, which do you think are sensitive to skewed data and outliers? Why?"
+  },
+  {
     "objectID": "ae/ae-2-exploring-categorical-vars.html",
     "href": "ae/ae-2-exploring-categorical-vars.html",
     "title": "Exploring categorical data AE-2",
