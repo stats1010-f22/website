@@ -57,6 +57,7 @@ generate questions that will help inform subsequent analysis.
 $\overline{var} =\frac{the\; sum\; of\; all\; the\; observations\; in\; the \; var}{the \; number \;of \;observations}$
 
 # Mean vs median
+
 ```{r}
 #| echo: false
 #| eval: true
@@ -68,11 +69,12 @@ ggplot(data = diamonds) +
   geom_vline(aes(xintercept = median(price)), color = "green")
 
 ```
+
 # Mean vs median
 
 Mean - sensitive to outliers and skewed distributions
 
-Median - more stable estimate 
+Median - more stable estimate
 
 Mode - most common value
 
@@ -84,15 +86,18 @@ Mode - most common value
 
     -   Interquartile range
 
-- variance $s^2$
-- standard deviation $s$
-- range
+-   variance $s^2$
+
+-   standard deviation $s$
+
+-   range
 
 # Variance
 
 $s_{var}^2 =\frac{(observation\; 1 \; in\; the \; var - \overline{var})^2 + (observation\; 2 \; in\; the \; var - \overline{var})^2 + \dots + (observation\; n \; in\; the \; var - \overline{var})^2}{the \; number \;of \;observations - 1}$
 
 # Graphically
+
 ```{r}
 #| echo: false
 #| eval: true
@@ -126,21 +131,20 @@ ggplot(data = diamonds) +
             colour = "lightblue", fill = "lightblue", alpha = 0.5)
 ```
 
-
 # Standard deviation
 
 $s_{var} =\sqrt{\frac{(observation\; 1 \; in\; the \; var - \overline{var})^2 + (observation\; 2 \; in\; the \; var - \overline{var})^2 + \dots + (observation\; n \; in\; the \; var - \overline{var})^2}{the \; number \;of \;observations - 1}}$
 
 # Words to know
 
-- mean
-- median or quartile 2 (Q2)
-- lower quartile (LQ) or quartile 1 (Q1)
-- upper quartile (UQ) or quartile 3 (Q3)
-- interquartile range (IQR)
-
+-   mean
+-   median or quartile 2 (Q2)
+-   lower quartile (LQ) or quartile 1 (Q1)
+-   upper quartile (UQ) or quartile 3 (Q3)
+-   interquartile range (IQR)
 
 # Your turn
+
 [Click here](https://stats1010-f22.github.io/website/ae/ae-3.html) or the qr code below to write your first line of code
 
 ```{r, eval=TRUE, echo=FALSE}
@@ -148,6 +152,3 @@ library(qrcode)
 qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-3.htm")
 plot(qr)
 ```
-
-
-

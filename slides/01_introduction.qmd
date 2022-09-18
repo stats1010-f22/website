@@ -24,7 +24,7 @@ By the end of this lesson, you should:
 
 -   Drawn your first ggplot in R
 
-#  {background-image="lec_1_images/witten_CS.png" background-size="cover"}
+#  {background-image="lec_1_images/witten_CS.png" background-size="contain"}
 
 # Download R
 
