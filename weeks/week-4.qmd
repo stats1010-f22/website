@@ -16,7 +16,7 @@ editor: visual
 
 ## Practice
 
-📋 [Exploring probabilities](/ae/ae-5.html)
+📋 [Exploring probabilities](/ae/ae-4.html)
 
 ## Perform
 
