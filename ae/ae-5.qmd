@@ -1,0 +1,11 @@
+---
+title: "More probability rules (AE-5)"
+output: 
+   html_document
+---
+
+::: callout-important
+This application exercise is due on 27 Sept at 2:00pm.
+:::
+
+Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday\'s scientists. In short, computers give you scientific superpowers! But if you wish to use them, you\'ll need to pick up some programming skills. Steve Job said that "[compu](https://medium.learningbyshipping.com/bicycle-121262546097)[ters are bicycles for our minds"](https://www.youtube.com/watch?v=L40B08nWoMk) because of the efficiency rating of humans on bicycles.

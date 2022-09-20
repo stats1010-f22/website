@@ -149,6 +149,6 @@ $s_{var} =\sqrt{\frac{(observation\; 1 \; in\; the \; var - \overline{var})^2 + 
 
 ```{r, eval=TRUE, echo=FALSE}
 library(qrcode)
-qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-3.htm")
+qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-3.html")
 plot(qr)
 ```

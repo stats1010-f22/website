@@ -1,0 +1,138 @@
+---
+title: "Lec 5 - More probability rules"
+subtitle: "STAT 1010 - Fall 2022"
+footer:  "[stat1010-f22.github.io/website](https://stats1010-f22.github.io/website/)"
+format: 
+  revealjs: 
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+editor: visual
+execute:
+  freeze: auto
+---
+
+```{r include = FALSE}
+library(countdown)
+```
+
+# Learning outcomes
+
+By the end of this lesson you should:
+
+-   Know and understand words like compliment, independent, and the Law of Large Numbers
+
+-   Understand Boole's inequality
+
+-   Understand the multiplication and addition rules
+
+#  {background-image="lect_06-images/one_event.png" background-size="contain"}
+
+# Law of large numbers ($\infty$ in practice)
+
+# Compliment of $A$
+
+$S - A$
+
+```{r}
+flips <- sample(c("heads", "tails"), size = 500, replace = TRUE)
+plot(cumsum(flips == "heads") / (1:length(flips)), 
+     type = "l", ylim = c(0,1),  
+     main = "Coin Flips", 
+     xlab = "Number of flips", ylab = "Proportion of heads")
+abline(h = 0.5, col = "red")
+```
+
+#  {background-image="lect_06-images/blue_zones_venn_diagram.png" background-size="contain"}
+
+# Addition rule
+
+$Pr(A \cup B)=Pr(A)+Pr(B)−Pr(A \cap B)$
+
+# Boole's inequality
+
+$Pr(A)+Pr(B) \leq Pr(A \cup B)$
+
+# Independent events
+
+Events are said to be independent if the outcome of one event does not impact the probability of another.
+
+Which of these events is independent?
+
+\- Removing balls from urns *with replacement*
+
+\- Removing balls from urns *without replacement*
+
+\- Flipping a coin ten times
+
+\- Riding in an uber and getting a free meal
+
+\- Going into a store and purchasing something from that store
+
+\- Suitability of one two employees for a job
+
+\- Drawing 2 kings from a deck of cards in a row *without replacement*
+
+# 3 mins
+
+```{r}
+countdown(minutes = 3, seconds = 0, style = "position: relative; width: min-content;")
+```
+
+# Conditional probability
+
+When events are not independent conditional probabilities are useful.
+
+We use the notation: $$Pr(Card\: 2\: is\: a\: king∣Card\: 1\: is\: a\: king)$$ for this. We use the ∣ as shorthand for "given that" or "conditional on".
+
+# Multiplication rule
+
+$$Pr(A \cap B) = Pr(A)Pr(B∣A)$$
+
+when $A$ and $B$ are independent, $Pr(B|A)$ = ?
+
+::: incremental
+-   $Pr(B|A) = Pr(B)$
+
+-   $Pr(A \cap B) = Pr(A)Pr(B)$
+:::
+
+# Tree diagrams
+
+```{r engine = 'tikz'}
+\begin{tikzpicture}[line cap=round,line join=round,x=0.6cm,y=0.5cm]
+\coordinate (O) at (2,-1);
+\begin{scope}[every node/.style={circle,draw=black}]
+ \node (A) at (9,2) {$V$};
+ \node (B) at (9,-4) {$\overline{V}$};
+ \node (C) at (16,4) {$S$};
+ \node (D) at (16,0) {$\overline{S}$};
+ \node (E) at (16,-2) {$S$};
+ \node (F) at (16,-6) {$\overline{S}$}; 
+\end{scope}
+
+\draw (O) -- (A) -- (C)
+             (A) -- (D)
+      (O) -- (B) -- (E)
+             (B) -- (F);
+
+\begin{scope}[every node/.style={font=\scriptsize}]
+\node at (5,1.5) {$P(V)=0.4$};
+\node at (5,-3.5) {$P(\overline{V})=0.6$};
+\node at (12,3.8) {$P(S|V)=0.6$};
+\node at (12,0) {$P(\overline{S}|V)=0.4$};
+\node at (12,-2) {$P(S|\overline{V})=0.3$};
+\node at (12,-6) {$P(\overline{S}|\overline{V})=0.7$};
+\end{scope}
+\end{tikzpicture}
+```
+
+# Your turn
+
+[Click here](https://stats1010-f22.github.io/website/ae/ae-5.html) or the qr code below
+
+```{r, eval=TRUE, echo=FALSE}
+library(qrcode)
+qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-5.html")
+plot(qr)
+```

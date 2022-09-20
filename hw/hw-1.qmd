@@ -33,7 +33,8 @@ The following packages will be used in this assignment:
 #| message: false
 #| eval: false
 
-library(tidyverse)
+library(tidyverse) # for data manipulation and data visualization
+library(here) # to organize files
 ```
 
 ## Data: Titanic

@@ -73,6 +73,10 @@ countdown(minutes = 5, seconds = 0, style = "position: relative; width: min-cont
 2.  A probability $p$ is always between $0$ and $1$ (ie $0 \leq p \leq 1$)
 3.  If two events $A$ and $B$ are *disjoint*, then $P(A \cup B) = P(A) + P(B)$
 
+#  {background-image="lect_05-images/blue_zones_venn_diagram.png" background-size="contain"}
+
+#  {background-image="lect_05-images/zombie_venn_diagram.png" background-size="contain"}
+
 #  {background-image="lect_05-images/one_event.png" background-size="contain"}
 
 #  {background-image="lect_05-images/B_subset_A.png" background-size="contain"}
@@ -103,6 +107,6 @@ countdown(minutes = 5, seconds = 0, style = "position: relative; width: min-cont
 
 ```{r, eval=TRUE, echo=FALSE}
 library(qrcode)
-qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-4.htm")
+qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-4.html")
 plot(qr)
 ```

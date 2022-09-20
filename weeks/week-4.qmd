@@ -1,6 +1,6 @@
 ---
-title: "Week 3"
-subtitle: "Exploring categorical and numerical data"
+title: "Week 4"
+subtitle: "Introduction to probability"
 editor: visual
 ---
 
@@ -14,9 +14,13 @@ editor: visual
 
 🖥️ [Lecture 5](/slides/lect_05.html)
 
+🖥️ [Lecture 6](/slides/lect_06.html)
+
 ## Practice
 
 📋 [Exploring probabilities](/ae/ae-4.html)
+
+📋 [More probability rules](/ae/ae-5.html)
 
 ## Perform
 
