@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 - Fall 2022 - HW 1 - Titanic dataset</title>
+<title>STAT 1010 - Fall 2022 - More probability rules (AE-5)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,11 +125,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - HW 1 - Titanic dataset">
-<meta property="og:description" content="Due Friday, 23 September, 2pm on Gradescope">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - More probability rules (AE-5)">
+<meta property="og:description" content="Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday’s scientists. In short, computers give you superpowers!">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - HW 1 - Titanic dataset">
-<meta name="twitter:description" content="Due Friday, 23 September, 2pm on Gradescope">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - More probability rules (AE-5)">
+<meta name="twitter:description" content="Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday’s scientists. In short, computers give you superpowers!">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -140,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">HW 1 - Titanic dataset</h1>
+      <h1 class="quarto-secondary-nav-title">More probability rules (AE-5)</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -299,32 +299,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning goals</a></li>
-  </ul></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a>
-  <ul class="collapse">
-  <li><a href="#log-in-to-rstudio" id="toc-log-in-to-rstudio" class="nav-link" data-scroll-target="#log-in-to-rstudio">Log in to RStudio</a></li>
-  </ul></li>
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#data-titanic" id="toc-data-titanic" class="nav-link" data-scroll-target="#data-titanic">Data: Titanic</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/hw/hw-1.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">HW 1 - Titanic dataset</h1>
-<p class="subtitle lead">Due Friday, 23 September, 2pm on Gradescope</p>
+<h1 class="title d-none d-lg-block">More probability rules (AE-5)</h1>
 </div>
 
 
@@ -338,186 +320,136 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>For this homework assignment we will be exploring the <a href="https://github.com/stats1010-f22/website/blob/main/hw/data/titanic.csv">Titanic dataset</a>. You will be</p>
-<section id="learning-goals" class="level3">
-<h3 class="anchored" data-anchor-id="learning-goals">Learning goals</h3>
-<p>In this assignment, you will…</p>
-<ul>
-<li>Download and import data into R</li>
-<li>Explore categorical variables</li>
-<li>Compute the expected counts of a <span class="math inline">\(\chi^2\)</span> distribution and</li>
-<li>Perform a <span class="math inline">\(\chi^2\)</span> test on some variables</li>
-</ul>
-</section>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<section id="log-in-to-rstudio" class="level3">
-<h3 class="anchored" data-anchor-id="log-in-to-rstudio">Log in to RStudio</h3>
-<p>Click on your <em>Stat1010.Rproj</em>.</p>
-<p>Go to <em>File</em> ➛ <em>New File</em> ➛ <em>Quarto Document</em> and name the document <em>hw-1</em> click <em>create</em></p>
-</section>
-</section>
-<section id="packages" class="level2">
-<h2 class="anchored" data-anchor-id="packages">Packages</h2>
-<p>The following packages will be used in this assignment:</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This application exercise is due on 27 Sept at 2:00pm.</p>
+</div>
+</div>
+<p>Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday’s scientists. In short, computers give you superpowers! But if you wish to use them, you’ll need to pick up some programming skills. Steve Job said that “<a href="https://medium.learningbyshipping.com/bicycle-121262546097">computers are bicycles for our minds”</a> because the efficiency rating of humans on bicycles is so incredible, and computers give us similar powers.</p>
+<p>One reason computers are so incredible is that they allow us to simulate a multitude of events. Today we will simulate the probability that two of you in this section of Stat1010 have the same birthdays.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># for data manipulation and data visualization</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here) <span class="co"># to organize files</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># for data manipulation</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vctrs) <span class="co"># to find the length of a tibble</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="data-titanic" class="level2">
-<h2 class="anchored" data-anchor-id="data-titanic">Data: Titanic</h2>
-<p>On April 15, 1912, the largest passenger liner ever made collided with an iceberg during her maiden voyage. When the Titanic sank it killed 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships. One of the reasons that the shipwreck resulted in such loss of life wasthat there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others.</p>
-<p>The <a href="https://github.com/stats1010-f22/website/blob/main/hw/data/titanic.csv">titanic.csv</a> file contains data for 887 of the real Titanic passengers. Each row represents one person. The columns describe different attributes about the person including whether they survived, their age, their passenger-class, their sex, and the fare they paid</p>
-<ul>
-<li><code>Pclass</code>: The class of passengers on the titanic, with <span class="math inline">\(1st\)</span> being the highest class, and <span class="math inline">\(3rd\)</span> the lowest.</li>
-<li><code>Survived</code>: A variable that records whether or not a passenger survived the sinking of the titanic.</li>
-</ul>
-<p>Part 1: Download and import the data</p>
+<p>Suppose you are in a classroom with 100 people. If we assume this is a randomly selected group of 100 people, what is the chance that at least two people have the same birthday? Although it is somewhat advanced, we can deduce this mathematically. We will do this later. Here we use a Monte Carlo simulation. For simplicity, we assume nobody was born on February 29. This actually doesn’t change the answer much.</p>
+<p>First, note that birthdays can be represented as numbers between 1 and 365, so a sample of 100 birthdays can be obtained like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>all_bdays <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">365</span>) <span class="co"># data from where we can sample</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>bdays_class <span class="ot">&lt;-</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  all_bdays <span class="sc">%&gt;%</span> <span class="co"># data from where to sample</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample_n</span>(<span class="at">size =</span> <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>) <span class="co"># sample of size 100 with replacement</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To check if in this particular set of 100 people we have at least two with the same birthday, we can use the functions <code>group_by</code> and <code>filter</code>, which returns a tibble with a vector of duplicated dates. Here is an example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>bdays_class <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(value) <span class="sc">%&gt;%</span> <span class="co"># for each birthday</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">%&gt;%</span> <span class="co"># count them</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">1</span>) <span class="co"># those have more than 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To estimate the probability of a shared birthday in the group, we repeat this experiment by sampling sets of 100 birthdays over and over. Prior to replicating, we need to write this as a function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bdays_dups <span class="ot">&lt;-</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  all_bdays <span class="sc">%&gt;%</span> <span class="co"># data from where to sample</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample_n</span>(<span class="at">size =</span> <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="co"># take a sample of size 100</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(value) <span class="sc">%&gt;%</span> <span class="co"># for each birthday</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">%&gt;%</span> <span class="co"># count them</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="co"># those have more than 1</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">vec_size</span>(.) <span class="co"># the number that are duplicated</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A function has an input (in this case <span class="math inline">\(n\)</span>)</p>
 <ol type="1">
-<li><p>Download the file into your Stat1010 R project in the data folder.</p></li>
-<li><p>Import your data into R.</p></li>
+<li>What does <span class="math inline">\(n\)</span> represent in this coding?</li>
 </ol>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>num_of_same_birthdays <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  all_bdays <span class="sc">%&gt;%</span> <span class="co"># data from where to sample</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample_n</span>(<span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="co"># take a sample</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(value) <span class="sc">%&gt;%</span> <span class="co"># for each birthday</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">%&gt;%</span> <span class="co"># count them</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> <span class="co"># those have more than 1</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">vec_size</span>(.) <span class="co"># the number that are duplicated</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-caption-container flex-fill">
-Warning
+<p>To run this function, we do this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">num_of_same_birthdays</span>(<span class="dv">10</span>) <span class="co"># run the function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This may be a good time to render your document to ensure that the data loads without errors.</p>
-</div>
-</div>
-<p>Part 2: Exploring categorical variables</p>
-<ol type="1">
-<li><p>How many observations and how many variables in this dataset?</p></li>
-<li><p>Classify all the variables into two categories: qualitative or quantitative</p></li>
-<li><p>How many levels of passenger class are there in the variable?</p></li>
-<li><p>How many passengers survived the sinking of the titanic?</p></li>
-<li><p>Make a contingency table of class and survival. Which combination of class and survival is the most common?</p>
-<ol type="1">
-<li><p>What proportion of <span class="math inline">\(3rd\)</span> class passengers survived?</p></li>
-<li><p>What proportion of <span class="math inline">\(1st\)</span> class passengers survived?</p></li>
-</ol></li>
+<ol start="2" type="1">
+<li><p>How many students are there in class today?</p></li>
+<li><p>Run the coding above but include the number of students in class today.</p></li>
 </ol>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>The law of large numbers says that if we do this <em>many</em> times we should have an estimate of the number of people that have the same birthdays in class today. The function <code>replicate</code> can be used to run functions multiple times.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">10000</span> <span class="co"># the number of times to run</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">replicate</span>(B, <span class="co"># replicate this number of times</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>          <span class="fu">num_of_same_birthdays</span>(INSERT)) <span class="co"># our function</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(results) <span class="co"># take the mean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-caption-container flex-fill">
-Warning
+<p>Were you expecting the probability to be this high?</p>
+<p>People tend to underestimate these probabilities. To get an intuition as to why it is so high, think about what happens when the group size is close to 365. At this stage, we run out of days and the probability is one.</p>
+<p>Say we want to use this knowledge to bet with friends about two people having the same birthday in a group of people. When are the chances larger than 50%? Larger than 75%?</p>
+<p>Let’s create a look-up table. We can create a function to compute this for any group size. This function runs our function <span class="math inline">\(10000\)</span> times for every value of <span class="math inline">\(n\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>compute_prob <span class="ot">&lt;-</span> <span class="co"># name the function</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(n, <span class="at">B =</span> <span class="dv">10000</span>){ <span class="co"># function inputs</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  results <span class="ot">&lt;-</span> <span class="co"># store results</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">replicate</span>(B, <span class="co"># run num_of_same_birthdays B times </span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>              <span class="fu">num_of_same_birthdays</span>(n)) <span class="co"># for the value of n</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(results) <span class="co"># find the mean</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Using the function <code>map_dbl</code>, we can perform element-wise operations on any function. Note that this may take awhile to run.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">60</span>) <span class="co"># which values of n are important</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>prob <span class="ot">&lt;-</span> <span class="co"># save the results as prob</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map_dbl</span>(n,  <span class="co"># for each value of n </span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>          compute_prob) <span class="co"># run the function</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-body-container callout-body">
-<p>This may be a good time to render your document.</p>
+<p>We can now make a plot of the estimated probabilities of two people having the same birthday in a group of size n:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(n, prob) <span class="sc">%&gt;%</span> <span class="co"># the format for ggplot</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co"># draw a graph</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> n, <span class="at">y =</span> prob)) <span class="co"># of points</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Now let’s compute the exact probabilities rather than use Monte Carlo approximations. Not only do we get the exact answer using math, but the computations are much faster since we don’t have to generate experiments.</p>
+<p>To make the math simpler, instead of computing the probability of it happening, we will compute the probability of it not happening, or the compliment. For this, we use the multiplication rule.</p>
+<p>Let’s start with the first person. The probability that person 1 has a unique birthday is 1. The probability that person 2 has a unique birthday, given that person 1 already took one, is 364/365. Then, given that the first two people have unique birthdays, person 3 is left with 363 days to choose from. We continue this way and find the chances of all <span class="math inline">\(n\)</span> people having a unique birthday is:</p>
+<p><span class="math display">\[1×\frac{364}{365}×\frac{363}{365}…\frac{365−n+1}{365}\]</span> We can write a function that does this for any number:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>exact_prob <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span> <span class="sc">-</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">prod</span>(<span class="dv">365</span><span class="sc">:</span>(<span class="dv">365-25</span><span class="sc">+</span><span class="dv">1</span>))<span class="sc">/</span> <span class="co"># the product from the numerator above</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">365</span><span class="sc">^</span>(<span class="dv">25</span>) <span class="co"># the denominator from above</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ol start="6" type="1">
-<li><p>Draw a plot that conditions on class and displays the proportions of each that survived and update labels. What does the plot suggest regarding the chance of survival and your class? Does it suggest that they are associated?</p></li>
-<li><p>Assuming Survived and Pclass are independent, write R coding to find the expected counts for all cells of the contingency table. (Hint: you will need to use the rowSums(.[2:3]) and colSums(.[2:4]) functions, depending on the order that you compute the two.)</p></li>
-<li><p>Perform a <span class="math inline">\(\chi^2\)</span> test on the two variables Survived and Pclass. Include both <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span> and interpret the <span class="math inline">\(p-value\)</span>. What conclusions can you draw about the independence of Survived and Pclass?</p></li>
+<ol start="4" type="1">
+<li>Run this coding for the number of people that are in class today.</li>
 </ol>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Now, we run this on multiple values of <span class="math inline">\(n\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>eprob <span class="ot">&lt;-</span> <span class="fu">map_dbl</span>(n, exact_prob) <span class="co"># run on multiple values of n</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-caption-container flex-fill">
-Warning
+<p>Next we plot the results.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(n, eprob) <span class="sc">%&gt;%</span> <span class="co"># the format for ggplot</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co"># draw a graph</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> n, <span class="at">y =</span> eprob)) <span class="co"># of points</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Before submitting, make sure you render your document,</p>
-</div>
-</div>
-</section>
-<section id="submission" class="level2">
-<h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Remember – you must turn in a PDF file to the Gradescope page before the submission deadline for full credit.</p>
-</div>
-</div>
-<p>To submit your assignment:</p>
-<ul>
-<li>Then submit the pdf following the link on the <a href="https://stats1010-f22.github.io/website/course-links.html">course website</a>.</li>
-</ul>
-</section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<p>Total points available: 50 points.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Component</th>
-<th>Points</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Part 1 Qu 1</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>Part 1 Qu 2</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>Part 2 Qu 1</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>Part 2 Qu 2</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>Part 2 Qu 3</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>Part 2 Qu 4</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>Part 2 Qu 5 Pt 1</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>Part 2 Qu 5 Pt 2</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>Part 2 Qu 6</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td>Part 2 Qu 7</td>
-<td>4</td>
-</tr>
-<tr class="odd">
-<td>Part 2 Qu 8</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
+<p>On mercury, <a href="https://www.universetoday.com/47834/length-of-day-on-mercury/">the year is only 88 days</a>. Update the coding above to simulate the expected number of people with the same birthdays on Mercury.</p>
+<p>Assuming we have the same number of people, would you expect the number of people with the same birthdays to be higher or lower than those on earth?</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
