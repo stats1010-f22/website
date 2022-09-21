@@ -20,7 +20,7 @@ editor: visual
 
 📋 [Exploring probabilities](/ae/ae-4.html)
 
-📋 [More probability rules](/ae/ae-5.html)
+📋 [The birthday simulation](/ae/ae-5.html)
 
 ## Perform
 

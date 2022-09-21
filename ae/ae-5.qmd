@@ -1,5 +1,5 @@
 ---
-title: "More probability rules (AE-5)"
+title: "The birthday simulation (AE-5)"
 output: 
    html_document
 ---
