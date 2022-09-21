@@ -80,7 +80,7 @@ A function has an input (in this case $n$)
 #| eval: false
 #| echo: true
 
-bdays_dups <- function(n){
+num_of_same_birthdays <- function(n){
   all_bdays %>% # data from where to sample
   sample_n(size = n, replace = TRUE) %>% # take a sample
   group_by(value) %>% # for each birthday
@@ -98,7 +98,25 @@ To run this function, we do this:
 #| eval: false
 #| echo: true
 
-bdays_dups(10)
+num_of_same_birthdays(10)
 ```
 
-How many students are there in class today? The law of large numbers says that if we do 
+2. How many students are there in class today? 
+
+3. Run the coding above but include the number of students in class today.
+
+
+The law of large numbers says that if we do this *many* times we should have an estimate of the number of people that have the same birthdays in class today. The function `replicate` can be used to run functions multiple times.
+
+```{r replicate_function}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
+B <- 10000
+results <- replicate(B,
+          num_of_same_birthdays(INSERT))
+
+mean(results)
+```
