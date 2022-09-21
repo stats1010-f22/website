@@ -69,7 +69,7 @@ Which of these events is independent?
 
 \- Going into a store and purchasing something from that store
 
-\- Suitability of one two employees for a job
+\- Suitability of two employees for a job
 
 \- Drawing 2 kings from a deck of cards in a row *without replacement*
 
