@@ -27,8 +27,6 @@ By the end of this lesson you should:
 
 -   Understand the multiplication and addition rules
 
-#  {background-image="lect_06-images/one_event.png" background-size="contain"}
-
 # Law of large numbers ($\infty$ in practice)
 ```{r}
 flips <- sample(c("heads", "tails"), size = 500, replace = TRUE)
@@ -38,6 +36,8 @@ plot(cumsum(flips == "heads") / (1:length(flips)),
      xlab = "Number of flips", ylab = "Proportion of heads")
 abline(h = 0.5, col = "red")
 ```
+
+#  {background-image="lect_06-images/one_event.png" background-size="contain"}
 
 # Compliment of $A$
 
