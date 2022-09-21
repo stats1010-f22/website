@@ -100,33 +100,7 @@ when $A$ and $B$ are independent, $Pr(B|A)$ = ?
 
 # Tree diagrams
 
-```{r engine = 'tikz'}
-\begin{tikzpicture}[line cap=round,line join=round,x=0.6cm,y=0.5cm]
-\coordinate (O) at (2,-1);
-\begin{scope}[every node/.style={circle,draw=black}]
- \node (A) at (9,2) {$V$};
- \node (B) at (9,-4) {$\overline{V}$};
- \node (C) at (16,4) {$S$};
- \node (D) at (16,0) {$\overline{S}$};
- \node (E) at (16,-2) {$S$};
- \node (F) at (16,-6) {$\overline{S}$}; 
-\end{scope}
 
-\draw (O) -- (A) -- (C)
-             (A) -- (D)
-      (O) -- (B) -- (E)
-             (B) -- (F);
-
-\begin{scope}[every node/.style={font=\scriptsize}]
-\node at (5,1.5) {$P(V)=0.4$};
-\node at (5,-3.5) {$P(\overline{V})=0.6$};
-\node at (12,3.8) {$P(S|V)=0.6$};
-\node at (12,0) {$P(\overline{S}|V)=0.4$};
-\node at (12,-2) {$P(S|\overline{V})=0.3$};
-\node at (12,-6) {$P(\overline{S}|\overline{V})=0.7$};
-\end{scope}
-\end{tikzpicture}
-```
 
 # Your turn
 

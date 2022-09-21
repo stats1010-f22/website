@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
-  <title>STAT 1010 - Fall 2022 - Lec 4 - Exploring numerical data</title>
+  <title>STAT 1010 - Fall 2022 - Lec 4 - Exploring numeric data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -312,10 +312,10 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Lec 4 - Exploring numerical data">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Lec 4 - Exploring numeric data">
 <meta property="og:description" content="STAT 1010 - Fall 2022">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Lec 4 - Exploring numerical data">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Lec 4 - Exploring numeric data">
 <meta name="twitter:description" content="STAT 1010 - Fall 2022">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
@@ -325,7 +325,7 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Lec 4 - Exploring numerical data</h1>
+  <h1 class="title">Lec 4 - Exploring numeric data</h1>
   <p class="subtitle">STAT 1010 - Fall 2022</p>
 </section>
 
@@ -336,12 +336,12 @@
 <ul>
 <li><p>Understand measures of center and know how to compute them</p></li>
 <li><p>Understand measures of spread and know how to compute them</p></li>
-<li><p>Graphical representation and interpretation of one numerical variables in R</p></li>
+<li><p>Graphical representation and interpretation of one numerical variable in R</p></li>
 </ul>
 </section>
-<section id="definition-of-numerical-variable" class="slide level2">
-<h2>Definition of numerical variable</h2>
-<p>A numerical or quantitative variable is a variable that can be measured.</p>
+<section id="definition-of-numeric-variable" class="slide level2">
+<h2>Definition of numeric variable</h2>
+<p>A numeric or quantitative variable is a variable that can be measured.</p>
 </section>
 <section id="the-purpose-of-exploratory-data-analysis-eda" class="slide level2">
 <h2>The purpose of Exploratory Data Analysis (EDA)</h2>
@@ -375,9 +375,72 @@
 
 <section id="mean" class="title-slide slide level1 center">
 <h1>Mean</h1>
-<p><span class="math inline">\(\bar{x}_{var} =\frac{the\; sum\; of\; all\; the\; observations\; in\; the \; var}{the \; number \;of \;observations \; var}\)</span></p>
+<p><span class="math inline">\(\overline{var} =\frac{the\; sum\; of\; all\; the\; observations\; in\; the \; var}{the \; number \;of \;observations}\)</span></p>
+</section>
 
-<div class="footer footer-default">
+<section id="mean-vs-median" class="title-slide slide level1 center">
+<h1>Mean vs median</h1>
+
+<img data-src="lect_04_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+
+<section id="mean-vs-median-1" class="title-slide slide level1 center">
+<h1>Mean vs median</h1>
+<p>Mean - sensitive to outliers and skewed distributions</p>
+<p>Median - more stable estimate</p>
+<p>Mode - most common value</p>
+</section>
+
+<section id="measures-of-spread" class="title-slide slide level1 center">
+<h1>Measures of spread</h1>
+<ul>
+<li><p>Percentiles</p>
+<ul>
+<li><p>quartiles</p></li>
+<li><p>Interquartile range</p></li>
+</ul></li>
+<li><p>variance <span class="math inline">\(s^2\)</span></p></li>
+<li><p>standard deviation <span class="math inline">\(s\)</span></p></li>
+<li><p>range</p></li>
+</ul>
+</section>
+
+<section id="variance" class="title-slide slide level1 center">
+<h1>Variance</h1>
+<p><span class="math inline">\(s_{var}^2 =\frac{(observation\; 1 \; in\; the \; var - \overline{var})^2 + (observation\; 2 \; in\; the \; var - \overline{var})^2 + \dots + (observation\; n \; in\; the \; var - \overline{var})^2}{the \; number \;of \;observations - 1}\)</span></p>
+</section>
+
+<section id="graphically" class="title-slide slide level1 center">
+<h1>Graphically</h1>
+
+<img data-src="lect_04_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+
+<section id="a-few-of-the-squares" class="title-slide slide level1 center">
+<h1>A few of the “squares”</h1>
+
+<img data-src="lect_04_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+
+<section id="standard-deviation" class="title-slide slide level1 center">
+<h1>Standard deviation</h1>
+<p><span class="math inline">\(s_{var} =\sqrt{\frac{(observation\; 1 \; in\; the \; var - \overline{var})^2 + (observation\; 2 \; in\; the \; var - \overline{var})^2 + \dots + (observation\; n \; in\; the \; var - \overline{var})^2}{the \; number \;of \;observations - 1}}\)</span></p>
+</section>
+
+<section id="words-to-know" class="title-slide slide level1 center">
+<h1>Words to know</h1>
+<ul>
+<li>mean</li>
+<li>median or quartile 2 (Q2)</li>
+<li>lower quartile (LQ) or quartile 1 (Q1)</li>
+<li>upper quartile (UQ) or quartile 3 (Q3)</li>
+<li>interquartile range (IQR)</li>
+</ul>
+</section>
+
+<section id="your-turn" class="title-slide slide level1 center">
+<h1>Your turn</h1>
+<p><a href="https://stats1010-f22.github.io/website/ae/ae-3.html">Click here</a> or the qr code below to write your first line of code</p>
+
+
+<img data-src="lect_04_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"><div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
 </div>
 </section>
