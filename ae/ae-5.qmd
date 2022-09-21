@@ -8,17 +8,97 @@ output:
 This application exercise is due on 27 Sept at 2:00pm.
 :::
 
-Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday\'s scientists. In short, computers give you scientific superpowers! But if you wish to use them, you\'ll need to pick up some programming skills. Steve Job said that "[compu](https://medium.learningbyshipping.com/bicycle-121262546097)[ters are bicycles for our minds"](https://www.youtube.com/watch?v=L40B08nWoMk) because of the efficiency rating of humans on bicycles.
+Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday\'s scientists. In short, computers give you superpowers! But if you wish to use them, you\'ll need to pick up some programming skills. Steve Job said that "[computers are bicycles for our minds"](https://medium.learningbyshipping.com/bicycle-121262546097) because the efficiency rating of humans on bicycles is so incredible, and computers give us similar powers.
 
 One reason computers are so incredible is that they allow us to simulate a multitude of events. Today we will simulate the probability that two of you in this section of Stat1010 have the same birthdays.
 
+```{r load_packages}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
+library(tidyverse) # for data manipulation
+library(vctrs) # to find the length of a tibble
+```
+
 Suppose you are in a classroom with 100 people. If we assume this is a randomly selected group of 100 people, what is the chance that at least two people have the same birthday? Although it is somewhat advanced, we can deduce this mathematically. We will do this later. Here we use a Monte Carlo simulation. For simplicity, we assume nobody was born on February 29. This actually doesn\'t change the answer much.
 
-First, note that birthdays can be represented as numbers between 1
-and 365, so a sample of 100 birthdays can be obtained like this:
+First, note that birthdays can be represented as numbers between 1 and 365, so a sample of 100 birthdays can be obtained like this:
 
 ```{r initial_simulation}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
 
-n <- 100
-bdays <- sample(1:365, n, replace = TRUE)
+all_bdays <- as_tibble(1:365) # data from where we can sample
+
+bdays_class <- 
+  all_bdays %>% # data from where to sample
+  sample_n(size = 100, replace = TRUE) # sample of size 100 with replacement
 ```
+
+To check if in this particular set of 100 people we have at least two with the same birthday, we can use the functions `group_by` and `filter`, which returns a tibble with a vector of duplicated dates. Here is an example:
+
+```{r find_dups}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
+bdays_class %>% 
+  group_by(value) %>% # for each birthday
+  count() %>% # count them
+  filter(n > 1) # those have more than 1
+```
+
+To estimate the probability of a shared birthday in the group, we repeat this experiment by sampling sets of 100 birthdays over and over. Prior to replicating, we need to write this as a function.
+
+```{r first_function}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
+bdays_dups <- 
+  all_bdays %>% # data from where to sample
+  sample_n(size = 100, replace = TRUE) %>% # take a sample of size 100
+  group_by(value) %>% # for each birthday
+  count() %>% # count them
+  filter(n > 1) %>% # those have more than 1
+  vec_size(.) # the number that are duplicated
+```
+
+A function has an input (in this case $n$)
+
+1. What does $n$ represent in this coding?
+
+```{r make_function}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
+bdays_dups <- function(n){
+  all_bdays %>% # data from where to sample
+  sample_n(size = n, replace = TRUE) %>% # take a sample
+  group_by(value) %>% # for each birthday
+  count() %>% # count them
+  filter(n > 1) %>% # those have more than 1
+  vec_size(.) # the number that are duplicated
+}
+```
+
+To run this function, we do this:
+
+```{r run_function}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+
+bdays_dups(10)
+```
+
+How many students are there in class today? The law of large numbers says that if we do 
