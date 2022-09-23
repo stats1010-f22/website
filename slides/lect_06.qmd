@@ -51,7 +51,7 @@ $Pr(A \cup B)=Pr(A)+Pr(B)−Pr(A \cap B)$
 
 # Boole's inequality
 
-$Pr(A)+Pr(B) \geq Pr(A \cup B)$
+$Pr(A \cup B) \leq Pr(A)+Pr(B) $
 
 # Independent events
 

@@ -6,7 +6,7 @@ editor: visual
 
 ## Introduction
 
-For this homework assignment we will be exploring the [Titanic dataset](https://github.com/stats1010-f22/website/blob/main/hw/data/titanic.csv). You will be
+For this homework assignment we will be exploring the [Titanic dataset](https://github.com/stats1010-f22/website/blob/main/hw/data/titanic.csv).
 
 ### Learning goals
 
