@@ -98,7 +98,7 @@ To submit your assignment:
 
 ## Grading
 
-Total points available: 50 points.
+Total points available: 25 points.
 
 | Component        | Points |
 |------------------|--------|
