@@ -1,0 +1,37 @@
+---
+title: "Week 5"
+subtitle: "Revision"
+editor: visual
+---
+
+## Prepare
+
+📖 Read [Solutions to AEs](https://canvas.upenn.edu/courses/1680632/files)
+
+## Participate
+
+🖥️
+
+🖥️
+
+## Practice
+
+📋
+
+📋 [T](/ae/ae-5.html)
+
+## Perform
+
+⌨️ [Course evaluation](https://docs.google.com/forms/d/e/1FAIpQLSfVAetsQsepJRd_OOK3kfF_Mv9iibSeLRB2miV27asn2uTRmw/viewform)
+
+✍️
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
