@@ -5,7 +5,7 @@ output:
 ---
 
 ::: callout-important
-This application exercise is due on 27 Sept at 2:00pm.
+This application exercise is due on 4 Oct at 2:00pm.
 :::
 
 Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday's scientists. In short, computers give you superpowers! But if you wish to use them, you'll need to pick up some programming skills. Steve Job said that "[computers are bicycles for our minds"](https://medium.learningbyshipping.com/bicycle-121262546097) because the efficiency rating of humans on bicycles is so incredible, and computers give us similar powers.
