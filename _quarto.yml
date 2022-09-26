@@ -108,8 +108,8 @@ website:
       #       text: Model diagnostics
       #     - href: supplemental/mlr-matrix.qmd
       #       text: MLR matrix notation
-      #     - href: supplemental/log-transformations.qmd
-      #       text: Log transformations
+           - href: supplemental/log-transformations.qmd
+             text: Exam 1 study guide
       #     - href: supplemental/model-selection-criteria.qmd
       #       text: Model selection criteria
 
