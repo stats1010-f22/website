@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 - Fall 2022 - HW 1 - Titanic dataset</title>
+<title>STAT 1010 - Fall 2022 - Revision for exam 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,11 +120,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - HW 1 - Titanic dataset">
-<meta property="og:description" content="Due Friday, 23 September, 2pm on Gradescope">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Revision for exam 1">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - HW 1 - Titanic dataset">
-<meta name="twitter:description" content="Due Friday, 23 September, 2pm on Gradescope">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Revision for exam 1">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -135,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">HW 1 - Titanic dataset</h1>
+      <h1 class="quarto-secondary-nav-title">Revision for exam 1</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -299,32 +297,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning goals</a></li>
-  </ul></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a>
-  <ul class="collapse">
-  <li><a href="#log-in-to-rstudio" id="toc-log-in-to-rstudio" class="nav-link" data-scroll-target="#log-in-to-rstudio">Log in to RStudio</a></li>
-  </ul></li>
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#data-titanic" id="toc-data-titanic" class="nav-link" data-scroll-target="#data-titanic">Data: Titanic</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/hw/hw-1.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">HW 1 - Titanic dataset</h1>
-<p class="subtitle lead">Due Friday, 23 September, 2pm on Gradescope</p>
+<h1 class="title d-none d-lg-block">Revision for exam 1</h1>
 </div>
 
 
@@ -338,188 +318,142 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>For this homework assignment we will be exploring the <a href="https://github.com/stats1010-f22/website/blob/main/hw/data/titanic.csv">Titanic dataset</a>.</p>
-<section id="learning-goals" class="level3">
-<h3 class="anchored" data-anchor-id="learning-goals">Learning goals</h3>
-<p>In this assignment, you will…</p>
-<ul>
-<li>Download and import data into R</li>
-<li>Explore categorical variables</li>
-<li>Compute the expected counts of a <span class="math inline">\(\chi^2\)</span> distribution and</li>
-<li>Perform a <span class="math inline">\(\chi^2\)</span> test on some variables</li>
-</ul>
-</section>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<section id="log-in-to-rstudio" class="level3">
-<h3 class="anchored" data-anchor-id="log-in-to-rstudio">Log in to RStudio</h3>
-<p>Click on your <em>Stat1010.Rproj</em>.</p>
-<p>Go to <em>File</em> ➛ <em>New File</em> ➛ <em>Quarto Document</em> and name the document <em>hw-1</em> click <em>create</em></p>
-</section>
-</section>
-<section id="packages" class="level2">
-<h2 class="anchored" data-anchor-id="packages">Packages</h2>
-<p>The following packages will be used in this assignment:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># for data manipulation and data visualization</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here) <span class="co"># to organize files</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="data-titanic" class="level2">
-<h2 class="anchored" data-anchor-id="data-titanic">Data: Titanic</h2>
-<p>On April 15, 1912, the largest passenger liner ever made collided with an iceberg during her maiden voyage. When the Titanic sank it killed 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships. One of the reasons that the shipwreck resulted in such loss of life wasthat there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others.</p>
-<p>The <a href="https://github.com/stats1010-f22/website/blob/main/hw/data/titanic.csv">titanic.csv</a> file contains data for 887 of the real Titanic passengers. Each row represents one person. The columns describe different attributes about the person including whether they survived, their age, their passenger-class, their sex, and the fare they paid</p>
-<ul>
-<li><code>Pclass</code>: The class of passengers on the titanic, with <span class="math inline">\(1st\)</span> being the highest class, and <span class="math inline">\(3rd\)</span> the lowest.</li>
-<li><code>Survived</code>: A variable that records whether or not a passenger survived the sinking of the titanic.</li>
-</ul>
-<p>Part 1: Download and import the data</p>
 <ol type="1">
-<li><p>Download the file into your Stat1010 R project in the data folder.</p></li>
-<li><p>Import your data into R.</p></li>
+<li>What tidyverse function would you use to extract rows?</li>
 </ol>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This may be a good time to render your document to ensure that the data loads without errors.</p>
-</div>
-</div>
-<p>Part 2: Exploring categorical variables</p>
-<ol type="1">
-<li><p>How many observations and how many variables in this dataset?</p></li>
-<li><p>Classify all the variables into two categories: qualitative or quantitative</p></li>
-<li><p>How many levels of passenger class are there in the variable?</p></li>
-<li><p>How many passengers survived the sinking of the titanic?</p></li>
-<li><p>Make a contingency table of class and survival. Which combination of class and survival is the most common?</p>
-<ol type="1">
-<li><p>What proportion of <span class="math inline">\(3rd\)</span> class passengers survived?</p></li>
-<li><p>What proportion of <span class="math inline">\(1st\)</span> class passengers survived?</p></li>
-</ol></li>
+<ol type="a">
+<li>filter()</li>
+<li>count()</li>
+<li>select()</li>
+<li>distinct()</li>
 </ol>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This may be a good time to render your document.</p>
-</div>
-</div>
+<ol start="2" type="1">
+<li>What tidyverse function would you use to extract colums?</li>
+</ol>
+<ol type="a">
+<li>filter()</li>
+<li>count()</li>
+<li>select()</li>
+<li>distinct()</li>
+</ol>
+<ol start="3" type="1">
+<li>To find the maximum number of times that a categorical variable appears which function should I use?</li>
+</ol>
+<ol type="a">
+<li>filter()</li>
+<li>count()</li>
+<li>select()</li>
+<li>distinct()</li>
+</ol>
+<ol start="4" type="1">
+<li>What does the “%&gt;%” operator do?</li>
+</ol>
+<ol type="a">
+<li>used in tidyverse between layers of dplyr coding</li>
+<li>used in ggplot to add more layers of coding</li>
+</ol>
+<ol start="5" type="1">
+<li>Will this code run without an error? mutate(price_hundred = price %/% 100)</li>
+</ol>
+<ol type="a">
+<li>It will produce an error</li>
+<li>It will not produce an error</li>
+</ol>
 <ol start="6" type="1">
-<li><p>Draw a plot that conditions on class and displays the proportions of each that survived and update labels. What does the plot suggest regarding the chance of survival and your class? Does it suggest that they are associated?</p></li>
-<li><p>Assuming Survived and Pclass are independent, write R coding to find the expected counts for all cells of the contingency table. (Hint: you will need to use the rowSums(.[2:3]) and colSums(.[2:4]) functions, depending on the order that you compute the two.)</p></li>
-<li><p>Perform a <span class="math inline">\(\chi^2\)</span> test on the two variables Survived and Pclass. Include both <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span> and interpret the <span class="math inline">\(p-value\)</span>. What conclusions can you draw about the independence of Survived and Pclass?</p></li>
+<li>What does the binwidth input do?</li>
 </ol>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<ol type="a">
+<li>It controls the</li>
+</ol>
+<ol start="7" type="1">
+<li>What punctuation must be placed before a function or dataset to access more information?</li>
+</ol>
+<ol type="a">
+<li>“.”</li>
+<li>“+”</li>
+<li>“?”</li>
+<li>“!”</li>
+</ol>
+<ol start="9" type="1">
+<li>Where should the variable names go in the following line of code ggplot(data = <a>) + <b>(mapping = aes(<c>))”</c></b></a></li><a><b>
+</b></a></ol><a><b>
+<ol type="a">
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ol>
+<ol start="10" type="1">
+<li>What does the here package do?</li>
+</ol>
+<ol type="a">
+<li>for data manipulation and display</li>
+<li>to organize files</li>
+<li>none of the above</li>
+</ol>
+<ol start="11" type="1">
+<li><p>Which of the following variables are discrete?</p></li>
+<li><p>Which of the following variables are categorical?</p></li>
+<li><p>Which of the following variables are ordinal?</p></li>
+<li><p>Which of the following variables are continous?</p></li>
+<li><p>What is the difference between distinct() and count()?</p></li>
+</ol>
+<ol type="a">
+<li>they are the same</li>
+<li>distinct() gives the levels in a variable, count() gives the marginal distribution</li>
+<li>distinct() gives the marginal distribution, count() gives the levels in a variable</li>
+</ol>
+<ol start="16" type="1">
+<li>What operator is used in ggplot?</li>
+</ol>
+<ol type="a">
+<li>“.”</li>
+<li>“+”</li>
+<li>“?”</li>
+<li>“!”</li>
+</ol>
+<p>Categorical variables</p>
+<ol start="15" type="1">
+<li>Find the expected count for a <span class="math inline">\(\chi^2\)</span> distribution assuming independence.</li>
+</ol>
+</b></a><b><div class="cell"><a>
+</a><div class="sourceCode cell-code" id="cb2"><a></a><pre class="sourceCode r code-with-copy"><a><code class="sourceCode r"><span id="cb2-1"></span></code></a><code class="sourceCode r"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">%&gt;%</span> 
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(color, clarity) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> color,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">values_from =</span> n) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">marginal_clarity =</span> <span class="fu">rowSums</span>(.[<span class="dv">2</span><span class="sc">:</span><span class="dv">7</span>])) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">marginal_color =</span> <span class="fu">colSums</span>(.[<span class="dv">2</span><span class="sc">:</span><span class="dv">9</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 10
+  clarity     D     E     F     G     H     I     J marginal_clarity marginal_…¹
+  &lt;ord&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;            &lt;dbl&gt;       &lt;dbl&gt;
+1 I1         42   102   143   150   162    92    50              691        6775
+2 SI2      1370  1713  1609  1548  1563   912   479             8715        9797
+3 SI1      2083  2426  2131  1976  2275  1424   750            12315        9542
+4 VS2      1697  2470  2201  2347  1643  1169   731            11527       11292
+5 VS1       705  1281  1364  2148  1169   962   542             7629        8304
+6 VVS2      553   991   975  1443   608   365   131             4935        5422
+7 VVS1      252   656   734   999   585   355    74             3581        2808
+8 IF         73   158   385   681   299   143    51             1739       51132
+# … with abbreviated variable name ¹​marginal_color</code></pre>
 </div>
-<div class="callout-caption-container flex-fill">
-Warning
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Before submitting, make sure you render your document,</p>
-</div>
-</div>
-</section>
-<section id="submission" class="level2">
-<h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Remember – you must turn in a PDF file to the Gradescope page before the submission deadline for full credit.</p>
-</div>
-</div>
-<p>To submit your assignment:</p>
-<ul>
-<li>Then submit the pdf following the link on the <a href="https://stats1010-f22.github.io/website/course-links.html">course website</a>.</li>
-</ul>
-</section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<p>Total points available: 25 points.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Component</th>
-<th>Points</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Part 1 Qu 1</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>Part 1 Qu 2</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>Part 2 Qu 1</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>Part 2 Qu 2</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>Part 2 Qu 3</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>Part 2 Qu 4</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>Part 2 Qu 5 Pt 1</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>Part 2 Qu 5 Pt 2</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>Part 2 Qu 6</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td>Part 2 Qu 7</td>
-<td>4</td>
-</tr>
-<tr class="odd">
-<td>Part 2 Qu 8</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
+<ol start="16" type="1">
+<li><p>Some of the last questions on these - https://openintro.shinyapps.io/ims-02-explore-01/#section-distribution-of-one-variable</p></li>
+<li><p>Conditional on one of two variables or the other to answer this question?</p></li>
+<li><p>Conditional tables on both variables and which one is the right proportion?</p></li>
+</ol>
+<p>Numeric variables 19. Plot with mean, meadian and mode - label each</p>
+<ol start="20" type="1">
+<li><p>Mean or median better measure of center in these distributions</p></li>
+<li><p>Which plot is better to display a</p></li>
+</ol>
 
 
-</section>
 
-</main> <!-- /main -->
+</b></main><b> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -720,7 +654,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+</b></div><b> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2022, gwynn sturdevant</div>   
@@ -730,4 +664,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+</b></body></html>

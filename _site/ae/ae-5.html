@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 - Fall 2022 - More probability rules (AE-5)</title>
+<title>STAT 1010 - Fall 2022 - The birthday simulation (AE-5)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,10 +120,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - More probability rules (AE-5)">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - The birthday simulation (AE-5)">
 <meta property="og:description" content="Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday’s scientists. In short, computers give you superpowers!">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - More probability rules (AE-5)">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - The birthday simulation (AE-5)">
 <meta name="twitter:description" content="Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday’s scientists. In short, computers give you superpowers!">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
@@ -135,7 +135,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">More probability rules (AE-5)</h1>
+      <h1 class="quarto-secondary-nav-title">The birthday simulation (AE-5)</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -272,6 +272,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../weeks/week-4.html" class="sidebar-item-text sidebar-link">Week 4</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/week-5.html" class="sidebar-item-text sidebar-link">Week 5</a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -284,7 +289,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../supplemental/chi_squared.qmd" class="sidebar-item-text sidebar-link">Chi squared expected counts</a>
+  <a href="../supplemental/log-transformations.html" class="sidebar-item-text sidebar-link">Exam 1 study guide</a>
   </div>
 </li>
       </ul>
@@ -301,7 +306,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">More probability rules (AE-5)</h1>
+<h1 class="title d-none d-lg-block">The birthday simulation (AE-5)</h1>
 </div>
 
 
@@ -325,7 +330,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This application exercise is due on 27 Sept at 2:00pm.</p>
+<p>This application exercise is due on 4 Oct at 2:00pm.</p>
 </div>
 </div>
 <p>Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday’s scientists. In short, computers give you superpowers! But if you wish to use them, you’ll need to pick up some programming skills. Steve Job said that “<a href="https://medium.learningbyshipping.com/bicycle-121262546097">computers are bicycles for our minds”</a> because the efficiency rating of humans on bicycles is so incredible, and computers give us similar powers.</p>
@@ -432,14 +437,18 @@ Important
 <ol start="4" type="1">
 <li>Run this coding for the number of people that are in class today.</li>
 </ol>
+<p>Now, we run this on multiple values of <span class="math inline">\(n\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>eprob <span class="ot">&lt;-</span> <span class="fu">map_dbl</span>(n, exact_prob)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>eprob <span class="ot">&lt;-</span> <span class="fu">map_dbl</span>(n, exact_prob) <span class="co"># run on multiple values of n</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Next we plot the results.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(n, eprob) <span class="sc">%&gt;%</span> <span class="co"># the format for ggplot</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co"># draw a graph</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> n, <span class="at">y =</span> eprob)) <span class="co"># of points</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>On mercury, <a href="https://www.universetoday.com/47834/length-of-day-on-mercury/">the year is only 88 days</a>. Update the coding above to simulate the expected number of people with the same birthdays on Mercury.</p>
+<p>Assuming we have the same number of people, would you expect the number of people with the same birthdays to be higher or lower than those on earth?</p>
 
 
 

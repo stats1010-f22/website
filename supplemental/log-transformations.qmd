@@ -42,6 +42,8 @@ Disjoint events
 
 Venn diagrams
 
-Compliments
+Compliment
 
 The three laws of probability - Kolomogorov's axioms
+
+Classification of variables

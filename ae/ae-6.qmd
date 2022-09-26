@@ -1,8 +1,15 @@
 ---
-title: "Revision for exam 1"
+title: "Revision 1 for exam 1"
 output: 
    html_document
 ---
+
+```{r}
+#| eval: true
+#| message: false
+library(tidyverse)
+```
+
 
 1. What tidyverse function would you use to extract rows?
   a. filter()
@@ -42,8 +49,9 @@ mutate(price_hundred = price %/% 100)
   c. "?"
   d. "!"
 
-9. Where should the variable names go in the following line of code ggplot(data = <A>) + 
-  <B>(mapping = aes(<C>))"
+9. Where should the variable names go in the following line of code: 
+ggplot(data = <A>) + 
+  <B>(mapping = aes(<C>))
   a. A
   b. B
   c. C
@@ -56,15 +64,9 @@ mutate(price_hundred = price %/% 100)
 
 
 11. Which of the following variables are discrete?
+ a. number of employees in a company.
+ b. distance 
 
-
-12. Which of the following variables are categorical?
-
-
-13. Which of the following variables are ordinal?
-
-
-14. Which of the following variables are continous?
 
 
 15. What is the difference between distinct() and count()?
@@ -80,21 +82,86 @@ c. distinct() gives the marginal distribution, count() gives the levels in a var
 
 Categorical variables
 
-15. Expected count from a Chi-Squared distribtuion 
+15. Find the expected count for clarity VS1 and color I for a $\chi^2$ distribution assuming independence.
+
+```{r chi-squared}
+#| eval = true
+#| echo = false
+
+diamonds %>% 
+  count(color, clarity) %>% 
+  pivot_wider(names_from = color,
+              values_from = n) %>% 
+  mutate(marginal_clarity = rowSums(.[2:7])) %>% 
+  mutate(marginal_color = colSums(.[2:9]))
+  
+```
+
 
 
 16. Some of the last questions on these - https://openintro.shinyapps.io/ims-02-explore-01/#section-distribution-of-one-variable
 
 
-17. Conditional on one of two variables or the other to answer the question?
+17. What proportion of the very good cut diamonds are colored I?
 
+```{r prop_color}
+#| eval = true
+#| echo = false
 
-18. Conditional tables on both variables and which one is the right proportion?
+diamonds %>% 
+  count(color, cut) %>% 
+  group_by(color) %>% 
+  mutate(prop = n/ sum(n)) %>% 
+  select(color, cut, prop) %>% 
+  pivot_wider(names_from = color,
+              values_from = prop) 
+  
+```
+```{r prop_cut}
+#| eval = true
+#| echo = false
 
+diamonds %>% 
+  count(color, cut) %>% 
+  group_by(cut) %>% 
+  mutate(prop = n/ sum(n)) %>% 
+  select(color, cut, prop) %>% 
+  pivot_wider(names_from = color,
+              values_from = prop) 
+  
+```
 
-Numeric variables
-19. Plot with mean, meadian and mode - label each
+19. Which of the lines below is  more likely to be the mean and which is likely to be the median, and which is likely to be the mode.
+```{r, mean-median}
+#| echo: false
+#| eval: true
 
-20. Mean or median better measure of center in these distributions
+library(tidyverse)
+ggplot(data = diamonds) +
+  geom_histogram(mapping = aes(x = price), binwidth = 250) +
+  geom_vline(aes(xintercept = mean(price)), color = "red") +
+  geom_vline(aes(xintercept = median(price)), color = "green")
 
-21. Which plot is better to display a 
+```
+a. red is median, green is mean
+b. red is mean, green is mode
+c. red is mode, green is mean
+d. red is mean, green is median
+
+20. Is the mean or median a better measure of center in this distribution.
+```{r, mean-median}
+#| echo: false
+#| eval: true
+
+library(tidyverse)
+ggplot(data = diamonds) +
+  geom_histogram(mapping = aes(x = x), binwidth = .2) +
+  xlim(2, 10)
+```
+
+21. Which plot is better to display a outliers:
+a. histogram
+b. dotplot
+c. plot of proportions
+d. boxplot
+
