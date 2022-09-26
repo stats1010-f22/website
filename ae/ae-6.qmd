@@ -1,0 +1,100 @@
+---
+title: "Revision for exam 1"
+output: 
+   html_document
+---
+
+1. What tidyverse function would you use to extract rows?
+  a. filter()
+  b. count()
+  c. select()
+  d. distinct()
+
+
+2. What tidyverse function would you use to extract colums?
+  a. filter()
+  b. count()
+  c. select()
+  d. distinct()
+
+3. To find the maximum number of times that a categorical variable appears which function should I use?
+  a. filter()
+  b. count()
+  c. select()
+  d. distinct()
+
+4. What does the "%>%" operator do?
+  a. used in tidyverse between layers of dplyr coding
+  b. used in ggplot to add more layers of coding
+
+5. Will this code run without an error? 
+mutate(price_hundred = price %/% 100)
+  a. It will produce an error
+  b. It will not produce an error
+
+6. What does the binwidth input do?
+  a. It controls the 
+  
+
+7. What punctuation must be placed before a function or dataset to access more information?
+  a. "."
+  b. "+"
+  c. "?"
+  d. "!"
+
+9. Where should the variable names go in the following line of code ggplot(data = <A>) + 
+  <B>(mapping = aes(<C>))"
+  a. A
+  b. B
+  c. C
+  
+
+10. What does the here package do?
+  a. for data manipulation and display
+  b. to organize files
+  c. none of the above
+
+
+11. Which of the following variables are discrete?
+
+
+12. Which of the following variables are categorical?
+
+
+13. Which of the following variables are ordinal?
+
+
+14. Which of the following variables are continous?
+
+
+15. What is the difference between distinct() and count()?
+a. they are the same
+b. distinct() gives the levels in a variable, count() gives the marginal distribution
+c. distinct() gives the marginal distribution, count() gives the levels in a variable
+
+16. What operator is used in ggplot? 
+  a. "."
+  b. "+"
+  c. "?"
+  d. "!"
+
+Categorical variables
+
+15. Expected count from a Chi-Squared distribtuion 
+
+
+16. Some of the last questions on these - https://openintro.shinyapps.io/ims-02-explore-01/#section-distribution-of-one-variable
+
+
+17. Conditional on one of two variables or the other to answer the question?
+
+
+18. Conditional tables on both variables and which one is the right proportion?
+
+
+Numeric variables
+19. Plot with mean, meadian and mode - label each
+
+20. Mean or median better measure of center in these distributions
+
+21. Which plot is better to display a 
