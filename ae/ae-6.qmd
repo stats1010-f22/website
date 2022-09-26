@@ -98,7 +98,7 @@ diamonds %>%
   count(color, clarity) %>% 
   pivot_wider(names_from = color,
               values_from = n) %>% 
-  mutate(marginal_clarity = rowSums(.[2:7])) %>% 
+  mutate(marginal_clarity = rowSums(.[2:8])) %>% 
   mutate(marginal_color = colSums(.[2:9]))
   
 ```
