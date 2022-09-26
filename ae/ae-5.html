@@ -430,7 +430,8 @@ Important
 <p>Now let’s compute the exact probabilities rather than use Monte Carlo approximations. Not only do we get the exact answer using math, but the computations are much faster since we don’t have to generate experiments.</p>
 <p>To make the math simpler, instead of computing the probability of it happening, we will compute the probability of it not happening, or the compliment. For this, we use the multiplication rule.</p>
 <p>Let’s start with the first person. The probability that person 1 has a unique birthday is 1. The probability that person 2 has a unique birthday, given that person 1 already took one, is 364/365. Then, given that the first two people have unique birthdays, person 3 is left with 363 days to choose from. We continue this way and find the chances of all <span class="math inline">\(n\)</span> people having a unique birthday is:</p>
-<p><span class="math display">\[1×\frac{364}{365}×\frac{363}{365}…\frac{365−n+1}{365}\]</span> We can write a function that does this for any number:</p>
+<p><span class="math display">\[1×\frac{364}{365}×\frac{363}{365}…\frac{365−n+1}{365}\]</span></p>
+<p>We can write a function that does this for any number:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>exact_prob <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span> <span class="sc">-</span> </span>
