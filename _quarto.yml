@@ -102,8 +102,8 @@ website:
           #   text: "Week 15"
       - section: "Supplemental notes"
         contents:
-          - href: supplemental/chi_squared.qmd
-            text: Chi squared expected counts
+      #    - href: supplemental/chi_squared.qmd
+      #     text: Chi squared expected counts
       #     - href: supplemental/model-diagnostics-matrix.qmd
       #       text: Model diagnostics
       #     - href: supplemental/mlr-matrix.qmd
