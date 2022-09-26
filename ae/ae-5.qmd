@@ -171,14 +171,13 @@ as_tibble(n, prob) %>% # the format for ggplot
   geom_point(aes(x = n, y = prob)) # of points
 ```
 
-Now let’s compute the exact probabilities rather than use Monte Carlo approximations. Not only do we get the exact answer using math, but the computations are much faster since we don’t have to generate experiments.
+Now let's compute the exact probabilities rather than use Monte Carlo approximations. Not only do we get the exact answer using math, but the computations are much faster since we don't have to generate experiments.
 
 To make the math simpler, instead of computing the probability of it happening, we will compute the probability of it not happening, or the compliment. For this, we use the multiplication rule.
 
-Let’s start with the first person. The probability that person 1 has a unique birthday is 1. The probability that person 2 has a unique birthday, given that person 1 already took one, is 364/365. Then, given that the first two people have unique birthdays, person 3 is left with 363 days to choose from. We continue this way and find the chances of all $n$ people having a unique birthday is:
+Let's start with the first person. The probability that person 1 has a unique birthday is 1. The probability that person 2 has a unique birthday, given that person 1 already took one, is 364/365. Then, given that the first two people have unique birthdays, person 3 is left with 363 days to choose from. We continue this way and find the chances of all $n$ people having a unique birthday is:
 
-$$1×\frac{364}{365}×\frac{363}{365}…\frac{365−n+1}{365}$$
-We can write a function that does this for any number:
+$$1×\frac{364}{365}×\frac{363}{365}…\frac{365−n+1}{365}$$ We can write a function that does this for any number:
 
 ```{r exact_prob}
 #| message: false
@@ -188,15 +187,15 @@ We can write a function that does this for any number:
 
 exact_prob <- function(n){
   1 - 
-    prod(365:(365-25+1))/ # the product from the numerator above
-    365^(25) # the denominator from above
+    prod(365:(365-n+1))/ # the product from the numerator above
+    365^(n) # the denominator from above
 }
 ```
 
-4. Run this coding for the number of people that are in class today.
-
+4.  Run this coding for the number of people that are in class today.
 
 Now, we run this on multiple values of $n$
+
 ```{r run_exact_prob}
 #| message: false
 #| warning: false
@@ -205,7 +204,6 @@ Now, we run this on multiple values of $n$
 
 eprob <- map_dbl(n, exact_prob) # run on multiple values of n
 ```
-
 
 Next we plot the results.
 
@@ -220,6 +218,6 @@ as_tibble(n, eprob) %>% # the format for ggplot
   geom_point(aes(x = n, y = eprob)) # of points
 ```
 
-On mercury, [the year is only 88 days](https://www.universetoday.com/47834/length-of-day-on-mercury/). Update the coding above to simulate the expected number of people with the same birthdays on Mercury. 
+On mercury, [the year is only 88 days](https://www.universetoday.com/47834/length-of-day-on-mercury/). Update the coding above to simulate the expected number of people with the same birthdays on Mercury.
 
 Assuming we have the same number of people, would you expect the number of people with the same birthdays to be higher or lower than those on earth?

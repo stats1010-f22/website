@@ -100,7 +100,6 @@ diamonds %>%
               values_from = n) %>% 
   mutate(marginal_clarity = rowSums(.[2:8])) %>% 
   mutate(marginal_color = colSums(.[2:9]))
-  
 ```
 
 19. What proportion of the very good cut diamonds are colored I?
@@ -124,7 +123,7 @@ diamonds %>%
 diamonds %>% 
   count(color, cut) %>% 
   group_by(cut) %>% 
-  mutate(prop = n/ sum(n)) %>% 
+  mutate(prop = n/sum(n)) %>% 
   select(color, cut, prop) %>% 
   pivot_wider(names_from = color,
               values_from = prop) 
