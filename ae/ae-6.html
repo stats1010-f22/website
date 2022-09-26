@@ -361,17 +361,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>used in ggplot to add more layers of coding</li>
 </ol>
 <ol start="5" type="1">
-<li>Will this code run without an error? mutate(price_hundred = price %/% 100)</li>
+<li>Will this code run without an error? diamonds %&gt;% mutate(price_hundred = price %/% 100)</li>
 </ol>
 <ol type="a">
 <li>It will produce an error</li>
 <li>It will not produce an error</li>
 </ol>
 <ol start="6" type="1">
-<li>What does the binwidth input do?</li>
+<li>What does the binwidth input in ggplot do?</li>
 </ol>
 <ol type="a">
-<li>It controls the</li>
+<li>It controls the opacity of the plot</li>
+<li>It can be used to update the labels</li>
+<li>It controls the smoothness of a density plot</li>
+<li>It controls the size of dots</li>
 </ol>
 <ol start="7" type="1">
 <li>What punctuation must be placed before a function or dataset to access more information?</li>
@@ -403,7 +406,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <ol type="a">
 <li>number of employees in a company.</li>
-<li>distance</li>
+<li>distance traveled to and from work</li>
+<li>taxes paid in 2019</li>
+<li>purchases from 2018</li>
 </ol>
 <ol start="15" type="1">
 <li>What is the difference between distinct() and count()?</li>
@@ -413,7 +418,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>distinct() gives the levels in a variable, count() gives the marginal distribution</li>
 <li>distinct() gives the marginal distribution, count() gives the levels in a variable</li>
 </ol>
-<ol start="16" type="1">
+<ol start="17" type="1">
 <li>What operator is used in ggplot?</li>
 </ol>
 <ol type="a">
@@ -422,10 +427,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>“?”</li>
 <li>“!”</li>
 </ol>
-<p>Categorical variables</p>
-<ol start="15" type="1">
-<li>Find the expected count for clarity VS1 and color I for a <span class="math inline">\(\chi^2\)</span> distribution assuming independence.</li>
-</ol>
+<p>Categorical variables 18. Find the expected count for clarity VS1 and color I for a <span class="math inline">\(\chi^2\)</span> distribution assuming independence.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 10
@@ -442,9 +444,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 # … with abbreviated variable name ¹​marginal_color</code></pre>
 </div>
 </div>
-<ol start="16" type="1">
-<li><p>Some of the last questions on these - https://openintro.shinyapps.io/ims-02-explore-01/#section-distribution-of-one-variable</p></li>
-<li><p>What proportion of the very good cut diamonds are colored I?</p></li>
+<ol start="19" type="1">
+<li>What proportion of the very good cut diamonds are colored I?</li>
 </ol>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -471,8 +472,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 5 Ideal     0.132 0.181 0.178 0.227 0.145 0.0971 0.0416</code></pre>
 </div>
 </div>
-<ol start="19" type="1">
-<li>Which of the lines below is more likely to be the mean and which is likely to be the median, and which is likely to be the mode.</li>
+<ol start="20" type="1">
+<li>Which of the lines below is the mean, median, or mode?</li>
 </ol>
 <div class="cell">
 <div class="cell-output-display">
@@ -485,7 +486,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>red is mode, green is mean</li>
 <li>red is mean, green is median</li>
 </ol>
-<ol start="20" type="1">
+<ol start="21" type="1">
 <li>Is the mean or median a better measure of center in this distribution.</li>
 </ol>
 <div class="cell">
@@ -493,8 +494,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="ae-6_files/figure-html/hist-x-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<ol start="21" type="1">
-<li>Which plot is better to display a outliers:</li>
+<ol start="22" type="1">
+<li>Which plot is best at displaying outliers:</li>
 </ol>
 <ol type="a">
 <li>histogram</li>
