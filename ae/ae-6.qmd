@@ -85,8 +85,8 @@ Categorical variables
 15. Find the expected count for clarity VS1 and color I for a $\chi^2$ distribution assuming independence.
 
 ```{r chi-squared}
-#| eval = true
-#| echo = false
+#| eval: true
+#| echo: false
 
 diamonds %>% 
   count(color, clarity) %>% 
@@ -105,8 +105,8 @@ diamonds %>%
 17. What proportion of the very good cut diamonds are colored I?
 
 ```{r prop_color}
-#| eval = true
-#| echo = false
+#| eval: true
+#| echo: false
 
 diamonds %>% 
   count(color, cut) %>% 
@@ -118,8 +118,8 @@ diamonds %>%
   
 ```
 ```{r prop_cut}
-#| eval = true
-#| echo = false
+#| eval: true
+#| echo: false
 
 diamonds %>% 
   count(color, cut) %>% 
@@ -152,10 +152,11 @@ d. red is mean, green is median
 ```{r, mean-median}
 #| echo: false
 #| eval: true
+#| warning: false
 
 library(tidyverse)
 ggplot(data = diamonds) +
-  geom_histogram(mapping = aes(x = x), binwidth = .2) +
+  geom_histogram(mapping = aes(x = x), binwidth = .4) +
   xlim(2, 10)
 ```
 
