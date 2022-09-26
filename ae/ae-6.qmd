@@ -54,8 +54,8 @@ diamonds %>%
   d. "!"
 
 9. Where should the variable names go in the following line of code: 
-ggplot(data = <A>) + 
-  <B>(mapping = aes(<C>))
+ggplot(data = A) + 
+  B(mapping = aes(C))
   a. A
   b. B
   c. C
