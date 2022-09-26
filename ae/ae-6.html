@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 - Fall 2022 - Study list for exam 1</title>
+<title>STAT 1010 - Fall 2022 - Revision for exam 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,11 +61,9 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Study list for exam 1">
-<meta property="og:description" content="The R functions we have discussed so far these few weeks:">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Revision for exam 1">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Study list for exam 1">
-<meta name="twitter:description" content="The R functions we have discussed so far these few weeks:">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Revision for exam 1">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -76,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Study list for exam 1</h1>
+      <h1 class="quarto-secondary-nav-title">Revision for exam 1</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -247,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Study list for exam 1</h1>
+<h1 class="title d-none d-lg-block">Revision for exam 1</h1>
 </div>
 
 
@@ -261,109 +259,115 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The R functions we have discussed so far these few weeks:</p>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>functions</td>
-<td>operators</td>
-<td>pipes</td>
-</tr>
-<tr class="even">
-<td>filter()</td>
-<td>%/%</td>
-<td>%&gt;%</td>
-</tr>
-<tr class="odd">
-<td>distinct()</td>
-<td>%%</td>
-<td>“+”</td>
-</tr>
-<tr class="even">
-<td>count()</td>
-<td>!=</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>select()</td>
-<td>rowSums()</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>mutate()</td>
-<td>colSums()</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>View()</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>glimpse()</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>pivot_wider()</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>group_by()</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>chisq.test()</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>ggplot()</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>geom_hist()</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>geom_bar()</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>geom_point()</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>lab()</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>facet_wrap()</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Benefits and downsides of these visualization methods: histogram and boxplot.</p>
-<p>Conditional probability tables - which variable is it conditioned on.</p>
-<p>Mean, median, mode and which is best in skewed distributions. Identify in a plot</p>
-<p>Measures of spread: standard deviation, variance, quartiles, percentiles, interquartile range.</p>
-<p>Chi-squared expected counts given a contingency table of counts.</p>
-<p>Independent events</p>
-<p>Disjoint events</p>
-<p>Venn diagrams</p>
-<p>Compliments</p>
+<ol type="1">
+<li>What tidyverse function would you use to extract rows?</li>
+</ol>
+<ol type="a">
+<li>filter()</li>
+<li>count()</li>
+<li>select()</li>
+<li>distinct()</li>
+</ol>
+<ol start="2" type="1">
+<li>What tidyverse function would you use to extract colums?</li>
+</ol>
+<ol type="a">
+<li>filter()</li>
+<li>count()</li>
+<li>select()</li>
+<li>distinct()</li>
+</ol>
+<ol start="3" type="1">
+<li>To find the maximum number of times that a categorical variable appears which function should I use?</li>
+</ol>
+<ol type="a">
+<li>filter()</li>
+<li>count()</li>
+<li>select()</li>
+<li>distinct()</li>
+</ol>
+<ol start="4" type="1">
+<li>What does the “%&gt;%” operator do?</li>
+</ol>
+<ol type="a">
+<li>used in tidyverse between layers of dplyr coding</li>
+<li>used in ggplot to add more layers of coding</li>
+</ol>
+<ol start="5" type="1">
+<li>Will this code run without an error? mutate(price_hundred = price %/% 100)</li>
+</ol>
+<ol type="a">
+<li>It will produce an error</li>
+<li>It will not produce an error</li>
+</ol>
+<ol start="6" type="1">
+<li>What does the binwidth input do?</li>
+</ol>
+<ol type="a">
+<li>It controls the</li>
+</ol>
+<ol start="7" type="1">
+<li>What punctuation must be placed before a function or dataset to access more information?</li>
+</ol>
+<ol type="a">
+<li>“.”</li>
+<li>“+”</li>
+<li>“?”</li>
+<li>“!”</li>
+</ol>
+<ol start="9" type="1">
+<li>Where should the variable names go in the following line of code ggplot(data = <a>) + <b>(mapping = aes(<c>))”</c></b></a></li><a><b>
+</b></a></ol><a><b>
+<ol type="a">
+<li>A</li>
+<li>B</li>
+<li>C</li>
+</ol>
+<ol start="10" type="1">
+<li>What does the here package do?</li>
+</ol>
+<ol type="a">
+<li>for data manipulation and display</li>
+<li>to organize files</li>
+<li>none of the above</li>
+</ol>
+<ol start="11" type="1">
+<li><p>Which of the following variables are discrete?</p></li>
+<li><p>Which of the following variables are categorical?</p></li>
+<li><p>Which of the following variables are ordinal?</p></li>
+<li><p>Which of the following variables are continous?</p></li>
+<li><p>What is the difference between distinct() and count()?</p></li>
+</ol>
+<ol type="a">
+<li>they are the same</li>
+<li>distinct() gives the levels in a variable, count() gives the marginal distribution</li>
+<li>distinct() gives the marginal distribution, count() gives the levels in a variable</li>
+</ol>
+<ol start="16" type="1">
+<li>What operator is used in ggplot?</li>
+</ol>
+<ol type="a">
+<li>“.”</li>
+<li>“+”</li>
+<li>“?”</li>
+<li>“!”</li>
+</ol>
+<p>Categorical variables</p>
+<ol start="15" type="1">
+<li><p>Expected count from a Chi-Squared distribtuion</p></li>
+<li><p>Some of the last questions on these - https://openintro.shinyapps.io/ims-02-explore-01/#section-distribution-of-one-variable</p></li>
+<li><p>Conditional on one of two variables or the other to answer the question?</p></li>
+<li><p>Conditional tables on both variables and which one is the right proportion?</p></li>
+</ol>
+<p>Numeric variables 19. Plot with mean, meadian and mode - label each</p>
+<ol start="20" type="1">
+<li><p>Mean or median better measure of center in these distributions</p></li>
+<li><p>Which plot is better to display a</p></li>
+</ol>
+</b></a><b>
 
 
-
-</main> <!-- /main -->
+</b></main><b> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -575,14 +579,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+</b></div><b> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2022, gwynn sturdevant</div>   
-    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="nav-footer-right">This page is built with ❤️ and </div>
   </div>
 </footer>
 
 
 
-</body></html>
+</b></body></html>
