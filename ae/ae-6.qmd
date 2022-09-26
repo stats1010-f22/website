@@ -35,12 +35,16 @@ library(tidyverse)
   b. used in ggplot to add more layers of coding
 
 5. Will this code run without an error? 
-mutate(price_hundred = price %/% 100)
+diamonds %>% 
+   mutate(price_hundred = price %/% 100)
   a. It will produce an error
   b. It will not produce an error
 
-6. What does the binwidth input do?
-  a. It controls the 
+6. What does the binwidth input in ggplot do?
+  a. It controls the opacity of the plot
+  b. It can be used to update the labels
+  c. It controls the smoothness of a density plot
+  d. It controls the size of dots
   
 
 7. What punctuation must be placed before a function or dataset to access more information?
@@ -65,8 +69,10 @@ ggplot(data = <A>) +
 
 11. Which of the following variables are discrete?
  a. number of employees in a company.
- b. distance 
-
+ b. distance traveled to and from work
+ c. taxes paid in 2019
+ d. purchases from 2018
+ 
 
 
 15. What is the difference between distinct() and count()?
@@ -74,15 +80,14 @@ a. they are the same
 b. distinct() gives the levels in a variable, count() gives the marginal distribution
 c. distinct() gives the marginal distribution, count() gives the levels in a variable
 
-16. What operator is used in ggplot? 
+17. What operator is used in ggplot?
   a. "."
   b. "+"
   c. "?"
   d. "!"
 
 Categorical variables
-
-15. Find the expected count for clarity VS1 and color I for a $\chi^2$ distribution assuming independence.
+18. Find the expected count for clarity VS1 and color I for a $\chi^2$ distribution assuming independence.
 
 ```{r chi-squared}
 #| eval: true
@@ -97,13 +102,7 @@ diamonds %>%
   
 ```
 
-
-
-16. Some of the last questions on these - https://openintro.shinyapps.io/ims-02-explore-01/#section-distribution-of-one-variable
-
-
-17. What proportion of the very good cut diamonds are colored I?
-
+19. What proportion of the very good cut diamonds are colored I?
 ```{r prop_color}
 #| eval: true
 #| echo: false
@@ -131,7 +130,7 @@ diamonds %>%
   
 ```
 
-19. Which of the lines below is  more likely to be the mean and which is likely to be the median, and which is likely to be the mode.
+20. Which of the lines below is the mean, median, or mode?
 ```{r, mean-median}
 #| echo: false
 #| eval: true
@@ -148,7 +147,7 @@ b. red is mean, green is mode
 c. red is mode, green is mean
 d. red is mean, green is median
 
-20. Is the mean or median a better measure of center in this distribution.
+21. Is the mean or median a better measure of center in this distribution.
 ```{r, hist-x}
 #| echo: false
 #| eval: true
@@ -160,7 +159,7 @@ ggplot(data = diamonds) +
   xlim(2, 10)
 ```
 
-21. Which plot is better to display a outliers:
+22. Which plot is best at displaying outliers:
 a. histogram
 b. dotplot
 c. plot of proportions
