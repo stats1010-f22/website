@@ -149,7 +149,7 @@ c. red is mode, green is mean
 d. red is mean, green is median
 
 20. Is the mean or median a better measure of center in this distribution.
-```{r, mean-median}
+```{r, hist-x}
 #| echo: false
 #| eval: true
 #| warning: false
