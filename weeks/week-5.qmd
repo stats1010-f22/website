@@ -8,15 +8,9 @@ editor: visual
 
 📖 Read [Solutions to AEs](https://canvas.upenn.edu/courses/1680632/files)
 
-## Participate
-
-🖥️
-
-🖥️
-
 ## Practice
 
-📋
+📋 [Revision 1 for exam 1](/ae/ae-6.html)
 
 📋
 
