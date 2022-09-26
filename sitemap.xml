@@ -1,163 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sta210-s22.github.io/website/project-tips-resources.html</loc>
-    <lastmod>2022-09-26T03:27:11.483Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/project-description.html</loc>
-    <lastmod>2022-09-26T03:27:13.347Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/course-links.html</loc>
-    <lastmod>2022-09-26T03:27:13.815Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/exams/exam-1.html</loc>
-    <lastmod>2022-09-26T03:27:14.303Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/slides/lect_02.html</loc>
-    <lastmod>2022-09-26T03:27:14.767Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/slides/lect_06.html</loc>
-    <lastmod>2022-09-26T03:27:15.227Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/slides/here_lecture.html</loc>
-    <lastmod>2022-09-26T03:27:15.855Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/slides/lect_03.html</loc>
-    <lastmod>2022-09-26T03:27:16.327Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/slides/lec-1.html</loc>
-    <lastmod>2022-09-26T03:27:16.935Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/slides/lect_04.html</loc>
-    <lastmod>2022-09-26T03:27:17.343Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/slides/01_introduction.html</loc>
-    <lastmod>2022-09-26T03:27:17.799Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/slides/lect_05.html</loc>
-    <lastmod>2022-09-26T03:27:18.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/ae/ae-5.html</loc>
-    <lastmod>2022-09-26T03:27:19.855Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/ae/ae-6.html</loc>
-    <lastmod>2022-09-26T03:27:25.103Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/ae/ae-0-first_line_of_code.html</loc>
-    <lastmod>2022-09-26T03:27:25.935Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/ae/ae-3.html</loc>
-    <lastmod>2022-09-26T03:27:26.779Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/ae/ae-4.html</loc>
-    <lastmod>2022-09-26T03:27:27.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/ae/ae-2-exploring-categorical-vars.html</loc>
-    <lastmod>2022-09-26T03:27:28.183Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/ae/ae-4-exam-1-review.html</loc>
-    <lastmod>2022-09-26T03:27:29.003Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/index.html</loc>
-    <lastmod>2022-09-26T03:27:30.419Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/course-syllabus.html</loc>
-    <lastmod>2022-09-26T03:27:31.211Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/LICENSE.html</loc>
-    <lastmod>2022-09-26T03:27:31.875Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/course-faq.html</loc>
-    <lastmod>2022-09-26T03:27:32.783Z</lastmod>
+    <loc>https://sta210-s22.github.io/website/supplemental/log-transformations.html</loc>
+    <lastmod>2022-09-26T16:11:28.234Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/supplemental/slr-derivations.html</loc>
-    <lastmod>2022-09-26T03:27:33.275Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/supplemental/model-selection-criteria.html</loc>
-    <lastmod>2022-09-26T03:27:33.779Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/supplemental/chi-squared.html</loc>
-    <lastmod>2022-09-26T03:27:34.239Z</lastmod>
+    <lastmod>2022-09-26T16:11:28.738Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/supplemental/model-diagnostics-matrix.html</loc>
-    <lastmod>2022-09-26T03:27:34.799Z</lastmod>
+    <lastmod>2022-09-26T16:11:29.298Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/supplemental/model-selection-criteria.html</loc>
+    <lastmod>2022-09-26T16:11:29.846Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/supplemental/mlr-matrix.html</loc>
-    <lastmod>2022-09-26T03:27:35.359Z</lastmod>
+    <lastmod>2022-09-26T16:11:30.422Z</lastmod>
   </url>
   <url>
-    <loc>https://sta210-s22.github.io/website/supplemental/log-transformations.html</loc>
-    <lastmod>2022-09-26T03:27:35.859Z</lastmod>
+    <loc>https://sta210-s22.github.io/website/supplemental/chi-squared.html</loc>
+    <lastmod>2022-09-26T16:11:30.886Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/course-team.html</loc>
-    <lastmod>2022-09-26T03:27:36.343Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/weeks/week-3.html</loc>
-    <lastmod>2022-09-26T03:27:36.867Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/weeks/week-2.html</loc>
-    <lastmod>2022-09-26T03:27:37.327Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta210-s22.github.io/website/weeks/week-4.html</loc>
-    <lastmod>2022-09-26T03:27:37.811Z</lastmod>
+    <lastmod>2022-09-26T16:11:31.382Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/weeks/week-5.html</loc>
-    <lastmod>2022-09-26T03:27:38.263Z</lastmod>
+    <lastmod>2022-09-26T16:11:31.870Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/weeks/week-4.html</loc>
+    <lastmod>2022-09-26T16:11:32.358Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/weeks/week-2.html</loc>
+    <lastmod>2022-09-26T16:11:32.814Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/weeks/week-1.html</loc>
-    <lastmod>2022-09-26T03:27:38.743Z</lastmod>
+    <lastmod>2022-09-26T16:11:33.262Z</lastmod>
   </url>
   <url>
-    <loc>https://sta210-s22.github.io/website/documents/about_R.html</loc>
-    <lastmod>2022-09-26T03:27:39.239Z</lastmod>
+    <loc>https://sta210-s22.github.io/website/weeks/week-3.html</loc>
+    <lastmod>2022-09-26T16:11:33.722Z</lastmod>
   </url>
   <url>
-    <loc>https://sta210-s22.github.io/website/course-overview.html</loc>
-    <lastmod>2022-09-26T03:27:39.691Z</lastmod>
+    <loc>https://sta210-s22.github.io/website/slides/lec-1.html</loc>
+    <lastmod>2022-09-26T16:11:34.566Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/slides/lect_03.html</loc>
+    <lastmod>2022-09-26T16:11:35.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/slides/01_introduction.html</loc>
+    <lastmod>2022-09-26T16:11:35.566Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/slides/lect_04.html</loc>
+    <lastmod>2022-09-26T16:11:36.042Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/slides/here_lecture.html</loc>
+    <lastmod>2022-09-26T16:11:36.702Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/slides/lect_02.html</loc>
+    <lastmod>2022-09-26T16:11:37.110Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/slides/lect_05.html</loc>
+    <lastmod>2022-09-26T16:11:37.554Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/slides/lect_06.html</loc>
+    <lastmod>2022-09-26T16:11:38.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/ae/ae-4.html</loc>
+    <lastmod>2022-09-26T16:11:39.362Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/ae/ae-3.html</loc>
+    <lastmod>2022-09-26T16:11:40.214Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/ae/ae-2-exploring-categorical-vars.html</loc>
+    <lastmod>2022-09-26T16:11:41.238Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/ae/ae-6.html</loc>
+    <lastmod>2022-09-26T16:11:47.406Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/ae/ae-0-first_line_of_code.html</loc>
+    <lastmod>2022-09-26T16:11:48.274Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/ae/ae-5.html</loc>
+    <lastmod>2022-09-26T16:11:49.086Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/ae/ae-4-exam-1-review.html</loc>
+    <lastmod>2022-09-26T16:11:50.042Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/exams/exam-1.html</loc>
+    <lastmod>2022-09-26T16:11:50.538Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/project-description.html</loc>
+    <lastmod>2022-09-26T16:11:51.486Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/course-support.html</loc>
-    <lastmod>2022-09-26T03:27:40.219Z</lastmod>
+    <lastmod>2022-09-26T16:11:52.158Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/course-faq.html</loc>
+    <lastmod>2022-09-26T16:11:52.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/index.html</loc>
+    <lastmod>2022-09-26T16:11:54.130Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/course-links.html</loc>
+    <lastmod>2022-09-26T16:11:54.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/course-overview.html</loc>
+    <lastmod>2022-09-26T16:11:55.102Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/LICENSE.html</loc>
+    <lastmod>2022-09-26T16:11:55.762Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/course-syllabus.html</loc>
+    <lastmod>2022-09-26T16:11:56.602Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/project-tips-resources.html</loc>
+    <lastmod>2022-09-26T16:11:57.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta210-s22.github.io/website/documents/about_R.html</loc>
+    <lastmod>2022-09-26T16:11:57.862Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/hw/hw-1.html</loc>
-    <lastmod>2022-09-26T03:27:41.047Z</lastmod>
+    <lastmod>2022-09-26T16:11:58.698Z</lastmod>
   </url>
   <url>
     <loc>https://sta210-s22.github.io/website/hw/hw-6.html</loc>
-    <lastmod>2022-09-26T03:27:41.583Z</lastmod>
+    <lastmod>2022-09-26T16:11:59.266Z</lastmod>
   </url>
 </urlset>
