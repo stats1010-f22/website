@@ -232,4 +232,5 @@ ggplot(data = diamonds) +
 
 a.  histogram
 b.  dotplot
-c.  plot of proportions *d.* boxplot
+c.  plot of proportions
+d.  *d. boxplot*
