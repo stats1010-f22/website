@@ -13,7 +13,7 @@ library(tidyverse)
 
 
 1. What tidyverse function would you use to extract rows?
-  a. filter()
+  *a. filter()*
   b. count()
   c. select()
   d. distinct()
@@ -22,36 +22,36 @@ library(tidyverse)
 2. What tidyverse function would you use to extract colums?
   a. filter()
   b. count()
-  c. select()
+  *c. select()*
   d. distinct()
 
 3. To find the maximum number of times that a categorical variable appears which function should I use?
   a. filter()
-  b. count()
+  *b. count()*
   c. select()
   d. distinct()
 
 4. What does the "%>%" operator do?
-  a. used in tidyverse between layers of dplyr coding
+  *a. used in tidyverse between layers of dplyr coding*
   b. used in ggplot to add more layers of coding
 
 5. Will this code run without an error? 
 diamonds %>% 
    mutate(price_hundred = price %/% 100)
   a. It will produce an error
-  b. It will not produce an error
+  *b. It will not produce an error*
 
 6. What does the binwidth input in ggplot do?
   a. It controls the opacity of the plot
   b. It can be used to update the labels
-  c. It controls the smoothness of a density plot
+  *c. It controls the smoothness of a density plot*
   d. It controls the size of dots
   
 
 7. What punctuation must be placed before a function or dataset to access more information?
   a. "."
   b. "+"
-  c. "?"
+  *c. "?"*
   d. "!"
 
 9. Where should the variable names go in the following line of code: 
@@ -59,17 +59,17 @@ ggplot(data = A) +
   B(mapping = aes(C))
   a. A
   b. B
-  c. C
+  *c. C*
   
 
 10. What does the here package do?
   a. for data manipulation and display
-  b. to organize files
+  *b. to organize files*
   c. none of the above
 
 
 11. Which of the following variables are discrete?
- a. number of employees in a company.
+ *a. number of employees in a company.*
  b. distance traveled to and from work
  c. taxes paid in 2019
  d. purchases from 2018
@@ -78,17 +78,20 @@ ggplot(data = A) +
 
 15. What is the difference between distinct() and count()?
 a. they are the same
-b. distinct() gives the levels in a variable, count() gives the marginal distribution
+*b. distinct() gives the levels in a variable, count() gives the marginal distribution*
 c. distinct() gives the marginal distribution, count() gives the levels in a variable
 
 17. What operator is used in ggplot?
   a. "."
-  b. "+"
+  *b. "+"*
   c. "?"
   d. "!"
 
 Categorical variables
+
 18. Find the expected count for clarity VS1 and color I for a $\chi^2$ distribution assuming independence.
+
+
 
 ```{r chi-squared}
 #| eval: true
@@ -100,9 +103,13 @@ diamonds %>%
               values_from = n) %>% 
   mutate(marginal_clarity = rowSums(.[2:8])) %>% 
   mutate(marginal_color = colSums(.[2:9]))
+
+8171*2808/53940
 ```
 
 19. What proportion of the very good cut diamonds are colored I?
+*0.0997*
+
 ```{r prop_color}
 #| eval: true
 #| echo: false
@@ -145,9 +152,11 @@ ggplot(data = diamonds) +
 a. red is median, green is mean
 b. red is mean, green is mode
 c. red is mode, green is mean
-d. red is mean, green is median
+*d. red is mean, green is median*
 
 21. Is the mean or median a better measure of center in this distribution.
+
+*The mean is a better estimate in a a symmetric distribution, median in a skewed distribution*
 ```{r, hist-x}
 #| echo: false
 #| eval: true
@@ -163,5 +172,5 @@ ggplot(data = diamonds) +
 a. histogram
 b. dotplot
 c. plot of proportions
-d. boxplot
+*d. boxplot*
 
