@@ -59,17 +59,17 @@ ggplot(data = A) +
   B(mapping = aes(C))
   a. A
   b. B
-  *c. C*
+  *c.* C
   
 
 10. What does the here package do?
   a. for data manipulation and display
-  *b. to organize files*
+  *b.* to organize files
   c. none of the above
 
 
 11. Which of the following variables are discrete?
- *a. number of employees in a company.*
+ *a.* number of employees in a company.
  b. distance traveled to and from work
  c. taxes paid in 2019
  d. purchases from 2018
@@ -78,12 +78,12 @@ ggplot(data = A) +
 
 15. What is the difference between distinct() and count()?
 a. they are the same
-*b. distinct() gives the levels in a variable, count() gives the marginal distribution*
+*b.* distinct() gives the levels in a variable, count() gives the marginal distribution
 c. distinct() gives the marginal distribution, count() gives the levels in a variable
 
 17. What operator is used in ggplot?
   a. "."
-  *b. "+"*
+  *b.* "+"
   c. "?"
   d. "!"
 
@@ -91,7 +91,7 @@ Categorical variables
 
 18. Find the expected count for clarity VS1 and color I for a $\chi^2$ distribution assuming independence.
 
-
+**8171*2808/53940**
 
 ```{r chi-squared}
 #| eval: true
@@ -152,7 +152,7 @@ ggplot(data = diamonds) +
 a. red is median, green is mean
 b. red is mean, green is mode
 c. red is mode, green is mean
-*d. red is mean, green is median*
+*d.* red is mean, green is median
 
 21. Is the mean or median a better measure of center in this distribution.
 
@@ -172,5 +172,5 @@ ggplot(data = diamonds) +
 a. histogram
 b. dotplot
 c. plot of proportions
-*d. boxplot*
+*d.* boxplot
 
