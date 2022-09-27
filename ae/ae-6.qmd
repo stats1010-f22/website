@@ -13,7 +13,7 @@ library(tidyverse)
 
 
 1. What tidyverse function would you use to extract rows?
-  *a. filter()*
+  *a.* filter()
   b. count()
   c. select()
   d. distinct()
@@ -22,36 +22,36 @@ library(tidyverse)
 2. What tidyverse function would you use to extract colums?
   a. filter()
   b. count()
-  *c. select()*
+  *c.* select()
   d. distinct()
 
 3. To find the maximum number of times that a categorical variable appears which function should I use?
   a. filter()
-  *b. count()*
+  *b.* count()
   c. select()
   d. distinct()
 
 4. What does the "%>%" operator do?
-  *a. used in tidyverse between layers of dplyr coding*
+  *a.* used in tidyverse between layers of dplyr coding
   b. used in ggplot to add more layers of coding
 
 5. Will this code run without an error? 
 diamonds %>% 
    mutate(price_hundred = price %/% 100)
   a. It will produce an error
-  *b. It will not produce an error*
+  *b.* It will not produce an error
 
 6. What does the binwidth input in ggplot do?
   a. It controls the opacity of the plot
   b. It can be used to update the labels
-  *c. It controls the smoothness of a density plot*
+  *c.* It controls the smoothness of a density plot
   d. It controls the size of dots
   
 
 7. What punctuation must be placed before a function or dataset to access more information?
   a. "."
   b. "+"
-  *c. "?"*
+  *c.* "?"
   d. "!"
 
 9. Where should the variable names go in the following line of code: 
