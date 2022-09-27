@@ -14,6 +14,10 @@ library(tidyverse)
 1.  What tidyverse function would you use to extract rows?
 
     *a. filter()*
+
+```{=html}
+<!-- -->
+```
 b.  count()
 c.  select()
 d.  distinct()
@@ -25,9 +29,9 @@ d.  distinct()
 <!-- -->
 
 a.  filter()
-b.  count() 
-*c.* select()
-c.  distinct()
+b.  count()
+c.  *c. select()*
+d.  distinct()
 
 <!-- -->
 
@@ -35,25 +39,28 @@ c.  distinct()
 
 <!-- -->
 
-a.  filter() 
-*b.* count()
-b.  select()
-c.  distinct()
+a.  filter()
+b.  *b. count()*
+c.  select()
+d.  distinct()
 
 <!-- -->
 
-4.  What does the "%\>%" operator do? 
+4.  What does the "%\>%" operator do?
 
-*a.* used in tidyverse between layers of dplyr coding
-b.  used in ggplot to add more layers of coding
+*a. used in tidyverse between layers of dplyr coding*
+
+b\. used in ggplot to add more layers of coding
 
 <!-- -->
 
 5.  Will this code run without an error? diamonds %\>% mutate(price_hundred = price %/% 100)
 
-
-a.  It will produce an error 
-*b.* It will not produce an error
+```{=html}
+<!-- -->
+```
+a.  It will produce an error
+b.  *b. It will not produce an error*
 
 <!-- -->
 
@@ -62,9 +69,9 @@ a.  It will produce an error
 <!-- -->
 
 a.  It controls the opacity of the plot
-b.  It can be used to update the labels 
-*c.* It controls the smoothness of a density plot
-c.  It controls the size of dots
+b.  It can be used to update the labels
+c.  *c. It controls the smoothness of a density plot*
+d.  It controls the size of dots
 
 <!-- -->
 
@@ -73,9 +80,9 @@ c.  It controls the size of dots
 <!-- -->
 
 a.  "."
-b.  "+" 
-*c.* "?"
-c.  "!"
+b.  "+"
+c.   *c. "?"*
+d.  "!"
 
 <!-- -->
 
@@ -84,8 +91,8 @@ c.  "!"
 <!-- -->
 
 a.  A
-b.  B 
-*c.* C
+b.  B
+c.  *c. C*
 
 <!-- -->
 
@@ -94,13 +101,18 @@ b.  B
 <!-- -->
 
 a.  for data manipulation and display
-*b.* to organize files
+b.  *b. to organize files*
 c.  none of the above
 
 <!-- -->
 
-11. Which of the following variables are discrete? 
-*a.* number of employees in a company.
+11. Which of the following variables are discrete?
+
+    *a. number of employees in a company.*
+
+```{=html}
+<!-- -->
+```
 b.  distance traveled to and from work
 c.  taxes paid in 2019
 d.  purchases from 2018
@@ -111,8 +123,8 @@ d.  purchases from 2018
 
 <!-- -->
 
-a.  they are the same 
-*b.* distinct() gives the levels in a variable, count() gives the marginal distribution
+a.  they are the same
+b.  *b. distinct() gives the levels in a variable, count() gives the marginal distribution*
 c.  distinct() gives the marginal distribution, count() gives the levels in a variable
 
 <!-- -->
@@ -121,10 +133,10 @@ c.  distinct() gives the marginal distribution, count() gives the levels in a va
 
 <!-- -->
 
-a.  "." 
-*b.* "+"
-b.  "?"
-c.  "!"
+a.  "."
+b.  *b. "+"*
+c.  "?"
+d.  "!"
 
 Categorical variables
 
@@ -146,8 +158,9 @@ diamonds %>%
 8171*2808/53940
 ```
 
-19. What proportion of the very good cut diamonds are colored I? 
-*0.0997*
+19. What proportion of the very good cut diamonds are colored I?
+
+    *0.0997*
 
 ```{r prop_color}
 #| eval: true
@@ -193,8 +206,8 @@ ggplot(data = diamonds) +
 
 a.  red is median, green is mean
 b.  red is mean, green is mode
-c.  red is mode, green is mean 
-*d.* red is mean, green is median
+c.  red is mode, green is mean
+d.  *d. red is mean, green is median*
 
 <!-- -->
 
@@ -219,5 +232,4 @@ ggplot(data = diamonds) +
 
 a.  histogram
 b.  dotplot
-c.  plot of proportions 
-*d.* boxplot
+c.  plot of proportions *d.* boxplot
