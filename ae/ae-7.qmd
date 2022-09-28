@@ -13,37 +13,36 @@ library(tidyverse)
 
 1.  Find the matching item from the second column
 
-    +-----------------------------------+-----------------------------------------------+
-    | 1\. Independent events            | a\. $P(A \cap B) \neq P(A) \times P(B)$       |
-    +===================================+===============================================+
-    | 2.  Disjoint events               | b\. $0\leq p \leq 1$                          |
-    +-----------------------------------+-----------------------------------------------+
-    | 3.  Union                         | c\. $A, B$ disjoint $P(A\cup B) = P(A) +P(B)$ |
-    +-----------------------------------+-----------------------------------------------+
-    | 4.  Intersection                  | d\. $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ |
-    +-----------------------------------+-----------------------------------------------+
-    | 5.  Complement of A               | e\. $P(A \cup B) \leq P(A) + P(B)$            |
-    +-----------------------------------+-----------------------------------------------+
-    | 6.  Sample space                  | f\. $A \cap B$                                |
-    +-----------------------------------+-----------------------------------------------+
-    | 7.  Addition rule                 | g\. $P(A \cap B) = 0$                         |
-    +-----------------------------------+-----------------------------------------------+
-    | 8.  Complement rule               | h\. $P(S) = 1$                                |
-    +-----------------------------------+-----------------------------------------------+
-    | 9.  Boole's inequality            | i\. $P(A^c) = 1 - P(A)$                       |
-    +-----------------------------------+-----------------------------------------------+
-    | 10. Dependent events              | j\. $P(A ) = 1 - P(A^c)$                      |
-    +-----------------------------------+-----------------------------------------------+
-    | 11. Kolmogorov's axiom            | k\. $A \cup B$                                |
-    +-----------------------------------+-----------------------------------------------+
-    |                                   | l\. $A^c$                                     |
-    +-----------------------------------+-----------------------------------------------+
-    |                                   | m\. $S$                                       |
-    +-----------------------------------+-----------------------------------------------+
+    +-----------------------------+-----------------------------------------------+
+    | 1\. Independent events      | a\. $P(A \cap B) \neq P(A) \times P(B)$       |
+    +=============================+===============================================+
+    | 2.  Disjoint events         | b\. $0\leq p \leq 1$                          |
+    +-----------------------------+-----------------------------------------------+
+    | 3.  Union                   | c\. $A, B$ disjoint $P(A\cup B) = P(A) +P(B)$ |
+    +-----------------------------+-----------------------------------------------+
+    | 4.  Intersection            | d\. $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ |
+    +-----------------------------+-----------------------------------------------+
+    | 5.  Complement of A         | e\. $P(A \cup B) \leq P(A) + P(B)$            |
+    +-----------------------------+-----------------------------------------------+
+    | 6.  Sample space            | f\. $A \cap B$                                |
+    +-----------------------------+-----------------------------------------------+
+    | 7.  Addition rule           | g\. $P(A \cap B) = 0$                         |
+    +-----------------------------+-----------------------------------------------+
+    | 8.  Complement rule         | h\. $P(S) = 1$                                |
+    +-----------------------------+-----------------------------------------------+
+    | 9.  Boole's inequality      | i\. $P(A^c) = 1 - P(A)$                       |
+    +-----------------------------+-----------------------------------------------+
+    | 10. Dependent events        | j\. $P(A ) = 1 - P(A^c)$                      |
+    +-----------------------------+-----------------------------------------------+
+    | 11. Kolmogorov's axiom      | k\. $A \cup B$                                |
+    +-----------------------------+-----------------------------------------------+
+    |                             | l\. $A^c$                                     |
+    +-----------------------------+-----------------------------------------------+
+    |                             | m\. $S$                                       |
+    +-----------------------------+-----------------------------------------------+
 
-```{=html}
 <!-- -->
-```
+
 12. When $A \subset B$, then $A \cup B = A$
 
     1.  True
@@ -56,18 +55,31 @@ library(tidyverse)
 
     2.  False
 
-14. Please match the following venn diagrams with the corresponding set theory notation.
+14. One ball will be drawn at random from a box containing: 4 cyan balls, 3 magenta balls, and 5 yellow balls. What is the probability that the ball will be cyan?
 
-    +-------------------------------------+------------------------+
-    | 15. ![](ae-7-images/A.png)          | a.$B \subset A$        |
-    +-------------------------------------+------------------------+
-    | 16.![](ae-7-images/A-comp.png)      | b\. $A$ & $B$ disjoint |
-    +-------------------------------------+------------------------+
-    | 17.![](ae-7-images/AdisjointB.png)  | c\. $A$                |
-    +-------------------------------------+------------------------+
-    | 18.![](ae-7-images/AintersectB.png) | d\. $A \cup B$         |
-    +-------------------------------------+------------------------+
-    | 19.![](ae-7-images/AunionB.png)     | e\. $A \cap B$         |
-    +-------------------------------------+------------------------+
-    | 20.![](ae-7-images/BsubsetA.png)    | f\. $A^c$              |
-    +-------------------------------------+------------------------+
+15. What is the probability that the ball will not be cyan?
+
+16. Instead of taking just one draw, consider taking two draws. You take the second draw without returning the first draw to the box. We call this sampling without replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?
+
+17. Now repeat the experiment, but this time, after taking the first draw and recording the color, return it to the box and shake the box. We call this sampling with replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?
+
+18. Two events A and B are independent if Pr(A and B)=Pr(A)P(B). Under which situation are the draws independent?
+
+    a.  You don't replace the draw.
+    b.  You replace the draw.
+    c.  Neither
+    d.  Both
+
+19. Say you've drawn 5 balls from the box, with replacement, and all have been yellow. What is the probability that the next one is yellow?
+
+20. If you roll a 6-sided die six times, what is the probability of seeing neither a 5 or 6?
+
+21. Please match the following venn diagrams with the corresponding set theory notation.
+
+    | 22.![](ae-7-images/A.png)           | a.$B \subset A$        |
+    |-------------------------------------|------------------------|
+    | 23.![](ae-7-images/A-comp.png)      | b\. $A$ & $B$ disjoint |
+    | 24.![](ae-7-images/AdisjointB.png)  | c\. $A$                |
+    | 25.![](ae-7-images/AintersectB.png) | d\. $A \cup B$         |
+    | 26.![](ae-7-images/AunionB.png)     | e\. $A \cap B$         |
+    | 27.![](ae-7-images/BsubsetA.png)    | f\. $A^c$              |
