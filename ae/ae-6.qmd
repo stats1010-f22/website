@@ -142,7 +142,7 @@ Categorical variables
 
 18. Find the expected count for clarity VS1 and color I for a $\chi^2$ distribution assuming independence.
 
-$8171\times 2808/53940$
+$8171\times 5422/53940$
 
 ```{r chi-squared}
 #| eval: true
@@ -155,7 +155,7 @@ diamonds %>%
   mutate(marginal_clarity = rowSums(.[2:8])) %>% 
   mutate(marginal_color = colSums(.[2:9]))
 
-8171*2808/53940
+8171*5422/53940
 ```
 
 19. What proportion of the very good cut diamonds are colored I?
