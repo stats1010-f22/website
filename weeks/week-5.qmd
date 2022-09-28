@@ -8,17 +8,17 @@ editor: visual
 
 📖 Read [Solutions to AEs](https://canvas.upenn.edu/courses/1680632/files)
 
+📖 Read [Solutions to HW-1](https://canvas.upenn.edu/courses/1680632/files)
+
 ## Practice
 
 📋 [Revision 1 for exam 1](/ae/ae-6.html)
 
-📋
+📋 [Revision 2 for exam 1](/ae/ae-7.html)
 
 ## Perform
 
 ⌨️ [Course evaluation](https://docs.google.com/forms/d/e/1FAIpQLSfVAetsQsepJRd_OOK3kfF_Mv9iibSeLRB2miV27asn2uTRmw/viewform)
-
-✍️
 
 <br><br>
 
