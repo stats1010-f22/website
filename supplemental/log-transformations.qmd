@@ -23,7 +23,7 @@ The R functions we have discussed so far these few weeks:
 | geom_hist()   |           |       |
 | geom_bar()    |           |       |
 | geom_point()  |           |       |
-| lab()         |           |       |
+| labs()        |           |       |
 | facet_wrap()  |           |       |
 
 Benefits and downsides of these visualization methods: histogram and boxplot.
