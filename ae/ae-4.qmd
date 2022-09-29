@@ -17,10 +17,11 @@ This application exercise is due on 23 Sept at 2:00pm.
 4.  Now repeat the experiment, but this time, after taking the first draw and recording the color, return it to the box and shake the box. We call this sampling with replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?
 
 5.  Two events A and B are independent if Pr(A and B)=Pr(A)P(B). Under which situation are the draws independent?
-    a. You don’t replace the draw.
-    b. You replace the draw.
-    c. Neither
-    d. Both
+
+    a.  You don't replace the draw.
+    b.  You replace the draw.
+    c.  Neither
+    d.  Both
 
 6.  Say you've drawn 5 balls from the box, with replacement, and all have been yellow. What is the probability that the next one is yellow?
 
