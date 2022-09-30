@@ -80,8 +80,8 @@ website:
             text: "Week 4"
           - href: weeks/week-5.qmd
             text: "Week 5"
-          # - href: weeks/week-6.qmd
-          #   text: "Week 6"
+          - href: weeks/week-6.qmd
+            text: "Week 6"
           # - href: weeks/week-7.qmd
           #   text: "Week 7"
           # - href: weeks/week-8.qmd
@@ -108,7 +108,7 @@ website:
       #       text: Model diagnostics
       #     - href: supplemental/mlr-matrix.qmd
       #       text: MLR matrix notation
-            - href: supplemental/log-transformations.qmd
+            - href: supplemental/exam-1-studyguide.qmd
               text: Exam 1 study guide
       #     - href: supplemental/model-selection-criteria.qmd
       #       text: Model selection criteria

@@ -1,0 +1,29 @@
+---
+title: "Week 6"
+subtitle: "Exam 1"
+editor: visual
+---
+
+## Prepare
+
+📖 Read
+
+## Practice
+
+📋
+
+📋
+
+## Perform
+
+⌨️ Exam 1
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
