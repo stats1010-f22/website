@@ -16,7 +16,7 @@ editor: visual
 
 ## Perform
 
-⌨️ Exam 1
+✅ Exam 1
 
 <br><br>
 
