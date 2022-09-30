@@ -1,7 +1,7 @@
 [
   {
-    "objectID": "supplemental/log-transformations.html",
-    "href": "supplemental/log-transformations.html",
+    "objectID": "supplemental/exam-1-studyguide.html",
+    "href": "supplemental/exam-1-studyguide.html",
     "title": "Study list for exam 1",
     "section": "",
     "text": "functions\noperators\npipes\n\n\nfilter()\n%/%\n%>%\n\n\ndistinct()\n%%\n“+”\n\n\ncount()\n!=\n\n\n\nselect()\nrowSums()\n\n\n\nmutate()\ncolSums()\n\n\n\nView()\n\n\n\n\nglimpse()\n\n\n\n\npivot_wider()\n\n\n\n\ngroup_by()\n\n\n\n\nchisq.test()\n\n\n\n\nggplot()\n\n\n\n\ngeom_hist()\n\n\n\n\ngeom_bar()\n\n\n\n\ngeom_point()\n\n\n\n\nlabs()\n\n\n\n\nfacet_wrap()\n\n\n\n\n\nBenefits and downsides of these visualization methods: histogram and boxplot.\nConditional probability tables - which variable is it conditioned on.\nMean, median, mode and which is best in skewed distributions. Identify in a plot\nMeasures of spread: standard deviation, variance, quartiles, percentiles, interquartile range.\nChi-squared expected counts given a contingency table of counts.\nIndependent events\nDisjoint events\nVenn diagrams\nCompliment\nThe three laws of probability - Kolomogorov’s axioms\nClassification of variables"
@@ -152,6 +152,27 @@
     "title": "Week 5",
     "section": "Perform",
     "text": "Perform\n⌨️ Course evaluation\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-6.html",
+    "href": "weeks/week-6.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "📖 Read"
+  },
+  {
+    "objectID": "weeks/week-6.html#practice",
+    "href": "weeks/week-6.html#practice",
+    "title": "Week 6",
+    "section": "Practice",
+    "text": "Practice\n📋\n📋"
+  },
+  {
+    "objectID": "weeks/week-6.html#perform",
+    "href": "weeks/week-6.html#perform",
+    "title": "Week 6",
+    "section": "Perform",
+    "text": "Perform\n⌨️ Exam 1\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-4.html",

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 - Fall 2022 - Deriving the Least-Squares Estimates for Simple Linear Regression</title>
+<title>STAT 1010 - Fall 2022 - Study list for exam 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../supplemental/chi-squared.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -60,13 +61,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Deriving the Least-Squares Estimates for Simple Linear Regression">
-<meta property="og:description" content="This document contains the mathematical details for deriving the least-squares estimates for slope (\(\beta_1\)) and intercept (\(\beta_0\)).">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Study list for exam 1">
+<meta property="og:description" content="The R functions we have discussed so far these few weeks:">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Deriving the Least-Squares Estimates for Simple Linear Regression">
-<meta name="twitter:description" content="This document contains the mathematical details for deriving the least-squares estimates for slope (\(\beta_1\)) and intercept (\(\beta_0\)).">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Study list for exam 1">
+<meta name="twitter:description" content="The R functions we have discussed so far these few weeks:">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Deriving the Least-Squares Estimates for Simple Linear Regression</h1>
+      <h1 class="quarto-secondary-nav-title">Study list for exam 1</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -228,12 +228,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Supplemental notes</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Supplemental notes</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../supplemental/chi-squared.html" class="sidebar-item-text sidebar-link">Chi squared expected counts</a>
@@ -241,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../supplemental/exam-1-studyguide.html" class="sidebar-item-text sidebar-link">Exam 1 study guide</a>
+  <a href="../supplemental/exam-1-studyguide.html" class="sidebar-item-text sidebar-link active">Exam 1 study guide</a>
   </div>
 </li>
       </ul>
@@ -258,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Deriving the Least-Squares Estimates for Simple Linear Regression</h1>
+<h1 class="title d-none d-lg-block">Study list for exam 1</h1>
 </div>
 
 
@@ -272,54 +272,107 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The following supplemental notes were created by <a href="https://www.mariatackett.net/">Dr.&nbsp;Maria Tackett</a> for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.</p>
-</div>
-</div>
-<p>This document contains the mathematical details for deriving the least-squares estimates for slope (<span class="math inline">\(\beta_1\)</span>) and intercept (<span class="math inline">\(\beta_0\)</span>). We obtain the estimates, <span class="math inline">\(\hat{\beta}_1\)</span> and <span class="math inline">\(\hat{\beta}_0\)</span> by finding the values that minimize the sum of squared residuals, as shown in <a href="#eq-ssr">Equation&nbsp;1</a>.</p>
-<p><span id="eq-ssr"><span class="math display">\[
-SSR = \sum\limits_{i=1}^{n}[y_i - \hat{y}_i]^2 = [y_i - (\hat{\beta}_0 + \hat{\beta}_1 x_i)]^2 = [y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i]^2
-\tag{1}\]</span></span></p>
-<p>Recall that we can find the values of <span class="math inline">\(\hat{\beta}_1\)</span> and <span class="math inline">\(\hat{\beta}_0\)</span> that minimize /eq-ssr by taking the partial derivatives of <a href="#eq-ssr">Equation&nbsp;1</a> and setting them to 0. Thus, the values of <span class="math inline">\(\hat{\beta}_1\)</span> and <span class="math inline">\(\hat{\beta}_0\)</span> that minimize the respective partial derivative also minimize the sum of squared residuals. The partial derivatives are shown in <a href="#eq-par-deriv">Equation&nbsp;2</a>.</p>
-<p><span id="eq-par-deriv"><span class="math display">\[
-\begin{aligned}
-\frac{\partial \text{SSR}}{\partial \hat{\beta}_1} &amp;= -2 \sum\limits_{i=1}^{n}x_i(y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)  \\
-\frac{\partial \text{SSR}}{\partial \hat{\beta}_0} &amp;= -2 \sum\limits_{i=1}^{n}(y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)
-\end{aligned}
-\tag{2}\]</span></span></p>
-<p>The derivation of deriving <span class="math inline">\(\hat{\beta}_0\)</span> is shown in <a href="#eq-est-beta0">Equation&nbsp;3</a>.</p>
-<p><span id="eq-est-beta0"><span class="math display">\[
-\begin{aligned}\frac{\partial \text{SSR}}{\partial \hat{\beta}_0} &amp;= -2 \sum\limits_{i=1}^{n}(y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i) = 0 \\&amp;\Rightarrow -\sum\limits_{i=1}^{n}(y_i + \hat{\beta}_0 + \hat{\beta}_1 x_i) = 0 \\&amp;\Rightarrow - \sum\limits_{i=1}^{n}y_i + n\hat{\beta}_0 + \hat{\beta}_1\sum\limits_{i=1}^{n}x_i = 0 \\&amp;\Rightarrow n\hat{\beta}_0  = \sum\limits_{i=1}^{n}y_i - \hat{\beta}_1\sum\limits_{i=1}^{n}x_i \\&amp;\Rightarrow \hat{\beta}_0  = \frac{1}{n}\Big(\sum\limits_{i=1}^{n}y_i - \hat{\beta}_1\sum\limits_{i=1}^{n}x_i\Big)\\&amp;\Rightarrow \hat{\beta}_0  = \bar{y} - \hat{\beta}_1 \bar{x} \\\end{aligned}
-\tag{3}\]</span></span></p>
-<p>The derivation of <span class="math inline">\(\hat{\beta}_1\)</span> using the <span class="math inline">\(\hat{\beta}_0\)</span> we just derived is shown in <a href="#eq-est-beta1-pt1">Equation&nbsp;4</a>.</p>
-<p><span id="eq-est-beta1-pt1"><span class="math display">\[
-\begin{aligned}&amp;\frac{\partial \text{SSR}}{\partial \hat{\beta}_1} = -2 \sum\limits_{i=1}^{n}x_i(y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i) = 0  \\&amp;\Rightarrow -\sum\limits_{i=1}^{n}x_iy_i + \hat{\beta}_0\sum\limits_{i=1}^{n}x_i + \hat{\beta}_1\sum\limits_{i=1}^{n}x_i^2 = 0 \\\text{(Fill in }\hat{\beta}_0\text{)}&amp;\Rightarrow -\sum\limits_{i=1}^{n}x_iy_i + (\bar{y} - \hat{\beta}_1\bar{x})\sum\limits_{i=1}^{n}x_i + \hat{\beta}_1\sum\limits_{i=1}^{n}x_i^2 = 0 \\&amp;\Rightarrow  (\bar{y} - \hat{\beta}_1\bar{x})\sum\limits_{i=1}^{n}x_i + \hat{\beta}_1\sum\limits_{i=1}^{n}x_i^2 = \sum\limits_{i=1}^{n}x_iy_i \\&amp;\Rightarrow \bar{y}\sum\limits_{i=1}^{n}x_i - \hat{\beta}_1\bar{x}\sum\limits_{i=1}^{n}x_i + \hat{\beta}_1\sum\limits_{i=1}^{n}x_i^2 = \sum\limits_{i=1}^{n}x_iy_i \\&amp;\Rightarrow n\bar{y}\bar{x} - \hat{\beta}_1n\bar{x}^2 + \hat{\beta}_1\sum\limits_{i=1}^{n}x_i^2 = \sum\limits_{i=1}^{n}x_iy_i \\&amp;\Rightarrow \hat{\beta}_1\sum\limits_{i=1}^{n}x_i^2 - \hat{\beta}_1n\bar{x}^2  = \sum\limits_{i=1}^{n}x_iy_i - n\bar{y}\bar{x} \\&amp;\Rightarrow \hat{\beta}_1\Big(\sum\limits_{i=1}^{n}x_i^2 -n\bar{x}^2\Big)  = \sum\limits_{i=1}^{n}x_iy_i - n\bar{y}\bar{x} \\ &amp;\hat{\beta}_1 = \frac{\sum\limits_{i=1}^{n}x_iy_i - n\bar{y}\bar{x}}{\sum\limits_{i=1}^{n}x_i^2 -n\bar{x}^2}\end{aligned}
-\tag{4}\]</span></span></p>
-<p>To write <span class="math inline">\(\hat{\beta}_1\)</span> in a form that’s more recognizable, we will use the following:</p>
-<p><span id="eq-cov"><span class="math display">\[
-\sum x_iy_i - n\bar{y}\bar{x} = \sum(x - \bar{x})(y - \bar{y}) = (n-1)\text{Cov}(x,y)
-\tag{5}\]</span></span></p>
-<p><span id="eq-var_x"><span class="math display">\[
-\sum x_i^2 - n\bar{x}^2 - \sum(x - \bar{x})^2 = (n-1)s_x^2
-\tag{6}\]</span></span></p>
-<p>where <span class="math inline">\(\text{Cov}(x,y)\)</span> is the covariance of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, and <span class="math inline">\(s_x^2\)</span> is the sample variance of <span class="math inline">\(x\)</span> (<span class="math inline">\(s_x\)</span> is the sample standard deviation).</p>
-<p>Thus, applying <a href="#eq-cov">Equation&nbsp;5</a> and <a href="#eq-var_x">Equation&nbsp;6</a>, we have</p>
-<p><span id="eq-est-beta1-pt2"><span class="math display">\[
-\begin{aligned}\hat{\beta}_1 &amp;= \frac{\sum\limits_{i=1}^{n}x_iy_i - n\bar{y}\bar{x}}{\sum\limits_{i=1}^{n}x_i^2 -n\bar{x}^2} \\&amp;= \frac{\sum\limits_{i=1}^{n}(x-\bar{x})(y-\bar{y})}{\sum\limits_{i=1}^{n}(x-\bar{x})^2}\\&amp;= \frac{(n-1)\text{Cov}(x,y)}{(n-1)s_x^2}\\&amp;= \frac{\text{Cov}(x,y)}{s_x^2}\end{aligned}
-\tag{7}\]</span></span></p>
-<p>The correlation between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is <span class="math inline">\(r = \frac{\text{Cov}(x,y)}{s_x s_y}\)</span>. Thus, <span class="math inline">\(\text{Cov}(x,y) = r s_xs_y\)</span>. Plugging this into <a href="#eq-est-beta1-pt2">Equation&nbsp;7</a>, we have</p>
-<p><span id="eq-est-beta1"><span class="math display">\[
-\hat{\beta}_1 = \frac{\text{Cov}(x,y)}{s_x^2} = r\frac{s_ys_x}{s_x^2} = r\frac{s_y}{s_x}
-\tag{8}\]</span></span></p>
+<p>The R functions we have discussed so far these few weeks:</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>functions</td>
+<td>operators</td>
+<td>pipes</td>
+</tr>
+<tr class="even">
+<td>filter()</td>
+<td>%/%</td>
+<td>%&gt;%</td>
+</tr>
+<tr class="odd">
+<td>distinct()</td>
+<td>%%</td>
+<td>“+”</td>
+</tr>
+<tr class="even">
+<td>count()</td>
+<td>!=</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>select()</td>
+<td>rowSums()</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>mutate()</td>
+<td>colSums()</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>View()</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>glimpse()</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>pivot_wider()</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>group_by()</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>chisq.test()</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ggplot()</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>geom_hist()</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>geom_bar()</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>geom_point()</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>labs()</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>facet_wrap()</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Benefits and downsides of these visualization methods: histogram and boxplot.</p>
+<p>Conditional probability tables - which variable is it conditioned on.</p>
+<p>Mean, median, mode and which is best in skewed distributions. Identify in a plot</p>
+<p>Measures of spread: standard deviation, variance, quartiles, percentiles, interquartile range.</p>
+<p>Chi-squared expected counts given a contingency table of counts.</p>
+<p>Independent events</p>
+<p>Disjoint events</p>
+<p>Venn diagrams</p>
+<p>Compliment</p>
+<p>The three laws of probability - Kolomogorov’s axioms</p>
+<p>Classification of variables</p>
 
 
 
@@ -535,6 +588,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../supplemental/chi-squared.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Chi squared expected counts</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
