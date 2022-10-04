@@ -15,9 +15,8 @@ library(tidyverse)
 
     *a. filter()*
 
-```{=html}
 <!-- -->
-```
+
 b.  count()
 c.  select()
 d.  distinct()
@@ -56,9 +55,8 @@ b\. used in ggplot to add more layers of coding
 
 5.  Will this code run without an error? diamonds %\>% mutate(price_hundred = price %/% 100)
 
-```{=html}
 <!-- -->
-```
+
 a.  It will produce an error
 b.  *b. It will not produce an error*
 
@@ -81,7 +79,7 @@ d.  It controls the size of dots
 
 a.  "."
 b.  "+"
-c.   *c. "?"*
+c.  *c. "?"*
 d.  "!"
 
 <!-- -->
@@ -110,9 +108,8 @@ c.  none of the above
 
     *a. number of employees in a company.*
 
-```{=html}
 <!-- -->
-```
+
 b.  distance traveled to and from work
 c.  taxes paid in 2019
 d.  purchases from 2018

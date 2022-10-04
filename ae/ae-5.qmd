@@ -5,7 +5,7 @@ output:
 ---
 
 ::: callout-important
-This application exercise is due on 4 Oct at 2:00pm.
+This application exercise is due on 14 Oct at 2:00pm.
 :::
 
 Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday's scientists. In short, computers give you superpowers! But if you wish to use them, you'll need to pick up some programming skills. Steve Job said that "[computers are bicycles for our minds"](https://medium.learningbyshipping.com/bicycle-121262546097) because the efficiency rating of humans on bicycles is so incredible, and computers give us similar powers.
@@ -86,7 +86,7 @@ num_of_same_birthdays <- function(n){
   group_by(value) %>% # for each birthday
   count() %>% # count them
   filter(n > 1) %>% # those have more than 1
-  vec_size(.) # the number that are duplicated
+  vec_size(.) %>% # the number that are duplicated
 }
 ```
 
@@ -113,9 +113,12 @@ The law of large numbers says that if we do this *many* times we should have an 
 #| eval: false
 #| echo: true
 
-B <- 10000 # the number of times to run
+B <- 500 # the number of times to run
 results <- replicate(B, # replicate this number of times
-          num_of_same_birthdays(INSERT)) # our function
+          ifelse( # if there are some duplicated birthdays
+            num_of_same_birthdays(50) >= 1, # our function
+            1, # give me a 1
+            0)) # if not, give me a 0
 
 mean(results) # take the mean
 ```
@@ -134,11 +137,14 @@ Let's create a look-up table. We can create a function to compute this for any g
 #| eval: false
 #| echo: true
 
-compute_prob <- # name the function
-  function(n, B = 10000){ # function inputs
+compute <- # name the function
+  function(n, B = 500){ # function inputs
   results <- # store results
     replicate(B, # run num_of_same_birthdays B times 
-              num_of_same_birthdays(n)) # for the value of n
+              ifelse( # if there are some duplicated birthdays
+            num_of_same_birthdays(n) >= 1, # our function
+            1, # give me a 1
+            0)) # if not, give me a 0
   
   mean(results) # find the mean
 }
@@ -153,7 +159,7 @@ Using the function `map_dbl`, we can perform element-wise operations on any func
 #| echo: true
 
 n <- seq(1, 60) # which values of n are important
-prob <- # save the results as prob
+means <- # save the results as prob
   map_dbl(n,  # for each value of n 
           compute_prob) # run the function
 ```
