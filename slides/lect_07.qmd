@@ -33,19 +33,23 @@ Find the mean, and variance for these examples:
 
 2.  Rolling a fair six-sided die
 
-Revision - 2
+# Revision - 2
 
-The scientist collecting measurements with this frequency
+A stock with these prices at this frequency
 
-    | Value | n   |
-    |-------|-----|
-    | 1.23  | 3   |
-    | 1.29  | 5   |
-    | 1.37  | 4   |
-    | 1.84  | 1   |
-    | 1.18  | 6   |
-    | 1.22  | 2   |
-    | 1.25  | 4   |
+| Value | n   |
+|-------|-----|
+| 1.23  | 3   |
+| 1.29  | 5   |
+| 1.37  | 4   |
+| 1.84  | 1   |
+| 1.18  | 6   |
+| 1.22  | 2   |
+| 1.25  | 4   |
+
+# Parameter vs mean
+
+parameter
 
 # Your turn
 
