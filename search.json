@@ -294,6 +294,48 @@
     "text": "Perform\n⌨️ Diagnostic test - week 3\n✍️ HW 6 - Statistics Experience\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
   },
   {
+    "objectID": "slides/lect_07.html#using-proportions",
+    "href": "slides/lect_07.html#using-proportions",
+    "title": "Chapter 9: Random variables",
+    "section": "Using proportions",
+    "text": "Using proportions\n\n\n\n\n\n\n\n\n\\(x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3\n\n\n\n1.29\n5\n\n\n\n1.37\n4\n\n\n\n1.84\n1\n\n\n\n1.18\n6\n\n\n\n1.22\n2\n\n\n\n1.25\n4\n\n\n\nTotal\n25"
+  },
+  {
+    "objectID": "slides/lect_07.html#mean-or-expected-value",
+    "href": "slides/lect_07.html#mean-or-expected-value",
+    "title": "Chapter 9: Random variables",
+    "section": "Mean or expected value",
+    "text": "Mean or expected value\nIf we know $P(X) = x$, then we can use this to find the mean or expected value of a random variable. The pdf includes information about both the total and the number of occurrences of \\(x\\), it does the computation for us.\n\\(\\mu = E(X)\\)\n\\(= x_1p(x_1) + x_2p(x_2) + … + x_np(x_n)\\)"
+  },
+  {
+    "objectID": "slides/lect_07.html#price-increase-1",
+    "href": "slides/lect_07.html#price-increase-1",
+    "title": "Chapter 9: Random variables",
+    "section": "Price increase",
+    "text": "Price increase\n\n\n\n\n\n\n\n\n\\(x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n6.23\n3\n0.148\n\n\n6.29\n5\n0.258\n\n\n6.37\n4\n0.219\n\n\n6.84\n1\n0.0736\n\n\n6.18\n6\n0.283\n\n\n1.22\n2\n0.0976\n\n\n6.25\n4\n0.2"
+  },
+  {
+    "objectID": "slides/lect_07.html#price-increase-2",
+    "href": "slides/lect_07.html#price-increase-2",
+    "title": "Chapter 9: Random variables",
+    "section": "Price increase",
+    "text": "Price increase\n\n\n\n\n\n\n\n\n\nvalues <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) + 5\ncounts <- c(3, 5, 4, 1, 6, 2, 4)\n\nd <- \n  as_tibble(data.frame(values, counts)) %>% \n  mutate(prop = counts/sum(counts)) %>% \n  rowwise() %>% \n  mutate(part_mean = sum(values*prop)) %>% \n  ungroup() %>% \n  mutate(mean = sum (part_mean))\n\nd %>% \n  ggplot(aes(x = values, y = prop)) +\n  geom_bar(stat = \"identity\") +\n  vline()"
+  },
+  {
+    "objectID": "slides/lect_07.html#stock-splits-1",
+    "href": "slides/lect_07.html#stock-splits-1",
+    "title": "Chapter 9: Random variables",
+    "section": "Stock splits",
+    "text": "Stock splits\n\n\n\n\n\n\n\n\n\\(x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n3.69\n3\n0.148\n\n\n3.87\n5\n0.258\n\n\n4.11\n4\n0.219\n\n\n5.52\n1\n0.0736\n\n\n3.54\n6\n0.283\n\n\n3.66\n2\n0.0976\n\n\n3.75\n4\n0.2"
+  },
+  {
+    "objectID": "slides/lect_07.html#stock-splits-2",
+    "href": "slides/lect_07.html#stock-splits-2",
+    "title": "Chapter 9: Random variables",
+    "section": "Stock splits",
+    "text": "Stock splits\n\n\n\n\n\n\n\n\n\nvalues <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) *3\ncounts <- c(3, 5, 4, 1, 6, 2, 4)\n\nd <- \n  as_tibble(data.frame(values, counts)) %>% \n  mutate(prop = counts/sum(counts)) %>% \n  rowwise() %>% \n  mutate(part_mean = sum(values*prop)) %>% \n  ungroup() %>% \n  mutate(mean = sum (part_mean))\n\nd %>% \n  ggplot(aes(x = values, y = prop)) +\n  geom_bar(stat = \"identity\") +\n  vline()"
+  },
+  {
     "objectID": "slides/lec-1.html#meet-the-professor",
     "href": "slides/lec-1.html#meet-the-professor",
     "title": "Welcome to STA 210!",
