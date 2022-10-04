@@ -15,41 +15,342 @@ execute:
 ```{r include = FALSE}
 library(countdown)
 library(pdftools)
+library(tidyverse)
 ```
 
 # Learning outcomes
 
 By the end of this lesson you should:
 
--   Know how to find the mean given a probabiliy mass function
+-   Know how to find the mean given a probability mass function
 
--   Understand how to use expected values and variance rules
+-   Understand how to use multiplication and addition rules to find expected values and variance of new random variables
 
 # Revision - 1
 
 Find the mean, and variance for these examples:
 
-1.  20, 24, 25, 36, 25, 22, 23
+1.  $20, 24, 25, 36, 25, 22, 23$
 
 2.  Rolling a fair six-sided die
 
 # Revision - 2
 
-A stock with these prices at this frequency
+A stock prices ($X$) at these frequencies:
 
-| Value | n   |
-|-------|-----|
-| 1.23  | 3   |
-| 1.29  | 5   |
-| 1.37  | 4   |
-| 1.84  | 1   |
-| 1.18  | 6   |
-| 1.22  | 2   |
-| 1.25  | 4   |
++----------------------------+-------------------------------------+
+| $x$                        | $n$                                 |
++============================+=====================================+
+| 1.23                       | 3                                   |
++----------------------------+-------------------------------------+
+| 1.29                       | 5                                   |
++----------------------------+-------------------------------------+
+| 1.37                       | 4                                   |
++----------------------------+-------------------------------------+
+| 1.84                       | 1                                   |
++----------------------------+-------------------------------------+
+| 1.18                       | 6                                   |
++----------------------------+-------------------------------------+
+| 1.22                       | 2                                   |
++----------------------------+-------------------------------------+
+| 1.25                       | 4                                   |
++----------------------------+-------------------------------------+
+| Total                      | 25                                  |
++----------------------------+-------------------------------------+
 
-# Parameter vs mean
+## Using proportions
 
-parameter
++-------------------+------------------+---------------------------+
+| $x$               | $n$              | $P(X) = x$                |
++===================+==================+===========================+
+| 1.23              | 3                |                           |
++-------------------+------------------+---------------------------+
+| 1.29              | 5                |                           |
++-------------------+------------------+---------------------------+
+| 1.37              | 4                |                           |
++-------------------+------------------+---------------------------+
+| 1.84              | 1                |                           |
++-------------------+------------------+---------------------------+
+| 1.18              | 6                |                           |
++-------------------+------------------+---------------------------+
+| 1.22              | 2                |                           |
++-------------------+------------------+---------------------------+
+| 1.25              | 4                |                           |
++-------------------+------------------+---------------------------+
+| Total             | 25               |                           |
++-------------------+------------------+---------------------------+
+
+## Mean or expected value
+
+If we know \$P(X) = x\$, then we can use this to find the mean or expected value of a random variable. The pdf includes information about both the total and the number of occurrences of $x$, it does the computation for us.
+
+$\mu = E(X)$
+
+$= x_1p(x_1) + x_2p(x_2) + … + x_np(x_n)$
+
+# Probability density function
+
+There are different ways to define a pdf:
+
+-   table
+
+-   plot
+
+# plot - pdf
+
+::: columns
+::: {.column width="40%"}
+```{r pdf-run}
+#| eval: true
+#| message: false
+#| echo: false
+#| column: page-left
+
+values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25)
+counts <- c(3, 5, 4, 1, 6, 2, 4)
+
+d <- 
+  as_tibble(data.frame(values, counts)) %>% 
+    mutate(prop = counts/sum(counts)) %>% 
+     rowwise() %>% 
+     mutate(part_mean = sum(values*prop)) %>% 
+     ungroup() %>% 
+    mutate(mean = sum (part_mean))
+
+d %>% 
+  ggplot(aes(x = values, y = prop)) +
+  geom_bar(stat = "identity") + 
+  geom_vline(aes(xintercept = mean, color = "red"))
+```
+:::
+
+::: {.column width="60%"}
+```{r pdf-view}
+#| eval: false
+#| message: false
+#| echo: true
+#| column: page-right
+
+values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25)
+counts <- c(3, 5, 4, 1, 6, 2, 4)
+
+d <- 
+  as_tibble(data.frame(values, counts)) %>% 
+  mutate(prop = counts/sum(counts)) %>% 
+  rowwise() %>% 
+  mutate(part_mean = sum(values*prop)) %>% 
+  ungroup() %>% 
+  mutate(mean = sum (part_mean))
+
+d %>% 
+  ggplot(aes(x = values, y = prop)) +
+  geom_bar(stat = "identity") +
+  vline()
+```
+:::
+:::
+
+# Price increase
+
+All the stock values have increased by \$5:
+
+What happens to the mean?
+
+What happens to the standard deviation?
+
+## Price increase
+
++------------------+---------------+-------------------------------+
+| $x$              | $n$           | $P(X) = x$                    |
++==================+===============+===============================+
+| 6.23             | 3             | 0.148                         |
++------------------+---------------+-------------------------------+
+| 6.29             | 5             | 0.258                         |
++------------------+---------------+-------------------------------+
+| 6.37             | 4             | 0.219                         |
++------------------+---------------+-------------------------------+
+| 6.84             | 1             | 0.0736                        |
++------------------+---------------+-------------------------------+
+| 6.18             | 6             | 0.283                         |
++------------------+---------------+-------------------------------+
+| 1.22             | 2             | 0.0976                        |
++------------------+---------------+-------------------------------+
+| 6.25             | 4             | 0.2                           |
++------------------+---------------+-------------------------------+
+
+## Price increase
+
+::: columns
+::: {.column width="40%"}
+```{r pdf-add-run}
+#| eval: true
+#| message: false
+#| echo: false
+#| column: page-left
+
+values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) + 5
+counts <- c(3, 5, 4, 1, 6, 2, 4)
+
+d <- 
+  as_tibble(data.frame(values, counts)) %>% 
+    mutate(prop = counts/sum(counts)) %>% 
+     rowwise() %>% 
+     mutate(part_mean = sum(values*prop)) %>% 
+     ungroup() %>% 
+    mutate(mean = sum (part_mean))
+
+d %>% 
+  ggplot(aes(x = values, y = prop)) +
+  geom_bar(stat = "identity") + 
+  geom_vline(aes(xintercept = mean, color = "red"))
+```
+:::
+
+::: {.column width="60%"}
+```{r pdf-add-view}
+#| eval: false
+#| message: false
+#| echo: true
+#| column: page-right
+
+values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) + 5
+counts <- c(3, 5, 4, 1, 6, 2, 4)
+
+d <- 
+  as_tibble(data.frame(values, counts)) %>% 
+  mutate(prop = counts/sum(counts)) %>% 
+  rowwise() %>% 
+  mutate(part_mean = sum(values*prop)) %>% 
+  ungroup() %>% 
+  mutate(mean = sum (part_mean))
+
+d %>% 
+  ggplot(aes(x = values, y = prop)) +
+  geom_bar(stat = "identity") +
+  vline()
+```
+:::
+:::
+
+# Adding a constant
+
+$E(X \pm c) = E(X) \pm c$
+
+$SD(X \pm c) = SD(X)$
+
+$Var(X \pm c) = Var(X)$
+
+# Stock splits
+
+Without decreasing the cost, the stock values are now 3 times what they were before:
+
+What happens to the mean?
+
+What happens to the standard deviation?
+
+## Stock splits
+
++----------------+-----------------------+-----------------------+
+| $x$            | $n$                   | $P(X) = x$            |
++================+=======================+=======================+
+| 3.69           | 3                     | 0.148                 |
++----------------+-----------------------+-----------------------+
+| 3.87           | 5                     | 0.258                 |
++----------------+-----------------------+-----------------------+
+| 4.11           | 4                     | 0.219                 |
++----------------+-----------------------+-----------------------+
+| 5.52           | 1                     | 0.0736                |
++----------------+-----------------------+-----------------------+
+| 3.54           | 6                     | 0.283                 |
++----------------+-----------------------+-----------------------+
+| 3.66           | 2                     | 0.0976                |
++----------------+-----------------------+-----------------------+
+| 3.75           | 4                     | 0.2                   |
++----------------+-----------------------+-----------------------+
+
+## Stock splits
+
+::: columns
+::: {.column width="40%"}
+```{r pdf-splits-run}
+#| eval: true
+#| message: false
+#| echo: false
+#| column: page-left
+
+values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) * 3
+counts <- c(3, 5, 4, 1, 6, 2, 4)
+
+d <- 
+  as_tibble(data.frame(values, counts)) %>% 
+    mutate(prop = counts/sum(counts)) %>% 
+     rowwise() %>% 
+     mutate(part_mean = sum(values*prop)) %>% 
+     ungroup() %>% 
+    mutate(mean = sum (part_mean))
+
+d %>% 
+  ggplot(aes(x = values, y = prop)) +
+  geom_bar(stat = "identity") + 
+  geom_vline(aes(xintercept = mean, color = "red"))
+```
+:::
+
+::: {.column width="60%"}
+```{r pdf-splits-view}
+#| eval: false
+#| message: false
+#| echo: true
+#| column: page-right
+
+values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) *3
+counts <- c(3, 5, 4, 1, 6, 2, 4)
+
+d <- 
+  as_tibble(data.frame(values, counts)) %>% 
+  mutate(prop = counts/sum(counts)) %>% 
+  rowwise() %>% 
+  mutate(part_mean = sum(values*prop)) %>% 
+  ungroup() %>% 
+  mutate(mean = sum (part_mean))
+
+d %>% 
+  ggplot(aes(x = values, y = prop)) +
+  geom_bar(stat = "identity") +
+  vline()
+```
+:::
+:::
+
+# Multiply by a constant
+
+$E(cX) = cE(X)$
+
+$SD(cX) = |c|SD(X)$
+
+$Var(cX) = c^2Var(X)$
+
+# Parameter vs estimate
+
++----------------+--------------------------+----------------+
+|                | population               | sample         |
++================+==========================+================+
+| name           | parameter                | estimate       |
++----------------+--------------------------+----------------+
+| mean           | $\mu$                    | $\bar{x}$      |
++----------------+--------------------------+----------------+
+| variance       | $\sigma^2$               | $s^2$          |
++----------------+--------------------------+----------------+
+| standard       | $\sigma$                 | $s$            |
+|                |                          |                |
+| deviation      |                          |                |
++----------------+--------------------------+----------------+
+| size           | $N$                      | $n$            |
++----------------+--------------------------+----------------+
+
+# Visually
+
+![](lect_07-images/parameter_estimate.png)
 
 # Your turn
 
