@@ -62,10 +62,10 @@ website:
             text: Access
           - href: computing-troubleshooting.qmd
             text: Troubleshooting
-      # - section: "Project"
-      #   contents:
-      #     - href: project-description.qmd
-      #       text: Description
+      - section: "Project"
+        contents:
+          - href: project-description.qmd
+            text: Description
       #     - href: project-tips-resources.qmd
       #       text: Tips + resources
       - section: "Weekly materials"
