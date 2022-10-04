@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 - Fall 2022 - Week 6</title>
+<title>STAT 1010 - Fall 2022 - Random variables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../supplemental/chi-squared.html" rel="next">
-<link href="../weeks/week-5.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,12 +60,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Week 6">
-<meta property="og:description" content="Exam 1">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Random variables">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Week 6">
-<meta name="twitter:description" content="Exam 1">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Random variables">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -78,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Week 6</h1>
+      <h1 class="quarto-secondary-nav-title">Random variables</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -204,12 +201,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Weekly materials</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Weekly materials</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../weeks/week-1.html" class="sidebar-item-text sidebar-link">Week 1</a>
@@ -237,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-6.html" class="sidebar-item-text sidebar-link active">Week 6</a>
+  <a href="../weeks/week-6.html" class="sidebar-item-text sidebar-link">Week 6</a>
   </div>
 </li>
       </ul>
@@ -271,20 +268,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prepare" id="toc-prepare" class="nav-link active" data-scroll-target="#prepare">Prepare</a></li>
-  <li><a href="#participate" id="toc-participate" class="nav-link" data-scroll-target="#participate">Participate</a></li>
-  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
-  <li><a href="#perform" id="toc-perform" class="nav-link" data-scroll-target="#perform">Perform</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link active" data-scroll-target="#solutions">Solutions</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/weeks/week-6.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/ae/ae-8.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Week 6</h1>
-<p class="subtitle lead">Exam 1</p>
+<h1 class="title d-none d-lg-block">Random variables</h1>
 </div>
 
 
@@ -298,28 +291,278 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="prepare" class="level2">
-<h2 class="anchored" data-anchor-id="prepare">Prepare</h2>
-<p>📖 Read <a href="https://www.pearson.com/us/higher-education/product/Stine-Statistics-for-Business-Decision-Making-and-Analysis-3rd-Edition/9780134497167.html">Chpt 9 from Stine and Foster</a></p>
-</section>
-<section id="participate" class="level2">
-<h2 class="anchored" data-anchor-id="participate">Participate</h2>
-<p>🖥️ <a href="../slides/lect_07.html">Lecture 7</a></p>
-</section>
-<section id="practice" class="level2">
-<h2 class="anchored" data-anchor-id="practice">Practice</h2>
-<p>📋 <a href="../ae/ae-8.html">Random variables</a></p>
-</section>
-<section id="perform" class="level2">
-<h2 class="anchored" data-anchor-id="perform">Perform</h2>
-<p>✅ Exam 1</p>
-<p><br><br></p>
-<div style="font-size: 0.875em;">
-<p>Back to <a href="../" title="Course schedule">course schedule</a> ⏎</p>
+<div class="cell">
+
 </div>
-<div style="font-size: 0.875em;">
-<p>Back to <a href="../" title="Course schedule">course schedule</a> ⏎</p>
-</div>
+<ol type="1">
+<li><p>Find the matching item from the second column</p>
+<table class="table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>1. Independent events</th>
+<th>a. <span class="math inline">\(P(A \cap B) \neq P(A) \times P(B)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><ol start="2" type="1">
+<li>Disjoint events</li>
+</ol></td>
+<td>b. <span class="math inline">\(0\leq p \leq 1\)</span></td>
+</tr>
+<tr class="even">
+<td><ol start="3" type="1">
+<li>Union</li>
+</ol></td>
+<td>c. <span class="math inline">\(A, B\)</span> disjoint <span class="math inline">\(P(A\cup B) = P(A) +P(B)\)</span></td>
+</tr>
+<tr class="odd">
+<td><ol start="4" type="1">
+<li>Intersection</li>
+</ol></td>
+<td>d. <span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span></td>
+</tr>
+<tr class="even">
+<td><ol start="5" type="1">
+<li>Complement of A</li>
+</ol></td>
+<td>e. <span class="math inline">\(P(A \cup B) \leq P(A) + P(B)\)</span></td>
+</tr>
+<tr class="odd">
+<td><ol start="6" type="1">
+<li>Sample space</li>
+</ol></td>
+<td>f. <span class="math inline">\(A \cap B\)</span></td>
+</tr>
+<tr class="even">
+<td><ol start="7" type="1">
+<li>Addition rule</li>
+</ol></td>
+<td>g. <span class="math inline">\(P(A \cap B) = 0\)</span></td>
+</tr>
+<tr class="odd">
+<td><ol start="8" type="1">
+<li>Complement rule</li>
+</ol></td>
+<td>h. <span class="math inline">\(P(S) = 1\)</span></td>
+</tr>
+<tr class="even">
+<td><ol start="9" type="1">
+<li>Boole’s inequality</li>
+</ol></td>
+<td>i. <span class="math inline">\(P(A^c) = 1 - P(A)\)</span></td>
+</tr>
+<tr class="odd">
+<td><ol start="10" type="1">
+<li>Dependent events</li>
+</ol></td>
+<td>j. <span class="math inline">\(P(A \cap B) = P(A) \times P(B)\)</span></td>
+</tr>
+<tr class="even">
+<td><ol start="11" type="1">
+<li>Kolmogorov’s axiom</li>
+</ol></td>
+<td>k. <span class="math inline">\(A \cup B\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>l. <span class="math inline">\(A^c\)</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>m. <span class="math inline">\(S\)</span></td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+<!-- -->
+<ol start="12" type="1">
+<li><p>When <span class="math inline">\(A \subset B\)</span>, then <span class="math inline">\(A \cup B = A\)</span></p>
+<ol type="1">
+<li><p>True</p></li>
+<li><p>False</p></li>
+</ol></li>
+<li><p>When <span class="math inline">\(A \subset B\)</span>, then <span class="math inline">\(A \cap B = A\)</span></p>
+<ol type="1">
+<li><p>True</p></li>
+<li><p>False</p></li>
+</ol></li>
+<li><p>One ball will be drawn at random from a box containing: 4 cyan balls, 3 magenta balls, and 5 yellow balls. What is the probability that the ball will be cyan?</p></li>
+<li><p>What is the probability that the ball will not be cyan?</p></li>
+<li><p>Instead of taking just one draw, consider taking two draws. You take the second draw without returning the first draw to the box. We call this sampling without replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?</p></li>
+<li><p>Now repeat the experiment, but this time, after taking the first draw and recording the color, return it to the box and shake the box. We call this sampling with replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?</p></li>
+<li><p>Two events A and B are independent if Pr(A and B)=Pr(A)P(B). Under which situation are the draws independent?</p>
+<ol type="a">
+<li>You don’t replace the draw.</li>
+<li>You replace the draw.</li>
+<li>Neither</li>
+<li>Both</li>
+</ol></li>
+<li><p>Say you’ve drawn 5 balls from the box, with replacement, and all have been yellow. What is the probability that the next one is yellow?</p></li>
+<li><p>If you roll a 6-sided die six times, what is the probability of seeing neither a 5 or 6?</p></li>
+<li><p>Please match the following venn diagrams with the corresponding set theory notation.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>22.<img src="ae-7-images/A.png" class="img-fluid"></th>
+<th>a.<span class="math inline">\(B \subset A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>23.<img src="ae-7-images/A-comp.png" class="img-fluid"></td>
+<td>b. <span class="math inline">\(A\)</span> &amp; <span class="math inline">\(B\)</span> disjoint</td>
+</tr>
+<tr class="even">
+<td>24.<img src="ae-7-images/AdisjointB.png" class="img-fluid"></td>
+<td>c. <span class="math inline">\(A\)</span></td>
+</tr>
+<tr class="odd">
+<td>25.<img src="ae-7-images/AintersectB.png" class="img-fluid"></td>
+<td>d. <span class="math inline">\(A \cup B\)</span></td>
+</tr>
+<tr class="even">
+<td>26.<img src="ae-7-images/AunionB.png" class="img-fluid"></td>
+<td>e. <span class="math inline">\(A \cap B\)</span></td>
+</tr>
+<tr class="odd">
+<td>27.<img src="ae-7-images/BsubsetA.png" class="img-fluid"></td>
+<td>f. <span class="math inline">\(A^c\)</span></td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+<section id="solutions" class="level1">
+<h1>Solutions</h1>
+<table class="table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 92%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>1</th>
+<th>j</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>g</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>k</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>f</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>l</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>m</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>d</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>i</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>e</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>a</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>h, c, b</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td><p><span class="math inline">\(\frac{4}{4+3+5} = \frac{4}{12}\)</span></p>
+<p><span class="math inline">\(= \frac{1}{3}\)</span></p></td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td><span class="math inline">\(1 - \frac{1}{3} = \frac{2}{3}\)</span></td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td><p>Let <span class="math inline">\(C_1 = \{1st\:draw \: is \:cyan\}\)</span> and</p>
+<p><span class="math inline">\(C_2 = \{2nd\: draw\: is\: cyan\}\)</span></p>
+<p>We want :<span class="math inline">\(P(C_1 \cap C_2^c) = P(C_1) \times P(C_2^c \vert C_1)\)</span></p>
+<p>This is <span class="math inline">\(\frac{1}{3} \times (1 -\frac{3}{11}) = \frac{8}{33}\)</span></p></td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td><p>Because they are independent:<span class="math inline">\(P(C_1 \cap C_2^c) = P(C_1) \times P(C_2^c)\)</span></p>
+<p>= <span class="math inline">\(\frac{1}{3} \times \frac{2}{3} = \frac{2}{9}\)</span></p></td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td>b</td>
+</tr>
+<tr class="even">
+<td>19</td>
+<td><span class="math inline">\(\frac{5}{12}\)</span></td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td><p>Let <span class="math inline">\(A = \{5 \: or \: 6 \: pips\: facing\: up\}\)</span></p>
+<p>We want:<span class="math inline">\(P(A^c \cap A^c \cap A^c \cap A^c \cap A^c \cap A^c) = P(A^c)^6\)</span> because of independence of rolling a die.</p>
+<p><span class="math inline">\(= (\frac{2}{3})^6 = \frac{64}{729}\)</span></p></td>
+</tr>
+<tr class="even">
+<td>21</td>
+<td>No question</td>
+</tr>
+<tr class="odd">
+<td>22</td>
+<td>c</td>
+</tr>
+<tr class="even">
+<td>23</td>
+<td>f</td>
+</tr>
+<tr class="odd">
+<td>24</td>
+<td>b</td>
+</tr>
+<tr class="even">
+<td>25</td>
+<td>e</td>
+</tr>
+<tr class="odd">
+<td>26</td>
+<td>d</td>
+</tr>
+<tr class="even">
+<td>27</td>
+<td>a</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
@@ -536,18 +779,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../weeks/week-5.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 5</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../supplemental/chi-squared.html" class="pagination-link">
-        <span class="nav-page-text">Chi squared expected counts</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
