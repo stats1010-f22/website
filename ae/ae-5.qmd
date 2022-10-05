@@ -159,7 +159,7 @@ Using the function `map_dbl`, we can perform element-wise operations on any func
 #| echo: true
 
 n <- seq(1, 60) # which values of n are important
-means <- # save the results as prob
+prob <- # save the results as prob
   map_dbl(n,  # for each value of n 
           compute_prob) # run the function
 ```
