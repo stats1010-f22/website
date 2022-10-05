@@ -9,7 +9,7 @@ This application exercise is due on 14 Oct at 2:00pm.
 :::
 
 ```{r}
-#| eval: true
+#| eval: false
 #| message: false
 #| echo: true
 library(tidyverse)
@@ -30,6 +30,10 @@ library(praise)
     c.  Doe the mean value represent the experience of the typical investor?
 
 ```{r}
+#| eval: false
+#| message: false
+#| echo: true
+
 praise()
 ```
 
@@ -59,6 +63,10 @@ praise()
     b.  There are about 100 million households in the United States, and fewer than 10,000 get hit by lightening each year. Do you think the surge protector is a good deal on average? Be sure to note any assumptions that you make.
 
 ```{r}
+#| eval: false
+#| message: false
+#| echo: true
+
 praise()
 ```
 
