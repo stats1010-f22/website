@@ -4,154 +4,76 @@ output:
    html_document
 ---
 
+::: callout-important
+This application exercise is due on 14 Oct at 2:00pm.
+:::
+
 ```{r}
 #| eval: true
 #| message: false
-#| echo: false
+#| echo: true
 library(tidyverse)
+library(praise)
 ```
 
-1.  Find the matching item from the second column
+1.  Given that the random variable $X$ has mean $\mu = 120$ and SD $\sigma = 15$, find the mean and SD of each of these random variables that are defined by $X$.
 
-    +------------------------+-----------------------------------------------+
-    | 1\. Independent events | a\. $P(A \cap B) \neq P(A) \times P(B)$       |
-    +========================+===============================================+
-    | 2.  Disjoint events    | b\. $0\leq p \leq 1$                          |
-    +------------------------+-----------------------------------------------+
-    | 3.  Union              | c\. $A, B$ disjoint $P(A\cup B) = P(A) +P(B)$ |
-    +------------------------+-----------------------------------------------+
-    | 4.  Intersection       | d\. $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ |
-    +------------------------+-----------------------------------------------+
-    | 5.  Complement of A    | e\. $P(A \cup B) \leq P(A) + P(B)$            |
-    +------------------------+-----------------------------------------------+
-    | 6.  Sample space       | f\. $A \cap B$                                |
-    +------------------------+-----------------------------------------------+
-    | 7.  Addition rule      | g\. $P(A \cap B) = 0$                         |
-    +------------------------+-----------------------------------------------+
-    | 8.  Complement rule    | h\. $P(S) = 1$                                |
-    +------------------------+-----------------------------------------------+
-    | 9.  Boole's inequality | i\. $P(A^c) = 1 - P(A)$                       |
-    +------------------------+-----------------------------------------------+
-    | 10. Dependent events   | j\. $P(A \cap B) = P(A) \times P(B)$          |
-    +------------------------+-----------------------------------------------+
-    | 11. Kolmogorov's axiom | k\. $A \cup B$                                |
-    +------------------------+-----------------------------------------------+
-    |                        | l\. $A^c$                                     |
-    +------------------------+-----------------------------------------------+
-    |                        | m\. $S$                                       |
-    +------------------------+-----------------------------------------------+
+    a.  $X/3$
+    b.  $2X - 100$
+    c.  $X+2$
+    d.  $X-X$
 
-<!-- -->
+2.  An investor buys the stock of two companies, investing $\$10000$ in each. The stock of each company either goes up by $80%$ after a month (rising to $\$18000$) with probability $\frac{1}{2}$ or drops by $60%$ (falling to $\$4000$) with probability $\frac{1}{2}$. Assume that the changes in each are independent. Let the random variable $X$ denote the value of the amounted invested after one month.
 
-12. When $A \subset B$, then $A \cup B = A$
+    a.  Find the probability distribution of $X$.
+    b.  Find the mean value of $X$
+    c.  Doe the mean value represent the experience of the typical investor?
 
-    1.  True
+```{r}
+praise()
+```
 
-    2.  False
+3.  A law firm takes cases on a contingent fee basis. If the case goes to trial, the firm expects to earn $\$25000$ as part of the settlement if it wins and nothing if it does not. The firm wins one-third of the cases that go to trial. If the case does not go to trial, the firm earns nothing. Half of the cases do not go to trial.
 
-13. When $A \subset B$, then $A \cap B = A$
+    a.  Define a random variable to model the earning of taking a case of this type.
+    b.  What is the expected value of such a case to the firm?
+    c.  What is the standard deviation of the earnings?
 
-    1.  True
+4.  The maintenance staff of a large office building regularly replaces fluorescent ceiling lights that have gone out. During a visit to a typical floor, the staff may have to replace several lights. The manager of this staff has given the following probabilities to the number of lights (identified by the random variable $Y$) that need to be replaced on the floor:
 
-    2.  False
+    |            |     |      |     |     |      |
+    |------------|-----|------|-----|-----|------|
+    | $Y$        | 0   | 1    | 2   | 3   | 4    |
+    | $P(Y = y)$ | 0.2 | 0.15 | 0.2 | 0.3 | 0.15 |
 
-14. One ball will be drawn at random from a box containing: 4 cyan balls, 3 magenta balls, and 5 yellow balls. What is the probability that the ball will be cyan?
+    a.  How many lights should the manager expect to replace on a floor?
+    b.  What is the standard deviation of the number of lights on a floor that are replaced?
+    c.  If a crew takes six lights to a floor, how many should it expect to have left after replacing those that are out?
+    d.  If a crew takes six lights to a floor, find the standard deviation of the number of lights that remain after replacing those that are out on a floor.
+    e.  If it takes 10 minutes to replace each light, how long should the manager expect the crew to take when replacing the lights on a floor.
 
-15. What is the probability that the ball will not be cyan?
+5.  Suppose that you've just bought a $\$4000$ TV. Should you also buy the $\$50$ surge protector that guarantees to protect your TV from electric surges caused by lightning?
 
-16. Instead of taking just one draw, consider taking two draws. You take the second draw without returning the first draw to the box. We call this sampling without replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?
+    a.  Let $p$ denote the probability that your home is hit by lightning during the time that you own this TV, say five years. In order for the purchase of the surge protector to have positive long-term values, what must the chance of being hit by lightning be?
 
-17. Now repeat the experiment, but this time, after taking the first draw and recording the color, return it to the box and shake the box. We call this sampling with replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?
+    b.  There are about 100 million households in the United States, and fewer than 10,000 get hit by lightening each year. Do you think the surge protector is a good deal on average? Be sure to note any assumptions that you make.
 
-18. Two events A and B are independent if Pr(A and B)=Pr(A)P(B). Under which situation are the draws independent?
+```{r}
+praise()
+```
 
-    a.  You don't replace the draw.
-    b.  You replace the draw.
-    c.  Neither
-    d.  Both
+6.  The ATM at a local convenience store allows customers to make withdrawals of $\$10$, $\$20$, $\$50$, or $\$100$. Let $X$ denote a random variable that indicates the amount withdrawn by a customer. The probability distribution of $X$ is:
 
-19. Say you've drawn 5 balls from the box, with replacement, and all have been yellow. What is the probability that the next one is yellow?
+    $p(10) = 0.2$
 
-20. If you roll a 6-sided die six times, what is the probability of seeing neither a 5 or 6?
+    $p(20) = 0.5$
 
-21. Please match the following venn diagrams with the corresponding set theory notation.
+    $p(50) = 0.2$
 
-    | 22.![](ae-7-images/A.png)           | a.$B \subset A$        |
-    |-------------------------------------|------------------------|
-    | 23.![](ae-7-images/A-comp.png)      | b\. $A$ & $B$ disjoint |
-    | 24.![](ae-7-images/AdisjointB.png)  | c\. $A$                |
-    | 25.![](ae-7-images/AintersectB.png) | d\. $A \cup B$         |
-    | 26.![](ae-7-images/AunionB.png)     | e\. $A \cap B$         |
-    | 27.![](ae-7-images/BsubsetA.png)    | f\. $A^c$              |
+    $p(100) = 0.1$
 
-# Solutions
-
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 1       | j                                                                                                                  |
-+=========+====================================================================================================================+
-| 2       | g                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 3       | k                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 4       | f                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 5       | l                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 6       | m                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 7       | d                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 8       | i                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 9       | e                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 10      | a                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 11      | h, c, b                                                                                                            |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 12      | False                                                                                                              |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 13      | True                                                                                                               |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 14      | $\frac{4}{4+3+5} = \frac{4}{12}$                                                                                   |
-|         |                                                                                                                    |
-|         | $= \frac{1}{3}$                                                                                                    |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 15      | $1 - \frac{1}{3} = \frac{2}{3}$                                                                                    |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 16      | Let $C_1 = \{1st\:draw \: is \:cyan\}$ and                                                                         |
-|         |                                                                                                                    |
-|         | $C_2 = \{2nd\: draw\: is\: cyan\}$                                                                                 |
-|         |                                                                                                                    |
-|         | We want :$P(C_1 \cap C_2^c) = P(C_1) \times P(C_2^c \vert C_1)$                                                    |
-|         |                                                                                                                    |
-|         | This is $\frac{1}{3} \times (1 -\frac{3}{11}) = \frac{8}{33}$                                                      |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 17      | Because they are independent:$P(C_1 \cap C_2^c) = P(C_1) \times P(C_2^c)$                                          |
-|         |                                                                                                                    |
-|         | = $\frac{1}{3} \times \frac{2}{3} = \frac{2}{9}$                                                                   |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 18      | b                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 19      | $\frac{5}{12}$                                                                                                     |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 20      | Let $A = \{5 \: or \: 6 \: pips\: facing\: up\}$                                                                   |
-|         |                                                                                                                    |
-|         | We want:$P(A^c \cap A^c \cap A^c \cap A^c \cap A^c \cap A^c) = P(A^c)^6$ because of independence of rolling a die. |
-|         |                                                                                                                    |
-|         | $= (\frac{2}{3})^6 = \frac{64}{729}$                                                                               |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 21      | No question                                                                                                        |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 22      | c                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 23      | f                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 24      | b                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 25      | e                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 26      | d                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
-| 27      | a                                                                                                                  |
-+---------+--------------------------------------------------------------------------------------------------------------------+
+    a.  Draw the probability distribution of $X$.
+    b.  What is the probability that a customer withdraws more than $\$20$?
+    c.  What is the expected amount of money withdrawn by a customer?
+    d.  The expected value is not a possible value value of the amount withdrawn. Interpret the expected value for a manager.
+    e.  Find the variance and standard deviation of $X$.
