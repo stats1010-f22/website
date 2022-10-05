@@ -433,7 +433,7 @@ Important
 <p>Say we want to use this knowledge to bet with friends about two people having the same birthday in a group of people. When are the chances larger than 50%? Larger than 75%?</p>
 <p>Let’s create a look-up table. We can create a function to compute this for any group size. This function runs our function <span class="math inline">\(500\)</span> times for every value of $n$. Statisticians will usually do this <span class="math inline">\(10000\)</span> times, but this will take a very very very very looooooooooonnnnnggggg time, so we are simplifying.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>compute <span class="ot">&lt;-</span> <span class="co"># name the function</span></span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>compute_prob <span class="ot">&lt;-</span> <span class="co"># name the function</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(n, <span class="at">B =</span> <span class="dv">500</span>){ <span class="co"># function inputs</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  results <span class="ot">&lt;-</span> <span class="co"># store results</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">replicate</span>(B, <span class="co"># run num_of_same_birthdays B times </span></span>
