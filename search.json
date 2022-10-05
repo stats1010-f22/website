@@ -319,7 +319,7 @@
     "href": "slides/lect_07.html#price-increase-2",
     "title": "Chapter 9: Random variables",
     "section": "Price increase",
-    "text": "Price increase\n\n\n\n\n\n\n\n\n\nvalues <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) + 5\ncounts <- c(3, 5, 4, 1, 6, 2, 4)\n\nd <- \n  as_tibble(data.frame(values, counts)) %>% \n  mutate(prop = counts/sum(counts)) %>% \n  rowwise() %>% \n  mutate(part_mean = sum(values*prop)) %>% \n  ungroup() %>% \n  mutate(mean = sum (part_mean))\n\nd %>% \n  ggplot(aes(x = values, y = prop)) +\n  geom_bar(stat = \"identity\") +\n  vline()"
+    "text": "Price increase\n\n\n\n\n\n\n\n\n\n## Input data\nvalues <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) + 5\ncounts <- c(3, 5, 4, 1, 6, 2, 4)\n\nd <- \n  as_tibble(data.frame(values, counts)) %>% # make tibble\n  mutate(prop = counts/sum(counts)) %>% # find proportion\n  rowwise() %>% # for each row\n  mutate(part_mean = sum(values*prop)) %>% # multiply values & prop\n  ungroup() %>% # not for each row\n  mutate(mean = sum (part_mean)) # find the sum\n\nd %>% \n  ggplot(aes(x = values, y = prop)) + # for values and prop\n  geom_bar(stat = \"identity\") + # make bar chart of identity (prop)\n  geom_vline(aes(xintercept = mean, color = \"red\")) # and line of mean"
   },
   {
     "objectID": "slides/lect_07.html#stock-splits-1",
@@ -333,7 +333,7 @@
     "href": "slides/lect_07.html#stock-splits-2",
     "title": "Chapter 9: Random variables",
     "section": "Stock splits",
-    "text": "Stock splits\n\n\n\n\n\n\n\n\n\nvalues <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) *3\ncounts <- c(3, 5, 4, 1, 6, 2, 4)\n\nd <- \n  as_tibble(data.frame(values, counts)) %>% \n  mutate(prop = counts/sum(counts)) %>% \n  rowwise() %>% \n  mutate(part_mean = sum(values*prop)) %>% \n  ungroup() %>% \n  mutate(mean = sum (part_mean))\n\nd %>% \n  ggplot(aes(x = values, y = prop)) +\n  geom_bar(stat = \"identity\") +\n  vline()"
+    "text": "Stock splits\n\n\n\n\n\n\n\n\n\n## Input data\nvalues <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) * 3\ncounts <- c(3, 5, 4, 1, 6, 2, 4)\n\nd <- \n  as_tibble(data.frame(values, counts)) %>% # make tibble\n  mutate(prop = counts/sum(counts)) %>% # find proportion\n  rowwise() %>% # for each row\n  mutate(part_mean = sum(values*prop)) %>% # multiply values & prop\n  ungroup() %>% # not for each row\n  mutate(mean = sum (part_mean)) # find the sum\n\nd %>% \n  ggplot(aes(x = values, y = prop)) + # for values and prop\n  geom_bar(stat = \"identity\") + # make bar chart of identity (prop)\n  geom_vline(aes(xintercept = mean, color = \"red\")) # and line of mean"
   },
   {
     "objectID": "slides/lec-1.html#meet-the-professor",
