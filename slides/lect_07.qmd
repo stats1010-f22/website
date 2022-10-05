@@ -343,6 +343,10 @@ $SD(cX) = |c|SD(X)$
 
 $Var(cX) = c^2Var(X)$
 
+$E(cX \pm a)=cE(X) \pm a$
+
+$Var(cX \pm a)=c^2Var(X)$
+
 # Parameter vs estimate
 
 +----------------+-------------------------+----------------+
