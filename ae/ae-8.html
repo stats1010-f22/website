@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -264,13 +327,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link active" data-scroll-target="#solutions">Solutions</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/ae/ae-8.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -291,281 +348,101 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This application exercise is due on 14 Oct at 2:00pm.</p>
+</div>
+</div>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(praise)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol type="1">
-<li><p>Find the matching item from the second column</p>
-<table class="table">
-<colgroup>
-<col style="width: 34%">
-<col style="width: 65%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>1. Independent events</th>
-<th>a. <span class="math inline">\(P(A \cap B) \neq P(A) \times P(B)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ol start="2" type="1">
-<li>Disjoint events</li>
-</ol></td>
-<td>b. <span class="math inline">\(0\leq p \leq 1\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="3" type="1">
-<li>Union</li>
-</ol></td>
-<td>c. <span class="math inline">\(A, B\)</span> disjoint <span class="math inline">\(P(A\cup B) = P(A) +P(B)\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="4" type="1">
-<li>Intersection</li>
-</ol></td>
-<td>d. <span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="5" type="1">
-<li>Complement of A</li>
-</ol></td>
-<td>e. <span class="math inline">\(P(A \cup B) \leq P(A) + P(B)\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="6" type="1">
-<li>Sample space</li>
-</ol></td>
-<td>f. <span class="math inline">\(A \cap B\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="7" type="1">
-<li>Addition rule</li>
-</ol></td>
-<td>g. <span class="math inline">\(P(A \cap B) = 0\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="8" type="1">
-<li>Complement rule</li>
-</ol></td>
-<td>h. <span class="math inline">\(P(S) = 1\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="9" type="1">
-<li>Boole’s inequality</li>
-</ol></td>
-<td>i. <span class="math inline">\(P(A^c) = 1 - P(A)\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="10" type="1">
-<li>Dependent events</li>
-</ol></td>
-<td>j. <span class="math inline">\(P(A \cap B) = P(A) \times P(B)\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="11" type="1">
-<li>Kolmogorov’s axiom</li>
-</ol></td>
-<td>k. <span class="math inline">\(A \cup B\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>l. <span class="math inline">\(A^c\)</span></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>m. <span class="math inline">\(S\)</span></td>
-</tr>
-</tbody>
-</table></li>
-</ol>
-<!-- -->
-<ol start="12" type="1">
-<li><p>When <span class="math inline">\(A \subset B\)</span>, then <span class="math inline">\(A \cup B = A\)</span></p>
-<ol type="1">
-<li><p>True</p></li>
-<li><p>False</p></li>
-</ol></li>
-<li><p>When <span class="math inline">\(A \subset B\)</span>, then <span class="math inline">\(A \cap B = A\)</span></p>
-<ol type="1">
-<li><p>True</p></li>
-<li><p>False</p></li>
-</ol></li>
-<li><p>One ball will be drawn at random from a box containing: 4 cyan balls, 3 magenta balls, and 5 yellow balls. What is the probability that the ball will be cyan?</p></li>
-<li><p>What is the probability that the ball will not be cyan?</p></li>
-<li><p>Instead of taking just one draw, consider taking two draws. You take the second draw without returning the first draw to the box. We call this sampling without replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?</p></li>
-<li><p>Now repeat the experiment, but this time, after taking the first draw and recording the color, return it to the box and shake the box. We call this sampling with replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?</p></li>
-<li><p>Two events A and B are independent if Pr(A and B)=Pr(A)P(B). Under which situation are the draws independent?</p>
+<li><p>Given that the random variable <span class="math inline">\(X\)</span> has mean <span class="math inline">\(\mu = 120\)</span> and SD <span class="math inline">\(\sigma = 15\)</span>, find the mean and SD of each of these random variables that are defined by <span class="math inline">\(X\)</span>.</p>
 <ol type="a">
-<li>You don’t replace the draw.</li>
-<li>You replace the draw.</li>
-<li>Neither</li>
-<li>Both</li>
+<li><span class="math inline">\(X/3\)</span></li>
+<li><span class="math inline">\(2X - 100\)</span></li>
+<li><span class="math inline">\(X+2\)</span></li>
+<li><span class="math inline">\(X-X\)</span></li>
 </ol></li>
-<li><p>Say you’ve drawn 5 balls from the box, with replacement, and all have been yellow. What is the probability that the next one is yellow?</p></li>
-<li><p>If you roll a 6-sided die six times, what is the probability of seeing neither a 5 or 6?</p></li>
-<li><p>Please match the following venn diagrams with the corresponding set theory notation.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>22.<img src="ae-7-images/A.png" class="img-fluid"></th>
-<th>a.<span class="math inline">\(B \subset A\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>23.<img src="ae-7-images/A-comp.png" class="img-fluid"></td>
-<td>b. <span class="math inline">\(A\)</span> &amp; <span class="math inline">\(B\)</span> disjoint</td>
-</tr>
-<tr class="even">
-<td>24.<img src="ae-7-images/AdisjointB.png" class="img-fluid"></td>
-<td>c. <span class="math inline">\(A\)</span></td>
-</tr>
-<tr class="odd">
-<td>25.<img src="ae-7-images/AintersectB.png" class="img-fluid"></td>
-<td>d. <span class="math inline">\(A \cup B\)</span></td>
-</tr>
-<tr class="even">
-<td>26.<img src="ae-7-images/AunionB.png" class="img-fluid"></td>
-<td>e. <span class="math inline">\(A \cap B\)</span></td>
-</tr>
-<tr class="odd">
-<td>27.<img src="ae-7-images/BsubsetA.png" class="img-fluid"></td>
-<td>f. <span class="math inline">\(A^c\)</span></td>
-</tr>
-</tbody>
-</table></li>
+<li><p>An investor buys the stock of two companies, investing <span class="math inline">\(\$10000\)</span> in each. The stock of each company either goes up by <span class="math inline">\(80%\)</span> after a month (rising to <span class="math inline">\(\$18000\)</span>) with probability <span class="math inline">\(\frac{1}{2}\)</span> or drops by <span class="math inline">\(60%\)</span> (falling to <span class="math inline">\(\$4000\)</span>) with probability <span class="math inline">\(\frac{1}{2}\)</span>. Assume that the changes in each are independent. Let the random variable <span class="math inline">\(X\)</span> denote the value of the amounted invested after one month.</p>
+<ol type="a">
+<li>Find the probability distribution of <span class="math inline">\(X\)</span>.</li>
+<li>Find the mean value of <span class="math inline">\(X\)</span></li>
+<li>Doe the mean value represent the experience of the typical investor?</li>
+</ol></li>
 </ol>
-<section id="solutions" class="level1">
-<h1>Solutions</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li><p>A law firm takes cases on a contingent fee basis. If the case goes to trial, the firm expects to earn <span class="math inline">\(\$25000\)</span> as part of the settlement if it wins and nothing if it does not. The firm wins one-third of the cases that go to trial. If the case does not go to trial, the firm earns nothing. Half of the cases do not go to trial.</p>
+<ol type="a">
+<li>Define a random variable to model the earning of taking a case of this type.</li>
+<li>What is the expected value of such a case to the firm?</li>
+<li>What is the standard deviation of the earnings?</li>
+</ol></li>
+<li><p>The maintenance staff of a large office building regularly replaces fluorescent ceiling lights that have gone out. During a visit to a typical floor, the staff may have to replace several lights. The manager of this staff has given the following probabilities to the number of lights (identified by the random variable <span class="math inline">\(Y\)</span>) that need to be replaced on the floor:</p>
 <table class="table">
-<colgroup>
-<col style="width: 7%">
-<col style="width: 92%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>1</th>
-<th>j</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
+<td><span class="math inline">\(Y\)</span></td>
+<td>0</td>
+<td>1</td>
 <td>2</td>
-<td>g</td>
-</tr>
-<tr class="even">
 <td>3</td>
-<td>k</td>
-</tr>
-<tr class="odd">
 <td>4</td>
-<td>f</td>
 </tr>
 <tr class="even">
-<td>5</td>
-<td>l</td>
-</tr>
-<tr class="odd">
-<td>6</td>
-<td>m</td>
-</tr>
-<tr class="even">
-<td>7</td>
-<td>d</td>
-</tr>
-<tr class="odd">
-<td>8</td>
-<td>i</td>
-</tr>
-<tr class="even">
-<td>9</td>
-<td>e</td>
-</tr>
-<tr class="odd">
-<td>10</td>
-<td>a</td>
-</tr>
-<tr class="even">
-<td>11</td>
-<td>h, c, b</td>
-</tr>
-<tr class="odd">
-<td>12</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td>13</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td>14</td>
-<td><p><span class="math inline">\(\frac{4}{4+3+5} = \frac{4}{12}\)</span></p>
-<p><span class="math inline">\(= \frac{1}{3}\)</span></p></td>
-</tr>
-<tr class="even">
-<td>15</td>
-<td><span class="math inline">\(1 - \frac{1}{3} = \frac{2}{3}\)</span></td>
-</tr>
-<tr class="odd">
-<td>16</td>
-<td><p>Let <span class="math inline">\(C_1 = \{1st\:draw \: is \:cyan\}\)</span> and</p>
-<p><span class="math inline">\(C_2 = \{2nd\: draw\: is\: cyan\}\)</span></p>
-<p>We want :<span class="math inline">\(P(C_1 \cap C_2^c) = P(C_1) \times P(C_2^c \vert C_1)\)</span></p>
-<p>This is <span class="math inline">\(\frac{1}{3} \times (1 -\frac{3}{11}) = \frac{8}{33}\)</span></p></td>
-</tr>
-<tr class="even">
-<td>17</td>
-<td><p>Because they are independent:<span class="math inline">\(P(C_1 \cap C_2^c) = P(C_1) \times P(C_2^c)\)</span></p>
-<p>= <span class="math inline">\(\frac{1}{3} \times \frac{2}{3} = \frac{2}{9}\)</span></p></td>
-</tr>
-<tr class="odd">
-<td>18</td>
-<td>b</td>
-</tr>
-<tr class="even">
-<td>19</td>
-<td><span class="math inline">\(\frac{5}{12}\)</span></td>
-</tr>
-<tr class="odd">
-<td>20</td>
-<td><p>Let <span class="math inline">\(A = \{5 \: or \: 6 \: pips\: facing\: up\}\)</span></p>
-<p>We want:<span class="math inline">\(P(A^c \cap A^c \cap A^c \cap A^c \cap A^c \cap A^c) = P(A^c)^6\)</span> because of independence of rolling a die.</p>
-<p><span class="math inline">\(= (\frac{2}{3})^6 = \frac{64}{729}\)</span></p></td>
-</tr>
-<tr class="even">
-<td>21</td>
-<td>No question</td>
-</tr>
-<tr class="odd">
-<td>22</td>
-<td>c</td>
-</tr>
-<tr class="even">
-<td>23</td>
-<td>f</td>
-</tr>
-<tr class="odd">
-<td>24</td>
-<td>b</td>
-</tr>
-<tr class="even">
-<td>25</td>
-<td>e</td>
-</tr>
-<tr class="odd">
-<td>26</td>
-<td>d</td>
-</tr>
-<tr class="even">
-<td>27</td>
-<td>a</td>
+<td><span class="math inline">\(P(Y = y)\)</span></td>
+<td>0.2</td>
+<td>0.15</td>
+<td>0.2</td>
+<td>0.3</td>
+<td>0.15</td>
 </tr>
 </tbody>
 </table>
+<ol type="a">
+<li>How many lights should the manager expect to replace on a floor?</li>
+<li>What is the standard deviation of the number of lights on a floor that are replaced?</li>
+<li>If a crew takes six lights to a floor, how many should it expect to have left after replacing those that are out?</li>
+<li>If a crew takes six lights to a floor, find the standard deviation of the number of lights that remain after replacing those that are out on a floor.</li>
+<li>If it takes 10 minutes to replace each light, how long should the manager expect the crew to take when replacing the lights on a floor.</li>
+</ol></li>
+<li><p>Suppose that you’ve just bought a <span class="math inline">\(\$4000\)</span> TV. Should you also buy the <span class="math inline">\(\$50\)</span> surge protector that guarantees to protect your TV from electric surges caused by lightning?</p>
+<ol type="a">
+<li><p>Let <span class="math inline">\(p\)</span> denote the probability that your home is hit by lightning during the time that you own this TV, say five years. In order for the purchase of the surge protector to have positive long-term values, what must the chance of being hit by lightning be?</p></li>
+<li><p>There are about 100 million households in the United States, and fewer than 10,000 get hit by lightening each year. Do you think the surge protector is a good deal on average? Be sure to note any assumptions that you make.</p></li>
+</ol></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="6" type="1">
+<li><p>The ATM at a local convenience store allows customers to make withdrawals of <span class="math inline">\(\$10\)</span>, <span class="math inline">\(\$20\)</span>, <span class="math inline">\(\$50\)</span>, or <span class="math inline">\(\$100\)</span>. Let <span class="math inline">\(X\)</span> denote a random variable that indicates the amount withdrawn by a customer. The probability distribution of <span class="math inline">\(X\)</span> is:</p>
+<p><span class="math inline">\(p(10) = 0.2\)</span></p>
+<p><span class="math inline">\(p(20) = 0.5\)</span></p>
+<p><span class="math inline">\(p(50) = 0.2\)</span></p>
+<p><span class="math inline">\(p(100) = 0.1\)</span></p>
+<ol type="a">
+<li>Draw the probability distribution of <span class="math inline">\(X\)</span>.</li>
+<li>What is the probability that a customer withdraws more than <span class="math inline">\(\$20\)</span>?</li>
+<li>What is the expected amount of money withdrawn by a customer?</li>
+<li>The expected value is not a possible value value of the amount withdrawn. Interpret the expected value for a manager.</li>
+<li>Find the variance and standard deviation of <span class="math inline">\(X\)</span>.</li>
+</ol></li>
+</ol>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
