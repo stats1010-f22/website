@@ -80,7 +80,7 @@ praise()
 
     $p(100) = 0.1$
 
-    a.  Draw the probability distribution of $X$.
+    a.  Plot the probability distribution of $X$ in `R`.
     b.  What is the probability that a customer withdraws more than $\$20$?
     c.  What is the expected amount of money withdrawn by a customer?
     d.  The expected value is not a possible value value of the amount withdrawn. Interpret the expected value for a manager.
