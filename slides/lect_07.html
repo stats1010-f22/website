@@ -637,30 +637,17 @@
 <section id="price-increase-2" class="slide level2">
 <h2>Price increase</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display column-page-left">
 <p><img data-src="lect_07_files/figure-revealjs/pdf-add-run-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div class="cell column-page-right">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="do">## Input data</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>values <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.23</span>, <span class="fl">1.29</span>, <span class="fl">1.37</span>, <span class="fl">1.84</span>, <span class="fl">1.18</span>, <span class="fl">1.22</span>, <span class="fl">1.25</span>) <span class="sc">+</span> <span class="dv">5</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>counts <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">4</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a>d <span class="ot">&lt;-</span> </span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="fu">as_tibble</span>(<span class="fu">data.frame</span>(values, counts)) <span class="sc">%&gt;%</span> <span class="co"># make tibble</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> counts<span class="sc">/</span><span class="fu">sum</span>(counts)) <span class="sc">%&gt;%</span> <span class="co"># find proportion</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> <span class="co"># for each row</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>  <span class="fu">mutate</span>(<span class="at">part_mean =</span> <span class="fu">sum</span>(values<span class="sc">*</span>prop)) <span class="sc">%&gt;%</span> <span class="co"># multiply values &amp; prop</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="co"># not for each row</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>  <span class="fu">mutate</span>(<span class="at">mean =</span> <span class="fu">sum</span> (part_mean)) <span class="co"># find the sum</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a></span>
-<span id="cb2-13"><a href="#cb2-13"></a>d <span class="sc">%&gt;%</span> </span>
-<span id="cb2-14"><a href="#cb2-14"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> values, <span class="at">y =</span> prop)) <span class="sc">+</span> <span class="co"># for values and prop</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span> <span class="co"># make bar chart of identity (prop)</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> mean, <span class="at">color =</span> <span class="st">"red"</span>)) <span class="co"># and line of mean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="cell-output-display column-page-right">
+<p><img data-src="lect_07_files/figure-revealjs/pdf-no_add-1.png" width="960"></p>
+</div>
 </div>
 </div>
 </div>
@@ -743,23 +730,10 @@
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div class="cell column-page-right">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="do">## Input data</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>values <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.23</span>, <span class="fl">1.29</span>, <span class="fl">1.37</span>, <span class="fl">1.84</span>, <span class="fl">1.18</span>, <span class="fl">1.22</span>, <span class="fl">1.25</span>) <span class="sc">*</span> <span class="dv">3</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>counts <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">4</span>)</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a>d <span class="ot">&lt;-</span> </span>
-<span id="cb3-6"><a href="#cb3-6"></a>  <span class="fu">as_tibble</span>(<span class="fu">data.frame</span>(values, counts)) <span class="sc">%&gt;%</span> <span class="co"># make tibble</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> counts<span class="sc">/</span><span class="fu">sum</span>(counts)) <span class="sc">%&gt;%</span> <span class="co"># find proportion</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> <span class="co"># for each row</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a>  <span class="fu">mutate</span>(<span class="at">part_mean =</span> <span class="fu">sum</span>(values<span class="sc">*</span>prop)) <span class="sc">%&gt;%</span> <span class="co"># multiply values &amp; prop</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="co"># not for each row</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a>  <span class="fu">mutate</span>(<span class="at">mean =</span> <span class="fu">sum</span> (part_mean)) <span class="co"># find the sum</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a></span>
-<span id="cb3-13"><a href="#cb3-13"></a>d <span class="sc">%&gt;%</span> </span>
-<span id="cb3-14"><a href="#cb3-14"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> values, <span class="at">y =</span> prop)) <span class="sc">+</span> <span class="co"># for values and prop</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span> <span class="co"># make bar chart of identity (prop)</span></span>
-<span id="cb3-16"><a href="#cb3-16"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> mean, <span class="at">color =</span> <span class="st">"red"</span>)) <span class="co"># and line of mean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="cell-output-display column-page-right">
+<p><img data-src="lect_07_files/figure-revealjs/pdf-run_split-1.png" width="960"></p>
+</div>
 </div>
 </div>
 </div>
