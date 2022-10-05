@@ -131,21 +131,22 @@ d %>%
 #| echo: true
 #| column: page-right
 
+## Input data
 values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25)
 counts <- c(3, 5, 4, 1, 6, 2, 4)
 
 d <- 
-  as_tibble(data.frame(values, counts)) %>% 
-  mutate(prop = counts/sum(counts)) %>% 
-  rowwise() %>% 
-  mutate(part_mean = sum(values*prop)) %>% 
-  ungroup() %>% 
-  mutate(mean = sum (part_mean))
+  as_tibble(data.frame(values, counts)) %>% # make tibble
+  mutate(prop = counts/sum(counts)) %>% # find proportion
+  rowwise() %>% # for each row
+  mutate(part_mean = sum(values*prop)) %>% # multiply values & prop
+  ungroup() %>% # not for each row
+  mutate(mean = sum (part_mean)) # find the sum
 
 d %>% 
-  ggplot(aes(x = values, y = prop)) +
-  geom_bar(stat = "identity") +
-  vline()
+  ggplot(aes(x = values, y = prop)) + # for values and prop
+  geom_bar(stat = "identity") + # make bar chart of identity (prop)
+  geom_vline(aes(xintercept = mean, color = "red")) # and line of mean
 ```
 :::
 :::
@@ -197,7 +198,7 @@ d <-
      rowwise() %>% 
      mutate(part_mean = sum(values*prop)) %>% 
      ungroup() %>% 
-    mutate(mean = sum (part_mean))
+    mutate(mean = sum(part_mean))
 
 d %>% 
   ggplot(aes(x = values, y = prop)) +
@@ -213,21 +214,22 @@ d %>%
 #| echo: true
 #| column: page-right
 
+## Input data
 values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) + 5
 counts <- c(3, 5, 4, 1, 6, 2, 4)
 
 d <- 
-  as_tibble(data.frame(values, counts)) %>% 
-  mutate(prop = counts/sum(counts)) %>% 
-  rowwise() %>% 
-  mutate(part_mean = sum(values*prop)) %>% 
-  ungroup() %>% 
-  mutate(mean = sum (part_mean))
+  as_tibble(data.frame(values, counts)) %>% # make tibble
+  mutate(prop = counts/sum(counts)) %>% # find proportion
+  rowwise() %>% # for each row
+  mutate(part_mean = sum(values*prop)) %>% # multiply values & prop
+  ungroup() %>% # not for each row
+  mutate(mean = sum (part_mean)) # find the sum
 
 d %>% 
-  ggplot(aes(x = values, y = prop)) +
-  geom_bar(stat = "identity") +
-  vline()
+  ggplot(aes(x = values, y = prop)) + # for values and prop
+  geom_bar(stat = "identity") + # make bar chart of identity (prop)
+  geom_vline(aes(xintercept = mean, color = "red")) # and line of mean
 ```
 :::
 :::
@@ -303,21 +305,22 @@ d %>%
 #| echo: true
 #| column: page-right
 
-values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) *3
+## Input data
+values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) * 3
 counts <- c(3, 5, 4, 1, 6, 2, 4)
 
 d <- 
-  as_tibble(data.frame(values, counts)) %>% 
-  mutate(prop = counts/sum(counts)) %>% 
-  rowwise() %>% 
-  mutate(part_mean = sum(values*prop)) %>% 
-  ungroup() %>% 
-  mutate(mean = sum (part_mean))
+  as_tibble(data.frame(values, counts)) %>% # make tibble
+  mutate(prop = counts/sum(counts)) %>% # find proportion
+  rowwise() %>% # for each row
+  mutate(part_mean = sum(values*prop)) %>% # multiply values & prop
+  ungroup() %>% # not for each row
+  mutate(mean = sum (part_mean)) # find the sum
 
 d %>% 
-  ggplot(aes(x = values, y = prop)) +
-  geom_bar(stat = "identity") +
-  vline()
+  ggplot(aes(x = values, y = prop)) + # for values and prop
+  geom_bar(stat = "identity") + # make bar chart of identity (prop)
+  geom_vline(aes(xintercept = mean, color = "red")) # and line of mean
 ```
 :::
 :::
