@@ -182,7 +182,7 @@ What happens to the standard deviation?
 ## Price increase
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="50%"}
 ```{r pdf-add-run}
 #| eval: true
 #| message: false
@@ -203,19 +203,23 @@ d <-
 d %>% 
   ggplot(aes(x = values, y = prop)) +
   geom_bar(stat = "identity") + 
-  geom_vline(aes(xintercept = mean, color = "red"))
+  geom_vline(aes(xintercept = mean, color = "red")) +
+  labs(title = "Price increased by $5") +
+  xlim(0, 7)
+  
+  
 ```
 :::
 
 ::: {.column width="60%"}
-```{r pdf-add-view}
-#| eval: false
+```{r pdf-no_add}
+#| eval: true
 #| message: false
-#| echo: true
+#| echo: false
 #| column: page-right
 
 ## Input data
-values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) + 5
+values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) 
 counts <- c(3, 5, 4, 1, 6, 2, 4)
 
 d <- 
@@ -229,7 +233,9 @@ d <-
 d %>% 
   ggplot(aes(x = values, y = prop)) + # for values and prop
   geom_bar(stat = "identity") + # make bar chart of identity (prop)
-  geom_vline(aes(xintercept = mean, color = "red")) # and line of mean
+  geom_vline(aes(xintercept = mean, color = "red")) + # and line of mean 
+  labs(title = "Unadjusted price") +
+  xlim(0, 7)
 ```
 :::
 :::
@@ -294,19 +300,21 @@ d <-
 d %>% 
   ggplot(aes(x = values, y = prop)) +
   geom_bar(stat = "identity") + 
-  geom_vline(aes(xintercept = mean, color = "red"))
+  geom_vline(aes(xintercept = mean, color = "red")) +
+  labs(title = "Price is 3 time higher") +
+  xlim(0, 4)
 ```
 :::
 
 ::: {.column width="60%"}
-```{r pdf-splits-view}
-#| eval: false
+```{r pdf-run_split}
+#| eval: true
 #| message: false
-#| echo: true
+#| echo: false
 #| column: page-right
 
 ## Input data
-values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) * 3
+values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) 
 counts <- c(3, 5, 4, 1, 6, 2, 4)
 
 d <- 
@@ -320,7 +328,9 @@ d <-
 d %>% 
   ggplot(aes(x = values, y = prop)) + # for values and prop
   geom_bar(stat = "identity") + # make bar chart of identity (prop)
-  geom_vline(aes(xintercept = mean, color = "red")) # and line of mean
+  geom_vline(aes(xintercept = mean, color = "red")) + # and line of mean
+  labs(title = "Unadjusted price") +
+  xlim(0, 4)
 ```
 :::
 :::
