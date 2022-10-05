@@ -137,7 +137,7 @@ Let's create a look-up table. We can create a function to compute this for any g
 #| eval: false
 #| echo: true
 
-compute <- # name the function
+compute_prob <- # name the function
   function(n, B = 500){ # function inputs
   results <- # store results
     replicate(B, # run num_of_same_birthdays B times 
