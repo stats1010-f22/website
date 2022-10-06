@@ -179,14 +179,14 @@
     "href": "weeks/week-07.html#practice",
     "title": "Week 7",
     "section": "Practice",
-    "text": "Practice\n📋 Random variables"
+    "text": "Practice\n📋"
   },
   {
     "objectID": "weeks/week-07.html#perform",
     "href": "weeks/week-07.html#perform",
     "title": "Week 7",
     "section": "Perform",
-    "text": "Perform\n✅ Exam 1\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-05.html",
@@ -320,48 +320,6 @@
     "title": "Week 1",
     "section": "Perform",
     "text": "Perform\n⌨️ Diagnostic test\n\n\nBack to course schedule ⏎"
-  },
-  {
-    "objectID": "slides/lect_08.html#using-proportions",
-    "href": "slides/lect_08.html#using-proportions",
-    "title": "Chapter 6: Association between quantitative variables",
-    "section": "Using proportions",
-    "text": "Using proportions\n\n\n\n\\(x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3\n\n\n\n1.29\n5\n\n\n\n1.37\n4\n\n\n\n1.84\n1\n\n\n\n1.18\n6\n\n\n\n1.22\n2\n\n\n\n1.25\n4\n\n\n\nTotal\n25"
-  },
-  {
-    "objectID": "slides/lect_08.html#mean-or-expected-value",
-    "href": "slides/lect_08.html#mean-or-expected-value",
-    "title": "Chapter 6: Association between quantitative variables",
-    "section": "Mean or expected value",
-    "text": "Mean or expected value\nIf we know $P(X) = x$, then we can use this to find the mean or expected value of a random variable. The pdf includes information about both the total and the number of occurrences of \\(x\\), it does the computation for us.\n\\(\\mu = E(X)\\)\n\\(= x_1p(x_1) + x_2p(x_2) + … + x_np(x_n)\\)"
-  },
-  {
-    "objectID": "slides/lect_08.html#price-increase-1",
-    "href": "slides/lect_08.html#price-increase-1",
-    "title": "Chapter 6: Association between quantitative variables",
-    "section": "Price increase",
-    "text": "Price increase\n\n\n\n\\(x\\)\n\\(x + 5\\)\n\\(n\\)\n\\(P(X) = x+5\\)\n\n\n\n\n1.23\n6.23\n3\n0.12\n\n\n1.29\n6.29\n5\n0.20\n\n\n1.37\n6.37\n4\n0.16\n\n\n1.84\n6.84\n1\n0.04\n\n\n1.18\n6.18\n6\n0.24\n\n\n1.22\n6.22\n2\n0.08\n\n\n1.25\n6.25\n4\n0.16"
-  },
-  {
-    "objectID": "slides/lect_08.html#price-increase-2",
-    "href": "slides/lect_08.html#price-increase-2",
-    "title": "Chapter 6: Association between quantitative variables",
-    "section": "Price increase",
-    "text": "Price increase"
-  },
-  {
-    "objectID": "slides/lect_08.html#stock-splits-1",
-    "href": "slides/lect_08.html#stock-splits-1",
-    "title": "Chapter 6: Association between quantitative variables",
-    "section": "Stock splits",
-    "text": "Stock splits\n\n\n\n\\(x\\)\n\\(3x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3.68\n3\n0.12\n\n\n1.29\n3.87\n5\n0.20\n\n\n1.37\n4.11\n4\n0.16\n\n\n1.84\n5.52\n1\n0.04\n\n\n1.18\n3.54\n6\n0.24\n\n\n1.22\n3.66\n2\n0.08\n\n\n1.25\n3.75\n4\n0.16"
-  },
-  {
-    "objectID": "slides/lect_08.html#stock-splits-2",
-    "href": "slides/lect_08.html#stock-splits-2",
-    "title": "Chapter 6: Association between quantitative variables",
-    "section": "Stock splits",
-    "text": "Stock splits"
   },
   {
     "objectID": "slides/lect_07.html#using-proportions",
@@ -677,48 +635,6 @@
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Write your first line of coding",
     "text": "Write your first line of coding\nClick here or the qr code below to write your first line of code\n\n\n\nstat1010-f22.github.io/website"
-  },
-  {
-    "objectID": "slides/lect_09.html#using-proportions",
-    "href": "slides/lect_09.html#using-proportions",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Using proportions",
-    "text": "Using proportions\n\n\n\n\\(x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3\n\n\n\n1.29\n5\n\n\n\n1.37\n4\n\n\n\n1.84\n1\n\n\n\n1.18\n6\n\n\n\n1.22\n2\n\n\n\n1.25\n4\n\n\n\nTotal\n25"
-  },
-  {
-    "objectID": "slides/lect_09.html#mean-or-expected-value",
-    "href": "slides/lect_09.html#mean-or-expected-value",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Mean or expected value",
-    "text": "Mean or expected value\nIf we know $P(X) = x$, then we can use this to find the mean or expected value of a random variable. The pdf includes information about both the total and the number of occurrences of \\(x\\), it does the computation for us.\n\\(\\mu = E(X)\\)\n\\(= x_1p(x_1) + x_2p(x_2) + … + x_np(x_n)\\)"
-  },
-  {
-    "objectID": "slides/lect_09.html#price-increase-1",
-    "href": "slides/lect_09.html#price-increase-1",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Price increase",
-    "text": "Price increase\n\n\n\n\\(x\\)\n\\(x + 5\\)\n\\(n\\)\n\\(P(X) = x+5\\)\n\n\n\n\n1.23\n6.23\n3\n0.12\n\n\n1.29\n6.29\n5\n0.20\n\n\n1.37\n6.37\n4\n0.16\n\n\n1.84\n6.84\n1\n0.04\n\n\n1.18\n6.18\n6\n0.24\n\n\n1.22\n6.22\n2\n0.08\n\n\n1.25\n6.25\n4\n0.16"
-  },
-  {
-    "objectID": "slides/lect_09.html#price-increase-2",
-    "href": "slides/lect_09.html#price-increase-2",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Price increase",
-    "text": "Price increase"
-  },
-  {
-    "objectID": "slides/lect_09.html#stock-splits-1",
-    "href": "slides/lect_09.html#stock-splits-1",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Stock splits",
-    "text": "Stock splits\n\n\n\n\\(x\\)\n\\(3x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3.68\n3\n0.12\n\n\n1.29\n3.87\n5\n0.20\n\n\n1.37\n4.11\n4\n0.16\n\n\n1.84\n5.52\n1\n0.04\n\n\n1.18\n3.54\n6\n0.24\n\n\n1.22\n3.66\n2\n0.08\n\n\n1.25\n3.75\n4\n0.16"
-  },
-  {
-    "objectID": "slides/lect_09.html#stock-splits-2",
-    "href": "slides/lect_09.html#stock-splits-2",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Stock splits",
-    "text": "Stock splits"
   },
   {
     "objectID": "slides/lect_04.html#definition-of-numeric-variable",
