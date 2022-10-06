@@ -1,0 +1,31 @@
+---
+title: "Week 6"
+subtitle: "Exam 1"
+editor: visual
+---
+
+## Prepare
+
+📖 Read [Chpt 9 from Stine and Foster](https://www.pearson.com/us/higher-education/product/Stine-Statistics-for-Business-Decision-Making-and-Analysis-3rd-Edition/9780134497167.html)
+
+## Participate
+
+🖥️ [Lecture 7](/slides/lect_07.html)
+
+## Practice
+
+📋 [Random variables](/ae/ae-8.html)
+
+## Perform
+
+✅ Exam 1
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
