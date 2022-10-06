@@ -18,11 +18,9 @@ editor: visual
 
 ## Practice
 
-📋 [Random variables](/ae/ae-8.html)
+📋
 
 ## Perform
-
-✅ Exam 1
 
 <br><br>
 

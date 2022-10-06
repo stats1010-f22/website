@@ -22,318 +22,27 @@ library(tidyverse)
 
 By the end of this lesson you should:
 
--   Know how to read a scatterplot to describe associations between variables
+-   Know how to read a scatterplot to describe associations between quantitative variables
 
--   Know how to
+-   
 
-# Revision - 1
+# Revision - associations
 
-Find the mean, and variance for these examples:
-
-1.  $20, 24, 25, 36, 25, 22, 23$
-
-2.  Rolling a fair six-sided die
-
-# Revision - 2
-
-A stock prices ($X$) at these frequencies:
-
-| $x$   | $n$ |
-|-------|-----|
-| 1.23  | 3   |
-| 1.29  | 5   |
-| 1.37  | 4   |
-| 1.84  | 1   |
-| 1.18  | 6   |
-| 1.22  | 2   |
-| 1.25  | 4   |
-| Total | 25  |
-
-## Using proportions
-
-| $x$   | $n$ | $P(X) = x$ |
-|-------|-----|------------|
-| 1.23  | 3   |            |
-| 1.29  | 5   |            |
-| 1.37  | 4   |            |
-| 1.84  | 1   |            |
-| 1.18  | 6   |            |
-| 1.22  | 2   |            |
-| 1.25  | 4   |            |
-| Total | 25  |            |
-
-## Mean or expected value
-
-If we know \$P(X) = x\$, then we can use this to find the mean or expected value of a random variable. The pdf includes information about both the total and the number of occurrences of $x$, it does the computation for us.
-
-$\mu = E(X)$
-
-$= x_1p(x_1) + x_2p(x_2) + … + x_np(x_n)$
-
-# Probability density function
-
-There are different ways to define a pdf:
-
--   table
-
--   plot
-
-# plot - pdf
-
-::: columns
-::: {.column width="50%"}
-```{r pdf-run}
-#| eval: true
-#| message: false
-#| echo: false
-#| column: page-left
-
-values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25)
-counts <- c(3, 5, 4, 1, 6, 2, 4)
-
-d <- 
-  as_tibble(data.frame(values, counts)) %>% 
-    mutate(prop = counts/sum(counts)) %>% 
-     rowwise() %>% 
-     mutate(part_mean = sum(values*prop)) %>% 
-     ungroup() %>% 
-    mutate(mean = sum (part_mean))
-
-d %>% 
-  ggplot(aes(x = values, y = prop)) +
-  geom_bar(stat = "identity") + 
-  geom_vline(aes(xintercept = mean, color = "red"))
-```
+::: {.notes}
+Remind them of $\chi^2$ tests
 :::
 
-::: {.column width="50%"}
-```{r pdf-view}
-#| eval: false
-#| message: false
-#| echo: true
-#| column: page-right
-
-## Input data
-values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25)
-counts <- c(3, 5, 4, 1, 6, 2, 4)
-
-d <- 
-  as_tibble(data.frame(values, counts)) %>% # make tibble
-  mutate(prop = counts/sum(counts)) %>% # find proportion
-  rowwise() %>% # for each row
-  mutate(part_mean = sum(values*prop)) %>% # multiply values & prop
-  ungroup() %>% # not for each row
-  mutate(mean = sum (part_mean)) # find the sum
-
-d %>% 
-  ggplot(aes(x = values, y = prop)) + # for values and prop
-  geom_bar(stat = "identity") + # make bar chart of identity (prop)
-  geom_vline(aes(xintercept = mean, color = "red")) # and line of mean
-```
-:::
+::: {.incremental}
+- $\chi^2$ tests are used for associations in categorical data
+- What is used to find associations in numerical data?
 :::
 
-# Price increase
-
-All the stock values have increased by \$5:
-
-What happens to the mean?
-
-What happens to the standard deviation?
-
-## Price increase
-
-| $x$  | $x + 5$ | $n$ | $P(X) = x+5$ |
-|------|---------|-----|--------------|
-| 1.23 | 6.23    | 3   | 0.12         |
-| 1.29 | 6.29    | 5   | 0.20         |
-| 1.37 | 6.37    | 4   | 0.16         |
-| 1.84 | 6.84    | 1   | 0.04         |
-| 1.18 | 6.18    | 6   | 0.24         |
-| 1.22 | 6.22    | 2   | 0.08         |
-| 1.25 | 6.25    | 4   | 0.16         |
-
-## Price increase
-
-::: columns
-::: {.column width="50%"}
-```{r pdf-add-run}
-#| eval: true
-#| message: false
-#| echo: false
-#| column: page-left
-
-values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) + 5
-counts <- c(3, 5, 4, 1, 6, 2, 4)
-
-d <- 
-  as_tibble(data.frame(values, counts)) %>% 
-    mutate(prop = counts/sum(counts)) %>% 
-     rowwise() %>% 
-     mutate(part_mean = sum(values*prop)) %>% 
-     ungroup() %>% 
-    mutate(mean = sum(part_mean))
-
-d %>% 
-  ggplot(aes(x = values, y = prop)) +
-  geom_bar(stat = "identity") + 
-  geom_vline(aes(xintercept = mean, color = "red")) +
-  labs(title = "Price increased by $5") +
-  xlim(0, 7)
-  
-  
-```
+# Scatter plot
+::: {.notes}
+Remind them about plots of proportions that we did for titanic and comics data.
 :::
 
-::: {.column width="50%"}
-```{r pdf-no_add}
-#| eval: true
-#| message: false
-#| echo: false
-#| column: page-right
 
-## Input data
-values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) 
-counts <- c(3, 5, 4, 1, 6, 2, 4)
-
-d <- 
-  as_tibble(data.frame(values, counts)) %>% # make tibble
-  mutate(prop = counts/sum(counts)) %>% # find proportion
-  rowwise() %>% # for each row
-  mutate(part_mean = sum(values*prop)) %>% # multiply values & prop
-  ungroup() %>% # not for each row
-  mutate(mean = sum (part_mean)) # find the sum
-
-d %>% 
-  ggplot(aes(x = values, y = prop)) + # for values and prop
-  geom_bar(stat = "identity") + # make bar chart of identity (prop)
-  geom_vline(aes(xintercept = mean, color = "red")) + # and line of mean 
-  labs(title = "Unadjusted price") +
-  xlim(0, 7)
-```
-:::
-:::
-
-# Adding a constant
-
-$E(X \pm c) = E(X) \pm c$
-
-$SD(X \pm c) = SD(X)$
-
-$Var(X \pm c) = Var(X)$
-
-# Stock splits
-
-Without decreasing the cost, the stock values are now 3 times what they were before:
-
-What happens to the mean?
-
-What happens to the standard deviation?
-
-## Stock splits
-
-| $x$  | $3x$ | $n$ | $P(X) = x$ |
-|------|------|-----|------------|
-| 1.23 | 3.68 | 3   | 0.12       |
-| 1.29 | 3.87 | 5   | 0.20       |
-| 1.37 | 4.11 | 4   | 0.16       |
-| 1.84 | 5.52 | 1   | 0.04       |
-| 1.18 | 3.54 | 6   | 0.24       |
-| 1.22 | 3.66 | 2   | 0.08       |
-| 1.25 | 3.75 | 4   | 0.16       |
-
-## Stock splits
-
-::: columns
-::: {.column width="50%"}
-```{r pdf-splits-run}
-#| eval: true
-#| message: false
-#| echo: false
-#| column: page-left
-
-values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25)
-counts <- c(3, 5, 4, 1, 6, 2, 4)
-
-d <- 
-  as_tibble(data.frame(values, counts)) %>% 
-    mutate(prop = counts/sum(counts)) %>% 
-     rowwise() %>% 
-     mutate(part_mean = sum(values*prop)) %>% 
-     ungroup() %>% 
-    mutate(mean = sum (part_mean))
-
-d %>% 
-  ggplot(aes(x = values, y = prop)) +
-  geom_bar(stat = "identity") + 
-  geom_vline(aes(xintercept = mean, color = "red")) +
-  labs(title = "Unadjusted price") +
-  xlim(0, 6)
-```
-:::
-
-::: {.column width="50%"}
-```{r pdf-run_split}
-#| eval: true
-#| message: false
-#| echo: false
-#| column: page-right
-
-## Input data
-values <- c(1.23, 1.29, 1.37, 1.84, 1.18, 1.22, 1.25) * 3
-counts <- c(3, 5, 4, 1, 6, 2, 4)
-
-d <- 
-  as_tibble(data.frame(values, counts)) %>% # make tibble
-  mutate(prop = counts/sum(counts)) %>% # find proportion
-  rowwise() %>% # for each row
-  mutate(part_mean = sum(values*prop)) %>% # multiply values & prop
-  ungroup() %>% # not for each row
-  mutate(mean = sum (part_mean)) # find the sum
-
-d %>% 
-  ggplot(aes(x = values, y = prop)) + # for values and prop
-  geom_bar(stat = "identity") + # make bar chart of identity (prop)
-  geom_vline(aes(xintercept = mean, color = "red")) + # and line of mean
-  labs(title = "Price is 3 times higher") +
-  xlim(0, 6)
-```
-:::
-:::
-
-# Multiply by a constant
-
-$E(cX) = cE(X)$
-
-$SD(cX) = |c|SD(X)$
-
-$Var(cX) = c^2Var(X)$
-
-$E(cX \pm a)=cE(X) \pm a$
-
-$Var(cX \pm a)=c^2Var(X)$
-
-# Parameter vs estimate
-
-+-----------+------------+-----------+
-|           | population | sample    |
-+===========+============+===========+
-| name      | parameter  | estimate  |
-+-----------+------------+-----------+
-| mean      | $\mu$      | $\bar{x}$ |
-+-----------+------------+-----------+
-| variance  | $\sigma^2$ | $s^2$     |
-+-----------+------------+-----------+
-| standard  | $\sigma$   | $s$       |
-|           |            |           |
-| deviation |            |           |
-+-----------+------------+-----------+
-| size      | $N$        | $n$       |
-+-----------+------------+-----------+
-
-# Visually
-
-![](lect_07-images/parameter_estimate.png)
 
 # Your turn
 
@@ -341,6 +50,6 @@ $Var(cX \pm a)=c^2Var(X)$
 
 ```{r, eval=TRUE, echo=FALSE}
 library(qrcode)
-qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-8.html")
+qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-9.html")
 plot(qr)
 ```

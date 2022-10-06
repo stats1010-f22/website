@@ -111,6 +111,10 @@ ggplot(data = diamonds) +
 
 # A few of the "squares"
 
+    ::: {.notes}
+    Due to the aspect ratio of the plot these squares are not square. Ask the students if these are really squares or not.
+    :::
+
 ```{r}
 #| echo: false
 #| eval: true
