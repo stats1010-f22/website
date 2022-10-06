@@ -133,172 +133,242 @@
     "text": "Teaching Assistant\n\n\n\n\nName\nOffice hours\nLocation\n\n\n\n\n\nPatrick Chao\nMon & Wed\n4pm - 5pm\nZoom"
   },
   {
-    "objectID": "weeks/week-5.html",
-    "href": "weeks/week-5.html",
-    "title": "Week 5",
-    "section": "",
-    "text": "📖 Read Solutions to AEs\n📖 Read Solutions to HW-1"
-  },
-  {
-    "objectID": "weeks/week-5.html#practice",
-    "href": "weeks/week-5.html#practice",
-    "title": "Week 5",
-    "section": "Practice",
-    "text": "Practice\n📋 Revision 1 for exam 1\n📋 Revision 2 for exam 1"
-  },
-  {
-    "objectID": "weeks/week-5.html#perform",
-    "href": "weeks/week-5.html#perform",
-    "title": "Week 5",
-    "section": "Perform",
-    "text": "Perform\n⌨️ Course evaluation\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
-  },
-  {
-    "objectID": "weeks/week-6.html",
-    "href": "weeks/week-6.html",
-    "title": "Week 6",
-    "section": "",
-    "text": "📖 Read Chpt 9 from Stine and Foster"
-  },
-  {
-    "objectID": "weeks/week-6.html#participate",
-    "href": "weeks/week-6.html#participate",
-    "title": "Week 6",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Lecture 7"
-  },
-  {
-    "objectID": "weeks/week-6.html#practice",
-    "href": "weeks/week-6.html#practice",
-    "title": "Week 6",
-    "section": "Practice",
-    "text": "Practice\n📋 Random variables"
-  },
-  {
-    "objectID": "weeks/week-6.html#perform",
-    "href": "weeks/week-6.html#perform",
-    "title": "Week 6",
-    "section": "Perform",
-    "text": "Perform\n✅ Exam 1\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
-  },
-  {
-    "objectID": "weeks/week-4.html",
-    "href": "weeks/week-4.html",
-    "title": "Week 4",
-    "section": "",
-    "text": "📖 Read chapter 14 of Introduction to Data Science\n📖 Read chapter 2 of Probability, Statistics, and Data: A fresh approach using R"
-  },
-  {
-    "objectID": "weeks/week-4.html#participate",
-    "href": "weeks/week-4.html#participate",
-    "title": "Week 4",
-    "section": "Participate",
-    "text": "Participate\n🖥️ Lecture 5\n🖥️ Lecture 6"
-  },
-  {
-    "objectID": "weeks/week-4.html#practice",
-    "href": "weeks/week-4.html#practice",
-    "title": "Week 4",
-    "section": "Practice",
-    "text": "Practice\n📋 Exploring probabilities\n📋 The birthday simulation"
-  },
-  {
-    "objectID": "weeks/week-4.html#perform",
-    "href": "weeks/week-4.html#perform",
-    "title": "Week 4",
-    "section": "Perform",
-    "text": "Perform\n⌨️ Diagnostic test - week 3\n✍️ HW 1 - Titanic\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
-  },
-  {
-    "objectID": "weeks/week-2.html",
-    "href": "weeks/week-2.html",
+    "objectID": "weeks/week-02.html",
+    "href": "weeks/week-02.html",
     "title": "Week 2",
     "section": "",
     "text": "📖 Read the syllabus\n📖 Read the support resources"
   },
   {
-    "objectID": "weeks/week-2.html#participate",
-    "href": "weeks/week-2.html#participate",
+    "objectID": "weeks/week-02.html#participate",
+    "href": "weeks/week-02.html#participate",
     "title": "Week 2",
     "section": "Participate",
     "text": "Participate\n🖥️ Lecture 2"
   },
   {
-    "objectID": "weeks/week-2.html#practice",
-    "href": "weeks/week-2.html#practice",
+    "objectID": "weeks/week-02.html#practice",
+    "href": "weeks/week-02.html#practice",
     "title": "Week 2",
     "section": "Practice",
     "text": "Practice\n📋 diamonds"
   },
   {
-    "objectID": "weeks/week-2.html#perform",
-    "href": "weeks/week-2.html#perform",
+    "objectID": "weeks/week-02.html#perform",
+    "href": "weeks/week-02.html#perform",
     "title": "Week 2",
     "section": "Perform",
     "text": "Perform\n⌨️ Diagnostic test\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
   },
   {
-    "objectID": "weeks/week-1.html",
-    "href": "weeks/week-1.html",
-    "title": "Week 1",
+    "objectID": "weeks/week-07.html",
+    "href": "weeks/week-07.html",
+    "title": "Week 6",
     "section": "",
-    "text": "📖 Read the syllabus\n📖 Read the support resources"
+    "text": "📖 Read Chpt 9 from Stine and Foster"
   },
   {
-    "objectID": "weeks/week-1.html#participate",
-    "href": "weeks/week-1.html#participate",
-    "title": "Week 1",
+    "objectID": "weeks/week-07.html#participate",
+    "href": "weeks/week-07.html#participate",
+    "title": "Week 6",
     "section": "Participate",
-    "text": "Participate\n🖥️ Lecture 1 - Download R and plotting your first graph"
+    "text": "Participate\n🖥️ Lecture 7"
   },
   {
-    "objectID": "weeks/week-1.html#practice",
-    "href": "weeks/week-1.html#practice",
-    "title": "Week 1",
+    "objectID": "weeks/week-07.html#practice",
+    "href": "weeks/week-07.html#practice",
+    "title": "Week 6",
     "section": "Practice",
-    "text": "Practice\n📋 diamonds"
+    "text": "Practice\n📋 Random variables"
   },
   {
-    "objectID": "weeks/week-1.html#perform",
-    "href": "weeks/week-1.html#perform",
-    "title": "Week 1",
+    "objectID": "weeks/week-07.html#perform",
+    "href": "weeks/week-07.html#perform",
+    "title": "Week 6",
     "section": "Perform",
-    "text": "Perform\n⌨️ Diagnostic test\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n✅ Exam 1\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
   },
   {
-    "objectID": "weeks/week-3.html",
-    "href": "weeks/week-3.html",
+    "objectID": "weeks/week-05.html",
+    "href": "weeks/week-05.html",
+    "title": "Week 5",
+    "section": "",
+    "text": "📖 Read Solutions to AEs\n📖 Read Solutions to HW-1"
+  },
+  {
+    "objectID": "weeks/week-05.html#practice",
+    "href": "weeks/week-05.html#practice",
+    "title": "Week 5",
+    "section": "Practice",
+    "text": "Practice\n📋 Revision 1 for exam 1\n📋 Revision 2 for exam 1"
+  },
+  {
+    "objectID": "weeks/week-05.html#perform",
+    "href": "weeks/week-05.html#perform",
+    "title": "Week 5",
+    "section": "Perform",
+    "text": "Perform\n⌨️ Course evaluation\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-06.html",
+    "href": "weeks/week-06.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "📖 Read Chpt 9 from Stine and Foster"
+  },
+  {
+    "objectID": "weeks/week-06.html#participate",
+    "href": "weeks/week-06.html#participate",
+    "title": "Week 6",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Lecture 7"
+  },
+  {
+    "objectID": "weeks/week-06.html#practice",
+    "href": "weeks/week-06.html#practice",
+    "title": "Week 6",
+    "section": "Practice",
+    "text": "Practice\n📋 Random variables"
+  },
+  {
+    "objectID": "weeks/week-06.html#perform",
+    "href": "weeks/week-06.html#perform",
+    "title": "Week 6",
+    "section": "Perform",
+    "text": "Perform\n✅ Exam 1\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-04.html",
+    "href": "weeks/week-04.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "📖 Read chapter 14 of Introduction to Data Science\n📖 Read chapter 2 of Probability, Statistics, and Data: A fresh approach using R"
+  },
+  {
+    "objectID": "weeks/week-04.html#participate",
+    "href": "weeks/week-04.html#participate",
+    "title": "Week 4",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Lecture 5\n🖥️ Lecture 6"
+  },
+  {
+    "objectID": "weeks/week-04.html#practice",
+    "href": "weeks/week-04.html#practice",
+    "title": "Week 4",
+    "section": "Practice",
+    "text": "Practice\n📋 Exploring probabilities\n📋 The birthday simulation"
+  },
+  {
+    "objectID": "weeks/week-04.html#perform",
+    "href": "weeks/week-04.html#perform",
+    "title": "Week 4",
+    "section": "Perform",
+    "text": "Perform\n⌨️ Diagnostic test - week 3\n✍️ HW 1 - Titanic\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-03.html",
+    "href": "weeks/week-03.html",
     "title": "Week 3",
     "section": "",
     "text": "📖 Read chapter 4 of Introduction to Modern Statistics\n📖 Read chapter 5 of Introduction to Modern Statistics"
   },
   {
-    "objectID": "weeks/week-3.html#participate",
-    "href": "weeks/week-3.html#participate",
+    "objectID": "weeks/week-03.html#participate",
+    "href": "weeks/week-03.html#participate",
     "title": "Week 3",
     "section": "Participate",
     "text": "Participate\n🖥️ Lecture 3\n🖥️ Lecture 4"
   },
   {
-    "objectID": "weeks/week-3.html#practice",
-    "href": "weeks/week-3.html#practice",
+    "objectID": "weeks/week-03.html#practice",
+    "href": "weeks/week-03.html#practice",
     "title": "Week 3",
     "section": "Practice",
     "text": "Practice\n📋 Exploring qualitative variables\n📋 Exploring numeric variables"
   },
   {
-    "objectID": "weeks/week-3.html#perform",
-    "href": "weeks/week-3.html#perform",
+    "objectID": "weeks/week-03.html#perform",
+    "href": "weeks/week-03.html#perform",
     "title": "Week 3",
     "section": "Perform",
     "text": "Perform\n⌨️ Diagnostic test - week 3\n✍️ HW 6 - Statistics Experience\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-01.html",
+    "href": "weeks/week-01.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "📖 Read the syllabus\n📖 Read the support resources"
+  },
+  {
+    "objectID": "weeks/week-01.html#participate",
+    "href": "weeks/week-01.html#participate",
+    "title": "Week 1",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Lecture 1 - Download R and plotting your first graph"
+  },
+  {
+    "objectID": "weeks/week-01.html#practice",
+    "href": "weeks/week-01.html#practice",
+    "title": "Week 1",
+    "section": "Practice",
+    "text": "Practice\n📋 diamonds"
+  },
+  {
+    "objectID": "weeks/week-01.html#perform",
+    "href": "weeks/week-01.html#perform",
+    "title": "Week 1",
+    "section": "Perform",
+    "text": "Perform\n⌨️ Diagnostic test\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "slides/lect_08.html#using-proportions",
+    "href": "slides/lect_08.html#using-proportions",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Using proportions",
+    "text": "Using proportions\n\n\n\n\\(x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3\n\n\n\n1.29\n5\n\n\n\n1.37\n4\n\n\n\n1.84\n1\n\n\n\n1.18\n6\n\n\n\n1.22\n2\n\n\n\n1.25\n4\n\n\n\nTotal\n25"
+  },
+  {
+    "objectID": "slides/lect_08.html#mean-or-expected-value",
+    "href": "slides/lect_08.html#mean-or-expected-value",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Mean or expected value",
+    "text": "Mean or expected value\nIf we know $P(X) = x$, then we can use this to find the mean or expected value of a random variable. The pdf includes information about both the total and the number of occurrences of \\(x\\), it does the computation for us.\n\\(\\mu = E(X)\\)\n\\(= x_1p(x_1) + x_2p(x_2) + … + x_np(x_n)\\)"
+  },
+  {
+    "objectID": "slides/lect_08.html#price-increase-1",
+    "href": "slides/lect_08.html#price-increase-1",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Price increase",
+    "text": "Price increase\n\n\n\n\\(x\\)\n\\(x + 5\\)\n\\(n\\)\n\\(P(X) = x+5\\)\n\n\n\n\n1.23\n6.23\n3\n0.12\n\n\n1.29\n6.29\n5\n0.20\n\n\n1.37\n6.37\n4\n0.16\n\n\n1.84\n6.84\n1\n0.04\n\n\n1.18\n6.18\n6\n0.24\n\n\n1.22\n6.22\n2\n0.08\n\n\n1.25\n6.25\n4\n0.16"
+  },
+  {
+    "objectID": "slides/lect_08.html#price-increase-2",
+    "href": "slides/lect_08.html#price-increase-2",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Price increase",
+    "text": "Price increase"
+  },
+  {
+    "objectID": "slides/lect_08.html#stock-splits-1",
+    "href": "slides/lect_08.html#stock-splits-1",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Stock splits",
+    "text": "Stock splits\n\n\n\n\\(x\\)\n\\(3x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3.68\n3\n0.12\n\n\n1.29\n3.87\n5\n0.20\n\n\n1.37\n4.11\n4\n0.16\n\n\n1.84\n5.52\n1\n0.04\n\n\n1.18\n3.54\n6\n0.24\n\n\n1.22\n3.66\n2\n0.08\n\n\n1.25\n3.75\n4\n0.16"
+  },
+  {
+    "objectID": "slides/lect_08.html#stock-splits-2",
+    "href": "slides/lect_08.html#stock-splits-2",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Stock splits",
+    "text": "Stock splits"
   },
   {
     "objectID": "slides/lect_07.html#using-proportions",
     "href": "slides/lect_07.html#using-proportions",
     "title": "Chapter 9: Random variables",
     "section": "Using proportions",
-    "text": "Using proportions\n\n\n\n\n\n\n\n\n\\(x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3\n\n\n\n1.29\n5\n\n\n\n1.37\n4\n\n\n\n1.84\n1\n\n\n\n1.18\n6\n\n\n\n1.22\n2\n\n\n\n1.25\n4\n\n\n\nTotal\n25"
+    "text": "Using proportions\n\n\n\n\\(x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3\n\n\n\n1.29\n5\n\n\n\n1.37\n4\n\n\n\n1.84\n1\n\n\n\n1.18\n6\n\n\n\n1.22\n2\n\n\n\n1.25\n4\n\n\n\nTotal\n25"
   },
   {
     "objectID": "slides/lect_07.html#mean-or-expected-value",
@@ -312,7 +382,7 @@
     "href": "slides/lect_07.html#price-increase-1",
     "title": "Chapter 9: Random variables",
     "section": "Price increase",
-    "text": "Price increase\n\n\n\n\n\n\n\n\n\n\\(x\\)\n\\(x + 5\\)\n\\(n\\)\n\\(P(X) = x+5\\)\n\n\n\n\n1.23\n6.23\n3\n0.12\n\n\n1.29\n6.29\n5\n0.20\n\n\n1.37\n6.37\n4\n0.16\n\n\n1.84\n6.84\n1\n0.04\n\n\n1.18\n6.18\n6\n0.24\n\n\n1.22\n6.22\n2\n0.08\n\n\n1.25\n6.25\n4\n0.16"
+    "text": "Price increase\n\n\n\n\\(x\\)\n\\(x + 5\\)\n\\(P(X) = x+5\\)\n\n\n\n\n1.23\n6.23\n0.12\n\n\n1.29\n6.29\n0.20\n\n\n1.37\n6.37\n0.16\n\n\n1.84\n6.84\n0.04\n\n\n1.18\n6.18\n0.24\n\n\n1.22\n6.22\n0.08\n\n\n1.25\n6.25\n0.16"
   },
   {
     "objectID": "slides/lect_07.html#price-increase-2",
@@ -326,7 +396,7 @@
     "href": "slides/lect_07.html#stock-splits-1",
     "title": "Chapter 9: Random variables",
     "section": "Stock splits",
-    "text": "Stock splits\n\n\n\n\n\n\n\n\n\n\\(x\\)\n\\(3x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3.68\n3\n0.12\n\n\n1.29\n3.87\n5\n0.20\n\n\n1.37\n4.11\n4\n0.16\n\n\n1.84\n5.52\n1\n0.04\n\n\n1.18\n3.54\n6\n0.24\n\n\n1.22\n3.66\n2\n0.08\n\n\n1.25\n3.75\n4\n0.16"
+    "text": "Stock splits\n\n\n\n\\(x\\)\n\\(3x\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3.68\n0.12\n\n\n1.29\n3.87\n0.20\n\n\n1.37\n4.11\n0.16\n\n\n1.84\n5.52\n0.04\n\n\n1.18\n3.54\n0.24\n\n\n1.22\n3.66\n0.08\n\n\n1.25\n3.75\n0.16"
   },
   {
     "objectID": "slides/lect_07.html#stock-splits-2",
@@ -607,6 +677,48 @@
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Write your first line of coding",
     "text": "Write your first line of coding\nClick here or the qr code below to write your first line of code\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "slides/lect_09.html#using-proportions",
+    "href": "slides/lect_09.html#using-proportions",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Using proportions",
+    "text": "Using proportions\n\n\n\n\\(x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3\n\n\n\n1.29\n5\n\n\n\n1.37\n4\n\n\n\n1.84\n1\n\n\n\n1.18\n6\n\n\n\n1.22\n2\n\n\n\n1.25\n4\n\n\n\nTotal\n25"
+  },
+  {
+    "objectID": "slides/lect_09.html#mean-or-expected-value",
+    "href": "slides/lect_09.html#mean-or-expected-value",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Mean or expected value",
+    "text": "Mean or expected value\nIf we know $P(X) = x$, then we can use this to find the mean or expected value of a random variable. The pdf includes information about both the total and the number of occurrences of \\(x\\), it does the computation for us.\n\\(\\mu = E(X)\\)\n\\(= x_1p(x_1) + x_2p(x_2) + … + x_np(x_n)\\)"
+  },
+  {
+    "objectID": "slides/lect_09.html#price-increase-1",
+    "href": "slides/lect_09.html#price-increase-1",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Price increase",
+    "text": "Price increase\n\n\n\n\\(x\\)\n\\(x + 5\\)\n\\(n\\)\n\\(P(X) = x+5\\)\n\n\n\n\n1.23\n6.23\n3\n0.12\n\n\n1.29\n6.29\n5\n0.20\n\n\n1.37\n6.37\n4\n0.16\n\n\n1.84\n6.84\n1\n0.04\n\n\n1.18\n6.18\n6\n0.24\n\n\n1.22\n6.22\n2\n0.08\n\n\n1.25\n6.25\n4\n0.16"
+  },
+  {
+    "objectID": "slides/lect_09.html#price-increase-2",
+    "href": "slides/lect_09.html#price-increase-2",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Price increase",
+    "text": "Price increase"
+  },
+  {
+    "objectID": "slides/lect_09.html#stock-splits-1",
+    "href": "slides/lect_09.html#stock-splits-1",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Stock splits",
+    "text": "Stock splits\n\n\n\n\\(x\\)\n\\(3x\\)\n\\(n\\)\n\\(P(X) = x\\)\n\n\n\n\n1.23\n3.68\n3\n0.12\n\n\n1.29\n3.87\n5\n0.20\n\n\n1.37\n4.11\n4\n0.16\n\n\n1.84\n5.52\n1\n0.04\n\n\n1.18\n3.54\n6\n0.24\n\n\n1.22\n3.66\n2\n0.08\n\n\n1.25\n3.75\n4\n0.16"
+  },
+  {
+    "objectID": "slides/lect_09.html#stock-splits-2",
+    "href": "slides/lect_09.html#stock-splits-2",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Stock splits",
+    "text": "Stock splits"
   },
   {
     "objectID": "slides/lect_04.html#definition-of-numeric-variable",
@@ -914,7 +1026,7 @@
     "href": "index.html",
     "title": "STAT 1010: Introduction to Business Statistics",
     "section": "",
-    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumerical variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋"
+    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumerical variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 3 Oct\nAssociation between quantitative variables\n📖\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nAssociation between random variables\n\n🖥️\n📋"
   },
   {
     "objectID": "course-links.html",
