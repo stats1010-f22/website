@@ -1,16 +1,20 @@
 ---
-title: "Week 6"
-subtitle: "Exam 1"
+title: "Week 7"
+subtitle: "Associations"
 editor: visual
 ---
 
 ## Prepare
 
-📖 Read [Chpt 9 from Stine and Foster](https://www.pearson.com/us/higher-education/product/Stine-Statistics-for-Business-Decision-Making-and-Analysis-3rd-Edition/9780134497167.html)
+📖 Read [Chpts 6 & 10 from Stine and Foster](https://www.pearson.com/store/en-us/pearsonplus/p/9780137399727.html)
+
+📖 Read FGLI: [Chpts 6 & 10 from Stine and Foster](https://portal.mypearson.com/course-home/handout/sturdevant21135/Student_Registration_Handout_sturdevant21135.pdf)
 
 ## Participate
 
-🖥️ [Lecture 7](/slides/lect_07.html)
+🖥️ [Lecture 8](/slides/lect_08.html)
+
+🖥️ [Lecture 9](/slides/lect_09.html)
 
 ## Practice
 

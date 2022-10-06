@@ -1,5 +1,5 @@
 ---
-title: "Chapter 6: Association between quantitative variables"
+title: "Chapter 10: Association between random variables"
 subtitle: "STAT 1010 - Fall 2022"
 footer:  "[stat1010-f22.github.io/website](https://stats1010-f22.github.io/website/)"
 format: 
