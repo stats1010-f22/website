@@ -317,7 +317,7 @@ Standardizes the strength of the association
 cor(diamonds$price, diamonds$carat)
 ```
 
-
+## pg 118 of book
 
 # Spurious correlations
 Might lurking variables explain these relationships?
