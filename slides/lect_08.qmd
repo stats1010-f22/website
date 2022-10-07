@@ -22,83 +22,109 @@ library(tidyverse)
 
 By the end of this lesson you should:
 
--   Know how to read a scatterplot to describe associations between quantitative variables
+-   Know how to read a scatterplot to describe associations between quantitative variables and
+
+-   Perform a visual assocation test
 
 -   
 
 # Revision - associations
 
-::: {.notes}
+::: notes
 Remind them of $\chi^2$ tests
 :::
 
-::: {.incremental}
-- $\chi^2$ tests are used for associations in categorical data
-- What is used to find associations in numerical data?
+::: incremental
+-   $\chi^2$ tests are used for associations in categorical data
+-   What is used to find associations in numerical data?
 :::
 
 # Plots
-::: {.notes}
+
+::: notes
 Remind them about plots of proportions that we did for titanic and comics data.
 
-Which variable goes on the y axis?
+Which variable goes on the y axis? Which on the x axis
 
 Is there an association or not?
 :::
 
-::: {.incremental}
-- variable on the $y$ axis 
-    - dependent
-    - response
-- variable on the $x$ axis
-    - independent
-    - explanatory
-    
-```{r scatterplot}
+::: incremental
+-   variable on the $y$ axis
+    -   dependent
+    -   response
+-   variable on the $x$ axis
+    -   independent
+    -   explanatory
+:::
 
+# Price vs $x$
+
+```{r scatterplot}
 diamonds %>% 
   filter(x > 0) %>% 
   ggplot() +
-  geom_point(aes(y = price, x = x)) 
+  geom_point(aes(y = price, x = x)) +
+  labs(title = "Simulated association test", 
+       x = "Length of diamond in mm", 
+       y = "Price of diamonds in US$")
 ```
-:::
 
-# Visual test
+# Visual association test
+
+::: notes
+Ask them to run the coding in RStudio and see what they get - can connect some of their computers to the big screen
+
+Ask them if they can see a difference between their plots and the real plot
+:::
 
 ::: columns
 ::: {.column width="50%"}
-```{r pdf-add-run}
+```{r association_test_run}
 #| eval: true
 #| message: false
 #| echo: false
 #| column: page-left
 
-diamonds %>% 
-  filter(x > 0) %>% 
-  ggplot() +
-  geom_point(aes(y = price, x = x)) 
-  
-  
+diamonds_filtered <- 
+  diamonds %>% 
+  filter(x > 0)
+
+diamonds_filtered %>% # filtered data
+  slice_sample(n = nrow(.)) %>% # random sample rows
+  pull(x) %>% # take out the variable x
+  bind_cols(., diamonds_filtered$price) %>% # price in the same order
+  ggplot() + # into ggplot
+  geom_point(aes(y = ...2, x = ...1)) + # using the new names
+  labs(title = "Simulated association test", 
+       x = "Length of diamond in mm", 
+       y = "Price of diamonds in US$")
 ```
 :::
 
 ::: {.column width="50%"}
-```{r pdf-no_add}
-#| eval: true
+```{r association_test_show}
+#| eval: false
 #| message: false
-#| echo: false
+#| echo: true
 #| column: page-right
 
-diamonds %>% 
-  filter(x > 0) %>% 
-  ggplot() +
-  geom_point(aes(y = price, x = x)) 
+diamonds_filtered <- # naming the filtered data
+  diamonds %>%  # diamonds data
+  filter(x > 0) # x positive
 
+diamonds_filtered %>% # filtered data
+  slice_sample(n = nrow(.)) %>% # random sample rows
+  pull(x) %>% # take out the variable x
+  bind_cols(., diamonds_filtered$price) %>% # price in the same order
+  ggplot() + # into ggplot
+  geom_point(aes(y = ...2, x = ...1)) + # using the new names
+  labs(title = "Simulated association test", 
+       x = "Length of diamond in mm", 
+       y = "Price of diamonds in US$")
 ```
 :::
 :::
-
-
 
 # Your turn
 
