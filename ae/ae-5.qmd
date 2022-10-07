@@ -36,7 +36,7 @@ all_bdays <- as_tibble(1:365) # data from where we can sample
 
 bdays_class <- 
   all_bdays %>% # data from where to sample
-  slice_sample(size = 100, replace = TRUE) # sample of size 100 with replacement
+  slice_sample(n = 100, replace = TRUE) # sample of size 100 with replacement
 ```
 
 To check if in this particular set of 100 people we have at least two with the same birthday, we can use the functions `group_by` and `filter`, which returns a tibble with a vector of duplicated dates. Here is an example:
@@ -63,11 +63,11 @@ To estimate the probability of a shared birthday in the group, we repeat this ex
 
 bdays_dups <- 
   all_bdays %>% # data from where to sample
-  slice_sample(size = 100, replace = TRUE) %>% # take a sample of size 100
+  slice_sample(n = 100, replace = TRUE) %>% # take a sample of n 100
   group_by(value) %>% # for each birthday
   count() %>% # count them
   filter(n > 1) %>% # those have more than 1
-  vec_size(.) # the number that are duplicated
+  vec_n(.) # the number that are duplicated
 ```
 
 A function has an input (in this case $n$)
@@ -82,7 +82,7 @@ A function has an input (in this case $n$)
 
 num_of_same_birthdays <- function(n){
   all_bdays %>% # data from where to sample
-  slice_sample(size = n, replace = TRUE) %>% # take a sample
+  slice_sample(n = n, replace = TRUE) %>% # take a sample
   group_by(value) %>% # for each birthday
   count() %>% # count them
   filter(n > 1) %>% # those have more than 1

@@ -37,9 +37,65 @@ Remind them of $\chi^2$ tests
 - What is used to find associations in numerical data?
 :::
 
-# Scatter plot
+# Plots
 ::: {.notes}
 Remind them about plots of proportions that we did for titanic and comics data.
+
+Which variable goes on the y axis?
+
+Is there an association or not?
+:::
+
+::: {.incremental}
+- variable on the $y$ axis 
+    - dependent
+    - response
+- variable on the $x$ axis
+    - independent
+    - explanatory
+    
+```{r scatterplot}
+
+diamonds %>% 
+  filter(x > 0) %>% 
+  ggplot() +
+  geom_point(aes(y = price, x = x)) 
+```
+:::
+
+# Visual test
+
+::: columns
+::: {.column width="50%"}
+```{r pdf-add-run}
+#| eval: true
+#| message: false
+#| echo: false
+#| column: page-left
+
+diamonds %>% 
+  filter(x > 0) %>% 
+  ggplot() +
+  geom_point(aes(y = price, x = x)) 
+  
+  
+```
+:::
+
+::: {.column width="50%"}
+```{r pdf-no_add}
+#| eval: true
+#| message: false
+#| echo: false
+#| column: page-right
+
+diamonds %>% 
+  filter(x > 0) %>% 
+  ggplot() +
+  geom_point(aes(y = price, x = x)) 
+
+```
+:::
 :::
 
 
