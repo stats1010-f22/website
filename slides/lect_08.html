@@ -400,17 +400,22 @@
 
 <section id="learning-outcomes" class="title-slide slide level1 center">
 <h1>Learning outcomes</h1>
+<div>
 <p>By the end of this lesson you should:</p>
 <ul>
-<li><p>Know how to read a scatterplot to describe associations between quantitative variables and</p></li>
-<li><p>Perform a visual assocation test</p></li>
-<li></li>
+<li class="fragment"><p>Perform a visual assocation test</p></li>
+<li class="fragment"><p>Know how to read a scatterplot to describe associations between quantitative variables</p></li>
+<li class="fragment"><p>Know how to quantify associations in quantitative variables</p></li>
+<li class="fragment"><p>Use a line to describe associations in linear relationships</p></li>
+<li class="fragment"><p>Understand spurious correlations and lurking variables</p></li>
 </ul>
+</div>
 </section>
 
-<section id="revision---associations" class="title-slide slide level1 center">
-<h1>Revision - associations</h1>
+<section id="associations" class="title-slide slide level1 center">
+<h1>Associations</h1>
 <aside class="notes">
+<p>When have we used this word before?</p>
 <p>Remind them of <span class="math inline">\(\chi^2\)</span> tests</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -431,12 +436,12 @@
 </div>
 </section>
 
+<section>
 <section id="plots" class="title-slide slide level1 center">
 <h1>Plots</h1>
 <aside class="notes">
-<p>Remind them about plots of proportions that we did for titanic and comics data.</p>
-<p>Which variable goes on the y axis? Which on the x axis</p>
-<p>Is there an association or not?</p>
+<p>Remind them about plots of proportions that we did for titanic and comics data. What did we look for in the plots?</p>
+<p>Which variable goes on the y axis? Which on the x axis?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -463,17 +468,15 @@
 </ul>
 </div>
 </section>
-
-<section id="price-vs-x" class="title-slide slide level1 center">
-<h1>Price vs <span class="math inline">\(x\)</span></h1>
+<section id="price-vs-carat" class="slide level2">
+<h2>Price vs carat</h2>
 
 <img data-src="lect_08_files/figure-revealjs/scatterplot-1.png" width="960" class="r-stretch"></section>
-
-<section id="visual-association-test" class="title-slide slide level1 center">
-<h1>Visual association test</h1>
+<section id="visual-association-test" class="slide level2">
+<h2>Visual association test</h2>
 <aside class="notes">
 <p>Ask them to run the coding in RStudio and see what they get - can connect some of their computers to the big screen</p>
-<p>Ask them if they can see a difference between their plots and the real plot</p>
+<p>Can they see a difference between their plots and the real plot? What is the difference?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -487,31 +490,271 @@
       }</style></aside>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="cell">
+<div class="cell" data-context="server">
 <div class="cell-output-display column-page-left">
 <p><img data-src="lect_08_files/figure-revealjs/association_test_run-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell column-page-right">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>diamonds_filtered <span class="ot">&lt;-</span> <span class="co"># naming the filtered data</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>  diamonds <span class="sc">%&gt;%</span>  <span class="co"># diamonds data</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">filter</span>(x <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="co"># x positive</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>diamonds_filtered <span class="sc">%&gt;%</span> <span class="co"># filtered data</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="fu">nrow</span>(.)) <span class="sc">%&gt;%</span> <span class="co"># random sample rows</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">pull</span>(x) <span class="sc">%&gt;%</span> <span class="co"># take out the variable x</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">bind_cols</span>(., diamonds_filtered<span class="sc">$</span>price) <span class="sc">%&gt;%</span> <span class="co"># price in the same order</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co"># into ggplot</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> ...<span class="dv">2</span>, <span class="at">x =</span> ...<span class="dv">1</span>)) <span class="sc">+</span> <span class="co"># using the new names</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulated association test"</span>, </span>
-<span id="cb1-12"><a href="#cb1-12"></a>       <span class="at">x =</span> <span class="st">"Length of diamond in mm"</span>, </span>
-<span id="cb1-13"><a href="#cb1-13"></a>       <span class="at">y =</span> <span class="st">"Price of diamonds in US$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2|3|4|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>diamonds <span class="sc">%&gt;%</span> <span class="co"># filtered data</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="fu">nrow</span>(.)) <span class="sc">%&gt;%</span> <span class="co"># random sample rows</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">pull</span>(carat) <span class="sc">%&gt;%</span> <span class="co"># take out the variable carat</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">bind_cols</span>(., diamonds<span class="sc">$</span>price) <span class="sc">%&gt;%</span> <span class="co"># price in the same order and bound to carat in different order</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co"># into ggplot</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> ...<span class="dv">2</span>, <span class="at">x =</span> ...<span class="dv">1</span>)) <span class="sc">+</span> <span class="co"># using the new names</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulated association test"</span>, </span>
+<span id="cb1-8"><a href="#cb1-8"></a>       <span class="at">x =</span> <span class="st">"Weigh of diamond in carat"</span>, </span>
+<span id="cb1-9"><a href="#cb1-9"></a>       <span class="at">y =</span> <span class="st">"Price of diamonds in US$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="section" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/shiny_apps/">
+<h1></h1>
+
+</section>
+<section id="describing-a-scatter-plot" class="slide level2">
+<h2>Describing a scatter plot</h2>
+<aside class="notes">
+<p>What is the difference between the actual plot and the simulated plots?</p>
+<p>Discuss each point.</p>
+<p>Big words make you sound smart to people that aren’t that smart.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Trend or direction
+<ul>
+<li>positive</li>
+<li>negative</li>
+</ul></li>
+<li>Curvature
+<ul>
+<li>linear</li>
+<li>nonlinear
+<ul>
+<li>exponential</li>
+<li>quadratic</li>
+</ul></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Variation
+<ul>
+<li>homoscedasticity (similar variance)</li>
+<li>heteroscedasticity (different variance)</li>
+</ul></li>
+<li>Outliers
+<ul>
+<li>any weird points (explore these)</li>
+</ul></li>
+<li>Groupings</li>
+</ul>
 </div>
 </div>
 </section>
+<section id="describe-these-plots" class="slide level2">
+<h2>Describe these plots</h2>
+<aside class="notes">
+<p>What are the relationships between each plot?</p>
+<p>What do the numbers mean?</p>
+<p>The size of the lettering of the numbers is related to the number.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
+<img data-src="lect_08_files/figure-revealjs/pairs_plots-1.png" width="960" class="r-stretch"></section></section>
+<section>
+<section id="measuring-association" class="title-slide slide level1 center">
+<h1>Measuring association</h1>
+<aside class="notes">
+<p>How can we quantify this stuff?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="lect-08_things/covariance_shift_means/price_moves.gif"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="lect-08_things/covariance_shift_means/carat_moves.gif"></p>
+</div>
+</div>
+</section>
+<section id="measuring-association-1" class="slide level2">
+<h2>Measuring association</h2>
+<aside class="notes">
+<p>Remind them of the variance and what we did with the squares. What squares could we use now?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+<img data-src="lect_08_files/figure-revealjs/association_means-1.png" width="960" class="r-stretch"></section>
+<section id="covariance" class="slide level2">
+<h2>Covariance</h2>
+<aside class="notes">
+<p>If the product is negative then there it contributes to a negative trend - downhill from left to right.</p>
+<p>Same if positive</p>
+<p>hard to get ones that are negative for this dataset b/c tbere is a really strong positive association</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+<img data-src="lect_08_files/figure-revealjs/covariance_squares-1.png" width="960" class="r-stretch"></section>
+<section id="covariance-math" class="slide level2">
+<h2>Covariance math</h2>
+<p><span class="math inline">\(cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}\)</span></p>
+</section>
+<section id="covariance-in-r" class="slide level2">
+<h2>Covariance in <code>R</code></h2>
+<aside class="notes">
+<p>This is a measure of the squares. We’d like a measure that is one dimensional. We want to look at more than just squares.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">cov</span>(diamonds<span class="sc">$</span>price, diamonds<span class="sc">$</span>carat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1742.765</code></pre>
+</div>
+</div>
+</section>
+<section id="correlation-math" class="slide level2">
+<h2>Correlation math</h2>
+<aside class="notes">
+<p>Standardizes the strength of the association</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><span class="math inline">\(corr(x, y) = \frac{cov(x, y)}{s_x, s_y}\)</span></p>
+</section>
+<section id="correlation-characteristics" class="slide level2">
+<h2>Correlation characteristics</h2>
+<aside class="notes">
+<p>Standardizes the strength of the association</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ol type="1">
+<li class="fragment">Usually referred to as <span class="math inline">\(r\)</span></li>
+<li class="fragment">Strength of linear association</li>
+<li class="fragment"><span class="math inline">\(r\)</span> is always between <span class="math inline">\(-1\)</span> and <span class="math inline">\(+1\)</span> <span class="math inline">\(-1 \leq r \leg 1\)</span>.</li>
+<li class="fragment"><span class="math inline">\(r\)</span> does not have units</li>
+</ol>
+</div>
+</section>
+<section id="correlation-in-r" class="slide level2">
+<h2>Correlation in <code>R</code></h2>
+<aside class="notes">
+<p>Standardizes the strength of the association</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">cor</span>(diamonds<span class="sc">$</span>price, diamonds<span class="sc">$</span>carat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9215913</code></pre>
+</div>
+</div>
+</section>
+<section id="pg-118-of-book" class="slide level2">
+<h2>pg 118 of book</h2>
+</section></section>
+<section>
+<section id="spurious-correlations" class="title-slide slide level1 center">
+<h1>Spurious correlations</h1>
+<p>Might lurking variables explain these relationships?</p>
+<div>
+<ul>
+<li class="fragment">amount of sunscreen used and probability of getting skin cancer</li>
+<li class="fragment">birth order and probability of down syndrome</li>
+<li class="fragment">countries where people smoke more also have higher life expectancy</li>
+<li class="fragment">More shark attacks are associated with higher levels of ice cream sales.</li>
+<li class="fragment">The more volunteers at a natural disaster, the more destruction</li>
+</ul>
+</div>
+</section>
+<section id="more-spurious-correlations" class="slide level2">
+<h2>More spurious correlations</h2>
+<p><a href="https://www.tylervigen.com/spurious-correlations">Click here</a> for more spurious correlations</p>
+</section></section>
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>
 <p><a href="https://stats1010-f22.github.io/website/ae/ae-8.html">Click here</a> or the qr code below</p>

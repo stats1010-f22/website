@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "supplemental/exam-2-studyguide.html",
+    "href": "supplemental/exam-2-studyguide.html",
+    "title": "Study list for exam 2",
+    "section": "",
+    "text": "functions\noperators\npipes\n\n\nfilter()\n%/%\n%>%\n\n\ndistinct()\n%%\n“+”\n\n\ncount()\n!=\n\n\n\nselect()\nrowSums()\n\n\n\nmutate()\ncolSums()\n\n\n\nView()\n\n\n\n\nglimpse()\n\n\n\n\npivot_wider()\n\n\n\n\ngroup_by()\n\n\n\n\nchisq.test()\n\n\n\n\nggplot()\n\n\n\n\ngeom_hist()\n\n\n\n\ngeom_bar()\n\n\n\n\ngeom_point()\n\n\n\n\nlabs()\n\n\n\n\nfacet_wrap()\n\n\n\n\n\nBenefits and downsides of these visualization methods: histogram and boxplot.\nConditional probability tables - which variable is it conditioned on.\nMean, median, mode and which is best in skewed distributions. Identify in a plot\nMeasures of spread: standard deviation, variance, quartiles, percentiles, interquartile range.\nChi-squared expected counts given a contingency table of counts.\nIndependent events\nDisjoint events\nVenn diagrams\nCompliment\nThe three laws of probability - Kolomogorov’s axioms\nClassification of variables"
+  },
+  {
     "objectID": "supplemental/exam-1-studyguide.html",
     "href": "supplemental/exam-1-studyguide.html",
     "title": "Study list for exam 1",
@@ -320,6 +327,97 @@
     "title": "Week 1",
     "section": "Perform",
     "text": "Perform\n⌨️ Diagnostic test\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "slides/lect_08.html#price-vs-carat",
+    "href": "slides/lect_08.html#price-vs-carat",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Price vs carat",
+    "text": "Price vs carat"
+  },
+  {
+    "objectID": "slides/lect_08.html#visual-association-test",
+    "href": "slides/lect_08.html#visual-association-test",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Visual association test",
+    "text": "Visual association test\n\nAsk them to run the coding in RStudio and see what they get - can connect some of their computers to the big screen\nCan they see a difference between their plots and the real plot? What is the difference?\n\n\n\n\n\n\n\n\n\n\ndiamonds %>% # filtered data\n  slice_sample(n = nrow(.)) %>% # random sample rows\n  pull(carat) %>% # take out the variable carat\n  bind_cols(., diamonds$price) %>% # price in the same order and bound to carat in different order\n  ggplot() + # into ggplot\n  geom_point(aes(y = ...2, x = ...1)) + # using the new names\n  labs(title = \"Simulated association test\", \n       x = \"Weigh of diamond in carat\", \n       y = \"Price of diamonds in US$\")"
+  },
+  {
+    "objectID": "slides/lect_08.html#describing-a-scatter-plot",
+    "href": "slides/lect_08.html#describing-a-scatter-plot",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Describing a scatter plot",
+    "text": "Describing a scatter plot\n\nWhat is the difference between the actual plot and the simulated plots?\nDiscuss each point.\nBig words make you sound smart to people that aren’t that smart.\n\n\n\n\nTrend or direction\n\npositive\nnegative\n\nCurvature\n\nlinear\nnonlinear\n\nexponential\nquadratic\n\n\n\n\n\nVariation\n\nhomoscedasticity (similar variance)\nheteroscedasticity (different variance)\n\nOutliers\n\nany weird points (explore these)\n\nGroupings"
+  },
+  {
+    "objectID": "slides/lect_08.html#describe-these-plots",
+    "href": "slides/lect_08.html#describe-these-plots",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Describe these plots",
+    "text": "Describe these plots\n\nWhat are the relationships between each plot?\nWhat do the numbers mean?\nThe size of the lettering of the numbers is related to the number."
+  },
+  {
+    "objectID": "slides/lect_08.html#measuring-association-1",
+    "href": "slides/lect_08.html#measuring-association-1",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Measuring association",
+    "text": "Measuring association\n\nRemind them of the variance and what we did with the squares. What squares could we use now?"
+  },
+  {
+    "objectID": "slides/lect_08.html#covariance",
+    "href": "slides/lect_08.html#covariance",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Covariance",
+    "text": "Covariance\n\nIf the product is negative then there it contributes to a negative trend - downhill from left to right.\nSame if positive\nhard to get ones that are negative for this dataset b/c tbere is a really strong positive association"
+  },
+  {
+    "objectID": "slides/lect_08.html#covariance-math",
+    "href": "slides/lect_08.html#covariance-math",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Covariance math",
+    "text": "Covariance math\n\\(cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 + \\bar(x))(y_2 - \\bar(y)) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\)"
+  },
+  {
+    "objectID": "slides/lect_08.html#covariance-in-r",
+    "href": "slides/lect_08.html#covariance-in-r",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Covariance in R",
+    "text": "Covariance in R\n\nThis is a measure of the squares. We’d like a measure that is one dimensional. We want to look at more than just squares.\n\n\ncov(diamonds$price, diamonds$carat)\n\n[1] 1742.765"
+  },
+  {
+    "objectID": "slides/lect_08.html#correlation-math",
+    "href": "slides/lect_08.html#correlation-math",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Correlation math",
+    "text": "Correlation math\n\nStandardizes the strength of the association\n\n\\(corr(x, y) = \\frac{cov(x, y)}{s_x, s_y}\\)"
+  },
+  {
+    "objectID": "slides/lect_08.html#correlation-characteristics",
+    "href": "slides/lect_08.html#correlation-characteristics",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Correlation characteristics",
+    "text": "Correlation characteristics\n\nStandardizes the strength of the association\n\n\n\nUsually referred to as \\(r\\)\nStrength of linear association\n\\(r\\) is always between \\(-1\\) and \\(+1\\) \\(-1 \\leq r \\leg 1\\).\n\\(r\\) does not have units"
+  },
+  {
+    "objectID": "slides/lect_08.html#correlation-in-r",
+    "href": "slides/lect_08.html#correlation-in-r",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Correlation in R",
+    "text": "Correlation in R\n\nStandardizes the strength of the association\n\n\ncor(diamonds$price, diamonds$carat)\n\n[1] 0.9215913"
+  },
+  {
+    "objectID": "slides/lect_08.html#pg-118-of-book",
+    "href": "slides/lect_08.html#pg-118-of-book",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "pg 118 of book",
+    "text": "pg 118 of book"
+  },
+  {
+    "objectID": "slides/lect_08.html#more-spurious-correlations",
+    "href": "slides/lect_08.html#more-spurious-correlations",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "More spurious correlations",
+    "text": "More spurious correlations\nClick here for more spurious correlations"
   },
   {
     "objectID": "slides/lect_07.html#using-proportions",
