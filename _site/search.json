@@ -1300,5 +1300,47 @@
     "title": "Study list for exam 1",
     "section": "",
     "text": "functions\noperators\npipes\n\n\nfilter()\n%/%\n%>%\n\n\ndistinct()\n%%\n“+”\n\n\ncount()\n!=\n\n\n\nselect()\nrowSums()\n\n\n\nmutate()\ncolSums()\n\n\n\nView()\n\n\n\n\nglimpse()\n\n\n\n\npivot_wider()\n\n\n\n\ngroup_by()\n\n\n\n\nchisq.test()\n\n\n\n\nggplot()\n\n\n\n\ngeom_hist()\n\n\n\n\ngeom_bar()\n\n\n\n\ngeom_point()\n\n\n\n\nlabs()\n\n\n\n\nfacet_wrap()\n\n\n\n\n\nBenefits and downsides of these visualization methods: histogram and boxplot.\nConditional probability tables - which variable is it conditioned on.\nMean, median, mode and which is best in skewed distributions. Identify in a plot\nMeasures of spread: standard deviation, variance, quartiles, percentiles, interquartile range.\nChi-squared expected counts given a contingency table of counts.\nIndependent events\nDisjoint events\nVenn diagrams\nCompliment\nThe three laws of probability - Kolomogorov’s axioms\nClassification of variables"
+  },
+  {
+    "objectID": "slides/lect_08.html#price-vs-x",
+    "href": "slides/lect_08.html#price-vs-x",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Price vs \\(x\\)",
+    "text": "Price vs \\(x\\)"
+  },
+  {
+    "objectID": "slides/lect_08.html#visual-association-test",
+    "href": "slides/lect_08.html#visual-association-test",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Visual association test",
+    "text": "Visual association test\n\nAsk them to run the coding in RStudio and see what they get - can connect some of their computers to the big screen\nCan they see a difference between their plots and the real plot? What is the difference?\n\n\n\n\n\n\n\n\n\n\ndiamonds %>% # filtered data\n  slice_sample(n = nrow(.)) %>% # random sample rows\n  pull(carat) %>% # take out the variable carat\n  bind_cols(., diamonds$price) %>% # price in the same order and bound to carat in different order\n  ggplot() + # into ggplot\n  geom_point(aes(y = ...2, x = ...1)) + # using the new names\n  labs(title = \"Simulated association test\", \n       x = \"Weigh of diamond in carat\", \n       y = \"Price of diamonds in US$\")"
+  },
+  {
+    "objectID": "slides/lect_08.html#describing-a-scatter-plot",
+    "href": "slides/lect_08.html#describing-a-scatter-plot",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Describing a scatter plot",
+    "text": "Describing a scatter plot\n\nWhat is the difference between the actual plot and the simulated plots?\nDiscuss each point.\nBig words make you sound smart to people that aren’t that smart.\n\n\n\n\nTrend or direction\n\npositive\nnegative\n\nCurvature\n\nlinear\nnonlinear\n\nexponential\nquadratic\n\n\n\n\n\nVariation\n\nhomoscedasticity (similar variance)\nheteroscedasticity (different variance)\n\nOutliers\n\nany weird points (explore these)\n\nGroupings"
+  },
+  {
+    "objectID": "slides/lect_08.html#describe-these-plots",
+    "href": "slides/lect_08.html#describe-these-plots",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Describe these plots",
+    "text": "Describe these plots\n\ndiamonds %>% \n  select_if(is.numeric) %>% \n  ggpairs(.)"
+  },
+  {
+    "objectID": "slides/lect_08.html#measuring-association-1",
+    "href": "slides/lect_08.html#measuring-association-1",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Measuring association",
+    "text": "Measuring association\n\nRemind them of the variance and what we did with the squares. What squares could we use now?"
+  },
+  {
+    "objectID": "slides/lect_08.html#covariance",
+    "href": "slides/lect_08.html#covariance",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Covariance",
+    "text": "Covariance\n\nRemind them of the variance and what we did with the squares. What squares could we use now?"
   }
 ]

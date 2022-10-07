@@ -1,0 +1,49 @@
+---
+title: "Study list for exam 2"
+execute: 
+  echo: false
+---
+
+The R functions we have discussed so far these few weeks:
+
+|               |           |       |
+|---------------|-----------|-------|
+| functions     | operators | pipes |
+| filter()      | %/%       | %\>%  |
+| distinct()    | %%        | "+"   |
+| count()       | !=        |       |
+| select()      | rowSums() |       |
+| mutate()      | colSums() |       |
+| View()        |           |       |
+| glimpse()     |           |       |
+| pivot_wider() |           |       |
+| group_by()    |           |       |
+| chisq.test()  |           |       |
+| ggplot()      |           |       |
+| geom_hist()   |           |       |
+| geom_bar()    |           |       |
+| geom_point()  |           |       |
+| labs()        |           |       |
+| facet_wrap()  |           |       |
+
+Benefits and downsides of these visualization methods: histogram and boxplot.
+
+Conditional probability tables - which variable is it conditioned on.
+
+Mean, median, mode and which is best in skewed distributions. Identify in a plot
+
+Measures of spread: standard deviation, variance, quartiles, percentiles, interquartile range.
+
+Chi-squared expected counts given a contingency table of counts.
+
+Independent events
+
+Disjoint events
+
+Venn diagrams
+
+Compliment
+
+The three laws of probability - Kolomogorov's axioms
+
+Classification of variables

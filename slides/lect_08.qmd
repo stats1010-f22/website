@@ -16,21 +16,30 @@ execute:
 library(countdown)
 library(pdftools)
 library(tidyverse)
+library(GGally)
 ```
 
 # Learning outcomes
 
+::: incremental
 By the end of this lesson you should:
-
--   Know how to read a scatterplot to describe associations between quantitative variables and
 
 -   Perform a visual assocation test
 
--   
+-   Know how to read a scatterplot to describe associations between quantitative variables
 
-# Revision - associations
+-   Know how to quantify associations in quantitative variables
+
+-   Use a line to describe associations in linear relationships
+
+-   Understand spurious correlations and lurking variables
+:::
+
+# Associations
 
 ::: notes
+When have we used this word before?
+
 Remind them of $\chi^2$ tests
 :::
 
@@ -42,11 +51,9 @@ Remind them of $\chi^2$ tests
 # Plots
 
 ::: notes
-Remind them about plots of proportions that we did for titanic and comics data.
+Remind them about plots of proportions that we did for titanic and comics data. What did we look for in the plots?
 
-Which variable goes on the y axis? Which on the x axis
-
-Is there an association or not?
+Which variable goes on the y axis? Which on the x axis?
 :::
 
 ::: incremental
@@ -58,24 +65,23 @@ Is there an association or not?
     -   explanatory
 :::
 
-# Price vs $x$
+## Price vs carat
 
 ```{r scatterplot}
 diamonds %>% 
-  filter(x > 0) %>% 
   ggplot() +
-  geom_point(aes(y = price, x = x)) +
-  labs(title = "Simulated association test", 
-       x = "Length of diamond in mm", 
+  geom_point(aes(y = price, x = carat)) +
+  labs(title = "Price vs carat", 
+       x = "Carat of diamond", 
        y = "Price of diamonds in US$")
 ```
 
-# Visual association test
+## Visual association test
 
 ::: notes
 Ask them to run the coding in RStudio and see what they get - can connect some of their computers to the big screen
 
-Ask them if they can see a difference between their plots and the real plot
+Can they see a difference between their plots and the real plot? What is the difference?
 :::
 
 ::: columns
@@ -85,19 +91,16 @@ Ask them if they can see a difference between their plots and the real plot
 #| message: false
 #| echo: false
 #| column: page-left
+#| context: server
 
-diamonds_filtered <- 
-  diamonds %>% 
-  filter(x > 0)
-
-diamonds_filtered %>% # filtered data
+diamonds %>% # filtered data
   slice_sample(n = nrow(.)) %>% # random sample rows
-  pull(x) %>% # take out the variable x
-  bind_cols(., diamonds_filtered$price) %>% # price in the same order
+  pull(carat) %>% # take out the variable x
+  bind_cols(., diamonds$price) %>% # price in the same order and bound to carat in different order
   ggplot() + # into ggplot
   geom_point(aes(y = ...2, x = ...1)) + # using the new names
   labs(title = "Simulated association test", 
-       x = "Length of diamond in mm", 
+       x = "Weight of diamond in carat", 
        y = "Price of diamonds in US$")
 ```
 :::
@@ -108,23 +111,227 @@ diamonds_filtered %>% # filtered data
 #| message: false
 #| echo: true
 #| column: page-right
+#| code-line-numbers: "|2|3|4|6"
 
-diamonds_filtered <- # naming the filtered data
-  diamonds %>%  # diamonds data
-  filter(x > 0) # x positive
-
-diamonds_filtered %>% # filtered data
+diamonds %>% # filtered data
   slice_sample(n = nrow(.)) %>% # random sample rows
-  pull(x) %>% # take out the variable x
-  bind_cols(., diamonds_filtered$price) %>% # price in the same order
+  pull(carat) %>% # take out the variable carat
+  bind_cols(., diamonds$price) %>% # price in the same order and bound to carat in different order
   ggplot() + # into ggplot
   geom_point(aes(y = ...2, x = ...1)) + # using the new names
   labs(title = "Simulated association test", 
-       x = "Length of diamond in mm", 
+       x = "Weigh of diamond in carat", 
        y = "Price of diamonds in US$")
 ```
 :::
 :::
+
+#  {background-iframe="https://nzgwynn.shinyapps.io/shiny_apps/"}
+
+## Describing a scatter plot
+
+::: notes
+What is the difference between the actual plot and the simulated plots?
+
+Discuss each point.
+
+Big words make you sound smart to people that aren't that smart.
+:::
+
+::: columns
+::: {.column width="50%"}
+-   Trend or direction
+    -   positive
+    -   negative
+-   Curvature
+    -   linear
+    -   nonlinear
+        -   exponential
+        -   quadratic
+:::
+
+::: {.column width="50%"} 
+-   Variation
+    -   homoscedasticity (similar variance)
+    -   heteroscedasticity (different variance)
+-   Outliers
+    -   any weird points (explore these)
+-   Groupings
+:::
+:::
+
+
+## Describe these plots
+::: notes
+What are the relationships between each plot?
+
+What do the numbers mean?
+
+The size of the lettering of the numbers is related to the number.
+:::
+
+```{r, pairs_plots}
+#| eval: true
+#| message: false
+#| echo: false
+
+diamonds %>% 
+  select_if(is.numeric) %>% 
+  ggpairs(.)
+```
+
+# Measuring association
+
+::: notes
+How can we quantify this stuff?
+:::
+
+::: columns
+::: {.column width="50%"}
+![](lect-08_things/covariance_shift_means/price_moves.gif)
+:::
+
+::: {.column width="50%"}
+![](lect-08_things/covariance_shift_means/carat_moves.gif)
+:::
+:::
+
+## Measuring association
+
+::: notes
+Remind them of the variance and what we did with the squares. What squares could we use now?
+:::
+
+```{r association_means}
+#| eval: true
+#| message: false
+#| echo: false
+
+ggplot(data = diamonds) +
+  geom_point(aes(x = carat, y = price)) +
+  geom_hline(yintercept = mean(diamonds$price),
+             color = "red") +
+  geom_vline(xintercept = mean(diamonds$carat),
+             color = "yellow")  + # using the new names
+  labs(title = "Plot of diamond price and carat with means", 
+       x = "Weigh of diamond in carat", 
+       y = "Price of diamonds in US$")
+```
+
+## Covariance
+::: notes
+If the product is negative then there it contributes to a negative trend - downhill from left to right.
+
+Same if positive
+
+hard to get ones that are negative for this dataset b/c tbere is a really strong positive association
+:::
+
+```{r covariance_squares}
+#| echo: false
+#| eval: true
+
+df <- 
+  diamonds %>% 
+  mutate(mean_price = mean(price), 
+         mean_carat = mean(carat)) %>% 
+  slice_sample(n = 10) %>% 
+  select(contains(c("price","carat"))) %>% 
+  mutate(diff_price = price - mean_price, 
+         diff_carat = carat - mean_carat) %>% 
+  mutate(indicator = 
+           sign(diff_price * diff_carat)) %>% 
+  rowwise() %>% 
+  mutate(xmax = ifelse(carat < mean_carat, 
+                       mean_carat, carat), 
+         xmin = ifelse(carat > mean_carat, 
+                       mean_carat, carat), 
+         ymax = ifelse(price < mean_price, 
+                       mean_price, price), 
+         ymin = ifelse(price > mean_price, 
+                       mean_price, price)) %>% 
+  select(contains(c("max", "in"))) %>% 
+  mutate(indicator = ifelse(indicator == -1, "A", "B"))
+  
+
+ggplot(data = diamonds) +
+  geom_point(aes(x = carat, y = price)) +
+  geom_hline(yintercept = mean(diamonds$price),
+             color = "red") +
+  geom_vline(xintercept = mean(diamonds$carat),
+             color = "yellow") +
+  geom_rect(data = df,
+            aes(xmin = xmin, xmax = xmax, 
+                ymin = ymin, ymax = ymax, 
+                color = indicator, 
+                fill = indicator),alpha = 0.5)
+```
+
+## Covariance math
+
+$cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}$
+
+## Covariance in `R`
+::: notes
+This is a measure of the squares. We'd like a measure that is one dimensional. We want to look at more than just squares.
+:::
+
+```{r covariance}
+#| echo: true
+#| eval: true
+
+
+cov(diamonds$price, diamonds$carat)
+
+```
+
+## Correlation math
+::: notes
+Standardizes the strength of the association
+:::
+
+$corr(x, y) = \frac{cov(x, y)}{s_x, s_y}$
+
+## Correlation characteristics
+::: notes
+Standardizes the strength of the association
+:::
+
+::: incremental
+1. Usually referred to as $r$
+2. Strength of linear association
+3. $r$ is always between $-1$ and $+1$ $-1 \leq r \leg 1$.
+4. $r$ does not have units
+:::
+
+## Correlation in `R`
+::: notes
+Standardizes the strength of the association
+:::
+
+```{r correlation}
+#| echo: true
+#| eval: true
+
+
+cor(diamonds$price, diamonds$carat)
+```
+
+
+
+# Spurious correlations
+Might lurking variables explain these relationships?
+
+::: incremental
+-   amount of sunscreen used and probability of getting skin cancer
+-   birth order and probability of down syndrome
+-   countries where people smoke more also have higher life expectancy
+-   More shark attacks are associated with higher levels of ice cream sales.
+-   The more volunteers at a natural disaster, the more destruction
+:::
+
+## More spurious correlations
+[Click here](https://www.tylervigen.com/spurious-correlations) for more spurious correlations
 
 # Your turn
 

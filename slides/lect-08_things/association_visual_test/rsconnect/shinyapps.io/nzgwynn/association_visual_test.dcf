@@ -1,0 +1,13 @@
+name: association_visual_test
+title: association_visual_test
+username:
+account: nzgwynn
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7243375
+bundleId: 6379751
+url: https://nzgwynn.shinyapps.io/association_visual_test/
+when: 1665153658.82529
+lastSyncTime: 1665153658.82531
+asMultiple: FALSE
+asStatic: FALSE
