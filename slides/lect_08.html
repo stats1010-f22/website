@@ -573,7 +573,6 @@
 <aside class="notes">
 <p>What are the relationships between each plot?</p>
 <p>What do the numbers mean?</p>
-<p>The size of the lettering of the numbers is related to the number.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -649,10 +648,6 @@
 <img data-src="lect_08_files/figure-revealjs/covariance_squares-1.png" width="960" class="r-stretch"></section>
 <section id="covariance-math" class="slide level2">
 <h2>Covariance math</h2>
-<p><span class="math display">\[cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}\]</span></p>
-</section>
-<section id="covariance-in-r" class="slide level2">
-<h2>Covariance in <code>R</code></h2>
 <aside class="notes">
 <p>This is a measure of the squares. We’d like a measure that is one dimensional. We want to look at more than just squares.</p>
 <style type="text/css">
@@ -666,12 +661,7 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">cov</span>(diamonds<span class="sc">$</span>price, diamonds<span class="sc">$</span>carat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1742.765</code></pre>
-</div>
-</div>
+<p><span class="math inline">\(cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}\)</span></p>
 </section>
 <section id="correlation-math" class="slide level2">
 <h2>Correlation math</h2>
@@ -709,13 +699,13 @@
 <ol type="1">
 <li class="fragment">Usually referred to as <span class="math inline">\(r\)</span></li>
 <li class="fragment">Strength of linear association</li>
-<li class="fragment"><span class="math inline">\(r\)</span> is always between <span class="math inline">\(-1\)</span> and <span class="math inline">\(+1\)</span> <span class="math inline">\(-1 \leq r \leg 1\)</span>.</li>
+<li class="fragment"><span class="math inline">\(r\)</span> is always between <span class="math inline">\(-1\)</span> and <span class="math inline">\(+1\)</span> <span class="math inline">\(-1 \leq r \leq 1\)</span>.</li>
 <li class="fragment"><span class="math inline">\(r\)</span> does not have units</li>
 </ol>
 </div>
 </section>
-<section id="correlation-in-r" class="slide level2">
-<h2>Correlation in <code>R</code></h2>
+<section id="computing-in-r" class="slide level2">
+<h2>Computing in <code>R</code></h2>
 <aside class="notes">
 <p>Standardizes the strength of the association</p>
 <style type="text/css">
@@ -730,13 +720,17 @@
           display:block!important;
       }</style></aside>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">cov</span>(diamonds<span class="sc">$</span>price, diamonds<span class="sc">$</span>carat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1742.765</code></pre>
+</div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">cor</span>(diamonds<span class="sc">$</span>price, diamonds<span class="sc">$</span>carat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9215913</code></pre>
 </div>
 </div>
 </section>
-<section id="section-1" class="slide level2" data-background-image="lect-08_things/correlation_coef.png">
+<section id="section-1" class="slide level2" data-background-image="lect-08_things/correlation_coef.png" data-background-size="contain">
 <h2></h2>
 </section></section>
 <section>

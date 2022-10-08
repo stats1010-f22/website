@@ -354,7 +354,7 @@
     "href": "slides/lect_08.html#describe-these-plots",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Describe these plots",
-    "text": "Describe these plots\n\nWhat are the relationships between each plot?\nWhat do the numbers mean?\nThe size of the lettering of the numbers is related to the number."
+    "text": "Describe these plots\n\nWhat are the relationships between each plot?\nWhat do the numbers mean?"
   },
   {
     "objectID": "slides/lect_08.html#measuring-association-1",
@@ -375,14 +375,7 @@
     "href": "slides/lect_08.html#covariance-math",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Covariance math",
-    "text": "Covariance math\n\\[cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 + \\bar(x))(y_2 - \\bar(y)) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\]"
-  },
-  {
-    "objectID": "slides/lect_08.html#covariance-in-r",
-    "href": "slides/lect_08.html#covariance-in-r",
-    "title": "Chapter 6: Association between quantitative variables",
-    "section": "Covariance in R",
-    "text": "Covariance in R\n\nThis is a measure of the squares. We’d like a measure that is one dimensional. We want to look at more than just squares.\n\n\ncov(diamonds$price, diamonds$carat)\n\n[1] 1742.765"
+    "text": "Covariance math\n\nThis is a measure of the squares. We’d like a measure that is one dimensional. We want to look at more than just squares.\n\n\\(cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 + \\bar(x))(y_2 - \\bar(y)) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\)"
   },
   {
     "objectID": "slides/lect_08.html#correlation-math",
@@ -396,14 +389,14 @@
     "href": "slides/lect_08.html#correlation-characteristics",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Correlation characteristics",
-    "text": "Correlation characteristics\n\nStandardizes the strength of the association\n\n\n\nUsually referred to as \\(r\\)\nStrength of linear association\n\\(r\\) is always between \\(-1\\) and \\(+1\\) \\(-1 \\leq r \\leg 1\\).\n\\(r\\) does not have units"
+    "text": "Correlation characteristics\n\nStandardizes the strength of the association\n\n\n\nUsually referred to as \\(r\\)\nStrength of linear association\n\\(r\\) is always between \\(-1\\) and \\(+1\\) \\(-1 \\leq r \\leq 1\\).\n\\(r\\) does not have units"
   },
   {
-    "objectID": "slides/lect_08.html#correlation-in-r",
-    "href": "slides/lect_08.html#correlation-in-r",
+    "objectID": "slides/lect_08.html#computing-in-r",
+    "href": "slides/lect_08.html#computing-in-r",
     "title": "Chapter 6: Association between quantitative variables",
-    "section": "Correlation in R",
-    "text": "Correlation in R\n\nStandardizes the strength of the association\n\n\ncor(diamonds$price, diamonds$carat)\n\n[1] 0.9215913"
+    "section": "Computing in R",
+    "text": "Computing in R\n\nStandardizes the strength of the association\n\n\ncov(diamonds$price, diamonds$carat)\n\n[1] 1742.765\n\ncor(diamonds$price, diamonds$carat)\n\n[1] 0.9215913"
   },
   {
     "objectID": "slides/lect_08.html#gradient-and-slope",
@@ -894,6 +887,13 @@
     "title": "Revision 2 for exam 1",
     "section": "",
     "text": "Find the matching item from the second column\n\n\n\n\n\n\n\n1. Independent events\na. \\(P(A \\cap B) \\neq P(A) \\times P(B)\\)\n\n\n\n\n\nDisjoint events\n\nb. \\(0\\leq p \\leq 1\\)\n\n\n\nUnion\n\nc. \\(A, B\\) disjoint \\(P(A\\cup B) = P(A) +P(B)\\)\n\n\n\nIntersection\n\nd. \\(P(A \\cup B) = P(A) + P(B) - P(A \\cap B)\\)\n\n\n\nComplement of A\n\ne. \\(P(A \\cup B) \\leq P(A) + P(B)\\)\n\n\n\nSample space\n\nf. \\(A \\cap B\\)\n\n\n\nAddition rule\n\ng. \\(P(A \\cap B) = 0\\)\n\n\n\nComplement rule\n\nh. \\(P(S) = 1\\)\n\n\n\nBoole’s inequality\n\ni. \\(P(A^c) = 1 - P(A)\\)\n\n\n\nDependent events\n\nj. \\(P(A \\cap B) = P(A) \\times P(B)\\)\n\n\n\nKolmogorov’s axiom\n\nk. \\(A \\cup B\\)\n\n\n\nl. \\(A^c\\)\n\n\n\nm. \\(S\\)\n\n\n\n\n\n\nWhen \\(A \\subset B\\), then \\(A \\cup B = A\\)\n\nTrue\nFalse\n\nWhen \\(A \\subset B\\), then \\(A \\cap B = A\\)\n\nTrue\nFalse\n\nOne ball will be drawn at random from a box containing: 4 cyan balls, 3 magenta balls, and 5 yellow balls. What is the probability that the ball will be cyan?\nWhat is the probability that the ball will not be cyan?\nInstead of taking just one draw, consider taking two draws. You take the second draw without returning the first draw to the box. We call this sampling without replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?\nNow repeat the experiment, but this time, after taking the first draw and recording the color, return it to the box and shake the box. We call this sampling with replacement. What is the probability that the first draw is cyan and that the second draw is not cyan?\nTwo events A and B are independent if Pr(A and B)=Pr(A)P(B). Under which situation are the draws independent?\n\nYou don’t replace the draw.\nYou replace the draw.\nNeither\nBoth\n\nSay you’ve drawn 5 balls from the box, with replacement, and all have been yellow. What is the probability that the next one is yellow?\nIf you roll a 6-sided die six times, what is the probability of seeing neither a 5 or 6?\nPlease match the following venn diagrams with the corresponding set theory notation.\n\n\n\n22.\na.\\(B \\subset A\\)\n\n\n\n\n23.\nb. \\(A\\) & \\(B\\) disjoint\n\n\n24.\nc. \\(A\\)\n\n\n25.\nd. \\(A \\cup B\\)\n\n\n26.\ne. \\(A \\cap B\\)\n\n\n27.\nf. \\(A^c\\)\n\n\n\n\n\nSolutions\n\n\n\n\n\n\n\n1\nj\n\n\n\n\n2\ng\n\n\n3\nk\n\n\n4\nf\n\n\n5\nl\n\n\n6\nm\n\n\n7\nd\n\n\n8\ni\n\n\n9\ne\n\n\n10\na\n\n\n11\nh, c, b\n\n\n12\nFalse\n\n\n13\nTrue\n\n\n14\n\\(\\frac{4}{4+3+5} = \\frac{4}{12}\\)\n\\(= \\frac{1}{3}\\)\n\n\n15\n\\(1 - \\frac{1}{3} = \\frac{2}{3}\\)\n\n\n16\nLet \\(C_1 = \\{1st\\:draw \\: is \\:cyan\\}\\) and\n\\(C_2 = \\{2nd\\: draw\\: is\\: cyan\\}\\)\nWe want :\\(P(C_1 \\cap C_2^c) = P(C_1) \\times P(C_2^c \\vert C_1)\\)\nThis is \\(\\frac{1}{3} \\times (1 -\\frac{3}{11}) = \\frac{8}{33}\\)\n\n\n17\nBecause they are independent:\\(P(C_1 \\cap C_2^c) = P(C_1) \\times P(C_2^c)\\)\n= \\(\\frac{1}{3} \\times \\frac{2}{3} = \\frac{2}{9}\\)\n\n\n18\nb\n\n\n19\n\\(\\frac{5}{12}\\)\n\n\n20\nLet \\(A = \\{5 \\: or \\: 6 \\: pips\\: facing\\: up\\}\\)\nWe want:\\(P(A^c \\cap A^c \\cap A^c \\cap A^c \\cap A^c \\cap A^c) = P(A^c)^6\\) because of independence of rolling a die.\n\\(= (\\frac{2}{3})^6 = \\frac{64}{729}\\)\n\n\n21\nNo question\n\n\n22\nc\n\n\n23\nf\n\n\n24\nb\n\n\n25\ne\n\n\n26\nd\n\n\n27\na"
+  },
+  {
+    "objectID": "ae/ae-9.html",
+    "href": "ae/ae-9.html",
+    "title": "Random variables",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(praise)\n\n\nGiven that the random variable \\(X\\) has mean \\(\\mu = 120\\) and SD \\(\\sigma = 15\\), find the mean and SD of each of these random variables that are defined by \\(X\\).\n\n\\(X/3\\)\n\\(2X - 100\\)\n\\(X+2\\)\n\\(X-X\\)\n\nAn investor buys the stock of two companies, investing \\(\\$10000\\) in each. The stock of each company either goes up by \\(80%\\) after a month (rising to \\(\\$18000\\)) with probability \\(\\frac{1}{2}\\) or drops by \\(60%\\) (falling to \\(\\$4000\\)) with probability \\(\\frac{1}{2}\\). Assume that the changes in each are independent. Let the random variable \\(X\\) denote the value of the amounted invested after one month.\n\nFind the probability distribution of \\(X\\).\nFind the mean value of \\(X\\)\nDoe the mean value represent the experience of the typical investor?\n\n\n\npraise()\n\n\nA law firm takes cases on a contingent fee basis. If the case goes to trial, the firm expects to earn \\(\\$25000\\) as part of the settlement if it wins and nothing if it does not. The firm wins one-third of the cases that go to trial. If the case does not go to trial, the firm earns nothing. Half of the cases do not go to trial.\n\nDefine a random variable to model the earning of taking a case of this type.\nWhat is the expected value of such a case to the firm?\nWhat is the standard deviation of the earnings?\n\nThe maintenance staff of a large office building regularly replaces fluorescent ceiling lights that have gone out. During a visit to a typical floor, the staff may have to replace several lights. The manager of this staff has given the following probabilities to the number of lights (identified by the random variable \\(Y\\)) that need to be replaced on the floor:\n\n\n\n\\(Y\\)\n0\n1\n2\n3\n4\n\n\n\\(P(Y = y)\\)\n0.2\n0.15\n0.2\n0.3\n0.15\n\n\n\n\nHow many lights should the manager expect to replace on a floor?\nWhat is the standard deviation of the number of lights on a floor that are replaced?\nIf a crew takes six lights to a floor, how many should it expect to have left after replacing those that are out?\nIf a crew takes six lights to a floor, find the standard deviation of the number of lights that remain after replacing those that are out on a floor.\nIf it takes 10 minutes to replace each light, how long should the manager expect the crew to take when replacing the lights on a floor.\n\nSuppose that you’ve just bought a \\(\\$4000\\) TV. Should you also buy the \\(\\$50\\) surge protector that guarantees to protect your TV from electric surges caused by lightning?\n\nLet \\(p\\) denote the probability that your home is hit by lightning during the time that you own this TV, say five years. In order for the purchase of the surge protector to have positive long-term values, what must the chance of being hit by lightning be?\nThere are about 100 million households in the United States, and fewer than 10,000 get hit by lightening each year. Do you think the surge protector is a good deal on average? Be sure to note any assumptions that you make.\n\n\n\npraise()\n\n\nThe ATM at a local convenience store allows customers to make withdrawals of \\(\\$10\\), \\(\\$20\\), \\(\\$50\\), or \\(\\$100\\). Let \\(X\\) denote a random variable that indicates the amount withdrawn by a customer. The probability distribution of \\(X\\) is:\n\\(p(10) = 0.2\\)\n\\(p(20) = 0.5\\)\n\\(p(50) = 0.2\\)\n\\(p(100) = 0.1\\)\n\nPlot the probability distribution of \\(X\\) in R.\nWhat is the probability that a customer withdraws more than \\(\\$20\\)?\nWhat is the expected amount of money withdrawn by a customer?\nThe expected value is not a possible value value of the amount withdrawn. Interpret the expected value for a manager.\nFind the variance and standard deviation of \\(X\\)."
   },
   {
     "objectID": "ae/ae-5.html",
