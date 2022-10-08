@@ -60,9 +60,11 @@ Which variable goes on the y axis? Which on the x axis?
 -   variable on the $y$ axis
     -   dependent
     -   response
+    -   outcome
 -   variable on the $x$ axis
     -   independent
     -   explanatory
+    -   predictor
 :::
 
 ## Price vs carat
@@ -150,7 +152,7 @@ Big words make you sound smart to people that aren't that smart.
         -   quadratic
 :::
 
-::: {.column width="50%"} 
+::: {.column width="50%"}
 -   Variation
     -   homoscedasticity (similar variance)
     -   heteroscedasticity (different variance)
@@ -160,8 +162,8 @@ Big words make you sound smart to people that aren't that smart.
 :::
 :::
 
-
 ## Describe these plots
+
 ::: notes
 What are the relationships between each plot?
 
@@ -219,6 +221,7 @@ ggplot(data = diamonds) +
 ```
 
 ## Covariance
+
 ::: notes
 If the product is negative then there it contributes to a negative trend - downhill from left to right.
 
@@ -269,9 +272,10 @@ ggplot(data = diamonds) +
 
 ## Covariance math
 
-$cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}$
+$$cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}$$
 
 ## Covariance in `R`
+
 ::: notes
 This is a measure of the squares. We'd like a measure that is one dimensional. We want to look at more than just squares.
 :::
@@ -286,25 +290,28 @@ cov(diamonds$price, diamonds$carat)
 ```
 
 ## Correlation math
+
 ::: notes
 Standardizes the strength of the association
 :::
 
-$corr(x, y) = \frac{cov(x, y)}{s_x, s_y}$
+$$corr(x, y) = \frac{cov(x, y)}{s_x, s_y}$$
 
 ## Correlation characteristics
+
 ::: notes
 Standardizes the strength of the association
 :::
 
 ::: incremental
-1. Usually referred to as $r$
-2. Strength of linear association
-3. $r$ is always between $-1$ and $+1$ $-1 \leq r \leg 1$.
-4. $r$ does not have units
+1.  Usually referred to as $r$
+2.  Strength of linear association
+3.  $r$ is always between $-1$ and $+1$ $-1 \leq r \leg 1$.
+4.  $r$ does not have units
 :::
 
 ## Correlation in `R`
+
 ::: notes
 Standardizes the strength of the association
 :::
@@ -317,9 +324,103 @@ Standardizes the strength of the association
 cor(diamonds$price, diamonds$carat)
 ```
 
-## pg 118 of book
+##  {background-image="lect-08_things/correlation_coef.png"}
+
+# Line of association
+
+::: notes
+What do these numbers mean?
+:::
+
+$$ y = mx + b $$
+
+::: incremental
+$m$ is gradient $b$ is the $y$ intercept
+:::
+
+## Gradient and slope
+
+::: notes
+Pull out your calculators and work on this
+:::
+
+$$ b = \frac{r \cdot s_y}{s_x} $$ $$ a = \bar{y} - b \bar{x} $$
+
+## Fitting by hand
+
+$r = 0.9215913$ $s_{price} = 3989.44$ $s_{carat} = 0.4740112$
+
+::: incremental
+$$\begin{aligned}
+ b &= \frac{r \cdot s_y}{s_x} \\
+ &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
+ &= 7756.426
+\end{aligned}$$
+:::
+
+## Fitting by hand
+
+::: incremental
+$$\begin{aligned}
+ a &= \bar{y} - b \bar{x} \\
+ &= 3932.8 - 7756.426 \cdot 0.7979397\\
+ &= -2256.36
+\end{aligned}$$
+
+Our model is: $\widehat{\text{price}}  = -2256.36 + 7756.426 \cdot \text{carat}$
+:::
+
+## Prediction by hand
+::: notes
+Pull out your calculators and work on this
+:::
+
+for carat values $2.5$
+
+::: incremental
+$$\begin{aligned}
+\widehat{\text{price}}  &= -2256.36 + 7756.426 \cdot \text{carat} \\ 
+&= -2256.36 + 7756.426 \cdot 2.5 \\
+&= \$17135$$
+:::
+
+
+## Fit & predict in `R`
+
+```{r model_fit}
+#| echo: true
+#| eval: true
+#| code-line-numbers: "|2|3|4|6"
+
+# library tidymodels
+library(tidymodels)
+
+## Assign the least
+## squares line
+least_squares_fit <- 
+  linear_reg() %>% 
+  set_engine("lm") %>% 
+  fit(price ~ carat,
+      data = diamonds) 
+## NOTE: outcome first, predictor second
+
+## Find the prediction
+predict(least_squares_fit, 
+        tibble(carat = c(1, 2, 2.5, 4)))
+```
+
+## Warnings
+
+::: incremental
+Draw a plot first
+Numerical variables
+Linear
+Check for outliers
+Lurking variables
+:::
 
 # Spurious correlations
+
 Might lurking variables explain these relationships?
 
 ::: incremental
@@ -328,9 +429,11 @@ Might lurking variables explain these relationships?
 -   countries where people smoke more also have higher life expectancy
 -   More shark attacks are associated with higher levels of ice cream sales.
 -   The more volunteers at a natural disaster, the more destruction
+-   100% of people who eat ketchup die
 :::
 
 ## More spurious correlations
+
 [Click here](https://www.tylervigen.com/spurious-correlations) for more spurious correlations
 
 # Your turn
