@@ -30,6 +30,6 @@ By the end of this lesson you should:
 
 ```{r, eval=TRUE, echo=FALSE}
 library(qrcode)
-qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-8.html")
+qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-9.html")
 plot(qr)
 ```

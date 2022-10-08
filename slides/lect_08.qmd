@@ -169,7 +169,6 @@ What are the relationships between each plot?
 
 What do the numbers mean?
 
-The size of the lettering of the numbers is related to the number.
 :::
 
 ```{r, pairs_plots}
@@ -179,6 +178,9 @@ The size of the lettering of the numbers is related to the number.
 
 diamonds %>% 
   select_if(is.numeric) %>% 
+  filter(y < 20, 
+         z < 20, 
+         table < 90) %>% 
   ggpairs(.)
 ```
 
@@ -272,22 +274,12 @@ ggplot(data = diamonds) +
 
 ## Covariance math
 
-$$cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}$$
-
-## Covariance in `R`
-
 ::: notes
 This is a measure of the squares. We'd like a measure that is one dimensional. We want to look at more than just squares.
 :::
 
-```{r covariance}
-#| echo: true
-#| eval: true
+$cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}$
 
-
-cov(diamonds$price, diamonds$carat)
-
-```
 
 ## Correlation math
 
@@ -306,11 +298,11 @@ Standardizes the strength of the association
 ::: incremental
 1.  Usually referred to as $r$
 2.  Strength of linear association
-3.  $r$ is always between $-1$ and $+1$ $-1 \leq r \leg 1$.
+3.  $r$ is always between $-1$ and $+1$ $-1 \leq r \leq 1$.
 4.  $r$ does not have units
 :::
 
-## Correlation in `R`
+## Computing in `R`
 
 ::: notes
 Standardizes the strength of the association
@@ -321,10 +313,11 @@ Standardizes the strength of the association
 #| eval: true
 
 
+cov(diamonds$price, diamonds$carat)
 cor(diamonds$price, diamonds$carat)
 ```
 
-##  {background-image="lect-08_things/correlation_coef.png"}
+##  {background-image="lect-08_things/correlation_coef.png" background-size="contain"}
 
 # Line of association
 
