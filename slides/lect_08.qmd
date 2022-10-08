@@ -278,7 +278,7 @@ ggplot(data = diamonds) +
 This is a measure of the squares. We'd like a measure that is one dimensional. We want to look at more than just squares.
 :::
 
-$cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}$
+$cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar{x})(y_2 - \bar{y}) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}$
 
 
 ## Correlation math
@@ -296,7 +296,7 @@ Standardizes the strength of the association
 :::
 
 ::: incremental
-1.  Usually referred to as $r$
+1.  Referred to as $r$
 2.  Strength of linear association
 3.  $r$ is always between $-1$ and $+1$ $-1 \leq r \leq 1$.
 4.  $r$ does not have units
@@ -312,8 +312,10 @@ Standardizes the strength of the association
 #| echo: true
 #| eval: true
 
-
+# covariance of price and carat
 cov(diamonds$price, diamonds$carat)
+
+# correlation of price and carat
 cor(diamonds$price, diamonds$carat)
 ```
 
@@ -341,10 +343,12 @@ $$ b = \frac{r \cdot s_y}{s_x} $$ $$ a = \bar{y} - b \bar{x} $$
 
 ## Fitting by hand
 
-$r = 0.9215913$ $s_{price} = 3989.44$ $s_{carat} = 0.4740112$
+$r = 0.9215913$ 
+$s_{price} = 3989.44$ 
+$s_{carat} = 0.4740112$
 
 ::: incremental
-$$\begin{aligned}
+-$$\begin{aligned}
  b &= \frac{r \cdot s_y}{s_x} \\
  &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
  &= 7756.426
@@ -354,13 +358,13 @@ $$\begin{aligned}
 ## Fitting by hand
 
 ::: incremental
-$$\begin{aligned}
+- $$\begin{aligned}
  a &= \bar{y} - b \bar{x} \\
  &= 3932.8 - 7756.426 \cdot 0.7979397\\
  &= -2256.36
 \end{aligned}$$
 
-Our model is: $\widehat{\text{price}}  = -2256.36 + 7756.426 \cdot \text{carat}$
+- Our model is: $\widehat{\text{price}}  = -2256.36 + 7756.426 \cdot \text{carat}$
 :::
 
 ## Prediction by hand
@@ -371,19 +375,26 @@ Pull out your calculators and work on this
 for carat values $2.5$
 
 ::: incremental
-$$\begin{aligned}
+- $$\begin{aligned}
 \widehat{\text{price}}  &= -2256.36 + 7756.426 \cdot \text{carat} \\ 
 &= -2256.36 + 7756.426 \cdot 2.5 \\
-&= \$17135$$
+&= \$17135
+\end{aligned}$$
 :::
 
 
 ## Fit & predict in `R`
 
+::: notes
+first use of tidymodels package
+
+
+:::
+
 ```{r model_fit}
 #| echo: true
 #| eval: true
-#| code-line-numbers: "|2|3|4|6"
+#| code-line-numbers: "|2|6|7|8|9|13"
 
 # library tidymodels
 library(tidymodels)
@@ -393,36 +404,32 @@ library(tidymodels)
 least_squares_fit <- 
   linear_reg() %>% 
   set_engine("lm") %>% 
-  fit(price ~ carat,
-      data = diamonds) 
+  fit(price ~ carat, data = diamonds) 
 ## NOTE: outcome first, predictor second
 
 ## Find the prediction
-predict(least_squares_fit, 
-        tibble(carat = c(1, 2, 2.5, 4)))
+predict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))
 ```
 
 ## Warnings
 
 ::: incremental
-Draw a plot first
-Numerical variables
-Linear
-Check for outliers
-Lurking variables
+- Draw a plot first
+- Numerical variables
+- Linear relationship
+- Check for outliers
+- Lurking variables
 :::
 
 # Spurious correlations
 
-Might lurking variables explain these relationships?
-
 ::: incremental
+-   100% of people who eat ketchup die
 -   amount of sunscreen used and probability of getting skin cancer
 -   birth order and probability of down syndrome
 -   countries where people smoke more also have higher life expectancy
 -   More shark attacks are associated with higher levels of ice cream sales.
 -   The more volunteers at a natural disaster, the more destruction
--   100% of people who eat ketchup die
 :::
 
 ## More spurious correlations
