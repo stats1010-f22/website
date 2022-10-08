@@ -459,11 +459,13 @@
 <ul>
 <li class="fragment">dependent</li>
 <li class="fragment">response</li>
+<li class="fragment">outcome</li>
 </ul></li>
 <li class="fragment">variable on the <span class="math inline">\(x\)</span> axis
 <ul>
 <li class="fragment">independent</li>
 <li class="fragment">explanatory</li>
+<li class="fragment">predictor</li>
 </ul></li>
 </ul>
 </div>
@@ -647,7 +649,7 @@
 <img data-src="lect_08_files/figure-revealjs/covariance_squares-1.png" width="960" class="r-stretch"></section>
 <section id="covariance-math" class="slide level2">
 <h2>Covariance math</h2>
-<p><span class="math inline">\(cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}\)</span></p>
+<p><span class="math display">\[cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar(x))(y_2 - \bar(y)) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}\]</span></p>
 </section>
 <section id="covariance-in-r" class="slide level2">
 <h2>Covariance in <code>R</code></h2>
@@ -686,7 +688,7 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p><span class="math inline">\(corr(x, y) = \frac{cov(x, y)}{s_x, s_y}\)</span></p>
+<p><span class="math display">\[corr(x, y) = \frac{cov(x, y)}{s_x, s_y}\]</span></p>
 </section>
 <section id="correlation-characteristics" class="slide level2">
 <h2>Correlation characteristics</h2>
@@ -734,8 +736,126 @@
 </div>
 </div>
 </section>
-<section id="pg-118-of-book" class="slide level2">
-<h2>pg 118 of book</h2>
+<section id="section-1" class="slide level2" data-background-image="lect-08_things/correlation_coef.png">
+<h2></h2>
+</section></section>
+<section>
+<section id="line-of-association" class="title-slide slide level1 center">
+<h1>Line of association</h1>
+<aside class="notes">
+<p>What do these numbers mean?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><span class="math display">\[ y = mx + b \]</span></p>
+<div>
+<p><span class="math inline">\(m\)</span> is gradient <span class="math inline">\(b\)</span> is the <span class="math inline">\(y\)</span> intercept</p>
+</div>
+</section>
+<section id="gradient-and-slope" class="slide level2">
+<h2>Gradient and slope</h2>
+<aside class="notes">
+<p>Pull out your calculators and work on this</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><span class="math display">\[ b = \frac{r \cdot s_y}{s_x} \]</span> <span class="math display">\[ a = \bar{y} - b \bar{x} \]</span></p>
+</section>
+<section id="fitting-by-hand" class="slide level2">
+<h2>Fitting by hand</h2>
+<p><span class="math inline">\(r = 0.9215913\)</span> <span class="math inline">\(s_{price} = 3989.44\)</span> <span class="math inline">\(s_{carat} = 0.4740112\)</span></p>
+<div>
+<p><span class="math display">\[\begin{aligned}
+b &amp;= \frac{r \cdot s_y}{s_x} \\
+&amp;= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
+&amp;= 7756.426
+\end{aligned}\]</span></p>
+</div>
+</section>
+<section id="fitting-by-hand-1" class="slide level2">
+<h2>Fitting by hand</h2>
+<div>
+<p><span class="math display">\[\begin{aligned}
+a &amp;= \bar{y} - b \bar{x} \\
+&amp;= 3932.8 - 7756.426 \cdot 0.7979397\\
+&amp;= -2256.36
+\end{aligned}\]</span></p>
+<p>Our model is: <span class="math inline">\(\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}\)</span></p>
+</div>
+</section>
+<section id="prediction-by-hand" class="slide level2">
+<h2>Prediction by hand</h2>
+<aside class="notes">
+<p>Pull out your calculators and work on this</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p>for carat values <span class="math inline">\(2.5\)</span></p>
+<div>
+<p><span class="math display">\[\begin{aligned}
+\widehat{\text{price}}  &amp;= -2256.36 + 7756.426 \cdot \text{carat} \\
+&amp;= -2256.36 + 7756.426 \cdot 2.5 \\
+&amp;= \$17135\]</span></p>
+</div>
+</section>
+<section id="fit-predict-in-r" class="slide level2">
+<h2>Fit &amp; predict in <code>R</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="|2|3|4|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># library tidymodels</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="do">## Assign the least</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="do">## squares line</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>least_squares_fit <span class="ot">&lt;-</span> </span>
+<span id="cb6-7"><a href="#cb6-7"></a>  <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">fit</span>(price <span class="sc">~</span> carat,</span>
+<span id="cb6-10"><a href="#cb6-10"></a>      <span class="at">data =</span> diamonds) </span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="do">## </span><span class="al">NOTE</span><span class="do">: outcome first, predictor second</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="do">## Find the prediction</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a><span class="fu">predict</span>(least_squares_fit, </span>
+<span id="cb6-15"><a href="#cb6-15"></a>        <span class="fu">tibble</span>(<span class="at">carat =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">2.5</span>, <span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 1
+   .pred
+   &lt;dbl&gt;
+1  5500.
+2 13256.
+3 17135.
+4 28769.</code></pre>
+</div>
+</div>
+</section>
+<section id="warnings" class="slide level2">
+<h2>Warnings</h2>
+<div>
+<p>Draw a plot first Numerical variables Linear Check for outliers Lurking variables</p>
+</div>
 </section></section>
 <section>
 <section id="spurious-correlations" class="title-slide slide level1 center">
@@ -748,6 +868,7 @@
 <li class="fragment">countries where people smoke more also have higher life expectancy</li>
 <li class="fragment">More shark attacks are associated with higher levels of ice cream sales.</li>
 <li class="fragment">The more volunteers at a natural disaster, the more destruction</li>
+<li class="fragment">100% of people who eat ketchup die</li>
 </ul>
 </div>
 </section>

@@ -375,7 +375,7 @@
     "href": "slides/lect_08.html#covariance-math",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Covariance math",
-    "text": "Covariance math\n\\(cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 + \\bar(x))(y_2 - \\bar(y)) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\)"
+    "text": "Covariance math\n\\[cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 + \\bar(x))(y_2 - \\bar(y)) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\]"
   },
   {
     "objectID": "slides/lect_08.html#covariance-in-r",
@@ -389,7 +389,7 @@
     "href": "slides/lect_08.html#correlation-math",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Correlation math",
-    "text": "Correlation math\n\nStandardizes the strength of the association\n\n\\(corr(x, y) = \\frac{cov(x, y)}{s_x, s_y}\\)"
+    "text": "Correlation math\n\nStandardizes the strength of the association\n\n\\[corr(x, y) = \\frac{cov(x, y)}{s_x, s_y}\\]"
   },
   {
     "objectID": "slides/lect_08.html#correlation-characteristics",
@@ -406,11 +406,46 @@
     "text": "Correlation in R\n\nStandardizes the strength of the association\n\n\ncor(diamonds$price, diamonds$carat)\n\n[1] 0.9215913"
   },
   {
-    "objectID": "slides/lect_08.html#pg-118-of-book",
-    "href": "slides/lect_08.html#pg-118-of-book",
+    "objectID": "slides/lect_08.html#gradient-and-slope",
+    "href": "slides/lect_08.html#gradient-and-slope",
     "title": "Chapter 6: Association between quantitative variables",
-    "section": "pg 118 of book",
-    "text": "pg 118 of book"
+    "section": "Gradient and slope",
+    "text": "Gradient and slope\n\nPull out your calculators and work on this\n\n\\[ b = \\frac{r \\cdot s_y}{s_x} \\] \\[ a = \\bar{y} - b \\bar{x} \\]"
+  },
+  {
+    "objectID": "slides/lect_08.html#fitting-by-hand",
+    "href": "slides/lect_08.html#fitting-by-hand",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Fitting by hand",
+    "text": "Fitting by hand\n\\(r = 0.9215913\\) \\(s_{price} = 3989.44\\) \\(s_{carat} = 0.4740112\\)\n\n\\[\\begin{aligned}\nb &= \\frac{r \\cdot s_y}{s_x} \\\\\n&= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\\n&= 7756.426\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/lect_08.html#fitting-by-hand-1",
+    "href": "slides/lect_08.html#fitting-by-hand-1",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Fitting by hand",
+    "text": "Fitting by hand\n\n\\[\\begin{aligned}\na &= \\bar{y} - b \\bar{x} \\\\\n&= 3932.8 - 7756.426 \\cdot 0.7979397\\\\\n&= -2256.36\n\\end{aligned}\\]\nOur model is: \\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)"
+  },
+  {
+    "objectID": "slides/lect_08.html#prediction-by-hand",
+    "href": "slides/lect_08.html#prediction-by-hand",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Prediction by hand",
+    "text": "Prediction by hand\n\nPull out your calculators and work on this\n\nfor carat values \\(2.5\\)\n\n\\[\\begin{aligned}\n\\widehat{\\text{price}}  &= -2256.36 + 7756.426 \\cdot \\text{carat} \\\\\n&= -2256.36 + 7756.426 \\cdot 2.5 \\\\\n&= \\$17135\\]"
+  },
+  {
+    "objectID": "slides/lect_08.html#fit-predict-in-r",
+    "href": "slides/lect_08.html#fit-predict-in-r",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Fit & predict in R",
+    "text": "Fit & predict in R\n\n# library tidymodels\nlibrary(tidymodels)\n\n## Assign the least\n## squares line\nleast_squares_fit <- \n  linear_reg() %>% \n  set_engine(\"lm\") %>% \n  fit(price ~ carat,\n      data = diamonds) \n## NOTE: outcome first, predictor second\n\n## Find the prediction\npredict(least_squares_fit, \n        tibble(carat = c(1, 2, 2.5, 4)))\n\n# A tibble: 4 × 1\n   .pred\n   <dbl>\n1  5500.\n2 13256.\n3 17135.\n4 28769."
+  },
+  {
+    "objectID": "slides/lect_08.html#warnings",
+    "href": "slides/lect_08.html#warnings",
+    "title": "Chapter 6: Association between quantitative variables",
+    "section": "Warnings",
+    "text": "Warnings\n\nDraw a plot first Numerical variables Linear Check for outliers Lurking variables"
   },
   {
     "objectID": "slides/lect_08.html#more-spurious-correlations",
