@@ -549,16 +549,14 @@
 <span id="cb1-4"><a href="#cb1-4"></a></span>
 <span id="cb1-5"><a href="#cb1-5"></a>d <span class="ot">&lt;-</span> </span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">as_tibble</span>(<span class="fu">data.frame</span>(values, counts)) <span class="sc">%&gt;%</span> <span class="co"># make tibble</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> counts<span class="sc">/</span><span class="fu">sum</span>(counts)) <span class="sc">%&gt;%</span> <span class="co"># find proportion</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> <span class="co"># for each row</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="fu">mutate</span>(<span class="at">part_mean =</span> <span class="fu">sum</span>(values<span class="sc">*</span>prop)) <span class="sc">%&gt;%</span> <span class="co"># multiply values &amp; prop</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="co"># not for each row</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>  <span class="fu">mutate</span>(<span class="at">mean =</span> <span class="fu">sum</span> (part_mean)) <span class="co"># find the sum</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a>d <span class="sc">%&gt;%</span> </span>
-<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> values, <span class="at">y =</span> prop)) <span class="sc">+</span> <span class="co"># for values and prop</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span> <span class="co"># make bar chart of identity (prop)</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> mean, <span class="at">color =</span> <span class="st">"red"</span>)) <span class="co"># and line of mean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> counts<span class="sc">/</span><span class="fu">sum</span>(counts), <span class="co"># find proportion</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>         <span class="at">part_mean =</span> values<span class="sc">*</span>prop,  <span class="co"># multiply values &amp; prop</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>         <span class="at">mean =</span> <span class="fu">sum</span>(part_mean)) <span class="co"># find the sum</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a>d <span class="sc">%&gt;%</span> </span>
+<span id="cb1-12"><a href="#cb1-12"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> values, <span class="at">y =</span> prop)) <span class="sc">+</span> <span class="co"># for values and prop</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span> <span class="co"># make bar chart of identity (prop)</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> mean, <span class="at">color =</span> <span class="st">"red"</span>)) <span class="co"># and line of mean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>

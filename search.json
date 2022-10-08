@@ -375,7 +375,7 @@
     "href": "slides/lect_08.html#covariance-math",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Covariance math",
-    "text": "Covariance math\n\nThis is a measure of the squares. We’d like a measure that is one dimensional. We want to look at more than just squares.\n\n\\(cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 + \\bar(x))(y_2 - \\bar(y)) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\)"
+    "text": "Covariance math\n\nThis is a measure of the squares. We’d like a measure that is one dimensional. We want to look at more than just squares.\n\n\\(cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 + \\bar{x})(y_2 - \\bar{y}) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\)"
   },
   {
     "objectID": "slides/lect_08.html#correlation-math",
@@ -389,14 +389,14 @@
     "href": "slides/lect_08.html#correlation-characteristics",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Correlation characteristics",
-    "text": "Correlation characteristics\n\nStandardizes the strength of the association\n\n\n\nUsually referred to as \\(r\\)\nStrength of linear association\n\\(r\\) is always between \\(-1\\) and \\(+1\\) \\(-1 \\leq r \\leq 1\\).\n\\(r\\) does not have units"
+    "text": "Correlation characteristics\n\nStandardizes the strength of the association\n\n\n\nReferred to as \\(r\\)\nStrength of linear association\n\\(r\\) is always between \\(-1\\) and \\(+1\\) \\(-1 \\leq r \\leq 1\\).\n\\(r\\) does not have units"
   },
   {
     "objectID": "slides/lect_08.html#computing-in-r",
     "href": "slides/lect_08.html#computing-in-r",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Computing in R",
-    "text": "Computing in R\n\nStandardizes the strength of the association\n\n\ncov(diamonds$price, diamonds$carat)\n\n[1] 1742.765\n\ncor(diamonds$price, diamonds$carat)\n\n[1] 0.9215913"
+    "text": "Computing in R\n\nStandardizes the strength of the association\n\n\n# covariance of price and carat\ncov(diamonds$price, diamonds$carat)\n\n[1] 1742.765\n\n# correlation of price and carat\ncor(diamonds$price, diamonds$carat)\n\n[1] 0.9215913"
   },
   {
     "objectID": "slides/lect_08.html#gradient-and-slope",
@@ -410,35 +410,35 @@
     "href": "slides/lect_08.html#fitting-by-hand",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Fitting by hand",
-    "text": "Fitting by hand\n\\(r = 0.9215913\\) \\(s_{price} = 3989.44\\) \\(s_{carat} = 0.4740112\\)\n\n\\[\\begin{aligned}\nb &= \\frac{r \\cdot s_y}{s_x} \\\\\n&= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\\n&= 7756.426\n\\end{aligned}\\]"
+    "text": "Fitting by hand\n\\(r = 0.9215913\\) \\(s_{price} = 3989.44\\) \\(s_{carat} = 0.4740112\\)\n\n-\\[\\begin{aligned}\nb &= \\frac{r \\cdot s_y}{s_x} \\\\\n&= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\\n&= 7756.426\n\\end{aligned}\\]"
   },
   {
     "objectID": "slides/lect_08.html#fitting-by-hand-1",
     "href": "slides/lect_08.html#fitting-by-hand-1",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Fitting by hand",
-    "text": "Fitting by hand\n\n\\[\\begin{aligned}\na &= \\bar{y} - b \\bar{x} \\\\\n&= 3932.8 - 7756.426 \\cdot 0.7979397\\\\\n&= -2256.36\n\\end{aligned}\\]\nOur model is: \\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)"
+    "text": "Fitting by hand\n\n\n\\[\\begin{aligned}\na &= \\bar{y} - b \\bar{x} \\\\\n&= 3932.8 - 7756.426 \\cdot 0.7979397\\\\\n&= -2256.36\n\\end{aligned}\\]\nOur model is: \\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)"
   },
   {
     "objectID": "slides/lect_08.html#prediction-by-hand",
     "href": "slides/lect_08.html#prediction-by-hand",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Prediction by hand",
-    "text": "Prediction by hand\n\nPull out your calculators and work on this\n\nfor carat values \\(2.5\\)\n\n\\[\\begin{aligned}\n\\widehat{\\text{price}}  &= -2256.36 + 7756.426 \\cdot \\text{carat} \\\\\n&= -2256.36 + 7756.426 \\cdot 2.5 \\\\\n&= \\$17135\\]"
+    "text": "Prediction by hand\n\nPull out your calculators and work on this\n\nfor carat values \\(2.5\\)\n\n\n\\[\\begin{aligned}\n\\widehat{\\text{price}}  &= -2256.36 + 7756.426 \\cdot \\text{carat} \\\\\n&= -2256.36 + 7756.426 \\cdot 2.5 \\\\\n&= \\$17135\n\\end{aligned}\\]"
   },
   {
     "objectID": "slides/lect_08.html#fit-predict-in-r",
     "href": "slides/lect_08.html#fit-predict-in-r",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Fit & predict in R",
-    "text": "Fit & predict in R\n\n# library tidymodels\nlibrary(tidymodels)\n\n## Assign the least\n## squares line\nleast_squares_fit <- \n  linear_reg() %>% \n  set_engine(\"lm\") %>% \n  fit(price ~ carat,\n      data = diamonds) \n## NOTE: outcome first, predictor second\n\n## Find the prediction\npredict(least_squares_fit, \n        tibble(carat = c(1, 2, 2.5, 4)))\n\n# A tibble: 4 × 1\n   .pred\n   <dbl>\n1  5500.\n2 13256.\n3 17135.\n4 28769."
+    "text": "Fit & predict in R\n\nfirst use of tidymodels package\n\n\n# library tidymodels\nlibrary(tidymodels)\n\n## Assign the least\n## squares line\nleast_squares_fit <- \n  linear_reg() %>% \n  set_engine(\"lm\") %>% \n  fit(price ~ carat, data = diamonds) \n## NOTE: outcome first, predictor second\n\n## Find the prediction\npredict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))\n\n# A tibble: 4 × 1\n   .pred\n   <dbl>\n1  5500.\n2 13256.\n3 17135.\n4 28769."
   },
   {
     "objectID": "slides/lect_08.html#warnings",
     "href": "slides/lect_08.html#warnings",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Warnings",
-    "text": "Warnings\n\nDraw a plot first Numerical variables Linear Check for outliers Lurking variables"
+    "text": "Warnings\n\n\nDraw a plot first\nNumerical variables\nLinear relationship\nCheck for outliers\nLurking variables"
   },
   {
     "objectID": "slides/lect_08.html#more-spurious-correlations",
@@ -761,6 +761,34 @@
     "title": "Lec 1 - Downloading R and plot your first graph",
     "section": "Write your first line of coding",
     "text": "Write your first line of coding\nClick here or the qr code below to write your first line of code\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "slides/lect_09.html#compute-the-sharpe-ratio",
+    "href": "slides/lect_09.html#compute-the-sharpe-ratio",
+    "title": "Chapter 10: Association between random variables",
+    "section": "Compute the Sharpe ratio",
+    "text": "Compute the Sharpe ratio\n\nhave them go back to the previous slide and see what they got\n\n\n\n\nCompany\nRandom Variable\nMean per month\nSD\n\n\n\n\nApple\nA\n2.45%\n13.3%\n\n\nMcDonalds\nM\n1.14%\n6.2%\n\n\n\nassume \\(r_f\\) is the risk-free rate of interest is \\(0.1\\%\\)"
+  },
+  {
+    "objectID": "slides/lect_09.html#compute-the-sharpe-ratio-1",
+    "href": "slides/lect_09.html#compute-the-sharpe-ratio-1",
+    "title": "Chapter 10: Association between random variables",
+    "section": "Compute the Sharpe ratio",
+    "text": "Compute the Sharpe ratio\n::: work through it, then what if we don’t know mu and sigma could we find it if we had a pdf? :::\n\n\n\\[\\begin{aligned}\nS(A) &= \\frac{\\mu - r_f}{\\sigma}\\\\\n&= \\frac{2.45 - 0.1}{13.3}\\\\\n&=  0.177\n\\end{aligned}\\]\n\\[\\begin{aligned}\nS(M) &= \\frac{\\mu - r_f}{\\sigma}\\\\\n&= \\frac{1.14 - 0.1}{6.2}\\\\\n&=  0.168\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/lect_09.html#revision-2",
+    "href": "slides/lect_09.html#revision-2",
+    "title": "Chapter 10: Association between random variables",
+    "section": "Revision 2",
+    "text": "Revision 2\n\nfind the mean, stdev, and use them to find the Sharpe ratio\n\nInstead of knowing \\(\\mu\\) and \\(\\sigma\\) we have a pdf\n\n\n\n\nIBM stock\nIBM stock\nMicrosoft\nMicrosoft\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(y\\)\n\\(P(Y = y)\\)\n\n\nIncreases\n$5\n0.11\n$4\n0.18\n\n\nNo change\n0\n0.80\n0\n0.67\n\n\nDecreases\n-$5\n0.09\n-$4\n0.15"
+  },
+  {
+    "objectID": "slides/lect_09.html#the-sharpe-ratio---in-r",
+    "href": "slides/lect_09.html#the-sharpe-ratio---in-r",
+    "title": "Chapter 10: Association between random variables",
+    "section": "The Sharpe ratio - in R",
+    "text": "The Sharpe ratio - in R\n\n# Input the data and the pdf\nstock <- tibble(x = c(5, 0, -5), \n                p_x = c(0.11, 0.8, 0.09), \n                y = c(4, 0, -4), \n                p_y = c(.18, .67, .15))\n\n\nSharpe_ratio <- \n  stock %>%\n  mutate(part_mean_x = x*p_x, \n         part_mean_y = y*p_y,\n         mean_x = sum(part_mean_x),\n         mean_y = sum(part_mean_y),\n         part_var_x = p_x * (mean_x - x)^2, \n         part_var_y = p_y * (mean_y - y)^2,\n         var_x = sum(part_var_x), \n         var_y = sum(part_var_y),\n         sd_x = sqrt(var_x), \n         sd_y = sqrt(var_y)) %>% \n  summarise(S_x = (mean_x - 0.015)/sd_x,\n            S_y = (mean_y - 0.015)/sd_y)"
   },
   {
     "objectID": "slides/lect_04.html#definition-of-numeric-variable",
