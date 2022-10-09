@@ -74,6 +74,8 @@ assume $r_f$ is the risk-free rate of interest is $0.1\%$
     &= \frac{1.14 - 0.1}{6.2}\\
     &=  0.168
     \end{aligned}$$
+
+-   We prefer Apple because it has a higher Sharpe ratio $0.177 > 0.168$
 :::
 
 ## Revision 2
@@ -91,7 +93,29 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 | No change | 0         | 0.80       | 0         | 0.67       |
 | Decreases | -\$5      | 0.09       | -\$4      | 0.15       |
 
+## Sharpe ratio by hand
+
+|           | IBM stock | IBM stock  | IBM stock | IBM Stock                    | IBM Stock | IBM Stock | IBM Stock    |
+|---------|---------|---------|---------|---------|---------|---------|---------|
+|           | $x$       | $P(X = x)$ | $\bar{x}$ | $(x-\bar{x})^2 \cdot p_x(x)$ | $Var(x)$  | $sd(x)$   | Sharpe ratio |
+| Increases | \$5       | 0.11       |           |                              |           |           |              |
+| No change | 0         | 0.80       |           |                              |           |           |              |
+| Decreases | -\$5      | 0.09       |           |                              |           |           |              |
+
+## Sharpe ratio by hand
+
+|           | Microsoft | Microsoft | Microsoft | Microsoft                    | Microsoft | Microsoft | Microsoft    |
+|---------|---------|---------|---------|---------|---------|---------|---------|
+|           | $y$       | $P(Y =y)$ | $\bar{y}$ | $(y-\bar{y})^2 \cdot p_y(y)$ | $Var(y)$  | $sd(y)$   | Sharpe ratio |
+| Increases | \$4       | 0.18      |           |                              |           |           |              |
+| No change | 0         | 0.67      |           |                              |           |           |              |
+| Decreases | -\$4      | 0.15      |           |                              |           |           |              |
+
 ## The Sharpe ratio - in `R`
+
+::: notes
+The stock market is a bit more complicated b/c stocks tend to trend together. Can an investor do better by diversifing the investment?
+:::
 
 ```{r mean_stdev}
 #| echo: true
@@ -104,21 +128,46 @@ stock <- tibble(x = c(5, 0, -5),
                 p_y = c(.18, .67, .15))
 
 
-Sharpe_ratio <- 
-  stock %>%
-  mutate(part_mean_x = x*p_x, 
-         part_mean_y = y*p_y,
-         mean_x = sum(part_mean_x),
-         mean_y = sum(part_mean_y),
-         part_var_x = p_x * (mean_x - x)^2, 
-         part_var_y = p_y * (mean_y - y)^2,
-         var_x = sum(part_var_x), 
-         var_y = sum(part_var_y),
-         sd_x = sqrt(var_x), 
-         sd_y = sqrt(var_y)) %>% 
-  summarise(S_x = (mean_x - 0.015)/sd_x,
-            S_y = (mean_y - 0.015)/sd_y)
+Sharpe_ratio <- # name this the Sharpe ratio
+  stock %>% # use the data from above
+  mutate(part_mean_x = x*p_x, # find mean for each part of x 
+         part_mean_y = y*p_y, # now for y
+         mean_x = sum(part_mean_x), # find mean x 
+         mean_y = sum(part_mean_y),# now for y
+         part_var_x = p_x * (mean_x - x)^2, # find var for each part of x 
+         part_var_y = p_y * (mean_y - y)^2,# now for y
+         var_x = sum(part_var_x), # find var of x 
+         var_y = sum(part_var_y),# now for y
+         sd_x = sqrt(var_x), # find sd of x 
+         sd_y = sqrt(var_y)) %>% # now for y
+  summarise(S_x = (mean_x - 0.015)/sd_x, # find Sharpe ratio of x with rf = 0.015
+            S_y = (mean_y - 0.015)/sd_y) # now for y
 ```
+
+# Joint probability distribution
+
+|     |        | $X$      | $X$     | $X$     |        |
+|-----|--------|----------|---------|---------|--------|
+|     |        | $x = -5$ | $x = 0$ | $x = 5$ | $p(y)$ |
+| $Y$ | $y=4$  | $0.00$   | $0.11$  | $0.07$  | $0.18$ |
+| $Y$ | $y=0$  | $0.03$   | $0.62$  | $0.02$  | $0.67$ |
+| $Y$ | $y=-4$ | $0.06$   | $0.07$  | $0.02$  | $0.15$ |
+|     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
+
+::: incremental
+_ What is the probability that $x = 0$ and $y =4$?
+- $11\%$
+
+_ What is the probability that $x = 5$ and $y =4$?
+- $7\%$
+
+_ What is the probability that $x = 0$ and $y =0$?
+- $62\%$
+
+_ What outcome will never occur?
+- $x = -5$ and $y =4$
+
+:::
 
 # Your turn
 

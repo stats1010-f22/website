@@ -317,7 +317,17 @@ cov(diamonds$price, diamonds$carat)
 
 # correlation of price and carat
 cor(diamonds$price, diamonds$carat)
+
+
+# coding for the pairs plots
+# diamonds %>% # dataset
+#  select_if(is.numeric) %>% # numeric variables
+#  filter(y < 20, # y less than 20
+#         z < 20, # z less than 20
+#         table < 90) %>% # table less than 90
+#  ggpairs(.)
 ```
+
 
 ##  {background-image="lect-08_things/correlation_coef.png" background-size="contain"}
 
@@ -387,8 +397,6 @@ for carat values $2.5$
 
 ::: notes
 first use of tidymodels package
-
-
 :::
 
 ```{r model_fit}
