@@ -396,7 +396,7 @@
     "href": "slides/lect_08.html#computing-in-r",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Computing in R",
-    "text": "Computing in R\n\nStandardizes the strength of the association\n\n\n# covariance of price and carat\ncov(diamonds$price, diamonds$carat)\n\n[1] 1742.765\n\n# correlation of price and carat\ncor(diamonds$price, diamonds$carat)\n\n[1] 0.9215913"
+    "text": "Computing in R\n\nStandardizes the strength of the association\n\n\n# covariance of price and carat\ncov(diamonds$price, diamonds$carat)\n\n[1] 1742.765\n\n# correlation of price and carat\ncor(diamonds$price, diamonds$carat)\n\n[1] 0.9215913\n\n# coding for the pairs plots\n# diamonds %>% # dataset\n#  select_if(is.numeric) %>% # numeric variables\n#  filter(y < 20, # y less than 20\n#         z < 20, # z less than 20\n#         table < 90) %>% # table less than 90\n#  ggpairs(.)"
   },
   {
     "objectID": "slides/lect_08.html#gradient-and-slope",
@@ -774,7 +774,7 @@
     "href": "slides/lect_09.html#compute-the-sharpe-ratio-1",
     "title": "Chapter 10: Association between random variables",
     "section": "Compute the Sharpe ratio",
-    "text": "Compute the Sharpe ratio\n::: work through it, then what if we don’t know mu and sigma could we find it if we had a pdf? :::\n\n\n\\[\\begin{aligned}\nS(A) &= \\frac{\\mu - r_f}{\\sigma}\\\\\n&= \\frac{2.45 - 0.1}{13.3}\\\\\n&=  0.177\n\\end{aligned}\\]\n\\[\\begin{aligned}\nS(M) &= \\frac{\\mu - r_f}{\\sigma}\\\\\n&= \\frac{1.14 - 0.1}{6.2}\\\\\n&=  0.168\n\\end{aligned}\\]"
+    "text": "Compute the Sharpe ratio\n::: work through it, then what if we don’t know mu and sigma could we find it if we had a pdf? :::\n\n\n\\[\\begin{aligned}\nS(A) &= \\frac{\\mu - r_f}{\\sigma}\\\\\n&= \\frac{2.45 - 0.1}{13.3}\\\\\n&=  0.177\n\\end{aligned}\\]\n\\[\\begin{aligned}\nS(M) &= \\frac{\\mu - r_f}{\\sigma}\\\\\n&= \\frac{1.14 - 0.1}{6.2}\\\\\n&=  0.168\n\\end{aligned}\\]\nWe prefer Apple because it has a higher Sharpe ratio \\(0.177 > 0.168\\)"
   },
   {
     "objectID": "slides/lect_09.html#revision-2",
@@ -784,11 +784,25 @@
     "text": "Revision 2\n\nfind the mean, stdev, and use them to find the Sharpe ratio\n\nInstead of knowing \\(\\mu\\) and \\(\\sigma\\) we have a pdf\n\n\n\n\nIBM stock\nIBM stock\nMicrosoft\nMicrosoft\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(y\\)\n\\(P(Y = y)\\)\n\n\nIncreases\n$5\n0.11\n$4\n0.18\n\n\nNo change\n0\n0.80\n0\n0.67\n\n\nDecreases\n-$5\n0.09\n-$4\n0.15"
   },
   {
+    "objectID": "slides/lect_09.html#sharpe-ratio-by-hand",
+    "href": "slides/lect_09.html#sharpe-ratio-by-hand",
+    "title": "Chapter 10: Association between random variables",
+    "section": "Sharpe ratio by hand",
+    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM stock\nIBM stock\nIBM stock\nIBM Stock\nIBM Stock\nIBM Stock\nIBM Stock\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(\\bar{x}\\)\n\\((x-\\bar{x})^2 \\cdot p_x(x)\\)\n\\(Var(x)\\)\n\\(sd(x)\\)\nSharpe ratio\n\n\nIncreases\n$5\n0.11\n\n\n\n\n\n\n\nNo change\n0\n0.80\n\n\n\n\n\n\n\nDecreases\n-$5\n0.09"
+  },
+  {
+    "objectID": "slides/lect_09.html#sharpe-ratio-by-hand-1",
+    "href": "slides/lect_09.html#sharpe-ratio-by-hand-1",
+    "title": "Chapter 10: Association between random variables",
+    "section": "Sharpe ratio by hand",
+    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMicrosoft\nMicrosoft\nMicrosoft\nMicrosoft\nMicrosoft\nMicrosoft\nMicrosoft\n\n\n\n\n\n\\(y\\)\n\\(P(Y =y)\\)\n\\(\\bar{y}\\)\n\\((y-\\bar{y})^2 \\cdot p_y(y)\\)\n\\(Var(y)\\)\n\\(sd(y)\\)\nSharpe ratio\n\n\nIncreases\n$4\n0.18\n\n\n\n\n\n\n\nNo change\n0\n0.67\n\n\n\n\n\n\n\nDecreases\n-$4\n0.15"
+  },
+  {
     "objectID": "slides/lect_09.html#the-sharpe-ratio---in-r",
     "href": "slides/lect_09.html#the-sharpe-ratio---in-r",
     "title": "Chapter 10: Association between random variables",
     "section": "The Sharpe ratio - in R",
-    "text": "The Sharpe ratio - in R\n\n# Input the data and the pdf\nstock <- tibble(x = c(5, 0, -5), \n                p_x = c(0.11, 0.8, 0.09), \n                y = c(4, 0, -4), \n                p_y = c(.18, .67, .15))\n\n\nSharpe_ratio <- \n  stock %>%\n  mutate(part_mean_x = x*p_x, \n         part_mean_y = y*p_y,\n         mean_x = sum(part_mean_x),\n         mean_y = sum(part_mean_y),\n         part_var_x = p_x * (mean_x - x)^2, \n         part_var_y = p_y * (mean_y - y)^2,\n         var_x = sum(part_var_x), \n         var_y = sum(part_var_y),\n         sd_x = sqrt(var_x), \n         sd_y = sqrt(var_y)) %>% \n  summarise(S_x = (mean_x - 0.015)/sd_x,\n            S_y = (mean_y - 0.015)/sd_y)"
+    "text": "The Sharpe ratio - in R\n\nThe stock market is a bit more complicated b/c stocks tend to trend together. Can an investor do better by diversifing the investment?\n\n\n# Input the data and the pdf\nstock <- tibble(x = c(5, 0, -5), \n                p_x = c(0.11, 0.8, 0.09), \n                y = c(4, 0, -4), \n                p_y = c(.18, .67, .15))\n\n\nSharpe_ratio <- # name this the Sharpe ratio\n  stock %>% # use the data from above\n  mutate(part_mean_x = x*p_x, # find mean for each part of x \n         part_mean_y = y*p_y, # now for y\n         mean_x = sum(part_mean_x), # find mean x \n         mean_y = sum(part_mean_y),# now for y\n         part_var_x = p_x * (mean_x - x)^2, # find var for each part of x \n         part_var_y = p_y * (mean_y - y)^2,# now for y\n         var_x = sum(part_var_x), # find var of x \n         var_y = sum(part_var_y),# now for y\n         sd_x = sqrt(var_x), # find sd of x \n         sd_y = sqrt(var_y)) %>% # now for y\n  summarise(S_x = (mean_x - 0.015)/sd_x, # find Sharpe ratio of x with rf = 0.015\n            S_y = (mean_y - 0.015)/sd_y) # now for y"
   },
   {
     "objectID": "slides/lect_04.html#definition-of-numeric-variable",

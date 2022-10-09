@@ -494,6 +494,7 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 &amp;= \frac{1.14 - 0.1}{6.2}\\
 &amp;=  0.168
 \end{aligned}\]</span></p></li>
+<li class="fragment"><p>We prefer Apple because it has a higher Sharpe ratio <span class="math inline">\(0.177 &gt; 0.168\)</span></p></li>
 </ul>
 </div>
 </section>
@@ -555,8 +556,159 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 </tbody>
 </table>
 </section>
+<section id="sharpe-ratio-by-hand" class="slide level2">
+<h2>Sharpe ratio by hand</h2>
+<table>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>IBM stock</th>
+<th>IBM stock</th>
+<th>IBM stock</th>
+<th>IBM Stock</th>
+<th>IBM Stock</th>
+<th>IBM Stock</th>
+<th>IBM Stock</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(x\)</span></td>
+<td><span class="math inline">\(P(X = x)\)</span></td>
+<td><span class="math inline">\(\bar{x}\)</span></td>
+<td><span class="math inline">\((x-\bar{x})^2 \cdot p_x(x)\)</span></td>
+<td><span class="math inline">\(Var(x)\)</span></td>
+<td><span class="math inline">\(sd(x)\)</span></td>
+<td>Sharpe ratio</td>
+</tr>
+<tr class="even">
+<td>Increases</td>
+<td>$5</td>
+<td>0.11</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>No change</td>
+<td>0</td>
+<td>0.80</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Decreases</td>
+<td>-$5</td>
+<td>0.09</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sharpe-ratio-by-hand-1" class="slide level2">
+<h2>Sharpe ratio by hand</h2>
+<table>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Microsoft</th>
+<th>Microsoft</th>
+<th>Microsoft</th>
+<th>Microsoft</th>
+<th>Microsoft</th>
+<th>Microsoft</th>
+<th>Microsoft</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(y\)</span></td>
+<td><span class="math inline">\(P(Y =y)\)</span></td>
+<td><span class="math inline">\(\bar{y}\)</span></td>
+<td><span class="math inline">\((y-\bar{y})^2 \cdot p_y(y)\)</span></td>
+<td><span class="math inline">\(Var(y)\)</span></td>
+<td><span class="math inline">\(sd(y)\)</span></td>
+<td>Sharpe ratio</td>
+</tr>
+<tr class="even">
+<td>Increases</td>
+<td>$4</td>
+<td>0.18</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>No change</td>
+<td>0</td>
+<td>0.67</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Decreases</td>
+<td>-$4</td>
+<td>0.15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="the-sharpe-ratio---in-r" class="slide level2">
 <h2>The Sharpe ratio - in <code>R</code></h2>
+<aside class="notes">
+<p>The stock market is a bit more complicated b/c stocks tend to trend together. Can an investor do better by diversifing the investment?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Input the data and the pdf</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>stock <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">5</span>), </span>
@@ -565,22 +717,86 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <span id="cb1-5"><a href="#cb1-5"></a>                <span class="at">p_y =</span> <span class="fu">c</span>(.<span class="dv">18</span>, .<span class="dv">67</span>, .<span class="dv">15</span>))</span>
 <span id="cb1-6"><a href="#cb1-6"></a></span>
 <span id="cb1-7"><a href="#cb1-7"></a></span>
-<span id="cb1-8"><a href="#cb1-8"></a>Sharpe_ratio <span class="ot">&lt;-</span> </span>
-<span id="cb1-9"><a href="#cb1-9"></a>  stock <span class="sc">%&gt;%</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>  <span class="fu">mutate</span>(<span class="at">part_mean_x =</span> x<span class="sc">*</span>p_x, </span>
-<span id="cb1-11"><a href="#cb1-11"></a>         <span class="at">part_mean_y =</span> y<span class="sc">*</span>p_y,</span>
-<span id="cb1-12"><a href="#cb1-12"></a>         <span class="at">mean_x =</span> <span class="fu">sum</span>(part_mean_x),</span>
-<span id="cb1-13"><a href="#cb1-13"></a>         <span class="at">mean_y =</span> <span class="fu">sum</span>(part_mean_y),</span>
-<span id="cb1-14"><a href="#cb1-14"></a>         <span class="at">part_var_x =</span> p_x <span class="sc">*</span> (mean_x <span class="sc">-</span> x)<span class="sc">^</span><span class="dv">2</span>, </span>
-<span id="cb1-15"><a href="#cb1-15"></a>         <span class="at">part_var_y =</span> p_y <span class="sc">*</span> (mean_y <span class="sc">-</span> y)<span class="sc">^</span><span class="dv">2</span>,</span>
-<span id="cb1-16"><a href="#cb1-16"></a>         <span class="at">var_x =</span> <span class="fu">sum</span>(part_var_x), </span>
-<span id="cb1-17"><a href="#cb1-17"></a>         <span class="at">var_y =</span> <span class="fu">sum</span>(part_var_y),</span>
-<span id="cb1-18"><a href="#cb1-18"></a>         <span class="at">sd_x =</span> <span class="fu">sqrt</span>(var_x), </span>
-<span id="cb1-19"><a href="#cb1-19"></a>         <span class="at">sd_y =</span> <span class="fu">sqrt</span>(var_y)) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-20"><a href="#cb1-20"></a>  <span class="fu">summarise</span>(<span class="at">S_x =</span> (mean_x <span class="sc">-</span> <span class="fl">0.015</span>)<span class="sc">/</span>sd_x,</span>
-<span id="cb1-21"><a href="#cb1-21"></a>            <span class="at">S_y =</span> (mean_y <span class="sc">-</span> <span class="fl">0.015</span>)<span class="sc">/</span>sd_y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a href="#cb1-8"></a>Sharpe_ratio <span class="ot">&lt;-</span> <span class="co"># name this the Sharpe ratio</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>  stock <span class="sc">%&gt;%</span> <span class="co"># use the data from above</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="fu">mutate</span>(<span class="at">part_mean_x =</span> x<span class="sc">*</span>p_x, <span class="co"># find mean for each part of x </span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>         <span class="at">part_mean_y =</span> y<span class="sc">*</span>p_y, <span class="co"># now for y</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>         <span class="at">mean_x =</span> <span class="fu">sum</span>(part_mean_x), <span class="co"># find mean x </span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>         <span class="at">mean_y =</span> <span class="fu">sum</span>(part_mean_y),<span class="co"># now for y</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>         <span class="at">part_var_x =</span> p_x <span class="sc">*</span> (mean_x <span class="sc">-</span> x)<span class="sc">^</span><span class="dv">2</span>, <span class="co"># find var for each part of x </span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>         <span class="at">part_var_y =</span> p_y <span class="sc">*</span> (mean_y <span class="sc">-</span> y)<span class="sc">^</span><span class="dv">2</span>,<span class="co"># now for y</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>         <span class="at">var_x =</span> <span class="fu">sum</span>(part_var_x), <span class="co"># find var of x </span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>         <span class="at">var_y =</span> <span class="fu">sum</span>(part_var_y),<span class="co"># now for y</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>         <span class="at">sd_x =</span> <span class="fu">sqrt</span>(var_x), <span class="co"># find sd of x </span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>         <span class="at">sd_y =</span> <span class="fu">sqrt</span>(var_y)) <span class="sc">%&gt;%</span> <span class="co"># now for y</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>  <span class="fu">summarise</span>(<span class="at">S_x =</span> (mean_x <span class="sc">-</span> <span class="fl">0.015</span>)<span class="sc">/</span>sd_x, <span class="co"># find Sharpe ratio of x with rf = 0.015</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>            <span class="at">S_y =</span> (mean_y <span class="sc">-</span> <span class="fl">0.015</span>)<span class="sc">/</span>sd_y) <span class="co"># now for y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
+<section id="joint-probability-distribution" class="title-slide slide level1 center">
+<h1>Joint probability distribution</h1>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th><span class="math inline">\(X\)</span></th>
+<th><span class="math inline">\(X\)</span></th>
+<th><span class="math inline">\(X\)</span></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><span class="math inline">\(x = -5\)</span></td>
+<td><span class="math inline">\(x = 0\)</span></td>
+<td><span class="math inline">\(x = 5\)</span></td>
+<td><span class="math inline">\(p(y)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Y\)</span></td>
+<td><span class="math inline">\(y=4\)</span></td>
+<td><span class="math inline">\(0.00\)</span></td>
+<td><span class="math inline">\(0.11\)</span></td>
+<td><span class="math inline">\(0.07\)</span></td>
+<td><span class="math inline">\(0.18\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(Y\)</span></td>
+<td><span class="math inline">\(y=0\)</span></td>
+<td><span class="math inline">\(0.03\)</span></td>
+<td><span class="math inline">\(0.62\)</span></td>
+<td><span class="math inline">\(0.02\)</span></td>
+<td><span class="math inline">\(0.67\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Y\)</span></td>
+<td><span class="math inline">\(y=-4\)</span></td>
+<td><span class="math inline">\(0.06\)</span></td>
+<td><span class="math inline">\(0.07\)</span></td>
+<td><span class="math inline">\(0.02\)</span></td>
+<td><span class="math inline">\(0.15\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(p(x)\)</span></td>
+<td><span class="math inline">\(0.09\)</span></td>
+<td><span class="math inline">\(0.80\)</span></td>
+<td><span class="math inline">\(0.11\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<div>
+<p>_ What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(11\%\)</span></p>
+<p>_ What is the probability that <span class="math inline">\(x = 5\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(7\%\)</span></p>
+<p>_ What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =0\)</span>? - <span class="math inline">\(62\%\)</span></p>
+<p>_ What outcome will never occur? - <span class="math inline">\(x = -5\)</span> and <span class="math inline">\(y =4\)</span></p>
+</div>
+</section>
+
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>
 <p><a href="https://stats1010-f22.github.io/website/ae/ae-8.html">Click here</a> or the qr code below</p>

@@ -730,6 +730,13 @@
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9215913</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># coding for the pairs plots</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="co"># diamonds %&gt;% # dataset</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co">#  select_if(is.numeric) %&gt;% # numeric variables</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">#  filter(y &lt; 20, # y less than 20</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">#         z &lt; 20, # z less than 20</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co">#         table &lt; 90) %&gt;% # table less than 90</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co">#  ggpairs(.)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="section-1" class="slide level2" data-background-image="lect-08_things/correlation_coef.png" data-background-size="contain">
@@ -839,19 +846,19 @@ a &amp;= \bar{y} - b \bar{x} \\
           display:block!important;
       }</style></aside>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="|2|6|7|8|9|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># library tidymodels</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="do">## Assign the least</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="do">## squares line</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a>least_squares_fit <span class="ot">&lt;-</span> </span>
-<span id="cb6-7"><a href="#cb6-7"></a>  <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb6-8"><a href="#cb6-8"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">fit</span>(price <span class="sc">~</span> carat, <span class="at">data =</span> diamonds) </span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="do">## </span><span class="al">NOTE</span><span class="do">: outcome first, predictor second</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a></span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="do">## Find the prediction</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="fu">predict</span>(least_squares_fit, <span class="fu">tibble</span>(<span class="at">carat =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">2.5</span>, <span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="|2|6|7|8|9|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># library tidymodels</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="do">## Assign the least</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="do">## squares line</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>least_squares_fit <span class="ot">&lt;-</span> </span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-9"><a href="#cb7-9"></a>  <span class="fu">fit</span>(price <span class="sc">~</span> carat, <span class="at">data =</span> diamonds) </span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="do">## </span><span class="al">NOTE</span><span class="do">: outcome first, predictor second</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="do">## Find the prediction</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="fu">predict</span>(least_squares_fit, <span class="fu">tibble</span>(<span class="at">carat =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">2.5</span>, <span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 1
    .pred
