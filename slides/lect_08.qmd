@@ -320,12 +320,13 @@ cor(diamonds$price, diamonds$carat)
 
 
 # coding for the pairs plots
+# library(GGally)
 # diamonds %>% # dataset
 #  select_if(is.numeric) %>% # numeric variables
 #  filter(y < 20, # y less than 20
 #         z < 20, # z less than 20
 #         table < 90) %>% # table less than 90
-#  ggpairs(.)
+#  ggpairs(.) # make the plot
 ```
 
 
@@ -354,26 +355,29 @@ $$ b = \frac{r \cdot s_y}{s_x} $$ $$ a = \bar{y} - b \bar{x} $$
 ## Fitting by hand
 ::: incremental
 - $r = 0.9215913$ 
-
 - $s_{price} = 3989.44$ 
-
 - $s_{carat} = 0.4740112$
+- $b &= \frac{r \cdot s_y}{s_x}$
+:::
 
-
-- $$\begin{aligned}
- b &= \frac{r \cdot s_y}{s_x} \\
- &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
- &= 7756.426
+::: incremental
+$$\begin{aligned}
+b &= \frac{r \cdot s_y}{s_x} \\
+&= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
+&= 7756.426
 \end{aligned}$$
 :::
 
+
 ## Fitting by hand
 
+$a &= \bar{y} - b \bar{x} \\$
+
 ::: incremental
-- $$\begin{aligned}
- a &= \bar{y} - b \bar{x} \\
- &= 3932.8 - 7756.426 \cdot 0.7979397\\
- &= -2256.36
+$$\begin{aligned}
+a &= \bar{y} - b \bar{x} \\
+&= 3932.8 - 7756.426 \cdot 0.7979397\\
+&= -2256.36
 \end{aligned}$$
 
 - Our model is: $\widehat{\text{price}}  = -2256.36 + 7756.426 \cdot \text{carat}$
@@ -387,7 +391,7 @@ Pull out your calculators and work on this
 for carat values $2.5$
 
 ::: incremental
-- $$\begin{aligned}
+$$\begin{aligned}
 \widehat{\text{price}}  &= -2256.36 + 7756.426 \cdot \text{carat} \\ 
 &= -2256.36 + 7756.426 \cdot 2.5 \\
 &= \$17135
@@ -424,7 +428,7 @@ predict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))
 ## Warnings
 
 ::: incremental
-- Draw a plot first
+- ALWAYS draw plots first
 - Numerical variables
 - Linear relationship
 - Check for outliers
@@ -437,12 +441,23 @@ predict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))
 -   100% of people who eat ketchup die
 -   amount of sunscreen used and probability of getting skin cancer
 -   birth order and probability of down syndrome
--   countries where people smoke more also have higher life expectancy
+-   countries with more smokers also have higher life expectancy
 -   More shark attacks are associated with higher levels of ice cream sales.
 -   The more volunteers at a natural disaster, the more destruction
 :::
 
 ## More spurious correlations
+
+::: incremental
+- These variables are called lurking variables or confounders. 
+
+- Lurking variables are not considered in the statistical analysis
+
+- Confounders are considered
+
+- There are both known and unknown confounders, uknown confounders are lurking variables.
+
+:::
 
 [Click here](https://www.tylervigen.com/spurious-correlations) for more spurious correlations
 
