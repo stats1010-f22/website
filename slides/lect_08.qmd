@@ -352,13 +352,15 @@ Pull out your calculators and work on this
 $$ b = \frac{r \cdot s_y}{s_x} $$ $$ a = \bar{y} - b \bar{x} $$
 
 ## Fitting by hand
-
-$r = 0.9215913$ 
-$s_{price} = 3989.44$ 
-$s_{carat} = 0.4740112$
-
 ::: incremental
--$$\begin{aligned}
+- $r = 0.9215913$ 
+
+- $s_{price} = 3989.44$ 
+
+- $s_{carat} = 0.4740112$
+
+
+- $$\begin{aligned}
  b &= \frac{r \cdot s_y}{s_x} \\
  &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
  &= 7756.426
