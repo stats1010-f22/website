@@ -105,7 +105,7 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 | No change | 0         | 0.80       | 0         | 0.67       |
 | Decreases | -\$5      | 0.09       | -\$4      | 0.15       |
 
-## Sharpe ratio by hand
+## Sharpe ratio by hand {.smaller}
 
 |           | IBM  | IBM        | IBM       | IBM                          | IBM      | IBM     | IBM          |
 |---------|---------|---------|---------|---------|---------|---------|---------|
@@ -114,7 +114,7 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 | No change | 0    | 0.80       |           |                              |          |         |              |
 | Decreases | -\$5 | 0.09       |           |                              |          |         |              |
 
-## Sharpe ratio by hand
+## Sharpe ratio by hand {.smaller}
 
 |           | MCSFT | MCSFT     | MCSFT     | MCSFT                        | MCSFT    | MCSFT   | MCSFT        |
 |---------|---------|---------|---------|---------|---------|---------|---------|
