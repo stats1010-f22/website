@@ -68,6 +68,8 @@ assume $r_f$ is the risk-free rate of interest is $0.1\%$
 work through it, then what if we don't know mu and sigma could we find it if we had a pdf?
 :::
 
+::: columns
+::: {.column width="50%"}
 ::: incremental
 -   $$\begin{aligned}
     S(A) &= \frac{\mu - r_f}{\sigma}\\
@@ -80,8 +82,12 @@ work through it, then what if we don't know mu and sigma could we find it if we 
     &= \frac{1.14 - 0.1}{6.2}\\
     &=  0.168
     \end{aligned}$$
+:::
+:::
 
--   We prefer Apple because it has a higher Sharpe ratio $0.177 > 0.168$
+::: {.column width="50%"}
+We prefer Apple because it has a higher Sharpe ratio $0.177 > 0.168$
+:::
 :::
 
 ## Revision 2
@@ -101,21 +107,21 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 
 ## Sharpe ratio by hand
 
-|           | IBM stock | IBM stock  | IBM stock | IBM Stock                    | IBM Stock | IBM Stock | IBM Stock    |
-|---------|---------|---------|---------|---------|---------|---------|---------|
-|           | $x$       | $P(X = x)$ | $\bar{x}$ | $(x-\bar{x})^2 \cdot p_x(x)$ | $Var(x)$  | $sd(x)$   | Sharpe ratio |
-| Increases | \$5       | 0.11       |           |                              |           |           |              |
-| No change | 0         | 0.80       |           |                              |           |           |              |
-| Decreases | -\$5      | 0.09       |           |                              |           |           |              |
+|           | IBM  | IBM        | IBM       | IBM                          | IBM      | IBM     | IBM          |
+|---------|---------|--------|--------|---------|---------|---------|---------|
+|           | $x$  | $P(X = x)$ | $\bar{x}$ | $(x-\bar{x})^2 \cdot p_x(x)$ | $Var(x)$ | $sd(x)$ | Sharpe ratio |
+| Increases | \$5  | 0.11       |           |                              |          |         |              |
+| No change | 0    | 0.80       |           |                              |          |         |              |
+| Decreases | -\$5 | 0.09       |           |                              |          |         |              |
 
 ## Sharpe ratio by hand
 
-|           | Microsoft | Microsoft | Microsoft | Microsoft                    | Microsoft | Microsoft | Microsoft    |
-|---------|---------|---------|---------|---------|---------|---------|---------|
-|           | $y$       | $P(Y =y)$ | $\bar{y}$ | $(y-\bar{y})^2 \cdot p_y(y)$ | $Var(y)$  | $sd(y)$   | Sharpe ratio |
-| Increases | \$4       | 0.18      |           |                              |           |           |              |
-| No change | 0         | 0.67      |           |                              |           |           |              |
-| Decreases | -\$4      | 0.15      |           |                              |           |           |              |
+|           | MCSFT | MCSFT     | MCSFT     | MCSFT                        | MCSFT    | MCSFT   | MCSFT        |
+|---------|---------|---------|-------|-------------|---------|---------|---------|
+|           | $y$   | $P(Y =y)$ | $\bar{y}$ | $(y-\bar{y})^2 \cdot p_y(y)$ | $Var(y)$ | $sd(y)$ | Sharpe ratio |
+| Increases | \$4   | 0.18      |           |                              |          |         |              |
+| No change | 0     | 0.67      |           |                              |          |         |              |
+| Decreases | -\$4  | 0.15      |           |                              |          |         |              |
 
 ## The Sharpe ratio - in `R`
 
