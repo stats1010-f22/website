@@ -403,21 +403,21 @@
     "href": "slides/lect_08.html#gradient-and-slope",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Gradient and slope",
-    "text": "Gradient and slope\n\nPull out your calculators and work on this\n\n\\[ b = \\frac{r \\cdot s_y}{s_x} \\] \\[ m = \\bar{y} - b \\bar{x} \\]"
+    "text": "Gradient and slope\n\nPull out your calculators and work on this\n\n\\[ m = \\frac{r \\cdot s_y}{s_x} \\] \\[ b = \\bar{y} - m \\bar{x} \\]"
   },
   {
     "objectID": "slides/lect_08.html#fitting-by-hand",
     "href": "slides/lect_08.html#fitting-by-hand",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Fitting by hand",
-    "text": "Fitting by hand\n\n\n\\(r = 0.9215913\\)\n\\(s_{price} = 3989.44\\)\n\\(s_{carat} = 0.4740112\\)\n\\(b = \\frac{r \\cdot s_{price}}{s_{carat}}\\)\n\\[\\begin{aligned}\n   b &= \\frac{r \\cdot s_{price}}{s_{carat}} \\\\\n&= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\\n&= 7756.426\n\\end{aligned}\\]"
+    "text": "Fitting by hand\n\n\n\\(r = 0.9215913\\)\n\\(s_{price} = 3989.44\\)\n\\(s_{carat} = 0.4740112\\)\n\\(m = \\frac{r \\cdot s_{price}}{s_{carat}}\\)\n\\[\\begin{aligned}\n   m &= \\frac{r \\cdot s_{price}}{s_{carat}} \\\\\n&= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\\n&= 7756.426\n\\end{aligned}\\]"
   },
   {
     "objectID": "slides/lect_08.html#fitting-by-hand-1",
     "href": "slides/lect_08.html#fitting-by-hand-1",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Fitting by hand",
-    "text": "Fitting by hand\n\n\n\\(m = \\overline{price} - b \\cdot \\overline{carat}\\)\n\\(\\overline{price} = 3932.8\\)\n\\(\\overline{carat} = 0.7979397\\)\n\\(b = - 7756.426\\)\n\\[\\begin{aligned}\nm &= \\overline{price} - b \\cdot \\overline{carat} \\\\\n&= 3932.8 - 7756.426 \\cdot 0.7979397\\\\\n&= -2256.36\n\\end{aligned}\\]\nOur model is: \\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)"
+    "text": "Fitting by hand\n\n\n\\(b = \\overline{price} - m \\cdot \\overline{carat}\\)\n\\(\\overline{price} = 3932.8\\)\n\\(\\overline{carat} = 0.7979397\\)\n\\(m = 7756.426\\)\n\\[\\begin{aligned}\nb &= \\overline{price} - m \\cdot \\overline{carat} \\\\\n&= 3932.8 - 7756.426 \\cdot 0.7979397\\\\\n&= -2256.36\n\\end{aligned}\\]\nOur model is: \\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)"
   },
   {
     "objectID": "slides/lect_08.html#prediction-by-hand",
