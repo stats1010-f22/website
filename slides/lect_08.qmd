@@ -372,7 +372,7 @@ b &= \frac{r \cdot s_{price}}{s_{carat}} \\
 $a &= \bar{y} - b \bar{x}$
 
 ::: incremental
-$$\begin{aligned}
+- $$\begin{aligned}
 a &= \bar{y} - b \bar{x} \\
 &= 3932.8 - 7756.426 \cdot 0.7979397\\
 &= -2256.36
