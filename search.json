@@ -389,7 +389,7 @@
     "href": "slides/lect_08.html#correlation-characteristics",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Correlation characteristics",
-    "text": "Correlation characteristics\n\nStandardizes the strength of the association\n\n\n\nReferred to as \\(r\\)\nStrength of linear association\n\\(r\\) is always between \\(-1\\) and \\(+1\\) \\(-1 \\leq r \\leq 1\\).\n\\(r\\) does not have units"
+    "text": "Correlation characteristics\n\nStandardizes the strength of the association\n\n\n\nReferred to as \\(r\\)\nStrength of linear association\n\\(r\\) is always between \\(-1\\) and \\(+1\\), \\(-1 \\leq r \\leq 1\\).\n\\(r\\) does not have units"
   },
   {
     "objectID": "slides/lect_08.html#computing-in-r",
