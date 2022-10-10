@@ -23,8 +23,10 @@ library(tidyverse)
 By the end of this lesson you should:
 
 -   Understand the Sharpe ratio and know how to compute it to compare stocks that are not independent
-
+-   Understand and use a joint probability distribution function
+-   Know the 3 rules of independence
 -   
+-   Understand how independence impacts upon a joint probability distribution function
 
 # Revision 1
 
@@ -33,6 +35,8 @@ By the end of this lesson you should:
 # The Sharpe Ratio
 
 ::: notes
+write S(X) formula on the board
+
 often mu and sigma are unknown parameters
 :::
 
@@ -41,7 +45,7 @@ $$S(X) = \frac{\mu - r_f}{\sigma}$$
 ::: incremental
 -   $r_f$ is the return on a risk-free investment
 -   $\mu$ is the mean of a random variable $X$ that measures the performance of an investment
--   $\sigma$ is the mean of a random variable $X$ that measures the performance of an investment
+-   $\sigma$ is the standard deviation of a random variable $X$ that measures the performance of an investment
 -   all inputs must be measured over the same time period (ie. yearly, monthly, ...)
 :::
 
@@ -60,7 +64,9 @@ assume $r_f$ is the risk-free rate of interest is $0.1\%$
 
 ## Compute the Sharpe ratio
 
-::: work through it, then what if we don't know mu and sigma could we find it if we had a pdf? :::
+::: notes
+work through it, then what if we don't know mu and sigma could we find it if we had a pdf?
+:::
 
 ::: incremental
 -   $$\begin{aligned}
@@ -114,7 +120,7 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 ## The Sharpe ratio - in `R`
 
 ::: notes
-The stock market is a bit more complicated b/c stocks tend to trend together. Can an investor do better by diversifing the investment?
+Can an investor do better by diversifing the investment?
 :::
 
 ```{r mean_stdev}
@@ -144,7 +150,77 @@ Sharpe_ratio <- # name this the Sharpe ratio
             S_y = (mean_y - 0.015)/sd_y) # now for y
 ```
 
-# Joint probability distribution
+# Joint probability distributions
+
+::: notes
+What is the expected value of X + Y?
+
+When you see two random variables you first want to think independence.
+
+Are these variables independent or not?
+:::
+
+::: columns
+::: {.column width="50%"}
+|     |        | $X$      | $X$     | $X$     |        |
+|-----|--------|----------|---------|---------|--------|
+|     |        | $x = -5$ | $x = 0$ | $x = 5$ | $p(y)$ |
+| $Y$ | $y=4$  | $0.00$   | $0.11$  | $0.07$  | $0.18$ |
+| $Y$ | $y=0$  | $0.03$   | $0.62$  | $0.02$  | $0.67$ |
+| $Y$ | $y=-4$ | $0.06$   | $0.07$  | $0.02$  | $0.15$ |
+|     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
+:::
+
+::: {.column width="50%"}
+::: incremental
+\_ What is the probability that $x = 0$ and $y =4$? - $11\%$
+
+\_ What is the probability that $x = 5$ and $y =4$? - $7\%$
+
+\_ What is the probability that $x = 0$ and $y =0$? - $62\%$
+
+\_ What outcome will never occur? - $x = -5$ and $y =4$
+:::
+:::
+:::
+
+## Expected value of $X + Y$
+
+::: notes
+If x=-5 then we subtract 5 from all y's and multiply by $p_{x, y}$ algebraically it all washes out
+:::
+
+|     |        | $X$      | $X$     | $X$     |        |
+|-----|--------|----------|---------|---------|--------|
+|     |        | $x = -5$ | $x = 0$ | $x = 5$ | $p(y)$ |
+| $Y$ | $y=4$  | $0.00$   | $0.11$  | $0.07$  | $0.18$ |
+| $Y$ | $y=0$  | $0.03$   | $0.62$  | $0.02$  | $0.67$ |
+| $Y$ | $y=-4$ | $0.06$   | $0.07$  | $0.02$  | $0.15$ |
+|     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
+
+$E(X + Y) = E(X) + E(Y)$
+
+## Independence
+
+::: notes
+So are X and Y independent?
+:::
+
+If the probability of one event occuring has no impact on another event occuring, they are independent.
+
+::: incremental
+\_ If $X$ and $Y$ and independent then $p(x,y) = p(x) \cdot p(y)$
+
+\_ If $p(x,y) = p(x) \cdot p(y)$ then $X$ and $Y$ are independent.
+
+\_ It follows that if $X$ and $Y$ are independent, then $E(XY) = E(X) \cdot E(Y)$
+:::
+
+## Are $X$ and $Y$ independent?
+
+::: notes
+find any p(x) X p(y) != p(x,y)
+:::
 
 |     |        | $X$      | $X$     | $X$     |        |
 |-----|--------|----------|---------|---------|--------|
@@ -155,19 +231,14 @@ Sharpe_ratio <- # name this the Sharpe ratio
 |     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
 
 ::: incremental
-_ What is the probability that $x = 0$ and $y =4$?
-- $11\%$
+\_ $p_x(-5) \cdot p_y(4) = 0.18 \cdot 0.09 \neq 0.00$
 
-_ What is the probability that $x = 5$ and $y =4$?
-- $7\%$
+\_ $p_x(-5) \cdot p_y(-4) = 0.09 \cdot 0.15 = 0.0135 \neq 0.06$
 
-_ What is the probability that $x = 0$ and $y =0$?
-- $62\%$
-
-_ What outcome will never occur?
-- $x = -5$ and $y =4$
-
+-   NO! NO! NO!
 :::
+
+## 
 
 # Your turn
 

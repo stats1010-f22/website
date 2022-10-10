@@ -469,7 +469,7 @@ predict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))
 
 # Your turn
 
-[Click here](https://stats1010-f22.github.io/website/ae/ae-8.html) or the qr code below
+[Click here](https://stats1010-f22.github.io/website/ae/ae-9.html) or the qr code below
 
 ```{r, eval=TRUE, echo=FALSE}
 library(qrcode)
