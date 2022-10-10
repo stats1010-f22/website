@@ -809,7 +809,7 @@
     "href": "slides/lect_09.html#expected-value-of-x-y",
     "title": "Chapter 10: Association between random variables",
     "section": "Expected value of \\(X + Y\\)",
-    "text": "Expected value of \\(X + Y\\)\n\nIf x=-5 then we subtract 5 from all y’s and multiply by \\(p_{x, y}\\) algebraically it all washes out\nWhat about independence?\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(E(X + Y) = E(X) + E(Y)\\) _ \\(E(X+Y) = E(X) + E(Y) = 0.1 + 0.12\\)"
+    "text": "Expected value of \\(X + Y\\)\n\nIf x=-5 then we subtract 5 from all y’s and multiply by \\(p_{x, y}\\) algebraically it all washes out\nWhat about independence?\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(E(X+Y) = E(X) + E(Y)\\)\n\\(E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22\\)"
   },
   {
     "objectID": "slides/lect_09.html#rules-of-independence",
