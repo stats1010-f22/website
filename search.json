@@ -809,21 +809,21 @@
     "href": "slides/lect_09.html#expected-value-of-x-y",
     "title": "Chapter 10: Association between random variables",
     "section": "Expected value of \\(X + Y\\)",
-    "text": "Expected value of \\(X + Y\\)\n\nIf x=-5 then we subtract 5 from all y’s and multiply by \\(p_{x, y}\\) algebraically it all washes out\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\\(E(X + Y) = E(X) + E(Y)\\)"
+    "text": "Expected value of \\(X + Y\\)\n\nIf x=-5 then we subtract 5 from all y’s and multiply by \\(p_{x, y}\\) algebraically it all washes out\nWhat about independence?\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(E(X + Y) = E(X) + E(Y)\\) _ \\(E(X+Y) = E(X) + E(Y) = 0.1 + 0.12\\)"
   },
   {
-    "objectID": "slides/lect_09.html#independence",
-    "href": "slides/lect_09.html#independence",
+    "objectID": "slides/lect_09.html#rules-of-independence",
+    "href": "slides/lect_09.html#rules-of-independence",
     "title": "Chapter 10: Association between random variables",
-    "section": "Independence",
-    "text": "Independence\n\nSo are X and Y independent?\n\nIf the probability of one event occuring has no impact on another event occuring, they are independent.\n\n_ If \\(X\\) and \\(Y\\) and independent then \\(p(x,y) = p(x) \\cdot p(y)\\)\n_ If \\(p(x,y) = p(x) \\cdot p(y)\\) then \\(X\\) and \\(Y\\) are independent.\n_ It follows that if \\(X\\) and \\(Y\\) are independent, then \\(E(XY) = E(X) \\cdot E(Y)\\)"
+    "section": "3 Rules of independence",
+    "text": "3 Rules of independence\n\nSo are X and Y independent?\n\nIf the probability of one event occuring has no impact on another event occuring, they are independent.\n\n\nIf \\(X\\) and \\(Y\\) and independent then \\(p(x,y) = p(x) \\cdot p(y)\\)\nIf \\(p(x,y) = p(x) \\cdot p(y)\\) then \\(X\\) and \\(Y\\) are independent.\nIt follows that if \\(X\\) and \\(Y\\) are independent, then \\(E(XY) = E(X) \\cdot E(Y)\\)"
   },
   {
     "objectID": "slides/lect_09.html#are-x-and-y-independent",
     "href": "slides/lect_09.html#are-x-and-y-independent",
     "title": "Chapter 10: Association between random variables",
     "section": "Are \\(X\\) and \\(Y\\) independent?",
-    "text": "Are \\(X\\) and \\(Y\\) independent?\n\nfind any p(x) X p(y) != p(x,y)\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n_ \\(p_x(-5) \\cdot p_y(4) = 0.18 \\cdot 0.09 \\neq 0.00\\)\n_ \\(p_x(-5) \\cdot p_y(-4) = 0.09 \\cdot 0.15 = 0.0135 \\neq 0.06\\)\n\nNO! NO! NO!"
+    "text": "Are \\(X\\) and \\(Y\\) independent?\n\nfind any p(x) X p(y) != p(x,y)\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(p_x(-5) \\cdot p_y(4) = 0.18 \\cdot 0.09 \\neq 0.00\\)\n\\(p_x(-5) \\cdot p_y(-4) = 0.09 \\cdot 0.15 = 0.0135 \\neq 0.06\\)\nNO! NO! NO!"
   },
   {
     "objectID": "slides/lect_04.html#definition-of-numeric-variable",

@@ -772,8 +772,7 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<div class="columns">
-<div class="column" style="width:50%;">
+<div class="column-margin">
 <table>
 <thead>
 <tr class="header">
@@ -828,20 +827,21 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:50%;">
+</div>
 <div>
-<p>_ What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(11\%\)</span></p>
-<p>_ What is the probability that <span class="math inline">\(x = 5\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(7\%\)</span></p>
-<p>_ What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =0\)</span>? - <span class="math inline">\(62\%\)</span></p>
-<p>_ What outcome will never occur? - <span class="math inline">\(x = -5\)</span> and <span class="math inline">\(y =4\)</span></p>
-</div>
-</div>
+<ul>
+<li class="fragment"><p>What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(11\%\)</span></p></li>
+<li class="fragment"><p>What is the probability that <span class="math inline">\(x = 5\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(7\%\)</span></p></li>
+<li class="fragment"><p>What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =0\)</span>? - <span class="math inline">\(62\%\)</span></p></li>
+<li class="fragment"><p>What outcome will never occur? - <span class="math inline">\(x = -5\)</span> and <span class="math inline">\(y =4\)</span></p></li>
+</ul>
 </div>
 </section>
 <section id="expected-value-of-x-y" class="slide level2">
 <h2>Expected value of <span class="math inline">\(X + Y\)</span></h2>
 <aside class="notes">
 <p>If x=-5 then we subtract 5 from all y’s and multiply by <span class="math inline">\(p_{x, y}\)</span> algebraically it all washes out</p>
+<p>What about independence?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -907,10 +907,14 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 </tr>
 </tbody>
 </table>
-<p><span class="math inline">\(E(X + Y) = E(X) + E(Y)\)</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(E(X + Y) = E(X) + E(Y)\)</span> _ <span class="math inline">\(E(X+Y) = E(X) + E(Y) = 0.1 + 0.12\)</span></li>
+</ul>
+</div>
 </section>
-<section id="independence" class="slide level2">
-<h2>Independence</h2>
+<section id="rules-of-independence" class="slide level2">
+<h2>3 Rules of independence</h2>
 <aside class="notes">
 <p>So are X and Y independent?</p>
 <style type="text/css">
@@ -926,9 +930,11 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
       }</style></aside>
 <p>If the probability of one event occuring has no impact on another event occuring, they are independent.</p>
 <div>
-<p>_ If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and independent then <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span></p>
-<p>_ If <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span> then <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent.</p>
-<p>_ It follows that if <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then <span class="math inline">\(E(XY) = E(X) \cdot E(Y)\)</span></p>
+<ul>
+<li class="fragment"><p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and independent then <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span></p></li>
+<li class="fragment"><p>If <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span> then <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent.</p></li>
+<li class="fragment"><p>It follows that if <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then <span class="math inline">\(E(XY) = E(X) \cdot E(Y)\)</span></p></li>
+</ul>
 </div>
 </section>
 <section id="are-x-and-y-independent" class="slide level2">
@@ -1001,10 +1007,10 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 </tbody>
 </table>
 <div>
-<p>_ <span class="math inline">\(p_x(-5) \cdot p_y(4) = 0.18 \cdot 0.09 \neq 0.00\)</span></p>
-<p>_ <span class="math inline">\(p_x(-5) \cdot p_y(-4) = 0.09 \cdot 0.15 = 0.0135 \neq 0.06\)</span></p>
 <ul>
-<li class="fragment">NO! NO! NO!</li>
+<li class="fragment"><p><span class="math inline">\(p_x(-5) \cdot p_y(4) = 0.18 \cdot 0.09 \neq 0.00\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(p_x(-5) \cdot p_y(-4) = 0.09 \cdot 0.15 = 0.0135 \neq 0.06\)</span></p></li>
+<li class="fragment"><p>NO! NO! NO!</p></li>
 </ul>
 </div>
 </section>
