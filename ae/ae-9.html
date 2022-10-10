@@ -126,8 +126,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="STAT 1010 - Fall 2022 - Random variables">
+<meta property="og:description" content="Chapter 6: Association between quantitative variables">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
 <meta name="twitter:title" content="STAT 1010 - Fall 2022 - Random variables">
+<meta name="twitter:description" content="Chapter 6: Association between quantitative variables">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -367,84 +369,27 @@ Important
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(praise)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># for data manipulation and plots</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(praise) <span class="co"># for good vibes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Chapter 6: Association between quantitative variables</p>
 <ol type="1">
-<li><p>Given that the random variable <span class="math inline">\(X\)</span> has mean <span class="math inline">\(\mu = 120\)</span> and SD <span class="math inline">\(\sigma = 15\)</span>, find the mean and SD of each of these random variables that are defined by <span class="math inline">\(X\)</span>.</p>
+<li><p>If the covariance between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is <span class="math inline">\(0\)</span>, then the correlation between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is <span class="math inline">\(0\)</span> as well</p>
 <ol type="a">
-<li><span class="math inline">\(X/3\)</span></li>
-<li><span class="math inline">\(2X - 100\)</span></li>
-<li><span class="math inline">\(X+2\)</span></li>
-<li><span class="math inline">\(X-X\)</span></li>
+<li>True</li>
+<li>False</li>
 </ol></li>
-<li><p>An investor buys the stock of two companies, investing <span class="math inline">\(\$10000\)</span> in each. The stock of each company either goes up by <span class="math inline">\(80%\)</span> after a month (rising to <span class="math inline">\(\$18000\)</span>) with probability <span class="math inline">\(\frac{1}{2}\)</span> or drops by <span class="math inline">\(60%\)</span> (falling to <span class="math inline">\(\$4000\)</span>) with probability <span class="math inline">\(\frac{1}{2}\)</span>. Assume that the changes in each are independent. Let the random variable <span class="math inline">\(X\)</span> denote the value of the amounted invested after one month.</p>
+<li><p>A retailer calculated the correlation line between the price of an item (<span class="math inline">\(x\)</span>) and the amount sold (<span class="math inline">\(y\)</span>). The correlation line is the same if the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> variables are exchanged.</p>
 <ol type="a">
-<li>Find the probability distribution of <span class="math inline">\(X\)</span>.</li>
-<li>Find the mean value of <span class="math inline">\(X\)</span></li>
-<li>Doe the mean value represent the experience of the typical investor?</li>
+<li>True</li>
+<li>False</li>
 </ol></li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="3" type="1">
-<li><p>A law firm takes cases on a contingent fee basis. If the case goes to trial, the firm expects to earn <span class="math inline">\(\$25000\)</span> as part of the settlement if it wins and nothing if it does not. The firm wins one-third of the cases that go to trial. If the case does not go to trial, the firm earns nothing. Half of the cases do not go to trial.</p>
-<ol type="a">
-<li>Define a random variable to model the earning of taking a case of this type.</li>
-<li>What is the expected value of such a case to the firm?</li>
-<li>What is the standard deviation of the earnings?</li>
-</ol></li>
-<li><p>The maintenance staff of a large office building regularly replaces fluorescent ceiling lights that have gone out. During a visit to a typical floor, the staff may have to replace several lights. The manager of this staff has given the following probabilities to the number of lights (identified by the random variable <span class="math inline">\(Y\)</span>) that need to be replaced on the floor:</p>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(Y\)</span></td>
-<td>0</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(P(Y = y)\)</span></td>
-<td>0.2</td>
-<td>0.15</td>
-<td>0.2</td>
-<td>0.3</td>
-<td>0.15</td>
-</tr>
-</tbody>
-</table>
-<ol type="a">
-<li>How many lights should the manager expect to replace on a floor?</li>
-<li>What is the standard deviation of the number of lights on a floor that are replaced?</li>
-<li>If a crew takes six lights to a floor, how many should it expect to have left after replacing those that are out?</li>
-<li>If a crew takes six lights to a floor, find the standard deviation of the number of lights that remain after replacing those that are out on a floor.</li>
-<li>If it takes 10 minutes to replace each light, how long should the manager expect the crew to take when replacing the lights on a floor.</li>
-</ol></li>
-<li><p>Suppose that you’ve just bought a <span class="math inline">\(\$4000\)</span> TV. Should you also buy the <span class="math inline">\(\$50\)</span> surge protector that guarantees to protect your TV from electric surges caused by lightning?</p>
-<ol type="a">
-<li><p>Let <span class="math inline">\(p\)</span> denote the probability that your home is hit by lightning during the time that you own this TV, say five years. In order for the purchase of the surge protector to have positive long-term values, what must the chance of being hit by lightning be?</p></li>
-<li><p>There are about 100 million households in the United States, and fewer than 10,000 get hit by lightening each year. Do you think the surge protector is a good deal on average? Be sure to note any assumptions that you make.</p></li>
-</ol></li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">praise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="6" type="1">
-<li><p>The ATM at a local convenience store allows customers to make withdrawals of <span class="math inline">\(\$10\)</span>, <span class="math inline">\(\$20\)</span>, <span class="math inline">\(\$50\)</span>, or <span class="math inline">\(\$100\)</span>. Let <span class="math inline">\(X\)</span> denote a random variable that indicates the amount withdrawn by a customer. The probability distribution of <span class="math inline">\(X\)</span> is:</p>
-<p><span class="math inline">\(p(10) = 0.2\)</span></p>
-<p><span class="math inline">\(p(20) = 0.5\)</span></p>
-<p><span class="math inline">\(p(50) = 0.2\)</span></p>
-<p><span class="math inline">\(p(100) = 0.1\)</span></p>
-<ol type="a">
-<li>Plot the probability distribution of <span class="math inline">\(X\)</span> in <code>R</code>.</li>
-<li>What is the probability that a customer withdraws more than <span class="math inline">\(\$20\)</span>?</li>
-<li>What is the expected amount of money withdrawn by a customer?</li>
-<li>The expected value is not a possible value value of the amount withdrawn. Interpret the expected value for a manager.</li>
-<li>Find the variance and standard deviation of <span class="math inline">\(X\)</span>.</li>
-</ol></li>
+<li>If the correlation between number of customers and sales in dollars in retail stores is <span class="math inline">\(r=0.6\)</span>, then what would be the correlation if the sales were measured in thousands of dollars? In euros? (1 euro is worth about <span class="math inline">\(\$US0.97\)</span>)</li>
 </ol>
 
 

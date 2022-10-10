@@ -402,8 +402,11 @@
 <h1>Learning outcomes</h1>
 <p>By the end of this lesson you should:</p>
 <ul>
-<li><p>Understand the Sharpe ratio and know how to compute it to compare stocks that are not independent</p></li>
+<li>Understand the Sharpe ratio and know how to compute it to compare stocks that are not independent</li>
+<li>Understand and use a joint probability distribution function</li>
+<li>Know the 3 rules of independence</li>
 <li></li>
+<li>Understand how independence impacts upon a joint probability distribution function</li>
 </ul>
 </section>
 
@@ -416,6 +419,7 @@
 <section id="the-sharpe-ratio" class="title-slide slide level1 center">
 <h1>The Sharpe Ratio</h1>
 <aside class="notes">
+<p>write S(X) formula on the board</p>
 <p>often mu and sigma are unknown parameters</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -433,7 +437,7 @@
 <ul>
 <li class="fragment"><span class="math inline">\(r_f\)</span> is the return on a risk-free investment</li>
 <li class="fragment"><span class="math inline">\(\mu\)</span> is the mean of a random variable <span class="math inline">\(X\)</span> that measures the performance of an investment</li>
-<li class="fragment"><span class="math inline">\(\sigma\)</span> is the mean of a random variable <span class="math inline">\(X\)</span> that measures the performance of an investment</li>
+<li class="fragment"><span class="math inline">\(\sigma\)</span> is the standard deviation of a random variable <span class="math inline">\(X\)</span> that measures the performance of an investment</li>
 <li class="fragment">all inputs must be measured over the same time period (ie. yearly, monthly, …)</li>
 </ul>
 </div>
@@ -481,7 +485,19 @@
 </section>
 <section id="compute-the-sharpe-ratio-1" class="slide level2">
 <h2>Compute the Sharpe ratio</h2>
-<p>::: work through it, then what if we don’t know mu and sigma could we find it if we had a pdf? :::</p>
+<aside class="notes">
+<p>work through it, then what if we don’t know mu and sigma could we find it if we had a pdf?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div>
 <ul>
 <li class="fragment"><p><span class="math display">\[\begin{aligned}
@@ -697,7 +713,7 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <section id="the-sharpe-ratio---in-r" class="slide level2">
 <h2>The Sharpe ratio - in <code>R</code></h2>
 <aside class="notes">
-<p>The stock market is a bit more complicated b/c stocks tend to trend together. Can an investor do better by diversifing the investment?</p>
+<p>Can an investor do better by diversifing the investment?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -733,8 +749,198 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <span id="cb1-21"><a href="#cb1-21"></a>            <span class="at">S_y =</span> (mean_y <span class="sc">-</span> <span class="fl">0.015</span>)<span class="sc">/</span>sd_y) <span class="co"># now for y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
-<section id="joint-probability-distribution" class="title-slide slide level1 center">
-<h1>Joint probability distribution</h1>
+<section>
+<section id="joint-probability-distributions" class="title-slide slide level1 center">
+<h1>Joint probability distributions</h1>
+<aside class="notes">
+<p>What is the expected value of X + Y?</p>
+<p>When you see two random variables you first want to think independence.</p>
+<p>Are these variables independent or not?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th><span class="math inline">\(X\)</span></th>
+<th><span class="math inline">\(X\)</span></th>
+<th><span class="math inline">\(X\)</span></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><span class="math inline">\(x = -5\)</span></td>
+<td><span class="math inline">\(x = 0\)</span></td>
+<td><span class="math inline">\(x = 5\)</span></td>
+<td><span class="math inline">\(p(y)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Y\)</span></td>
+<td><span class="math inline">\(y=4\)</span></td>
+<td><span class="math inline">\(0.00\)</span></td>
+<td><span class="math inline">\(0.11\)</span></td>
+<td><span class="math inline">\(0.07\)</span></td>
+<td><span class="math inline">\(0.18\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(Y\)</span></td>
+<td><span class="math inline">\(y=0\)</span></td>
+<td><span class="math inline">\(0.03\)</span></td>
+<td><span class="math inline">\(0.62\)</span></td>
+<td><span class="math inline">\(0.02\)</span></td>
+<td><span class="math inline">\(0.67\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Y\)</span></td>
+<td><span class="math inline">\(y=-4\)</span></td>
+<td><span class="math inline">\(0.06\)</span></td>
+<td><span class="math inline">\(0.07\)</span></td>
+<td><span class="math inline">\(0.02\)</span></td>
+<td><span class="math inline">\(0.15\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(p(x)\)</span></td>
+<td><span class="math inline">\(0.09\)</span></td>
+<td><span class="math inline">\(0.80\)</span></td>
+<td><span class="math inline">\(0.11\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<div>
+<p>_ What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(11\%\)</span></p>
+<p>_ What is the probability that <span class="math inline">\(x = 5\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(7\%\)</span></p>
+<p>_ What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =0\)</span>? - <span class="math inline">\(62\%\)</span></p>
+<p>_ What outcome will never occur? - <span class="math inline">\(x = -5\)</span> and <span class="math inline">\(y =4\)</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="expected-value-of-x-y" class="slide level2">
+<h2>Expected value of <span class="math inline">\(X + Y\)</span></h2>
+<aside class="notes">
+<p>If x=-5 then we subtract 5 from all y’s and multiply by <span class="math inline">\(p_{x, y}\)</span> algebraically it all washes out</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th><span class="math inline">\(X\)</span></th>
+<th><span class="math inline">\(X\)</span></th>
+<th><span class="math inline">\(X\)</span></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><span class="math inline">\(x = -5\)</span></td>
+<td><span class="math inline">\(x = 0\)</span></td>
+<td><span class="math inline">\(x = 5\)</span></td>
+<td><span class="math inline">\(p(y)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Y\)</span></td>
+<td><span class="math inline">\(y=4\)</span></td>
+<td><span class="math inline">\(0.00\)</span></td>
+<td><span class="math inline">\(0.11\)</span></td>
+<td><span class="math inline">\(0.07\)</span></td>
+<td><span class="math inline">\(0.18\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(Y\)</span></td>
+<td><span class="math inline">\(y=0\)</span></td>
+<td><span class="math inline">\(0.03\)</span></td>
+<td><span class="math inline">\(0.62\)</span></td>
+<td><span class="math inline">\(0.02\)</span></td>
+<td><span class="math inline">\(0.67\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Y\)</span></td>
+<td><span class="math inline">\(y=-4\)</span></td>
+<td><span class="math inline">\(0.06\)</span></td>
+<td><span class="math inline">\(0.07\)</span></td>
+<td><span class="math inline">\(0.02\)</span></td>
+<td><span class="math inline">\(0.15\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(p(x)\)</span></td>
+<td><span class="math inline">\(0.09\)</span></td>
+<td><span class="math inline">\(0.80\)</span></td>
+<td><span class="math inline">\(0.11\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(E(X + Y) = E(X) + E(Y)\)</span></p>
+</section>
+<section id="independence" class="slide level2">
+<h2>Independence</h2>
+<aside class="notes">
+<p>So are X and Y independent?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p>If the probability of one event occuring has no impact on another event occuring, they are independent.</p>
+<div>
+<p>_ If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and independent then <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span></p>
+<p>_ If <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span> then <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent.</p>
+<p>_ It follows that if <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then <span class="math inline">\(E(XY) = E(X) \cdot E(Y)\)</span></p>
+</div>
+</section>
+<section id="are-x-and-y-independent" class="slide level2">
+<h2>Are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> independent?</h2>
+<aside class="notes">
+<p>find any p(x) X p(y) != p(x,y)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <table>
 <thead>
 <tr class="header">
@@ -790,13 +996,16 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 </tbody>
 </table>
 <div>
-<p>_ What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(11\%\)</span></p>
-<p>_ What is the probability that <span class="math inline">\(x = 5\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(7\%\)</span></p>
-<p>_ What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =0\)</span>? - <span class="math inline">\(62\%\)</span></p>
-<p>_ What outcome will never occur? - <span class="math inline">\(x = -5\)</span> and <span class="math inline">\(y =4\)</span></p>
+<p>_ <span class="math inline">\(p_x(-5) \cdot p_y(4) = 0.18 \cdot 0.09 \neq 0.00\)</span></p>
+<p>_ <span class="math inline">\(p_x(-5) \cdot p_y(-4) = 0.09 \cdot 0.15 = 0.0135 \neq 0.06\)</span></p>
+<ul>
+<li class="fragment">NO! NO! NO!</li>
+</ul>
 </div>
 </section>
-
+<section id="section" class="slide level2">
+<h2></h2>
+</section></section>
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>
 <p><a href="https://stats1010-f22.github.io/website/ae/ae-8.html">Click here</a> or the qr code below</p>
