@@ -300,6 +300,8 @@ Standardizes the strength of the association
 4.  $r$ does not have units
 :::
 
+##  {background-image="lect-08_things/correlation_coef.png" background-size="contain"}
+
 ## Computing in `R`
 
 ::: notes
@@ -327,7 +329,7 @@ cor(diamonds$price, diamonds$carat)
 #  ggpairs(.) # make the plot
 ```
 
-##  {background-image="lect-08_things/correlation_coef.png" background-size="contain"}
+
 
 # Line of association
 
