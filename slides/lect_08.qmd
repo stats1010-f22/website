@@ -356,25 +356,26 @@ $$ b = \frac{r \cdot s_y}{s_x} $$ $$ a = \bar{y} - b \bar{x} $$
 -   $s_{price} = 3989.44$
 -   $s_{carat} = 0.4740112$
 -   $b = \frac{r \cdot s_y}{s_x}$
-
-$$\begin{aligned}
-b &= \frac{r \cdot s_{price}}{s_{carat}} \\
-&= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
-&= 7756.426
-\end{aligned}$$
+-   $$\begin{aligned}
+    b &= \frac{r \cdot s_{price}}{s_{carat}} \\
+    &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
+    &= 7756.426
+    \end{aligned}$$
 :::
 
 ## Fitting by hand
 
 ::: incremental
-- $a = \bar{y} - b \bar{x}$
-- $\bar{y} = 3932.8$
-- $\bar{x} = 0.7979397$
+-   $a = \overline{price} - b \cdot \overline{carat}$
 
+-   $\overline{price} = 3932.8$
 
+-   $\overline{carat} = 0.7979397$
+
+-   $b = - 7756.426$
 
 -   $$\begin{aligned}
-    a &= \bar{y} - b \bar{x} \\
+    a &= \overline{price} - b \overline{carat} \\
     &= 3932.8 - 7756.426 \cdot 0.7979397\\
     &= -2256.36
     \end{aligned}$$
@@ -391,7 +392,10 @@ Pull out your calculators and work on this
 for carat values $2.5$
 
 ::: incremental
-$$\begin{aligned}
+
+- $\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}$
+
+- $$\begin{aligned}
 \widehat{\text{price}}  &= -2256.36 + 7756.426 \cdot \text{carat} \\ 
 &= -2256.36 + 7756.426 \cdot 2.5 \\
 &= \$17135
