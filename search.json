@@ -410,14 +410,14 @@
     "href": "slides/lect_08.html#fitting-by-hand",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Fitting by hand",
-    "text": "Fitting by hand\n\n\n\\(r = 0.9215913\\)\n\\(s_{price} = 3989.44\\)\n\\(s_{carat} = 0.4740112\\)\n\\(b &= \\frac{r \\cdot s_y}{s_x}\\)\n\n\n\n\\[\\begin{aligned}\nb &= \\frac{r \\cdot s_y}{s_x} \\\\\n&= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\\n&= 7756.426\n\\end{aligned}\\]"
+    "text": "Fitting by hand\n\n\n\\(r = 0.9215913\\)\n\\(s_{price} = 3989.44\\)\n\\(s_{carat} = 0.4740112\\)\n\\(b &= \\frac{r \\cdot s_y}{s_x}\\)\n\n\\[\\begin{aligned}\nb &= \\frac{r \\cdot s_{price}}{s_{carat}} \\\\\n&= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\\n&= 7756.426\n\\end{aligned}\\]"
   },
   {
     "objectID": "slides/lect_08.html#fitting-by-hand-1",
     "href": "slides/lect_08.html#fitting-by-hand-1",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Fitting by hand",
-    "text": "Fitting by hand\n\\(a &= \\bar{y} - b \\bar{x} \\\\\\)\n\n\\[\\begin{aligned}\na &= \\bar{y} - b \\bar{x} \\\\\n&= 3932.8 - 7756.426 \\cdot 0.7979397\\\\\n&= -2256.36\n\\end{aligned}\\]\n\nOur model is: \\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)"
+    "text": "Fitting by hand\n\\(a &= \\bar{y} - b \\bar{x}\\)\n\n\\[\\begin{aligned}\na &= \\bar{y} - b \\bar{x} \\\\\n&= 3932.8 - 7756.426 \\cdot 0.7979397\\\\\n&= -2256.36\n\\end{aligned}\\]\n\nOur model is: \\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)"
   },
   {
     "objectID": "slides/lect_08.html#prediction-by-hand",
@@ -1117,7 +1117,7 @@
     "href": "index.html",
     "title": "STAT 1010: Introduction to Business Statistics",
     "section": "",
-    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumerical variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 3 Oct\nAssociation between quantitative variables\n📖\n\n\n\n\n\n\n\n\n\nWed, 5 Oct\nAssociation between random variables"
+    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumerical variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 3 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 5 Oct\nAssociation between random variables\n\n🖥️"
   },
   {
     "objectID": "course-links.html",
