@@ -353,9 +353,13 @@ $$ b = \frac{r \cdot s_y}{s_x} $$ $$ a = \bar{y} - b \bar{x} $$
 
 ::: incremental
 -   $r = 0.9215913$
+
 -   $s_{price} = 3989.44$
+
 -   $s_{carat} = 0.4740112$
+
 -   $b = \frac{r \cdot s_y}{s_x}$
+
 -   $$\begin{aligned}
     b &= \frac{r \cdot s_{price}}{s_{carat}} \\
     &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
