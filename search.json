@@ -375,7 +375,7 @@
     "href": "slides/lect_08.html#covariance-math",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Covariance math",
-    "text": "Covariance math\n\nThis is a measure of the squares. We’d like a measure that is one dimensional. We want to look at more than just squares.\n\n\\(cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 + \\bar{x})(y_2 - \\bar{y}) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\)"
+    "text": "Covariance math\n\nThis is a measure of the squares. We’d like a measure that is one dimensional. We want to look at more than just squares.\n\n\\(cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 - \\bar{x})(y_2 - \\bar{y}) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\)"
   },
   {
     "objectID": "slides/lect_08.html#correlation-math",
