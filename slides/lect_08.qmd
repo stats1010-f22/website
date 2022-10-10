@@ -122,7 +122,7 @@ diamonds %>% # filtered data
   ggplot() + # into ggplot
   geom_point(aes(y = ...2, x = ...1)) + # using the new names
   labs(title = "Simulated association test", 
-       x = "Weigh of diamond in carat", 
+       x = "Weight of diamond in carat", 
        y = "Price of diamonds in US$")
 ```
 :::
@@ -217,7 +217,7 @@ ggplot(data = diamonds) +
   geom_vline(xintercept = mean(diamonds$carat),
              color = "yellow")  + # using the new names
   labs(title = "Plot of diamond price and carat with means", 
-       x = "Weigh of diamond in carat", 
+       x = "Weight of diamond in carat", 
        y = "Price of diamonds in US$")
 ```
 

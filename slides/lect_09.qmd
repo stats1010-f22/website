@@ -191,7 +191,7 @@ Are these variables independent or not?
 ::: notes
 If x=-5 then we subtract 5 from all y's and multiply by $p_{x, y}$ algebraically it all washes out
 
-What about independence?
+What about independence? We want to find the standard deviation to comput the Sharpe Ratio
 :::
 
 |     |        | $X$      | $X$     | $X$     |        |
