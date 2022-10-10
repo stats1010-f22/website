@@ -410,7 +410,7 @@
     "href": "slides/lect_08.html#fitting-by-hand",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Fitting by hand",
-    "text": "Fitting by hand\n\n\n\\(r = 0.9215913\\)\n\\(s_{price} = 3989.44\\)\n\\(s_{carat} = 0.4740112\\)\n\\(b = \\frac{r \\cdot s_y}{s_x}\\)\n\\[\\begin{aligned}\n   b &= \\frac{r \\cdot s_{price}}{s_{carat}} \\\\\n&= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\\n&= 7756.426\n\\end{aligned}\\]"
+    "text": "Fitting by hand\n\n\n\\(r = 0.9215913\\)\n\\(s_{price} = 3989.44\\)\n\\(s_{carat} = 0.4740112\\)\n\\(b = \\frac{r \\cdot s_{price}}{s_{carat}}\\)\n\\[\\begin{aligned}\n   b &= \\frac{r \\cdot s_{price}}{s_{carat}} \\\\\n&= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\\n&= 7756.426\n\\end{aligned}\\]"
   },
   {
     "objectID": "slides/lect_08.html#fitting-by-hand-1",
