@@ -438,7 +438,7 @@
     "href": "slides/lect_08.html#warnings",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Warnings",
-    "text": "Warnings\n\n\nALWAYS draw plots first\nNumerical variables\nLinear relationship\nCheck for outliers\nLurking variables"
+    "text": "Warnings\n\n\nALWAYS draw plots first\nnumeric variables\nLinear relationship\nCheck for outliers\nLurking variables"
   },
   {
     "objectID": "slides/lect_08.html#more-spurious-correlations",
