@@ -340,7 +340,7 @@
     "href": "slides/lect_08.html#visual-association-test",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Visual association test",
-    "text": "Visual association test\n\nAsk them to run the coding in RStudio and see what they get - can connect some of their computers to the big screen\nCan they see a difference between their plots and the real plot? What is the difference?\n\n\n\n\n\n\n\n\n\n\ndiamonds %>% # filtered data\n  slice_sample(n = nrow(.)) %>% # random sample rows\n  pull(carat) %>% # take out the variable carat\n  bind_cols(., diamonds$price) %>% # price in the same order and bound to carat in different order\n  ggplot() + # into ggplot\n  geom_point(aes(y = ...2, x = ...1)) + # using the new names\n  labs(title = \"Simulated association test\", \n       x = \"Weigh of diamond in carat\", \n       y = \"Price of diamonds in US$\")"
+    "text": "Visual association test\n\nAsk them to run the coding in RStudio and see what they get - can connect some of their computers to the big screen\nCan they see a difference between their plots and the real plot? What is the difference?\n\n\n\n\n\n\n\n\n\n\ndiamonds %>% # filtered data\n  slice_sample(n = nrow(.)) %>% # random sample rows\n  pull(carat) %>% # take out the variable carat\n  bind_cols(., diamonds$price) %>% # price in the same order and bound to carat in different order\n  ggplot() + # into ggplot\n  geom_point(aes(y = ...2, x = ...1)) + # using the new names\n  labs(title = \"Simulated association test\", \n       x = \"Weight of diamond in carat\", \n       y = \"Price of diamonds in US$\")"
   },
   {
     "objectID": "slides/lect_08.html#describing-a-scatter-plot",
@@ -809,7 +809,7 @@
     "href": "slides/lect_09.html#expected-value-of-x-y",
     "title": "Chapter 10: Association between random variables",
     "section": "Expected value of \\(X + Y\\)",
-    "text": "Expected value of \\(X + Y\\)\n\nIf x=-5 then we subtract 5 from all y’s and multiply by \\(p_{x, y}\\) algebraically it all washes out\nWhat about independence?\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(E(X+Y) = E(X) + E(Y)\\)\n\\(E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22\\)"
+    "text": "Expected value of \\(X + Y\\)\n\nIf x=-5 then we subtract 5 from all y’s and multiply by \\(p_{x, y}\\) algebraically it all washes out\nWhat about independence? We want to find the standard deviation to comput the Sharpe Ratio\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(E(X+Y) = E(X) + E(Y)\\)\n\\(E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22\\)"
   },
   {
     "objectID": "slides/lect_09.html#rules-of-independence",
