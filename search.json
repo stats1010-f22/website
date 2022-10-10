@@ -403,7 +403,7 @@
     "href": "slides/lect_08.html#gradient-and-slope",
     "title": "Chapter 6: Association between quantitative variables",
     "section": "Gradient and slope",
-    "text": "Gradient and slope\n\nPull out your calculators and work on this\n\n\\[ b = \\frac{r \\cdot s_y}{s_x} \\] \\[ a = \\bar{y} - b \\bar{x} \\]"
+    "text": "Gradient and slope\n\nPull out your calculators and work on this\n\n\\[ b = \\frac{r \\cdot s_y}{s_x} \\] \\[ m = \\bar{y} - b \\bar{x} \\]"
   },
   {
     "objectID": "slides/lect_08.html#fitting-by-hand",
