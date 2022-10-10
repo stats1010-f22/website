@@ -789,23 +789,24 @@
 <li class="fragment"><span class="math inline">\(s_{price} = 3989.44\)</span></li>
 <li class="fragment"><span class="math inline">\(s_{carat} = 0.4740112\)</span></li>
 <li class="fragment"><span class="math inline">\(b = \frac{r \cdot s_y}{s_x}\)</span></li>
-</ul>
-<p><span class="math display">\[\begin{aligned}
+<li class="fragment"><span class="math display">\[\begin{aligned}
 b &amp;= \frac{r \cdot s_{price}}{s_{carat}} \\
 &amp;= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
 &amp;= 7756.426
-\end{aligned}\]</span></p>
+\end{aligned}\]</span></li>
+</ul>
 </div>
 </section>
 <section id="fitting-by-hand-1" class="slide level2">
 <h2>Fitting by hand</h2>
 <div>
 <ul>
-<li class="fragment"><p><span class="math inline">\(a = \bar{y} - b \bar{x}\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\bar{y} = 3932.8\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\bar{x} = 0.7979397\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(a = \overline{price} - b \cdot \overline{carat}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\overline{price} = 3932.8\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\overline{carat} = 0.7979397\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(b = - 7756.426\)</span></p></li>
 <li class="fragment"><p><span class="math display">\[\begin{aligned}
-a &amp;= \bar{y} - b \bar{x} \\
+a &amp;= \overline{price} - b \overline{carat} \\
 &amp;= 3932.8 - 7756.426 \cdot 0.7979397\\
 &amp;= -2256.36
 \end{aligned}\]</span></p></li>
@@ -830,11 +831,14 @@ a &amp;= \bar{y} - b \bar{x} \\
       }</style></aside>
 <p>for carat values <span class="math inline">\(2.5\)</span></p>
 <div>
-<p><span class="math display">\[\begin{aligned}
+<ul>
+<li class="fragment"><p><span class="math inline">\(\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}\)</span></p></li>
+<li class="fragment"><p><span class="math display">\[\begin{aligned}
 \widehat{\text{price}}  &amp;= -2256.36 + 7756.426 \cdot \text{carat} \\
 &amp;= -2256.36 + 7756.426 \cdot 2.5 \\
 &amp;= \$17135
-\end{aligned}\]</span></p>
+\end{aligned}\]</span></p></li>
+</ul>
 </div>
 </section>
 <section id="fit-predict-in-r" class="slide level2">
