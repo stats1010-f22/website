@@ -358,7 +358,7 @@ $$ b = \frac{r \cdot s_y}{s_x} $$ $$ a = \bar{y} - b \bar{x} $$
 
 -   $s_{carat} = 0.4740112$
 
--   $b = \frac{r \cdot s_y}{s_x}$
+-   $b = \frac{r \cdot s_{price}}{s_{carat}}$
 
 -   $$\begin{aligned}
    b &= \frac{r \cdot s_{price}}{s_{carat}} \\
