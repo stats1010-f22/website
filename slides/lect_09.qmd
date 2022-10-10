@@ -108,7 +108,7 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 ## Sharpe ratio by hand
 
 |           | IBM  | IBM        | IBM       | IBM                          | IBM      | IBM     | IBM          |
-|---------|---------|--------|--------|---------|---------|---------|---------|
+|---------|---------|---------|---------|---------|---------|---------|---------|
 |           | $x$  | $P(X = x)$ | $\bar{x}$ | $(x-\bar{x})^2 \cdot p_x(x)$ | $Var(x)$ | $sd(x)$ | Sharpe ratio |
 | Increases | \$5  | 0.11       |           |                              |          |         |              |
 | No change | 0    | 0.80       |           |                              |          |         |              |
@@ -117,7 +117,7 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 ## Sharpe ratio by hand
 
 |           | MCSFT | MCSFT     | MCSFT     | MCSFT                        | MCSFT    | MCSFT   | MCSFT        |
-|---------|---------|---------|-------|-------------|---------|---------|---------|
+|---------|---------|---------|---------|---------|---------|---------|---------|
 |           | $y$   | $P(Y =y)$ | $\bar{y}$ | $(y-\bar{y})^2 \cdot p_y(y)$ | $Var(y)$ | $sd(y)$ | Sharpe ratio |
 | Increases | \$4   | 0.18      |           |                              |          |         |              |
 | No change | 0     | 0.67      |           |                              |          |         |              |
@@ -166,8 +166,7 @@ When you see two random variables you first want to think independence.
 Are these variables independent or not?
 :::
 
-
-::: {.column-margin}
+::: column-margin
 |     |        | $X$      | $X$     | $X$     |        |
 |-----|--------|----------|---------|---------|--------|
 |     |        | $x = -5$ | $x = 0$ | $x = 5$ | $p(y)$ |
@@ -177,17 +176,15 @@ Are these variables independent or not?
 |     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
 :::
 
-
 ::: incremental
-- What is the probability that $x = 0$ and $y =4$? - $11\%$
+-   What is the probability that $x = 0$ and $y =4$? - $11\%$
 
--  What is the probability that $x = 5$ and $y =4$? - $7\%$
+-   What is the probability that $x = 5$ and $y =4$? - $7\%$
 
--  What is the probability that $x = 0$ and $y =0$? - $62\%$
+-   What is the probability that $x = 0$ and $y =0$? - $62\%$
 
--  What outcome will never occur? - $x = -5$ and $y =4$
+-   What outcome will never occur? - $x = -5$ and $y =4$
 :::
-
 
 ## Expected value of $X + Y$
 
@@ -205,11 +202,11 @@ What about independence?
 | $Y$ | $y=-4$ | $0.06$   | $0.07$  | $0.02$  | $0.15$ |
 |     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
 
-
 ::: incremental
-- $E(X + Y) = E(X) + E(Y)$
-_ $E(X+Y) = E(X) + E(Y) = 0.1 + 0.12$
+-    $E(X+Y) = E(X) + E(Y)$
+-   $E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22$
 :::
+
 ## 3 Rules of independence
 
 ::: notes
@@ -219,11 +216,11 @@ So are X and Y independent?
 If the probability of one event occuring has no impact on another event occuring, they are independent.
 
 ::: incremental
-- If $X$ and $Y$ and independent then $p(x,y) = p(x) \cdot p(y)$
+-   If $X$ and $Y$ and independent then $p(x,y) = p(x) \cdot p(y)$
 
-- If $p(x,y) = p(x) \cdot p(y)$ then $X$ and $Y$ are independent.
+-   If $p(x,y) = p(x) \cdot p(y)$ then $X$ and $Y$ are independent.
 
-- It follows that if $X$ and $Y$ are independent, then $E(XY) = E(X) \cdot E(Y)$
+-   It follows that if $X$ and $Y$ are independent, then $E(XY) = E(X) \cdot E(Y)$
 :::
 
 ## Are $X$ and $Y$ independent?
@@ -243,9 +240,9 @@ find any p(x) X p(y) != p(x,y)
 ::: incremental
 -   $p_x(-5) \cdot p_y(4) = 0.18 \cdot 0.09 \neq 0.00$
 
--  $p_x(-5) \cdot p_y(-4) = 0.09 \cdot 0.15 = 0.0135 \neq 0.06$
+-   $p_x(-5) \cdot p_y(-4) = 0.09 \cdot 0.15 = 0.0135 \neq 0.06$
 
--  NO! NO! NO!
+-   NO! NO! NO!
 :::
 
 ## 
