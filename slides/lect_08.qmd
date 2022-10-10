@@ -45,7 +45,7 @@ Remind them of $\chi^2$ tests
 
 ::: incremental
 -   $\chi^2$ tests are used for associations in categorical data
--   What is used to find associations in numerical data?
+-   What is used to find associations in numeric data?
 :::
 
 # Plots
@@ -438,7 +438,7 @@ predict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))
 
 ::: incremental
 -   ALWAYS draw plots first
--   Numerical variables
+-   numeric variables
 -   Linear relationship
 -   Check for outliers
 -   Lurking variables
