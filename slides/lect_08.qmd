@@ -349,7 +349,7 @@ $m$ is gradient $b$ is the $y$ intercept
 Pull out your calculators and work on this
 :::
 
-$$ b = \frac{r \cdot s_y}{s_x} $$ $$ a = \bar{y} - b \bar{x} $$
+$$ b = \frac{r \cdot s_y}{s_x} $$ $$ m = \bar{y} - b \bar{x} $$
 
 ## Fitting by hand
 
