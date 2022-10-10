@@ -285,7 +285,7 @@ $cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 - \bar{x})(y_2 - \bar{y
 Standardizes the strength of the association
 :::
 
-$$corr(x, y) = \frac{cov(x, y)}{s_x, s_y}$$
+$$corr(x, y) = \frac{cov(x, y)}{s_x \cdot s_y}$$
 
 ## Correlation characteristics
 
