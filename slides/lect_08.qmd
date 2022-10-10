@@ -168,7 +168,6 @@ Big words make you sound smart to people that aren't that smart.
 What are the relationships between each plot?
 
 What do the numbers mean?
-
 :::
 
 ```{r, pairs_plots}
@@ -280,7 +279,6 @@ This is a measure of the squares. We'd like a measure that is one dimensional. W
 
 $cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 + \bar{x})(y_2 - \bar{y}) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}$
 
-
 ## Correlation math
 
 ::: notes
@@ -329,7 +327,6 @@ cor(diamonds$price, diamonds$carat)
 #  ggpairs(.) # make the plot
 ```
 
-
 ##  {background-image="lect-08_things/correlation_coef.png" background-size="contain"}
 
 # Line of association
@@ -353,11 +350,12 @@ Pull out your calculators and work on this
 $$ b = \frac{r \cdot s_y}{s_x} $$ $$ a = \bar{y} - b \bar{x} $$
 
 ## Fitting by hand
+
 ::: incremental
-- $r = 0.9215913$ 
-- $s_{price} = 3989.44$ 
-- $s_{carat} = 0.4740112$
-- $b &= \frac{r \cdot s_y}{s_x}$
+-   $r = 0.9215913$
+-   $s_{price} = 3989.44$
+-   $s_{carat} = 0.4740112$
+-   $b = \frac{r \cdot s_y}{s_x}$
 
 $$\begin{aligned}
 b &= \frac{r \cdot s_{price}}{s_{carat}} \\
@@ -366,22 +364,26 @@ b &= \frac{r \cdot s_{price}}{s_{carat}} \\
 \end{aligned}$$
 :::
 
-
 ## Fitting by hand
 
-$a &= \bar{y} - b \bar{x}$
-
 ::: incremental
-- $$\begin{aligned}
-a &= \bar{y} - b \bar{x} \\
-&= 3932.8 - 7756.426 \cdot 0.7979397\\
-&= -2256.36
-\end{aligned}$$
+- $a = \bar{y} - b \bar{x}$
+- $\bar{y} = 3932.8$
+- $\bar{x} = 0.7979397$
 
-- Our model is: $\widehat{\text{price}}  = -2256.36 + 7756.426 \cdot \text{carat}$
+
+
+-   $$\begin{aligned}
+    a &= \bar{y} - b \bar{x} \\
+    &= 3932.8 - 7756.426 \cdot 0.7979397\\
+    &= -2256.36
+    \end{aligned}$$
+
+-   Our model is: $\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}$
 :::
 
 ## Prediction by hand
+
 ::: notes
 Pull out your calculators and work on this
 :::
@@ -395,7 +397,6 @@ $$\begin{aligned}
 &= \$17135
 \end{aligned}$$
 :::
-
 
 ## Fit & predict in `R`
 
@@ -426,11 +427,11 @@ predict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))
 ## Warnings
 
 ::: incremental
-- ALWAYS draw plots first
-- Numerical variables
-- Linear relationship
-- Check for outliers
-- Lurking variables
+-   ALWAYS draw plots first
+-   Numerical variables
+-   Linear relationship
+-   Check for outliers
+-   Lurking variables
 :::
 
 # Spurious correlations
@@ -447,14 +448,13 @@ predict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))
 ## More spurious correlations
 
 ::: incremental
-- These variables are called lurking variables or confounders. 
+-   These variables are called lurking variables or confounders.
 
-- Lurking variables are not considered in the statistical analysis
+-   Lurking variables are not considered in the statistical analysis
 
-- Confounders are considered
+-   Confounders are considered
 
-- There are both known and unknown confounders, uknown confounders are lurking variables.
-
+-   There are both known and unknown confounders, uknown confounders are lurking variables.
 :::
 
 [Click here](https://www.tylervigen.com/spurious-correlations) for more spurious correlations
