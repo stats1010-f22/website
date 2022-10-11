@@ -105,19 +105,28 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 | No change | 0         | 0.80       | 0         | 0.67       |
 | Decreases | -\$5      | 0.09       | -\$4      | 0.15       |
 
-## Sharpe ratio by hand {.smaller}
+## Sharpe ratio by hand
 
 |           | IBM  | IBM        | IBM       | IBM                          | IBM      | IBM     | IBM          |
-|---------|---------|---------|---------|---------|---------|---------|---------|
+|-----------|------|------------|-----------|------------------------------|----------|---------|--------------|
 |           | $x$  | $P(X = x)$ | $\bar{x}$ | $(x-\bar{x})^2 \cdot p_x(x)$ | $Var(x)$ | $sd(x)$ | Sharpe ratio |
 | Increases | \$5  | 0.11       |           |                              |          |         |              |
 | No change | 0    | 0.80       |           |                              |          |         |              |
 | Decreases | -\$5 | 0.09       |           |                              |          |         |              |
 
-## Sharpe ratio by hand {.smaller}
+## Sharpe ratio by hand
 
 |           | MCSFT | MCSFT     | MCSFT     | MCSFT                        | MCSFT    | MCSFT   | MCSFT        |
-|---------|---------|---------|---------|---------|---------|---------|---------|
+|-----------|-------|-----------|-----------|------------------------------|----------|---------|--------------|
+|           | $y$   | $P(Y =y)$ | $\bar{y}$ | $(y-\bar{y})^2 \cdot p_y(y)$ | $Var(y)$ | $sd(y)$ | Sharpe ratio |
+| Increases | \$4   | 0.18      |           |                              |          |         |              |
+| No change | 0     | 0.67      |           |                              |          |         |              |
+| Decreases | -\$4  | 0.15      |           |                              |          |         |              |
+
+## Sharpe ratio by hand
+
+|           | MCSFT | MCSFT     | MCSFT     | MCSFT                        | MCSFT    | MCSFT   | MCSFT        |
+|-----------|-------|-----------|-----------|------------------------------|----------|---------|--------------|
 |           | $y$   | $P(Y =y)$ | $\bar{y}$ | $(y-\bar{y})^2 \cdot p_y(y)$ | $Var(y)$ | $sd(y)$ | Sharpe ratio |
 | Increases | \$4   | 0.18      |           |                              |          |         |              |
 | No change | 0     | 0.67      |           |                              |          |         |              |
@@ -156,7 +165,7 @@ Sharpe_ratio <- # name this the Sharpe ratio
             S_y = (mean_y - 0.015)/sd_y) # now for y
 ```
 
-# Joint probability distributions {.smaller}
+# Joint probability distributions
 
 ::: notes
 What is the expected value of X + Y?
@@ -191,7 +200,7 @@ Are these variables independent or not?
 ::: notes
 If x=-5 then we subtract 5 from all y's and multiply by $p_{x, y}$ algebraically it all washes out
 
-What about independence? We want to find the standard deviation to comput the Sharpe Ratio
+What about independence?
 :::
 
 |     |        | $X$      | $X$     | $X$     |        |
@@ -203,7 +212,7 @@ What about independence? We want to find the standard deviation to comput the Sh
 |     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
 
 ::: incremental
--    $E(X+Y) = E(X) + E(Y)$
+-   $E(X+Y) = E(X) + E(Y)$
 -   $E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22$
 :::
 
@@ -216,9 +225,9 @@ So are X and Y independent?
 If the probability of one event occuring has no impact on another event occuring, they are independent.
 
 ::: incremental
--   If $X$ and $Y$ and independent then $p(x,y) = p(x) \cdot p(y)$ for all values $(x,y)$
+-   If $X$ and $Y$ and independent then $p(x,y) = p(x) \cdot p(y)$
 
--   If $p(x,y) = p(x) \cdot p(y)$ for all values $(x, y)$ then $X$ and $Y$ are independent.
+-   If $p(x,y) = p(x) \cdot p(y)$ then $X$ and $Y$ are independent.
 
 -   It follows that if $X$ and $Y$ are independent, then $E(XY) = E(X) \cdot E(Y)$
 :::
@@ -227,8 +236,6 @@ If the probability of one event occuring has no impact on another event occuring
 
 ::: notes
 find any p(x) X p(y) != p(x,y)
-
-But we still need to find the stdev in order to find Sharpes ratio
 :::
 
 |     |        | $X$      | $X$     | $X$     |        |
@@ -247,57 +254,7 @@ But we still need to find the stdev in order to find Sharpes ratio
 -   NO! NO! NO!
 :::
 
-## Covariance of Random Variables
-
-::: notes
-last lesson (chpt 6) assumes that each $(x, y)$ pair appears once and are equally weighted
-:::
-
-::: incremental
-
-- $cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 - \bar{x})(y_2 - \bar{y}) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}$
-- assumes each $(x, y)$ pair appears once 
-
-- $$Cov(X, Y) = E((X - \mu_x)(Y - \mu_y))$$
-:::
-
-## Covariance of sum
-
-::: notes
-because we square things and 
-$(a + b)^2 = a^2 + b^2 + 2ab$
-we have to add 2 of the covariance
-:::
-
-::: incremental
-- $(a+b)^2 = a^2 + 2ab +b^2$
-- it follows that
-- $Var(X) + Var(Y) = Var(X) + Var(Y) + 2Cov(X, Y)$
-:::
-
-## Correlation
-
-::: notes
-what about our joint pdf? is it positively or negatively correlated? 
-:::
-
-::: incremental
-- $corr(x, y) = \frac{cov(x, y)}{s_x \cdot s_y}$
-
-- $$\rho = Corr(X, Y) = \frac{Cov(X, Y)}{\sigma_x \cdot \sigma_y}$$
-:::
-
-::: column-margin
-|     |        | $X$      | $X$     | $X$     |        |
-|-----|--------|----------|---------|---------|--------|
-|     |        | $x = -5$ | $x = 0$ | $x = 5$ | $p(y)$ |
-| $Y$ | $y=4$  | $0.00$   | $0.11$  | $0.07$  | $0.18$ |
-| $Y$ | $y=0$  | $0.03$   | $0.62$  | $0.02$  | $0.67$ |
-| $Y$ | $y=-4$ | $0.06$   | $0.07$  | $0.02$  | $0.15$ |
-|     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
-:::
-
-
+## 
 
 # Your turn
 

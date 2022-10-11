@@ -329,20 +329,16 @@ cor(diamonds$price, diamonds$carat)
 #  ggpairs(.) # make the plot
 ```
 
-
-
 # Line of association
 
 ::: notes
 What do these numbers mean?
 :::
- 
- 
+
 $$ y = mx + b $$
 
-
 ::: incremental
-- $m$ is gradient $b$ is the $y$ intercept
+-   $m$ is gradient $b$ is the $y$ intercept
 :::
 
 ## Gradient and slope
@@ -365,9 +361,9 @@ $$ m = \frac{r \cdot s_y}{s_x} $$ $$ b = \bar{y} - m \bar{x} $$
 -   $m = \frac{r \cdot s_{price}}{s_{carat}}$
 
 -   $$\begin{aligned}
-   m &= \frac{r \cdot s_{price}}{s_{carat}} \\
-&= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
-&= 7756.426
+       m &= \frac{r \cdot s_{price}}{s_{carat}} \\
+    &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
+    &= 7756.426
     \end{aligned}$$
 :::
 
@@ -400,14 +396,13 @@ Pull out your calculators and work on this
 for carat values $2.5$
 
 ::: incremental
+-   $\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}$
 
-- $\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}$
-
-- $$\begin{aligned}
-\widehat{\text{price}}  &= -2256.36 + 7756.426 \cdot \text{carat} \\ 
-&= -2256.36 + 7756.426 \cdot 2.5 \\
-&= \$17135
-\end{aligned}$$
+-   $$\begin{aligned}
+    \widehat{\text{price}}  &= -2256.36 + 7756.426 \cdot \text{carat} \\ 
+    &= -2256.36 + 7756.426 \cdot 2.5 \\
+    &= \$17135
+    \end{aligned}$$
 :::
 
 ## Fit & predict in `R`
