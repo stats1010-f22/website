@@ -336,11 +336,13 @@ cor(diamonds$price, diamonds$carat)
 ::: notes
 What do these numbers mean?
 :::
-
+ 
+ 
 $$ y = mx + b $$
 
+
 ::: incremental
-$m$ is gradient $b$ is the $y$ intercept
+- $m$ is gradient $b$ is the $y$ intercept
 :::
 
 ## Gradient and slope
