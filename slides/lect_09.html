@@ -607,8 +607,8 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <td></td>
 <td><span class="math inline">\(x\)</span></td>
 <td><span class="math inline">\(P(X = x)\)</span></td>
-<td><span class="math inline">\(\bar{x}\)</span></td>
-<td><span class="math inline">\((x-\bar{x})^2 \cdot p_x(x)\)</span></td>
+<td><span class="math inline">\(\mu_X\)</span></td>
+<td><span class="math inline">\((x-\mu_X)^2 \cdot p_x(x)\)</span></td>
 <td><span class="math inline">\(Var(x)\)</span></td>
 <td><span class="math inline">\(sd(x)\)</span></td>
 <td>Sharpe ratio</td>
@@ -676,8 +676,8 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <td></td>
 <td><span class="math inline">\(x\)</span></td>
 <td><span class="math inline">\(P(X = x)\)</span></td>
-<td><span class="math inline">\(\bar{x}\)</span></td>
-<td><span class="math inline">\((x-\bar{x})^2 \cdot p_x(x)\)</span></td>
+<td><span class="math inline">\(\mu_X\)</span></td>
+<td><span class="math inline">\((x-\mu_X)^2 \cdot p_x(x)\)</span></td>
 <td><span class="math inline">\(Var(x)\)</span></td>
 <td><span class="math inline">\(sd(x)\)</span></td>
 <td>Sharpe ratio</td>
@@ -745,8 +745,8 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <td></td>
 <td><span class="math inline">\(y\)</span></td>
 <td><span class="math inline">\(P(Y =y)\)</span></td>
-<td><span class="math inline">\(\bar{y}\)</span></td>
-<td><span class="math inline">\((y-\bar{y})^2 \cdot p_y(y)\)</span></td>
+<td><span class="math inline">\(\mu_Y\)</span></td>
+<td><span class="math inline">\((y-\mu_Y)^2 \cdot p_y(y)\)</span></td>
 <td><span class="math inline">\(Var(y)\)</span></td>
 <td><span class="math inline">\(sd(y)\)</span></td>
 <td>Sharpe ratio</td>
@@ -814,8 +814,8 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <td></td>
 <td><span class="math inline">\(y\)</span></td>
 <td><span class="math inline">\(P(Y =y)\)</span></td>
-<td><span class="math inline">\(\bar{y}\)</span></td>
-<td><span class="math inline">\((y-\bar{y})^2 \cdot p_y(y)\)</span></td>
+<td><span class="math inline">\(\mu_Y\)</span></td>
+<td><span class="math inline">\((y-\mu_Y)^2 \cdot p_y(y)\)</span></td>
 <td><span class="math inline">\(Var(y)\)</span></td>
 <td><span class="math inline">\(sd(y)\)</span></td>
 <td>Sharpe ratio</td>
@@ -1306,6 +1306,57 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 <li class="fragment"><p><span class="math display">\[Var(X+ Y) = Var(X) + Var(Y)\]</span></p></li>
 </ul>
 </div>
+</section>
+<section id="sharpe-ratio-of-a-sum" class="slide level2">
+<h2>Sharpe ratio of a sum</h2>
+<p><span class="math display">\[ S(X + Y) = \frac{(\mu_X + \mu_Y) - 2r_f}{\sqrt{(Var(X+Y))}} \]</span></p>
+</section>
+<section id="sharpe-ratio-of-sum---r" class="slide level2">
+<h2>Sharpe ratio of sum - R</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|2|6|10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># input x &amp; y</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">4</span>)</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># input data</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>data <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(<span class="fu">expand_grid</span>(x, y), </span>
+<span id="cb2-7"><a href="#cb2-7"></a>                  <span class="at">probs =</span> <span class="fu">c</span>(<span class="dv">0</span>, .<span class="dv">03</span>, .<span class="dv">06</span>, </span>
+<span id="cb2-8"><a href="#cb2-8"></a>                            .<span class="dv">11</span>, .<span class="dv">62</span>, .<span class="dv">07</span>, </span>
+<span id="cb2-9"><a href="#cb2-9"></a>                            .<span class="dv">07</span>, .<span class="dv">02</span>, .<span class="dv">02</span>), </span>
+<span id="cb2-10"><a href="#cb2-10"></a>                  <span class="at">mu_x =</span> <span class="fu">rep</span>(<span class="fl">0.1</span>, <span class="dv">9</span>), </span>
+<span id="cb2-11"><a href="#cb2-11"></a>                  <span class="at">mu_y =</span> <span class="fu">rep</span>(<span class="fl">0.12</span>, <span class="dv">9</span>), </span>
+<span id="cb2-12"><a href="#cb2-12"></a>                  <span class="at">var_x =</span> <span class="fu">rep</span>(<span class="fl">4.99</span>, <span class="dv">9</span>), </span>
+<span id="cb2-13"><a href="#cb2-13"></a>                  <span class="at">var_y =</span> <span class="fu">rep</span>(<span class="fl">5.2656</span>, <span class="dv">9</span>))</span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb2-16"><a href="#cb2-16"></a>  <span class="fu">mutate</span>(<span class="at">cov_xy_part =</span> (x <span class="sc">-</span> mu_x)<span class="sc">*</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a>           (y <span class="sc">-</span> mu_y)<span class="sc">*</span>probs, <span class="co"># multiply together</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>         <span class="at">cov_xy =</span> <span class="fu">sum</span>(cov_xy_part), <span class="co">#</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a>         <span class="at">var_xy =</span> var_x <span class="sc">+</span> var_y <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>cov_xy) <span class="sc">%&gt;%</span>  </span>
+<span id="cb2-20"><a href="#cb2-20"></a>         <span class="fu">summarise</span>(<span class="at">S_r =</span> (mu_x <span class="sc">+</span> mu_y <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span><span class="fl">0.015</span>)<span class="sc">/</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a>                      (<span class="fu">sqrt</span>(var_xy)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 1
+     S_r
+   &lt;dbl&gt;
+1 0.0497
+2 0.0497
+3 0.0497
+4 0.0497
+5 0.0497
+6 0.0497
+7 0.0497
+8 0.0497
+9 0.0497</code></pre>
+</div>
+</div>
+<div>
+<p>The Sharpe ratio for <span class="math inline">\(X\)</span> is <span class="math inline">\(0.038\)</span>, for <span class="math inline">\(Y\)</span> it’s <span class="math inline">\(0.046\)</span>, investing in both gives a better return <span class="math inline">\(0.050\)</span></p>
+</div>
+</section>
+<section id="iid" class="slide level2 smaller">
+<h2>IID</h2>
+<p>Independent and identically distributed (IID)</p>
 </section></section>
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>

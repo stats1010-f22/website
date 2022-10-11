@@ -879,28 +879,28 @@
     "href": "slides/lect_09.html#sharpe-ratio-by-hand",
     "title": "Chapter 10: Association between random variables",
     "section": "Sharpe ratio by hand",
-    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM\nIBM\nIBM\nIBM\nIBM\nIBM\nIBM\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(\\bar{x}\\)\n\\((x-\\bar{x})^2 \\cdot p_x(x)\\)\n\\(Var(x)\\)\n\\(sd(x)\\)\nSharpe ratio\n\n\nIncreases\n$5\n0.11\n\n\n\n\n\n\n\nNo change\n0\n0.80\n\n\n\n\n\n\n\nDecreases\n-$5\n0.09"
+    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM\nIBM\nIBM\nIBM\nIBM\nIBM\nIBM\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(\\mu_X\\)\n\\((x-\\mu_X)^2 \\cdot p_x(x)\\)\n\\(Var(x)\\)\n\\(sd(x)\\)\nSharpe ratio\n\n\nIncreases\n$5\n0.11\n\n\n\n\n\n\n\nNo change\n0\n0.80\n\n\n\n\n\n\n\nDecreases\n-$5\n0.09"
   },
   {
     "objectID": "slides/lect_09.html#sharpe-ratio-by-hand-1",
     "href": "slides/lect_09.html#sharpe-ratio-by-hand-1",
     "title": "Chapter 10: Association between random variables",
     "section": "Sharpe ratio by hand",
-    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM\nIBM\nIBM\nIBM\nIBM\nIBM\nIBM\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(\\bar{x}\\)\n\\((x-\\bar{x})^2 \\cdot p_x(x)\\)\n\\(Var(x)\\)\n\\(sd(x)\\)\nSharpe ratio\n\n\nIncreases\n$5\n0.11\n0.1\n2.6411\n4.99\n2.23\n0.03805123\n\n\nNo change\n0\n0.80\n0.1\n0.0080\n4.99\n2.23\n0.03805123\n\n\nDecreases\n-$5\n0.09\n0.1\n2.3409\n4.99\n2.23\n0.03805123"
+    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM\nIBM\nIBM\nIBM\nIBM\nIBM\nIBM\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(\\mu_X\\)\n\\((x-\\mu_X)^2 \\cdot p_x(x)\\)\n\\(Var(x)\\)\n\\(sd(x)\\)\nSharpe ratio\n\n\nIncreases\n$5\n0.11\n0.1\n2.6411\n4.99\n2.23\n0.03805123\n\n\nNo change\n0\n0.80\n0.1\n0.0080\n4.99\n2.23\n0.03805123\n\n\nDecreases\n-$5\n0.09\n0.1\n2.3409\n4.99\n2.23\n0.03805123"
   },
   {
     "objectID": "slides/lect_09.html#sharpe-ratio-by-hand-2",
     "href": "slides/lect_09.html#sharpe-ratio-by-hand-2",
     "title": "Chapter 10: Association between random variables",
     "section": "Sharpe ratio by hand",
-    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\n\n\n\n\n\n\\(y\\)\n\\(P(Y =y)\\)\n\\(\\bar{y}\\)\n\\((y-\\bar{y})^2 \\cdot p_y(y)\\)\n\\(Var(y)\\)\n\\(sd(y)\\)\nSharpe ratio\n\n\nIncreases\n$4\n0.18\n\n\n\n\n\n\n\nNo change\n0\n0.67\n\n\n\n\n\n\n\nDecreases\n-$4\n0.15"
+    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\n\n\n\n\n\n\\(y\\)\n\\(P(Y =y)\\)\n\\(\\mu_Y\\)\n\\((y-\\mu_Y)^2 \\cdot p_y(y)\\)\n\\(Var(y)\\)\n\\(sd(y)\\)\nSharpe ratio\n\n\nIncreases\n$4\n0.18\n\n\n\n\n\n\n\nNo change\n0\n0.67\n\n\n\n\n\n\n\nDecreases\n-$4\n0.15"
   },
   {
     "objectID": "slides/lect_09.html#sharpe-ratio-by-hand-3",
     "href": "slides/lect_09.html#sharpe-ratio-by-hand-3",
     "title": "Chapter 10: Association between random variables",
     "section": "Sharpe ratio by hand",
-    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\n\n\n\n\n\n\\(y\\)\n\\(P(Y =y)\\)\n\\(\\bar{y}\\)\n\\((y-\\bar{y})^2 \\cdot p_y(y)\\)\n\\(Var(y)\\)\n\\(sd(y)\\)\nSharpe ratio\n\n\nIncreases\n$4\n0.18\n0.12\n2.709792\n5.2656\n2.29469\n0.04575782\n\n\nNo change\n0\n0.67\n0.12\n0.009648\n5.2656\n2.29469\n0.04575782\n\n\nDecreases\n-$4\n0.15\n0.12\n2.546160\n5.2656\n2.29469\n0.04575782"
+    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\n\n\n\n\n\n\\(y\\)\n\\(P(Y =y)\\)\n\\(\\mu_Y\\)\n\\((y-\\mu_Y)^2 \\cdot p_y(y)\\)\n\\(Var(y)\\)\n\\(sd(y)\\)\nSharpe ratio\n\n\nIncreases\n$4\n0.18\n0.12\n2.709792\n5.2656\n2.29469\n0.04575782\n\n\nNo change\n0\n0.67\n0.12\n0.009648\n5.2656\n2.29469\n0.04575782\n\n\nDecreases\n-$4\n0.15\n0.12\n2.546160\n5.2656\n2.29469\n0.04575782"
   },
   {
     "objectID": "slides/lect_09.html#the-sharpe-ratio---in-r",
@@ -950,6 +950,27 @@
     "title": "Chapter 10: Association between random variables",
     "section": "Independence & Var",
     "text": "Independence & Var\n\\(Var(X) + Var(Y) = Var(X) + Var(Y) + 2Cov(X, Y)\\)\n\n\nIf \\(X\\), \\(Y\\) are independent, \\(Cov(X, Y) = 0\\), so\n\\[Var(X+ Y) = Var(X) + Var(Y)\\]"
+  },
+  {
+    "objectID": "slides/lect_09.html#sharpe-ratio-of-a-sum",
+    "href": "slides/lect_09.html#sharpe-ratio-of-a-sum",
+    "title": "Chapter 10: Association between random variables",
+    "section": "Sharpe ratio of a sum",
+    "text": "Sharpe ratio of a sum\n\\[ S(X + Y) = \\frac{(\\mu_X + \\mu_Y) - 2r_f}{\\sqrt{(Var(X+Y))}} \\]"
+  },
+  {
+    "objectID": "slides/lect_09.html#sharpe-ratio-of-sum---r",
+    "href": "slides/lect_09.html#sharpe-ratio-of-sum---r",
+    "title": "Chapter 10: Association between random variables",
+    "section": "Sharpe ratio of sum - R",
+    "text": "Sharpe ratio of sum - R\n\n# input x & y\nx <- c(-5, 0, 5)\ny <- c(4, 0, -4)\n\n# input data\ndata <- bind_cols(expand_grid(x, y), \n                  probs = c(0, .03, .06, \n                            .11, .62, .07, \n                            .07, .02, .02), \n                  mu_x = rep(0.1, 9), \n                  mu_y = rep(0.12, 9), \n                  var_x = rep(4.99, 9), \n                  var_y = rep(5.2656, 9))\n\ndata %>% \n  mutate(cov_xy_part = (x - mu_x)*\n           (y - mu_y)*probs, # multiply together\n         cov_xy = sum(cov_xy_part), #\n         var_xy = var_x + var_y + 2*cov_xy) %>%  \n         summarise(S_r = (mu_x + mu_y - 2*0.015)/\n                      (sqrt(var_xy)))\n\n# A tibble: 9 × 1\n     S_r\n   <dbl>\n1 0.0497\n2 0.0497\n3 0.0497\n4 0.0497\n5 0.0497\n6 0.0497\n7 0.0497\n8 0.0497\n9 0.0497\n\n\n\nThe Sharpe ratio for \\(X\\) is \\(0.038\\), for \\(Y\\) it’s \\(0.046\\), investing in both gives a better return \\(0.050\\)"
+  },
+  {
+    "objectID": "slides/lect_09.html#iid",
+    "href": "slides/lect_09.html#iid",
+    "title": "Chapter 10: Association between random variables",
+    "section": "IID",
+    "text": "IID\nIndependent and identically distributed (IID)"
   },
   {
     "objectID": "slides/lect_04.html#definition-of-numeric-variable",
