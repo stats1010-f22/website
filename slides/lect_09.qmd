@@ -105,7 +105,7 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 | No change | 0         | 0.80       | 0         | 0.67       |
 | Decreases | -\$5      | 0.09       | -\$4      | 0.15       |
 
-## Sharpe ratio by hand
+## Sharpe ratio by hand {.smaller}
 
 |           | IBM  | IBM        | IBM       | IBM                          | IBM      | IBM     | IBM          |
 |-----------|------|------------|-----------|------------------------------|----------|---------|--------------|
@@ -114,7 +114,20 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 | No change | 0    | 0.80       |           |                              |          |         |              |
 | Decreases | -\$5 | 0.09       |           |                              |          |         |              |
 
-## Sharpe ratio by hand
+## Sharpe ratio by hand {.smaller}
+
+|           | IBM  | IBM        | IBM       | IBM                          | IBM      | IBM     | IBM          |
+|---------|---------|---------|---------|---------|---------|---------|---------|
+|           | $x$  | $P(X = x)$ | $\bar{x}$ | $(x-\bar{x})^2 \cdot p_x(x)$ | $Var(x)$ | $sd(x)$ | Sharpe ratio |
+| Increases | \$5  | 0.11       |   0.1     |       2.6411                 |4.99      | 2.23    |   0.03805123 |
+| No change | 0    | 0.80       |   0.1     |     0.0080                   |4.99      | 2.23    |   0.03805123 |
+| Decreases | -\$5 | 0.09       |   0.1     |       2.3409                 |4.99      | 2.23    |   0.03805123 |
+
+
+
+
+
+## Sharpe ratio by hand {.smaller}
 
 |           | MCSFT | MCSFT     | MCSFT     | MCSFT                        | MCSFT    | MCSFT   | MCSFT        |
 |-----------|-------|-----------|-----------|------------------------------|----------|---------|--------------|
@@ -123,14 +136,20 @@ Instead of knowing $\mu$ and $\sigma$ we have a pdf
 | No change | 0     | 0.67      |           |                              |          |         |              |
 | Decreases | -\$4  | 0.15      |           |                              |          |         |              |
 
-## Sharpe ratio by hand
+
+## Sharpe ratio by hand {.smaller}
 
 |           | MCSFT | MCSFT     | MCSFT     | MCSFT                        | MCSFT    | MCSFT   | MCSFT        |
-|-----------|-------|-----------|-----------|------------------------------|----------|---------|--------------|
+|---------|---------|---------|---------|---------|---------|---------|---------|
 |           | $y$   | $P(Y =y)$ | $\bar{y}$ | $(y-\bar{y})^2 \cdot p_y(y)$ | $Var(y)$ | $sd(y)$ | Sharpe ratio |
-| Increases | \$4   | 0.18      |           |                              |          |         |              |
-| No change | 0     | 0.67      |           |                              |          |         |              |
-| Decreases | -\$4  | 0.15      |           |                              |          |         |              |
+| Increases | \$4   | 0.18      |   0.12    |         2.709792             |  5.2656  | 2.29469 |  0.04575782  |
+| No change | 0     | 0.67      |   0.12    |             0.009648         |  5.2656  | 2.29469 |  0.04575782  |
+| Decreases | -\$4  | 0.15      |   0.12    |               2.546160       |  5.2656  | 2.29469 |  0.04575782  |
+
+
+
+
+
 
 ## The Sharpe ratio - in `R`
 
@@ -165,7 +184,7 @@ Sharpe_ratio <- # name this the Sharpe ratio
             S_y = (mean_y - 0.015)/sd_y) # now for y
 ```
 
-# Joint probability distributions
+# Joint probability distributions {.smaller}
 
 ::: notes
 What is the expected value of X + Y?
@@ -200,7 +219,7 @@ Are these variables independent or not?
 ::: notes
 If x=-5 then we subtract 5 from all y's and multiply by $p_{x, y}$ algebraically it all washes out
 
-What about independence?
+What about independence? We want to find the standard deviation to compute the Sharpe Ratio
 :::
 
 |     |        | $X$      | $X$     | $X$     |        |
@@ -216,7 +235,7 @@ What about independence?
 -   $E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22$
 :::
 
-## 3 Rules of independence
+# 3 Rules of independence
 
 ::: notes
 So are X and Y independent?
@@ -225,9 +244,9 @@ So are X and Y independent?
 If the probability of one event occuring has no impact on another event occuring, they are independent.
 
 ::: incremental
--   If $X$ and $Y$ and independent then $p(x,y) = p(x) \cdot p(y)$
+-   If $X$ and $Y$ and independent then $p(x,y) = p(x) \cdot p(y)$ for all pairs $(x,y)$
 
--   If $p(x,y) = p(x) \cdot p(y)$ then $X$ and $Y$ are independent.
+-   If $p(x,y) = p(x) \cdot p(y)$ for all $(x, y)$ pairs, then $X$ and $Y$ are independent.
 
 -   It follows that if $X$ and $Y$ are independent, then $E(XY) = E(X) \cdot E(Y)$
 :::
@@ -236,6 +255,8 @@ If the probability of one event occuring has no impact on another event occuring
 
 ::: notes
 find any p(x) X p(y) != p(x,y)
+
+But we still need to find the stdev in order to find Sharpes ratio
 :::
 
 |     |        | $X$      | $X$     | $X$     |        |
@@ -254,11 +275,87 @@ find any p(x) X p(y) != p(x,y)
 -   NO! NO! NO!
 :::
 
-## 
+# Covariance of Random Variables
+
+::: notes
+last lesson (chpt 6) assumes that each $(x, y)$ pair appears once and are equally weighted
+:::
+
+::: incremental
+-   $cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 - \bar{x})(y_2 - \bar{y}) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}$
+
+-   assumes each $(x, y)$ pair appears once
+
+-   $$Cov(X, Y) = E((X - \mu_X)(Y - \mu_Y))$$
+:::
+
+## Covariance of sum
+
+::: notes
+because we square things and $(a + b)^2 = a^2 + b^2 + 2ab$ we have to add 2 of the covariance
+:::
+
+::: incremental
+-   $(a+b)^2 = a^2 + 2ab +b^2$
+-   it follows that
+-   $$Var(X + Y) = Var(X) + Var(Y) + 2Cov(X, Y)$$
+:::
+
+## Correlation
+
+::: notes
+what about our joint pdf? is it positively or negatively correlated? 3D plot
+:::
+
+::: incremental
+-   $corr(x, y) = \frac{cov(x, y)}{s_x \cdot s_y}$
+
+-   $$\rho = Corr(X, Y) = \frac{Cov(X, Y)}{\sigma_x \cdot \sigma_y}$$
+
+As $X$ increases, what happens to $Y$?
+:::
+
+::: column-margin
+|     |        | $X$      | $X$     | $X$     |        |
+|-----|--------|----------|---------|---------|--------|
+|     |        | $x = -5$ | $x = 0$ | $x = 5$ | $p(y)$ |
+| $Y$ | $y=4$  | $0.00$   | $0.11$  | $0.07$  | $0.18$ |
+| $Y$ | $y=0$  | $0.03$   | $0.62$  | $0.02$  | $0.67$ |
+| $Y$ | $y=-4$ | $0.06$   | $0.07$  | $0.02$  | $0.15$ |
+|     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
+:::
+
+## Independence & Cov
+
+How does independence impact upon correlation and covariance?
+
+$$ E((X-\mu_X)(Y-\mu_Y))$$
+
+::: incremental
+-   $$\begin{aligned}
+    Cov(X,Y) &= E((X-\mu_X)(Y-\mu_Y))\\
+    &= E(X - \mu_X)E(Y-\mu_Y)\\
+    &= 0
+    \end{aligned}$$
+
+-   If $X$,$Y$ are independent, then $Cov(X, Y) = 0$
+
+-   The opposite is not true (if $Cov(X, Y) = 0$, then $X$,$Y$ are independent)
+:::
+
+## Independence & Var
+
+$Var(X) + Var(Y) = Var(X) + Var(Y) + 2Cov(X, Y)$
+
+::: incremental
+-   If $X$, $Y$ are independent, $Cov(X, Y) = 0$, so
+
+-   $$Var(X+ Y) = Var(X) + Var(Y)$$
+:::
 
 # Your turn
 
-[Click here](https://stats1010-f22.github.io/website/ae/ae-8.html) or the qr code below
+[Click here](https://stats1010-f22.github.io/website/ae/ae-9.html) or the qr code below
 
 ```{r, eval=TRUE, echo=FALSE}
 library(qrcode)
