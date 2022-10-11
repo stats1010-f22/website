@@ -203,7 +203,7 @@ What about independence? We want to find the standard deviation to comput the Sh
 |     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
 
 ::: incremental
--    $E(X+Y) = E(X) + E(Y)$
+-   $E(X+Y) = E(X) + E(Y)$
 -   $E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22$
 :::
 
@@ -246,6 +246,8 @@ find any p(x) X p(y) != p(x,y)
 :::
 
 ## 
+
+
 
 # Your turn
 
