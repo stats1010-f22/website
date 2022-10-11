@@ -928,7 +928,7 @@
     "href": "slides/lect_09.html#covariance-of-sum",
     "title": "Chapter 10: Association between random variables",
     "section": "Covariance of sum",
-    "text": "Covariance of sum\n\nbecause we square things and \\((a + b)^2 = a^2 + b^2 + 2ab\\) we have to add 2 of the covariance\n\n\n\n\\((a+b)^2 = a^2 + 2ab +b^2\\)\nit follows that\n\\[Var(X + Y) = Var(X) + Var(Y) + 2Cov(X, Y)\\]"
+    "text": "Covariance of sum\n\nbecause we square things and \\((a + b)^2 = a^2 + b^2 + 2ab\\) we have to add 2 of the covariance\n\n\n\n\\((a+b)^2 = a^2 + 2ab +b^2\\)\nit follows that\n\\(Var(X + Y) = Var(X) + Var(Y) + 2Cov(X, Y)\\)"
   },
   {
     "objectID": "slides/lect_09.html#correlation",
@@ -977,7 +977,7 @@
     "href": "slides/lect_09.html#iid",
     "title": "Chapter 10: Association between random variables",
     "section": "IID",
-    "text": "IID\n\ninvesting in a stock on subsequent days instead of investing in 2 stocks for one day\n\nIf we invested in a stock on 2 subsequent days instead of investing in 2 stocks on one day the return on those two days are:\nindependent and identically distributed (IID)"
+    "text": "IID\n\ninvesting in a stock on subsequent days instead of investing in 2 stocks for one day\n\nIf we invested in a stock on 2 subsequent days instead of investing in 2 stocks on one day the return on those two days are:\nindependent and identically distributed (IID)\n:: incremental - identically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same\n\nindependent - ::: # Your turn\n\nClick here or the qr code below\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_04.html#definition-of-numeric-variable",
