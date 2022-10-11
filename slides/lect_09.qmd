@@ -296,7 +296,7 @@ because we square things and $(a + b)^2 = a^2 + b^2 + 2ab$ we have to add 2 of t
 ::: incremental
 -   $(a+b)^2 = a^2 + 2ab +b^2$
 -   it follows that
--   $$Var(X + Y) = Var(X) + Var(Y) + 2Cov(X, Y)$$
+-   $Var(X + Y) = Var(X) + Var(Y) + 2Cov(X, Y)$
 :::
 
 ## Correlation
@@ -365,7 +365,7 @@ What if we want to invest in two subsequent days instead of investing in  two st
 ```{r Sharpe_ratio_sum}
 #| echo: true
 #| eval: true
-#| code-line-numbers: "|2|6|10|21"
+#| code-line-numbers: "|2|6|10|22"
 
 # input x & y
 x <- c(-5, 0, 5)
@@ -430,6 +430,12 @@ If we invested in a stock on 2 subsequent days instead of investing in 2 stocks 
 
 **i**ndependent and **i**dentically **d**istributed (IID)
 
+
+:: incremental
+- identically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same
+
+- independent - 
+:::
 # Your turn
 
 [Click here](https://stats1010-f22.github.io/website/ae/ae-9.html) or the qr code below
