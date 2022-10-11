@@ -577,18 +577,18 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 </tbody>
 </table>
 </section>
-<section id="sharpe-ratio-by-hand" class="slide level2 smaller">
+<section id="sharpe-ratio-by-hand" class="slide level2">
 <h2>Sharpe ratio by hand</h2>
-<table>
+<table style="width:100%;">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 10%">
+<col style="width: 5%">
+<col style="width: 11%">
+<col style="width: 10%">
+<col style="width: 29%">
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -646,18 +646,87 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 </tbody>
 </table>
 </section>
-<section id="sharpe-ratio-by-hand-1" class="slide level2 smaller">
+<section id="sharpe-ratio-by-hand-1" class="slide level2">
 <h2>Sharpe ratio by hand</h2>
-<table>
+<table style="width:100%;">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 10%">
+<col style="width: 6%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 29%">
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>MCSFT</th>
+<th>MCSFT</th>
+<th>MCSFT</th>
+<th>MCSFT</th>
+<th>MCSFT</th>
+<th>MCSFT</th>
+<th>MCSFT</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(y\)</span></td>
+<td><span class="math inline">\(P(Y =y)\)</span></td>
+<td><span class="math inline">\(\bar{y}\)</span></td>
+<td><span class="math inline">\((y-\bar{y})^2 \cdot p_y(y)\)</span></td>
+<td><span class="math inline">\(Var(y)\)</span></td>
+<td><span class="math inline">\(sd(y)\)</span></td>
+<td>Sharpe ratio</td>
+</tr>
+<tr class="even">
+<td>Increases</td>
+<td>$4</td>
+<td>0.18</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>No change</td>
+<td>0</td>
+<td>0.67</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Decreases</td>
+<td>-$4</td>
+<td>0.15</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sharpe-ratio-by-hand-2" class="slide level2">
+<h2>Sharpe ratio by hand</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 6%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 29%">
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -755,7 +824,7 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 </div>
 </section></section>
 <section>
-<section id="joint-probability-distributions" class="title-slide slide level1 smaller center">
+<section id="joint-probability-distributions" class="title-slide slide level1 center">
 <h1>Joint probability distributions</h1>
 <aside class="notes">
 <p>What is the expected value of X + Y?</p>
@@ -841,7 +910,7 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <h2>Expected value of <span class="math inline">\(X + Y\)</span></h2>
 <aside class="notes">
 <p>If x=-5 then we subtract 5 from all y’s and multiply by <span class="math inline">\(p_{x, y}\)</span> algebraically it all washes out</p>
-<p>What about independence? We want to find the standard deviation to comput the Sharpe Ratio</p>
+<p>What about independence?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -932,8 +1001,8 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <p>If the probability of one event occuring has no impact on another event occuring, they are independent.</p>
 <div>
 <ul>
-<li class="fragment"><p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and independent then <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span> for all values <span class="math inline">\((x,y)\)</span></p></li>
-<li class="fragment"><p>If <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span> for all values <span class="math inline">\((x, y)\)</span> then <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent.</p></li>
+<li class="fragment"><p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and independent then <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span></p></li>
+<li class="fragment"><p>If <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span> then <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent.</p></li>
 <li class="fragment"><p>It follows that if <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then <span class="math inline">\(E(XY) = E(X) \cdot E(Y)\)</span></p></li>
 </ul>
 </div>
@@ -942,7 +1011,6 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <h2>Are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> independent?</h2>
 <aside class="notes">
 <p>find any p(x) X p(y) != p(x,y)</p>
-<p>But we still need to find the stdev in order to find Sharpes ratio</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1016,129 +1084,8 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 </ul>
 </div>
 </section>
-<section id="covariance-of-random-variables" class="slide level2">
-<h2>Covariance of Random Variables</h2>
-<aside class="notes">
-<p>last lesson (chpt 6) assumes that each <span class="math inline">\((x, y)\)</span> pair appears once and are equally weighted</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<div>
-<ul>
-<li class="fragment"><p><span class="math inline">\(cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 - \bar{x})(y_2 - \bar{y}) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}\)</span></p></li>
-<li class="fragment"><p>assumes each <span class="math inline">\((x, y)\)</span> pair appears once</p></li>
-<li class="fragment"><p><span class="math display">\[Cov(X, Y) = E((X - \mu_x)(Y - \mu_y))\]</span></p></li>
-</ul>
-</div>
-</section>
-<section id="covariance-of-sum" class="slide level2">
-<h2>Covariance of sum</h2>
-<aside class="notes">
-<p>because we square things and <span class="math inline">\((a + b)^2 = a^2 + b^2 + 2ab\)</span> we have to add 2 of the covariance</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<div>
-<ul>
-<li class="fragment"><span class="math inline">\((a+b)^2 = a^2 + 2ab +b^2\)</span></li>
-<li class="fragment">it follows that</li>
-<li class="fragment"><span class="math inline">\(Var(X) + Var(Y) = Var(X) + Var(Y) + 2Cov(X, Y)\)</span></li>
-</ul>
-</div>
-</section>
-<section id="correlation" class="slide level2">
-<h2>Correlation</h2>
-<aside class="notes">
-<p>what about our joint pdf? is it positively or negatively correlated?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<div>
-<ul>
-<li class="fragment"><p><span class="math inline">\(corr(x, y) = \frac{cov(x, y)}{s_x \cdot s_y}\)</span></p></li>
-<li class="fragment"><p><span class="math display">\[\rho = Corr(X, Y) = \frac{Cov(X, Y)}{\sigma_x \cdot \sigma_y}\]</span></p></li>
-</ul>
-</div>
-<div class="column-margin">
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th></th>
-<th><span class="math inline">\(X\)</span></th>
-<th><span class="math inline">\(X\)</span></th>
-<th><span class="math inline">\(X\)</span></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td><span class="math inline">\(x = -5\)</span></td>
-<td><span class="math inline">\(x = 0\)</span></td>
-<td><span class="math inline">\(x = 5\)</span></td>
-<td><span class="math inline">\(p(y)\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=4\)</span></td>
-<td><span class="math inline">\(0.00\)</span></td>
-<td><span class="math inline">\(0.11\)</span></td>
-<td><span class="math inline">\(0.07\)</span></td>
-<td><span class="math inline">\(0.18\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=0\)</span></td>
-<td><span class="math inline">\(0.03\)</span></td>
-<td><span class="math inline">\(0.62\)</span></td>
-<td><span class="math inline">\(0.02\)</span></td>
-<td><span class="math inline">\(0.67\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=-4\)</span></td>
-<td><span class="math inline">\(0.06\)</span></td>
-<td><span class="math inline">\(0.07\)</span></td>
-<td><span class="math inline">\(0.02\)</span></td>
-<td><span class="math inline">\(0.15\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(p(x)\)</span></td>
-<td><span class="math inline">\(0.09\)</span></td>
-<td><span class="math inline">\(0.80\)</span></td>
-<td><span class="math inline">\(0.11\)</span></td>
-<td><span class="math inline">\(1\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
+<section id="section" class="slide level2">
+<h2></h2>
 </section></section>
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>

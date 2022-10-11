@@ -889,6 +889,13 @@
     "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\n\n\n\n\n\n\\(y\\)\n\\(P(Y =y)\\)\n\\(\\bar{y}\\)\n\\((y-\\bar{y})^2 \\cdot p_y(y)\\)\n\\(Var(y)\\)\n\\(sd(y)\\)\nSharpe ratio\n\n\nIncreases\n$4\n0.18\n\n\n\n\n\n\n\nNo change\n0\n0.67\n\n\n\n\n\n\n\nDecreases\n-$4\n0.15"
   },
   {
+    "objectID": "slides/lect_09.html#sharpe-ratio-by-hand-2",
+    "href": "slides/lect_09.html#sharpe-ratio-by-hand-2",
+    "title": "Chapter 10: Association between random variables",
+    "section": "Sharpe ratio by hand",
+    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\n\n\n\n\n\n\\(y\\)\n\\(P(Y =y)\\)\n\\(\\bar{y}\\)\n\\((y-\\bar{y})^2 \\cdot p_y(y)\\)\n\\(Var(y)\\)\n\\(sd(y)\\)\nSharpe ratio\n\n\nIncreases\n$4\n0.18\n\n\n\n\n\n\n\nNo change\n0\n0.67\n\n\n\n\n\n\n\nDecreases\n-$4\n0.15"
+  },
+  {
     "objectID": "slides/lect_09.html#the-sharpe-ratio---in-r",
     "href": "slides/lect_09.html#the-sharpe-ratio---in-r",
     "title": "Chapter 10: Association between random variables",
@@ -900,42 +907,21 @@
     "href": "slides/lect_09.html#expected-value-of-x-y",
     "title": "Chapter 10: Association between random variables",
     "section": "Expected value of \\(X + Y\\)",
-    "text": "Expected value of \\(X + Y\\)\n\nIf x=-5 then we subtract 5 from all y’s and multiply by \\(p_{x, y}\\) algebraically it all washes out\nWhat about independence? We want to find the standard deviation to comput the Sharpe Ratio\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(E(X+Y) = E(X) + E(Y)\\)\n\\(E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22\\)"
+    "text": "Expected value of \\(X + Y\\)\n\nIf x=-5 then we subtract 5 from all y’s and multiply by \\(p_{x, y}\\) algebraically it all washes out\nWhat about independence?\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(E(X+Y) = E(X) + E(Y)\\)\n\\(E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22\\)"
   },
   {
     "objectID": "slides/lect_09.html#rules-of-independence",
     "href": "slides/lect_09.html#rules-of-independence",
     "title": "Chapter 10: Association between random variables",
     "section": "3 Rules of independence",
-    "text": "3 Rules of independence\n\nSo are X and Y independent?\n\nIf the probability of one event occuring has no impact on another event occuring, they are independent.\n\n\nIf \\(X\\) and \\(Y\\) and independent then \\(p(x,y) = p(x) \\cdot p(y)\\) for all values \\((x,y)\\)\nIf \\(p(x,y) = p(x) \\cdot p(y)\\) for all values \\((x, y)\\) then \\(X\\) and \\(Y\\) are independent.\nIt follows that if \\(X\\) and \\(Y\\) are independent, then \\(E(XY) = E(X) \\cdot E(Y)\\)"
+    "text": "3 Rules of independence\n\nSo are X and Y independent?\n\nIf the probability of one event occuring has no impact on another event occuring, they are independent.\n\n\nIf \\(X\\) and \\(Y\\) and independent then \\(p(x,y) = p(x) \\cdot p(y)\\)\nIf \\(p(x,y) = p(x) \\cdot p(y)\\) then \\(X\\) and \\(Y\\) are independent.\nIt follows that if \\(X\\) and \\(Y\\) are independent, then \\(E(XY) = E(X) \\cdot E(Y)\\)"
   },
   {
     "objectID": "slides/lect_09.html#are-x-and-y-independent",
     "href": "slides/lect_09.html#are-x-and-y-independent",
     "title": "Chapter 10: Association between random variables",
     "section": "Are \\(X\\) and \\(Y\\) independent?",
-    "text": "Are \\(X\\) and \\(Y\\) independent?\n\nfind any p(x) X p(y) != p(x,y)\nBut we still need to find the stdev in order to find Sharpes ratio\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(p_x(-5) \\cdot p_y(4) = 0.18 \\cdot 0.09 \\neq 0.00\\)\n\\(p_x(-5) \\cdot p_y(-4) = 0.09 \\cdot 0.15 = 0.0135 \\neq 0.06\\)\nNO! NO! NO!"
-  },
-  {
-    "objectID": "slides/lect_09.html#covariance-of-random-variables",
-    "href": "slides/lect_09.html#covariance-of-random-variables",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Covariance of Random Variables",
-    "text": "Covariance of Random Variables\n\nlast lesson (chpt 6) assumes that each \\((x, y)\\) pair appears once and are equally weighted\n\n\n\n\\(cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 - \\bar{x})(y_2 - \\bar{y}) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\)\nassumes each \\((x, y)\\) pair appears once\n\\[Cov(X, Y) = E((X - \\mu_x)(Y - \\mu_y))\\]"
-  },
-  {
-    "objectID": "slides/lect_09.html#covariance-of-sum",
-    "href": "slides/lect_09.html#covariance-of-sum",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Covariance of sum",
-    "text": "Covariance of sum\n\nbecause we square things and \\((a + b)^2 = a^2 + b^2 + 2ab\\) we have to add 2 of the covariance\n\n\n\n\\((a+b)^2 = a^2 + 2ab +b^2\\)\nit follows that\n\\(Var(X) + Var(Y) = Var(X) + Var(Y) + 2Cov(X, Y)\\)"
-  },
-  {
-    "objectID": "slides/lect_09.html#correlation",
-    "href": "slides/lect_09.html#correlation",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Correlation",
-    "text": "Correlation\n\nwhat about our joint pdf? is it positively or negatively correlated?\n\n\n\n\\(corr(x, y) = \\frac{cov(x, y)}{s_x \\cdot s_y}\\)\n\\[\\rho = Corr(X, Y) = \\frac{Cov(X, Y)}{\\sigma_x \\cdot \\sigma_y}\\]\n\n\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)"
+    "text": "Are \\(X\\) and \\(Y\\) independent?\n\nfind any p(x) X p(y) != p(x,y)\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(p_x(-5) \\cdot p_y(4) = 0.18 \\cdot 0.09 \\neq 0.00\\)\n\\(p_x(-5) \\cdot p_y(-4) = 0.09 \\cdot 0.15 = 0.0135 \\neq 0.06\\)\nNO! NO! NO!"
   },
   {
     "objectID": "slides/lect_04.html#definition-of-numeric-variable",
@@ -1313,7 +1299,7 @@
     "href": "index.html",
     "title": "STAT 1010: Introduction to Business Statistics",
     "section": "",
-    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumerical variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 3 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 5 Oct\nAssociation between random variables\n\n🖥️\n📋\n\n\n\n\n\n\n8\nMon, 10 Oct\n\n📖\n\n\n\n\n\n\n\n\n\nWed, 12 Oct"
+    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumerical variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n\n\n\n\n\n\n8\nMon, 17 Oct\n\n📖\n\n\n\n\n\n\n\n\n\nWed, 19 Oct"
   },
   {
     "objectID": "course-links.html",
