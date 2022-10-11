@@ -396,9 +396,39 @@ data %>%
 - The Sharpe ratio for $X$ is $0.038$, for $Y$ it's $0.046$, investing in both gives a better return $0.050$
 :::
 
-## IID {.smaller}
+# Double the investment
 
-Independent and identically distributed (IID)
+::: increment
+- Invest twice as much for one day
+- Invest in one stock for two subsequent days
+- Which is better? Why?
+:::
+
+## Double for one day
+
+$$S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}$$
+::: increment
+- $\mu_X = 0.1$
+- $Var(X) = 4.99$
+- $r_f = .015$
+
+- $$\begin{aligned}
+&= \frac{2 \cdot 0.1 - 2 \cdot 0.015}{\sqrt{4 \cdot 4.99}}\\
+&= \frac{.2 - 0.03}{\sqrt{19.96}}\\
+&= 0.038
+\end{aligned}$$
+
+- This is the same as before, how do we compute if we invest for two subsequent days?
+:::
+
+## IID {.smaller}
+::: notes
+investing in a stock on subsequent days instead of investing in 2 stocks for one day
+:::
+
+If we invested in a stock on 2 subsequent days instead of investing in 2 stocks on one day the return on those two days are:
+
+**i**ndependent and **i**dentically **d**istributed (IID)
 
 # Your turn
 
