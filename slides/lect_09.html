@@ -523,6 +523,7 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <h2>Revision 2</h2>
 <aside class="notes">
 <p>find the mean, stdev, and use them to find the Sharpe ratio</p>
+<p>we can invest in one of two stocks</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1313,8 +1314,21 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 </section>
 <section id="sharpe-ratio-of-sum---r" class="slide level2">
 <h2>Sharpe ratio of sum - R</h2>
+<aside class="notes">
+<p>What if we want to invest in two subsequent days instead of investing in two stocks for 1 day?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|2|6|10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># input x &amp; y</span></span>
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|2|6|10|21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># input x &amp; y</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">4</span>)</span>
 <span id="cb2-4"><a href="#cb2-4"></a></span>
@@ -1331,27 +1345,22 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 <span id="cb2-15"><a href="#cb2-15"></a>data <span class="sc">%&gt;%</span> </span>
 <span id="cb2-16"><a href="#cb2-16"></a>  <span class="fu">mutate</span>(<span class="at">cov_xy_part =</span> (x <span class="sc">-</span> mu_x)<span class="sc">*</span></span>
 <span id="cb2-17"><a href="#cb2-17"></a>           (y <span class="sc">-</span> mu_y)<span class="sc">*</span>probs, <span class="co"># multiply together</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a>         <span class="at">cov_xy =</span> <span class="fu">sum</span>(cov_xy_part), <span class="co">#</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a>         <span class="at">var_xy =</span> var_x <span class="sc">+</span> var_y <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>cov_xy) <span class="sc">%&gt;%</span>  </span>
-<span id="cb2-20"><a href="#cb2-20"></a>         <span class="fu">summarise</span>(<span class="at">S_r =</span> (mu_x <span class="sc">+</span> mu_y <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span><span class="fl">0.015</span>)<span class="sc">/</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a>                      (<span class="fu">sqrt</span>(var_xy)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-18"><a href="#cb2-18"></a>         <span class="at">cov_xy =</span> <span class="fu">sum</span>(cov_xy_part), <span class="co"># sum them</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a>         <span class="at">var_xy =</span> var_x <span class="sc">+</span> var_y <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>cov_xy) <span class="sc">%&gt;%</span> <span class="co"># using the rule</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>  <span class="fu">summarise</span>(<span class="at">S_r =</span> (mu_x <span class="sc">+</span> mu_y <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span><span class="fl">0.015</span>)<span class="sc">/</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a>                      (<span class="fu">sqrt</span>(var_xy))) <span class="sc">%&gt;%</span> <span class="co"># find the Sharpe value</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a>  <span class="fu">slice</span>(<span class="dv">1</span>) <span class="co"># only the first</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 9 × 1
+<pre><code># A tibble: 1 × 1
      S_r
    &lt;dbl&gt;
-1 0.0497
-2 0.0497
-3 0.0497
-4 0.0497
-5 0.0497
-6 0.0497
-7 0.0497
-8 0.0497
-9 0.0497</code></pre>
+1 0.0497</code></pre>
 </div>
 </div>
 <div>
-<p>The Sharpe ratio for <span class="math inline">\(X\)</span> is <span class="math inline">\(0.038\)</span>, for <span class="math inline">\(Y\)</span> it’s <span class="math inline">\(0.046\)</span>, investing in both gives a better return <span class="math inline">\(0.050\)</span></p>
+<ul>
+<li class="fragment">The Sharpe ratio for <span class="math inline">\(X\)</span> is <span class="math inline">\(0.038\)</span>, for <span class="math inline">\(Y\)</span> it’s <span class="math inline">\(0.046\)</span>, investing in both gives a better return <span class="math inline">\(0.050\)</span></li>
+</ul>
 </div>
 </section>
 <section id="iid" class="slide level2 smaller">
