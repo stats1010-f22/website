@@ -95,7 +95,9 @@ We prefer Apple because it has a higher Sharpe ratio $0.177 > 0.168$
 ::: notes
 find the mean, stdev, and use them to find the Sharpe ratio
 
-we can invest in one of two stocks
+put microsoft is y on the board and IBM is x
+
+copy down the means and st deviation when they get them
 :::
 
 Instead of knowing $\mu$ and $\sigma$ we have a pdf
@@ -398,7 +400,7 @@ data %>%
 
 # Double the investment
 
-::: increment
+::: incremental
 - Invest twice as much for one day
 - Invest in one stock for two subsequent days
 - Which is better? Why?
@@ -407,7 +409,7 @@ data %>%
 ## Double for one day
 
 $$S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}$$
-::: increment
+::: incremental
 - $\mu_X = 0.1$
 - $Var(X) = 4.99$
 - $r_f = .015$
@@ -447,7 +449,7 @@ $$ SD(X_1 + X_2 + ... + X_n) = \sqrt{n} \sigma_x $$
 ## Sharpe ratio - two days
 
 ::: notes
-
+if you decide to leave money in the bank, you may end up with a constant
 :::
 
 $$ S(X_1 + X_2) = \frac{2\mu_x - 2r_f}{\sqrt{2 \sigma^2_x}}$$ 
@@ -461,8 +463,40 @@ $$ S(X_1 + X_2) = \frac{2\mu_x - 2r_f}{\sqrt{2 \sigma^2_x}}$$
 - if you have one stock for two days you reduce the variance
 :::
 
-# Your turn
+# Weighted sums
+If we decide to leave money in the bank, there will be interest that accrues. How can we include this in our model?
 
+::: callout-important
+
+$$E(aX + bY + c) = aE(X) + bE(Y) + c$$
+
+$$Var(aX + bY + c) = a^2Var(X) + b^2Var(Y) + 2abCov(X, Y)$$
+:::
+
+## Expectation of weighted sum
+
+$$ E(2X + 4Y + 0.06)$$
+::: incremental
+- $$\begin{aligned}
+&= 2E(X) + 4E(Y) + 0.06\\
+&= 2(0.10) + 4(0.12) + 0.06\\
+&= \$0.74
+\end{aligned}$$
+:::
+
+## Variance of weighted sum
+
+$$ Var(2X + 4Y + 0.06)$$
+::: incremental
+- $$\begin{aligned}
+&= 2^2Var(X) + 4^2Var(Y) + 2 \cdot(2 \cdot 4) \cdot Cov(X,Y)\\
+&= 4(4.99) + 16(5.27) + 16(2.19)\\
+&= 139.32
+\end{aligned}$$
+:::
+
+
+# Your turn
 [Click here](https://stats1010-f22.github.io/website/ae/ae-9.html) or the qr code below
 
 ```{r, eval=TRUE, echo=FALSE}
