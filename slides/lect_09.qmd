@@ -434,7 +434,7 @@ If we invested in a stock on 2 subsequent days instead of investing in 2 stocks 
 **i**ndependent and **i**dentically **d**istributed (IID)
 
 
-:: incremental
+::: incremental
 - identically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same
 
 - independent - very common assumption for stocks (part of the reason for the 2008 financial crises)
