@@ -891,7 +891,8 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <span id="cb1-18"><a href="#cb1-18"></a>         <span class="at">sd_x =</span> <span class="fu">sqrt</span>(var_x), <span class="co"># find sd of x </span></span>
 <span id="cb1-19"><a href="#cb1-19"></a>         <span class="at">sd_y =</span> <span class="fu">sqrt</span>(var_y)) <span class="sc">%&gt;%</span> <span class="co"># now for y</span></span>
 <span id="cb1-20"><a href="#cb1-20"></a>  <span class="fu">summarise</span>(<span class="at">S_x =</span> (mean_x <span class="sc">-</span> <span class="fl">0.015</span>)<span class="sc">/</span>sd_x, <span class="co"># find Sharpe ratio of x with rf = 0.015</span></span>
-<span id="cb1-21"><a href="#cb1-21"></a>            <span class="at">S_y =</span> (mean_y <span class="sc">-</span> <span class="fl">0.015</span>)<span class="sc">/</span>sd_y) <span class="co"># now for y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-21"><a href="#cb1-21"></a>            <span class="at">S_y =</span> (mean_y <span class="sc">-</span> <span class="fl">0.015</span>)<span class="sc">/</span>sd_y) <span class="sc">%&gt;%</span> <span class="co"># now for y</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
