@@ -450,7 +450,7 @@ $$ Var(X_1 + X_2 + ... + X_n) = n \cdot \sigma^2_x $$
 $$ SD(X_1 + X_2 + ... + X_n) = \sqrt{n} \sigma_x $$
 :::
 
-## Sharpe ratio - two days
+## Sharpe ratio - two days {.smaller}
 
 ::: notes
 if you decide to leave money in the bank, you may end up with a constant
@@ -458,7 +458,7 @@ if you decide to leave money in the bank, you may end up with a constant
 
 $$ S(X_1 + X_2) = \frac{2\mu_x - 2r_f}{\sqrt{2 \sigma^2_x}}$$ 
 
-::: increment
+::: incremental
 - $$\begin{aligned}
 &= \frac{0.20 - 0.03}{\sqrt{9.98}}\\
 &= 0.054
