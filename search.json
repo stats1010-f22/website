@@ -977,7 +977,7 @@
     "href": "slides/lect_09.html#iid",
     "title": "Chapter 10: Association between random variables",
     "section": "IID",
-    "text": "IID\nIf we invested in a stock on 2 subsequent days instead of investing in 2 stocks on one day the return on those two days are:\nindependent and identically distributed (IID)\n\n\nidentically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same\nindependent - very common assumption for stocks (part of the reason for the 2008 financial crises)"
+    "text": "IID\nIf we invested in a stock on 2 subsequent days instead of investing in 2 stocks on one day the return on those two days are:\nindependent and identically distributed (IID)\n:: incremental - identically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same\n\nindependent - very common assumption for stocks (part of the reason for the 2008 financial crises) :::"
   },
   {
     "objectID": "slides/lect_09.html#addition-rules-for-iid-variables",
