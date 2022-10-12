@@ -27,7 +27,6 @@ Chapter 6: Association between quantitative variables
 
     a.  True
     b.  False
-    
 
 ```{r}
 #| eval: false
@@ -39,4 +38,54 @@ praise()
 
 3.  If the correlation between number of customers and sales in dollars in retail stores is $r=0.6$, then what would be the correlation if the sales were measured in thousands of dollars? In euros? (1 euro is worth about $\$US0.97$)
 
+Chapter 10: Association between random variables
 
+4.  Mix and match
+
+    +----------------------------------------------------------+----------------------------------+
+    | 1.  Consequence of positive covariance                   | a\. $p(x, y)$                    |
+    +==========================================================+==================================+
+    | 2.  Covariance between X and Y                           | b\. $\rho$                       |
+    +----------------------------------------------------------+----------------------------------+
+    | 3.  Property of uncorrelated random variables            | c\. $p(x, y) = p(x)p(y)$         |
+    +----------------------------------------------------------+----------------------------------+
+    | 4.  Weighted sum of two random variables                 | d\. $\rho \sigma_X \sigma_Y$     |
+    +----------------------------------------------------------+----------------------------------+
+    | 5.  Sharpe ratio of a random variable                    | e\. $Var(X+Y) > Var(X) +Var(Y)$  |
+    +----------------------------------------------------------+----------------------------------+
+    | 6.  Implies $X$ and $Y$ are independent random variables | f\. $p(x) = p(y)$                |
+    +----------------------------------------------------------+----------------------------------+
+    | 7.  Implies $X$ and $Y$ are identically distributed      | g\. $X_1, X_2, X_3$              |
+    +----------------------------------------------------------+----------------------------------+
+    | 8.  Symbol for correlation between random variables      | h\. $Var(X, Y) = Var(X) +Var(Y)$ |
+    +----------------------------------------------------------+----------------------------------+
+    | 9.  Symbol for a joint probability distribution          | i\. $S(Y)$                       |
+    +----------------------------------------------------------+----------------------------------+
+    | 10. Sequence of iid random variables                     | j\. $3X - 2Y$                    |
+    +----------------------------------------------------------+----------------------------------+
+
+5.  Independent random variables $X$ and $Y$ have the means and standard deviations as given in the following table. Use these parameters to find the expected value and SD of the following random variables that are derived from $X$ and $Y$
+
+    a.  $2X - 100$
+
+    b.  $0.5Y$
+
+    c.  $X+Y$
+
+    d.  $X-Y$
+
+        |     |      |     |
+        |-----|------|-----|
+        |     | Mean | SD  |
+        | $X$ | 1000 | 200 |
+        | $Y$ | 2000 | 600 |
+
+6.  Repeat the calculations above but now $X$ and $Y$ are not independent and have $Cov(X, Y) = 12,500$.
+
+7.  What's the covariance between a random variable $X$ and a constant?
+
+8.  A student budgets \$60 weekly for gas and quick meals off-campus. Let $X$ denote the amount spent for gas and $Y$ the amount spent for quick meals in a typical week. Assume the student sticks to the budget.
+
+    a.  Can we model $X$ and $Y$ as independent random variables? Why or why not?
+
+    b.  Suppose we assume $X$ and $Y$ are dependent. What is the effect of this dependence on the variance of $X+Y$?
