@@ -22,11 +22,12 @@ library(tidyverse)
 
 By the end of this lesson you should:
 
--   Understand the Sharpe ratio and know how to compute it to compare stocks that are not independent
--   Understand and use a joint probability distribution function
--   Know the 3 rules of independence
--   
--   Understand how independence impacts upon a joint probability distribution function
+- Understand the Sharpe ratio and know how to compute it to compare stocks that are not independent
+- Understand and use a joint probability distribution function
+- Know the 3 rules of independence
+- Understand how covariance, correlation, and independence intertwine
+- Explain how independent and identically distributed random variables impact upon expectation, variance, and standard deviation
+- Compute expectation and variance of weighted sums
 
 # Revision 1
 
@@ -72,13 +73,13 @@ work through it, then what if we don't know mu and sigma could we find it if we 
 ::: {.column width="50%"}
 ::: incremental
 -   $$\begin{aligned}
-    S(A) &= \frac{\mu - r_f}{\sigma}\\
+    S(A) &= \frac{\mu_A - r_f}{\sigma_A}\\
     &= \frac{2.45 - 0.1}{13.3}\\
     &=  0.177
     \end{aligned}$$
 
 -   $$\begin{aligned}
-    S(M) &= \frac{\mu - r_f}{\sigma}\\
+    S(M) &= \frac{\mu_M - r_f}{\sigma_M}\\
     &= \frac{1.14 - 0.1}{6.2}\\
     &=  0.168
     \end{aligned}$$
@@ -302,7 +303,7 @@ because we square things and $(a + b)^2 = a^2 + b^2 + 2ab$ we have to add 2 of t
 -   $Var(X + Y) = Var(X) + Var(Y) + 2Cov(X, Y)$
 :::
 
-## Correlation
+## Correlation {.smaller}
 
 ::: notes
 what about our joint pdf? is it positively or negatively correlated? 3D plot
@@ -411,6 +412,7 @@ data %>%
 
 $$S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}$$
 ::: incremental
+
 - $\mu_X = 0.1$
 - $Var(X) = 4.99$
 - $r_f = .015$
@@ -422,6 +424,7 @@ $$S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}$$
 \end{aligned}$$
 
 - This is the same as before, how do we compute if we invest for two subsequent days?
+
 :::
 
 ## IID {.smaller}
