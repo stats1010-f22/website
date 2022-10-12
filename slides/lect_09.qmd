@@ -181,7 +181,8 @@ Sharpe_ratio <- # name this the Sharpe ratio
          sd_x = sqrt(var_x), # find sd of x 
          sd_y = sqrt(var_y)) %>% # now for y
   summarise(S_x = (mean_x - 0.015)/sd_x, # find Sharpe ratio of x with rf = 0.015
-            S_y = (mean_y - 0.015)/sd_y) # now for y
+            S_y = (mean_y - 0.015)/sd_y) %>% # now for y
+  slice(1)
 ```
 
 # Joint probability distributions {.smaller}
