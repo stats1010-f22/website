@@ -41,7 +41,7 @@ write S(X) formula on the board
 often mu and sigma are unknown parameters
 :::
 
-$$S(X) = \frac{\mu - r_f}{\sigma}$$
+$$S(X) = \frac{\mu_X - r_f}{\sigma_X}$$
 
 ::: incremental
 -   $r_f$ is the return on a risk-free investment
@@ -240,7 +240,7 @@ So are X and Y independent?
 If the probability of one event occuring has no impact on another event occuring, they are independent.
 
 ::: incremental
--   If $X$ and $Y$ and independent then $p(x,y) = p(x) \cdot p(y)$ for all pairs $(x,y)$
+-   If $X$ and $Y$ are independent then $p(x,y) = p(x) \cdot p(y)$ for all pairs $(x,y)$
 
 -   If $p(x,y) = p(x) \cdot p(y)$ for all $(x, y)$ pairs, then $X$ and $Y$ are independent.
 
