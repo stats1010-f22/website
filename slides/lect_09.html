@@ -523,7 +523,8 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 <h2>Revision 2</h2>
 <aside class="notes">
 <p>find the mean, stdev, and use them to find the Sharpe ratio</p>
-<p>we can invest in one of two stocks</p>
+<p>put microsoft is y on the board and IBM is x</p>
+<p>copy down the means and st deviation when they get them</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1366,17 +1367,17 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 <section>
 <section id="double-the-investment" class="title-slide slide level1 center">
 <h1>Double the investment</h1>
-<div class="increment">
+<div>
 <ul>
-<li>Invest twice as much for one day</li>
-<li>Invest in one stock for two subsequent days</li>
-<li>Which is better? Why?</li>
+<li class="fragment">Invest twice as much for one day</li>
+<li class="fragment">Invest in one stock for two subsequent days</li>
+<li class="fragment">Which is better? Why?</li>
 </ul>
 </div>
 </section>
 <section id="double-for-one-day" class="slide level2">
 <h2>Double for one day</h2>
-<p><span class="math display">\[S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}\]</span> ::: increment - <span class="math inline">\(\mu_X = 0.1\)</span> - <span class="math inline">\(Var(X) = 4.99\)</span> - <span class="math inline">\(r_f = .015\)</span></p>
+<p><span class="math display">\[S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}\]</span> ::: incremental - <span class="math inline">\(\mu_X = 0.1\)</span> - <span class="math inline">\(Var(X) = 4.99\)</span> - <span class="math inline">\(r_f = .015\)</span></p>
 <ul>
 <li><p><span class="math display">\[\begin{aligned}
 &amp;= \frac{2 \cdot 0.1 - 2 \cdot 0.015}{\sqrt{4 \cdot 4.99}}\\
@@ -1415,7 +1416,7 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 <section id="sharpe-ratio---two-days" class="slide level2">
 <h2>Sharpe ratio - two days</h2>
 <aside class="notes">
-
+<p>if you decide to leave money in the bank, you may end up with a constant</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1438,6 +1439,41 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 <li>if you have one stock for two days you reduce the variance</li>
 </ul>
 </div>
+</section></section>
+<section>
+<section id="weighted-sums" class="title-slide slide level1 center">
+<h1>Weighted sums</h1>
+<p>If we decide to leave money in the bank, there will be interest that accrues. How can we include this in our model?</p>
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math display">\[E(aX + bY + c) = aE(X) + bE(Y) + c\]</span></p>
+<p><span class="math display">\[Var(aX + bY + c) = a^2Var(X) + b^2Var(Y) + 2abCov(X, Y)\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="expectation-of-weighted-sum" class="slide level2">
+<h2>Expectation of weighted sum</h2>
+<p><span class="math display">\[ E(2X + 4Y + 0.06)\]</span> ::: incremental - <span class="math display">\[\begin{aligned}
+&amp;= 2E(X) + 4E(Y) + 0.06\\
+&amp;= 2(0.10) + 4(0.12) + 0.06\\
+&amp;= \$0.74
+\end{aligned}\]</span> :::</p>
+</section>
+<section id="variance-of-weighted-sum" class="slide level2">
+<h2>Variance of weighted sum</h2>
+<p><span class="math display">\[ Var(2X + 4Y + 0.06)\]</span> ::: incremental - <span class="math display">\[\begin{aligned}
+&amp;= 2^2Var(X) + 4^2Var(Y) + 2 \cdot(2 \cdot 4) \cdot Cov(X,Y)\\
+&amp;= 4(4.99) + 16(5.27) + 16(2.19)\\
+&amp;= 139.32
+\end{aligned}\]</span> :::</p>
 </section></section>
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>

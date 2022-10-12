@@ -872,7 +872,7 @@
     "href": "slides/lect_09.html#revision-2",
     "title": "Chapter 10: Association between random variables",
     "section": "Revision 2",
-    "text": "Revision 2\n\nfind the mean, stdev, and use them to find the Sharpe ratio\nwe can invest in one of two stocks\n\nInstead of knowing \\(\\mu\\) and \\(\\sigma\\) we have a pdf\n\n\n\n\nIBM stock\nIBM stock\nMicrosoft\nMicrosoft\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(y\\)\n\\(P(Y = y)\\)\n\n\nIncreases\n$5\n0.11\n$4\n0.18\n\n\nNo change\n0\n0.80\n0\n0.67\n\n\nDecreases\n-$5\n0.09\n-$4\n0.15"
+    "text": "Revision 2\n\nfind the mean, stdev, and use them to find the Sharpe ratio\nput microsoft is y on the board and IBM is x\ncopy down the means and st deviation when they get them\n\nInstead of knowing \\(\\mu\\) and \\(\\sigma\\) we have a pdf\n\n\n\n\nIBM stock\nIBM stock\nMicrosoft\nMicrosoft\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(y\\)\n\\(P(Y = y)\\)\n\n\nIncreases\n$5\n0.11\n$4\n0.18\n\n\nNo change\n0\n0.80\n0\n0.67\n\n\nDecreases\n-$5\n0.09\n-$4\n0.15"
   },
   {
     "objectID": "slides/lect_09.html#sharpe-ratio-by-hand",
@@ -970,7 +970,7 @@
     "href": "slides/lect_09.html#double-for-one-day",
     "title": "Chapter 10: Association between random variables",
     "section": "Double for one day",
-    "text": "Double for one day\n\\[S(2X) = \\frac{2\\mu_X - 2r_f}{\\sqrt{Var(2X)}}\\] ::: increment - \\(\\mu_X = 0.1\\) - \\(Var(X) = 4.99\\) - \\(r_f = .015\\)\n\n\\[\\begin{aligned}\n&= \\frac{2 \\cdot 0.1 - 2 \\cdot 0.015}{\\sqrt{4 \\cdot 4.99}}\\\\\n&= \\frac{.2 - 0.03}{\\sqrt{19.96}}\\\\\n&= 0.038\n\\end{aligned}\\]\nThis is the same as before, how do we compute if we invest for two subsequent days? :::"
+    "text": "Double for one day\n\\[S(2X) = \\frac{2\\mu_X - 2r_f}{\\sqrt{Var(2X)}}\\] ::: incremental - \\(\\mu_X = 0.1\\) - \\(Var(X) = 4.99\\) - \\(r_f = .015\\)\n\n\\[\\begin{aligned}\n&= \\frac{2 \\cdot 0.1 - 2 \\cdot 0.015}{\\sqrt{4 \\cdot 4.99}}\\\\\n&= \\frac{.2 - 0.03}{\\sqrt{19.96}}\\\\\n&= 0.038\n\\end{aligned}\\]\nThis is the same as before, how do we compute if we invest for two subsequent days? :::"
   },
   {
     "objectID": "slides/lect_09.html#iid",
@@ -991,7 +991,21 @@
     "href": "slides/lect_09.html#sharpe-ratio---two-days",
     "title": "Chapter 10: Association between random variables",
     "section": "Sharpe ratio - two days",
-    "text": "Sharpe ratio - two days\n\n\n\n\\[ S(X_1 + X_2) = \\frac{2\\mu_x - 2r_f}{\\sqrt{2 \\sigma^2_x}}\\]\n\n\n\\[\\begin{aligned}\n&= \\frac{0.20 - 0.03}{\\sqrt{9.98}}\\\\\n&= 0.054\n\\end{aligned}\\]\nyou expect more variance if you have two stock for one day b/c anything that happens that day is magnified\nif you have one stock for two days you reduce the variance"
+    "text": "Sharpe ratio - two days\n\nif you decide to leave money in the bank, you may end up with a constant\n\n\\[ S(X_1 + X_2) = \\frac{2\\mu_x - 2r_f}{\\sqrt{2 \\sigma^2_x}}\\]\n\n\n\\[\\begin{aligned}\n&= \\frac{0.20 - 0.03}{\\sqrt{9.98}}\\\\\n&= 0.054\n\\end{aligned}\\]\nyou expect more variance if you have two stock for one day b/c anything that happens that day is magnified\nif you have one stock for two days you reduce the variance"
+  },
+  {
+    "objectID": "slides/lect_09.html#expectation-of-weighted-sum",
+    "href": "slides/lect_09.html#expectation-of-weighted-sum",
+    "title": "Chapter 10: Association between random variables",
+    "section": "Expectation of weighted sum",
+    "text": "Expectation of weighted sum\n\\[ E(2X + 4Y + 0.06)\\] ::: incremental - \\[\\begin{aligned}\n&= 2E(X) + 4E(Y) + 0.06\\\\\n&= 2(0.10) + 4(0.12) + 0.06\\\\\n&= \\$0.74\n\\end{aligned}\\] :::"
+  },
+  {
+    "objectID": "slides/lect_09.html#variance-of-weighted-sum",
+    "href": "slides/lect_09.html#variance-of-weighted-sum",
+    "title": "Chapter 10: Association between random variables",
+    "section": "Variance of weighted sum",
+    "text": "Variance of weighted sum\n\\[ Var(2X + 4Y + 0.06)\\] ::: incremental - \\[\\begin{aligned}\n&= 2^2Var(X) + 4^2Var(Y) + 2 \\cdot(2 \\cdot 4) \\cdot Cov(X,Y)\\\\\n&= 4(4.99) + 16(5.27) + 16(2.19)\\\\\n&= 139.32\n\\end{aligned}\\] :::"
   },
   {
     "objectID": "slides/lect_04.html#definition-of-numeric-variable",
