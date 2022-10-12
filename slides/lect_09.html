@@ -1397,10 +1397,12 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 <h2>IID</h2>
 <p>If we invested in a stock on 2 subsequent days instead of investing in 2 stocks on one day the return on those two days are:</p>
 <p><strong>i</strong>ndependent and <strong>i</strong>dentically <strong>d</strong>istributed (IID)</p>
-<p>:: incremental - identically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same</p>
+<div>
 <ul>
-<li>independent - very common assumption for stocks (part of the reason for the 2008 financial crises) :::</li>
+<li class="fragment"><p>identically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same</p></li>
+<li class="fragment"><p>independent - very common assumption for stocks (part of the reason for the 2008 financial crises)</p></li>
 </ul>
+</div>
 </section>
 <section id="addition-rules-for-iid-variables" class="slide level2">
 <h2>Addition rules for IID variables</h2>
@@ -1419,7 +1421,7 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 </div>
 </div>
 </section>
-<section id="sharpe-ratio---two-days" class="slide level2">
+<section id="sharpe-ratio---two-days" class="slide level2 smaller">
 <h2>Sharpe ratio - two days</h2>
 <aside class="notes">
 <p>if you decide to leave money in the bank, you may end up with a constant</p>
@@ -1435,14 +1437,14 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
           display:block!important;
       }</style></aside>
 <p><span class="math display">\[ S(X_1 + X_2) = \frac{2\mu_x - 2r_f}{\sqrt{2 \sigma^2_x}}\]</span></p>
-<div class="increment">
+<div>
 <ul>
-<li><span class="math display">\[\begin{aligned}
+<li class="fragment"><span class="math display">\[\begin{aligned}
 &amp;= \frac{0.20 - 0.03}{\sqrt{9.98}}\\
 &amp;= 0.054
 \end{aligned}\]</span></li>
-<li>you expect more variance if you have two stock for one day b/c anything that happens that day is magnified</li>
-<li>if you have one stock for two days you reduce the variance</li>
+<li class="fragment">you expect more variance if you have two stock for one day b/c anything that happens that day is magnified</li>
+<li class="fragment">if you have one stock for two days you reduce the variance</li>
 </ul>
 </div>
 </section></section>
