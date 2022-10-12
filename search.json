@@ -865,7 +865,7 @@
     "href": "slides/lect_09.html#compute-the-sharpe-ratio-1",
     "title": "Chapter 10: Association between random variables",
     "section": "Compute the Sharpe ratio",
-    "text": "Compute the Sharpe ratio\n\nwork through it, then what if we don’t know mu and sigma could we find it if we had a pdf?\n\n\n\n\n\n\\[\\begin{aligned}\nS(A) &= \\frac{\\mu - r_f}{\\sigma}\\\\\n&= \\frac{2.45 - 0.1}{13.3}\\\\\n&=  0.177\n\\end{aligned}\\]\n\\[\\begin{aligned}\nS(M) &= \\frac{\\mu - r_f}{\\sigma}\\\\\n&= \\frac{1.14 - 0.1}{6.2}\\\\\n&=  0.168\n\\end{aligned}\\]\n\n\n\nWe prefer Apple because it has a higher Sharpe ratio \\(0.177 > 0.168\\)"
+    "text": "Compute the Sharpe ratio\n\nwork through it, then what if we don’t know mu and sigma could we find it if we had a pdf?\n\n\n\n\n\n\\[\\begin{aligned}\nS(A) &= \\frac{\\mu_A - r_f}{\\sigma_A}\\\\\n&= \\frac{2.45 - 0.1}{13.3}\\\\\n&=  0.177\n\\end{aligned}\\]\n\\[\\begin{aligned}\nS(M) &= \\frac{\\mu_M - r_f}{\\sigma_M}\\\\\n&= \\frac{1.14 - 0.1}{6.2}\\\\\n&=  0.168\n\\end{aligned}\\]\n\n\n\nWe prefer Apple because it has a higher Sharpe ratio \\(0.177 > 0.168\\)"
   },
   {
     "objectID": "slides/lect_09.html#revision-2",
@@ -970,14 +970,14 @@
     "href": "slides/lect_09.html#double-for-one-day",
     "title": "Chapter 10: Association between random variables",
     "section": "Double for one day",
-    "text": "Double for one day\n\\[S(2X) = \\frac{2\\mu_X - 2r_f}{\\sqrt{Var(2X)}}\\] ::: incremental - \\(\\mu_X = 0.1\\) - \\(Var(X) = 4.99\\) - \\(r_f = .015\\)\n\n\\[\\begin{aligned}\n&= \\frac{2 \\cdot 0.1 - 2 \\cdot 0.015}{\\sqrt{4 \\cdot 4.99}}\\\\\n&= \\frac{.2 - 0.03}{\\sqrt{19.96}}\\\\\n&= 0.038\n\\end{aligned}\\]\nThis is the same as before, how do we compute if we invest for two subsequent days? :::"
+    "text": "Double for one day\n\\[S(2X) = \\frac{2\\mu_X - 2r_f}{\\sqrt{Var(2X)}}\\] ::: incremental\n\n\\(\\mu_X = 0.1\\)\n\\(Var(X) = 4.99\\)\n\\(r_f = .015\\)\n\\[\\begin{aligned}\n&= \\frac{2 \\cdot 0.1 - 2 \\cdot 0.015}{\\sqrt{4 \\cdot 4.99}}\\\\\n&= \\frac{.2 - 0.03}{\\sqrt{19.96}}\\\\\n&= 0.038\n\\end{aligned}\\]\nThis is the same as before, how do we compute if we invest for two subsequent days?\n\n:::"
   },
   {
     "objectID": "slides/lect_09.html#iid",
     "href": "slides/lect_09.html#iid",
     "title": "Chapter 10: Association between random variables",
     "section": "IID",
-    "text": "IID\nIf we invested in a stock on 2 subsequent days instead of investing in 2 stocks on one day the return on those two days are:\nindependent and identically distributed (IID)\n:: incremental - identically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same\n\nindependent - very common assumption for stocks (part of the reason for the 2008 financial crises) :::"
+    "text": "IID\nIf we invested in a stock on 2 subsequent days instead of investing in 2 stocks on one day the return on those two days are:\nindependent and identically distributed (IID)\n\n\nidentically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same\nindependent - very common assumption for stocks (part of the reason for the 2008 financial crises)"
   },
   {
     "objectID": "slides/lect_09.html#addition-rules-for-iid-variables",

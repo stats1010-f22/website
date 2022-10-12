@@ -405,8 +405,9 @@
 <li>Understand the Sharpe ratio and know how to compute it to compare stocks that are not independent</li>
 <li>Understand and use a joint probability distribution function</li>
 <li>Know the 3 rules of independence</li>
-<li></li>
-<li>Understand how independence impacts upon a joint probability distribution function</li>
+<li>Understand how covariance, correlation, and independence intertwine</li>
+<li>Explain how independent and identically distributed random variables impact upon expectation, variance, and standard deviation</li>
+<li>Compute expectation and variance of weighted sums</li>
 </ul>
 </section>
 
@@ -503,12 +504,12 @@
 <div>
 <ul>
 <li class="fragment"><p><span class="math display">\[\begin{aligned}
-S(A) &amp;= \frac{\mu - r_f}{\sigma}\\
+S(A) &amp;= \frac{\mu_A - r_f}{\sigma_A}\\
 &amp;= \frac{2.45 - 0.1}{13.3}\\
 &amp;=  0.177
 \end{aligned}\]</span></p></li>
 <li class="fragment"><p><span class="math display">\[\begin{aligned}
-S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
+S(M) &amp;= \frac{\mu_M - r_f}{\sigma_M}\\
 &amp;= \frac{1.14 - 0.1}{6.2}\\
 &amp;=  0.168
 \end{aligned}\]</span></p></li>
@@ -1205,7 +1206,7 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
 </ul>
 </div>
 </section>
-<section id="correlation" class="slide level2">
+<section id="correlation" class="slide level2 smaller">
 <h2>Correlation</h2>
 <aside class="notes">
 <p>what about our joint pdf? is it positively or negatively correlated? 3D plot</p>
@@ -1378,24 +1379,30 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 </section>
 <section id="double-for-one-day" class="slide level2">
 <h2>Double for one day</h2>
-<p><span class="math display">\[S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}\]</span> ::: incremental - <span class="math inline">\(\mu_X = 0.1\)</span> - <span class="math inline">\(Var(X) = 4.99\)</span> - <span class="math inline">\(r_f = .015\)</span></p>
+<p><span class="math display">\[S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}\]</span> ::: incremental</p>
 <ul>
+<li><p><span class="math inline">\(\mu_X = 0.1\)</span></p></li>
+<li><p><span class="math inline">\(Var(X) = 4.99\)</span></p></li>
+<li><p><span class="math inline">\(r_f = .015\)</span></p></li>
 <li><p><span class="math display">\[\begin{aligned}
 &amp;= \frac{2 \cdot 0.1 - 2 \cdot 0.015}{\sqrt{4 \cdot 4.99}}\\
 &amp;= \frac{.2 - 0.03}{\sqrt{19.96}}\\
 &amp;= 0.038
 \end{aligned}\]</span></p></li>
-<li><p>This is the same as before, how do we compute if we invest for two subsequent days? :::</p></li>
+<li><p>This is the same as before, how do we compute if we invest for two subsequent days?</p></li>
 </ul>
+<p>:::</p>
 </section>
 <section id="iid" class="slide level2 smaller">
 <h2>IID</h2>
 <p>If we invested in a stock on 2 subsequent days instead of investing in 2 stocks on one day the return on those two days are:</p>
 <p><strong>i</strong>ndependent and <strong>i</strong>dentically <strong>d</strong>istributed (IID)</p>
-<p>:: incremental - identically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same</p>
+<div>
 <ul>
-<li>independent - very common assumption for stocks (part of the reason for the 2008 financial crises) :::</li>
+<li class="fragment"><p>identically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same</p></li>
+<li class="fragment"><p>independent - very common assumption for stocks (part of the reason for the 2008 financial crises)</p></li>
 </ul>
+</div>
 </section>
 <section id="addition-rules-for-iid-variables" class="slide level2">
 <h2>Addition rules for IID variables</h2>
