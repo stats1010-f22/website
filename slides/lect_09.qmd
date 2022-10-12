@@ -313,7 +313,7 @@ what about our joint pdf? is it positively or negatively correlated? 3D plot
 As $X$ increases, what happens to $Y$?
 :::
 
-::: column-margin
+::: {.column-margin}
 |     |        | $X$      | $X$     | $X$     |        |
 |-----|--------|----------|---------|---------|--------|
 |     |        | $x = -5$ | $x = 0$ | $x = 5$ | $p(y)$ |
@@ -422,9 +422,6 @@ $$S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}$$
 :::
 
 ## IID {.smaller}
-::: notes
-investing in a stock on subsequent days instead of investing in 2 stocks for one day
-:::
 
 If we invested in a stock on 2 subsequent days instead of investing in 2 stocks on one day the return on those two days are:
 
@@ -434,8 +431,36 @@ If we invested in a stock on 2 subsequent days instead of investing in 2 stocks 
 :: incremental
 - identically distributed - the outcomes on each day are likely to be different, but the probability of the outcomes is the same
 
-- independent - 
+- independent - very common assumption for stocks (part of the reason for the 2008 financial crises)
 :::
+
+## Addition rules for IID variables
+
+::: callout-important
+If $n$ random variables $(X_1, X_2, ..., X_n)$ are iid with mean $\mu_x$ and standard deviation $\sigma_x$, then
+
+$$ E(X_1 + X_2 + ... + X_n) = n \cdot \mu_x $$
+$$ Var(X_1 + X_2 + ... + X_n) = n \cdot \sigma^2_x $$
+$$ SD(X_1 + X_2 + ... + X_n) = \sqrt{n} \sigma_x $$
+:::
+
+## Sharpe ratio - two days
+
+::: notes
+
+:::
+
+$$ S(X_1 + X_2) = \frac{2\mu_x - 2r_f}{\sqrt{2 \sigma^2_x}}$$ 
+
+::: increment
+- $$\begin{aligned}
+&= \frac{0.20 - 0.03}{\sqrt{9.98}}\\
+&= 0.054
+\end{aligned}$$
+- you expect more variance if you have two stock for one day b/c anything that happens that day is magnified
+- if you have one stock for two days you reduce the variance
+:::
+
 # Your turn
 
 [Click here](https://stats1010-f22.github.io/website/ae/ae-9.html) or the qr code below
