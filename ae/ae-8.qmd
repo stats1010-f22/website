@@ -1,5 +1,5 @@
 ---
-title: "Random variables"
+title: "Random variables AE-8"
 output: 
    html_document
 ---
