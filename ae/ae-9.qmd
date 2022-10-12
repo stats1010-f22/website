@@ -80,6 +80,14 @@ Chapter 10: Association between random variables
         | $X$ | 1000 | 200 |
         | $Y$ | 2000 | 600 |
 
+```{r}
+#| eval: false
+#| message: false
+#| echo: true
+
+praise()
+```
+
 6.  Repeat the calculations above but now $X$ and $Y$ are not independent and have $Cov(X, Y) = 12,500$.
 
 7.  What's the covariance between a random variable $X$ and a constant?
