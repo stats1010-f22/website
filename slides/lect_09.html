@@ -582,16 +582,16 @@ S(M) &amp;= \frac{\mu_M - r_f}{\sigma_M}\\
 </section>
 <section id="sharpe-ratio-by-hand" class="slide level2 smaller">
 <h2>Sharpe ratio by hand</h2>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col style="width: 10%">
-<col style="width: 5%">
 <col style="width: 11%">
-<col style="width: 10%">
-<col style="width: 29%">
+<col style="width: 6%">
+<col style="width: 12%">
 <col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 13%">
+<col style="width: 28%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -653,14 +653,14 @@ S(M) &amp;= \frac{\mu_M - r_f}{\sigma_M}\\
 <h2>Sharpe ratio by hand</h2>
 <table>
 <colgroup>
+<col style="width: 11%">
+<col style="width: 6%">
 <col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 28%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -720,16 +720,16 @@ S(M) &amp;= \frac{\mu_M - r_f}{\sigma_M}\\
 </section>
 <section id="sharpe-ratio-by-hand-2" class="slide level2 smaller">
 <h2>Sharpe ratio by hand</h2>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col style="width: 10%">
-<col style="width: 6%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 29%">
+<col style="width: 11%">
+<col style="width: 7%">
+<col style="width: 11%">
 <col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 13%">
+<col style="width: 28%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -791,14 +791,14 @@ S(M) &amp;= \frac{\mu_M - r_f}{\sigma_M}\\
 <h2>Sharpe ratio by hand</h2>
 <table>
 <colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 7%">
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 28%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1379,19 +1379,20 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 </section>
 <section id="double-for-one-day" class="slide level2">
 <h2>Double for one day</h2>
-<p><span class="math display">\[S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}\]</span> ::: incremental</p>
+<p><span class="math display">\[S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}\]</span></p>
+<div>
 <ul>
-<li><p><span class="math inline">\(\mu_X = 0.1\)</span></p></li>
-<li><p><span class="math inline">\(Var(X) = 4.99\)</span></p></li>
-<li><p><span class="math inline">\(r_f = .015\)</span></p></li>
-<li><p><span class="math display">\[\begin{aligned}
+<li class="fragment"><p><span class="math inline">\(\mu_X = 0.1\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(Var(X) = 4.99\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(r_f = .015\)</span></p></li>
+<li class="fragment"><p><span class="math display">\[\begin{aligned}
 &amp;= \frac{2 \cdot 0.1 - 2 \cdot 0.015}{\sqrt{4 \cdot 4.99}}\\
 &amp;= \frac{.2 - 0.03}{\sqrt{19.96}}\\
 &amp;= 0.038
 \end{aligned}\]</span></p></li>
-<li><p>This is the same as before, how do we compute if we invest for two subsequent days?</p></li>
+<li class="fragment"><p>This is the same as before, how do we compute if we invest for two subsequent days?</p></li>
 </ul>
-<p>:::</p>
+</div>
 </section>
 <section id="iid" class="slide level2 smaller">
 <h2>IID</h2>
@@ -1469,19 +1470,29 @@ Cov(X,Y) &amp;= E((X-\mu_X)(Y-\mu_Y))\\
 </section>
 <section id="expectation-of-weighted-sum" class="slide level2">
 <h2>Expectation of weighted sum</h2>
-<p><span class="math display">\[ E(2X + 4Y + 0.06)\]</span> ::: incremental - <span class="math display">\[\begin{aligned}
+<p><span class="math display">\[ E(2X + 4Y + 0.06)\]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math display">\[\begin{aligned}
 &amp;= 2E(X) + 4E(Y) + 0.06\\
 &amp;= 2(0.10) + 4(0.12) + 0.06\\
 &amp;= \$0.74
-\end{aligned}\]</span> :::</p>
+\end{aligned}\]</span></li>
+</ul>
+</div>
 </section>
 <section id="variance-of-weighted-sum" class="slide level2">
 <h2>Variance of weighted sum</h2>
-<p><span class="math display">\[ Var(2X + 4Y + 0.06)\]</span> ::: incremental - <span class="math display">\[\begin{aligned}
+<p><span class="math display">\[ Var(2X + 4Y + 0.06)\]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math display">\[\begin{aligned}
 &amp;= 2^2Var(X) + 4^2Var(Y) + 2 \cdot(2 \cdot 4) \cdot Cov(X,Y)\\
 &amp;= 4(4.99) + 16(5.27) + 16(2.19)\\
 &amp;= 139.32
-\end{aligned}\]</span> :::</p>
+\end{aligned}\]</span></li>
+</ul>
+</div>
 </section></section>
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>
