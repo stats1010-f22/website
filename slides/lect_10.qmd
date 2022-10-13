@@ -123,7 +123,15 @@ E(Y) &= E(B_1) + E(B_2) + ... + E(B_n) \\
 
 
 ## Var(Binomial)
+$$Var(Y) = Var(B_1 + B_2 + ... + B_n)$$
 
+::: incremental
+- $$\begin{aligned}
+Var(Y) &= Var(B_1) + Var(B_2) + ... + Var(B_n) \\
+&= p(1-p) + p(1-p) + ... + p(1-p) \\
+&= np(1-p)
+\end{aligned}$$
+:::
 
 ## Counting things
 ::: notes
@@ -141,8 +149,17 @@ In a class of 85 students how many groups of 4 are possible?
 - If we don't care about order
 - $\frac{85 \cdot 84 \cdot 83 \cdot 82}{4 \cdot 3 \cdot 2 \cdot 1}$
 - $2024785$ groups
+- *Combination* written as ${}_{n}C_{k}$ here $n = 85$, $k = 4$
+
 :::
 
+In `R`:
+```{r}
+#| echo: true
+#| eval: true
+
+exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
+```
 
 
 
