@@ -306,7 +306,7 @@ what about our joint pdf? is it positively or negatively correlated? 3D plot
 ::: incremental
 -   $corr(x, y) = \frac{cov(x, y)}{s_x \cdot s_y}$
 
--   $$\rho = Corr(X, Y) = \frac{Cov(X, Y)}{\sigma_x \cdot \sigma_y}$$
+-   $$\rho = Corr(X, Y) = \frac{Cov(X, Y)}{\sigma_X \cdot \sigma_Y}$$
 
 As $X$ increases, what happens to $Y$?
 :::
@@ -401,7 +401,7 @@ data %>%
 -   Which is better? Why?
 :::
 
-## Double for one day
+## Double for one day {.smaller}
 
 $$S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}$$
 
@@ -436,9 +436,9 @@ If we invested in a stock on 2 subsequent days instead of investing in 2 stocks 
 ## Addition rules for IID variables
 
 ::: callout-important
-If $n$ random variables $(X_1, X_2, ..., X_n)$ are iid with mean $\mu_x$ and standard deviation $\sigma_x$, then
+If $n$ random variables $(X_1, X_2, ..., X_n)$ are iid with mean $\mu_X$ and standard deviation $\sigma_X$, then
 
-$$ E(X_1 + X_2 + ... + X_n) = n \cdot \mu_x $$ $$ Var(X_1 + X_2 + ... + X_n) = n \cdot \sigma^2_x $$ $$ SD(X_1 + X_2 + ... + X_n) = \sqrt{n} \sigma_x $$
+$$ E(X_1 + X_2 + ... + X_n) = n \cdot \mu_X $$ $$ Var(X_1 + X_2 + ... + X_n) = n \cdot \sigma^2_x $$ $$ SD(X_1 + X_2 + ... + X_n) = \sqrt{n} \sigma_X $$
 :::
 
 ## Sharpe ratio - two days {.smaller}
@@ -447,7 +447,7 @@ $$ E(X_1 + X_2 + ... + X_n) = n \cdot \mu_x $$ $$ Var(X_1 + X_2 + ... + X_n) = n
 if you decide to leave money in the bank, you may end up with a constant
 :::
 
-$$ S(X_1 + X_2) = \frac{2\mu_x - 2r_f}{\sqrt{2 \sigma^2_x}}$$
+$$ S(X_1 + X_2) = \frac{2\mu_X - 2r_f}{\sqrt{2 \sigma^2_x}}$$
 
 ::: incremental
 -   $$\begin{aligned}
