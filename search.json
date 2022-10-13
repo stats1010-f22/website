@@ -935,7 +935,7 @@
     "href": "slides/lect_09.html#correlation",
     "title": "Chapter 10: Association between random variables",
     "section": "Correlation",
-    "text": "Correlation\n\nwhat about our joint pdf? is it positively or negatively correlated? 3D plot\n\n\n\n\\(corr(x, y) = \\frac{cov(x, y)}{s_x \\cdot s_y}\\)\n\\[\\rho = Corr(X, Y) = \\frac{Cov(X, Y)}{\\sigma_x \\cdot \\sigma_y}\\]\n\nAs \\(X\\) increases, what happens to \\(Y\\)?\n\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)"
+    "text": "Correlation\n\nwhat about our joint pdf? is it positively or negatively correlated? 3D plot\n\n\n\n\\(corr(x, y) = \\frac{cov(x, y)}{s_x \\cdot s_y}\\)\n\\[\\rho = Corr(X, Y) = \\frac{Cov(X, Y)}{\\sigma_X \\cdot \\sigma_Y}\\]\n\nAs \\(X\\) increases, what happens to \\(Y\\)?\n\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)"
   },
   {
     "objectID": "slides/lect_09.html#independence-cov",
@@ -984,14 +984,14 @@
     "href": "slides/lect_09.html#addition-rules-for-iid-variables",
     "title": "Chapter 10: Association between random variables",
     "section": "Addition rules for IID variables",
-    "text": "Addition rules for IID variables\n\n\n\n\n\n\nImportant\n\n\nIf \\(n\\) random variables \\((X_1, X_2, ..., X_n)\\) are iid with mean \\(\\mu_x\\) and standard deviation \\(\\sigma_x\\), then\n\\[ E(X_1 + X_2 + ... + X_n) = n \\cdot \\mu_x \\] \\[ Var(X_1 + X_2 + ... + X_n) = n \\cdot \\sigma^2_x \\] \\[ SD(X_1 + X_2 + ... + X_n) = \\sqrt{n} \\sigma_x \\]"
+    "text": "Addition rules for IID variables\n\n\n\n\n\n\nImportant\n\n\nIf \\(n\\) random variables \\((X_1, X_2, ..., X_n)\\) are iid with mean \\(\\mu_X\\) and standard deviation \\(\\sigma_X\\), then\n\\[ E(X_1 + X_2 + ... + X_n) = n \\cdot \\mu_X \\] \\[ Var(X_1 + X_2 + ... + X_n) = n \\cdot \\sigma^2_x \\] \\[ SD(X_1 + X_2 + ... + X_n) = \\sqrt{n} \\sigma_X \\]"
   },
   {
     "objectID": "slides/lect_09.html#sharpe-ratio---two-days",
     "href": "slides/lect_09.html#sharpe-ratio---two-days",
     "title": "Chapter 10: Association between random variables",
     "section": "Sharpe ratio - two days",
-    "text": "Sharpe ratio - two days\n\nif you decide to leave money in the bank, you may end up with a constant\n\n\\[ S(X_1 + X_2) = \\frac{2\\mu_x - 2r_f}{\\sqrt{2 \\sigma^2_x}}\\]\n\n\n\\[\\begin{aligned}\n&= \\frac{0.20 - 0.03}{\\sqrt{9.98}}\\\\\n&= 0.054\n\\end{aligned}\\]\nyou expect more variance if you have two stock for one day b/c anything that happens that day is magnified\nif you have one stock for two days you reduce the variance"
+    "text": "Sharpe ratio - two days\n\nif you decide to leave money in the bank, you may end up with a constant\n\n\\[ S(X_1 + X_2) = \\frac{2\\mu_X - 2r_f}{\\sqrt{2 \\sigma^2_x}}\\]\n\n\n\\[\\begin{aligned}\n&= \\frac{0.20 - 0.03}{\\sqrt{9.98}}\\\\\n&= 0.054\n\\end{aligned}\\]\nyou expect more variance if you have two stock for one day b/c anything that happens that day is magnified\nif you have one stock for two days you reduce the variance"
   },
   {
     "objectID": "slides/lect_09.html#expectation-of-weighted-sum",
