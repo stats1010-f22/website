@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.1.251">
 
-  <title>STAT 1010 - Fall 2022 - Chapter 10: Association between random variables</title>
+  <title>STAT 1010 - Fall 2022 - Chapter 11: Probability models for counts</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,70 +27,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -381,10 +317,10 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Chapter 10: Association between random variables">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Chapter 11: Probability models for counts">
 <meta property="og:description" content="STAT 1010 - Fall 2022">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Chapter 10: Association between random variables">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Chapter 11: Probability models for counts">
 <meta name="twitter:description" content="STAT 1010 - Fall 2022">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
@@ -394,7 +330,7 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Chapter 10: Association between random variables</h1>
+  <h1 class="title">Chapter 11: Probability models for counts</h1>
   <p class="subtitle">STAT 1010 - Fall 2022</p>
 </section>
 
@@ -402,25 +338,17 @@
 <h1>Learning outcomes</h1>
 <p>By the end of this lesson you should:</p>
 <ul>
-<li>Understand the Sharpe ratio and know how to compute it to compare stocks that are not independent</li>
-<li>Understand and use a joint probability distribution function</li>
-<li>Know the 3 rules of independence</li>
-<li></li>
-<li>Understand how independence impacts upon a joint probability distribution function</li>
+<li>Know how to use the binomial distribution, as well as its mean, and variance.</li>
+<li>Know how to use the Poisson distribution, as well as its mean, and variance.</li>
+<li>Understand differences between the binomial and Poisson distributions, and when the two could be applied.</li>
 </ul>
 </section>
-
-<section id="revision-1" class="title-slide slide level1 center">
-<h1>Revision 1</h1>
-
-<img data-src="lect_07-images/parameter_estimate.png" class="r-stretch"></section>
 
 <section>
-<section id="the-sharpe-ratio" class="title-slide slide level1 center">
-<h1>The Sharpe Ratio</h1>
+<section id="bernoulli-trial" class="title-slide slide level1 center">
+<h1>Bernoulli trial</h1>
 <aside class="notes">
-<p>write S(X) formula on the board</p>
-<p>often mu and sigma are unknown parameters</p>
+<p>find the E(B) and Var(B)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -432,97 +360,40 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p><span class="math display">\[S(X) = \frac{\mu - r_f}{\sigma}\]</span></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(r_f\)</span> is the return on a risk-free investment</li>
-<li class="fragment"><span class="math inline">\(\mu\)</span> is the mean of a random variable <span class="math inline">\(X\)</span> that measures the performance of an investment</li>
-<li class="fragment"><span class="math inline">\(\sigma\)</span> is the standard deviation of a random variable <span class="math inline">\(X\)</span> that measures the performance of an investment</li>
-<li class="fragment">all inputs must be measured over the same time period (ie. yearly, monthly, …)</li>
+<li class="fragment"><p>flipping a coin</p></li>
+<li class="fragment"><p>insured or not insured</p></li>
+<li class="fragment"><p>luggage lost or not lost</p></li>
+<li class="fragment"><p><span class="math display">\[\begin{equation}
+B =\begin{cases}
+1, &amp; \text{if the trial is a success}.\\
+0, &amp; \text{if the trial is a success}.
+\end{cases}
+\end{equation}\]</span></p></li>
+<li class="fragment"><p><span class="math inline">\(p\)</span> is the probability of success</p></li>
 </ul>
 </div>
 </section>
-<section id="compute-the-sharpe-ratio" class="slide level2">
-<h2>Compute the Sharpe ratio</h2>
-<aside class="notes">
-<p>have them go back to the previous slide and see what they got</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<table>
-<thead>
-<tr class="header">
-<th>Company</th>
-<th>Random Variable</th>
-<th>Mean per month</th>
-<th>SD</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Apple</td>
-<td>A</td>
-<td>2.45%</td>
-<td>13.3%</td>
-</tr>
-<tr class="even">
-<td>McDonalds</td>
-<td>M</td>
-<td>1.14%</td>
-<td>6.2%</td>
-</tr>
-</tbody>
-</table>
-<p>assume <span class="math inline">\(r_f\)</span> is the risk-free rate of interest is <span class="math inline">\(0.1\%\)</span></p>
-</section>
-<section id="compute-the-sharpe-ratio-1" class="slide level2">
-<h2>Compute the Sharpe ratio</h2>
-<aside class="notes">
-<p>work through it, then what if we don’t know mu and sigma could we find it if we had a pdf?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<div class="columns">
-<div class="column" style="width:50%;">
+<section id="ebernoulli" class="slide level2">
+<h2>E(Bernoulli)</h2>
+<p>Find <span class="math inline">\(E(B)\)</span></p>
 <div>
 <ul>
-<li class="fragment"><p><span class="math display">\[\begin{aligned}
-S(A) &amp;= \frac{\mu - r_f}{\sigma}\\
-&amp;= \frac{2.45 - 0.1}{13.3}\\
-&amp;=  0.177
-\end{aligned}\]</span></p></li>
-<li class="fragment"><p><span class="math display">\[\begin{aligned}
-S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
-&amp;= \frac{1.14 - 0.1}{6.2}\\
-&amp;=  0.168
-\end{aligned}\]</span></p></li>
+<li class="fragment"><span class="math inline">\(E(B) &amp;= 0 \cdot P(B=0) + 1 \cdot P(B=1)\)</span></li>
+<li class="fragment"><span class="math display">\[\begin{aligned}
+E(B) &amp;= 0 \cdot P(B=0) + 1 \cdot P(B=1)\\
+&amp;= 0 \cdot (1-p) + 1 \cdot p\\
+&amp;= p
+\end{aligned}\]</span></li>
 </ul>
 </div>
-</div><div class="column" style="width:50%;">
-<p>We prefer Apple because it has a higher Sharpe ratio <span class="math inline">\(0.177 &gt; 0.168\)</span></p>
-</div>
-</div>
 </section>
-<section id="revision-2" class="slide level2">
-<h2>Revision 2</h2>
+<section id="varbernoulli" class="slide level2">
+<h2>Var(Bernoulli)</h2>
 <aside class="notes">
-<p>find the mean, stdev, and use them to find the Sharpe ratio</p>
+<p>We usually don’t want this information about 1 person, we want it about a whole plane full of people, or a whole town.</p>
+<p>In that case, we sum together <span class="math inline">\(n\)</span> independent Bernoulli trials.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -534,233 +405,37 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p>Instead of knowing <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> we have a pdf</p>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>IBM stock</th>
-<th>IBM stock</th>
-<th>Microsoft</th>
-<th>Microsoft</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(x\)</span></td>
-<td><span class="math inline">\(P(X = x)\)</span></td>
-<td><span class="math inline">\(y\)</span></td>
-<td><span class="math inline">\(P(Y = y)\)</span></td>
-</tr>
-<tr class="even">
-<td>Increases</td>
-<td>$5</td>
-<td>0.11</td>
-<td>$4</td>
-<td>0.18</td>
-</tr>
-<tr class="odd">
-<td>No change</td>
-<td>0</td>
-<td>0.80</td>
-<td>0</td>
-<td>0.67</td>
-</tr>
-<tr class="even">
-<td>Decreases</td>
-<td>-$5</td>
-<td>0.09</td>
-<td>-$4</td>
-<td>0.15</td>
-</tr>
-</tbody>
-</table>
+<p>Find <span class="math inline">\(Var(B)\)</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(Var(B) &amp;= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\)</span></li>
+<li class="fragment"><span class="math display">\[\begin{aligned}
+Var(B) &amp;= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\\
+&amp;= p^2 \cdot (1-p) + (1 - p)^2 \cdot p\\
+&amp;= p^2 - p^3 + p(1 - 2p + p^2) \\
+&amp;= p^2 - p^3 + p - 2p^2 + p^3\\
+&amp;= p(1-p)
+\end{aligned}\]</span></li>
+</ul>
+</div>
 </section>
-<section id="sharpe-ratio-by-hand" class="slide level2 smaller">
-<h2>Sharpe ratio by hand</h2>
-<table>
-<colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>IBM</th>
-<th>IBM</th>
-<th>IBM</th>
-<th>IBM</th>
-<th>IBM</th>
-<th>IBM</th>
-<th>IBM</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(x\)</span></td>
-<td><span class="math inline">\(P(X = x)\)</span></td>
-<td><span class="math inline">\(\bar{x}\)</span></td>
-<td><span class="math inline">\((x-\bar{x})^2 \cdot p_x(x)\)</span></td>
-<td><span class="math inline">\(Var(x)\)</span></td>
-<td><span class="math inline">\(sd(x)\)</span></td>
-<td>Sharpe ratio</td>
-</tr>
-<tr class="even">
-<td>Increases</td>
-<td>$5</td>
-<td>0.11</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>No change</td>
-<td>0</td>
-<td>0.80</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Decreases</td>
-<td>-$5</td>
-<td>0.09</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sharpe-ratio-by-hand-1" class="slide level2 smaller">
-<h2>Sharpe ratio by hand</h2>
-<table>
-<colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>MCSFT</th>
-<th>MCSFT</th>
-<th>MCSFT</th>
-<th>MCSFT</th>
-<th>MCSFT</th>
-<th>MCSFT</th>
-<th>MCSFT</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(y\)</span></td>
-<td><span class="math inline">\(P(Y =y)\)</span></td>
-<td><span class="math inline">\(\bar{y}\)</span></td>
-<td><span class="math inline">\((y-\bar{y})^2 \cdot p_y(y)\)</span></td>
-<td><span class="math inline">\(Var(y)\)</span></td>
-<td><span class="math inline">\(sd(y)\)</span></td>
-<td>Sharpe ratio</td>
-</tr>
-<tr class="even">
-<td>Increases</td>
-<td>$4</td>
-<td>0.18</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>No change</td>
-<td>0</td>
-<td>0.67</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Decreases</td>
-<td>-$4</td>
-<td>0.15</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="the-sharpe-ratio---in-r" class="slide level2">
-<h2>The Sharpe ratio - in <code>R</code></h2>
-<aside class="notes">
-<p>Can an investor do better by diversifing the investment?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Input the data and the pdf</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>stock <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">5</span>), </span>
-<span id="cb1-3"><a href="#cb1-3"></a>                <span class="at">p_x =</span> <span class="fu">c</span>(<span class="fl">0.11</span>, <span class="fl">0.8</span>, <span class="fl">0.09</span>), </span>
-<span id="cb1-4"><a href="#cb1-4"></a>                <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">4</span>), </span>
-<span id="cb1-5"><a href="#cb1-5"></a>                <span class="at">p_y =</span> <span class="fu">c</span>(.<span class="dv">18</span>, .<span class="dv">67</span>, .<span class="dv">15</span>))</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a></span>
-<span id="cb1-8"><a href="#cb1-8"></a>Sharpe_ratio <span class="ot">&lt;-</span> <span class="co"># name this the Sharpe ratio</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>  stock <span class="sc">%&gt;%</span> <span class="co"># use the data from above</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>  <span class="fu">mutate</span>(<span class="at">part_mean_x =</span> x<span class="sc">*</span>p_x, <span class="co"># find mean for each part of x </span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>         <span class="at">part_mean_y =</span> y<span class="sc">*</span>p_y, <span class="co"># now for y</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>         <span class="at">mean_x =</span> <span class="fu">sum</span>(part_mean_x), <span class="co"># find mean x </span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>         <span class="at">mean_y =</span> <span class="fu">sum</span>(part_mean_y),<span class="co"># now for y</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>         <span class="at">part_var_x =</span> p_x <span class="sc">*</span> (mean_x <span class="sc">-</span> x)<span class="sc">^</span><span class="dv">2</span>, <span class="co"># find var for each part of x </span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>         <span class="at">part_var_y =</span> p_y <span class="sc">*</span> (mean_y <span class="sc">-</span> y)<span class="sc">^</span><span class="dv">2</span>,<span class="co"># now for y</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a>         <span class="at">var_x =</span> <span class="fu">sum</span>(part_var_x), <span class="co"># find var of x </span></span>
-<span id="cb1-17"><a href="#cb1-17"></a>         <span class="at">var_y =</span> <span class="fu">sum</span>(part_var_y),<span class="co"># now for y</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a>         <span class="at">sd_x =</span> <span class="fu">sqrt</span>(var_x), <span class="co"># find sd of x </span></span>
-<span id="cb1-19"><a href="#cb1-19"></a>         <span class="at">sd_y =</span> <span class="fu">sqrt</span>(var_y)) <span class="sc">%&gt;%</span> <span class="co"># now for y</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a>  <span class="fu">summarise</span>(<span class="at">S_x =</span> (mean_x <span class="sc">-</span> <span class="fl">0.015</span>)<span class="sc">/</span>sd_x, <span class="co"># find Sharpe ratio of x with rf = 0.015</span></span>
-<span id="cb1-21"><a href="#cb1-21"></a>            <span class="at">S_y =</span> (mean_y <span class="sc">-</span> <span class="fl">0.015</span>)<span class="sc">/</span>sd_y) <span class="co"># now for y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="multiple-bernoulli-trials" class="slide level2">
+<h2>Multiple Bernoulli trials</h2>
+<div class="notest">
+<p>This happens so often that we have another name for this distribution</p>
+</div>
+<p><span class="math display">\[Y = B_1 + B_2 + B_3 + B_4 + B_5 + B_6 + B_7\]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(Y\)</span> is the sum of independent and identically distributed random variables _ What is the <a href="https://stats1010-f22.github.io/website/slides/lect_09.html#/addition-rules-for-iid-variables">mean and variance</a>?</li>
+</ul>
 </div>
 </section></section>
 <section>
-<section id="joint-probability-distributions" class="title-slide slide level1 center">
-<h1>Joint probability distributions</h1>
+<section id="binomial-distribution---fist" class="title-slide slide level1 center">
+<h1>Binomial distribution - FIST</h1>
 <aside class="notes">
-<p>What is the expected value of X + Y?</p>
-<p>When you see two random variables you first want to think independence.</p>
-<p>Are these variables independent or not?</p>
+<p>The order of successes?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -772,76 +447,33 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<div class="column-margin">
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th></th>
-<th><span class="math inline">\(X\)</span></th>
-<th><span class="math inline">\(X\)</span></th>
-<th><span class="math inline">\(X\)</span></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td><span class="math inline">\(x = -5\)</span></td>
-<td><span class="math inline">\(x = 0\)</span></td>
-<td><span class="math inline">\(x = 5\)</span></td>
-<td><span class="math inline">\(p(y)\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=4\)</span></td>
-<td><span class="math inline">\(0.00\)</span></td>
-<td><span class="math inline">\(0.11\)</span></td>
-<td><span class="math inline">\(0.07\)</span></td>
-<td><span class="math inline">\(0.18\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=0\)</span></td>
-<td><span class="math inline">\(0.03\)</span></td>
-<td><span class="math inline">\(0.62\)</span></td>
-<td><span class="math inline">\(0.02\)</span></td>
-<td><span class="math inline">\(0.67\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=-4\)</span></td>
-<td><span class="math inline">\(0.06\)</span></td>
-<td><span class="math inline">\(0.07\)</span></td>
-<td><span class="math inline">\(0.02\)</span></td>
-<td><span class="math inline">\(0.15\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(p(x)\)</span></td>
-<td><span class="math inline">\(0.09\)</span></td>
-<td><span class="math inline">\(0.80\)</span></td>
-<td><span class="math inline">\(0.11\)</span></td>
-<td><span class="math inline">\(1\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>The number of successes in <span class="math inline">\(n\)</span> trials</p>
 <div>
 <ul>
-<li class="fragment"><p>What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(11\%\)</span></p></li>
-<li class="fragment"><p>What is the probability that <span class="math inline">\(x = 5\)</span> and <span class="math inline">\(y =4\)</span>? - <span class="math inline">\(7\%\)</span></p></li>
-<li class="fragment"><p>What is the probability that <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(y =0\)</span>? - <span class="math inline">\(62\%\)</span></p></li>
-<li class="fragment"><p>What outcome will never occur? - <span class="math inline">\(x = -5\)</span> and <span class="math inline">\(y =4\)</span></p></li>
+<li class="fragment"><p>Binomial - Biceps - FIST</p></li>
+<li class="fragment"><p>F - fixed number of trials</p></li>
+<li class="fragment"><p>I - independent outcomes</p></li>
+<li class="fragment"><p>S - probability of success is constant</p></li>
+<li class="fragment"><p>T - two outcomes</p></li>
 </ul>
 </div>
 </section>
-<section id="expected-value-of-x-y" class="slide level2">
-<h2>Expected value of <span class="math inline">\(X + Y\)</span></h2>
+<section id="ebinomial" class="slide level2">
+<h2>E(Binomial)</h2>
+<p><span class="math display">\[E(Y) = E(B_1 + B_2 + ... + B_n)\]</span> ::: incremental - <span class="math display">\[\begin{aligned}
+E(Y) &amp;= E(B_1) + E(B_2) + ... + E(B_n) \\
+&amp;= p + p + ... + p \\
+&amp;= np
+\end{aligned}\]</span> :::</p>
+</section>
+<section id="varbinomial" class="slide level2">
+<h2>Var(Binomial)</h2>
+</section>
+<section id="counting-things" class="slide level2">
+<h2>Counting things</h2>
 <aside class="notes">
-<p>If x=-5 then we subtract 5 from all y’s and multiply by <span class="math inline">\(p_{x, y}\)</span> algebraically it all washes out</p>
-<p>What about independence? We want to find the standard deviation to comput the Sharpe Ratio</p>
+<p>we just went into groups</p>
+<p>how many groups are possible?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -853,170 +485,17 @@ S(M) &amp;= \frac{\mu - r_f}{\sigma}\\
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th></th>
-<th><span class="math inline">\(X\)</span></th>
-<th><span class="math inline">\(X\)</span></th>
-<th><span class="math inline">\(X\)</span></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td><span class="math inline">\(x = -5\)</span></td>
-<td><span class="math inline">\(x = 0\)</span></td>
-<td><span class="math inline">\(x = 5\)</span></td>
-<td><span class="math inline">\(p(y)\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=4\)</span></td>
-<td><span class="math inline">\(0.00\)</span></td>
-<td><span class="math inline">\(0.11\)</span></td>
-<td><span class="math inline">\(0.07\)</span></td>
-<td><span class="math inline">\(0.18\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=0\)</span></td>
-<td><span class="math inline">\(0.03\)</span></td>
-<td><span class="math inline">\(0.62\)</span></td>
-<td><span class="math inline">\(0.02\)</span></td>
-<td><span class="math inline">\(0.67\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=-4\)</span></td>
-<td><span class="math inline">\(0.06\)</span></td>
-<td><span class="math inline">\(0.07\)</span></td>
-<td><span class="math inline">\(0.02\)</span></td>
-<td><span class="math inline">\(0.15\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(p(x)\)</span></td>
-<td><span class="math inline">\(0.09\)</span></td>
-<td><span class="math inline">\(0.80\)</span></td>
-<td><span class="math inline">\(0.11\)</span></td>
-<td><span class="math inline">\(1\)</span></td>
-</tr>
-</tbody>
-</table>
+<p>In a class of 85 students how many groups of 4 are possible?</p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(E(X+Y) = E(X) + E(Y)\)</span></li>
-<li class="fragment"><span class="math inline">\(E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22\)</span></li>
+<li class="fragment"><hr></li>
+<li class="fragment"><span class="math inline">\(85 \cdot 84 \cdot 83 \cdot 82\)</span></li>
+<li class="fragment"><span class="math inline">\(48594840\)</span> groups</li>
+<li class="fragment">If we don’t care about order</li>
+<li class="fragment"><span class="math inline">\(\frac{85 \cdot 84 \cdot 83 \cdot 82}{4 \cdot 3 \cdot 2 \cdot 1}\)</span></li>
+<li class="fragment"><span class="math inline">\(2024785\)</span> groups</li>
 </ul>
 </div>
-</section>
-<section id="rules-of-independence" class="slide level2">
-<h2>3 Rules of independence</h2>
-<aside class="notes">
-<p>So are X and Y independent?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<p>If the probability of one event occuring has no impact on another event occuring, they are independent.</p>
-<div>
-<ul>
-<li class="fragment"><p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and independent then <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span> for all values <span class="math inline">\((x,y)\)</span></p></li>
-<li class="fragment"><p>If <span class="math inline">\(p(x,y) = p(x) \cdot p(y)\)</span> for all values <span class="math inline">\((x, y)\)</span> then <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent.</p></li>
-<li class="fragment"><p>It follows that if <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then <span class="math inline">\(E(XY) = E(X) \cdot E(Y)\)</span></p></li>
-</ul>
-</div>
-</section>
-<section id="are-x-and-y-independent" class="slide level2">
-<h2>Are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> independent?</h2>
-<aside class="notes">
-<p>find any p(x) X p(y) != p(x,y)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th></th>
-<th><span class="math inline">\(X\)</span></th>
-<th><span class="math inline">\(X\)</span></th>
-<th><span class="math inline">\(X\)</span></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td><span class="math inline">\(x = -5\)</span></td>
-<td><span class="math inline">\(x = 0\)</span></td>
-<td><span class="math inline">\(x = 5\)</span></td>
-<td><span class="math inline">\(p(y)\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=4\)</span></td>
-<td><span class="math inline">\(0.00\)</span></td>
-<td><span class="math inline">\(0.11\)</span></td>
-<td><span class="math inline">\(0.07\)</span></td>
-<td><span class="math inline">\(0.18\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=0\)</span></td>
-<td><span class="math inline">\(0.03\)</span></td>
-<td><span class="math inline">\(0.62\)</span></td>
-<td><span class="math inline">\(0.02\)</span></td>
-<td><span class="math inline">\(0.67\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Y\)</span></td>
-<td><span class="math inline">\(y=-4\)</span></td>
-<td><span class="math inline">\(0.06\)</span></td>
-<td><span class="math inline">\(0.07\)</span></td>
-<td><span class="math inline">\(0.02\)</span></td>
-<td><span class="math inline">\(0.15\)</span></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><span class="math inline">\(p(x)\)</span></td>
-<td><span class="math inline">\(0.09\)</span></td>
-<td><span class="math inline">\(0.80\)</span></td>
-<td><span class="math inline">\(0.11\)</span></td>
-<td><span class="math inline">\(1\)</span></td>
-</tr>
-</tbody>
-</table>
-<div>
-<ul>
-<li class="fragment"><p><span class="math inline">\(p_x(-5) \cdot p_y(4) = 0.18 \cdot 0.09 \neq 0.00\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(p_x(-5) \cdot p_y(-4) = 0.09 \cdot 0.15 = 0.0135 \neq 0.06\)</span></p></li>
-<li class="fragment"><p>NO! NO! NO!</p></li>
-</ul>
-</div>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
 </section></section>
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>

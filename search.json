@@ -721,67 +721,46 @@
     "text": "The purpose of exploring categorical variables\n\nExploratory Data Analysis is about learning the structure of a dataset through a series of numerical and graphical techniques.\nWhen you do EDA, you’ll look for both\n\ngeneral trends and\ninteresting outliers in your data.\n\n\ngenerate questions that will help inform subsequent analysis."
   },
   {
-    "objectID": "slides/lect_10.html#compute-the-sharpe-ratio",
-    "href": "slides/lect_10.html#compute-the-sharpe-ratio",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Compute the Sharpe ratio",
-    "text": "Compute the Sharpe ratio\n\nhave them go back to the previous slide and see what they got\n\n\n\n\nCompany\nRandom Variable\nMean per month\nSD\n\n\n\n\nApple\nA\n2.45%\n13.3%\n\n\nMcDonalds\nM\n1.14%\n6.2%\n\n\n\nassume \\(r_f\\) is the risk-free rate of interest is \\(0.1\\%\\)"
+    "objectID": "slides/lect_10.html#ebernoulli",
+    "href": "slides/lect_10.html#ebernoulli",
+    "title": "Chapter 11: Probability models for counts",
+    "section": "E(Bernoulli)",
+    "text": "E(Bernoulli)\nFind \\(E(B)\\)\n\n\n\\(E(B) &= 0 \\cdot P(B=0) + 1 \\cdot P(B=1)\\)\n\\[\\begin{aligned}\nE(B) &= 0 \\cdot P(B=0) + 1 \\cdot P(B=1)\\\\\n&= 0 \\cdot (1-p) + 1 \\cdot p\\\\\n&= p\n\\end{aligned}\\]"
   },
   {
-    "objectID": "slides/lect_10.html#compute-the-sharpe-ratio-1",
-    "href": "slides/lect_10.html#compute-the-sharpe-ratio-1",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Compute the Sharpe ratio",
-    "text": "Compute the Sharpe ratio\n\nwork through it, then what if we don’t know mu and sigma could we find it if we had a pdf?\n\n\n\n\n\n\\[\\begin{aligned}\nS(A) &= \\frac{\\mu - r_f}{\\sigma}\\\\\n&= \\frac{2.45 - 0.1}{13.3}\\\\\n&=  0.177\n\\end{aligned}\\]\n\\[\\begin{aligned}\nS(M) &= \\frac{\\mu - r_f}{\\sigma}\\\\\n&= \\frac{1.14 - 0.1}{6.2}\\\\\n&=  0.168\n\\end{aligned}\\]\n\n\n\nWe prefer Apple because it has a higher Sharpe ratio \\(0.177 > 0.168\\)"
+    "objectID": "slides/lect_10.html#varbernoulli",
+    "href": "slides/lect_10.html#varbernoulli",
+    "title": "Chapter 11: Probability models for counts",
+    "section": "Var(Bernoulli)",
+    "text": "Var(Bernoulli)\n\nWe usually don’t want this information about 1 person, we want it about a whole plane full of people, or a whole town.\nIn that case, we sum together \\(n\\) independent Bernoulli trials.\n\nFind \\(Var(B)\\)\n\n\n\\(Var(B) &= (0 - p)^2 \\cdot P(B=0) + (1 - p)^2 \\cdot P(B=1)\\)\n\\[\\begin{aligned}\nVar(B) &= (0 - p)^2 \\cdot P(B=0) + (1 - p)^2 \\cdot P(B=1)\\\\\n&= p^2 \\cdot (1-p) + (1 - p)^2 \\cdot p\\\\\n&= p^2 - p^3 + p(1 - 2p + p^2) \\\\\n&= p^2 - p^3 + p - 2p^2 + p^3\\\\\n&= p(1-p)\n\\end{aligned}\\]"
   },
   {
-    "objectID": "slides/lect_10.html#revision-2",
-    "href": "slides/lect_10.html#revision-2",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Revision 2",
-    "text": "Revision 2\n\nfind the mean, stdev, and use them to find the Sharpe ratio\n\nInstead of knowing \\(\\mu\\) and \\(\\sigma\\) we have a pdf\n\n\n\n\nIBM stock\nIBM stock\nMicrosoft\nMicrosoft\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(y\\)\n\\(P(Y = y)\\)\n\n\nIncreases\n$5\n0.11\n$4\n0.18\n\n\nNo change\n0\n0.80\n0\n0.67\n\n\nDecreases\n-$5\n0.09\n-$4\n0.15"
+    "objectID": "slides/lect_10.html#multiple-bernoulli-trials",
+    "href": "slides/lect_10.html#multiple-bernoulli-trials",
+    "title": "Chapter 11: Probability models for counts",
+    "section": "Multiple Bernoulli trials",
+    "text": "Multiple Bernoulli trials\n\nThis happens so often that we have another name for this distribution\n\n\\[Y = B_1 + B_2 + B_3 + B_4 + B_5 + B_6 + B_7\\]\n\n\n\\(Y\\) is the sum of independent and identically distributed random variables _ What is the mean and variance?"
   },
   {
-    "objectID": "slides/lect_10.html#sharpe-ratio-by-hand",
-    "href": "slides/lect_10.html#sharpe-ratio-by-hand",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Sharpe ratio by hand",
-    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM\nIBM\nIBM\nIBM\nIBM\nIBM\nIBM\n\n\n\n\n\n\\(x\\)\n\\(P(X = x)\\)\n\\(\\bar{x}\\)\n\\((x-\\bar{x})^2 \\cdot p_x(x)\\)\n\\(Var(x)\\)\n\\(sd(x)\\)\nSharpe ratio\n\n\nIncreases\n$5\n0.11\n\n\n\n\n\n\n\nNo change\n0\n0.80\n\n\n\n\n\n\n\nDecreases\n-$5\n0.09"
+    "objectID": "slides/lect_10.html#ebinomial",
+    "href": "slides/lect_10.html#ebinomial",
+    "title": "Chapter 11: Probability models for counts",
+    "section": "E(Binomial)",
+    "text": "E(Binomial)\n\\[E(Y) = E(B_1 + B_2 + ... + B_n)\\] ::: incremental - \\[\\begin{aligned}\nE(Y) &= E(B_1) + E(B_2) + ... + E(B_n) \\\\\n&= p + p + ... + p \\\\\n&= np\n\\end{aligned}\\] :::"
   },
   {
-    "objectID": "slides/lect_10.html#sharpe-ratio-by-hand-1",
-    "href": "slides/lect_10.html#sharpe-ratio-by-hand-1",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Sharpe ratio by hand",
-    "text": "Sharpe ratio by hand\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\nMCSFT\n\n\n\n\n\n\\(y\\)\n\\(P(Y =y)\\)\n\\(\\bar{y}\\)\n\\((y-\\bar{y})^2 \\cdot p_y(y)\\)\n\\(Var(y)\\)\n\\(sd(y)\\)\nSharpe ratio\n\n\nIncreases\n$4\n0.18\n\n\n\n\n\n\n\nNo change\n0\n0.67\n\n\n\n\n\n\n\nDecreases\n-$4\n0.15"
+    "objectID": "slides/lect_10.html#varbinomial",
+    "href": "slides/lect_10.html#varbinomial",
+    "title": "Chapter 11: Probability models for counts",
+    "section": "Var(Binomial)",
+    "text": "Var(Binomial)"
   },
   {
-    "objectID": "slides/lect_10.html#the-sharpe-ratio---in-r",
-    "href": "slides/lect_10.html#the-sharpe-ratio---in-r",
-    "title": "Chapter 10: Association between random variables",
-    "section": "The Sharpe ratio - in R",
-    "text": "The Sharpe ratio - in R\n\nCan an investor do better by diversifing the investment?\n\n\n# Input the data and the pdf\nstock <- tibble(x = c(5, 0, -5), \n                p_x = c(0.11, 0.8, 0.09), \n                y = c(4, 0, -4), \n                p_y = c(.18, .67, .15))\n\n\nSharpe_ratio <- # name this the Sharpe ratio\n  stock %>% # use the data from above\n  mutate(part_mean_x = x*p_x, # find mean for each part of x \n         part_mean_y = y*p_y, # now for y\n         mean_x = sum(part_mean_x), # find mean x \n         mean_y = sum(part_mean_y),# now for y\n         part_var_x = p_x * (mean_x - x)^2, # find var for each part of x \n         part_var_y = p_y * (mean_y - y)^2,# now for y\n         var_x = sum(part_var_x), # find var of x \n         var_y = sum(part_var_y),# now for y\n         sd_x = sqrt(var_x), # find sd of x \n         sd_y = sqrt(var_y)) %>% # now for y\n  summarise(S_x = (mean_x - 0.015)/sd_x, # find Sharpe ratio of x with rf = 0.015\n            S_y = (mean_y - 0.015)/sd_y) # now for y"
-  },
-  {
-    "objectID": "slides/lect_10.html#expected-value-of-x-y",
-    "href": "slides/lect_10.html#expected-value-of-x-y",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Expected value of \\(X + Y\\)",
-    "text": "Expected value of \\(X + Y\\)\n\nIf x=-5 then we subtract 5 from all y’s and multiply by \\(p_{x, y}\\) algebraically it all washes out\nWhat about independence? We want to find the standard deviation to comput the Sharpe Ratio\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(E(X+Y) = E(X) + E(Y)\\)\n\\(E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22\\)"
-  },
-  {
-    "objectID": "slides/lect_10.html#rules-of-independence",
-    "href": "slides/lect_10.html#rules-of-independence",
-    "title": "Chapter 10: Association between random variables",
-    "section": "3 Rules of independence",
-    "text": "3 Rules of independence\n\nSo are X and Y independent?\n\nIf the probability of one event occuring has no impact on another event occuring, they are independent.\n\n\nIf \\(X\\) and \\(Y\\) and independent then \\(p(x,y) = p(x) \\cdot p(y)\\) for all values \\((x,y)\\)\nIf \\(p(x,y) = p(x) \\cdot p(y)\\) for all values \\((x, y)\\) then \\(X\\) and \\(Y\\) are independent.\nIt follows that if \\(X\\) and \\(Y\\) are independent, then \\(E(XY) = E(X) \\cdot E(Y)\\)"
-  },
-  {
-    "objectID": "slides/lect_10.html#are-x-and-y-independent",
-    "href": "slides/lect_10.html#are-x-and-y-independent",
-    "title": "Chapter 10: Association between random variables",
-    "section": "Are \\(X\\) and \\(Y\\) independent?",
-    "text": "Are \\(X\\) and \\(Y\\) independent?\n\nfind any p(x) X p(y) != p(x,y)\n\n\n\n\n\n\n\\(X\\)\n\\(X\\)\n\\(X\\)\n\n\n\n\n\n\n\n\\(x = -5\\)\n\\(x = 0\\)\n\\(x = 5\\)\n\\(p(y)\\)\n\n\n\\(Y\\)\n\\(y=4\\)\n\\(0.00\\)\n\\(0.11\\)\n\\(0.07\\)\n\\(0.18\\)\n\n\n\\(Y\\)\n\\(y=0\\)\n\\(0.03\\)\n\\(0.62\\)\n\\(0.02\\)\n\\(0.67\\)\n\n\n\\(Y\\)\n\\(y=-4\\)\n\\(0.06\\)\n\\(0.07\\)\n\\(0.02\\)\n\\(0.15\\)\n\n\n\n\\(p(x)\\)\n\\(0.09\\)\n\\(0.80\\)\n\\(0.11\\)\n\\(1\\)\n\n\n\n\n\n\\(p_x(-5) \\cdot p_y(4) = 0.18 \\cdot 0.09 \\neq 0.00\\)\n\\(p_x(-5) \\cdot p_y(-4) = 0.09 \\cdot 0.15 = 0.0135 \\neq 0.06\\)\nNO! NO! NO!"
+    "objectID": "slides/lect_10.html#counting-things",
+    "href": "slides/lect_10.html#counting-things",
+    "title": "Chapter 11: Probability models for counts",
+    "section": "Counting things",
+    "text": "Counting things\n\nwe just went into groups\nhow many groups are possible?\n\nIn a class of 85 students how many groups of 4 are possible?\n\n\n\n\\(85 \\cdot 84 \\cdot 83 \\cdot 82\\)\n\\(48594840\\) groups\nIf we don’t care about order\n\\(\\frac{85 \\cdot 84 \\cdot 83 \\cdot 82}{4 \\cdot 3 \\cdot 2 \\cdot 1}\\)\n\\(2024785\\) groups"
   },
   {
     "objectID": "slides/01_introduction.html#workspace-image",
