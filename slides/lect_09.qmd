@@ -20,6 +20,8 @@ library(tidyverse)
 
 # Learning outcomes {.smaller}
 
+
+::: incremental
 By the end of this lesson you should:
 
 -   Understand the Sharpe ratio and know how to compute it to compare stocks that are not independent
@@ -28,8 +30,16 @@ By the end of this lesson you should:
 -   Understand how covariance, correlation, and independence intertwine
 -   Explain how independent and identically distributed random variables impact upon expectation, variance, and standard deviation
 -   Compute expectation and variance of weighted sums
+:::
 
 # Revision 1
+
+::: notes
+one of the main differences between this and chpt 6, is that here we are dealing with a population, before we were dealing with a sample.
+
+Stress this throughout the class.
+:::
+
 
 ![](lect_07-images/parameter_estimate.png)
 

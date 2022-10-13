@@ -1,5 +1,5 @@
 ---
-title: "Chapter 10: Association between random variables"
+title: "Chapter 11: Probability models for counts"
 subtitle: "STAT 1010 - Fall 2022"
 footer:  "[stat1010-f22.github.io/website](https://stats1010-f22.github.io/website/)"
 format: 
@@ -22,230 +22,129 @@ library(tidyverse)
 
 By the end of this lesson you should:
 
--   Understand the Sharpe ratio and know how to compute it to compare stocks that are not independent
--   Understand and use a joint probability distribution function
--   Know the 3 rules of independence
--   
--   Understand how independence impacts upon a joint probability distribution function
+- Know how to use the binomial distribution, as well as its mean, and variance.
+- Know how to use the Poisson distribution, as well as its mean, and variance.
+- Understand differences between the binomial and Poisson distributions, and when the two could be applied.
 
-# Revision 1
 
-![](lect_07-images/parameter_estimate.png)
 
-# The Sharpe Ratio
-
+# Bernoulli trial
 ::: notes
-write S(X) formula on the board
-
-often mu and sigma are unknown parameters
-:::
-
-$$S(X) = \frac{\mu - r_f}{\sigma}$$
-
-::: incremental
--   $r_f$ is the return on a risk-free investment
--   $\mu$ is the mean of a random variable $X$ that measures the performance of an investment
--   $\sigma$ is the standard deviation of a random variable $X$ that measures the performance of an investment
--   all inputs must be measured over the same time period (ie. yearly, monthly, ...)
-:::
-
-## Compute the Sharpe ratio
-
-::: notes
-have them go back to the previous slide and see what they got
-:::
-
-| Company   | Random Variable | Mean per month | SD    |
-|-----------|-----------------|----------------|-------|
-| Apple     | A               | 2.45%          | 13.3% |
-| McDonalds | M               | 1.14%          | 6.2%  |
-
-assume $r_f$ is the risk-free rate of interest is $0.1\%$
-
-## Compute the Sharpe ratio
-
-::: notes
-work through it, then what if we don't know mu and sigma could we find it if we had a pdf?
-:::
-
-::: columns
-::: {.column width="50%"}
-::: incremental
--   $$\begin{aligned}
-    S(A) &= \frac{\mu - r_f}{\sigma}\\
-    &= \frac{2.45 - 0.1}{13.3}\\
-    &=  0.177
-    \end{aligned}$$
-
--   $$\begin{aligned}
-    S(M) &= \frac{\mu - r_f}{\sigma}\\
-    &= \frac{1.14 - 0.1}{6.2}\\
-    &=  0.168
-    \end{aligned}$$
-:::
-:::
-
-::: {.column width="50%"}
-We prefer Apple because it has a higher Sharpe ratio $0.177 > 0.168$
-:::
-:::
-
-## Revision 2
-
-::: notes
-find the mean, stdev, and use them to find the Sharpe ratio
-:::
-
-Instead of knowing $\mu$ and $\sigma$ we have a pdf
-
-|           | IBM stock | IBM stock  | Microsoft | Microsoft  |
-|-----------|-----------|------------|-----------|------------|
-|           | $x$       | $P(X = x)$ | $y$       | $P(Y = y)$ |
-| Increases | \$5       | 0.11       | \$4       | 0.18       |
-| No change | 0         | 0.80       | 0         | 0.67       |
-| Decreases | -\$5      | 0.09       | -\$4      | 0.15       |
-
-## Sharpe ratio by hand {.smaller}
-
-|           | IBM  | IBM        | IBM       | IBM                          | IBM      | IBM     | IBM          |
-|---------|---------|---------|---------|---------|---------|---------|---------|
-|           | $x$  | $P(X = x)$ | $\bar{x}$ | $(x-\bar{x})^2 \cdot p_x(x)$ | $Var(x)$ | $sd(x)$ | Sharpe ratio |
-| Increases | \$5  | 0.11       |           |                              |          |         |              |
-| No change | 0    | 0.80       |           |                              |          |         |              |
-| Decreases | -\$5 | 0.09       |           |                              |          |         |              |
-
-## Sharpe ratio by hand {.smaller}
-
-|           | MCSFT | MCSFT     | MCSFT     | MCSFT                        | MCSFT    | MCSFT   | MCSFT        |
-|---------|---------|---------|---------|---------|---------|---------|---------|
-|           | $y$   | $P(Y =y)$ | $\bar{y}$ | $(y-\bar{y})^2 \cdot p_y(y)$ | $Var(y)$ | $sd(y)$ | Sharpe ratio |
-| Increases | \$4   | 0.18      |           |                              |          |         |              |
-| No change | 0     | 0.67      |           |                              |          |         |              |
-| Decreases | -\$4  | 0.15      |           |                              |          |         |              |
-
-## The Sharpe ratio - in `R`
-
-::: notes
-Can an investor do better by diversifing the investment?
-:::
-
-```{r mean_stdev}
-#| echo: true
-#| eval: true
-
-# Input the data and the pdf
-stock <- tibble(x = c(5, 0, -5), 
-                p_x = c(0.11, 0.8, 0.09), 
-                y = c(4, 0, -4), 
-                p_y = c(.18, .67, .15))
-
-
-Sharpe_ratio <- # name this the Sharpe ratio
-  stock %>% # use the data from above
-  mutate(part_mean_x = x*p_x, # find mean for each part of x 
-         part_mean_y = y*p_y, # now for y
-         mean_x = sum(part_mean_x), # find mean x 
-         mean_y = sum(part_mean_y),# now for y
-         part_var_x = p_x * (mean_x - x)^2, # find var for each part of x 
-         part_var_y = p_y * (mean_y - y)^2,# now for y
-         var_x = sum(part_var_x), # find var of x 
-         var_y = sum(part_var_y),# now for y
-         sd_x = sqrt(var_x), # find sd of x 
-         sd_y = sqrt(var_y)) %>% # now for y
-  summarise(S_x = (mean_x - 0.015)/sd_x, # find Sharpe ratio of x with rf = 0.015
-            S_y = (mean_y - 0.015)/sd_y) # now for y
-```
-
-# Joint probability distributions
-
-::: notes
-What is the expected value of X + Y?
-
-When you see two random variables you first want to think independence.
-
-Are these variables independent or not?
-:::
-
-::: column-margin
-|     |        | $X$      | $X$     | $X$     |        |
-|-----|--------|----------|---------|---------|--------|
-|     |        | $x = -5$ | $x = 0$ | $x = 5$ | $p(y)$ |
-| $Y$ | $y=4$  | $0.00$   | $0.11$  | $0.07$  | $0.18$ |
-| $Y$ | $y=0$  | $0.03$   | $0.62$  | $0.02$  | $0.67$ |
-| $Y$ | $y=-4$ | $0.06$   | $0.07$  | $0.02$  | $0.15$ |
-|     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
+find the E(B) and Var(B)
 :::
 
 ::: incremental
--   What is the probability that $x = 0$ and $y =4$? - $11\%$
+- flipping a coin
+- insured or not insured
+- luggage lost or not lost
 
--   What is the probability that $x = 5$ and $y =4$? - $7\%$
-
--   What is the probability that $x = 0$ and $y =0$? - $62\%$
-
--   What outcome will never occur? - $x = -5$ and $y =4$
+- $$\begin{equation}
+B =\begin{cases}
+1, & \text{if the trial is a success}.\\
+0, & \text{if the trial is a success}.
+\end{cases}
+\end{equation}$$
+- $p$ is the probability of success
 :::
 
-## Expected value of $X + Y$
+## E(Bernoulli)
 
-::: notes
-If x=-5 then we subtract 5 from all y's and multiply by $p_{x, y}$ algebraically it all washes out
-
-What about independence? We want to find the standard deviation to comput the Sharpe Ratio
-:::
-
-|     |        | $X$      | $X$     | $X$     |        |
-|-----|--------|----------|---------|---------|--------|
-|     |        | $x = -5$ | $x = 0$ | $x = 5$ | $p(y)$ |
-| $Y$ | $y=4$  | $0.00$   | $0.11$  | $0.07$  | $0.18$ |
-| $Y$ | $y=0$  | $0.03$   | $0.62$  | $0.02$  | $0.67$ |
-| $Y$ | $y=-4$ | $0.06$   | $0.07$  | $0.02$  | $0.15$ |
-|     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
+Find $E(B)$
 
 ::: incremental
--   $E(X+Y) = E(X) + E(Y)$
--   $E(X+Y) = E(X) + E(Y) = 0.1 + 0.12 = 0.22$
+- $E(B) &= 0 \cdot P(B=0) + 1 \cdot P(B=1)$
+- $$\begin{aligned}
+E(B) &= 0 \cdot P(B=0) + 1 \cdot P(B=1)\\
+&= 0 \cdot (1-p) + 1 \cdot p\\
+&= p
+\end{aligned}$$
 :::
 
-## 3 Rules of independence
-
+## Var(Bernoulli)
 ::: notes
-So are X and Y independent?
+We usually don't want this information about 1 person, we want it about a whole plane full of people, or a whole town.
+
+In that case, we sum together $n$ independent Bernoulli trials.
 :::
 
-If the probability of one event occuring has no impact on another event occuring, they are independent.
+Find $Var(B)$
 
 ::: incremental
--   If $X$ and $Y$ and independent then $p(x,y) = p(x) \cdot p(y)$ for all values $(x,y)$
-
--   If $p(x,y) = p(x) \cdot p(y)$ for all values $(x, y)$ then $X$ and $Y$ are independent.
-
--   It follows that if $X$ and $Y$ are independent, then $E(XY) = E(X) \cdot E(Y)$
+- $Var(B) &= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)$
+- $$\begin{aligned}
+Var(B) &= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\\
+&= p^2 \cdot (1-p) + (1 - p)^2 \cdot p\\
+&= p^2 - p^3 + p(1 - 2p + p^2) \\
+&= p^2 - p^3 + p - 2p^2 + p^3\\
+&= p(1-p)
+\end{aligned}$$
 :::
 
-## Are $X$ and $Y$ independent?
+## Multiple Bernoulli trials
 
-::: notes
-find any p(x) X p(y) != p(x,y)
+::: notest
+This happens so often that we have another name for this distribution
 :::
 
-|     |        | $X$      | $X$     | $X$     |        |
-|-----|--------|----------|---------|---------|--------|
-|     |        | $x = -5$ | $x = 0$ | $x = 5$ | $p(y)$ |
-| $Y$ | $y=4$  | $0.00$   | $0.11$  | $0.07$  | $0.18$ |
-| $Y$ | $y=0$  | $0.03$   | $0.62$  | $0.02$  | $0.67$ |
-| $Y$ | $y=-4$ | $0.06$   | $0.07$  | $0.02$  | $0.15$ |
-|     | $p(x)$ | $0.09$   | $0.80$  | $0.11$  | $1$    |
+$$Y = B_1 + B_2 + B_3 + B_4 + B_5 + B_6 + B_7$$
 
 ::: incremental
--   $p_x(-5) \cdot p_y(4) = 0.18 \cdot 0.09 \neq 0.00$
-
--   $p_x(-5) \cdot p_y(-4) = 0.09 \cdot 0.15 = 0.0135 \neq 0.06$
-
--   NO! NO! NO!
+- $Y$ is the sum of independent and identically distributed random variables
+_ What is the [mean and variance](https://stats1010-f22.github.io/website/slides/lect_09.html#/addition-rules-for-iid-variables)?
 :::
 
-## 
+
+# Binomial distribution - FIST
+
+::: notes
+The order of successes?
+:::
+
+The number of successes in $n$ trials
+
+::: incremental
+- Binomial - Biceps - FIST
+
+- F - fixed number of trials
+- I - independent outcomes
+- S - probability of success is constant
+- T - two outcomes
+:::
+
+## E(Binomial) 
+$$E(Y) = E(B_1 + B_2 + ... + B_n)$$
+::: incremental
+- $$\begin{aligned}
+E(Y) &= E(B_1) + E(B_2) + ... + E(B_n) \\
+&= p + p + ... + p \\
+&= np
+\end{aligned}$$
+:::
+
+
+## Var(Binomial)
+
+
+## Counting things
+::: notes
+we just went into groups 
+
+how many groups are possible?
+:::
+
+In a class of 85 students how many groups of 4 are possible?
+
+::: incremental
+- __ __ __ __
+- $85 \cdot 84 \cdot 83 \cdot 82$
+- $48594840$ groups
+- If we don't care about order
+- $\frac{85 \cdot 84 \cdot 83 \cdot 82}{4 \cdot 3 \cdot 2 \cdot 1}$
+- $2024785$ groups
+:::
+
+
+
 
 
 
