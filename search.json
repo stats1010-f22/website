@@ -753,14 +753,14 @@
     "href": "slides/lect_10.html#varbinomial",
     "title": "Chapter 11: Probability models for counts",
     "section": "Var(Binomial)",
-    "text": "Var(Binomial)"
+    "text": "Var(Binomial)\n\\[Var(Y) = Var(B_1 + B_2 + ... + B_n)\\]\n\n\n\\[\\begin{aligned}\nVar(Y) &= Var(B_1) + Var(B_2) + ... + Var(B_n) \\\\\n&= p(1-p) + p(1-p) + ... + p(1-p) \\\\\n&= np(1-p)\n\\end{aligned}\\]"
   },
   {
     "objectID": "slides/lect_10.html#counting-things",
     "href": "slides/lect_10.html#counting-things",
     "title": "Chapter 11: Probability models for counts",
     "section": "Counting things",
-    "text": "Counting things\n\nwe just went into groups\nhow many groups are possible?\n\nIn a class of 85 students how many groups of 4 are possible?\n\n\n\n\\(85 \\cdot 84 \\cdot 83 \\cdot 82\\)\n\\(48594840\\) groups\nIf we don’t care about order\n\\(\\frac{85 \\cdot 84 \\cdot 83 \\cdot 82}{4 \\cdot 3 \\cdot 2 \\cdot 1}\\)\n\\(2024785\\) groups"
+    "text": "Counting things\n\nwe just went into groups\nhow many groups are possible?\n\nIn a class of 85 students how many groups of 4 are possible?\n\n\n\n\\(85 \\cdot 84 \\cdot 83 \\cdot 82\\)\n\\(48594840\\) groups\nIf we don’t care about order\n\\(\\frac{85 \\cdot 84 \\cdot 83 \\cdot 82}{4 \\cdot 3 \\cdot 2 \\cdot 1}\\)\n\\(2024785\\) groups\nCombination written as \\({}_{n}C_{k}\\) here \\(n = 85\\), \\(k = 4\\)\n\n\nIn R:\n\nexp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))\n\n[1] 2024785"
   },
   {
     "objectID": "slides/01_introduction.html#workspace-image",
@@ -1362,7 +1362,7 @@
     "href": "index.html",
     "title": "STAT 1010: Introduction to Business Statistics",
     "section": "",
-    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumerical variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n\n\n\n\n\n\n8\nMon, 17 Oct\n\n📖\n\n\n\n\n\n\n\n\n\nWed, 19 Oct"
+    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumerical variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct"
   },
   {
     "objectID": "course-links.html",
