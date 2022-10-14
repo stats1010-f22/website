@@ -51,8 +51,6 @@ find the E(B) and Var(B)
 
 ## E(Bernoulli)
 
-Find $E(B)$
-
 ::: incremental
 -   $E(B) = 0 \cdot P(B=0) + 1 \cdot P(B=1)$
 -   $$\begin{aligned}
@@ -106,7 +104,8 @@ This happens so often that we have another name for this distribution
 $$Y = B_1 + B_2 + B_3 + B_4 + B_5 + B_6 + B_7$$
 
 ::: incremental
--   $Y$ is the sum of independent and identically distributed random variables \_ What is the [mean and variance](https://stats1010-f22.github.io/website/slides/lect_09.html#/addition-rules-for-iid-variables)?
+-   $Y$ is the sum of independent and identically distributed random variables
+-   What is the [mean and variance](https://stats1010-f22.github.io/website/slides/lect_09.html#/addition-rules-for-iid-variables)?
 :::
 
 # Binomial distribution - FIST
@@ -139,7 +138,6 @@ $$E(Y) = E(B_1 + B_2 + ... + B_n)$$
     &= p + p + ... + p \\
     &= np
     \end{aligned}$$
--   
 :::
 
 ```{r}
@@ -194,8 +192,6 @@ In a class of 85 students how many groups of 4 are possible?
 -   *Combination* written as ${}_{n}C_{k}$ here $n = 85$, $k = 4$
 :::
 
-## Counting things In `R`: {.smaller}
-
 ```{r}
 #| echo: true
 #| eval: true
@@ -206,7 +202,6 @@ exp(lfactorial(85))/exp(lfactorial(81))
 exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 ```
 
-## 
 
 # Your turn
 
