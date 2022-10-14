@@ -104,8 +104,8 @@ website:
         contents:
             - href: supplemental/chi-squared.qmd
               text: Chi squared expected counts
-      #     - href: supplemental/model-diagnostics-matrix.qmd
-      #       text: Model diagnostics
+            - href: supplemental/poisson.qmd
+              text: Poisson derivation
       #     - href: supplemental/mlr-matrix.qmd
       #       text: MLR matrix notation
             - href: supplemental/exam-1-studyguide.qmd

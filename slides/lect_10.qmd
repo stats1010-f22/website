@@ -27,7 +27,6 @@ By the end of this lesson you should:
 - Understand differences between the binomial and Poisson distributions, and when the two could be applied.
 
 
-
 # Bernoulli trial
 ::: notes
 find the E(B) and Var(B)
@@ -60,6 +59,15 @@ E(B) &= 0 \cdot P(B=0) + 1 \cdot P(B=1)\\
 \end{aligned}$$
 :::
 
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 3, seconds = 0)
+```
+
+
+
 ## Var(Bernoulli)
 ::: notes
 We usually don't want this information about 1 person, we want it about a whole plane full of people, or a whole town.
@@ -79,6 +87,13 @@ Var(B) &= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\\
 &= p(1-p)
 \end{aligned}$$
 :::
+
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 3, seconds = 0)
+```
 
 ## Multiple Bernoulli trials
 
@@ -121,8 +136,20 @@ E(Y) &= E(B_1) + E(B_2) + ... + E(B_n) \\
 \end{aligned}$$
 :::
 
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 3, seconds = 0)
+```
+
 
 ## Var(Binomial)
+
+::: notes
+there are multiple ways that we can have 5 successes, so we must also learn to count
+:::
+
 $$Var(Y) = Var(B_1 + B_2 + ... + B_n)$$
 
 ::: incremental
@@ -133,10 +160,16 @@ Var(Y) &= Var(B_1) + Var(B_2) + ... + Var(B_n) \\
 \end{aligned}$$
 :::
 
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 3, seconds = 0)
+```
+
 ## Counting things
 ::: notes
 we just went into groups 
-
 how many groups are possible?
 :::
 
@@ -145,12 +178,11 @@ In a class of 85 students how many groups of 4 are possible?
 ::: incremental
 - __ __ __ __
 - $85 \cdot 84 \cdot 83 \cdot 82$
-- $48594840$ groups
+- $48,594,840$ groups
 - If we don't care about order
 - $\frac{85 \cdot 84 \cdot 83 \cdot 82}{4 \cdot 3 \cdot 2 \cdot 1}$
-- $2024785$ groups
+- $2,024,785$ groups
 - *Combination* written as ${}_{n}C_{k}$ here $n = 85$, $k = 4$
-
 :::
 
 In `R`:
@@ -161,7 +193,7 @@ In `R`:
 exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 ```
 
-
+## 
 
 
 

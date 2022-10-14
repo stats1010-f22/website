@@ -22,6 +22,6 @@ The course goals are as follows:
 
 6.  Interpret results correctly, effectively, and in context without relying on statistical jargon.
 
-7.   Critique data-based claims and evaluate data-based decisions.
+7.  Critique data-based claims and evaluate data-based decisions.
 
 8.  Complete a research project demonstrating mastery of statistical data analysis from exploratory analysis to inference to modeling.
