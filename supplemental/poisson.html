@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 - Fall 2022 - Matrix Notation for Multiple Linear Regression</title>
+<title>STAT 1010 - Fall 2022 - Limits of the binomial distribution is the poisson</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,10 +64,10 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Matrix Notation for Multiple Linear Regression">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Limits of the binomial distribution is the poisson">
 <meta property="og:description" content="I don’t know statistics! I’ve only ever taken one—very basic—introductory course on the subject from which I feel I learned very little.">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Matrix Notation for Multiple Linear Regression">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Limits of the binomial distribution is the poisson">
 <meta name="twitter:description" content="I don’t know statistics! I’ve only ever taken one—very basic—introductory course on the subject from which I feel I learned very little.">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Matrix Notation for Multiple Linear Regression</h1>
+      <h1 class="quarto-secondary-nav-title">Limits of the binomial distribution is the poisson</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -297,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Matrix Notation for Multiple Linear Regression</h1>
+<h1 class="title d-none d-lg-block">Limits of the binomial distribution is the poisson</h1>
 </div>
 
 
@@ -330,7 +330,7 @@ Note
 <p>I have a maxim: <em>It is okay not to know. But it is not okay not to want to find out.</em></p>
 <p>So I decided this month to find out about the Poisson distribution and think about its mathematical meaning.In looking up the formula one retrieves:</p>
 <p><span class="math display">\[P(X=k)=\frac{\lambda^k}{k!} e^{-\lambda}\]</span> for <span class="math inline">\(k\in\{0,1, 2,3,\ldots\}.\)</span></p>
-<p>This reads: <em>Some random variable <span class="math inline">\(X\)</span> can take on non-negative integer values and the chances that you’ll actually see it adopt a particular value <span class="math inline">\(k\)</span> is given by a crazy formula that depends on some constant parameter <span class="math inline">\(\lambda\)</span>.</em></p>
+<p>This reads: <em>Some random variable</em> <span class="math inline">\(X\)</span> can take on non-negative integer values and the chances that you’ll actually see it adopt a particular value <span class="math inline">\(k\)</span> is given by a crazy formula that depends on some constant parameter <span class="math inline">\(\lambda\)</span>.</p>
 <p>Got it? Is it now clear that everything is Poisson?</p>
 <p>Statisticians and mathematicians do not come up with formulas out of the air. What is the story behind this bizarreness?</p>
 <section id="perhaps-everything-is-binomial" class="level2">
@@ -345,8 +345,8 @@ Note
 <p>Here <span class="math inline">\(\binom{n}{k}=\frac{n!}{k!(n-k)!}\)</span>is “<span class="math inline">\(n\)</span> choose <span class="math inline">\(k\)</span> ,” the number of ways <span class="math inline">\(k\)</span> successes can be arranged among a string <span class="math inline">\(n\)</span> units long. For example, the chances of seeing exactly two sixes after rolling a die three times is <span class="math display">\[\frac{3!}{2!1!}\left(\frac{1}{6}\right)^2\left(1-\frac{1}{6}\right)=3\left(\frac{1}{6}\right)^2\left(\frac{5}{6}\right) \]</span> as we saw.</p>
 <p>We have here a <em>binomial distribution</em>. In general, for each success probability <span class="math inline">\(p\)</span> and run length <span class="math inline">\(n\)</span> we have the distribution <span class="math display">\[\mathbb{P}(X=k) = \binom{n}{k}p^k(1-p)^{n-k}\]</span> for <span class="math inline">\(k\in\{0,1, 2,\ldots,n \}.\)</span> Here <span class="math inline">\(X\)</span> is the random variable given as the number of times I see a success in running an experiment <span class="math inline">\(n\)</span> times in a row.”</p>
 <p>In the 1700s scholars became interested in questions about runs of events that seem to occur in an ongoing fashion and counting the number of occurrences of the event you might expect to see in any selected time period. French mathematicians Siméon Denis Poisson and Abraham de Moivre were the first to develop the mathematics for this.</p>
-<p><em>I’ve been sitting on my porch for many hours of my life, counting the number of cars that pass by each hour. After many hours of observation I can say that the flow of cars is more or less regular (there is no difference in traffic flow in the day versus the night) and that, on average, <span class="math inline">\(12\)</span> cars pass my house each hour.</em></p>
-<p><em>I am about to go sit out on my porch for an hour. What is the probability I will see <span class="math inline">\(15\)</span> cars?</em></p>
+<p><em>I’ve been sitting on my porch for many hours of my life, counting the number of cars that pass by each hour. After many hours of observation I can say that the flow of cars is more or less regular (there is no difference in traffic flow in the day versus the night) and that, on average,</em> <span class="math inline">\(12\)</span> cars pass my house each hour.</p>
+<p><em>I am about to go sit out on my porch for an hour. What is the probability I will see</em> <span class="math inline">\(15\)</span> cars?</p>
 <p>One possible start to this question is to treat it as a run of an experiment, not over an hour but, instead, one experiment per minute for <span class="math inline">\(60\)</span> minutes. If I know the chances <span class="math inline">\(p\)</span> of seeing a car in a given minute, then the chances of seeing <span class="math inline">\(15\)</span> cars over a course of <span class="math inline">\(60\)</span> minutes would be <span class="math display">\[\binom{60}{15} p^{15}(1-p)^{45}.\]</span> How might I estimate <span class="math inline">\(p\)</span>?</p>
 <p>Well, I expect to see an average of <span class="math inline">\(12\)</span> cars over the course an hour. So, on average, I expect to see one car in any five-minute period. So chances of me selecting a minute with the appearance of a car in it should be <span class="math inline">\(p=\frac{1}{5}\)</span> That’s it. We have a formula for the chances of seeing <span class="math inline">\(15\)</span> cars over the course of an hour. <span class="math display">\[ \binom{60}{15}0.2^{15}0.8^{45}\approx 0.076.\]</span> There is a problem with our work here: we’ve assumed that cars are spaced apart so that I’ll never see two cars within the same minute. To obviate this objection, let’s work instead with the <span class="math inline">\(3600\)</span> seconds in an hour: I’ve never seen two cars go by within the same second.</p>
 <p>Now, on average, over the <span class="math inline">\(3600\)</span> seconds of an hour, <span class="math inline">\(12\)</span> of them will have a car “in them,” and so the chances of me seeing a car in any particular second is <span class="math inline">\(p=\frac{12}{3600}\)</span></p>
