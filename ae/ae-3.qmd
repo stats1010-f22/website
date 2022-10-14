@@ -1,5 +1,5 @@
 ---
-title: "Exploring numerical data (AE-3)"
+title: "Exploring numeric data (AE-3)"
 output: 
    html_document
 ---

@@ -75,8 +75,6 @@ We usually don't want this information about 1 person, we want it about a whole 
 In that case, we sum together $n$ independent Bernoulli trials.
 :::
 
-Find $Var(B)$
-
 ::: incremental
 -   $Var(B) = (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)$
 -   $$\begin{aligned}
@@ -147,7 +145,7 @@ $$E(Y) = E(B_1 + B_2 + ... + B_n)$$
 countdown(minutes = 3, seconds = 0)
 ```
 
-## Var(Binomial)
+## Var(Binomial) {.smaller}
 
 ::: notes
 there are multiple ways that we can have 5 successes, so we must also learn to count
@@ -202,14 +200,30 @@ exp(lfactorial(85))/exp(lfactorial(81))
 exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 ```
 
+## Examples
+
+::: incremental
+1. Let $Y \sim Bin(n = 5, p = 0.2)$ find the $E(Y)$ and $Var(Y)$
+  a. $E(Y) = np = 1$
+  b. $Var(Y) = np(1-p) = 0.8$
+  c. What is the probability that $y = 3$?
+     In `R: dbinom(size  = 5, prob = 0.2, x = 3)`
+     $0.0512$
+:::
+
+## Warnings
+
+10% Condition:  if trials are selected at random, it is OK to ignore dependence caused by sampling from a finite population  if the selected trials make up less than 10% of the population
+
+
 # Poisson distribution - RIPS
 
 ::: incremental
 -  Poisson - [fish](http://pecheur.info/en/gollum-fish-song.html) - Rips
-- R - random
+- R - randomly through space or time
 - I - indepedent
-- P - proportional - ea
-- S - singly
+- P - proportional to interval size
+- S - singly - no multiple occurences in space or time
 :::
 
 # Your turn

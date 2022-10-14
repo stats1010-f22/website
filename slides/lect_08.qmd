@@ -24,7 +24,7 @@ library(GGally)
 ::: incremental
 By the end of this lesson you should:
 
--   Perform a visual assocation test
+-   Perform a visual association test
 
 -   Know how to read a scatterplot to describe associations between quantitative variables
 
