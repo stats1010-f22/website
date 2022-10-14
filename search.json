@@ -711,14 +711,14 @@
     "href": "slides/lect_10.html#ebernoulli",
     "title": "Chapter 11: Probability models for counts",
     "section": "E(Bernoulli)",
-    "text": "E(Bernoulli)\nFind \\(E(B)\\)\n\n\n\\(E(B) &= 0 \\cdot P(B=0) + 1 \\cdot P(B=1)\\)\n\\[\\begin{aligned}\nE(B) &= 0 \\cdot P(B=0) + 1 \\cdot P(B=1)\\\\\n&= 0 \\cdot (1-p) + 1 \\cdot p\\\\\n&= p\n\\end{aligned}\\]\n\n\n\n\n\n03:00"
+    "text": "E(Bernoulli)\nFind \\(E(B)\\)\n\n\n\\(E(B) = 0 \\cdot P(B=0) + 1 \\cdot P(B=1)\\)\n\\[\\begin{aligned}\nE(B) &= 0 \\cdot P(B=0) + 1 \\cdot P(B=1)\\\\\n&= 0 \\cdot (1-p) + 1 \\cdot p\\\\\n&= p\n\\end{aligned}\\]\n\n\n\n\n\n03:00"
   },
   {
     "objectID": "slides/lect_10.html#varbernoulli",
     "href": "slides/lect_10.html#varbernoulli",
     "title": "Chapter 11: Probability models for counts",
     "section": "Var(Bernoulli)",
-    "text": "Var(Bernoulli)\n\nWe usually don’t want this information about 1 person, we want it about a whole plane full of people, or a whole town.\nIn that case, we sum together \\(n\\) independent Bernoulli trials.\n\nFind \\(Var(B)\\)\n\n\n\\(Var(B) &= (0 - p)^2 \\cdot P(B=0) + (1 - p)^2 \\cdot P(B=1)\\)\n\\[\\begin{aligned}\nVar(B) &= (0 - p)^2 \\cdot P(B=0) + (1 - p)^2 \\cdot P(B=1)\\\\\n&= p^2 \\cdot (1-p) + (1 - p)^2 \\cdot p\\\\\n&= p^2 - p^3 + p(1 - 2p + p^2) \\\\\n&= p^2 - p^3 + p - 2p^2 + p^3\\\\\n&= p(1-p)\n\\end{aligned}\\]\n\n\n\n\n\n03:00"
+    "text": "Var(Bernoulli)\n\nWe usually don’t want this information about 1 person, we want it about a whole plane full of people, or a whole town.\nIn that case, we sum together \\(n\\) independent Bernoulli trials.\n\nFind \\(Var(B)\\)\n\n\n\\(Var(B) = (0 - p)^2 \\cdot P(B=0) + (1 - p)^2 \\cdot P(B=1)\\)\n\\[\\begin{aligned}\nVar(B) &= (0 - p)^2 \\cdot P(B=0) + (1 - p)^2 \\cdot P(B=1)\\\\\n&= p^2 \\cdot (1-p) + (1 - p)^2 \\cdot p\\\\\n&= p^2 - p^3 + p(1 - 2p + p^2) \\\\\n&= p^2 - p^3 + p - 2p^2 + p^3\\\\\n&= p(1-p)\n\\end{aligned}\\]\n\n\n\n\n\n03:00"
   },
   {
     "objectID": "slides/lect_10.html#multiple-bernoulli-trials",
@@ -732,7 +732,7 @@
     "href": "slides/lect_10.html#ebinomial",
     "title": "Chapter 11: Probability models for counts",
     "section": "E(Binomial)",
-    "text": "E(Binomial)\n\\[E(Y) = E(B_1 + B_2 + ... + B_n)\\] ::: incremental - \\[\\begin{aligned}\nE(Y) &= E(B_1) + E(B_2) + ... + E(B_n) \\\\\n&= p + p + ... + p \\\\\n&= np\n\\end{aligned}\\] :::\n\n\n\n03:00"
+    "text": "E(Binomial)\n\\[E(Y) = E(B_1 + B_2 + ... + B_n)\\]\n\n\n\\[\\begin{aligned}\nE(Y) &= E(B_1) + E(B_2) + ... + E(B_n) \\\\\n&= p + p + ... + p \\\\\n&= np\n\\end{aligned}\\]\n\n\n\n\n\n\n03:00"
   },
   {
     "objectID": "slides/lect_10.html#varbinomial",
@@ -746,7 +746,14 @@
     "href": "slides/lect_10.html#counting-things",
     "title": "Chapter 11: Probability models for counts",
     "section": "Counting things",
-    "text": "Counting things\n\nwe just went into groups how many groups are possible?\n\nIn a class of 85 students how many groups of 4 are possible?\n\n\n\n\\(85 \\cdot 84 \\cdot 83 \\cdot 82\\)\n\\(48,594,840\\) groups\nIf we don’t care about order\n\\(\\frac{85 \\cdot 84 \\cdot 83 \\cdot 82}{4 \\cdot 3 \\cdot 2 \\cdot 1}\\)\n\\(2,024,785\\) groups\nCombination written as \\({}_{n}C_{k}\\) here \\(n = 85\\), \\(k = 4\\)\n\n\nIn R:\n\nexp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))\n\n[1] 2024785"
+    "text": "Counting things\n\nwe just went into groups how many groups are possible?\n\nIn a class of 85 students how many groups of 4 are possible?\n\n\n\\(85 \\cdot 84 \\cdot 83 \\cdot 82\\)\n\\(48,594,840\\) groups\nIf we don’t care about order\n\\(\\frac{85 \\cdot 84 \\cdot 83 \\cdot 82}{4 \\cdot 3 \\cdot 2 \\cdot 1}\\)\n\\(2,024,785\\) groups\nCombination written as \\({}_{n}C_{k}\\) here \\(n = 85\\), \\(k = 4\\)"
+  },
+  {
+    "objectID": "slides/lect_10.html#counting-things-in-r",
+    "href": "slides/lect_10.html#counting-things-in-r",
+    "title": "Chapter 11: Probability models for counts",
+    "section": "Counting things In R:",
+    "text": "Counting things In R:\n\nexp(lfactorial(85))/exp(lfactorial(81))\n\n[1] 48594840\n\nexp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))\n\n[1] 2024785"
   },
   {
     "objectID": "slides/01_introduction.html#workspace-image",

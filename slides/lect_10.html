@@ -446,7 +446,7 @@ B =\begin{cases}
 <p>Find <span class="math inline">\(E(B)\)</span></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(E(B) &amp;= 0 \cdot P(B=0) + 1 \cdot P(B=1)\)</span></li>
+<li class="fragment"><span class="math inline">\(E(B) = 0 \cdot P(B=0) + 1 \cdot P(B=1)\)</span></li>
 <li class="fragment"><span class="math display">\[\begin{aligned}
 E(B) &amp;= 0 \cdot P(B=0) + 1 \cdot P(B=1)\\
 &amp;= 0 \cdot (1-p) + 1 \cdot p\\
@@ -456,7 +456,7 @@ E(B) &amp;= 0 \cdot P(B=0) + 1 \cdot P(B=1)\\
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_6348a987" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_6348acc4" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -481,7 +481,7 @@ E(B) &amp;= 0 \cdot P(B=0) + 1 \cdot P(B=1)\\
 <p>Find <span class="math inline">\(Var(B)\)</span></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(Var(B) &amp;= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\)</span></li>
+<li class="fragment"><span class="math inline">\(Var(B) = (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\)</span></li>
 <li class="fragment"><span class="math display">\[\begin{aligned}
 Var(B) &amp;= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\\
 &amp;= p^2 \cdot (1-p) + (1 - p)^2 \cdot p\\
@@ -493,7 +493,7 @@ Var(B) &amp;= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\\
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_6348a917" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_6348ae19" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -540,14 +540,20 @@ Var(B) &amp;= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\\
 </section>
 <section id="ebinomial" class="slide level2">
 <h2>E(Binomial)</h2>
-<p><span class="math display">\[E(Y) = E(B_1 + B_2 + ... + B_n)\]</span> ::: incremental - <span class="math display">\[\begin{aligned}
+<p><span class="math display">\[E(Y) = E(B_1 + B_2 + ... + B_n)\]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math display">\[\begin{aligned}
 E(Y) &amp;= E(B_1) + E(B_2) + ... + E(B_n) \\
 &amp;= p + p + ... + p \\
 &amp;= np
-\end{aligned}\]</span> :::</p>
+\end{aligned}\]</span></li>
+<li class="fragment"></li>
+</ul>
+</div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_6348ab56" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_6348ad88" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -580,13 +586,13 @@ Var(Y) &amp;= Var(B_1) + Var(B_2) + ... + Var(B_n) \\
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_6348abed" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_6348acc6" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 </section>
-<section id="counting-things" class="slide level2">
+<section id="counting-things" class="slide level2 smaller">
 <h2>Counting things</h2>
 <aside class="notes">
 <p>we just went into groups how many groups are possible?</p>
@@ -604,18 +610,23 @@ Var(Y) &amp;= Var(B_1) + Var(B_2) + ... + Var(B_n) \\
 <p>In a class of 85 students how many groups of 4 are possible?</p>
 <div>
 <ul>
-<li class="fragment"><hr></li>
-<li class="fragment"><span class="math inline">\(85 \cdot 84 \cdot 83 \cdot 82\)</span></li>
-<li class="fragment"><span class="math inline">\(48,594,840\)</span> groups</li>
-<li class="fragment">If we don’t care about order</li>
-<li class="fragment"><span class="math inline">\(\frac{85 \cdot 84 \cdot 83 \cdot 82}{4 \cdot 3 \cdot 2 \cdot 1}\)</span></li>
-<li class="fragment"><span class="math inline">\(2,024,785\)</span> groups</li>
-<li class="fragment"><em>Combination</em> written as <span class="math inline">\({}_{n}C_{k}\)</span> here <span class="math inline">\(n = 85\)</span>, <span class="math inline">\(k = 4\)</span></li>
+<li class="fragment"><p><span class="math inline">\(85 \cdot 84 \cdot 83 \cdot 82\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(48,594,840\)</span> groups</p></li>
+<li class="fragment"><p>If we don’t care about order</p></li>
+<li class="fragment"><p><span class="math inline">\(\frac{85 \cdot 84 \cdot 83 \cdot 82}{4 \cdot 3 \cdot 2 \cdot 1}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(2,024,785\)</span> groups</p></li>
+<li class="fragment"><p><em>Combination</em> written as <span class="math inline">\({}_{n}C_{k}\)</span> here <span class="math inline">\(n = 85\)</span>, <span class="math inline">\(k = 4\)</span></p></li>
 </ul>
 </div>
-<p>In <code>R</code>:</p>
+</section>
+<section id="counting-things-in-r" class="slide level2 smaller">
+<h2>Counting things In <code>R</code>:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">exp</span>(<span class="fu">lfactorial</span>(<span class="dv">85</span>))<span class="sc">/</span>(<span class="fu">exp</span>(<span class="fu">lfactorial</span>(<span class="dv">81</span>))<span class="sc">*</span><span class="fu">exp</span>(<span class="fu">lfactorial</span>(<span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">exp</span>(<span class="fu">lfactorial</span>(<span class="dv">85</span>))<span class="sc">/</span><span class="fu">exp</span>(<span class="fu">lfactorial</span>(<span class="dv">81</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 48594840</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">exp</span>(<span class="fu">lfactorial</span>(<span class="dv">85</span>))<span class="sc">/</span>(<span class="fu">exp</span>(<span class="fu">lfactorial</span>(<span class="dv">81</span>))<span class="sc">*</span><span class="fu">exp</span>(<span class="fu">lfactorial</span>(<span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2024785</code></pre>
 </div>
