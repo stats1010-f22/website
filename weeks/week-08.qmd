@@ -1,6 +1,6 @@
 ---
-title: "Week 7"
-subtitle: "Associations"
+title: "Week 8"
+subtitle: "Probability Models"
 editor: visual
 ---
 

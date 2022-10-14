@@ -202,6 +202,15 @@ exp(lfactorial(85))/exp(lfactorial(81))
 exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 ```
 
+# Poisson distribution - RIPS
+
+::: incremental
+-  Poisson - [fish](http://pecheur.info/en/gollum-fish-song.html) - Rips
+- R - random
+- I - indepedent
+- P - proportional - ea
+- S - singly
+:::
 
 # Your turn
 
