@@ -381,6 +381,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../site_libs/countdown-0.3.5/countdown.css" rel="stylesheet">
+  <script src="../site_libs/countdown-0.3.5/countdown.js"></script>
 <meta property="og:title" content="STAT 1010 - Fall 2022 - Chapter 11: Probability models for counts">
 <meta property="og:description" content="STAT 1010 - Fall 2022">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
@@ -452,6 +454,13 @@ E(B) &amp;= 0 \cdot P(B=0) + 1 \cdot P(B=1)\\
 \end{aligned}\]</span></li>
 </ul>
 </div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_6348a987" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="varbernoulli" class="slide level2">
 <h2>Var(Bernoulli)</h2>
@@ -481,6 +490,13 @@ Var(B) &amp;= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\\
 &amp;= p(1-p)
 \end{aligned}\]</span></li>
 </ul>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_6348a917" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
 </div>
 </section>
 <section id="multiple-bernoulli-trials" class="slide level2">
@@ -529,9 +545,29 @@ E(Y) &amp;= E(B_1) + E(B_2) + ... + E(B_n) \\
 &amp;= p + p + ... + p \\
 &amp;= np
 \end{aligned}\]</span> :::</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_6348ab56" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="varbinomial" class="slide level2">
 <h2>Var(Binomial)</h2>
+<aside class="notes">
+<p>there are multiple ways that we can have 5 successes, so we must also learn to count</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <p><span class="math display">\[Var(Y) = Var(B_1 + B_2 + ... + B_n)\]</span></p>
 <div>
 <ul>
@@ -542,12 +578,18 @@ Var(Y) &amp;= Var(B_1) + Var(B_2) + ... + Var(B_n) \\
 \end{aligned}\]</span></li>
 </ul>
 </div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_6348abed" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="counting-things" class="slide level2">
 <h2>Counting things</h2>
 <aside class="notes">
-<p>we just went into groups</p>
-<p>how many groups are possible?</p>
+<p>we just went into groups how many groups are possible?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -564,10 +606,10 @@ Var(Y) &amp;= Var(B_1) + Var(B_2) + ... + Var(B_n) \\
 <ul>
 <li class="fragment"><hr></li>
 <li class="fragment"><span class="math inline">\(85 \cdot 84 \cdot 83 \cdot 82\)</span></li>
-<li class="fragment"><span class="math inline">\(48594840\)</span> groups</li>
+<li class="fragment"><span class="math inline">\(48,594,840\)</span> groups</li>
 <li class="fragment">If we don’t care about order</li>
 <li class="fragment"><span class="math inline">\(\frac{85 \cdot 84 \cdot 83 \cdot 82}{4 \cdot 3 \cdot 2 \cdot 1}\)</span></li>
-<li class="fragment"><span class="math inline">\(2024785\)</span> groups</li>
+<li class="fragment"><span class="math inline">\(2,024,785\)</span> groups</li>
 <li class="fragment"><em>Combination</em> written as <span class="math inline">\({}_{n}C_{k}\)</span> here <span class="math inline">\(n = 85\)</span>, <span class="math inline">\(k = 4\)</span></li>
 </ul>
 </div>
@@ -578,13 +620,16 @@ Var(Y) &amp;= Var(B_1) + Var(B_2) + ... + Var(B_n) \\
 <pre><code>[1] 2024785</code></pre>
 </div>
 </div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 </section></section>
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>
 <p><a href="https://stats1010-f22.github.io/website/ae/ae-8.html">Click here</a> or the qr code below</p>
 
 
-<img data-src="lect_10_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><div class="footer footer-default">
+<img data-src="lect_10_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"><div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
 </div>
 </section>
