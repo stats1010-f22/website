@@ -22,28 +22,31 @@ library(tidyverse)
 
 By the end of this lesson you should:
 
-- Know how to use the binomial distribution, as well as its mean, and variance.
-- Know how to use the Poisson distribution, as well as its mean, and variance.
-- Understand differences between the binomial and Poisson distributions, and when the two could be applied.
-
+-   Know how to use the binomial distribution, as well as its mean, and variance.
+-   Know how to use the Poisson distribution, as well as its mean, and variance.
+-   Understand differences between the binomial and Poisson distributions, and when the two could be applied.
 
 # Bernoulli trial
+
 ::: notes
 find the E(B) and Var(B)
 :::
 
 ::: incremental
-- flipping a coin
-- insured or not insured
-- luggage lost or not lost
+-   flipping a coin
 
-- $$\begin{equation}
-B =\begin{cases}
-1, & \text{if the trial is a success}.\\
-0, & \text{if the trial is a success}.
-\end{cases}
-\end{equation}$$
-- $p$ is the probability of success
+-   insured or not insured
+
+-   luggage lost or not lost
+
+-   $$\begin{equation}
+    B =\begin{cases}
+    1, & \text{if the trial is a success}.\\
+    0, & \text{if the trial is a success}.
+    \end{cases}
+    \end{equation}$$
+
+-   $p$ is the probability of success
 :::
 
 ## E(Bernoulli)
@@ -51,12 +54,12 @@ B =\begin{cases}
 Find $E(B)$
 
 ::: incremental
-- $E(B) &= 0 \cdot P(B=0) + 1 \cdot P(B=1)$
-- $$\begin{aligned}
-E(B) &= 0 \cdot P(B=0) + 1 \cdot P(B=1)\\
-&= 0 \cdot (1-p) + 1 \cdot p\\
-&= p
-\end{aligned}$$
+-   $E(B) = 0 \cdot P(B=0) + 1 \cdot P(B=1)$
+-   $$\begin{aligned}
+    E(B) &= 0 \cdot P(B=0) + 1 \cdot P(B=1)\\
+    &= 0 \cdot (1-p) + 1 \cdot p\\
+    &= p
+    \end{aligned}$$
 :::
 
 ```{r}
@@ -66,9 +69,8 @@ E(B) &= 0 \cdot P(B=0) + 1 \cdot P(B=1)\\
 countdown(minutes = 3, seconds = 0)
 ```
 
-
-
 ## Var(Bernoulli)
+
 ::: notes
 We usually don't want this information about 1 person, we want it about a whole plane full of people, or a whole town.
 
@@ -78,14 +80,14 @@ In that case, we sum together $n$ independent Bernoulli trials.
 Find $Var(B)$
 
 ::: incremental
-- $Var(B) &= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)$
-- $$\begin{aligned}
-Var(B) &= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\\
-&= p^2 \cdot (1-p) + (1 - p)^2 \cdot p\\
-&= p^2 - p^3 + p(1 - 2p + p^2) \\
-&= p^2 - p^3 + p - 2p^2 + p^3\\
-&= p(1-p)
-\end{aligned}$$
+-   $Var(B) = (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)$
+-   $$\begin{aligned}
+    Var(B) &= (0 - p)^2 \cdot P(B=0) + (1 - p)^2 \cdot P(B=1)\\
+    &= p^2 \cdot (1-p) + (1 - p)^2 \cdot p\\
+    &= p^2 - p^3 + p(1 - 2p + p^2) \\
+    &= p^2 - p^3 + p - 2p^2 + p^3\\
+    &= p(1-p)
+    \end{aligned}$$
 :::
 
 ```{r}
@@ -104,10 +106,8 @@ This happens so often that we have another name for this distribution
 $$Y = B_1 + B_2 + B_3 + B_4 + B_5 + B_6 + B_7$$
 
 ::: incremental
-- $Y$ is the sum of independent and identically distributed random variables
-_ What is the [mean and variance](https://stats1010-f22.github.io/website/slides/lect_09.html#/addition-rules-for-iid-variables)?
+-   $Y$ is the sum of independent and identically distributed random variables \_ What is the [mean and variance](https://stats1010-f22.github.io/website/slides/lect_09.html#/addition-rules-for-iid-variables)?
 :::
-
 
 # Binomial distribution - FIST
 
@@ -118,22 +118,28 @@ The order of successes?
 The number of successes in $n$ trials
 
 ::: incremental
-- Binomial - Biceps - FIST
+-   Binomial - Biceps - FIST
 
-- F - fixed number of trials
-- I - independent outcomes
-- S - probability of success is constant
-- T - two outcomes
+-   F - fixed number of trials
+
+-   I - independent outcomes
+
+-   S - probability of success is constant
+
+-   T - two outcomes
 :::
 
-## E(Binomial) 
+## E(Binomial)
+
 $$E(Y) = E(B_1 + B_2 + ... + B_n)$$
+
 ::: incremental
-- $$\begin{aligned}
-E(Y) &= E(B_1) + E(B_2) + ... + E(B_n) \\
-&= p + p + ... + p \\
-&= np
-\end{aligned}$$
+-   $$\begin{aligned}
+    E(Y) &= E(B_1) + E(B_2) + ... + E(B_n) \\
+    &= p + p + ... + p \\
+    &= np
+    \end{aligned}$$
+-   
 :::
 
 ```{r}
@@ -142,7 +148,6 @@ E(Y) &= E(B_1) + E(B_2) + ... + E(B_n) \\
 
 countdown(minutes = 3, seconds = 0)
 ```
-
 
 ## Var(Binomial)
 
@@ -153,11 +158,11 @@ there are multiple ways that we can have 5 successes, so we must also learn to c
 $$Var(Y) = Var(B_1 + B_2 + ... + B_n)$$
 
 ::: incremental
-- $$\begin{aligned}
-Var(Y) &= Var(B_1) + Var(B_2) + ... + Var(B_n) \\
-&= p(1-p) + p(1-p) + ... + p(1-p) \\
-&= np(1-p)
-\end{aligned}$$
+-   $$\begin{aligned}
+    Var(Y) &= Var(B_1) + Var(B_2) + ... + Var(B_n) \\
+    &= p(1-p) + p(1-p) + ... + p(1-p) \\
+    &= np(1-p)
+    \end{aligned}$$
 :::
 
 ```{r}
@@ -167,35 +172,41 @@ Var(Y) &= Var(B_1) + Var(B_2) + ... + Var(B_n) \\
 countdown(minutes = 3, seconds = 0)
 ```
 
-## Counting things
+## Counting things {.smaller}
+
 ::: notes
-we just went into groups 
-how many groups are possible?
+we just went into groups how many groups are possible?
 :::
 
 In a class of 85 students how many groups of 4 are possible?
 
 ::: incremental
-- __ __ __ __
-- $85 \cdot 84 \cdot 83 \cdot 82$
-- $48,594,840$ groups
-- If we don't care about order
-- $\frac{85 \cdot 84 \cdot 83 \cdot 82}{4 \cdot 3 \cdot 2 \cdot 1}$
-- $2,024,785$ groups
-- *Combination* written as ${}_{n}C_{k}$ here $n = 85$, $k = 4$
+-   $85 \cdot 84 \cdot 83 \cdot 82$
+
+-   $48,594,840$ groups
+
+-   If we don't care about order
+
+-   $\frac{85 \cdot 84 \cdot 83 \cdot 82}{4 \cdot 3 \cdot 2 \cdot 1}$
+
+-   $2,024,785$ groups
+
+-   *Combination* written as ${}_{n}C_{k}$ here $n = 85$, $k = 4$
 :::
 
-In `R`:
+## Counting things In `R`: {.smaller}
+
 ```{r}
 #| echo: true
 #| eval: true
+
+exp(lfactorial(85))/exp(lfactorial(81))
+
 
 exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 ```
 
 ## 
-
-
 
 # Your turn
 
