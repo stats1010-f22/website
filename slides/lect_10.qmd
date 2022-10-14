@@ -187,7 +187,7 @@ In a class of 85 students how many groups of 4 are possible?
 
 -   $2,024,785$ groups
 
--   *Combination* written as ${}_{n}C_{k}$ here $n = 85$, $k = 4$
+-   *Combination* written as ${}_{n}C_{k}$ here $n = 85$, $k = 4$ or  $\binom{85}{4}$
 :::
 
 ```{r}
@@ -200,7 +200,7 @@ exp(lfactorial(85))/exp(lfactorial(81))
 exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 ```
 
-## Examples
+## Example
 
 ::: incremental
 1. Let $Y \sim Bin(n = 5, p = 0.2)$ find the $E(Y)$ and $Var(Y)$
@@ -215,8 +215,61 @@ exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 
 10% Condition:  if trials are selected at random, it is OK to ignore dependence caused by sampling from a finite population  if the selected trials make up less than 10% of the population
 
+## Limit - mins
 
-# Poisson distribution - RIPS
+::: notes
+some of these cars may come by in the same minute..
+:::
+
+I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next 60 mins? 
+
+::: incremental
+- $p = \frac{7}{60}$
+
+- $Y \sim Bin(60, \frac{7}{60})$
+
+- $\binom{60}{18}p^{18}(1-p)^{42}$
+:::
+
+## Limit - secs
+I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next 3600 secs? 
+
+::: incremental
+- $p = \frac{7}{3600}$
+
+- $Y \sim Bin(3600, \frac{7}{3600})$
+
+- $\binom{3600}{18}p^{18}(1-p)^{3558}$
+:::
+
+## Limit - smallest interval
+I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next much smaller than a second?
+
+::: columns
+::: {.column width="50%"}
+::: incremental
+-   $\binom{n}{18}(\frac{7}{n})^{18}(1-\frac{7}{n})^{n-18}$
+
+-   $\frac{n\cdot(n-1)\ldots(n-17)}{18!}\cdot \frac{7^{18}}{n^{18}}\cdot (1-\frac{7}{n})^{n} \cdot \frac{1}{(1-\frac{7}{n})^{18}}$
+
+-   $\frac{n\cdot(n-1)\ldots(n-17)}{n^{18}} \rightarrow 1$
+
+-   $\frac{1}{(1-\frac{7}{n})^{18}} \rightarrow 1$
+:::
+:::
+
+::: {.column width="50%"}
+::: incremental
+$\frac{7^{18}}{18!}e^{-7}$
+:::
+:::
+:::
+
+# Poisson distribution
+
+If $X \sim Pois(\lambda)$ then $P(X=x) = \frac{\lambda^{x}}{x!}e^{-\lambda}$
+
+## Poisson distribution - RIPS
 
 ::: incremental
 -  Poisson - [fish](http://pecheur.info/en/gollum-fish-song.html) - Rips
@@ -224,6 +277,23 @@ exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 - I - indepedent
 - P - proportional to interval size
 - S - singly - no multiple occurences in space or time
+:::
+
+## E(Pois)
+$\lambda$
+
+## Var(Pois)
+$\lambda$
+
+## Example
+
+::: incremental
+1. Let $Y \sim Pois(\lambda = 5)$ find the $E(Y)$ and $Var(Y)$
+  a. $E(Y) = 5$
+  b. $Var(Y) = 5$
+  c. What is the probability that $y = 3$?
+     In `R: dpois(x = 3, lambda = 5)`
+     $0.1403739$
 :::
 
 # Your turn

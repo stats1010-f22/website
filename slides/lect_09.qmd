@@ -20,7 +20,6 @@ library(tidyverse)
 
 # Learning outcomes {.smaller}
 
-
 ::: incremental
 By the end of this lesson you should:
 
@@ -39,7 +38,6 @@ one of the main differences between this and chpt 6, is that here we are dealing
 
 Stress this throughout the class.
 :::
-
 
 ![](lect_07-images/parameter_estimate.png)
 
@@ -415,21 +413,21 @@ data %>%
 
 $$S(2X) = \frac{2\mu_X - 2r_f}{\sqrt{Var(2X)}}$$
 
-
 ::: incremental
-- $\mu_X = 0.1$
-- $Var(X) = 4.99$
-- $r_f = .015$
-- $$\begin{aligned}
-    &= \frac{2 \cdot 0.1 - 2 \cdot 0.015}{\sqrt{4 \cdot 4.99}}\\
-    &= \frac{.2 - 0.03}{\sqrt{19.96}}\\
-    &= 0.038
-    \end{aligned}$$
-    
-- This is the same as before, how do we compute if we invest for two subsequent days?  
+-   $\mu_X = 0.1$
+
+-   $Var(X) = 4.99$
+
+-   $r_f = .015$
+
+-   $$\begin{aligned}
+      &= \frac{2 \cdot 0.1 - 2 \cdot 0.015}{\sqrt{4 \cdot 4.99}}\\
+      &= \frac{.2 - 0.03}{\sqrt{19.96}}\\
+      &= 0.038
+      \end{aligned}$$
+
+-   This is the same as before, how do we compute if we invest for two subsequent days?\
 :::
-
-
 
 ## IID {.smaller}
 
@@ -482,20 +480,19 @@ $$Var(aX + bY + c) = a^2Var(X) + b^2Var(Y) + 2abCov(X, Y)$$
 
 $$ E(2X + 4Y + 0.06)$$
 
-
 ::: incremental
--   -   $$\begin{aligned}
-    &= 2E(X) + 4E(Y) + 0.06\\
-    &= 2(0.10) + 4(0.12) + 0.06\\
-    &= \$0.74
-    \end{aligned}$$
-:::
+-   
 
+    -   $$\begin{aligned}
+        &= 2E(X) + 4E(Y) + 0.06\\
+        &= 2(0.10) + 4(0.12) + 0.06\\
+        &= \$0.74
+        \end{aligned}$$
+:::
 
 ## Variance of weighted sum
 
 $$ Var(2X + 4Y + 0.06)$$
-
 
 ::: incremental
 -   $$\begin{aligned}
@@ -504,7 +501,6 @@ $$ Var(2X + 4Y + 0.06)$$
     &= 139.32
     \end{aligned}$$
 :::
-
 
 # Your turn
 
