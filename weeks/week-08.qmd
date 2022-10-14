@@ -12,7 +12,7 @@ editor: visual
 
 ## Participate
 
-🖥️
+🖥️ [Lect](/slides/lect_07.html)[ure 10](/slides/lect_10.html)
 
 🖥️
 
@@ -21,6 +21,8 @@ editor: visual
 📋
 
 ## Perform
+
+✍️
 
 <br><br>
 

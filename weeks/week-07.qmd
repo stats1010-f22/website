@@ -20,8 +20,6 @@ editor: visual
 
 📋 [AE 9](/ae/ae-9.html)
 
-## Perform
-
 <br><br>
 
 ::: {style="font-size: 0.875em;"}
