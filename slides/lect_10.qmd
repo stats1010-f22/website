@@ -211,6 +211,13 @@ exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
      $0.0512$
 :::
 
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 3, seconds = 0)
+```
+
 ## Warnings
 
 10% Condition:  if trials are selected at random, it is OK to ignore dependence caused by sampling from a finite population  if the selected trials make up less than 10% of the population
@@ -295,6 +302,13 @@ $\lambda$
      In `R: dpois(x = 3, lambda = 5)`
      $0.1403739$
 :::
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 3, seconds = 0)
+```
+
 
 # Your turn
 
