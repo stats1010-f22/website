@@ -20,6 +20,20 @@ library(tidyverse)
 
 # Learning outcomes
 
+::: incremental
+- The shape of the normal distribution and why it is important
+- 
+
+
+:::
+
+# Collect data
+
+Play this game [Fighter pilot challenge](https://www.echalk.co.uk/amusements/Games/pilotTrainer/pilotTrainer.html)
+
+and record your best time here.
+
+
 # Your turn
 
 [Click here](https://stats1010-f22.github.io/website/ae/ae-8.html) or the qr code below

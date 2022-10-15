@@ -1,0 +1,99 @@
+---
+title: "HW 2 - Titanic dataset"
+subtitle: "Due Friday, 21 October, 2pm on Gradescope"
+editor: visual
+---
+
+## Introduction
+
+For this homework assignment we will be exploring the [Titanic dataset](https://github.com/stats1010-f22/website/blob/main/hw/data/titanic.csv).
+
+### Learning goals
+
+In this assignment, you will...
+
+-   Import data into R
+-   Explore numeric variables
+-   Compute means for subgroups and compare them
+-   Comment on and produce a pairs plot of numeric variables
+-   Address overplotting 
+
+## Getting started
+
+### Log in to RStudio
+
+Click on your *Stat1010.Rproj* that we made the first day of class.
+
+Go to *File* ➛ *New File* ➛ *Quarto Document* and name the document *hw-2* click *create.*
+
+
+## Packages
+
+The following packages will be used in this assignment:
+
+```{r}
+#| message: false
+#| eval: false
+
+library(tidyverse) # for data manipulation and data visualization
+library(here) # to organize files
+```
+
+## Data: Titanic
+
+On April 15, 1912, the largest passenger liner ever made collided with an iceberg during her maiden voyage. When the Titanic sank it killed 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships. One of the reasons that the shipwreck resulted in such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others.
+
+The [titanic.csv](https://github.com/stats1010-f22/website/blob/main/hw/data/titanic.csv) file contains data for 887 of the real Titanic passengers. Each row represents one person. The columns describe different attributes about the person including whether they survived, their age, their passenger-class, their sex, and the fare they paid
+
+-   `Pclass`: The class of passengers on the titanic, with $1st$ being the highest class, and $3rd$ the lowest.
+-   `Survived`: A variable that records whether or not a passenger survived the sinking of the titanic.
+
+-   `Fare`: A variable that records the passenger fare.
+
+1.  Import the data into `R`
+2.  For each value of Pclass, compute the mean fare and standard deviation paid by the passengers in that class. Comment on them in context.
+3.  For each value of Survived, compute the mean fare and standard deviation paid by the passengers with that survival status. Comment on them in context.
+
+::: callout-warning
+This may be a good time to render your document.
+:::
+
+4.  Draw a pairs plot of all numeric variables in the dataset and comment on all scatterplots and histograms. Be sure to use variable names.
+5.  Explore any outliers by filtering and looking at the data. Answer questions like this, but include others that spark your curiosity.
+    a.  Which was the biggest family aboard?
+
+    b.  Which and how many people paid the highest fair?
+6.  Draw one plot containing 3 boxplots of the Fare paid for each category of Pclass. What conclusions can you draw from this plot? Consider our last assignment and how the passenger class predicted survival.
+
+::: callout-warning
+This may be a good time to render your document.
+:::
+
+7.  Draw a scatterplot of Pclass_num and Fare, and color it by the survival variable. (Hint: use the function geom_jitter() to avoid [overplotting](https://www.data-to-viz.com/caveat/overplotting.html).) Comment on the plot.
+
+::: callout-warning
+Before submitting, make sure you render your document,
+:::
+
+## Submission
+
+::: callout-warning
+Remember -- you must turn in a PDF file to the Gradescope page before the submission deadline for full credit.
+:::
+
+To submit your assignment:
+
+-   Then submit the pdf following the link on the [course website](https://stats1010-f22.github.io/website/course-links.html).
+
+## Grading
+
+Total points available: 38 points
+| Component | Points |
+|-----------|--------|
+| Qu 1      | 2      |
+| Qu 2      | 4      |
+| Qu 3      | 4      |
+| Qu 4      | 15     |
+| Qu 5      | 4      |
+| Qu 6      | 5      |
+| Qu 7      | 4      |
