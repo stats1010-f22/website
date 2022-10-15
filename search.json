@@ -1341,7 +1341,7 @@
     "href": "index.html",
     "title": "STAT 1010: Introduction to Business Statistics",
     "section": "",
-    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct"
+    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct"
   },
   {
     "objectID": "course-links.html",
@@ -1531,6 +1531,48 @@
     "title": "HW 1 - Titanic dataset",
     "section": "Grading",
     "text": "Grading\nTotal points available: 25 points.\n\n\n\nComponent\nPoints\n\n\n\n\nPart 1 Qu 1\n2\n\n\nPart 1 Qu 2\n3\n\n\nPart 2 Qu 1\n2\n\n\nPart 2 Qu 2\n2\n\n\nPart 2 Qu 3\n1\n\n\nPart 2 Qu 4\n2\n\n\nPart 2 Qu 5 Pt 1\n1\n\n\nPart 2 Qu 5 Pt 2\n1\n\n\nPart 2 Qu 6\n3\n\n\nPart 2 Qu 7\n4\n\n\nPart 2 Qu 8\n4"
+  },
+  {
+    "objectID": "hw/hw-2.html",
+    "href": "hw/hw-2.html",
+    "title": "HW 2 - Titanic dataset",
+    "section": "",
+    "text": "For this homework assignment we will be exploring the Titanic dataset.\n\n\nIn this assignment, you will…\n\nImport data into R\nExplore numeric variables\nCompute means for subgroups and compare them\nComment on and produce a pairs plot of numeric variables\nAddress overplotting"
+  },
+  {
+    "objectID": "hw/hw-2.html#getting-started",
+    "href": "hw/hw-2.html#getting-started",
+    "title": "HW 2 - Titanic dataset",
+    "section": "Getting started",
+    "text": "Getting started\n\nLog in to RStudio\nClick on your Stat1010.Rproj that we made the first day of class.\nGo to File ➛ New File ➛ Quarto Document and name the document hw-2 click create."
+  },
+  {
+    "objectID": "hw/hw-2.html#packages",
+    "href": "hw/hw-2.html#packages",
+    "title": "HW 2 - Titanic dataset",
+    "section": "Packages",
+    "text": "Packages\nThe following packages will be used in this assignment:\n\nlibrary(tidyverse) # for data manipulation and data visualization\nlibrary(here) # to organize files"
+  },
+  {
+    "objectID": "hw/hw-2.html#data-titanic",
+    "href": "hw/hw-2.html#data-titanic",
+    "title": "HW 2 - Titanic dataset",
+    "section": "Data: Titanic",
+    "text": "Data: Titanic\nOn April 15, 1912, the largest passenger liner ever made collided with an iceberg during her maiden voyage. When the Titanic sank it killed 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships. One of the reasons that the shipwreck resulted in such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others.\nThe titanic.csv file contains data for 887 of the real Titanic passengers. Each row represents one person. The columns describe different attributes about the person including whether they survived, their age, their passenger-class, their sex, and the fare they paid\n\nPclass: The class of passengers on the titanic, with \\(1st\\) being the highest class, and \\(3rd\\) the lowest.\nSurvived: A variable that records whether or not a passenger survived the sinking of the titanic.\nFare: A variable that records the passenger fare.\n\n\nImport the data into R\nFor each value of Pclass, compute the mean fare and standard deviation paid by the passengers in that class. Comment on them in context.\nFor each value of Survived, compute the mean fare and standard deviation paid by the passengers with that survival status. Comment on them in context.\n\n\n\n\n\n\n\nWarning\n\n\n\nThis may be a good time to render your document.\n\n\n\nDraw a pairs plot of all numeric variables in the dataset and comment on all scatterplots and histograms. Be sure to use variable names.\nExplore any outliers by filtering and looking at the data. Answer questions like this, but include others that spark your curiosity.\n\nWhich was the biggest family aboard?\nWhich and how many people paid the highest fair?\n\nDraw one plot containing 3 boxplots of the Fare paid for each category of Pclass. What conclusions can you draw from this plot? Consider our last assignment and how the passenger class predicted survival.\n\n\n\n\n\n\n\nWarning\n\n\n\nThis may be a good time to render your document.\n\n\n\nDraw a scatterplot of Pclass_num and Fare, and color it by the survival variable. (Hint: use the function geom_jitter() to avoid overplotting.) Comment on the plot.\n\n\n\n\n\n\n\nWarning\n\n\n\nBefore submitting, make sure you render your document,"
+  },
+  {
+    "objectID": "hw/hw-2.html#submission",
+    "href": "hw/hw-2.html#submission",
+    "title": "HW 2 - Titanic dataset",
+    "section": "Submission",
+    "text": "Submission\n\n\n\n\n\n\nWarning\n\n\n\nRemember – you must turn in a PDF file to the Gradescope page before the submission deadline for full credit.\n\n\nTo submit your assignment:\n\nThen submit the pdf following the link on the course website."
+  },
+  {
+    "objectID": "hw/hw-2.html#grading",
+    "href": "hw/hw-2.html#grading",
+    "title": "HW 2 - Titanic dataset",
+    "section": "Grading",
+    "text": "Grading\nTotal points available: 38 points | Component | Points | |———–|——–| | Qu 1 | 2 | | Qu 2 | 4 | | Qu 3 | 4 | | Qu 4 | 15 | | Qu 5 | 4 | | Qu 6 | 5 | | Qu 7 | 4 |"
   },
   {
     "objectID": "hw/hw-6.html",
