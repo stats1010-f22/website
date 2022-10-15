@@ -16,7 +16,7 @@ In this assignment, you will...
 -   Explore numeric variables
 -   Compute means for subgroups and compare them
 -   Comment on and produce a pairs plot of numeric variables
--   Address overplotting 
+-   Address overplotting
 
 ## Getting started
 
@@ -25,7 +25,6 @@ In this assignment, you will...
 Click on your *Stat1010.Rproj* that we made the first day of class.
 
 Go to *File* ➛ *New File* ➛ *Quarto Document* and name the document *hw-2* click *create.*
-
 
 ## Packages
 
@@ -46,6 +45,7 @@ On April 15, 1912, the largest passenger liner ever made collided with an iceber
 The [titanic.csv](https://github.com/stats1010-f22/website/blob/main/hw/data/titanic.csv) file contains data for 887 of the real Titanic passengers. Each row represents one person. The columns describe different attributes about the person including whether they survived, their age, their passenger-class, their sex, and the fare they paid
 
 -   `Pclass`: The class of passengers on the titanic, with $1st$ being the highest class, and $3rd$ the lowest.
+
 -   `Survived`: A variable that records whether or not a passenger survived the sinking of the titanic.
 
 -   `Fare`: A variable that records the passenger fare.
@@ -88,6 +88,7 @@ To submit your assignment:
 ## Grading
 
 Total points available: 38 points
+
 | Component | Points |
 |-----------|--------|
 | Qu 1      | 2      |
