@@ -718,7 +718,7 @@
     "href": "slides/lect_10.html#multiple-bernoulli-trials",
     "title": "Chapter 11: Probability models for counts",
     "section": "Multiple Bernoulli trials",
-    "text": "Multiple Bernoulli trials\n\nThis happens so often that we have another name for this distribution\n\n\\[Y = B_1 + B_2 + B_3 + B_4 + B_5 + B_6 + B_7\\]\n\n\n\\(Y\\) is the sum of independent and identically distributed random variables\nWhat is the mean and variance?"
+    "text": "Multiple Bernoulli trials\n\nThis happens so often that we have another name for this distribution\n\n\\[Y = B_1 + B_2 + ...  + B_n\\]\n\n\n\\(Y\\) is the sum of independent and identically distributed random variables\nWhat is the mean and variance?"
   },
   {
     "objectID": "slides/lect_10.html#ebinomial",
@@ -774,7 +774,7 @@
     "href": "slides/lect_10.html#limit---smallest-interval",
     "title": "Chapter 11: Probability models for counts",
     "section": "Limit - smallest interval",
-    "text": "Limit - smallest interval\nI know about 7 cars drive by my house in an hour, what’s the probability 18 cars drive by in the next much smaller than a second?\n\n\n\n\n\\(\\binom{n}{18}(\\frac{7}{n})^{18}(1-\\frac{7}{n})^{n-18}\\)\n\\(\\frac{n\\cdot(n-1)\\ldots(n-17)}{18!}\\cdot \\frac{7^{18}}{n^{18}}\\cdot (1-\\frac{7}{n})^{n} \\cdot \\frac{1}{(1-\\frac{7}{n})^{18}}\\)\n\\(\\frac{n\\cdot(n-1)\\ldots(n-17)}{n^{18}} \\rightarrow 1\\)\n\\(\\frac{1}{(1-\\frac{7}{n})^{18}} \\rightarrow 1\\)\n\n\n\n\n\\(\\frac{7^{18}}{18!}e^{-7}\\)"
+    "text": "Limit - smallest interval\nI know about 7 cars drive by my house in an hour, what’s the probability 18 cars drive by in the next much smaller than a second? Full derivation can be found here.\n\n\n\n\n\\(\\binom{n}{18}(\\frac{7}{n})^{18}(1-\\frac{7}{n})^{n-18}\\)\n\\(\\frac{n\\cdot(n-1)\\ldots(n-17)}{18!}\\cdot \\frac{7^{18}}{n^{18}}\\cdot (1-\\frac{7}{n})^{n} \\cdot \\frac{1}{(1-\\frac{7}{n})^{18}}\\)\n\\(\\frac{n\\cdot(n-1)\\ldots(n-17)}{n^{18}} \\rightarrow 1\\)\n\\(\\frac{1}{(1-\\frac{7}{n})^{18}} \\rightarrow 1\\)\n\n\n\n\n\\(\\frac{7^{18}}{18!}e^{-7}\\)"
   },
   {
     "objectID": "slides/lect_10.html#poisson-distribution---rips",
@@ -788,21 +788,21 @@
     "href": "slides/lect_10.html#epois",
     "title": "Chapter 11: Probability models for counts",
     "section": "E(Pois)",
-    "text": "E(Pois)\n\\(\\lambda\\)"
+    "text": "E(Pois)\n\n\\(\\lambda\\)"
   },
   {
     "objectID": "slides/lect_10.html#varpois",
     "href": "slides/lect_10.html#varpois",
     "title": "Chapter 11: Probability models for counts",
     "section": "Var(Pois)",
-    "text": "Var(Pois)\n\\(\\lambda\\)"
+    "text": "Var(Pois)\n\n\\(\\lambda\\)"
   },
   {
     "objectID": "slides/lect_10.html#example-1",
     "href": "slides/lect_10.html#example-1",
     "title": "Chapter 11: Probability models for counts",
     "section": "Example",
-    "text": "Example\n\n\nLet \\(Y \\sim Pois(\\lambda = 5)\\) find the \\(E(Y)\\) and \\(Var(Y)\\)\n\n\n\\(E(Y) = 5\\)\n\\(Var(Y) = 5\\)\nWhat is the probability that \\(y = 3\\)? In R: dpois(x = 3, lambda = 5) \\(0.1403739\\)\n\n\n\n\n\n03:00"
+    "text": "Example\n\n\nLet \\(Y \\sim Pois(\\lambda = 5)\\) find the \\(E(Y)\\) and \\(Var(Y)\\)\n\n\n\\(E(Y) = 5\\)\n\\(Var(Y) = 5\\)\nWhat is the probability that \\(y = 3\\)? In R: dpois(x = 3, lambda = 5) \\(0.1403739\\)\n\n\n\n\n\n03:00\n\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/01_introduction.html#workspace-image",
@@ -1062,6 +1062,27 @@
     "title": "Here lecture",
     "section": "Importing data",
     "text": "Importing data\n\n\n\nDouble click on the data you would like to install in the data folder in your project and select “Import Dataset.”\n\n\nIf this is the first time you are importing data, you may be prompted to download a package first. Follow the Graphical User Interface (GUI) to import the data. Check that the data is as you expect and update “Import Options” until it seems reasonable. Copy the coding from “Code Preview” and save put it in your document “so that when you restart R, you have coding that will import the data.\n\n\n\nWhen the data is imported, check the “Data Preview” to make sure it is what you expect. If not, change the “Import Options.”\n\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "slides/lect_11.html#binomial---normal",
+    "href": "slides/lect_11.html#binomial---normal",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Binomial -> Normal",
+    "text": "Binomial -> Normal\nAs the number of trials increases, the binomial pdf becomes well approximated by a normal distribution.\n“Observed data often represent the accumulation of many small factors.”"
+  },
+  {
+    "objectID": "slides/lect_11.html#central-limit-theorem",
+    "href": "slides/lect_11.html#central-limit-theorem",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Central limit theorem",
+    "text": "Central limit theorem\n\nThere are multiple versions of the CLT\n\nThe probability distribution of a sum of independent random variables of comparable variance approaches a normal distribution as the number of summed random variables increases."
+  },
+  {
+    "objectID": "slides/lect_11.html#shifts-scales",
+    "href": "slides/lect_11.html#shifts-scales",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Shifts & scales",
+    "text": "Shifts & scales"
   },
   {
     "objectID": "ae/ae-4.html",
