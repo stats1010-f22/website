@@ -99,7 +99,7 @@ countdown(minutes = 3, seconds = 0)
 This happens so often that we have another name for this distribution
 :::
 
-$$Y = B_1 + B_2 + B_3 + B_4 + B_5 + B_6 + B_7$$
+$$Y = B_1 + B_2 + ...  + B_n$$
 
 ::: incremental
 -   $Y$ is the sum of independent and identically distributed random variables
@@ -250,7 +250,7 @@ I know about 7 cars drive by my house in an hour, what's the probability 18 cars
 :::
 
 ## Limit - smallest interval
-I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next much smaller than a second?
+I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next much smaller than a second? Full derivation can be found [here](https://stats1010-f22.github.io/website/supplemental/chi-squared.html).
 
 ::: columns
 ::: {.column width="50%"}
@@ -287,10 +287,16 @@ If $X \sim Pois(\lambda)$ then $P(X=x) = \frac{\lambda^{x}}{x!}e^{-\lambda}$
 :::
 
 ## E(Pois)
+
+::: incremental
 $\lambda$
+:::
 
 ## Var(Pois)
+
+::: incremental
 $\lambda$
+:::
 
 ## Example
 
@@ -309,13 +315,3 @@ $\lambda$
 countdown(minutes = 3, seconds = 0)
 ```
 
-
-# Your turn
-
-[Click here](https://stats1010-f22.github.io/website/ae/ae-8.html) or the qr code below
-
-```{r, eval=TRUE, echo=FALSE}
-library(qrcode)
-qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-9.html")
-plot(qr)
-```

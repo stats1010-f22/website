@@ -47,6 +47,8 @@ Stress this throughout the class.
 write S(X) formula on the board
 
 often mu and sigma are unknown parameters
+
+Also, do we want the Sharpe ratio to be high or low?
 :::
 
 $$S(X) = \frac{\mu_X - r_f}{\sigma_X}$$

@@ -22,16 +22,87 @@ library(tidyverse)
 
 ::: incremental
 - The shape of the normal distribution and why it is important
-- 
-
-
+- The central limit theorem.
 :::
 
-# Collect data
+# {background-iframe="https://nzgwynn.shinyapps.io/limit_bin_normal/"}
 
-Play this game [Fighter pilot challenge](https://www.echalk.co.uk/amusements/Games/pilotTrainer/pilotTrainer.html)
+## Binomial -> Normal
 
-and record your best time here.
+As the number of trials increases, the binomial pdf becomes well approximated by a normal distribution.
+
+"Observed data often represent the accumulation of many small factors."
+
+# Normal
+
+$Y \sim N(\mu = 4, \sigma^2 = 25)$
+
+::: incremental
+- We use two parameters to describe a Normal distribution
+- $Y \sim N(\mu = 0, \sigma^2 = 1)$ 
+- $Y$ above is the *standard normal distribution*
+:::
+
+## Central limit theorem
+
+::: notes
+There are multiple versions of the CLT
+:::
+
+The probability distribution of a sum of independent random variables of comparable variance approaches a normal distribution as the number of summed random variables increases.
+
+#  {background-iframe="https://rodrigojpereira.shinyapps.io/mstdteacher/"}
+
+## Shifts & scales
+
+
+::: columns
+::: {.column width="50%"}
+```{r shift}
+#| echo: false
+#| eval: true
+
+
+x <- seq(-5, 15)
+std_norm <- dnorm(x, mean = 0, sd = 1)
+shifted_norm <- dnorm(x, mean = 10, sd = 1)
+
+
+d <- tibble(x, std_norm, shifted_norm)
+
+d %>% 
+  ggplot() +
+  geom_point(aes(x = x, y = std_norm)) +
+  geom_point(aes(x = x, y = shifted_norm))
+
+```
+:::
+
+::: {.column width="50%"}
+```{r scale}
+#| echo: false
+#| eval: true
+
+
+x <- seq(-15, 20)
+std_norm <- dnorm(x, mean = 0, sd = 1)
+scaled_norm <- dnorm(x, mean = 0, sd = 5)
+
+d <- tibble(x, std_norm, scaled_norm)
+
+d %>% 
+  ggplot() +
+  geom_point(aes(x = x, y = std_norm)) +
+  geom_point(aes(x = x, y = scaled_norm))
+
+```
+:::
+:::
+
+
+
+
+
 
 
 # Your turn
