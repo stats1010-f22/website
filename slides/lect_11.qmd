@@ -55,7 +55,6 @@ The probability distribution of a sum of independent random variables of compara
 
 ## Shifts & scales
 
-
 ::: columns
 ::: {.column width="50%"}
 ```{r shift}
@@ -99,8 +98,50 @@ d %>%
 :::
 :::
 
+## Standardizing {.smaller}
 
+::: notes
+Books and tables of just normal probabilities to multiple decimal places.
+:::
 
+Historically, it could be quite hard to find probabilities, so *standardizing* was important.
+
+::: incremental
+- use shift and scale information from above
+- $Z = \frac{X-\mu_X}{\sigma_X}$
+- Find $E(Z)$ and $Var(Z)$
+- $E(Z) = E(\frac{X-\mu_X}{\sigma_X})$
+- $$\begin{aligned}
+E(Z) & = E(\frac{X-\mu_X}{\sigma_X})\\ 
+ & = \frac{1}{\sigma}E(X-\mu_X) \\
+ &= 0
+ \end{aligned}$$
+- $$\begin{aligned}
+Var(Z) & = Var(\frac{X-\mu_X}{\sigma_X})\\ 
+ & = \frac{1}{\sigma^2}Var(X-\mu_X) \\
+ &= \frac{\sigma^2}{\sigma^2} = 1
+ \end{aligned}$$
+:::
+
+## Examples
+
+Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following:
+
+::: incremental
+1. $P(Y > 7)$
+- $$\begin{aligned}
+P(Y > 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} > \frac{7-\mu_Y}{\sigma_Y}) \\ 
+ & = P(Z > \frac{7-5}{2} = 1)
+ \end{aligned}$$
+
+2. $P(Y < 3)$
+- $$\begin{aligned}
+P(Y < 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} < \frac{3-\mu_Y}{\sigma_Y}) \\ 
+ & = P(Z < \frac{3-5}{2} = -1)
+ \end{aligned}$$
+:::
+
+#  {background-image="lec_11-thingss/emperical_rule.png" background-size="contain"}
 
 
 
