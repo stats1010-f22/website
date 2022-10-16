@@ -405,7 +405,71 @@
 </div>
 </div>
 </div>
+</section>
+<section id="standardizing" class="slide level2 smaller">
+<h2>Standardizing</h2>
+<aside class="notes">
+<p>Books and tables of just normal probabilities to multiple decimal places.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p>Historically, it could be quite hard to find probabilities, so <em>standardizing</em> was important.</p>
+<div>
+<ul>
+<li class="fragment">use shift and scale information from above</li>
+<li class="fragment"><span class="math inline">\(Z = \frac{X-\mu_X}{\sigma_X}\)</span></li>
+<li class="fragment">Find <span class="math inline">\(E(Z)\)</span> and <span class="math inline">\(Var(Z)\)</span></li>
+<li class="fragment"><span class="math inline">\(E(Z) = E(\frac{X-\mu_X}{\sigma_X})\)</span></li>
+<li class="fragment"><span class="math display">\[\begin{aligned}
+E(Z) &amp; = E(\frac{X-\mu_X}{\sigma_X})\\
+&amp; = \frac{1}{\sigma}E(X-\mu_X) \\
+&amp;= 0
+\end{aligned}\]</span></li>
+<li class="fragment"><span class="math display">\[\begin{aligned}
+Var(Z) &amp; = Var(\frac{X-\mu_X}{\sigma_X})\\
+&amp; = \frac{1}{\sigma^2}Var(X-\mu_X) \\
+&amp;= \frac{\sigma^2}{\sigma^2} = 1
+\end{aligned}\]</span></li>
+</ul>
+</div>
+</section>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<p>Let <span class="math inline">\(Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)\)</span>, standardize the following:</p>
+<div>
+<ol type="1">
+<li class="fragment"><span class="math inline">\(P(Y &gt; 7)\)</span></li>
+</ol>
+<ul>
+<li class="fragment"><span class="math display">\[\begin{aligned}
+P(Y &gt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &gt; \frac{7-\mu_Y}{\sigma_Y}) \\
+&amp; = P(Z &gt; \frac{7-5}{2} = 1)
+\end{aligned}\]</span></li>
+</ul>
+<ol start="2" type="1">
+<li class="fragment"><span class="math inline">\(P(Y &lt; 3)\)</span></li>
+</ol>
+<ul>
+<li class="fragment"><span class="math display">\[\begin{aligned}
+P(Y &lt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &lt; \frac{3-\mu_Y}{\sigma_Y}) \\
+&amp; = P(Z &lt; \frac{3-5}{2} = -1)
+\end{aligned}\]</span></li>
+</ul>
+</div>
 </section></section>
+<section id="section-2" class="title-slide slide level1 center" data-background-image="lec_11-thingss/emperical_rule.png" data-background-size="contain">
+<h1></h1>
+
+</section>
+
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>
 <p><a href="https://stats1010-f22.github.io/website/ae/ae-8.html">Click here</a> or the qr code below</p>

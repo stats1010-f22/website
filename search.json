@@ -1085,6 +1085,20 @@
     "text": "Shifts & scales"
   },
   {
+    "objectID": "slides/lect_11.html#standardizing",
+    "href": "slides/lect_11.html#standardizing",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Standardizing",
+    "text": "Standardizing\n\nBooks and tables of just normal probabilities to multiple decimal places.\n\nHistorically, it could be quite hard to find probabilities, so standardizing was important.\n\n\nuse shift and scale information from above\n\\(Z = \\frac{X-\\mu_X}{\\sigma_X}\\)\nFind \\(E(Z)\\) and \\(Var(Z)\\)\n\\(E(Z) = E(\\frac{X-\\mu_X}{\\sigma_X})\\)\n\\[\\begin{aligned}\nE(Z) & = E(\\frac{X-\\mu_X}{\\sigma_X})\\\\\n& = \\frac{1}{\\sigma}E(X-\\mu_X) \\\\\n&= 0\n\\end{aligned}\\]\n\\[\\begin{aligned}\nVar(Z) & = Var(\\frac{X-\\mu_X}{\\sigma_X})\\\\\n& = \\frac{1}{\\sigma^2}Var(X-\\mu_X) \\\\\n&= \\frac{\\sigma^2}{\\sigma^2} = 1\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/lect_11.html#examples",
+    "href": "slides/lect_11.html#examples",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Examples",
+    "text": "Examples\nLet \\(Y \\sim N(\\mu_Y = 5, \\sigma_Y^2 = 4)\\), standardize the following:\n\n\n\\(P(Y > 7)\\)\n\n\n\\[\\begin{aligned}\nP(Y > 7) &= P(\\frac{Y - \\mu_Y}{\\sigma_Y} > \\frac{7-\\mu_Y}{\\sigma_Y}) \\\\\n& = P(Z > \\frac{7-5}{2} = 1)\n\\end{aligned}\\]\n\n\n\\(P(Y < 3)\\)\n\n\n\\[\\begin{aligned}\nP(Y < 7) &= P(\\frac{Y - \\mu_Y}{\\sigma_Y} < \\frac{3-\\mu_Y}{\\sigma_Y}) \\\\\n& = P(Z < \\frac{3-5}{2} = -1)\n\\end{aligned}\\]"
+  },
+  {
     "objectID": "ae/ae-4.html",
     "href": "ae/ae-4.html",
     "title": "Introduction to probability (AE-4)",
