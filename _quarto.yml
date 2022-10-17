@@ -66,8 +66,8 @@ website:
         contents:
           - href: project-description.qmd
             text: Description
-      #     - href: project-tips-resources.qmd
-      #       text: Tips + resources
+          - href: project-tips-resources.qmd
+            text: Tips + resources
       - section: "Weekly materials"
         contents:
           - href: weeks/week-01.qmd
