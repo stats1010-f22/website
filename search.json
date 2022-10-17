@@ -151,7 +151,7 @@
     "href": "weeks/week-02.html#perform",
     "title": "Week 2",
     "section": "Perform",
-    "text": "Perform\n⌨️ Diagnostic test\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n⌨️ Diagnostic test\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-07.html",
@@ -179,7 +179,7 @@
     "href": "weeks/week-07.html#perform",
     "title": "Week 7",
     "section": "Perform",
-    "text": "Perform\n✍️ HW 2 - Titanic\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n✍️ HW 2 - Titanic\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-05.html",
@@ -200,7 +200,7 @@
     "href": "weeks/week-05.html#perform",
     "title": "Week 5",
     "section": "Perform",
-    "text": "Perform\n⌨️ Course evaluation\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n⌨️ Course evaluation\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-06.html",
@@ -228,7 +228,7 @@
     "href": "weeks/week-06.html#perform",
     "title": "Week 6",
     "section": "Perform",
-    "text": "Perform\n✅ Exam 1\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n✅ Exam 1\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-04.html",
@@ -256,7 +256,7 @@
     "href": "weeks/week-04.html#perform",
     "title": "Week 4",
     "section": "Perform",
-    "text": "Perform\n⌨️ Diagnostic test - week 3\n✍️ HW 1 - Titanic\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n⌨️ Diagnostic test - week 3\n✍️ HW 1 - Titanic\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-03.html",
@@ -284,7 +284,7 @@
     "href": "weeks/week-03.html#perform",
     "title": "Week 3",
     "section": "Perform",
-    "text": "Perform\n⌨️ Diagnostic test - week 3\n✍️ HW 6 - Statistics Experience\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n⌨️ Diagnostic test - week 3\n✍️ HW 6 - Statistics Experience\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-08.html",
@@ -312,7 +312,7 @@
     "href": "weeks/week-08.html#perform",
     "title": "Week 8",
     "section": "Perform",
-    "text": "Perform\n✍️ HW 2 - Titanic\n\n\nBack to course schedule ⏎\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n✍️ HW 2 - Titanic\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-01.html",
@@ -1537,7 +1537,7 @@
     "href": "project-tips-resources.html#formatting-communication-tips",
     "title": "Project tips + resources",
     "section": "Formatting + communication tips",
-    "text": "Formatting + communication tips\n\nSuppress Code, Warnings, & Messages\n\nInclude the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages. Use the code chunk header {r set-up, include = FALSE} to suppress this set up code.\n\nknitr::opts_chunk$set(echo = FALSE,\n                      warning = FALSE, \n                      message = FALSE)\n\n\nHeaders\n\nUse headers to clearly label each section.\nInspect the document outline to review your headers and sub-headers.\n\n\n\nReferences\n\nInclude all references in a section called “References” at the end of the report.\nThis course does not have specific requirements for formatting citations and references.\n\n\n\nAppendix\n\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.\nThe items in the appendix should be properly labeled.\nThe appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.\n\n\n\nResize figures\nResize plots and figures, so you have more space for the narrative.\n\n\nArranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid. See the documentation and examples here.\n\n\nPlot titles and axis labels\nBe sure all plot titles and axis labels are visible and easy to read.\n\nUse informative titles, not variable names, for titles and axis labels.\n\n❌ NO! The x-axis is hard to read because the names overlap.\n\nggplot(data = mpg, aes(x = manufacturer)) +\n  geom_bar()\n\n\n\n\n✅ YES! Names are readable\n\nggplot(data = mpg, aes(y = manufacturer)) +\n  geom_bar()\n\n\n\n\n\n\nDo a little more to make the plot look professional!\n\nInformative title and axis labels\nFlipped coordinates to make names readable\nArranged bars based on count\nCapitalized manufacturer names\nOptional: Added color - Use a coordinated color scheme throughout paper / presentation\nOptional: Applied a theme - Use same theme throughout paper / presentation\n\n\nmpg %>%\n  count(manufacturer) %>%\n  mutate(manufacturer = str_to_title(manufacturer)) %>%\n  ggplot(aes(y = fct_reorder(manufacturer,n), x = n)) +\n  geom_bar(stat = \"identity\", fill = \"steelblue\") +\n  labs(x = \"Manufacturer\", \n       y = \"Count\", \n       title = \"The most common manufacturer is Dodge\") +\n  theme_minimal() \n\n\n\n\n\n\nTables and model output\n\nUse the kable function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.\n\nUse the digits argument to display only 3 or 4 significant digits.\nUse the caption argument to add captions to your table.\n\n\n\nmodel <- lm(mpg ~ hp, data = mtcars)\ntidy(model) %>%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n30.099\n1.634\n18.421\n0\n\n\nhp\n-0.068\n0.010\n-6.742\n0\n\n\n\n\n\n\n\nGuidelines for communicating results\n\nDon’t use variable names in your narrative! Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.\n\n❌ There is a negative linear relationship between mpg and hp.\n✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.\n\nKnow your audience: Your report should be written for a general audience who has an understanding of statistics at the level of STA 210.\nAvoid subject matter jargon: Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.\nTell the “so what”: Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e. what you want the audience to know about your topic after reading your report or viewing your presentation.\n\n❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.\n✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.\n\nTell a story: All visualizations, tables, model output, and narrative should tell a cohesive story!\nUse one voice: Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document."
+    "text": "Formatting + communication tips\n\nSuppress Code, Warnings, & Messages\n\nInclude the following code in a code chunk at the top of your .qmd file to suppress all code, warnings, and other messages. Use the code chunk header {r set-up, include = FALSE} to suppress this set up code.\n\nknitr::opts_chunk$set(echo = FALSE,\n                      warning = FALSE, \n                      message = FALSE)\n\n\nHeaders\n\nUse headers to clearly label each section.\nInspect the document outline to review your headers and sub-headers.\n\n\n\nReferences\n\nInclude all references in a section called “References” at the end of the report.\nThis course does not have specific requirements for formatting citations and references.\n\n\n\nAppendix\n\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”.\nThe items in the appendix should be properly labeled.\nThe appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix.\n\n\n\nResize figures\nResize plots and figures, so you have more space for the narrative.\n\n\nArranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid. See the documentation and examples here.\n\n\nPlot titles and axis labels\nBe sure all plot titles and axis labels are visible and easy to read.\n\nUse informative titles, not variable names, for titles and axis labels.\n\n❌ NO! The x-axis is hard to read because the names overlap.\n\nggplot(data = mpg, aes(x = manufacturer)) +\n  geom_bar()\n\n\n\n\n✅ YES! Names are readable\n\nggplot(data = mpg, aes(y = manufacturer)) +\n  geom_bar()\n\n\n\n\n\n\nDo a little more to make the plot look professional!\n\nInformative title and axis labels\nFlipped coordinates to make names readable\nArranged bars based on count\nCapitalized manufacturer names\nOptional: Added color - Use a coordinated color scheme throughout paper / presentation\nOptional: Applied a theme - Use same theme throughout paper / presentation\n\n\nmpg %>%\n  count(manufacturer) %>%\n  mutate(manufacturer = str_to_title(manufacturer)) %>%\n  ggplot(aes(y = fct_reorder(manufacturer,n), x = n)) +\n  geom_bar(stat = \"identity\", fill = \"steelblue\") +\n  labs(x = \"Manufacturer\", \n       y = \"Count\", \n       title = \"The most common manufacturer is Dodge\") +\n  theme_minimal() \n\n\n\n\n\n\nTables and model output\n\nUse the kable function from the knitr package to neatly output all tables and model output. This will also ensure all model coefficients are displayed.\n\nUse the digits argument to display only 3 or 4 significant digits.\nUse the caption argument to add captions to your table.\n\n\n\nmodel <- lm(mpg ~ hp, data = mtcars)\ntidy(model) %>%\n  kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n30.099\n1.634\n18.421\n0\n\n\nhp\n-0.068\n0.010\n-6.742\n0\n\n\n\n\n\n\n\nGuidelines for communicating results\n\nDon’t use variable names in your narrative! Use descriptive terms, so the reader understands your narrative without relying on the data dictionary.\n\n❌ There is a negative linear relationship between mpg and hp.\n✅ There is a negative linear relationship between a car’s fuel economy (in miles per gallon) and its horsepower.\n\nKnow your audience: Your report should be written for a general audience who has an understanding of statistics at the level of STAT 1010.\nAvoid subject matter jargon: Don’t assume the audience knows all of the specific terminology related to your subject area. If you must use jargon, include a brief definition the first time you introduce a term.\nTell the “so what”: Your report and presentation should be more than a list of interpretations and technical definitions. Focus on what the results mean, i.e. what you want the audience to know about your topic after reading your report or viewing your presentation.\n\n❌ For every one unit increase in horsepower, we expect the miles per gallon to decrease by 0.068 units, on average.\n✅ If the priority is to have good fuel economy, then one should choose a car with lower horsepower. Based on our model, the fuel economy is expected to decrease, on average, by 0.68 miles per gallon for every 10 additional horsepower.\n\nTell a story: All visualizations, tables, model output, and narrative should tell a cohesive story!\nUse one voice: Though multiple people are writing the report, it should read as if it’s from a single author. At least one team member should read through the report before submission to ensure it reads like a cohesive document."
   },
   {
     "objectID": "project-tips-resources.html#additional-resources",
