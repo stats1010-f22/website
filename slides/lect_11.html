@@ -441,20 +441,11 @@ Var(Z) &amp; = Var(\frac{X-\mu_X}{\sigma_X})\\
 </ul>
 </div>
 </section>
-<section id="examples" class="slide level2">
-<h2>Examples</h2>
-<p>Let <span class="math inline">\(Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)\)</span>, standardize the following:</p>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p>Let <span class="math inline">\(Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)\)</span>, standardize the following and find the probability:</p>
 <div>
 <ol type="1">
-<li class="fragment"><span class="math inline">\(P(Y &gt; 7)\)</span></li>
-</ol>
-<ul>
-<li class="fragment"><span class="math display">\[\begin{aligned}
-P(Y &gt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &gt; \frac{7-\mu_Y}{\sigma_Y}) \\
-&amp; = P(Z &gt; \frac{7-5}{2} = 1)
-\end{aligned}\]</span></li>
-</ul>
-<ol start="2" type="1">
 <li class="fragment"><span class="math inline">\(P(Y &lt; 3)\)</span></li>
 </ol>
 <ul>
@@ -462,12 +453,86 @@ P(Y &gt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &gt; \frac{7-\mu_Y}{\sigma_Y}) \
 P(Y &lt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &lt; \frac{3-\mu_Y}{\sigma_Y}) \\
 &amp; = P(Z &lt; \frac{3-5}{2} = -1)
 \end{aligned}\]</span></li>
+<li class="fragment"><code>pnorm(-1)</code> <span class="math inline">\(0.1586553\)</span></li>
 </ul>
 </div>
 </section></section>
-<section id="section-2" class="title-slide slide level1 center" data-background-image="lec_11-thingss/emperical_rule.png" data-background-size="contain">
+<section>
+<section id="section-2" class="title-slide slide level1 center" data-background-image="lec_11-things/p_less_neg_1.png" data-background-size="contain">
 <h1></h1>
 
+</section>
+<section id="queen-bee-peenorm" class="slide level2">
+<h2>Queen Bee <code>Peenorm</code></h2>
+<aside class="notes">
+<p>To the left, to the left, pnorm is to the left</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p></p>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+<aside class="notes">
+<p>Both of these probabilities are the same because of <em>symmetry</em> of the normal distribution. How does this generalize to all normal distributions?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p>Let <span class="math inline">\(Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)\)</span>, standardize the following and find the probability:</p>
+<div>
+<ol start="2" type="1">
+<li class="fragment"><span class="math inline">\(P(Y &gt; 7)\)</span></li>
+</ol>
+<ul>
+<li class="fragment"><span class="math display">\[\begin{aligned}
+P(Y &gt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &gt; \frac{7-\mu_Y}{\sigma_Y}) \\
+&amp; = P(Z &gt; \frac{7-5}{2} = 1)
+\end{aligned}\]</span></li>
+<li class="fragment"><code>1- pnorm(1)</code> $ 0.1586553$</li>
+</ul>
+</div>
+</section></section>
+<section id="section-3" class="title-slide slide level1 center" data-background-image="lec_11-thingss/p_greater_1.png" data-background-size="contain">
+<h1></h1>
+
+</section>
+
+<section id="section-4" class="title-slide slide level1 center" data-background-image="lec_11-thingss/emperical_rule.png" data-background-size="contain">
+<h1></h1>
+
+</section>
+
+<section id="percentiles" class="title-slide slide level1 center">
+<h1>Percentiles</h1>
+<aside class="notes">
+<p>Earlier we used the normal to find a percent, you can also use <code>R</code> to find the value associated with that percent.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 
 <section id="your-turn" class="title-slide slide level1 center">
