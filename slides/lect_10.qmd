@@ -64,7 +64,7 @@ find the E(B) and Var(B)
 #| echo: false
 #| eval: true
 
-countdown(minutes = 3, seconds = 0)
+countdown(minutes = 2, seconds = 0)
 ```
 
 ## Var(Bernoulli)
@@ -90,7 +90,7 @@ In that case, we sum together $n$ independent Bernoulli trials.
 #| echo: false
 #| eval: true
 
-countdown(minutes = 3, seconds = 0)
+countdown(minutes = 2, seconds = 0)
 ```
 
 ## Multiple Bernoulli trials
@@ -142,7 +142,7 @@ $$E(Y) = E(B_1 + B_2 + ... + B_n)$$
 #| echo: false
 #| eval: true
 
-countdown(minutes = 3, seconds = 0)
+countdown(minutes = 2, seconds = 0)
 ```
 
 ## Var(Binomial) {.smaller}
@@ -165,7 +165,7 @@ $$Var(Y) = Var(B_1 + B_2 + ... + B_n)$$
 #| echo: false
 #| eval: true
 
-countdown(minutes = 3, seconds = 0)
+countdown(minutes = 2, seconds = 0)
 ```
 
 ## Counting things {.smaller}
@@ -229,7 +229,7 @@ c.  What is the probability that $y = 3$? In `R: dbinom(size  = 5, prob = 0.2, x
 #| echo: false
 #| eval: true
 
-countdown(minutes = 3, seconds = 0)
+countdown(minutes = 2, seconds = 0)
 ```
 
 ## Warnings
@@ -331,5 +331,5 @@ c.  What is the probability that $y = 3$? In `R: dpois(x = 3, lambda = 5)` $0.14
 #| echo: false
 #| eval: true
 
-countdown(minutes = 3, seconds = 0)
+countdown(minutes = 2, seconds = 0)
 ```
