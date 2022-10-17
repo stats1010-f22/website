@@ -134,6 +134,7 @@ P(Y < 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} < \frac{3-\mu_Y}{\sigma_Y}) \\
  & = P(Z < \frac{3-5}{2} = -1)
  \end{aligned}$$
  - `pnorm(-1)` $0.1586553$
+ - `pnorm(-1, mean = 5, sd = 2)`
 :::
 
 
@@ -164,19 +165,22 @@ P(Y > 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} > \frac{7-\mu_Y}{\sigma_Y}) \\
  & = P(Z > \frac{7-5}{2} = 1)
  \end{aligned}$$
 - `1- pnorm(1)` $ 0.1586553$ 
+- `1- pnorm(1, mean = 5, sigma = 2)`
 :::
 
-#  {background-image="lec_11-thingss/p_greater_1.png" background-size="contain"}
+#  {background-image="lec_11-things/p_greater_1.png" background-size="contain"}
 
 
-#  {background-image="lec_11-thingss/emperical_rule.png" background-size="contain"}
+#  {background-image="lec_11-things/emperical_rule.png" background-size="contain"}
 
+
+#  {background-image="lec_11-things/q_norm.png" background-size="contain"}
 
 # Percentiles
-
 ::: notes
-Earlier we used the normal to find a percent, you can also use `R` to find the value associated with that percent.
+Earlier we used the normal to find a percent, you can also use `R` to find the z value for a certain percent.
 :::
+
 
 
 
