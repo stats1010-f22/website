@@ -14,7 +14,7 @@ editor: visual
 
 🖥️ [Lect](/slides/lect_07.html)[ure 10](/slides/lect_10.html)
 
-🖥️ [Lecture 11](/slides/lect_101.html)
+🖥️ [Lecture 11](/slides/lect_11.html)
 
 ## Practice
 
