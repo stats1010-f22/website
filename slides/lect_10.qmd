@@ -42,7 +42,7 @@ find the E(B) and Var(B)
 -   $$\begin{equation}
     B =\begin{cases}
     1, & \text{if the trial is a success}.\\
-    0, & \text{if the trial is a success}.
+    0, & \text{if the trial is not a success}.
     \end{cases}
     \end{equation}$$
 
@@ -187,7 +187,7 @@ In a class of 85 students how many groups of 4 are possible?
 
 -   $2,024,785$ groups
 
--   *Combination* written as ${}_{n}C_{k}$ here $n = 85$, $k = 4$ or  $\binom{85}{4}$
+-   *Combination* written as ${}_{n}C_{k}$ here $n = 85$, $k = 4$ or $\binom{85}{4}$
 :::
 
 ```{r}
@@ -204,26 +204,25 @@ exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 
 If $Y \sim Bin(n, p)$ where
 
-- $n = $ number of trials
-- $p = $ probability of success
-- $y = $ number of successes in $n$ Bernoulli trials
+-   \$n = \$ number of trials
+-   \$p = \$ probability of success
+-   \$y = \$ number of successes in $n$ Bernoulli trials
 
 <br>
 
-then
-<br>
-$$P(Y = y) = \binom{n}{y}p^y(1-p)^{n-y}$$
-
+then <br> $$P(Y = y) = \binom{n}{y}p^y(1-p)^{n-y}$$
 
 ## Example
 
 ::: incremental
-1. Let $Y \sim Bin(n = 5, p = 0.2)$ find the $E(Y)$ and $Var(Y)$
-  a. $E(Y) = np = 1$
-  b. $Var(Y) = np(1-p) = 0.8$
-  c. What is the probability that $y = 3$?
-     In `R: dbinom(size  = 5, prob = 0.2, x = 3)`
-     $0.0512$
+1.  Let $Y \sim Bin(n = 5, p = 0.2)$ find the $E(Y)$ and $Var(Y)$
+
+```{=html}
+<!-- -->
+```
+a.  $E(Y) = np = 1$
+b.  $Var(Y) = np(1-p) = 0.8$
+c.  What is the probability that $y = 3$? In `R: dbinom(size  = 5, prob = 0.2, x = 3)` $0.0512$
 :::
 
 ```{r}
@@ -235,7 +234,7 @@ countdown(minutes = 3, seconds = 0)
 
 ## Warnings
 
-10% Condition:  if trials are selected at random, it is OK to ignore dependence caused by sampling from a finite population  if the selected trials make up less than 10% of the population
+10% Condition: if trials are selected at random, it is OK to ignore dependence caused by sampling from a finite population if the selected trials make up less than 10% of the population
 
 ## Limit - mins
 
@@ -243,28 +242,30 @@ countdown(minutes = 3, seconds = 0)
 some of these cars may come by in the same minute..
 :::
 
-I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next 60 mins? 
+I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next 60 mins?
 
 ::: incremental
-- $p = \frac{7}{60}$
+-   $p = \frac{7}{60}$
 
-- $Y \sim Bin(60, \frac{7}{60})$
+-   $Y \sim Bin(60, \frac{7}{60})$
 
-- $\binom{60}{18}p^{18}(1-p)^{42}$
+-   $\binom{60}{18}p^{18}(1-p)^{42}$
 :::
 
 ## Limit - secs
-I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next 3600 secs? 
+
+I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next 3600 secs?
 
 ::: incremental
-- $p = \frac{7}{3600}$
+-   $p = \frac{7}{3600}$
 
-- $Y \sim Bin(3600, \frac{7}{3600})$
+-   $Y \sim Bin(3600, \frac{7}{3600})$
 
-- $\binom{3600}{18}p^{18}(1-p)^{3582}$
+-   $\binom{3600}{18}p^{18}(1-p)^{3582}$
 :::
 
 ## Limit - smallest interval
+
 I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next much smaller than a second? Full derivation can be found [here](https://stats1010-f22.github.io/website/supplemental/chi-squared.html).
 
 ::: columns
@@ -294,11 +295,11 @@ If $X \sim Pois(\lambda)$ then $P(X=x) = \frac{\lambda^{x}}{x!}e^{-\lambda}$
 ## Poisson distribution - RIPS
 
 ::: incremental
--  Poisson - [fish](http://pecheur.info/en/gollum-fish-song.html) - Rips
-- R - randomly through space or time
-- I - indepedent
-- P - proportional to interval size
-- S - singly - no multiple occurences in space or time
+-   Poisson - [fish](http://pecheur.info/en/gollum-fish-song.html) - Rips
+-   R - randomly through space or time
+-   I - indepedent
+-   P - proportional to interval size
+-   S - singly - no multiple occurences in space or time
 :::
 
 ## E(Pois)
@@ -316,17 +317,19 @@ $\lambda$
 ## Example
 
 ::: incremental
-1. Let $Y \sim Pois(\lambda = 5)$ find the $E(Y)$ and $Var(Y)$
-  a. $E(Y) = 5$
-  b. $Var(Y) = 5$
-  c. What is the probability that $y = 3$?
-     In `R: dpois(x = 3, lambda = 5)`
-     $0.1403739$
+1.  Let $Y \sim Pois(\lambda = 5)$ find the $E(Y)$ and $Var(Y)$
+
+```{=html}
+<!-- -->
+```
+a.  $E(Y) = 5$
+b.  $Var(Y) = 5$
+c.  What is the probability that $y = 3$? In `R: dpois(x = 3, lambda = 5)` $0.1403739$
 :::
+
 ```{r}
 #| echo: false
 #| eval: true
 
 countdown(minutes = 3, seconds = 0)
 ```
-
