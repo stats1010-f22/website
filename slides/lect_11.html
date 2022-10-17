@@ -540,6 +540,25 @@ P(Y &gt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &gt; \frac{7-\mu_Y}{\sigma_Y}) \
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<div>
+<ol type="1">
+<li class="fragment">Find <span class="math inline">\(z : P(Z &lt; z) = .1711\)</span></li>
+</ol>
+<ul>
+<li class="fragment"><code>qnorm(.1711)</code></li>
+</ul>
+<ol start="2" type="1">
+<li class="fragment">A medical test produces a score that measures the risk of a disease. In healthy adults, the test score is normally distributed with <span class="math inline">\(\mu=10\)</span> point and <span class="math inline">\(\sigma = 2.5\)</span>. Lower scores suggest the disease is present. Test scores below what threshold signal a problem for only <span class="math inline">\(1\%\)</span> of healthy adults?</li>
+</ol>
+<ul>
+<li class="fragment"><code>qnorm(.01, mean = 10, sd = 2.5)</code></li>
+</ul>
+</div>
+</section>
+
+<section id="normality-tests" class="title-slide slide level1 center">
+<h1>Normality tests</h1>
+
 </section>
 
 <section id="your-turn" class="title-slide slide level1 center">
