@@ -204,9 +204,9 @@ exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 
 If $Y \sim Bin(n, p)$ where
 
--   \$n = \$ number of trials
--   \$p = \$ probability of success
--   \$y = \$ number of successes in $n$ Bernoulli trials
+-   $n = $ number of trials
+-   $p = $ probability of success
+-   $y = $ number of successes in $n$ Bernoulli trials
 
 <br>
 
