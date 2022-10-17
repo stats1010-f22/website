@@ -27,7 +27,3 @@ editor: visual
 ::: {style="font-size: 0.875em;"}
 Back to [course schedule](/ "Course schedule") ⏎
 :::
-
-::: {style="font-size: 0.875em;"}
-Back to [course schedule](/ "Course schedule") ⏎
-:::
