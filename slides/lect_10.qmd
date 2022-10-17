@@ -200,6 +200,21 @@ exp(lfactorial(85))/exp(lfactorial(81))
 exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 ```
 
+## Binomial pdf
+
+If $Y \sim Bin(n, p)$ where
+
+- $n = $ number of trials
+- $p = $ probability of success
+- $y = $ number of successes in $n$ Bernoulli trials
+
+<br>
+
+then
+<br>
+$$P(Y = y) = \binom{n}{y}p^y(1-p)^{n-y}$$
+
+
 ## Example
 
 ::: incremental
@@ -246,7 +261,7 @@ I know about 7 cars drive by my house in an hour, what's the probability 18 cars
 
 - $Y \sim Bin(3600, \frac{7}{3600})$
 
-- $\binom{3600}{18}p^{18}(1-p)^{3558}$
+- $\binom{3600}{18}p^{18}(1-p)^{3582}$
 :::
 
 ## Limit - smallest interval

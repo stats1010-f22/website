@@ -93,7 +93,6 @@ d %>%
   ggplot() +
   geom_point(aes(x = x, y = std_norm)) +
   geom_point(aes(x = x, y = scaled_norm))
-
 ```
 :::
 :::
@@ -123,25 +122,61 @@ Var(Z) & = Var(\frac{X-\mu_X}{\sigma_X})\\
  \end{aligned}$$
 :::
 
-## Examples
 
-Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following:
+## Example
+
+Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find the probability:
 
 ::: incremental
-1. $P(Y > 7)$
-- $$\begin{aligned}
-P(Y > 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} > \frac{7-\mu_Y}{\sigma_Y}) \\ 
- & = P(Z > \frac{7-5}{2} = 1)
- \end{aligned}$$
-
-2. $P(Y < 3)$
+1. $P(Y < 3)$
 - $$\begin{aligned}
 P(Y < 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} < \frac{3-\mu_Y}{\sigma_Y}) \\ 
  & = P(Z < \frac{3-5}{2} = -1)
  \end{aligned}$$
+ - `pnorm(-1)` $0.1586553$
 :::
 
+
+
+#  {background-image="lec_11-things/p_less_neg_1.png" background-size="contain"}
+
+## Queen Bee `Peenorm`
+
+::: notes
+To the left, to the left, pnorm is to the left
+:::
+
+{{< video https://www.youtube.com/embed/Nw8LyN21OO8 >}}
+
+
+## Example
+
+::: notes
+Both of these probabilities are the same because of *symmetry* of the normal distribution. How does this generalize to all normal distributions?
+:::
+
+Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find the probability:
+
+::: incremental
+2. $P(Y > 7)$
+- $$\begin{aligned}
+P(Y > 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} > \frac{7-\mu_Y}{\sigma_Y}) \\ 
+ & = P(Z > \frac{7-5}{2} = 1)
+ \end{aligned}$$
+- `1- pnorm(1)` $ 0.1586553$ 
+:::
+
+#  {background-image="lec_11-thingss/p_greater_1.png" background-size="contain"}
+
+
 #  {background-image="lec_11-thingss/emperical_rule.png" background-size="contain"}
+
+
+# Percentiles
+
+::: notes
+Earlier we used the normal to find a percent, you can also use `R` to find the value associated with that percent.
+:::
 
 
 
