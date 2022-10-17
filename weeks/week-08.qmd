@@ -14,7 +14,7 @@ editor: visual
 
 🖥️ [Lect](/slides/lect_07.html)[ure 10](/slides/lect_10.html)
 
-🖥️
+🖥️ [Lecture 11](/slides/lect_101.html)
 
 ## Practice
 
@@ -22,7 +22,7 @@ editor: visual
 
 ## Perform
 
-✍️
+✍️ [HW 2 - Titanic](/hw/hw-2.html)
 
 <br><br>
 

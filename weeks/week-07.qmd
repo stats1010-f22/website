@@ -20,6 +20,10 @@ editor: visual
 
 📋 [AE 9](/ae/ae-9.html)
 
+## Perform
+
+✍️ [HW 2 - Titanic](/hw/hw-2.html)
+
 <br><br>
 
 ::: {style="font-size: 0.875em;"}
