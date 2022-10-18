@@ -1131,7 +1131,7 @@
     "href": "slides/lect_11.html#example-1",
     "title": "Chapter 12: The normal probability model",
     "section": "Example",
-    "text": "Example\n\nBoth of these probabilities are the same because of symmetry of the normal distribution. How does this generalize to all normal distributions?\n\nLet \\(Y \\sim N(\\mu_Y = 5, \\sigma_Y^2 = 4)\\), standardize the following and find the probability:\n\n\n\\(P(Y > 7)\\)\n\n\n\\[\\begin{aligned}\nP(Y > 7) &= P(\\frac{Y - \\mu_Y}{\\sigma_Y} > \\frac{7-\\mu_Y}{\\sigma_Y}) \\\\\n& = P(Z > \\frac{7-5}{2} = 1)\n\\end{aligned}\\]\n1- pnorm(1) $ 0.1586553$\n1- pnorm(1, mean = 5, sigma = 2)"
+    "text": "Example\n\nBoth of these probabilities are the same because of symmetry of the normal distribution. How does this generalize to all normal distributions?\n\nLet \\(Y \\sim N(\\mu_Y = 5, \\sigma_Y^2 = 4)\\), standardize the following and find the probability:\n\n\n\\(P(Y > 7)\\)\n\\[\\begin{aligned}\nP(Y > 7) &= P(\\frac{Y - \\mu_Y}{\\sigma_Y} > \\frac{7-\\mu_Y}{\\sigma_Y}) \\\\\n& = P(Z > \\frac{7-5}{2} = 1)\n\\end{aligned}\\]\n1- pnorm(1) $ 0.1586553$\n1- pnorm(1, mean = 5, sigma = 2)"
   },
   {
     "objectID": "slides/lect_11.html#graph",
