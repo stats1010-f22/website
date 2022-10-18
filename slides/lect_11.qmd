@@ -340,7 +340,7 @@ qqline(bimodal, col = "blue", lwd = 2)
 
 ## QQPlot in `R`
 
-```{r bimodal}
+```{r diamonds}
 #| echo: true
 #| eval: true
 
