@@ -1103,7 +1103,7 @@
     "href": "slides/lect_11.html#standardizing",
     "title": "Chapter 12: The normal probability model",
     "section": "Standardizing",
-    "text": "Standardizing\n\nBooks and tables of just normal probabilities to multiple decimal places.\n\nHistorically, it could be quite hard to find probabilities, so standardizing was important.\n\n\nuse shift and scale information from above\n\\(Z = \\frac{X-\\mu_X}{\\sigma_X}\\)\nFind \\(E(Z)\\)\n\\(E(Z) = E(\\frac{X-\\mu_X}{\\sigma_X})\\)\n\\[\\begin{aligned}\nE(Z) & = E(\\frac{X-\\mu_X}{\\sigma_X})\\\\\n& = \\frac{1}{\\sigma_X}E(X-\\mu_X) \\\\\n&= 0\n\\end{aligned}\\]\n\\[\\begin{aligned}\nVar(Z) & = Var(\\frac{X-\\mu_X}{\\sigma_X})\\\\\n& = \\frac{1}{\\sigma^2}Var(X-\\mu_X) \\\\\n&= \\frac{\\sigma^2}{\\sigma^2} = 1\n\\end{aligned}\\]"
+    "text": "Standardizing\n\nBooks and tables of just normal probabilities to multiple decimal places.\n\nHistorically, it could be quite hard to find probabilities, so standardizing was important.\n\n\nuse shift and scale information from above\n\\(Z = \\frac{X-\\mu_X}{\\sigma_X}\\)\nFind \\(E(Z)\\)\n\\(E(Z) = E(\\frac{X-\\mu_X}{\\sigma_X})\\)\n\\[\\begin{aligned}\nE(Z) & = E(\\frac{X-\\mu_X}{\\sigma_X})\\\\\n& = \\frac{1}{\\sigma_X}E(X-\\mu_X) \\\\\n&= 0\n\\end{aligned}\\]"
   },
   {
     "objectID": "slides/lect_11.html#standardizing-1",
@@ -1131,7 +1131,7 @@
     "href": "slides/lect_11.html#example-1",
     "title": "Chapter 12: The normal probability model",
     "section": "Example",
-    "text": "Example\n\nBoth of these probabilities are the same because of symmetry of the normal distribution. How does this generalize to all normal distributions?\n\nLet \\(Y \\sim N(\\mu_Y = 5, \\sigma_Y^2 = 4)\\), standardize the following and find the probability:\n\n\n\\(P(Y > 7)\\)\n\\[\\begin{aligned}\nP(Y > 7) &= P(\\frac{Y - \\mu_Y}{\\sigma_Y} > \\frac{7-\\mu_Y}{\\sigma_Y}) \\\\\n& = P(Z > \\frac{7-5}{2} = 1)\n\\end{aligned}\\]\n1- pnorm(1) $ 0.1586553$\n1- pnorm(1, mean = 5, sigma = 2)"
+    "text": "Example\n\nBoth of these probabilities are the same because of symmetry of the normal distribution. How does this generalize to all normal distributions?\n\nLet \\(Y \\sim N(\\mu_Y = 5, \\sigma_Y^2 = 4)\\), standardize the following and find the probability:\n\n\n\\(P(Y > 7)\\)\n\\[\\begin{aligned}\nP(Y > 7) &= P(\\frac{Y - \\mu_Y}{\\sigma_Y} > \\frac{7-\\mu_Y}{\\sigma_Y}) \\\\\n& = P(Z > \\frac{7-5}{2} = 1)\n\\end{aligned}\\]\npnorm(1) \\(0.8413447\\)\npnorm(1, mean = 5, sigma = 2)"
   },
   {
     "objectID": "slides/lect_11.html#graph",
@@ -1141,11 +1141,18 @@
     "text": "Graph"
   },
   {
+    "objectID": "slides/lect_11.html#example-contd",
+    "href": "slides/lect_11.html#example-contd",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Example (cont’d)",
+    "text": "Example (cont’d)\n\nThis and the previous example have the same probabilities attached to them b/c the distribution is symmetric\nSince they generally have the same shape what other things are true?\n\n\n\n\\(P(Z > 1) = 1 - P(Z<1)\\)\n1 - pnorm(1) \\(0.8413447\\)\n1 - pnorm(1, mean = 5, sigma = 2)"
+  },
+  {
     "objectID": "slides/lect_11.html#rule",
     "href": "slides/lect_11.html#rule",
     "title": "Chapter 12: The normal probability model",
     "section": "Rule",
-    "text": "Rule"
+    "text": "Rule\n\nThis is true of all normal distributions, point of inflection, other things.\nWe will also need to learn to undo things. If we have a probability go backwards and find the z-score."
   },
   {
     "objectID": "slides/lect_11.html#undo",
