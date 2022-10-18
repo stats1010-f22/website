@@ -16,10 +16,6 @@ editor: visual
 
 🖥️ [Lecture 11](/slides/lect_11.html)
 
-## Practice
-
-📋
-
 ## Perform
 
 ✍️ [HW 2 - Titanic](/hw/hw-2.html)
