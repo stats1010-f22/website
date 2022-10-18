@@ -171,7 +171,7 @@ Both of these probabilities are the same because of *symmetry* of the normal dis
 Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find the probability:
 
 ::: incremental
-2.  $P(Y > 7)$
+-  $P(Y > 7)$
 
 -   $$\begin{aligned}
     P(Y > 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} > \frac{7-\mu_Y}{\sigma_Y}) \\ 
