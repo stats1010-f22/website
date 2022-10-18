@@ -342,8 +342,10 @@ ggplot(diamonds, aes(sample=price)) +
 - As $K_3$ gets smaller, more left-skewed
 
 :::
-```{r kurtosis}
 
+```{r kurtosis}
+#| echo: false
+#| eval: false
 n <- 1000
 normal_density <- dnorm(seq(-4, 4, 0.01))
 zs <- seq(-4, 4, 0.01)
