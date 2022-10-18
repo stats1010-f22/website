@@ -330,3 +330,25 @@ ggplot(diamonds, aes(sample=price)) +
   stat_qq() + # add the dots
   stat_qq_line() # and the line
 ```
+
+## Kurtosis
+
+
+::: incremental
+- find the $z$ scores for all data ($z_i = \frac{x_i - \bar{x}}{s}$)
+- $$K_3 = \frac{z_1^3 +z_2^3 + ... + z_n^3}{n}$$
+- If $K_3 \approx 0$, then $x$ is symmetric
+- As $K_3$ gets larger, more right-skewed
+- As $K_3$ gets smaller, more left-skewed
+
+:::
+```{r kurtosis}
+
+n <- 1000
+normal_density <- dnorm(seq(-4, 4, 0.01))
+zs <- seq(-4, 4, 0.01)
+
+
+
+```
+
