@@ -210,7 +210,10 @@ Looking at the data
 
 ## Plot - normal
 
-```{r}
+```{r normal}
+#| echo: false
+#| eval: true
+
 # Draw two plots next to each other
 par(mfrow = c(1, 2))
 
@@ -241,7 +244,10 @@ qqline(gaussian_rv, col = "blue", lwd = 2)
 
 ## Plot - tale of 2 tails
 
-```{r}
+```{r right}
+#| echo: false
+#| eval: true
+
 # Skewed Right
 # skew_right is the dataset that will be compared to the Gaussian distribution
 skew_right <- c(gaussian_rv[gaussian_rv > 0] * 2.5, gaussian_rv)
@@ -254,7 +260,10 @@ qqline(skew_right, col = "blue", lwd = 2)
 
 ## Tale of 2 tails
 
-```{r}
+```{r left}
+#| echo: false
+#| eval: true
+
 # Skewed Left
 # skew_left is the dataset that will be compared to the Gaussian distribution
 skew_left <- c(gaussian_rv[gaussian_rv < 0]*2.5, gaussian_rv)
@@ -268,8 +277,10 @@ qqline(skew_left, col = "blue", lwd = 2)
 
 ## Fat tails
 
-```{r}
-# Fat Tails
+```{r fat}
+#| echo: false
+#| eval: true
+
 fat_tails <- c(gaussian_rv*2.5, gaussian_rv)
 
 hist_(fat_tails, main = "Fat Tails", ylim = c(0, max(normal_density)), xlim = c(-10, 10))
@@ -280,7 +291,10 @@ qqline(fat_tails, col = "blue", lwd = 2)
 
 ## Thin tails
 
-```{r}
+```{r thin}
+#| echo: false
+#| eval: true
+
 # Thin Tails
 thin_tails <- rnorm(n, sd = .7)
 
@@ -292,7 +306,10 @@ qqline(thin_tails, col = "blue", lwd = 2)
 
 ## Bimodal
 
-```{r}
+```{r bimodal}
+#| echo: false
+#| eval: true
+
 # Bimodal
 bimodal <- c(rnorm(500, -1, .25), rnorm(500, 1, .25))
   
@@ -300,4 +317,16 @@ hist_(bimodal, main = "Bimodal", xlim = c(-2, 2))
 
 qqnorm(bimodal)
 qqline(bimodal, col = "blue", lwd = 2)
+```
+
+## QQPlot in `R`
+
+```{r bimodal}
+#| echo: true
+#| eval: true
+
+
+ggplot(diamonds, aes(sample=price)) +
+  stat_qq() + # add the dots
+  stat_qq_line() # and the line
 ```
