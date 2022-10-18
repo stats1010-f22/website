@@ -1103,21 +1103,35 @@
     "href": "slides/lect_11.html#standardizing",
     "title": "Chapter 12: The normal probability model",
     "section": "Standardizing",
-    "text": "Standardizing\n\nBooks and tables of just normal probabilities to multiple decimal places.\n\nHistorically, it could be quite hard to find probabilities, so standardizing was important.\n\n\nuse shift and scale information from above\n\\(Z = \\frac{X-\\mu_X}{\\sigma_X}\\)\nFind \\(E(Z)\\) and \\(Var(Z)\\)\n\\(E(Z) = E(\\frac{X-\\mu_X}{\\sigma_X})\\)\n\\[\\begin{aligned}\nE(Z) & = E(\\frac{X-\\mu_X}{\\sigma_X})\\\\\n& = \\frac{1}{\\sigma}E(X-\\mu_X) \\\\\n&= 0\n\\end{aligned}\\]\n\\[\\begin{aligned}\nVar(Z) & = Var(\\frac{X-\\mu_X}{\\sigma_X})\\\\\n& = \\frac{1}{\\sigma^2}Var(X-\\mu_X) \\\\\n&= \\frac{\\sigma^2}{\\sigma^2} = 1\n\\end{aligned}\\]"
+    "text": "Standardizing\n\nBooks and tables of just normal probabilities to multiple decimal places.\n\nHistorically, it could be quite hard to find probabilities, so standardizing was important.\n\n\nuse shift and scale information from above\n\\(Z = \\frac{X-\\mu_X}{\\sigma_X}\\)\nFind \\(E(Z)\\)\n\\(E(Z) = E(\\frac{X-\\mu_X}{\\sigma_X})\\)\n\\[\\begin{aligned}\nE(Z) & = E(\\frac{X-\\mu_X}{\\sigma_X})\\\\\n& = \\frac{1}{\\sigma}E(X-\\mu_X) \\\\\n&= 0\n\\end{aligned}\\]\n\\[\\begin{aligned}\nVar(Z) & = Var(\\frac{X-\\mu_X}{\\sigma_X})\\\\\n& = \\frac{1}{\\sigma^2}Var(X-\\mu_X) \\\\\n&= \\frac{\\sigma^2}{\\sigma^2} = 1\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/lect_11.html#standardizing-1",
+    "href": "slides/lect_11.html#standardizing-1",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Standardizing",
+    "text": "Standardizing\n\n\nuse shift and scale information from above\n\\(Z = \\frac{X-\\mu_X}{\\sigma_X}\\)\nFind \\(Var(Z)\\)\n\\[\\begin{aligned}\nVar(Z) & = Var(\\frac{X-\\mu_X}{\\sigma_X})\\\\\n& = \\frac{1}{\\sigma^2}Var(X-\\mu_X) \\\\\n&= \\frac{\\sigma^2}{\\sigma^2} = 1\n\\end{aligned}\\]"
   },
   {
     "objectID": "slides/lect_11.html#example",
     "href": "slides/lect_11.html#example",
     "title": "Chapter 12: The normal probability model",
     "section": "Example",
-    "text": "Example\nLet \\(Y \\sim N(\\mu_Y = 5, \\sigma_Y^2 = 4)\\), standardize the following and find the probability:\n\n\n\\(P(Y < 3)\\)\n\n\n\\[\\begin{aligned}\nP(Y < 7) &= P(\\frac{Y - \\mu_Y}{\\sigma_Y} < \\frac{3-\\mu_Y}{\\sigma_Y}) \\\\\n& = P(Z < \\frac{3-5}{2} = -1)\n\\end{aligned}\\]\npnorm(-1) \\(0.1586553\\)\npnorm(-1, mean = 5, sd = 2)"
+    "text": "Example\nLet \\(Y \\sim N(\\mu_Y = 5, \\sigma_Y^2 = 4)\\), standardize the following and find the probability:\n\n\n\\(P(Y < 3)\\)\n\\[\\begin{aligned}\nP(Y < 3) &= P(\\frac{Y - \\mu_Y}{\\sigma_Y} < \\frac{3-\\mu_Y}{\\sigma_Y}) \\\\\n& = P(Z < \\frac{3-5}{2} = -1)\n\\end{aligned}\\]\npnorm(-1) \\(0.1586553\\)\npnorm(-1, mean = 5, sd = 2)"
   },
   {
-    "objectID": "slides/lect_11.html#queen-bee-peenorm",
-    "href": "slides/lect_11.html#queen-bee-peenorm",
+    "objectID": "slides/lect_11.html#graph",
+    "href": "slides/lect_11.html#graph",
     "title": "Chapter 12: The normal probability model",
-    "section": "Queen Bee Peenorm",
-    "text": "Queen Bee Peenorm\n\nTo the left, to the left, pnorm is to the left"
+    "section": "Graph",
+    "text": "Graph"
+  },
+  {
+    "objectID": "slides/lect_11.html#queen-bee",
+    "href": "slides/lect_11.html#queen-bee",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Queen Bee",
+    "text": "Queen Bee\n\nTo the left, to the left, pnorm is to the left\n\nPercentiles are always to the left."
   },
   {
     "objectID": "slides/lect_11.html#example-1",
@@ -1125,6 +1139,69 @@
     "title": "Chapter 12: The normal probability model",
     "section": "Example",
     "text": "Example\n\nBoth of these probabilities are the same because of symmetry of the normal distribution. How does this generalize to all normal distributions?\n\nLet \\(Y \\sim N(\\mu_Y = 5, \\sigma_Y^2 = 4)\\), standardize the following and find the probability:\n\n\n\\(P(Y > 7)\\)\n\n\n\\[\\begin{aligned}\nP(Y > 7) &= P(\\frac{Y - \\mu_Y}{\\sigma_Y} > \\frac{7-\\mu_Y}{\\sigma_Y}) \\\\\n& = P(Z > \\frac{7-5}{2} = 1)\n\\end{aligned}\\]\n1- pnorm(1) $ 0.1586553$\n1- pnorm(1, mean = 5, sigma = 2)"
+  },
+  {
+    "objectID": "slides/lect_11.html#graph-1",
+    "href": "slides/lect_11.html#graph-1",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Graph",
+    "text": "Graph"
+  },
+  {
+    "objectID": "slides/lect_11.html#rule",
+    "href": "slides/lect_11.html#rule",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Rule",
+    "text": "Rule"
+  },
+  {
+    "objectID": "slides/lect_11.html#undo",
+    "href": "slides/lect_11.html#undo",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Undo",
+    "text": "Undo"
+  },
+  {
+    "objectID": "slides/lect_11.html#plot---normal",
+    "href": "slides/lect_11.html#plot---normal",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Plot - normal",
+    "text": "Plot - normal"
+  },
+  {
+    "objectID": "slides/lect_11.html#plot---tale-of-2-tails",
+    "href": "slides/lect_11.html#plot---tale-of-2-tails",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Plot - tale of 2 tails",
+    "text": "Plot - tale of 2 tails"
+  },
+  {
+    "objectID": "slides/lect_11.html#tale-of-2-tails",
+    "href": "slides/lect_11.html#tale-of-2-tails",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Tale of 2 tails",
+    "text": "Tale of 2 tails"
+  },
+  {
+    "objectID": "slides/lect_11.html#fat-tails",
+    "href": "slides/lect_11.html#fat-tails",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Fat tails",
+    "text": "Fat tails"
+  },
+  {
+    "objectID": "slides/lect_11.html#thin-tails",
+    "href": "slides/lect_11.html#thin-tails",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Thin tails",
+    "text": "Thin tails"
+  },
+  {
+    "objectID": "slides/lect_11.html#bimodal",
+    "href": "slides/lect_11.html#bimodal",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Bimodal",
+    "text": "Bimodal\n\n\n\n\n\n\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "ae/ae-4.html",

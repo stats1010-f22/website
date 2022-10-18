@@ -426,7 +426,7 @@
 <ul>
 <li class="fragment">use shift and scale information from above</li>
 <li class="fragment"><span class="math inline">\(Z = \frac{X-\mu_X}{\sigma_X}\)</span></li>
-<li class="fragment">Find <span class="math inline">\(E(Z)\)</span> and <span class="math inline">\(Var(Z)\)</span></li>
+<li class="fragment">Find <span class="math inline">\(E(Z)\)</span></li>
 <li class="fragment"><span class="math inline">\(E(Z) = E(\frac{X-\mu_X}{\sigma_X})\)</span></li>
 <li class="fragment"><span class="math display">\[\begin{aligned}
 E(Z) &amp; = E(\frac{X-\mu_X}{\sigma_X})\\
@@ -441,30 +441,41 @@ Var(Z) &amp; = Var(\frac{X-\mu_X}{\sigma_X})\\
 </ul>
 </div>
 </section>
+<section id="standardizing-1" class="slide level2 smaller">
+<h2>Standardizing</h2>
+<div>
+<ul>
+<li class="fragment">use shift and scale information from above</li>
+<li class="fragment"><span class="math inline">\(Z = \frac{X-\mu_X}{\sigma_X}\)</span></li>
+<li class="fragment">Find <span class="math inline">\(Var(Z)\)</span></li>
+<li class="fragment"><span class="math display">\[\begin{aligned}
+Var(Z) &amp; = Var(\frac{X-\mu_X}{\sigma_X})\\
+&amp; = \frac{1}{\sigma^2}Var(X-\mu_X) \\
+&amp;= \frac{\sigma^2}{\sigma^2} = 1
+\end{aligned}\]</span></li>
+</ul>
+</div>
+</section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
 <p>Let <span class="math inline">\(Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)\)</span>, standardize the following and find the probability:</p>
 <div>
-<ol type="1">
-<li class="fragment"><span class="math inline">\(P(Y &lt; 3)\)</span></li>
-</ol>
 <ul>
+<li class="fragment"><span class="math inline">\(P(Y &lt; 3)\)</span></li>
 <li class="fragment"><span class="math display">\[\begin{aligned}
-P(Y &lt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &lt; \frac{3-\mu_Y}{\sigma_Y}) \\
+P(Y &lt; 3) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &lt; \frac{3-\mu_Y}{\sigma_Y}) \\
 &amp; = P(Z &lt; \frac{3-5}{2} = -1)
 \end{aligned}\]</span></li>
 <li class="fragment"><code>pnorm(-1)</code> <span class="math inline">\(0.1586553\)</span></li>
 <li class="fragment"><code>pnorm(-1, mean = 5, sd = 2)</code></li>
 </ul>
 </div>
-</section></section>
-<section>
-<section id="section-2" class="title-slide slide level1 center" data-background-image="lec_11-things/p_less_neg_1.png" data-background-size="contain">
-<h1></h1>
-
 </section>
-<section id="queen-bee-peenorm" class="slide level2">
-<h2>Queen Bee <code>Peenorm</code></h2>
+<section id="graph" class="slide level2" data-background-image="lec_11-things/p_less_neg_1.png" data-background-size="contain">
+<h2>Graph</h2>
+</section>
+<section id="queen-bee" class="slide level2">
+<h2>Queen Bee</h2>
 <aside class="notes">
 <p>To the left, to the left, pnorm is to the left</p>
 <style type="text/css">
@@ -478,7 +489,7 @@ P(Y &lt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &lt; \frac{3-\mu_Y}{\sigma_Y}) \
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p></p>
+<p>Percentiles are always <a href="video%20https://www.youtube.com/embed/Nw8LyN21OO8">to the left</a>.</p>
 </section>
 <section id="example-1" class="slide level2">
 <h2>Example</h2>
@@ -509,22 +520,16 @@ P(Y &gt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &gt; \frac{7-\mu_Y}{\sigma_Y}) \
 <li class="fragment"><code>1- pnorm(1, mean = 5, sigma = 2)</code></li>
 </ul>
 </div>
+</section>
+<section id="graph-1" class="slide level2" data-background-image="lec_11-things/p_greater_1.png" data-background-size="contain">
+<h2>Graph</h2>
+</section>
+<section id="rule" class="slide level2" data-background-image="lec_11-things/emperical_rule.png" data-background-size="contain">
+<h2>Rule</h2>
+</section>
+<section id="undo" class="slide level2" data-background-image="lec_11-things/q_norm.png" data-background-size="contain">
+<h2>Undo</h2>
 </section></section>
-<section id="section-3" class="title-slide slide level1 center" data-background-image="lec_11-things/p_greater_1.png" data-background-size="contain">
-<h1></h1>
-
-</section>
-
-<section id="section-4" class="title-slide slide level1 center" data-background-image="lec_11-things/emperical_rule.png" data-background-size="contain">
-<h1></h1>
-
-</section>
-
-<section id="section-5" class="title-slide slide level1 center" data-background-image="lec_11-things/q_norm.png" data-background-size="contain">
-<h1></h1>
-
-</section>
-
 <section id="percentiles" class="title-slide slide level1 center">
 <h1>Percentiles</h1>
 <aside class="notes">
@@ -541,35 +546,90 @@ P(Y &gt; 7) &amp;= P(\frac{Y - \mu_Y}{\sigma_Y} &gt; \frac{7-\mu_Y}{\sigma_Y}) \
           display:block!important;
       }</style></aside>
 <div>
-<ol type="1">
+<ul>
 <li class="fragment">Find <span class="math inline">\(z : P(Z &lt; z) = .1711\)</span></li>
-</ol>
-<ul>
 <li class="fragment"><code>qnorm(.1711)</code></li>
-</ul>
-<ol start="2" type="1">
 <li class="fragment">A medical test produces a score that measures the risk of a disease. In healthy adults, the test score is normally distributed with <span class="math inline">\(\mu=10\)</span> point and <span class="math inline">\(\sigma = 2.5\)</span>. Lower scores suggest the disease is present. Test scores below what threshold signal a problem for only <span class="math inline">\(1\%\)</span> of healthy adults?</li>
-</ol>
-<ul>
 <li class="fragment"><code>qnorm(.01, mean = 10, sd = 2.5)</code></li>
 </ul>
 </div>
 </section>
 
+<section>
 <section id="normality-tests" class="title-slide slide level1 center">
 <h1>Normality tests</h1>
-
-</section>
-
-<section id="your-turn" class="title-slide slide level1 center">
-<h1>Your turn</h1>
-<p><a href="https://stats1010-f22.github.io/website/ae/ae-8.html">Click here</a> or the qr code below</p>
-
-
-<img data-src="lect_11_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><div class="footer footer-default">
-<p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
+<p>Looking at the data</p>
+<div>
+<ul>
+<li class="fragment">multimodal</li>
+<li class="fragment">skewness</li>
+<li class="fragment">outliers</li>
+</ul>
 </div>
 </section>
+<section id="plot---normal" class="slide level2">
+<h2>Plot - normal</h2>
+
+<img data-src="lect_11_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="plot---tale-of-2-tails" class="slide level2">
+<h2>Plot - tale of 2 tails</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="lect_11_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</div>
+<div class="cell-output-display">
+<p><img data-src="lect_11_files/figure-revealjs/unnamed-chunk-3-2.png" width="960"></p>
+</div>
+</div>
+</section>
+<section id="tale-of-2-tails" class="slide level2">
+<h2>Tale of 2 tails</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="lect_11_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</div>
+<div class="cell-output-display">
+<p><img data-src="lect_11_files/figure-revealjs/unnamed-chunk-4-2.png" width="960"></p>
+</div>
+</div>
+</section>
+<section id="fat-tails" class="slide level2">
+<h2>Fat tails</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="lect_11_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+</div>
+<div class="cell-output-display">
+<p><img data-src="lect_11_files/figure-revealjs/unnamed-chunk-5-2.png" width="960"></p>
+</div>
+</div>
+</section>
+<section id="thin-tails" class="slide level2">
+<h2>Thin tails</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="lect_11_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</div>
+<div class="cell-output-display">
+<p><img data-src="lect_11_files/figure-revealjs/unnamed-chunk-6-2.png" width="960"></p>
+</div>
+</div>
+</section>
+<section id="bimodal" class="slide level2">
+<h2>Bimodal</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="lect_11_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+</div>
+<div class="cell-output-display">
+<p><img data-src="lect_11_files/figure-revealjs/unnamed-chunk-7-2.png" width="960"></p>
+</div>
+</div>
+
+<div class="footer footer-default">
+<p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
+</div>
+</section></section>
     </div>
   </div>
 
