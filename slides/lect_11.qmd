@@ -23,7 +23,7 @@ library(tidyverse)
 ::: incremental
 -   The shape of the normal distribution and why it is important
 -   The central limit theorem.
-_   Understand shift and scales and how to compute them to find $z$ scores
+-   Understand shift and scales and how to compute them to find $z$ scores
 -  Basic tests of normality including qqplots and kurtosis
 :::
 
@@ -85,7 +85,7 @@ d %>%
 #| eval: true
 
 
-x <- seq(-15, 20)
+x <- seq(-15, 20, length.out = 1000)
 std_norm <- dnorm(x, mean = 0, sd = 1)
 scaled_norm <- dnorm(x, mean = 0, sd = 5)
 
@@ -114,7 +114,7 @@ Historically, it could be quite hard to find probabilities, so *standardizing* w
 -   $E(Z) = E(\frac{X-\mu_X}{\sigma_X})$
 -   $$\begin{aligned}
     E(Z) & = E(\frac{X-\mu_X}{\sigma_X})\\ 
-     & = \frac{1}{\sigma}E(X-\mu_X) \\
+     & = \frac{1}{\sigma_X}E(X-\mu_X) \\
      &= 0
      \end{aligned}$$
 -   $$\begin{aligned}
@@ -151,7 +151,7 @@ Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find th
 -   `pnorm(-1, mean = 5, sd = 2)`
 :::
 
-# {background-image="lec_11-things/p_less_neg_1.png" background-size="contain"}
+# {background-image="lect_11-things/p_less_neg_1.png" background-size="contain"}
 
 
 ## Queen Bee
@@ -181,11 +181,11 @@ Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find th
 -   `1- pnorm(1, mean = 5, sigma = 2)`
 :::
 
-## Graph  {background-image="lec_11-things/p_greater_1.png" background-size="contain"}
+## Graph  {background-image="lect_11-things/p_greater_1.png" background-size="contain"}
 
-## Rule {background-image="lec_11-things/emperical_rule.png" background-size="contain"}
+## Rule {background-image="lect_11-things/emperical_rule.png" background-size="contain"}
 
-## Undo  {background-image="lec_11-things/q_norm.png" background-size="contain"}
+## Undo  {background-image="lect_11-things/q_norm.png" background-size="contain"}
 
 # Percentiles
 
