@@ -117,11 +117,6 @@ Historically, it could be quite hard to find probabilities, so *standardizing* w
      & = \frac{1}{\sigma_X}E(X-\mu_X) \\
      &= 0
      \end{aligned}$$
--   $$\begin{aligned}
-    Var(Z) & = Var(\frac{X-\mu_X}{\sigma_X})\\ 
-     & = \frac{1}{\sigma^2}Var(X-\mu_X) \\
-     &= \frac{\sigma^2}{\sigma^2} = 1
-     \end{aligned}$$
 :::
 
 ## Standardizing {.smaller}
@@ -137,12 +132,13 @@ Historically, it could be quite hard to find probabilities, so *standardizing* w
      \end{aligned}$$
 :::
 
-## Example
+## Example {.smaller}
 
 Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find the probability:
 
 ::: incremental
 -   $P(Y < 3)$
+
 -   $$\begin{aligned}
     P(Y < 3) &= P(\frac{Y - \mu_Y}{\sigma_Y} < \frac{3-\mu_Y}{\sigma_Y}) \\ 
      & = P(Z < \frac{3-5}{2} = -1)
@@ -177,13 +173,34 @@ Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find th
     P(Y > 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} > \frac{7-\mu_Y}{\sigma_Y}) \\ 
      & = P(Z > \frac{7-5}{2} = 1)
      \end{aligned}$$
--   `1- pnorm(1)` \$ 0.1586553\$
--   `1- pnorm(1, mean = 5, sigma = 2)`
+-   `pnorm(1)` $0.8413447$
+-   `pnorm(1, mean = 5, sigma = 2)`
 :::
 
 ## Graph  {background-image="lect_11-things/p_greater_1.png" background-size="contain"}
 
+## Example (cont'd)
+::: notes
+This and the previous example have the same probabilities attached to them b/c the distribution is *symmetric*
+
+Since they generally have the same shape what other things are true?
+:::
+
+
+::: incremental
+ - $P(Z > 1) =  1 - P(Z<1)$
+ -  `1 - pnorm(1)` $0.8413447$
+ -  `1 - pnorm(1, mean = 5, sigma = 2)`
+:::
+
+
 ## Rule {background-image="lect_11-things/emperical_rule.png" background-size="contain"}
+
+::: notes
+This is true of all normal distributions, point of inflection, other things.
+
+We will also need to learn to undo things. If we have a probability go backwards and find the z-score.
+:::
 
 ## Undo  {background-image="lect_11-things/q_norm.png" background-size="contain"}
 
@@ -367,8 +384,6 @@ ggplot(diamonds, aes(sample=price)) +
 n <- 1000
 normal_density <- dnorm(seq(-4, 4, 0.01))
 zs <- seq(-4, 4, 0.01)
-
-
 
 ```
 
