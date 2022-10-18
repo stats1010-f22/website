@@ -119,6 +119,13 @@ Historically, it could be quite hard to find probabilities, so *standardizing* w
      \end{aligned}$$
 :::
 
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 2, seconds = 0)
+```
+
 ## Standardizing {.smaller}
 
 ::: incremental
@@ -131,6 +138,13 @@ Historically, it could be quite hard to find probabilities, so *standardizing* w
      &= \frac{\sigma^2}{\sigma^2} = 1
      \end{aligned}$$
 :::
+
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 2, seconds = 0)
+```
 
 ## Example {.smaller}
 
@@ -146,6 +160,13 @@ Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find th
 -   `pnorm(-1)` $0.1586553$
 -   `pnorm(-1, mean = 5, sd = 2)`
 :::
+
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 2, seconds = 0)
+```
 
 # {background-image="lect_11-things/p_less_neg_1.png" background-size="contain"}
 
@@ -177,6 +198,13 @@ Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find th
 -   `pnorm(1, mean = 5, sigma = 2)`
 :::
 
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 2, seconds = 0)
+```
+
 ## Graph  {background-image="lect_11-things/p_greater_1.png" background-size="contain"}
 
 ## Example (cont'd)
@@ -193,6 +221,12 @@ Since they generally have the same shape what other things are true?
  -  `1 - pnorm(1, mean = 5, sigma = 2)`
 :::
 
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 2, seconds = 0)
+```
 
 ## Rule {background-image="lect_11-things/emperical_rule.png" background-size="contain"}
 
@@ -216,6 +250,13 @@ Earlier we used the normal to find a percent, you can also use `R` to find the z
 -   A medical test produces a score that measures the risk of a disease. In healthy adults, the test score is normally distributed with $\mu=10$ point and $\sigma = 2.5$. Lower scores suggest the disease is present. Test scores below what threshold signal a problem for only $1\%$ of healthy adults?
 -   `qnorm(.01, mean = 10, sd = 2.5)`
 :::
+
+```{r}
+#| echo: false
+#| eval: true
+
+countdown(minutes = 2, seconds = 0)
+```
 
 # Normality tests
 
@@ -387,3 +428,6 @@ zs <- seq(-4, 4, 0.01)
 
 ```
 
+## Take home
+
+If you see departures from normality (large or small kurtosis, QQ plots that deviate from a straight line) PLOT the data and check.
