@@ -1,0 +1,29 @@
+---
+title: "Week 10"
+subtitle: "Revision & Exam 2"
+editor: visual
+---
+
+## Prepare
+
+📖 Read
+
+## Participate
+
+🖥️
+
+🖥️
+
+## Practice
+
+📋
+
+## Perform
+
+✅ Exam 2
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::

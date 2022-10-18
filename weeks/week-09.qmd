@@ -1,6 +1,6 @@
 ---
-title: "Week 8"
-subtitle: "Probability Models"
+title: "Week 9"
+subtitle: "Sampling: variation and quality, and surveys"
 editor: visual
 ---
 
