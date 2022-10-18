@@ -21,13 +21,13 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
-- The shape of the normal distribution and why it is important
-- The central limit theorem.
+-   The shape of the normal distribution and why it is important
+-   The central limit theorem.
 :::
 
-# {background-iframe="https://nzgwynn.shinyapps.io/limit_bin_normal/"}
+#  {background-iframe="https://nzgwynn.shinyapps.io/limit_bin_normal/"}
 
-## Binomial -> Normal
+## Binomial -\> Normal
 
 As the number of trials increases, the binomial pdf becomes well approximated by a normal distribution.
 
@@ -38,9 +38,9 @@ As the number of trials increases, the binomial pdf becomes well approximated by
 $Y \sim N(\mu = 4, \sigma^2 = 25)$
 
 ::: incremental
-- We use two parameters to describe a Normal distribution
-- $Y \sim N(\mu = 0, \sigma^2 = 1)$ 
-- $Y$ above is the *standard normal distribution*
+-   We use two parameters to describe a Normal distribution
+-   $Y \sim N(\mu = 0, \sigma^2 = 1)$
+-   $Y$ above is the *standard normal distribution*
 :::
 
 ## Central limit theorem
@@ -106,49 +106,59 @@ Books and tables of just normal probabilities to multiple decimal places.
 Historically, it could be quite hard to find probabilities, so *standardizing* was important.
 
 ::: incremental
-- use shift and scale information from above
-- $Z = \frac{X-\mu_X}{\sigma_X}$
-- Find $E(Z)$ and $Var(Z)$
-- $E(Z) = E(\frac{X-\mu_X}{\sigma_X})$
-- $$\begin{aligned}
-E(Z) & = E(\frac{X-\mu_X}{\sigma_X})\\ 
- & = \frac{1}{\sigma}E(X-\mu_X) \\
- &= 0
- \end{aligned}$$
-- $$\begin{aligned}
-Var(Z) & = Var(\frac{X-\mu_X}{\sigma_X})\\ 
- & = \frac{1}{\sigma^2}Var(X-\mu_X) \\
- &= \frac{\sigma^2}{\sigma^2} = 1
- \end{aligned}$$
+-   use shift and scale information from above
+-   $Z = \frac{X-\mu_X}{\sigma_X}$
+-   Find $E(Z)$
+-   $E(Z) = E(\frac{X-\mu_X}{\sigma_X})$
+-   $$\begin{aligned}
+    E(Z) & = E(\frac{X-\mu_X}{\sigma_X})\\ 
+     & = \frac{1}{\sigma}E(X-\mu_X) \\
+     &= 0
+     \end{aligned}$$
+-   $$\begin{aligned}
+    Var(Z) & = Var(\frac{X-\mu_X}{\sigma_X})\\ 
+     & = \frac{1}{\sigma^2}Var(X-\mu_X) \\
+     &= \frac{\sigma^2}{\sigma^2} = 1
+     \end{aligned}$$
 :::
 
+## Standardizing {.smaller}
+
+::: incremental
+-   use shift and scale information from above
+-   $Z = \frac{X-\mu_X}{\sigma_X}$
+-   Find $Var(Z)$
+-   $$\begin{aligned}
+    Var(Z) & = Var(\frac{X-\mu_X}{\sigma_X})\\ 
+     & = \frac{1}{\sigma^2}Var(X-\mu_X) \\
+     &= \frac{\sigma^2}{\sigma^2} = 1
+     \end{aligned}$$
+:::
 
 ## Example
 
 Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find the probability:
 
 ::: incremental
-1. $P(Y < 3)$
-- $$\begin{aligned}
-P(Y < 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} < \frac{3-\mu_Y}{\sigma_Y}) \\ 
- & = P(Z < \frac{3-5}{2} = -1)
- \end{aligned}$$
- - `pnorm(-1)` $0.1586553$
- - `pnorm(-1, mean = 5, sd = 2)`
+-   $P(Y < 3)$
+-   $$\begin{aligned}
+    P(Y < 3) &= P(\frac{Y - \mu_Y}{\sigma_Y} < \frac{3-\mu_Y}{\sigma_Y}) \\ 
+     & = P(Z < \frac{3-5}{2} = -1)
+     \end{aligned}$$
+-   `pnorm(-1)` $0.1586553$
+-   `pnorm(-1, mean = 5, sd = 2)`
 :::
 
+## Graph {background-image="lec_11-things/p_less_neg_1.png" background-size="contain"}
 
 
-#  {background-image="lec_11-things/p_less_neg_1.png" background-size="contain"}
-
-## Queen Bee `Peenorm`
+## Queen Bee
 
 ::: notes
 To the left, to the left, pnorm is to the left
 :::
 
-{{< video https://www.youtube.com/embed/Nw8LyN21OO8 >}}
-
+Percentiles are always [to the left](video%20https://www.youtube.com/embed/Nw8LyN21OO8).
 
 ## Example
 
@@ -159,46 +169,135 @@ Both of these probabilities are the same because of *symmetry* of the normal dis
 Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find the probability:
 
 ::: incremental
-2. $P(Y > 7)$
-- $$\begin{aligned}
-P(Y > 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} > \frac{7-\mu_Y}{\sigma_Y}) \\ 
- & = P(Z > \frac{7-5}{2} = 1)
- \end{aligned}$$
-- `1- pnorm(1)` $ 0.1586553$ 
-- `1- pnorm(1, mean = 5, sigma = 2)`
+2.  $P(Y > 7)$
+
+-   $$\begin{aligned}
+    P(Y > 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} > \frac{7-\mu_Y}{\sigma_Y}) \\ 
+     & = P(Z > \frac{7-5}{2} = 1)
+     \end{aligned}$$
+-   `1- pnorm(1)` \$ 0.1586553\$
+-   `1- pnorm(1, mean = 5, sigma = 2)`
 :::
 
-#  {background-image="lec_11-things/p_greater_1.png" background-size="contain"}
+## Graph  {background-image="lec_11-things/p_greater_1.png" background-size="contain"}
 
+## Rule {background-image="lec_11-things/emperical_rule.png" background-size="contain"}
 
-#  {background-image="lec_11-things/emperical_rule.png" background-size="contain"}
-
-
-#  {background-image="lec_11-things/q_norm.png" background-size="contain"}
+## Undo  {background-image="lec_11-things/q_norm.png" background-size="contain"}
 
 # Percentiles
+
 ::: notes
 Earlier we used the normal to find a percent, you can also use `R` to find the z value for a certain percent.
 :::
 
 ::: incremental
-
-1. Find $z : P(Z < z) = .1711$
-- `qnorm(.1711)`
-2. A medical test produces a score that measures the risk of a disease. In healthy adults, the test score is normally distributed with $\mu=10$ point and $\sigma = 2.5$. Lower scores suggest the disease is present. Test scores below what threshold signal a problem for only $1\%$ of healthy adults?
-- `qnorm(.01, mean = 10, sd = 2.5)`
-
+-   Find $z : P(Z < z) = .1711$
+-   `qnorm(.1711)`
+-   A medical test produces a score that measures the risk of a disease. In healthy adults, the test score is normally distributed with $\mu=10$ point and $\sigma = 2.5$. Lower scores suggest the disease is present. Test scores below what threshold signal a problem for only $1\%$ of healthy adults?
+-   `qnorm(.01, mean = 10, sd = 2.5)`
 :::
 
 # Normality tests
 
+Looking at the data
 
-# Your turn
+::: incremental
+-   multimodal
+-   skewness
+-   outliers
+:::
 
-[Click here](https://stats1010-f22.github.io/website/ae/ae-8.html) or the qr code below
+## Plot - normal
 
-```{r, eval=TRUE, echo=FALSE}
-library(qrcode)
-qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-9.html")
-plot(qr)
+```{r}
+# Draw two plots next to each other
+par(mfrow = c(1, 2))
+
+# normal_density are the y-values for the normal curve
+# zs are the x-values for the normal curve
+n <- 1000
+normal_density <- dnorm(seq(-4, 4, 0.01))
+zs <- seq(-4, 4, 0.01)
+
+# Add some spice to the default histogram function
+hist_ <- function(x, ...){
+  hist(x, breaks = 30, xlab = "Z", ylab = "",  yaxt='n', freq = FALSE, ...)
+  lines(zs, normal_density, type = "l", col = "red", lwd = 2)
+}
+
+# Gaussian Normal
+# rnorm() generates random numbers from a normal distribution
+# gaussian_rv is the dataset that will be compared to the Gaussian distribution
+gaussian_rv <- rnorm(n)
+
+# Draw the histogram
+hist_(gaussian_rv, main = "Gaussian Distribution")
+
+# Draw the Q-Q plot
+qqnorm(gaussian_rv)
+qqline(gaussian_rv, col = "blue", lwd = 2)
+```
+
+## Plot - tale of 2 tails
+
+```{r}
+# Skewed Right
+# skew_right is the dataset that will be compared to the Gaussian distribution
+skew_right <- c(gaussian_rv[gaussian_rv > 0] * 2.5, gaussian_rv)
+
+hist_(skew_right, main = "Skewed Right", ylim = c(0, max(normal_density)))
+
+qqnorm(skew_right)
+qqline(skew_right, col = "blue", lwd = 2)
+```
+
+## Tale of 2 tails
+
+```{r}
+# Skewed Left
+# skew_left is the dataset that will be compared to the Gaussian distribution
+skew_left <- c(gaussian_rv[gaussian_rv < 0]*2.5, gaussian_rv)
+
+hist_(skew_left, main = "Skewed Left", ylim = c(0, max(normal_density)))
+
+qqnorm(skew_left)
+qqline(skew_left, col = "blue", lwd = 2)
+
+```
+
+## Fat tails
+
+```{r}
+# Fat Tails
+fat_tails <- c(gaussian_rv*2.5, gaussian_rv)
+
+hist_(fat_tails, main = "Fat Tails", ylim = c(0, max(normal_density)), xlim = c(-10, 10))
+
+qqnorm(fat_tails)
+qqline(fat_tails, col = "blue", lwd = 2)
+```
+
+## Thin tails
+
+```{r}
+# Thin Tails
+thin_tails <- rnorm(n, sd = .7)
+
+hist_(thin_tails, main = "Thin Tails")
+
+qqnorm(thin_tails)
+qqline(thin_tails, col = "blue", lwd = 2)
+```
+
+## Bimodal
+
+```{r}
+# Bimodal
+bimodal <- c(rnorm(500, -1, .25), rnorm(500, 1, .25))
+  
+hist_(bimodal, main = "Bimodal", xlim = c(-2, 2))
+
+qqnorm(bimodal)
+qqline(bimodal, col = "blue", lwd = 2)
 ```
