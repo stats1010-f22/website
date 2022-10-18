@@ -64,7 +64,7 @@ The probability distribution of a sum of independent random variables of compara
 #| eval: true
 
 
-x <- seq(-5, 15)
+x <- seq(-5, 15, length.out = 1000)
 std_norm <- dnorm(x, mean = 0, sd = 1)
 shifted_norm <- dnorm(x, mean = 10, sd = 1)
 
@@ -217,7 +217,7 @@ Since they generally have the same shape what other things are true?
 
 ::: incremental
  - $P(Z > 1) =  1 - P(Z<1)$
- -  `1 - pnorm(1)` $0.8413447$
+ -  `1 - pnorm(1)` $0.1586553$
  -  `1 - pnorm(1, mean = 5, sigma = 2)`
 :::
 
@@ -238,7 +238,7 @@ We will also need to learn to undo things. If we have a probability go backwards
 
 ## Undo  {background-image="lect_11-things/q_norm.png" background-size="contain"}
 
-# Percentiles
+# Percentiles {.smaller}
 
 ::: notes
 Earlier we used the normal to find a percent, you can also use `R` to find the z value for a certain percent.
