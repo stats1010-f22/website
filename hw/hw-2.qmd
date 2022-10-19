@@ -59,7 +59,7 @@ This may be a good time to render your document.
 :::
 
 4.  Draw a pairs plot of all numeric variables in the dataset and comment on all scatterplots and histograms. Be sure to use variable names.
-5.  Explore any outliers by filtering and looking at the data. Answer questions like this, but include others that spark your curiosity.
+5.  Explore any outliers by filtering and looking at the data. Answer questions like this, but include others that spark your curiosity. Include a minimum of 2 additional outliers.
     a.  Which was the biggest family aboard?
 
     b.  Which and how many people paid the highest fair?
@@ -69,7 +69,7 @@ This may be a good time to render your document.
 This may be a good time to render your document.
 :::
 
-7.  Draw a scatterplot of Pclass_num and Fare, and color it by the survival variable. (Hint: use the function geom_jitter() to avoid [overplotting](https://www.data-to-viz.com/caveat/overplotting.html).) Comment on the plot.
+7.  Draw a scatterplot of Pclass and Fare, and color it by the survival variable. (Hint: use the function geom_jitter() to avoid [overplotting](https://www.data-to-viz.com/caveat/overplotting.html).) Comment on the plot.
 
 ::: callout-warning
 Before submitting, make sure you render your document,
