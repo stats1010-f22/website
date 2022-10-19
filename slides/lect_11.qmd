@@ -246,7 +246,7 @@ Earlier we used the normal to find a percent, you can also use `R` to find the z
 
 ::: incremental
 -   Find $z : P(Z < z) = .1711$
--   `qnorm(.1711)`
+-   `qnorm(.1711)` $-0.9498273$
 -   A medical test produces a score that measures the risk of a disease. In healthy adults, the test score is normally distributed with $\mu=10$ point and $\sigma = 2.5$. Lower scores suggest the disease is present. Test scores below what threshold signal a problem for only $1\%$ of healthy adults?
 -   `qnorm(.01, mean = 10, sd = 2.5)`
 :::
