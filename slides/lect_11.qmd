@@ -218,7 +218,7 @@ Since they generally have the same shape what other things are true?
 ::: incremental
  - $P(Z > 1) =  1 - P(Z<1)$
  -  `1 - pnorm(1)` $0.1586553$
- -  `1 - pnorm(1, mean = 5, sigma = 2)`
+ -  `1 - pnorm(1, mean = 5, sd = 2)`
 :::
 
 ```{r}
@@ -414,8 +414,8 @@ ggplot(diamonds, aes(sample=price)) +
 - find the $z$ scores for all data ($z_i = \frac{x_i - \bar{x}}{s}$)
 - $$K_3 = \frac{z_1^3 +z_2^3 + ... + z_n^3}{n}$$
 - If $K_3 \approx 0$, then $x$ is symmetric
-- As $K_3$ gets larger, more right-skewed
-- As $K_3$ gets smaller, more left-skewed
+- As $K_3$ gets larger than 0, more right-skewed
+- As $K_3$ gets smaller than 0, more left-skewed
 
 :::
 
