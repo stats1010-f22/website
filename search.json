@@ -1208,7 +1208,7 @@
     "href": "slides/lect_11.html#example-contd",
     "title": "Chapter 12: The normal probability model",
     "section": "Example (cont’d)",
-    "text": "Example (cont’d)\n\nThis and the previous example have the same probabilities attached to them b/c the distribution is symmetric\nSince they generally have the same shape what other things are true?\n\n\n\n\\(P(Z > 1) = 1 - P(Z<1)\\)\n1 - pnorm(1) \\(0.1586553\\)\n1 - pnorm(1, mean = 5, sigma = 2)\n\n\n\n\n\n02:00"
+    "text": "Example (cont’d)\n\nThis and the previous example have the same probabilities attached to them b/c the distribution is symmetric\nSince they generally have the same shape what other things are true?\n\n\n\n\\(P(Z > 1) = 1 - P(Z<1)\\)\n1 - pnorm(1) \\(0.1586553\\)\n1 - pnorm(1, mean = 5, sd = 2)\n\n\n\n\n\n02:00"
   },
   {
     "objectID": "slides/lect_11.html#rule",
@@ -1278,7 +1278,7 @@
     "href": "slides/lect_11.html#kurtosis",
     "title": "Chapter 12: The normal probability model",
     "section": "Kurtosis",
-    "text": "Kurtosis\n\n\nfind the \\(z\\) scores for all data (\\(z_i = \\frac{x_i - \\bar{x}}{s}\\))\n\\[K_3 = \\frac{z_1^3 +z_2^3 + ... + z_n^3}{n}\\]\nIf \\(K_3 \\approx 0\\), then \\(x\\) is symmetric\nAs \\(K_3\\) gets larger, more right-skewed\nAs \\(K_3\\) gets smaller, more left-skewed"
+    "text": "Kurtosis\n\n\nfind the \\(z\\) scores for all data (\\(z_i = \\frac{x_i - \\bar{x}}{s}\\))\n\\[K_3 = \\frac{z_1^3 +z_2^3 + ... + z_n^3}{n}\\]\nIf \\(K_3 \\approx 0\\), then \\(x\\) is symmetric\nAs \\(K_3\\) gets larger than 0, more right-skewed\nAs \\(K_3\\) gets smaller than 0, more left-skewed"
   },
   {
     "objectID": "slides/lect_11.html#take-home",
