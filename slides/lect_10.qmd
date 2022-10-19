@@ -236,7 +236,7 @@ countdown(minutes = 2, seconds = 0)
 
 10% Condition: if trials are selected at random, it is OK to ignore dependence caused by sampling from a finite population if the selected trials make up less than 10% of the population
 
-## Limit - mins
+## Limit of $p$- mins
 
 ::: notes
 some of these cars may come by in the same minute..
@@ -252,7 +252,7 @@ I know about 7 cars drive by my house in an hour, what's the probability 18 cars
 -   $\binom{60}{18}p^{18}(1-p)^{42}$
 :::
 
-## Limit - secs
+## Limit of $p$- secs
 
 I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next 3600 secs?
 
@@ -264,7 +264,7 @@ I know about 7 cars drive by my house in an hour, what's the probability 18 cars
 -   $\binom{3600}{18}p^{18}(1-p)^{3582}$
 :::
 
-## Limit - smallest interval
+## Limit of $p$ - smallest interval
 
 I know about 7 cars drive by my house in an hour, what's the probability 18 cars drive by in the next much smaller than a second? Full derivation can be found [here](https://stats1010-f22.github.io/website/supplemental/chi-squared.html).
 

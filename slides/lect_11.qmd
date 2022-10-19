@@ -195,7 +195,7 @@ Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find th
      & = P(Z > \frac{7-5}{2} = 1)
      \end{aligned}$$
 -   `pnorm(1)` $0.8413447$
--   `pnorm(1, mean = 5, sigma = 2)`
+-   `pnorm(1, mean = 5, sd = 2)`
 :::
 
 ```{r}

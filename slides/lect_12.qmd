@@ -21,13 +21,13 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
--   The shape of the normal distribution and why it is important
--   The central limit theorem.
--   Understand shift and scales and how to compute them to find $z$ scores
--   Basic tests of normality including qqplots and kurtosis
+-   
+-   
+-   
+-   
 :::
 
-# Revision 1
+## Revision 1
 
 ::: notes
 We have not yet discussed the sampling process. Now is our chance!
@@ -36,3 +36,5 @@ One of the differences between statistics and machine learning - in ml not much 
 :::
 
 ![](lect_07-images/parameter_estimate.png)
+
+## 
