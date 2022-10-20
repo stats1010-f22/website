@@ -21,7 +21,7 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
--   
+- Know basic vocabulary pertaining to samples.  
 -   
 -   
 -   
@@ -37,4 +37,18 @@ One of the differences between statistics and machine learning - in ml not much 
 
 ![](lect_07-images/parameter_estimate.png)
 
-## 
+## Vocab
+::: notes
+discussions about ML versus statistics often involve this question of the sample. Often ML have a bunch of data and then perform an analysis. Statisticians like to ensure sample quality.
+
+Berkeley aressts from marijuana use. Police have to be there for crime to happen but Kristian Lum
+:::
+
+::: incremental
+- *survey* : researchers ask questions of a subset of people who belong to a *population*.
+- this subset of the population that reserachers ask is called the *sample*
+- a sample is *representative* if it seeks to accurately reflect the characteristics of the larger group
+- *bias* occurs in sampling when samples systematically omit a portion of the population
+:::
+
+
