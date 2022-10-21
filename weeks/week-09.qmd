@@ -12,7 +12,7 @@ editor: visual
 
 ## Participate
 
-🖥️
+🖥️ [Lecture 12: Samples and survey](/slides/lect_07.html)
 
 🖥️
 

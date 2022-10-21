@@ -21,7 +21,7 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
-- Know basic vocabulary pertaining to samples.  
+-   Know basic vocabulary pertaining to samples.\
 -   
 -   
 -   
@@ -37,18 +37,73 @@ One of the differences between statistics and machine learning - in ml not much 
 
 ![](lect_07-images/parameter_estimate.png)
 
-## Vocab
+# Intro
+
 ::: notes
 discussions about ML versus statistics often involve this question of the sample. Often ML have a bunch of data and then perform an analysis. Statisticians like to ensure sample quality.
 
-Berkeley aressts from marijuana use. Police have to be there for crime to happen but Kristian Lum
+Berkeley aressts from marijuana use. Police have to be there for crime to happen - Kristian Lum
 :::
 
 ::: incremental
-- *survey* : researchers ask questions of a subset of people who belong to a *population*.
-- this subset of the population that reserachers ask is called the *sample*
-- a sample is *representative* if it seeks to accurately reflect the characteristics of the larger group
-- *bias* occurs in sampling when samples systematically omit a portion of the population
+-   *survey* : researchers ask questions of a subset of people who belong to a *population*.
+-   this subset of the population that reserachers ask is called the *sample*
+-   a sample is *representative* if it seeks to accurately reflect the characteristics of the larger group
+-   *bias* occurs in sampling when samples systematically omit a portion of the population
+-   *random* samples, where each unit has an equal probability of being choosen, are important
 :::
 
+#  {background-image="lect_12-things/predictive_policing.png" background-size="contain"}
 
+## Predictive policing
+
+::: incremental
+-   *Research question* - Can police use crime data from disparate sources to anticipate and prevent future crime?
+-   *population* - all crime
+-   *sample* - arrests recorded in police database
+-   Is this a random sample?
+-   arrests is a *surrogate* measurement because crime is hard to track
+:::
+
+#  {background-image="lect_12-things/oakland_usage.png" background-size="contain"}
+
+## Predictive policing
+
+::: incremental
+-   for arrests to occur police must be present
+-   some areas are over policed, so have more arrests
+-   this algorithm sends police to those aread
+-   read more [here](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2016.00960.x)
+-   use census data to predict crime instead of arrests, we may do better
+:::
+
+## Census
+
+::: incremental
+-   sample everyone in the population
+-   this is often difficult because some individuals are hard to locate, and these people *may have certain characterisitics that distinguish them from the rest of the population*
+-   Populations move so getting a perfect measure is hard.
+-   A census may be more complex than sampling
+:::
+
+#  {background-image="lect_12-things/illegal_immigrants.png" background-size="contain"}
+
+# Sampling
+
+::: columns
+::: {.column width="100%"}
+![](lect_12-things/wally-walrus-soup.gif)
+:::
+
+::: {.column width="0%"}
+:::
+:::
+
+## Sampling
+
+::: incremental
+- tasting is analogous to *exploratory analysis*
+- stirring helps ensure that the taste is *representative* because it *randomizes* 
+- if we add ingredients and don't stir we may get a *biased sample* 
+- if we generalize and decide that it needs more salt, that's an *inference*
+:::
