@@ -12,17 +12,15 @@ editor: visual
 
 ## Participate
 
-🖥️ [Lecture 12: Samples and survey](/slides/lect_07.html)
+🖥️ [Lecture 12: Samples and survey](/slides/lect_12.html)
 
-🖥️
-
-## Practice
-
-📋
+🖥️ [Lecture 13: Sampling variation and quality](/slides/lect_13.html)
 
 ## Perform
 
 ✍️ [HW 2 - Titanic](/hw/hw-2.html)
+
+📂 [Proposal for project](https://stats1010-f22.github.io/website/project-description.html#proposal)
 
 <br><br>
 

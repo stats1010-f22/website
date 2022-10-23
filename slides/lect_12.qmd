@@ -27,7 +27,7 @@ library(tidyverse)
 -   
 :::
 
-## Revision 1
+## Revision
 
 ::: notes
 We have not yet discussed the sampling process. Now is our chance!
@@ -174,5 +174,16 @@ my cousin when she started her allergen-free cakes b/c her son couldn't eat anyt
 ::: incremental
 - [voluntary response](https://www.birdoftheyear.org.nz/)
 - convenience sampling - asking friends or families feedback about your product
-
 :::
+
+# Warnings
+
+::: incremental
+- sampling frame match population
+- sampling method
+- rate of nonresponse - how many people did not answer
+- wording of the question - do you like this class
+- interviewer affects - you are more likely to tell Patrick that you do not like this course than me
+- survivor bias - we don't know how students who did not stay in this class feel about it
+:::
+
