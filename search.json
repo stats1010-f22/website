@@ -1591,37 +1591,37 @@
   {
     "objectID": "slides/lect_12.html#revision-1",
     "href": "slides/lect_12.html#revision-1",
-    "title": "Chapter 13: Samples and survey",
+    "title": "Chapter 13: Samples and surveys",
     "section": "Revision 1",
     "text": "Revision 1\n\nWe have not yet discussed the sampling process. Now is our chance!\nOne of the differences between statistics and machine learning - in ml not much thought of sampling."
   },
   {
     "objectID": "slides/lect_12.html#predictive-policing",
     "href": "slides/lect_12.html#predictive-policing",
-    "title": "Chapter 13: Samples and survey",
+    "title": "Chapter 13: Samples and surveys",
     "section": "Predictive policing",
     "text": "Predictive policing\n\n\nResearch question - Can police use crime data from disparate sources to anticipate and prevent future crime?\npopulation - all crime\nsample - arrests recorded in police database\nIs this a random sample?\narrests is a surrogate measurement because crime is hard to track"
   },
   {
     "objectID": "slides/lect_12.html#predictive-policing-1",
     "href": "slides/lect_12.html#predictive-policing-1",
-    "title": "Chapter 13: Samples and survey",
+    "title": "Chapter 13: Samples and surveys",
     "section": "Predictive policing",
     "text": "Predictive policing\n\n\nfor arrests to occur police must be present\nsome areas are over policed, so have more arrests\nthis algorithm sends police to those aread\nread more here\nuse census data to predict crime instead of arrests, we may do better"
   },
   {
     "objectID": "slides/lect_12.html#census",
     "href": "slides/lect_12.html#census",
-    "title": "Chapter 13: Samples and survey",
+    "title": "Chapter 13: Samples and surveys",
     "section": "Census",
     "text": "Census\n\n\nsample everyone in the population\nthis is often difficult because some individuals are hard to locate, and these people may have certain characterisitics that distinguish them from the rest of the population\nPopulations move so getting a perfect measure is hard.\nA census may be more complex than sampling"
   },
   {
     "objectID": "slides/lect_12.html#sampling-1",
     "href": "slides/lect_12.html#sampling-1",
-    "title": "Chapter 13: Samples and survey",
+    "title": "Chapter 13: Samples and surveys",
     "section": "Sampling",
-    "text": "Sampling\n\n\ntasting is analogous to exploratory analysis\nstirring helps ensure that the taste is representative because it randomizes\nif we add ingredients and don’t stir we may get a biased sample\nif we generalize and decide that it needs more salt, that’s an inference\n\n\n\n\nstat1010-f22.github.io/website"
+    "text": "Sampling\n\n\ntasting is analogous to exploratory analysis\nstirring helps ensure that the taste is representative because it randomizes\nif we add ingredients and don’t stir we may get a biased sample\nif we generalize and decide that it needs more salt, that’s an inference"
   },
   {
     "objectID": "slides/lect_07.html#using-proportions",
