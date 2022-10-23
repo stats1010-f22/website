@@ -27,6 +27,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -462,24 +526,101 @@
 <li class="fragment">if we generalize and decide that it needs more salt, that’s an <em>inference</em></li>
 </ul>
 </div>
-</section></section>
-<section id="simple-random-sample" class="title-slide slide level1 center" data-background-image="lect_12-things/SRS.png" data-background-size="contain">
-<h1>Simple random sample</h1>
-
 </section>
-
-<section id="stratified-sampling" class="title-slide slide level1 center" data-background-image="lect_12-things/stratified.png" data-background-size="contain">
-<h1>Stratified sampling</h1>
-
+<section id="sampling-frame" class="slide level2">
+<h2>Sampling frame</h2>
+<div>
+<ul>
+<li class="fragment">lists every member of the population of interest</li>
+<li class="fragment">can be complex to identify</li>
+<li class="fragment">sample from registered voters, but really want people who will vote</li>
+<li class="fragment">hypothetical populations are more complex</li>
+<li class="fragment">a brewery must sample hops across farmers, and different geographic regions prior to formalizing brewing</li>
+</ul>
+</div>
 </section>
-
-<section id="cluster-sample" class="title-slide slide level1 center" data-background-image="lect_12-things/cluster.png" data-background-size="contain">
-<h1>Cluster sample</h1>
+<section id="simple-random-sample" class="slide level2" data-background-image="lect_12-things/SRS.png" data-background-size="contain">
+<h2>Simple random sample</h2>
+</section>
+<section id="stratified-sampling" class="slide level2" data-background-image="lect_12-things/stratified.png" data-background-size="contain">
+<h2>Stratified sampling</h2>
+</section>
+<section id="cluster-sample" class="slide level2" data-background-image="lect_12-things/cluster.png" data-background-size="contain">
+<h2>Cluster sample</h2>
+</section>
+<section id="sampling-2" class="slide level2">
+<h2>Sampling</h2>
+<aside class="notes">
+<ul>
+<li>schools or nursing homes for cluster sampling</li>
+<li>strata imply some similarity, for example high income or low income people</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment"><p>Randomly select cases from the population, where there is no implied connection between the points that are selected.</p></li>
+<li class="fragment"><p>Strata are made up of similar observations. We take a simple random sample from each stratum.</p></li>
+<li class="fragment"><p>Clusters are usually not made up of homogeneous observations. We take a simple random sample of clusters, and then sample all observations in that cluster. Usually preferred for economical reasons.</p></li>
+</ul>
+</div>
+</section>
+<section id="sampling-in-r" class="slide level2">
+<h2>Sampling in <code>R</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># SRS</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> sample_size)</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co"># Stratified sampling</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">group_by</span>(strata) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> size_from_each_strata)</span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co"># Cluster sampling</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>random_cluster <span class="ot">&lt;-</span> <span class="fu">slice_sample</span>(data<span class="sc">$</span>cluster, </span>
+<span id="cb1-12"><a href="#cb1-12"></a>                               <span class="at">n =</span> no_of_clusters)</span>
+<span id="cb1-13"><a href="#cb1-13"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">filter</span>(<span class="at">cluster =</span> random_cluster) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-15"><a href="#cb1-15"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> size_from_each_cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="not-great-sampling-methods" class="slide level2">
+<h2>Not great sampling methods</h2>
+<aside class="notes">
+<p>meta and other tech companies often use NZ as a sampling ground to see how a new product works prior to releasing it to the USA.</p>
+<p>my cousin when she started her allergen-free cakes b/c her son couldn’t eat anything</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment"><a href="https://www.birdoftheyear.org.nz/">voluntary response</a></li>
+<li class="fragment">convenience sampling - asking friends or families feedback about your product</li>
+</ul>
+</div>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

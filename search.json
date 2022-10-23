@@ -1624,6 +1624,55 @@
     "text": "Sampling\n\n\ntasting is analogous to exploratory analysis\nstirring helps ensure that the taste is representative because it randomizes\nif we add ingredients and don’t stir we may get a biased sample\nif we generalize and decide that it needs more salt, that’s an inference"
   },
   {
+    "objectID": "slides/lect_12.html#sampling-frame",
+    "href": "slides/lect_12.html#sampling-frame",
+    "title": "Chapter 13: Samples and surveys",
+    "section": "Sampling frame",
+    "text": "Sampling frame\n\n\nlists every member of the population of interest\ncan be complex to identify\nsample from registered voters, but really want people who will vote\nhypothetical populations are more complex\na brewery must sample hops across farmers, and different geographic regions prior to formalizing brewing"
+  },
+  {
+    "objectID": "slides/lect_12.html#simple-random-sample",
+    "href": "slides/lect_12.html#simple-random-sample",
+    "title": "Chapter 13: Samples and surveys",
+    "section": "Simple random sample",
+    "text": "Simple random sample"
+  },
+  {
+    "objectID": "slides/lect_12.html#stratified-sampling",
+    "href": "slides/lect_12.html#stratified-sampling",
+    "title": "Chapter 13: Samples and surveys",
+    "section": "Stratified sampling",
+    "text": "Stratified sampling"
+  },
+  {
+    "objectID": "slides/lect_12.html#cluster-sample",
+    "href": "slides/lect_12.html#cluster-sample",
+    "title": "Chapter 13: Samples and surveys",
+    "section": "Cluster sample",
+    "text": "Cluster sample"
+  },
+  {
+    "objectID": "slides/lect_12.html#sampling-2",
+    "href": "slides/lect_12.html#sampling-2",
+    "title": "Chapter 13: Samples and surveys",
+    "section": "Sampling",
+    "text": "Sampling\n\n\nschools or nursing homes for cluster sampling\nstrata imply some similarity, for example high income or low income people\n\n\n\n\nRandomly select cases from the population, where there is no implied connection between the points that are selected.\nStrata are made up of similar observations. We take a simple random sample from each stratum.\nClusters are usually not made up of homogeneous observations. We take a simple random sample of clusters, and then sample all observations in that cluster. Usually preferred for economical reasons."
+  },
+  {
+    "objectID": "slides/lect_12.html#sampling-in-r",
+    "href": "slides/lect_12.html#sampling-in-r",
+    "title": "Chapter 13: Samples and surveys",
+    "section": "Sampling in R",
+    "text": "Sampling in R\n\n# SRS\ndata %>% \n  slice_sample(n = sample_size)\n\n# Stratified sampling\ndata %>% \n  group_by(strata) %>% \n  slice_sample(n = size_from_each_strata)\n\n# Cluster sampling\nrandom_cluster <- slice_sample(data$cluster, \n                               n = no_of_clusters)\ndata %>% \n  filter(cluster = random_cluster) %>% \n  slice_sample(n = size_from_each_cluster)"
+  },
+  {
+    "objectID": "slides/lect_12.html#not-great-sampling-methods",
+    "href": "slides/lect_12.html#not-great-sampling-methods",
+    "title": "Chapter 13: Samples and surveys",
+    "section": "Not great sampling methods",
+    "text": "Not great sampling methods\n\nmeta and other tech companies often use NZ as a sampling ground to see how a new product works prior to releasing it to the USA.\nmy cousin when she started her allergen-free cakes b/c her son couldn’t eat anything\n\n\n\nvoluntary response\nconvenience sampling - asking friends or families feedback about your product\n\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
     "objectID": "slides/lect_07.html#using-proportions",
     "href": "slides/lect_07.html#using-proportions",
     "title": "Chapter 9: Random variables",
