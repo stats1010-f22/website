@@ -21,10 +21,10 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
--   Know basic sampling vocabulary.
--   Understand why randomization is important and describe different sampling methods
--   
--   
+- Know basic sampling vocabulary.
+- Understand why randomization is important and describe different sampling methods
+- How to sample in `R`
+- Know how easily sampling can go wrong  
 :::
 
 ## Revision
