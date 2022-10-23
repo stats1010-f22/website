@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "STAT 1010: Introduction to Business Statistics",
     "section": "",
-    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct\nThe normal probability model\n\n🖥️\n\n\n\n\n\n\n\n9\nMon, 24 Oct\nSamples and surveys\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 26 Oct\n\n\n\n\n\n\n\n📂\n\n\n10\nMon, 31 Oct\nRevision for Exam 2\n\n\n\n\n\n\n\n\n\n\nWed, 2 Nov\nExam 2\n\n\n\n\n✅"
+    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct\nThe normal probability model\n\n🖥️\n\n\n\n\n\n\n\n9\nMon, 24 Oct\nSamples and surveys\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 26 Oct\nSampling variation and quality\n\n🖥️\n\n\n\n\n📂\n\n\n10\nMon, 31 Oct\nRevision for Exam 2\n\n\n\n\n\n\n\n\n\n\nWed, 2 Nov\nExam 2\n\n\n\n\n✅"
   },
   {
     "objectID": "course-overview.html",
@@ -347,21 +347,14 @@
     "href": "weeks/week-09.html#participate",
     "title": "Week 9",
     "section": "Participate",
-    "text": "Participate\n🖥️ Lecture 12: Samples and survey\n🖥️"
-  },
-  {
-    "objectID": "weeks/week-09.html#practice",
-    "href": "weeks/week-09.html#practice",
-    "title": "Week 9",
-    "section": "Practice",
-    "text": "Practice\n📋"
+    "text": "Participate\n🖥️ Lecture 12: Samples and survey\n🖥️ Lecture 13: Sampling variation and quality"
   },
   {
     "objectID": "weeks/week-09.html#perform",
     "href": "weeks/week-09.html#perform",
     "title": "Week 9",
     "section": "Perform",
-    "text": "Perform\n✍️ HW 2 - Titanic\n\n\nBack to course schedule ⏎"
+    "text": "Perform\n✍️ HW 2 - Titanic\n📂 Proposal for project\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-06.html",
@@ -1589,11 +1582,11 @@
     "text": "Importing data\n\n\n\nDouble click on the data you would like to install in the data folder in your project and select “Import Dataset.”\n\n\nIf this is the first time you are importing data, you may be prompted to download a package first. Follow the Graphical User Interface (GUI) to import the data. Check that the data is as you expect and update “Import Options” until it seems reasonable. Copy the coding from “Code Preview” and save put it in your document “so that when you restart R, you have coding that will import the data.\n\n\n\nWhen the data is imported, check the “Data Preview” to make sure it is what you expect. If not, change the “Import Options.”\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
-    "objectID": "slides/lect_12.html#revision-1",
-    "href": "slides/lect_12.html#revision-1",
+    "objectID": "slides/lect_12.html#revision",
+    "href": "slides/lect_12.html#revision",
     "title": "Chapter 13: Samples and surveys",
-    "section": "Revision 1",
-    "text": "Revision 1\n\nWe have not yet discussed the sampling process. Now is our chance!\nOne of the differences between statistics and machine learning - in ml not much thought of sampling."
+    "section": "Revision",
+    "text": "Revision\n\nWe have not yet discussed the sampling process. Now is our chance!\nOne of the differences between statistics and machine learning - in ml not much thought of sampling."
   },
   {
     "objectID": "slides/lect_12.html#predictive-policing",
@@ -1670,7 +1663,7 @@
     "href": "slides/lect_12.html#not-great-sampling-methods",
     "title": "Chapter 13: Samples and surveys",
     "section": "Not great sampling methods",
-    "text": "Not great sampling methods\n\nmeta and other tech companies often use NZ as a sampling ground to see how a new product works prior to releasing it to the USA.\nmy cousin when she started her allergen-free cakes b/c her son couldn’t eat anything\n\n\n\nvoluntary response\nconvenience sampling - asking friends or families feedback about your product\n\n\n\n\nstat1010-f22.github.io/website"
+    "text": "Not great sampling methods\n\nmeta and other tech companies often use NZ as a sampling ground to see how a new product works prior to releasing it to the USA.\nmy cousin when she started her allergen-free cakes b/c her son couldn’t eat anything\n\n\n\nvoluntary response\nconvenience sampling - asking friends or families feedback about your product"
   },
   {
     "objectID": "slides/lect_07.html#using-proportions",
