@@ -21,8 +21,8 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
--   The shape of the normal distribution and why it is important
--   The central limit theorem.
+-   The shape of the distribution of the sample mean and why it is important
+-   .
 -   Understand shift and scales and how to compute them to find $z$ scores
 -   Basic tests of normality including qqplots and kurtosis
 :::

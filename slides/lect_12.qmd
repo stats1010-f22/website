@@ -72,7 +72,7 @@ Berkeley aressts from marijuana use. Police have to be there for crime to happen
 ::: incremental
 -   for arrests to occur police must be present
 -   some areas are over policed, so have more arrests
--   this algorithm sends police to those aread
+-   this algorithm sends police to those areas
 -   read more [here](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2016.00960.x)
 -   use census data to predict crime instead of arrests, we may do better
 :::
@@ -87,6 +87,21 @@ Berkeley aressts from marijuana use. Police have to be there for crime to happen
 :::
 
 #  {background-image="lect_12-things/illegal_immigrants.png" background-size="contain"}
+
+#  {background-image="lect_12-things/landon_roosevelt.png" background-size="contain"}
+
+## Landon vs Roosevelt {.smaller}
+
+::: incremental
+- Literary digest - correctly predicted presidential elections from 1916 - 1932 with mock ballots
+- 1936 election 
+    - 10 million ballots
+    - Landon win by landslide with 57%
+- 10 million names and addresses in 1936
+- poor people were unlikely to have phones, so they over sampled the wealthy
+- Gallup predicted a Roosevelt win
+- *weighting* can be used to correct *biased* samples
+:::
 
 # Sampling
 
