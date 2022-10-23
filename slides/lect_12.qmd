@@ -24,7 +24,7 @@ library(tidyverse)
 - Know basic sampling vocabulary.
 - Understand why randomization is important and describe different sampling methods
 - How to sample in `R`
-- Know how easily sampling can go wrong  
+- Know pitfalls related to sampling
 :::
 
 ## Revision
