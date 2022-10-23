@@ -107,8 +107,72 @@ Berkeley aressts from marijuana use. Police have to be there for crime to happen
 - if we generalize and decide that it needs more salt, that's an *inference*
 :::
 
-# Simple random sample {background-image="lect_12-things/SRS.png" background-size="contain"}
+## Sampling frame
 
-# Stratified sampling {background-image="lect_12-things/stratified.png" background-size="contain"}
+::: incremental
+- lists every member of the population of interest
+- can be complex to identify
+- sample from registered voters, but really want people who will vote
+- hypothetical populations are more complex
+- a brewery must sample hops across farmers, and different geographic regions prior to formalizing brewing
+:::
 
-# Cluster sample {background-image="lect_12-things/cluster.png" background-size="contain"}
+## Simple random sample {background-image="lect_12-things/SRS.png" background-size="contain"}
+
+## Stratified sampling {background-image="lect_12-things/stratified.png" background-size="contain"}
+
+## Cluster sample {background-image="lect_12-things/cluster.png" background-size="contain"}
+
+## Sampling
+
+::: notes
+- schools or nursing homes for cluster sampling
+- strata imply some similarity, for example high income or low income people
+
+:::
+
+::: incremental
+- Randomly select cases from the population, where there is no implied connection between the points that are selected.
+
+- Strata are made up of similar observations. We take a simple random sample from each stratum.
+
+- Clusters are usually not made up of homogeneous observations. We take a simple random sample of clusters, and then sample all observations in that cluster. Usually preferred for economical reasons.
+:::
+
+## Sampling in `R`
+
+```{r sampling_methods}
+#| echo: true
+#| eval: false
+
+
+# SRS
+data %>% 
+  slice_sample(n = sample_size)
+
+# Stratified sampling
+data %>% 
+  group_by(strata) %>% 
+  slice_sample(n = size_from_each_strata)
+
+# Cluster sampling
+random_cluster <- slice_sample(data$cluster, 
+                               n = no_of_clusters)
+data %>% 
+  filter(cluster = random_cluster) %>% 
+  slice_sample(n = size_from_each_cluster)
+
+```
+
+## Not great sampling methods
+::: notes
+meta and other tech companies often use NZ as a sampling ground to see how a new product works prior to releasing it to the USA.
+
+my cousin when she started her allergen-free cakes b/c her son couldn't eat anything
+:::
+
+::: incremental
+- [voluntary response](https://www.birdoftheyear.org.nz/)
+- convenience sampling - asking friends or families feedback about your product
+
+:::
