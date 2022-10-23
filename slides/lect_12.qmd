@@ -1,5 +1,5 @@
 ---
-title: "Chapter 13: Samples and survey"
+title: "Chapter 13: Samples and surveys"
 subtitle: "STAT 1010 - Fall 2022"
 footer:  "[stat1010-f22.github.io/website](https://stats1010-f22.github.io/website/)"
 format: 
@@ -21,8 +21,8 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
--   Know basic vocabulary pertaining to samples.\
--   
+-   Know basic sampling vocabulary.
+-   Understand why randomization is important and describe different sampling methods
 -   
 -   
 :::
@@ -100,10 +100,15 @@ Berkeley aressts from marijuana use. Police have to be there for crime to happen
 :::
 
 ## Sampling
-
 ::: incremental
 - tasting is analogous to *exploratory analysis*
 - stirring helps ensure that the taste is *representative* because it *randomizes* 
 - if we add ingredients and don't stir we may get a *biased sample* 
 - if we generalize and decide that it needs more salt, that's an *inference*
 :::
+
+# Simple random sample {background-image="lect_12-things/SRS.png" background-size="contain"}
+
+# Stratified sampling {background-image="lect_12-things/stratified.png" background-size="contain"}
+
+# Cluster sample {background-image="lect_12-things/cluster.png" background-size="contain"}
