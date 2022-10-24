@@ -1600,7 +1600,7 @@
     "href": "slides/lect_12.html#predictive-policing-1",
     "title": "Chapter 13: Samples and surveys",
     "section": "Predictive policing",
-    "text": "Predictive policing\n\n\nfor arrests to occur police must be present\nsome areas are over policed, so have more arrests\nthis algorithm sends police to those aread\nread more here\nuse census data to predict crime instead of arrests, we may do better"
+    "text": "Predictive policing\n\n\nfor arrests to occur police must be present\nsome areas are over policed, so have more arrests\nthis algorithm sends police to those areas\nread more here\nuse census data to predict crime instead of arrests, we may do better"
   },
   {
     "objectID": "slides/lect_12.html#census",
@@ -1608,6 +1608,13 @@
     "title": "Chapter 13: Samples and surveys",
     "section": "Census",
     "text": "Census\n\n\nsample everyone in the population\nthis is often difficult because some individuals are hard to locate, and these people may have certain characterisitics that distinguish them from the rest of the population\nPopulations move so getting a perfect measure is hard.\nA census may be more complex than sampling"
+  },
+  {
+    "objectID": "slides/lect_12.html#landon-vs-roosevelt",
+    "href": "slides/lect_12.html#landon-vs-roosevelt",
+    "title": "Chapter 13: Samples and surveys",
+    "section": "Landon vs Roosevelt",
+    "text": "Landon vs Roosevelt\n\n\nLiterary digest - correctly predicted presidential elections from 1916 - 1932 with mock ballots\n1936 election\n\n10 million ballots\nLandon win by landslide with 57%\n\n10 million names and addresses in 1936\npoor people were unlikely to have phones, so they over sampled the wealthy\nGallup predicted a Roosevelt win\nweighting can be used to correct biased samples"
   },
   {
     "objectID": "slides/lect_12.html#sampling-1",
@@ -1656,7 +1663,7 @@
     "href": "slides/lect_12.html#sampling-in-r",
     "title": "Chapter 13: Samples and surveys",
     "section": "Sampling in R",
-    "text": "Sampling in R\n\n# SRS\ndata %>% \n  slice_sample(n = sample_size)\n\n# Stratified sampling\ndata %>% \n  group_by(strata) %>% \n  slice_sample(n = size_from_each_strata)\n\n# Cluster sampling\nrandom_cluster <- slice_sample(data$cluster, \n                               n = no_of_clusters)\ndata %>% \n  filter(cluster = random_cluster) %>% \n  slice_sample(n = size_from_each_cluster)"
+    "text": "Sampling in R\n\n# SRS\ndata %>% \n  slice_sample(n = sample_size)\n\n# Stratified sampling\ndata %>% \n  group_by(strata) %>% \n  slice_sample(n = size_from_each_strata)\n\n# Cluster sampling\nrandom_cluster <- slice_sample(data$cluster, \n                               n = no_of_clusters)"
   },
   {
     "objectID": "slides/lect_12.html#not-great-sampling-methods",
@@ -1720,6 +1727,20 @@
     "title": "Lec 4 - Exploring numeric data",
     "section": "The purpose of Exploratory Data Analysis (EDA)",
     "text": "The purpose of Exploratory Data Analysis (EDA)\n\nEDA is about learning the structure of a dataset through a series of numerical and graphical techniques.\nWhen you do EDA, you’ll look for both\n\ngeneral trends and\ninteresting outliers in your data.\n\n\ngenerate questions that will help inform subsequent analysis."
+  },
+  {
+    "objectID": "slides/lect_13.html#sampling",
+    "href": "slides/lect_13.html#sampling",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Sampling",
+    "text": "Sampling\n\n\nSRS\nStratified sampling\nCluster sampling\nit would be nice to sample repeatedly to see how the mean values compare"
+  },
+  {
+    "objectID": "slides/lect_13.html#section",
+    "href": "slides/lect_13.html#section",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "",
+    "text": "stat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",

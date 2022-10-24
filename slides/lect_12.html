@@ -483,7 +483,7 @@
 <ul>
 <li class="fragment">for arrests to occur police must be present</li>
 <li class="fragment">some areas are over policed, so have more arrests</li>
-<li class="fragment">this algorithm sends police to those aread</li>
+<li class="fragment">this algorithm sends police to those areas</li>
 <li class="fragment">read more <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2016.00960.x">here</a></li>
 <li class="fragment">use census data to predict crime instead of arrests, we may do better</li>
 </ul>
@@ -505,6 +505,28 @@
 
 </section>
 
+<section>
+<section id="section-3" class="title-slide slide level1 center" data-background-image="lect_12-things/landon_roosevelt.png" data-background-size="contain">
+<h1></h1>
+
+</section>
+<section id="landon-vs-roosevelt" class="slide level2 smaller">
+<h2>Landon vs Roosevelt</h2>
+<div>
+<ul>
+<li class="fragment">Literary digest - correctly predicted presidential elections from 1916 - 1932 with mock ballots</li>
+<li class="fragment">1936 election
+<ul>
+<li class="fragment">10 million ballots</li>
+<li class="fragment">Landon win by landslide with 57%</li>
+</ul></li>
+<li class="fragment">10 million names and addresses in 1936</li>
+<li class="fragment">poor people were unlikely to have phones, so they over sampled the wealthy</li>
+<li class="fragment">Gallup predicted a Roosevelt win</li>
+<li class="fragment"><em>weighting</em> can be used to correct <em>biased</em> samples</li>
+</ul>
+</div>
+</section></section>
 <section>
 <section id="sampling" class="title-slide slide level1 center">
 <h1>Sampling</h1>
@@ -588,10 +610,7 @@
 <span id="cb1-9"><a href="#cb1-9"></a></span>
 <span id="cb1-10"><a href="#cb1-10"></a><span class="co"># Cluster sampling</span></span>
 <span id="cb1-11"><a href="#cb1-11"></a>random_cluster <span class="ot">&lt;-</span> <span class="fu">slice_sample</span>(data<span class="sc">$</span>cluster, </span>
-<span id="cb1-12"><a href="#cb1-12"></a>                               <span class="at">n =</span> no_of_clusters)</span>
-<span id="cb1-13"><a href="#cb1-13"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">filter</span>(<span class="at">cluster =</span> random_cluster) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-15"><a href="#cb1-15"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> size_from_each_cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-12"><a href="#cb1-12"></a>                               <span class="at">n =</span> no_of_clusters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="not-great-sampling-methods" class="slide level2">
