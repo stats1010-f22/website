@@ -36,5 +36,15 @@ library(tidyverse)
 - it would be nice to sample repeatedly to see how the mean values compare
 :::
 
+#  {background-iframe="https://nzgwynn.shinyapps.io/sample_from_uniform/"}
 
-## 
+
+## Benefits of averaging
+
+::: incremental
+- reduces variation
+- more normal than the original distribution
+:::
+
+## Normal models
+
