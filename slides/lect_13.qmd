@@ -46,11 +46,13 @@ library(tidyverse)
 - more normal than the original distribution
 :::
 
-## Normal models
+## Normal model
 
 ::: incremental
-- [kurtosis](https://stats1010-f22.github.io/website/slides/lect_11.html#/kurtosis)
-- 
-
+- Find [kurtosis](https://stats1010-f22.github.io/website/slides/lect_11.html#/kurtosis)($K_4$)
+- If $n > 10 |K_4|$, where $n$ is the sample size, then a normal model adequately approximates the distribution of the sample mean $\bar{X}$.
+- If we know the data come from a normal distribution this is also true.
 :::
+
+## Standard error
 

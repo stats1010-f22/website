@@ -37,7 +37,7 @@ One of the differences between statistics and machine learning - in ml not much 
 
 ![](lect_07-images/parameter_estimate.png)
 
-# Intro
+# Intro {.smaller}
 
 ::: notes
 discussions about ML versus statistics often involve this question of the sample. Often ML have a bunch of data and then perform an analysis. Statisticians like to ensure sample quality.
