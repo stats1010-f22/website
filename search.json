@@ -1743,11 +1743,18 @@
     "text": "Benefits of averaging\n\n\nreduces variation\nmore normal than the original distribution"
   },
   {
-    "objectID": "slides/lect_13.html#normal-models",
-    "href": "slides/lect_13.html#normal-models",
+    "objectID": "slides/lect_13.html#normal-model",
+    "href": "slides/lect_13.html#normal-model",
     "title": "Chapter 14: Sampling variation and quality",
-    "section": "Normal models",
-    "text": "Normal models\n\n\nkurtosis\n\n\n\n\n\nstat1010-f22.github.io/website"
+    "section": "Normal model",
+    "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true."
+  },
+  {
+    "objectID": "slides/lect_13.html#standard-error",
+    "href": "slides/lect_13.html#standard-error",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Standard error",
+    "text": "Standard error\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
