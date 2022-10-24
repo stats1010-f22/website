@@ -22,8 +22,19 @@ library(tidyverse)
 
 ::: incremental
 -   The shape of the distribution of the sample mean and why it is important
--   .
+-   
 -   Understand shift and scales and how to compute them to find $z$ scores
 -   Basic tests of normality including qqplots and kurtosis
 :::
 
+## Sampling
+
+::: incremental
+- SRS
+- Stratified sampling
+- Cluster sampling
+- it would be nice to sample repeatedly to see how the mean values compare
+:::
+
+
+## 

@@ -173,10 +173,6 @@ data %>%
 # Cluster sampling
 random_cluster <- slice_sample(data$cluster, 
                                n = no_of_clusters)
-data %>% 
-  filter(cluster = random_cluster) %>% 
-  slice_sample(n = size_from_each_cluster)
-
 ```
 
 ## Not great sampling methods
