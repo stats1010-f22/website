@@ -1736,11 +1736,18 @@
     "text": "Sampling\n\n\nSRS\nStratified sampling\nCluster sampling\nit would be nice to sample repeatedly to see how the mean values compare"
   },
   {
-    "objectID": "slides/lect_13.html#section",
-    "href": "slides/lect_13.html#section",
+    "objectID": "slides/lect_13.html#benefits-of-averaging",
+    "href": "slides/lect_13.html#benefits-of-averaging",
     "title": "Chapter 14: Sampling variation and quality",
-    "section": "",
-    "text": "stat1010-f22.github.io/website"
+    "section": "Benefits of averaging",
+    "text": "Benefits of averaging\n\n\nreduces variation\nmore normal than the original distribution"
+  },
+  {
+    "objectID": "slides/lect_13.html#normal-models",
+    "href": "slides/lect_13.html#normal-models",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Normal models",
+    "text": "Normal models\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
