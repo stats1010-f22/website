@@ -1747,7 +1747,7 @@
     "href": "slides/lect_13.html#normal-models",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Normal models",
-    "text": "Normal models\n\n\nstat1010-f22.github.io/website"
+    "text": "Normal models\n\n\nkurtosis\n\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
@@ -1897,11 +1897,18 @@
     "text": "QQPlot in R\n\nggplot(diamonds, aes(sample=price)) +\n  stat_qq() + # add the dots\n  stat_qq_line() # and the line"
   },
   {
+    "objectID": "slides/lect_11.html#skewness",
+    "href": "slides/lect_11.html#skewness",
+    "title": "Chapter 12: The normal probability model",
+    "section": "Skewness",
+    "text": "Skewness\n\n\nfind the \\(z\\) scores for all data (\\(z_i = \\frac{x_i - \\bar{x}}{s}\\))\n\\[K_3 = \\frac{z_1^3 +z_2^3 + ... + z_n^3}{n}\\]\nIf \\(K_3 \\approx 0\\), then \\(x\\) is symmetric\nAs \\(K_3\\) gets larger than 0, more right-skewed\nAs \\(K_3\\) gets smaller than 0, more left-skewed"
+  },
+  {
     "objectID": "slides/lect_11.html#kurtosis",
     "href": "slides/lect_11.html#kurtosis",
     "title": "Chapter 12: The normal probability model",
     "section": "Kurtosis",
-    "text": "Kurtosis\n\n\nfind the \\(z\\) scores for all data (\\(z_i = \\frac{x_i - \\bar{x}}{s}\\))\n\\[K_3 = \\frac{z_1^3 +z_2^3 + ... + z_n^3}{n}\\]\nIf \\(K_3 \\approx 0\\), then \\(x\\) is symmetric\nAs \\(K_3\\) gets larger than 0, more right-skewed\nAs \\(K_3\\) gets smaller than 0, more left-skewed"
+    "text": "Kurtosis\n\n\nfind the \\(z\\) scores for all data (\\(z_i = \\frac{x_i - \\bar{x}}{s}\\))\n\\[K_4 = \\frac{z_1^4 +z_2^4 + ... + z_n^4}{n} - 3\\]\nIf \\(K_4 \\approx 0\\), then \\(x\\) is approximately normal\nAs \\(K_4 < 0\\) flat uniform distribution without tails\nAs \\(K_4 > 0\\) many outliers"
   },
   {
     "objectID": "slides/lect_11.html#take-home",
