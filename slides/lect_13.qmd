@@ -48,3 +48,9 @@ library(tidyverse)
 
 ## Normal models
 
+::: incremental
+- [kurtosis](https://stats1010-f22.github.io/website/slides/lect_11.html#/kurtosis)
+- 
+
+:::
+

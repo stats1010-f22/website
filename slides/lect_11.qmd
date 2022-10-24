@@ -407,16 +407,13 @@ ggplot(diamonds, aes(sample=price)) +
   stat_qq_line() # and the line
 ```
 
-## Kurtosis
-
-
+## Skewness
 ::: incremental
 - find the $z$ scores for all data ($z_i = \frac{x_i - \bar{x}}{s}$)
 - $$K_3 = \frac{z_1^3 +z_2^3 + ... + z_n^3}{n}$$
 - If $K_3 \approx 0$, then $x$ is symmetric
 - As $K_3$ gets larger than 0, more right-skewed
 - As $K_3$ gets smaller than 0, more left-skewed
-
 :::
 
 ```{r kurtosis}
@@ -427,6 +424,16 @@ normal_density <- dnorm(seq(-4, 4, 0.01))
 zs <- seq(-4, 4, 0.01)
 
 ```
+
+## Kurtosis
+
+::: incremental
+- find the $z$ scores for all data ($z_i = \frac{x_i - \bar{x}}{s}$)
+- $$K_4 = \frac{z_1^4 +z_2^4 + ... + z_n^4}{n} - 3$$
+- If $K_4 \approx 0$, then $x$ is approximately normal
+- As $K_4 < 0$ flat uniform distribution without tails
+- As $K_4 > 0$ many outliers
+:::
 
 ## Take home
 
