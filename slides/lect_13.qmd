@@ -77,5 +77,11 @@ $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
 
 ##  {background-image="lect-13_things/EM_tweet.png" background-size="contain"}
 
-# False positives
+# Production line {background-image="lect-13_things/manufacturing_plant.png" background-size="contain"}
+
+## 
+
+## False positives - type 1 error
+
+## False negatives - type 2 error
 
