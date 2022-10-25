@@ -1971,7 +1971,14 @@
     "href": "slides/lect_13.html#types-of-errors",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Types of errors",
-    "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)\n\n\n\n\n\nstat1010-f22.github.io/website"
+    "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)"
+  },
+  {
+    "objectID": "slides/lect_13.html#setting-control-limits",
+    "href": "slides/lect_13.html#setting-control-limits",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits",
+    "text": "Setting control limits\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
