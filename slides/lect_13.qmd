@@ -100,7 +100,27 @@ $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
    - probabiliy of occurence denoted $\beta$
 :::
 
-## Setting control limits
+## Setting control limits {.smaller}
 
+
+If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits? 
+::: incremental
+1. Set the control limits and find the $\alpha$ value
+    - We want the control limits to be between 10 and 14
+    - $Pr(\bar{X} < 10 \textrm{ or } \bar{X} > 14)$
+    - $\begin{aligned}P(\bar{X} < 10) &= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} < \frac{10-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z < \frac{10-12}{\sqrt{2.3}} = -1.318761)\end{aligned}$
+    - `pnorm(-1.318761)` $\approx 0.09362451$
+    - `pnorm(-1.318761, mean = 12, sd = sqrt(2.3))`
+    - $\begin{aligned}P(\bar{X} > 14) &= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} > \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z > \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}$
+    - `1 - pnorm(1.318761)` $\approx 0.09362451$
+    - `pnorm(1.318761, mean = 12, sd = sqrt(2.3))`
+:::
+
+## Setting control limits 
+
+::: incremental
+2. Set the $\alpha$ value and find the control limits
+
+:::
 
 
