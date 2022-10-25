@@ -439,8 +439,17 @@
 </ul>
 </div>
 </section>
-<section id="setting-control-limits" class="slide level2">
+<section id="setting-control-limits" class="slide level2 smaller">
 <h2>Setting control limits</h2>
+<p>If <span class="math inline">\(\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)\)</span> how can we find the control limits? ::: incremental 1. Set the control limits and find the <span class="math inline">\(\alpha\)</span> value - We want the control limits to be between 10 and 14 - <span class="math inline">\(Pr(\bar{X} &lt; 10 \textrm{ or } \bar{X} &gt; 14)\)</span> - <span class="math inline">\(\begin{aligned}P(\bar{X} &lt; 10) &amp;= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} &lt; \frac{10-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &lt; \frac{10-12}{\sqrt{2.3}} = -1.318761)\end{aligned}\)</span> - <code>pnorm(-1.318761)</code> <span class="math inline">\(\approx 0.09362451\)</span> - <code>pnorm(-1.318761, mean = 12, sd = sqrt(2.3))</code> - <span class="math inline">\(\begin{aligned}P(\bar{X} &gt; 14) &amp;= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} &gt; \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &gt; \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}\)</span> - <code>1 - pnorm(1.318761)</code> <span class="math inline">\(\approx 0.09362451\)</span> - <code>pnorm(1.318761, mean = 12, sd = sqrt(2.3))</code> :::</p>
+</section>
+<section id="setting-control-limits-1" class="slide level2">
+<h2>Setting control limits</h2>
+<div>
+<ol start="2" type="1">
+<li class="fragment">Set the <span class="math inline">\(\alpha\)</span> value and find the control limits</li>
+</ol>
+</div>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
