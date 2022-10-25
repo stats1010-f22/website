@@ -4,7 +4,7 @@ execute:
   echo: false
 ---
 
-The R functions we have discussed so far these few weeks:
+The R functions we have discussed in these weeks:
 
 |               |
 |---------------|
@@ -22,9 +22,7 @@ The R functions we have discussed so far these few weeks:
 | dbinom()      |
 | dpois()       |
 | slice_sample()|
-| geom_point()  |
-| labs()        |
-| facet_wrap()  |
+| c()           |
 
 # Lecture 7
 
