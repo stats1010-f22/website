@@ -204,9 +204,9 @@ exp(lfactorial(85))/(exp(lfactorial(81))*exp(lfactorial(4)))
 
 If $Y \sim Bin(n, p)$ where
 
--   $n = $ number of trials
--   $p = $ probability of success
--   $y = $ number of successes in $n$ Bernoulli trials
+-   \$n = \$ number of trials
+-   \$p = \$ probability of success
+-   \$y = \$ number of successes in $n$ Bernoulli trials
 
 <br>
 
@@ -217,9 +217,8 @@ then <br> $$P(Y = y) = \binom{n}{y}p^y(1-p)^{n-y}$$
 ::: incremental
 1.  Let $Y \sim Bin(n = 5, p = 0.2)$ find the $E(Y)$ and $Var(Y)$
 
-```{=html}
 <!-- -->
-```
+
 a.  $E(Y) = np = 1$
 b.  $Var(Y) = np(1-p) = 0.8$
 c.  What is the probability that $y = 3$? In `R: dbinom(size  = 5, prob = 0.2, x = 3)` $0.0512$
@@ -318,10 +317,6 @@ $\lambda$
 
 ::: incremental
 1.  Let $Y \sim Pois(\lambda = 5)$ find the $E(Y)$ and $Var(Y)$
-
-```{=html}
-<!-- -->
-```
 a.  $E(Y) = 5$
 b.  $Var(Y) = 5$
 c.  What is the probability that $y = 3$? In `R: dpois(x = 3, lambda = 5)` $0.1403739$

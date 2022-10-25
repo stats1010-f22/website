@@ -79,9 +79,28 @@ $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
 
 # Production line {background-image="lect-13_things/manufacturing_plant.png" background-size="contain"}
 
-## 
+## {background-image="lect-13_things/error_classifications.png" background-size="contain"}
 
-## False positives - type 1 error
+## Control limits
 
-## False negatives - type 2 error
+::: incremental
+- if mean production is outside certain values, we may need to stop and recallibrate machinery
+- these values are called *control limits*
+- $\mu - L \leq \bar{X} \leq \mu + L$
+- $\mu - L$ and $\mu + L$ are *control limits*
+
+:::
+
+## Types of errors
+
+::: incremental
+- False positives - type 1 error
+    - act when you should not
+    - probabiliy of occurence denoted $\alpha$
+- False negatives - type 2 error
+   - don't act when you should
+   - probabiliy of occurence denoted $\beta$
+:::
+
+
 
