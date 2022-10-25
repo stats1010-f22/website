@@ -704,7 +704,7 @@
     "href": "supplemental/exam-2-studyguide.html",
     "title": "Study list for exam 2",
     "section": "",
-    "text": "The R functions we have discussed so far these few weeks:"
+    "text": "The R functions we have discussed in these weeks:"
   },
   {
     "objectID": "supplemental/exam-2-studyguide.html#addition-rules",
@@ -760,7 +760,7 @@
     "href": "supplemental/exam-2-studyguide.html#predicting",
     "title": "Study list for exam 2",
     "section": "Predicting",
-    "text": "Predicting\n\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──\n\n\n✔ broom        1.0.0     ✔ recipes      1.0.1\n✔ dials        1.0.0     ✔ rsample      1.1.0\n✔ dplyr        1.0.9     ✔ tibble       3.1.8\n✔ ggplot2      3.3.6     ✔ tidyr        1.2.0\n✔ infer        1.0.2     ✔ tune         1.0.0\n✔ modeldata    1.0.0     ✔ workflows    1.0.0\n✔ parsnip      1.0.0     ✔ workflowsets 1.0.0\n✔ purrr        0.3.4     ✔ yardstick    1.0.0\n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ purrr::discard() masks scales::discard()\n✖ dplyr::filter()  masks stats::filter()\n✖ dplyr::lag()     masks stats::lag()\n✖ recipes::step()  masks stats::step()\n• Use suppressPackageStartupMessages() to eliminate package startup messages\n\n\n# A tibble: 4 × 1\n   .pred\n   <dbl>\n1  5500.\n2 13256.\n3 17135.\n4 28769."
+    "text": "Predicting\n\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──\n\n\n✔ broom        1.0.0     ✔ recipes      1.0.1\n✔ dials        1.0.0     ✔ rsample      1.1.0\n✔ dplyr        1.0.9     ✔ tibble       3.1.8\n✔ ggplot2      3.3.6     ✔ tidyr        1.2.0\n✔ infer        1.0.2     ✔ tune         1.0.0\n✔ modeldata    1.0.0     ✔ workflows    1.0.0\n✔ parsnip      1.0.0     ✔ workflowsets 1.0.0\n✔ purrr        0.3.4     ✔ yardstick    1.0.0\n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ purrr::discard() masks scales::discard()\n✖ dplyr::filter()  masks stats::filter()\n✖ dplyr::lag()     masks stats::lag()\n✖ recipes::step()  masks stats::step()\n• Learn how to get started at https://www.tidymodels.org/start/\n\n\n# A tibble: 4 × 1\n   .pred\n   <dbl>\n1  5500.\n2 13256.\n3 17135.\n4 28769."
   },
   {
     "objectID": "supplemental/exam-2-studyguide.html#spurious-correlations",
