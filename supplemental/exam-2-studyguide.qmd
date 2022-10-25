@@ -63,12 +63,17 @@ $$corr(x, y) = \frac{cov(x, y)}{s_x \cdot s_y}$$
 4.  $r$ does not have units
 
 ## Fitting a line
-$ m = \frac{r \cdot s_y}{s_x} $ 
+$ m = \frac{r \cdot s_y}{s_x}$
+<br>
 $ b = \bar{y} - m \bar{x} $
 
 ## Predicting
 
 ```{r}
+#| echo: true
+#| eval: true
+#| message: false
+
 library(tidymodels)
 
 ## Assign the least
