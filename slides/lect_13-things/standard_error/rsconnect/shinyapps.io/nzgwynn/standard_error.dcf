@@ -1,0 +1,13 @@
+name: standard_error
+title: standard_error
+username:
+account: nzgwynn
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7407710
+bundleId: 6437245
+url: https://nzgwynn.shinyapps.io/standard_error/
+when: 1666659200.56173
+lastSyncTime: 1666659200.56175
+asMultiple: FALSE
+asStatic: FALSE
