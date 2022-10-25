@@ -133,6 +133,41 @@
     "text": "The course goals are as follows:\n\nRecognize the importance of data collection, identify limitations in data collection methods, and determine how they affect the scope of inference.\nUse statistical software to summarize data numerically and visually, and to perform data analysis.\nHave a conceptual understanding of the unified nature of statistical inference.\nApply estimation and testing methods to analyze single variables or the relationship between two variables in order to understand natural phenomena and make data-based\ndecisions.\nModel numerical response variables using a single or multiple explanatory variables.\nInterpret results correctly, effectively, and in context without relying on statistical jargon.\nCritique data-based claims and evaluate data-based decisions.\nComplete a research project demonstrating mastery of statistical data analysis from exploratory analysis to inference to modeling."
   },
   {
+    "objectID": "repo-structure/presentation/presentation.html",
+    "href": "repo-structure/presentation/presentation.html",
+    "title": "Presentation title",
+    "section": "",
+    "text": "Our project will demonstrate that the praise package is by far the best R package."
+  },
+  {
+    "objectID": "repo-structure/proposal/proposal.html",
+    "href": "repo-structure/proposal/proposal.html",
+    "title": "Project proposal",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(broom)"
+  },
+  {
+    "objectID": "repo-structure/proposal/proposal.html#introduction",
+    "href": "repo-structure/proposal/proposal.html#introduction",
+    "title": "Project proposal",
+    "section": "1. Introduction",
+    "text": "1. Introduction"
+  },
+  {
+    "objectID": "repo-structure/proposal/proposal.html#data",
+    "href": "repo-structure/proposal/proposal.html#data",
+    "title": "Project proposal",
+    "section": "2. Data",
+    "text": "2. Data"
+  },
+  {
+    "objectID": "repo-structure/proposal/proposal.html#data-analysis-plan",
+    "href": "repo-structure/proposal/proposal.html#data-analysis-plan",
+    "title": "Project proposal",
+    "section": "3. Data analysis plan",
+    "text": "3. Data analysis plan"
+  },
+  {
     "objectID": "project-description.html#data",
     "href": "project-description.html#data",
     "title": "Showcase your inner data scientist",
@@ -1754,7 +1789,28 @@
     "href": "slides/lect_13.html#standard-error",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Standard error",
-    "text": "Standard error\n\n\nstat1010-f22.github.io/website"
+    "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}}) \\]"
+  },
+  {
+    "objectID": "slides/lect_13.html#sampling-distribution",
+    "href": "slides/lect_13.html#sampling-distribution",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\] ## Example\n::: 1. Let \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4. - \\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\) :::"
+  },
+  {
+    "objectID": "slides/lect_13.html#false-positives---type-1-error",
+    "href": "slides/lect_13.html#false-positives---type-1-error",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "False positives - type 1 error",
+    "text": "False positives - type 1 error"
+  },
+  {
+    "objectID": "slides/lect_13.html#false-negatives---type-2-error",
+    "href": "slides/lect_13.html#false-negatives---type-2-error",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "False negatives - type 2 error",
+    "text": "False negatives - type 2 error\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
