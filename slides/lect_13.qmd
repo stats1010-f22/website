@@ -88,11 +88,9 @@ $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
 - these values are called *control limits*
 - $\mu - L \leq \bar{X} \leq \mu + L$
 - $\mu - L$ and $\mu + L$ are *control limits*
-
 :::
 
 ## Types of errors
-
 ::: incremental
 - False positives - type 1 error
     - act when you should not
@@ -101,6 +99,8 @@ $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
    - don't act when you should
    - probabiliy of occurence denoted $\beta$
 :::
+
+## Setting control limits
 
 
 
