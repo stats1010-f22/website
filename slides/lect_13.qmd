@@ -22,9 +22,9 @@ library(tidyverse)
 
 ::: incremental
 -   The shape of the distribution of the sample mean and why it is important
+-   When we can assume a normal distribution for the sample mean
 -   
--   Understand shift and scales and how to compute them to find $z$ scores
--   Basic tests of normality including qqplots and kurtosis
+-   
 :::
 
 ## Sampling

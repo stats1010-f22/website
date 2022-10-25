@@ -31,42 +31,29 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 # Load your data here
 ```
 
-```{r}
-style_xaringan(
-  title_slide_background_image = "img/confetti.jpg"
-)
-```
-
-
-
 ## A statement of the overall goal / research question
 
 Our project will demonstrate that the `praise` package is by far the best `R` package.
 
-
 # Section title
-
-
 
 # Hello World
 
 -   Click the `Render` button to compile your presentation
 
-
-
-# xaringan
+# Quarto
 
 -   The presentation is created using the `quarto` package
 
--   Use `##` or `#` to start a new slide 
+-   Use `##` or `#` to start a new slide
 
 # incremental
 
 ::: incremental
-- Thing 1
-- and another
-- the last thing
-- with math $\frac{1}{2}$
+-   Thing 1
+-   and another
+-   the last thing
+-   with math $\frac{1}{2}$
 :::
 
 # Layouts
@@ -85,7 +72,6 @@ You can use plain text
 :::
 
 ::: {.column width="50%"}
-
 words here
 :::
 :::
@@ -103,8 +89,6 @@ model <- lm(dist ~ speed, data = cars)
 tidy(model)
 glance(model)
 ```
-
-
 
 # Plots
 
@@ -131,11 +115,6 @@ ggplot(data = iris_modified, mapping = aes(x = Sepal.Width, y = Sepal.Length, co
 
 ------------------------------------------------------------------------
 
-## Plot and text
-
-.pull-left\[ - Some text - goes here\] .pull-right\[\]
-
-
 # Tables
 
 If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
@@ -145,7 +124,6 @@ If you want to generate a table, make sure it is in the HTML format (instead of 
 #| eval: true
 kable(head(diamonds), format = "html")
 ```
-
 
 # Some text {background-image="https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_boston-terrier_desktop.jpg?h=475&la=en&w=825&hash=DC3F38D08CCE086118327D827C002A62" background-size="cover"}
 
@@ -163,7 +141,6 @@ Limitations:
 
 2.  There should not be spaces after the opening `$` or before the closing `$`..
 
-
 # Feeling adventurous?
 
 -   Want to find out more about `quarto`? See https://quarto.org/.
@@ -171,4 +148,3 @@ Limitations:
 -   You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
 
 -   But some of you might want to play around with slide styling. This provides some solutions for this that: https://quarto.org/docs/output-formats/html-themes.html.
-
