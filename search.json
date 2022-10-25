@@ -753,14 +753,14 @@
     "href": "supplemental/exam-2-studyguide.html#fitting-a-line",
     "title": "Study list for exam 2",
     "section": "Fitting a line",
-    "text": "Fitting a line\n$ m = $ $ b = {y} - m {x} $"
+    "text": "Fitting a line\n$ m = $  $ b = {y} - m {x} $"
   },
   {
     "objectID": "supplemental/exam-2-studyguide.html#predicting",
     "href": "supplemental/exam-2-studyguide.html#predicting",
     "title": "Study list for exam 2",
     "section": "Predicting",
-    "text": "Predicting\n\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──\n\n\n✔ broom        1.0.0     ✔ recipes      1.0.1\n✔ dials        1.0.0     ✔ rsample      1.1.0\n✔ dplyr        1.0.9     ✔ tibble       3.1.8\n✔ ggplot2      3.3.6     ✔ tidyr        1.2.0\n✔ infer        1.0.2     ✔ tune         1.0.0\n✔ modeldata    1.0.0     ✔ workflows    1.0.0\n✔ parsnip      1.0.0     ✔ workflowsets 1.0.0\n✔ purrr        0.3.4     ✔ yardstick    1.0.0\n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ purrr::discard() masks scales::discard()\n✖ dplyr::filter()  masks stats::filter()\n✖ dplyr::lag()     masks stats::lag()\n✖ recipes::step()  masks stats::step()\n• Dig deeper into tidy modeling with R at https://www.tmwr.org\n\n\n# A tibble: 4 × 1\n   .pred\n   <dbl>\n1  5500.\n2 13256.\n3 17135.\n4 28769."
+    "text": "Predicting\n\nlibrary(tidymodels)\n\n## Assign the least\n## squares line\nleast_squares_fit <- \n  linear_reg() %>% \n  set_engine(\"lm\") %>% \n  fit(price ~ carat, data = diamonds) \n## NOTE: outcome first, predictor second\n\n## Find the prediction\npredict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))\n\n# A tibble: 4 × 1\n   .pred\n   <dbl>\n1  5500.\n2 13256.\n3 17135.\n4 28769."
   },
   {
     "objectID": "supplemental/exam-2-studyguide.html#spurious-correlations",
@@ -1974,18 +1974,18 @@
     "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)"
   },
   {
-    "objectID": "slides/lect_13.html#setting-control-limits",
-    "href": "slides/lect_13.html#setting-control-limits",
+    "objectID": "slides/lect_13.html#setting-control-limits---1",
+    "href": "slides/lect_13.html#setting-control-limits---1",
     "title": "Chapter 14: Sampling variation and quality",
-    "section": "Setting control limits",
-    "text": "Setting control limits\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits? ::: incremental 1. Set the control limits and find the \\(\\alpha\\) value - We want the control limits to be between 10 and 14 - \\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\) - \\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\) - pnorm(-1.318761) \\(\\approx 0.09362451\\) - pnorm(-1.318761, mean = 12, sd = sqrt(2.3)) - \\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\) - 1 - pnorm(1.318761) \\(\\approx 0.09362451\\) - pnorm(1.318761, mean = 12, sd = sqrt(2.3)) :::"
+    "section": "Setting control limits - 1",
+    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits? ::: incremental 1. Set the control limits and find the \\(\\alpha\\) value - We want the control limits to be between 10 and 14 - \\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\) - \\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\) - pnorm(-1.318761) \\(\\approx 0.09362451\\) - pnorm(-1.318761, mean = 12, sd = sqrt(2.3)) - \\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\) - 1 - pnorm(1.318761) \\(\\approx 0.09362451\\) - pnorm(1.318761, mean = 12, sd = sqrt(2.3)) - the \\(\\alpha\\) value is \\(19\\%\\) which is very high! :::"
   },
   {
-    "objectID": "slides/lect_13.html#setting-control-limits-1",
-    "href": "slides/lect_13.html#setting-control-limits-1",
+    "objectID": "slides/lect_13.html#setting-control-limits---2",
+    "href": "slides/lect_13.html#setting-control-limits---2",
     "title": "Chapter 14: Sampling variation and quality",
-    "section": "Setting control limits",
-    "text": "Setting control limits\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\n\n\nstat1010-f22.github.io/website"
+    "section": "Setting control limits - 2",
+    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
