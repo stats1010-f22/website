@@ -77,7 +77,7 @@ $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
     
 :::
 
-# {background-image="lect_13-things/EM_tweet.png" background-size="contain"}
+# {background-image="lect_13-things/EMtweet.png" background-size="contain"}
 
 # {background-image="lect_13-things/manufacturing_plant.png" background-size="contain"}
 
@@ -177,7 +177,6 @@ X-bar charts are slow to detect under or over filling
 ::: incremental
 - *S-Chart* tracks the standard deviation from sample to sample
 - *R-Chart* tracks the range from sample to sample
-
 :::
 
 
