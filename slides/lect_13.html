@@ -481,7 +481,7 @@
 <li class="fragment">We want the control limits to be between 10 and 14</li>
 <li class="fragment"><span class="math inline">\(\begin{aligned}P(\bar{X} &gt; 14) &amp;= P(\frac{\bar{X} - \mu_\bar{X} }{\sigma_\bar{X}} &gt; \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &gt; \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}\)</span></li>
 <li class="fragment"><code>1 - pnorm(1.318761)</code> <span class="math inline">\(\approx 0.09362451\)</span></li>
-<li class="fragment"><code>pnorm(14, mean = 12, sd = sqrt(2.3))</code></li>
+<li class="fragment"><code>1 - pnorm(14, mean = 12, sd = sqrt(2.3))</code></li>
 <li class="fragment">the <span class="math inline">\(\alpha\)</span> value is <span class="math inline">\(19\%\)</span> which is very high!</li>
 </ul></li>
 </ol>

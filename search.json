@@ -1992,7 +1992,7 @@
     "href": "slides/lect_13.html#setting-control-limits---1-contd",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Setting control limits - 1 cont’d",
-    "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X} }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\npnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
+    "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X} }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\n1 - pnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
   },
   {
     "objectID": "slides/lect_13.html#setting-control-limits---2",
