@@ -1943,7 +1943,7 @@
     "href": "slides/lect_13.html#normal-model",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Normal model",
-    "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true."
+    "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true.\n\n\n#{background-iframe=“https://nzgwynn.shinyapps.io/standard_error/”}\n#{background-image=“lect-13_things/std_error.png” background-size=“contain”}"
   },
   {
     "objectID": "slides/lect_13.html#standard-error",
@@ -1964,7 +1964,7 @@
     "href": "slides/lect_13.html#example",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Example",
-    "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)"
+    "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)\n\n\n\n#{background-image=“lect-13_things/EM_tweet.png” background-size=“contain”}"
   },
   {
     "objectID": "slides/lect_13.html#control-limits",
@@ -1985,14 +1985,35 @@
     "href": "slides/lect_13.html#setting-control-limits---1",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Setting control limits - 1",
-    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(-1.318761, mean = 12, sd = sqrt(2.3))\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\npnorm(1.318761, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
+    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(10, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_13.html#setting-control-limits---1-contd",
+    "href": "slides/lect_13.html#setting-control-limits---1-contd",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 1 cont’d",
+    "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\npnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
   },
   {
     "objectID": "slides/lect_13.html#setting-control-limits---2",
     "href": "slides/lect_13.html#setting-control-limits---2",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Setting control limits - 2",
-    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)\nqnorm(0.0125, mean = 12, sd = sqrt(2.3))\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))\n\n\n\n\n\nstat1010-f22.github.io/website"
+    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)"
+  },
+  {
+    "objectID": "slides/lect_13.html#setting-control-limits---2---contd",
+    "href": "slides/lect_13.html#setting-control-limits---2---contd",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 2 - cont’d",
+    "text": "Setting control limits - 2 - cont’d\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))\n\n\n\n#{background-image=“lect-13_things/control_plot.png” background-size=“contain”}"
+  },
+  {
+    "objectID": "slides/lect_13.html#repeated-testing",
+    "href": "slides/lect_13.html#repeated-testing",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Repeated testing",
+    "text": "Repeated testing\nWe are not testing once, but multiple times. Assuming independence:\n\n\n\\(\\begin{aligned}P(\\textrm{within limits for 10 days}) =& P(\\textrm{within limits for day 1}) \\cdot P(\\textrm{within limits for day 2}) \\cdot \\dots P(\\textrm{within limits for day 10})\\\\ &= 0.975^{10} \\approx 0.7763296 \\end{aligned}\\)\nThere is a \\(1-0.7763296 = 0.2236704\\) percent false positive rate\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
