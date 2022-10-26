@@ -53,9 +53,9 @@ library(tidyverse)
 -   If we know the data come from a normal distribution this is also true.
 :::
 
-#{background-iframe="https://nzgwynn.shinyapps.io/standard_error/"}
+#  {background-iframe="https://nzgwynn.shinyapps.io/standard_error/"}
 
-#{background-image="lect-13_things/std_error.png" background-size="contain"}
+#  {background-image="lect-13_things/std_error.png" background-size="contain"}
 
 ## Standard error
 
@@ -77,11 +77,11 @@ $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
     
 :::
 
-#{background-image="lect-13_things/EM_tweet.png" background-size="contain"}
+#  {background-image="lect-13_things/EM_tweet.png" background-size="contain"}
 
-# Production line{background-image="lect-13_things/manufacturing_plant.png" background-size="contain"}
+#  {background-image="lect-13_things/manufacturing_plant.png" background-size="contain"}
 
-#{background-image="lect-13_things/error_classifications.png" background-size="contain"}
+#  {background-image="lect-13_things/error_classifications.png" background-size="contain"}
 
 ## Control limits
 
@@ -124,7 +124,7 @@ If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits
 ::: incremental
 1.  Set the control limits and find the $\alpha$ value
     -   We want the control limits to be between 10 and 14
-    -   $\begin{aligned}P(\bar{X} > 14) &= P(\frac{\bar{X} - }{\sigma_\bar{X}} > \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z > \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}$
+    -   $\begin{aligned}P(\bar{X} > 14) &= P(\frac{\bar{X} - \mu_\bar{X} }{\sigma_\bar{X}} > \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z > \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}$
     -   `1 - pnorm(1.318761)` $\approx 0.09362451$
     -   `pnorm(14, mean = 12, sd = sqrt(2.3))`
     -   the $\alpha$ value is $19\%$ which is very high!
@@ -157,7 +157,7 @@ If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits
 
 #{background-image="lect-13_things/control_plot.png" background-size="contain"}
 
-## Repeated testing
+## Repeated testing {.smaller}
 
 We are not testing once, but multiple times. Assuming independence:
 
@@ -166,4 +166,18 @@ We are not testing once, but multiple times. Assuming independence:
 - $\begin{aligned}P(\textrm{within limits for 10 days}) =& P(\textrm{within limits for day 1}) \cdot P(\textrm{within limits for day 2}) \cdot \dots P(\textrm{within limits for day 10})\\ &= 0.975^{10}  \approx 0.7763296 \end{aligned}$
 
 - There is a $1-0.7763296 = 0.2236704$ percent false positive rate 
+- Management must decide if there is a false positive by checking for mechanical errors and inspecting equipment
+- Adjust $\alpha$ value to address this
 :::
+
+## Control charts for variation
+
+X-bar charts are slow to detect under or over filling
+
+::: incremental
+- *S-Chart* tracks the standard deviation from sample to sample
+- *R-Chart* tracks the range from sample to sample
+
+:::
+
+
