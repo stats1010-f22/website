@@ -23,114 +23,147 @@ library(tidyverse)
 ::: incremental
 -   The shape of the distribution of the sample mean and why it is important
 -   When we can assume a normal distribution for the sample mean
--   
--   
+-   Control charts and what they are used for
+-   Find control limits
 :::
 
 ## Sampling
 
 ::: incremental
-- SRS
-- Stratified sampling
-- Cluster sampling
-- it would be nice to sample repeatedly to see how the mean values compare
+-   SRS
+-   Stratified sampling
+-   Cluster sampling
+-   it would be nice to sample repeatedly to see how the mean values compare
 :::
 
 #  {background-iframe="https://nzgwynn.shinyapps.io/sample_from_uniform/"}
 
-
 ## Benefits of averaging
 
 ::: incremental
-- reduces variation
-- more normal than the original distribution
+-   reduces variation
+-   more normal than the original distribution
 :::
 
 ## Normal model
 
 ::: incremental
-- Find [kurtosis](https://stats1010-f22.github.io/website/slides/lect_11.html#/kurtosis)($K_4$)
-- If $n > 10 |K_4|$, where $n$ is the sample size, then a normal model adequately approximates the distribution of the sample mean $\bar{X}$.
-- If we know the data come from a normal distribution this is also true.
+-   Find [kurtosis](https://stats1010-f22.github.io/website/slides/lect_11.html#/kurtosis)($K_4$)
+-   If $n > 10 |K_4|$, where $n$ is the sample size, then a normal model adequately approximates the distribution of the sample mean $\bar{X}$.
+-   If we know the data come from a normal distribution this is also true.
 :::
 
-#  {background-iframe="https://nzgwynn.shinyapps.io/standard_error/"}
+#{background-iframe="https://nzgwynn.shinyapps.io/standard_error/"}
 
-##  {background-image="lect-13_things/std_error.png" background-size="contain"}
+#{background-image="lect-13_things/std_error.png" background-size="contain"}
 
 ## Standard error
 
 $$ SD(\bar{X}) = SE(\bar{X}) = 
-\frac{\sigma}{\sqrt{n}} $$ 
+\frac{\sigma}{\sqrt{n}} $$
 
 ## Sampling distribution
 
 If $X \sim N(\mu_X, \sigma_X^2)$
 
-$$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$ 
+$$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
 
-## Example 
+## Example
+
 ::: incremental
 
-1. Let $Y \sim N(\mu = 5, \sigma^2 = 16)$, find the distribution of the mean of repeated samples of size 4. 
-    - $\bar{Y} \sim N(\mu = 5, \sigma^2 = 4)$
+1.  Let $Y \sim N(\mu = 5, \sigma^2 = 16)$, find the distribution of the mean of repeated samples of size 4.
+    -   $\bar{Y} \sim N(\mu = 5, \sigma^2 = 4)$
+    
 :::
 
-##  {background-image="lect-13_things/EM_tweet.png" background-size="contain"}
+#{background-image="lect-13_things/EM_tweet.png" background-size="contain"}
 
-# Production line {background-image="lect-13_things/manufacturing_plant.png" background-size="contain"}
+# Production line{background-image="lect-13_things/manufacturing_plant.png" background-size="contain"}
 
-## {background-image="lect-13_things/error_classifications.png" background-size="contain"}
+#{background-image="lect-13_things/error_classifications.png" background-size="contain"}
 
 ## Control limits
 
 ::: incremental
-- if mean production is outside certain values, we may need to stop and recallibrate machinery
-- these values are called *control limits*
-- $\mu - L \leq \bar{X} \leq \mu + L$
-- $\mu - L$ and $\mu + L$ are *control limits*
+-   if mean production is outside certain values, we may need to stop and recallibrate machinery
+-   these values are called *control limits*
+-   $\mu - L \leq \bar{X} \leq \mu + L$
+-   $\mu - L$ and $\mu + L$ are *control limits*
 :::
 
 ## Types of errors
+
 ::: incremental
-- False positives - type 1 error
-    - act when you should not
-    - probabiliy of occurence denoted $\alpha$
-- False negatives - type 2 error
-   - don't act when you should
-   - probabiliy of occurence denoted $\beta$
+-   False positives - type 1 error
+    -   act when you should not
+    -   probabiliy of occurence denoted $\alpha$
+-   False negatives - type 2 error
+    -   don't act when you should
+    -   probabiliy of occurence denoted $\beta$
 :::
 
 ## Setting control limits - 1 {.smaller}
 
-If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits? 
+If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits?
 
 ::: incremental
-1. Set the control limits and find the $\alpha$ value
-    - We want the control limits to be between 10 and 14
-    - $Pr(\bar{X} < 10 \textrm{ or } \bar{X} > 14)$
-    - $\begin{aligned}P(\bar{X} < 10) &= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} < \frac{10-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z < \frac{10-12}{\sqrt{2.3}} = -1.318761)\end{aligned}$
-    - `pnorm(-1.318761)` $\approx 0.09362451$
-    - `pnorm(-1.318761, mean = 12, sd = sqrt(2.3))`
-    - $\begin{aligned}P(\bar{X} > 14) &= P(\frac{\bar{X} - }{\sigma_\bar{X}} > \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z > \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}$
-    - `1 - pnorm(1.318761)` $\approx 0.09362451$
-    - `pnorm(1.318761, mean = 12, sd = sqrt(2.3))`
-    - the $\alpha$ value is $19\%$ which is very high!
-:::
-
-## Setting control limits - 2
-
-::: incremental
-
-2. Set the $\alpha$ value and find the control limits
- - We want the $\alpha$ to be $0.025$
-    - $Pr(\bar{X} < z_{0.0125} \textrm{ or } \bar{X} > z_{0.0125})$
-    - `qnorm(0.0125)` $\approx -2.241403$
-    - $\begin{aligned}-2.241403 =& \frac{X - \mu_\bar{X}}{\sigma_\bar{X}}\\ & = \frac{X - 12}{\sqrt{2.3}} \\ &= -2.241403\sqrt{2.3} +12 = 8.600744 \end{aligned}$
-    - `qnorm(0.0125, mean = 12, sd = sqrt(2.3))`
-    - `qnorm(1- 0.0125)` $\approx 2.241403$
-    - $\begin{aligned}2.241403 =& \frac{X - \mu_\bar{X}}{\sigma_\bar{X}}\\ & = \frac{X - 12}{\sqrt{2.3}} \\ &= 2.241403\sqrt{2.3} +12 = 15.39926 \end{aligned}$
-    - `qnorm(1-0.0125, mean = 12, sd = sqrt(2.3))`
+1.  Set the control limits and find the $\alpha$ value
+    -   We want the control limits to be between 10 and 14
+    -   $Pr(\bar{X} < 10 \textrm{ or } \bar{X} > 14)$
+    -   $\begin{aligned}P(\bar{X} < 10) &= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} < \frac{10-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z < \frac{10-12}{\sqrt{2.3}} = -1.318761)\end{aligned}$
+    -   `pnorm(-1.318761)` $\approx 0.09362451$
+    -   `pnorm(10, mean = 12, sd = sqrt(2.3))`
 :::
 
 
+## Setting control limits - 1 cont'd {.smaller}
+
+If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits?
+
+::: incremental
+1.  Set the control limits and find the $\alpha$ value
+    -   We want the control limits to be between 10 and 14
+    -   $\begin{aligned}P(\bar{X} > 14) &= P(\frac{\bar{X} - }{\sigma_\bar{X}} > \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z > \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}$
+    -   `1 - pnorm(1.318761)` $\approx 0.09362451$
+    -   `pnorm(14, mean = 12, sd = sqrt(2.3))`
+    -   the $\alpha$ value is $19\%$ which is very high!
+:::
+
+
+## Setting control limits - 2 {.smaller}
+
+::: incremental
+2.  Set the $\alpha$ value and find the control limits
+
+-   We want the $\alpha$ to be $0.025$
+    -   $Pr(\bar{X} < z_{0.0125} \textrm{ or } \bar{X} > z_{0.0125})$
+    -   `qnorm(0.0125)` $\approx -2.241403$
+    -   $\begin{aligned}-2.241403 =& \frac{X - \mu_\bar{X}}{\sigma_\bar{X}}\\ & = \frac{X - 12}{\sqrt{2.3}} \\ &= -2.241403\sqrt{2.3} +12 = 8.600744 \end{aligned}$
+:::
+
+## Setting control limits - 2 - cont'd {.smaller}
+
+::: incremental
+2.  Set the $\alpha$ value and find the control limits
+
+-   We want the $\alpha$ to be $0.025$
+    -   $Pr(\bar{X} < z_{0.0125} \textrm{ or } \bar{X} > z_{0.0125})$
+    -   `qnorm(1- 0.0125)` $\approx 2.241403$
+    -   $\begin{aligned}2.241403 =& \frac{X - \mu_\bar{X}}{\sigma_\bar{X}}\\ & = \frac{X - 12}{\sqrt{2.3}} \\ &= 2.241403\sqrt{2.3} +12 = 15.39926 \end{aligned}$
+    -   `qnorm(1-0.0125, mean = 12, sd = sqrt(2.3))`
+:::
+
+
+#{background-image="lect-13_things/control_plot.png" background-size="contain"}
+
+## Repeated testing
+
+We are not testing once, but multiple times. Assuming independence:
+
+::: incremental
+
+- $\begin{aligned}P(\textrm{within limits for 10 days}) =& P(\textrm{within limits for day 1}) \cdot P(\textrm{within limits for day 2}) \cdot \dots P(\textrm{within limits for day 10})\\ &= 0.975^{10}  \approx 0.7763296 \end{aligned}$
+
+- There is a $1-0.7763296 = 0.2236704$ percent false positive rate 
+:::
