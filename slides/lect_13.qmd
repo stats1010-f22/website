@@ -55,7 +55,7 @@ library(tidyverse)
 
 #  {background-iframe="https://nzgwynn.shinyapps.io/standard_error/"}
 
-# {background-image="lect-13_things/std_error.png" background-size="contain"}
+# {background-image="lect_13-things/std_error.png" background-size="contain"}
 
 ## Standard error
 
@@ -77,11 +77,11 @@ $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
     
 :::
 
-# {background-image="lect-13_things/EM_tweet.png" background-size="contain"}
+# {background-image="lect_13-things/EM_tweet.png" background-size="contain"}
 
-# {background-image="lect-13_things/manufacturing_plant.png" background-size="contain"}
+# {background-image="lect_13-things/manufacturing_plant.png" background-size="contain"}
 
-# {background-image="lect-13_things/error_classifications.png" background-size="contain"}
+# {background-image="lect_13-things/error_classifications.png" background-size="contain"}
 
 ## Control limits
 
@@ -155,7 +155,7 @@ If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits
 :::
 
 
-# {background-image="lect-13_things/control_plot.png" background-size="contain"}
+# {background-image="lect_13-things/control_plot.png" background-size="contain"}
 
 ## Repeated testing {.smaller}
 
