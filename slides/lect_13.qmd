@@ -160,6 +160,7 @@ If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits
 
 ## Repeated testing {.smaller}
 
+
 We are not testing once, but multiple times. Assuming independence:
 
 ::: incremental
