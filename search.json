@@ -753,7 +753,7 @@
     "href": "supplemental/exam-2-studyguide.html#fitting-a-line",
     "title": "Study list for exam 2",
     "section": "Fitting a line",
-    "text": "Fitting a line\n$ m = $  $ b = {y} - m {x} $"
+    "text": "Fitting a line\n\\(m = \\frac{r \\cdot s_y}{s_x}\\)\n\\(b = \\bar{y} - m \\bar{x}\\)"
   },
   {
     "objectID": "supplemental/exam-2-studyguide.html#predicting",
