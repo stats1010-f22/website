@@ -1950,14 +1950,21 @@
     "href": "slides/lect_13.html#standard-error",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Standard error",
-    "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}}) \\]"
+    "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}} \\]"
   },
   {
     "objectID": "slides/lect_13.html#sampling-distribution",
     "href": "slides/lect_13.html#sampling-distribution",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Sampling distribution",
-    "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\] ## Example\n::: 1. Let \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4. - \\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\) :::"
+    "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\]"
+  },
+  {
+    "objectID": "slides/lect_13.html#example",
+    "href": "slides/lect_13.html#example",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Example",
+    "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)"
   },
   {
     "objectID": "slides/lect_13.html#control-limits",
@@ -1978,14 +1985,14 @@
     "href": "slides/lect_13.html#setting-control-limits---1",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Setting control limits - 1",
-    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits? ::: incremental 1. Set the control limits and find the \\(\\alpha\\) value - We want the control limits to be between 10 and 14 - \\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\) - \\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\) - pnorm(-1.318761) \\(\\approx 0.09362451\\) - pnorm(-1.318761, mean = 12, sd = sqrt(2.3)) - \\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\) - 1 - pnorm(1.318761) \\(\\approx 0.09362451\\) - pnorm(1.318761, mean = 12, sd = sqrt(2.3)) - the \\(\\alpha\\) value is \\(19\\%\\) which is very high! :::"
+    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(-1.318761, mean = 12, sd = sqrt(2.3))\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\npnorm(1.318761, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
   },
   {
     "objectID": "slides/lect_13.html#setting-control-limits---2",
     "href": "slides/lect_13.html#setting-control-limits---2",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Setting control limits - 2",
-    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\n\n\nstat1010-f22.github.io/website"
+    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)\nqnorm(0.0125, mean = 12, sd = sqrt(2.3))\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))\n\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",

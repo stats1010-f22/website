@@ -392,13 +392,23 @@
 <section id="standard-error" class="slide level2">
 <h2>Standard error</h2>
 <p><span class="math display">\[ SD(\bar{X}) = SE(\bar{X}) =
-\frac{\sigma}{\sqrt{n}}) \]</span></p>
+\frac{\sigma}{\sqrt{n}} \]</span></p>
 </section>
 <section id="sampling-distribution" class="slide level2">
 <h2>Sampling distribution</h2>
 <p>If <span class="math inline">\(X \sim N(\mu_X, \sigma_X^2)\)</span></p>
-<p><span class="math display">\[ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) \]</span> ## Example</p>
-<p>::: 1. Let <span class="math inline">\(Y \sim N(\mu = 5, \sigma^2 = 16)\)</span>, find the distribution of the mean of repeated samples of size 4. - <span class="math inline">\(\bar{Y} \sim N(\mu = 5, \sigma^2 = 4)\)</span> :::</p>
+<p><span class="math display">\[ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) \]</span></p>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<div>
+<ol type="1">
+<li class="fragment">Let <span class="math inline">\(Y \sim N(\mu = 5, \sigma^2 = 16)\)</span>, find the distribution of the mean of repeated samples of size 4.
+<ul>
+<li class="fragment"><span class="math inline">\(\bar{Y} \sim N(\mu = 5, \sigma^2 = 4)\)</span></li>
+</ul></li>
+</ol>
+</div>
 </section>
 <section id="section-3" class="slide level2" data-background-image="lect-13_things/EM_tweet.png" data-background-size="contain">
 <h2></h2>
@@ -441,7 +451,23 @@
 </section>
 <section id="setting-control-limits---1" class="slide level2 smaller">
 <h2>Setting control limits - 1</h2>
-<p>If <span class="math inline">\(\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)\)</span> how can we find the control limits? ::: incremental 1. Set the control limits and find the <span class="math inline">\(\alpha\)</span> value - We want the control limits to be between 10 and 14 - <span class="math inline">\(Pr(\bar{X} &lt; 10 \textrm{ or } \bar{X} &gt; 14)\)</span> - <span class="math inline">\(\begin{aligned}P(\bar{X} &lt; 10) &amp;= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} &lt; \frac{10-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &lt; \frac{10-12}{\sqrt{2.3}} = -1.318761)\end{aligned}\)</span> - <code>pnorm(-1.318761)</code> <span class="math inline">\(\approx 0.09362451\)</span> - <code>pnorm(-1.318761, mean = 12, sd = sqrt(2.3))</code> - <span class="math inline">\(\begin{aligned}P(\bar{X} &gt; 14) &amp;= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} &gt; \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &gt; \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}\)</span> - <code>1 - pnorm(1.318761)</code> <span class="math inline">\(\approx 0.09362451\)</span> - <code>pnorm(1.318761, mean = 12, sd = sqrt(2.3))</code> - the <span class="math inline">\(\alpha\)</span> value is <span class="math inline">\(19\%\)</span> which is very high! :::</p>
+<p>If <span class="math inline">\(\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)\)</span> how can we find the control limits?</p>
+<div>
+<ol type="1">
+<li class="fragment">Set the control limits and find the <span class="math inline">\(\alpha\)</span> value
+<ul>
+<li class="fragment">We want the control limits to be between 10 and 14</li>
+<li class="fragment"><span class="math inline">\(Pr(\bar{X} &lt; 10 \textrm{ or } \bar{X} &gt; 14)\)</span></li>
+<li class="fragment"><span class="math inline">\(\begin{aligned}P(\bar{X} &lt; 10) &amp;= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} &lt; \frac{10-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &lt; \frac{10-12}{\sqrt{2.3}} = -1.318761)\end{aligned}\)</span></li>
+<li class="fragment"><code>pnorm(-1.318761)</code> <span class="math inline">\(\approx 0.09362451\)</span></li>
+<li class="fragment"><code>pnorm(-1.318761, mean = 12, sd = sqrt(2.3))</code></li>
+<li class="fragment"><span class="math inline">\(\begin{aligned}P(\bar{X} &gt; 14) &amp;= P(\frac{\bar{X} - }{\sigma_\bar{X}} &gt; \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &gt; \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}\)</span></li>
+<li class="fragment"><code>1 - pnorm(1.318761)</code> <span class="math inline">\(\approx 0.09362451\)</span></li>
+<li class="fragment"><code>pnorm(1.318761, mean = 12, sd = sqrt(2.3))</code></li>
+<li class="fragment">the <span class="math inline">\(\alpha\)</span> value is <span class="math inline">\(19\%\)</span> which is very high!</li>
+</ul></li>
+</ol>
+</div>
 </section>
 <section id="setting-control-limits---2" class="slide level2">
 <h2>Setting control limits - 2</h2>
@@ -449,6 +475,18 @@
 <ol start="2" type="1">
 <li class="fragment">Set the <span class="math inline">\(\alpha\)</span> value and find the control limits</li>
 </ol>
+<ul>
+<li class="fragment">We want the <span class="math inline">\(\alpha\)</span> to be <span class="math inline">\(0.025\)</span>
+<ul>
+<li class="fragment"><span class="math inline">\(Pr(\bar{X} &lt; z_{0.0125} \textrm{ or } \bar{X} &gt; z_{0.0125})\)</span></li>
+<li class="fragment"><code>qnorm(0.0125)</code> <span class="math inline">\(\approx -2.241403\)</span></li>
+<li class="fragment"><span class="math inline">\(\begin{aligned}-2.241403 =&amp; \frac{X - \mu_\bar{X}}{\sigma_\bar{X}}\\ &amp; = \frac{X - 12}{\sqrt{2.3}} \\ &amp;= -2.241403\sqrt{2.3} +12 = 8.600744 \end{aligned}\)</span></li>
+<li class="fragment"><code>qnorm(0.0125, mean = 12, sd = sqrt(2.3))</code></li>
+<li class="fragment"><code>qnorm(1- 0.0125)</code> <span class="math inline">\(\approx 2.241403\)</span></li>
+<li class="fragment"><span class="math inline">\(\begin{aligned}2.241403 =&amp; \frac{X - \mu_\bar{X}}{\sigma_\bar{X}}\\ &amp; = \frac{X - 12}{\sqrt{2.3}} \\ &amp;= 2.241403\sqrt{2.3} +12 = 15.39926 \end{aligned}\)</span></li>
+<li class="fragment"><code>qnorm(1-0.0125, mean = 12, sd = sqrt(2.3))</code></li>
+</ul></li>
+</ul>
 </div>
 
 <div class="footer footer-default">
