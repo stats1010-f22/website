@@ -61,16 +61,17 @@ library(tidyverse)
 ## Standard error
 
 $$ SD(\bar{X}) = SE(\bar{X}) = 
-\frac{\sigma}{\sqrt{n}}) $$ 
+\frac{\sigma}{\sqrt{n}} $$ 
 
 ## Sampling distribution
 
 If $X \sim N(\mu_X, \sigma_X^2)$
 
 $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$ 
-## Example 
 
-:::
+## Example 
+::: incremental
+
 1. Let $Y \sim N(\mu = 5, \sigma^2 = 16)$, find the distribution of the mean of repeated samples of size 4. 
     - $\bar{Y} \sim N(\mu = 5, \sigma^2 = 4)$
 :::
@@ -103,6 +104,7 @@ $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
 ## Setting control limits - 1 {.smaller}
 
 If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits? 
+
 ::: incremental
 1. Set the control limits and find the $\alpha$ value
     - We want the control limits to be between 10 and 14
@@ -110,7 +112,7 @@ If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits
     - $\begin{aligned}P(\bar{X} < 10) &= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} < \frac{10-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z < \frac{10-12}{\sqrt{2.3}} = -1.318761)\end{aligned}$
     - `pnorm(-1.318761)` $\approx 0.09362451$
     - `pnorm(-1.318761, mean = 12, sd = sqrt(2.3))`
-    - $\begin{aligned}P(\bar{X} > 14) &= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} > \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z > \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}$
+    - $\begin{aligned}P(\bar{X} > 14) &= P(\frac{\bar{X} - }{\sigma_\bar{X}} > \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ & = P(Z > \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}$
     - `1 - pnorm(1.318761)` $\approx 0.09362451$
     - `pnorm(1.318761, mean = 12, sd = sqrt(2.3))`
     - the $\alpha$ value is $19\%$ which is very high!
@@ -119,8 +121,16 @@ If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits
 ## Setting control limits - 2
 
 ::: incremental
-2. Set the $\alpha$ value and find the control limits
 
+2. Set the $\alpha$ value and find the control limits
+ - We want the $\alpha$ to be $0.025$
+    - $Pr(\bar{X} < z_{0.0125} \textrm{ or } \bar{X} > z_{0.0125})$
+    - `qnorm(0.0125)` $\approx -2.241403$
+    - $\begin{aligned}-2.241403 =& \frac{X - \mu_\bar{X}}{\sigma_\bar{X}}\\ & = \frac{X - 12}{\sqrt{2.3}} \\ &= -2.241403\sqrt{2.3} +12 = 8.600744 \end{aligned}$
+    - `qnorm(0.0125, mean = 12, sd = sqrt(2.3))`
+    - `qnorm(1- 0.0125)` $\approx 2.241403$
+    - $\begin{aligned}2.241403 =& \frac{X - \mu_\bar{X}}{\sigma_\bar{X}}\\ & = \frac{X - 12}{\sqrt{2.3}} \\ &= 2.241403\sqrt{2.3} +12 = 15.39926 \end{aligned}$
+    - `qnorm(1-0.0125, mean = 12, sd = sqrt(2.3))`
 :::
 
 
