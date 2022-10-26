@@ -380,8 +380,16 @@
 <li class="fragment">If we know the data come from a normal distribution this is also true.</li>
 </ul>
 </div>
-<p>#{background-iframe=“https://nzgwynn.shinyapps.io/standard_error/”}</p>
-<p>#{background-image=“lect-13_things/std_error.png” background-size=“contain”}</p>
+</section></section>
+<section id="section-1" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/standard_error/">
+<h1></h1>
+
+</section>
+
+<section>
+<section id="section-2" class="title-slide slide level1 center" data-background-image="lect-13_things/std_error.png" data-background-size="contain">
+<h1></h1>
+
 </section>
 <section id="standard-error" class="slide level2">
 <h2>Standard error</h2>
@@ -403,12 +411,21 @@
 </ul></li>
 </ol>
 </div>
-<p>#{background-image=“lect-13_things/EM_tweet.png” background-size=“contain”}</p>
 </section></section>
+<section id="section-3" class="title-slide slide level1 center" data-background-image="lect-13_things/EM_tweet.png" data-background-size="contain">
+<h1></h1>
+
+</section>
+
+<section id="section-4" class="title-slide slide level1 center" data-background-image="lect-13_things/manufacturing_plant.png" data-background-size="contain">
+<h1></h1>
+
+</section>
+
 <section>
-<section id="production-line" class="title-slide slide level1 center" data-background-image="lect-13_things/manufacturing_plant.png" data-background-size="contain">
-<h1>Production line</h1>
-<p>#{background-image=“lect-13_things/error_classifications.png” background-size=“contain”}</p>
+<section id="section-5" class="title-slide slide level1 center" data-background-image="lect-13_things/error_classifications.png" data-background-size="contain">
+<h1></h1>
+
 </section>
 <section id="control-limits" class="slide level2">
 <h2>Control limits</h2>
@@ -462,7 +479,7 @@
 <li class="fragment">Set the control limits and find the <span class="math inline">\(\alpha\)</span> value
 <ul>
 <li class="fragment">We want the control limits to be between 10 and 14</li>
-<li class="fragment"><span class="math inline">\(\begin{aligned}P(\bar{X} &gt; 14) &amp;= P(\frac{\bar{X} - }{\sigma_\bar{X}} &gt; \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &gt; \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}\)</span></li>
+<li class="fragment"><span class="math inline">\(\begin{aligned}P(\bar{X} &gt; 14) &amp;= P(\frac{\bar{X} - \mu_\bar{X} }{\sigma_\bar{X}} &gt; \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &gt; \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}\)</span></li>
 <li class="fragment"><code>1 - pnorm(1.318761)</code> <span class="math inline">\(\approx 0.09362451\)</span></li>
 <li class="fragment"><code>pnorm(14, mean = 12, sd = sqrt(2.3))</code></li>
 <li class="fragment">the <span class="math inline">\(\alpha\)</span> value is <span class="math inline">\(19\%\)</span> which is very high!</li>
@@ -502,15 +519,31 @@
 </ul></li>
 </ul>
 </div>
-<p>#{background-image=“lect-13_things/control_plot.png” background-size=“contain”}</p>
+</section></section>
+<section>
+<section id="section-6" class="title-slide slide level1 center" data-background-image="lect-13_things/control_plot.png" data-background-size="contain">
+<h1></h1>
+
 </section>
-<section id="repeated-testing" class="slide level2">
+<section id="repeated-testing" class="slide level2 smaller">
 <h2>Repeated testing</h2>
 <p>We are not testing once, but multiple times. Assuming independence:</p>
 <div>
 <ul>
 <li class="fragment"><p><span class="math inline">\(\begin{aligned}P(\textrm{within limits for 10 days}) =&amp; P(\textrm{within limits for day 1}) \cdot P(\textrm{within limits for day 2}) \cdot \dots P(\textrm{within limits for day 10})\\ &amp;= 0.975^{10} \approx 0.7763296 \end{aligned}\)</span></p></li>
 <li class="fragment"><p>There is a <span class="math inline">\(1-0.7763296 = 0.2236704\)</span> percent false positive rate</p></li>
+<li class="fragment"><p>Management must decide if there is a false positive by checking for mechanical errors and inspecting equipment</p></li>
+<li class="fragment"><p>Adjust <span class="math inline">\(\alpha\)</span> value to address this</p></li>
+</ul>
+</div>
+</section>
+<section id="control-charts-for-variation" class="slide level2">
+<h2>Control charts for variation</h2>
+<p>X-bar charts are slow to detect under or over filling</p>
+<div>
+<ul>
+<li class="fragment"><em>S-Chart</em> tracks the standard deviation from sample to sample</li>
+<li class="fragment"><em>R-Chart</em> tracks the range from sample to sample</li>
 </ul>
 </div>
 
