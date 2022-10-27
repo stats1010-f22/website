@@ -115,7 +115,7 @@ The executive summary is worth 15 points and will be evaluated based on whether 
 
 ### Project organization
 
-The following folders and files in your project:
+The following folders and files in your project. Please download the template [here](https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fstats1010-f22%2Fwebsite%2Ftree%2Fmain%2Frepo-structure):
 
 -   `presentation.qmd` + `presentation.html`: Your presentation slides
 -   `README.Rmd` + `README.md`: Your write-up
