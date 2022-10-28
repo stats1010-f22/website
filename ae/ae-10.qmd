@@ -1,0 +1,153 @@
+---
+title: "Exam 2 revision"
+output: 
+   html_document
+---
+
+```{r}
+#| eval: false
+#| message: false
+#| echo: true
+library(tidyverse) # for data manipulation and plots
+library(praise) # for good vibes
+```
+
+Section A:
+
++------------------------------------------------+----------------------------+
+| 1.  Expected value of $X$                      | a\. $E(X - \mu)$           |
++------------------------------------------------+----------------------------+
+| 2.  Variance of $X$                            | b\. $10X$                  |
++------------------------------------------------+----------------------------+
+| 3.  Standard deviation of $X$                  | c\. $\frac{(X-0.04)}{\mu}$ |
++------------------------------------------------+----------------------------+
+| 4.  Shorthand notation for $P(X=x)$            | d\. $X+10$                 |
++------------------------------------------------+----------------------------+
+| 5.  Has 10 times the standard deviation of $X$ | e\. $E(X-\mu)^2$           |
++------------------------------------------------+----------------------------+
+| 6.  Is always equal to zero                    | f\. $\sqrt{VarX}$          |
++------------------------------------------------+----------------------------+
+| 7.  Increases the mean of $X$ by 10            | g\. $\mu$                  |
++------------------------------------------------+----------------------------+
+| 8.  Has standard deviation 1                   | h\. $p(x)$                 |
++------------------------------------------------+----------------------------+
+
+Section B:
+
++----------------------------------------------------------+----------------------------------+
+| 1.  Consequence of covariance                            | a\. $p(x,y)$                     |
++----------------------------------------------------------+----------------------------------+
+| 2.  Covariance between $X$ and $Y$                       | b\. $\rho$                       |
++----------------------------------------------------------+----------------------------------+
+| 3.  Property of uncorrelated random variables            | c\. $p(x, y) = p(x)p(y)$         |
++----------------------------------------------------------+----------------------------------+
+| 4.  Weighted sum of two random variables                 | d\. $\rho\sigma_x\sigma_y$       |
++----------------------------------------------------------+----------------------------------+
+| 5.  Sharpe ratio of random variable                      | e\. $Var(X+Y) >Var(X) + Var(Y)$  |
++----------------------------------------------------------+----------------------------------+
+| 6.  Implies $X$ and $Y$ are independent random variables | f\. $p(x) = p(y)$                |
++----------------------------------------------------------+----------------------------------+
+| 7.  Implies $X$ and $Y$ are identically distributed      | g\. $X_1, X_2, X_3$              |
++----------------------------------------------------------+----------------------------------+
+| 8.  Symbol for the correlation between random variables  | h\. $Var(X+Y) = Var(X) + Var(Y)$ |
++----------------------------------------------------------+----------------------------------+
+| 9.  Symbol for joint probability distribution            | i\. $S(Y)$                       |
++----------------------------------------------------------+----------------------------------+
+| 10. Sequence of iid random variables                     | j\. $3X-2Y$                      |
++----------------------------------------------------------+----------------------------------+
+
+Section C:
+
+$Y$ is a binomial random variable with parameters $n$ and \$p\$, $X$ is a Poisson random variable with parameter $\lambda$ and $B_1$ and $B_2$ are Bernoulli trials with probability of success $p$.
+
++--------------------------------------------------+----------------------------------------+
+| 1\. Expresssion for the variance of $Y$          | a\. $np$                               |
++==================================================+========================================+
+| 2.  Probability that the first trial $B_1$ fails | b\. $e^{-\lambda}$                     |
++--------------------------------------------------+----------------------------------------+
+| 3.  Expression for the mean of $X$               | c\. $e^{-\lambda} \frac{\lambda^2}{2}$ |
++--------------------------------------------------+----------------------------------------+
+| 4.  Probability that $Y$ is zero                 | d\. $p$                                |
++--------------------------------------------------+----------------------------------------+
+| 5.  Probability that $X$ is 2                    | e\. $0$                                |
++--------------------------------------------------+----------------------------------------+
+| 6.  Covariance between $B_1$ and $B_2$           | f\. $p^n$                              |
++--------------------------------------------------+----------------------------------------+
+| 7.  Expression for the expected value of $X$     | g\. $1-p$                              |
++--------------------------------------------------+----------------------------------------+
+| 8.  The expected value of $B_1$                  | h\. $(1-p)^n$                          |
++--------------------------------------------------+----------------------------------------+
+| 9.  Probability that $Y$ is $n$                  | i\. $np(1-p)$                          |
++--------------------------------------------------+----------------------------------------+
+| 10. Probability that $X$ is $0$.                 | j\. $\lambda$                          |
++--------------------------------------------------+----------------------------------------+
+
+Section D:
+
+$X$ denotes a normally distributed random variable: $X \sim N(\mu, \sigma^2)$. A googol, the namesake of Google, is $10^{100}$. The random variable $Z$ denotes a standard normal random variable, $Z \sim N(0,1)$
+
++---------------------------------------------------------------------------------+--------------------------+
+| 1.  Mean of $X$                                                                 | a\. $\frac{1}{2}$        |
++---------------------------------------------------------------------------------+--------------------------+
+| 2.  Variance of $X$                                                             | b\. $P(Z<1)$             |
++---------------------------------------------------------------------------------+--------------------------+
+| 3.  Probability of $X$ being less than its mean                                 | c\. $0.05$               |
++---------------------------------------------------------------------------------+--------------------------+
+| 4.  Probability of $X$ being less than $\mu +\sigma$                            | d\. \$\\frac{2}{3}       |
++---------------------------------------------------------------------------------+--------------------------+
+| 5.  Standard deviation of $Z$                                                   | e\. $\frac{1}{1 googol}$ |
++---------------------------------------------------------------------------------+--------------------------+
+| 6.  Probability that a $z-score$ based on $X$ is less than $1$ in magnitude     | f\. $\mu$                |
++---------------------------------------------------------------------------------+--------------------------+
+| 7.  Proportion of a normal distribution that is more than $20\sigma$ from $\mu$ | g\. $\sigma^2$           |
++---------------------------------------------------------------------------------+--------------------------+
+| 8.  Difference between value of $P(Z<-x)$ and value of $P(Z>x)$                 | h\. $1$                  |
++---------------------------------------------------------------------------------+--------------------------+
+| 9.  Distribution of the random variable $\mu +\sigma Z$                         | i\. $0$                  |
++---------------------------------------------------------------------------------+--------------------------+
+| 10. Probability that $Z>1.96$ plus the probability that $Z<-1.96$               | j\. $N(\mu, \sigma^2)$   |
++---------------------------------------------------------------------------------+--------------------------+
+
+Section E:
+
++--------------------------+-----------------------------------------------------------------------+
+| 1.  Sample               | a\. A complete collection of items desired to be studied              |
++--------------------------+-----------------------------------------------------------------------+
+| 2.  Census               | b\. A list of all the items in the population                         |
++--------------------------+-----------------------------------------------------------------------+
+| 3.  Target population    | c\. A subset of a larger collection of items                          |
++--------------------------+-----------------------------------------------------------------------+
+| 4.  Statistic            | d\. A homogeous subset of the population                              |
++--------------------------+-----------------------------------------------------------------------+
+| 5.  Parameter            | e\. A characteristic of a                                             |
++--------------------------+-----------------------------------------------------------------------+
+| 6.  Sampling frame       | f\. Occurs if a sampling method distorts a property of the population |
++--------------------------+-----------------------------------------------------------------------+
+| 7.  Simple random sample | g\. A comprehensive study of every item of the population             |
++--------------------------+-----------------------------------------------------------------------+
+| 8.  Stratum              | h\. The result if a respondent chooses not to answer a question       |
++--------------------------+-----------------------------------------------------------------------+
+| 9.  Bias                 | i\. A characteristic of a population                                  |
++--------------------------+-----------------------------------------------------------------------+
+| 10. Nonresponse          | j\. Sample chosen so that all subset of size $n$ are equally likely.  |
++--------------------------+-----------------------------------------------------------------------+
+
+Section F:
+
+1.  Which of the following $X$-bar charts indicate a process that is out of control?
+
+    ![](images/chpt_14_ques_1.png)
+
+2.  Which of the following $X$-bar charts show that a process went out of control?
+
+    ![](images/chpt_14_ques_2a.png)
+
+    ![](images/chapt_14_ques_2b.png)
+
+3.  Which, if any, of these combinations of an $X$-bar and an $S$-chart suggest a problem? If there's a problem, in which chart did you find the problem?
+
+    ![](images/chpt_14_ques_3.png)
+
+4.  Which, if any, of these combinations of an $X$-bar and an $S$-chart suggest a problem? If there's a problem, in which chart did you find the problem?
+
+    ![](images/chpt_14_ques_4.png)
