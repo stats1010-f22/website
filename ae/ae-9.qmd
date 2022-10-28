@@ -43,7 +43,7 @@ Chapter 10: Association between random variables
 4.  Mix and match
 
     +----------------------------------------------------------+----------------------------------+
-    | 1.  Consequence of positive covariance                   | a\. $p(x, y)$                    |
+    | 1\. Consequence of positive covariance                   | a\. $p(x, y)$                    |
     +==========================================================+==================================+
     | 2.  Covariance between X and Y                           | b\. $\rho$                       |
     +----------------------------------------------------------+----------------------------------+

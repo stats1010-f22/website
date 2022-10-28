@@ -43,7 +43,7 @@ This list is not exhaustive. You may listen to other podcasts or watch other sta
 
 ### Category 4: Participate in a data science competition or challenge
 
-Participate in a statistics or data science competition. You can participate individually or with a team. Kaggle and Drivendata both lead online competitions. More information to follow [here](https://www.drivendata.org/competitions/) or [here](https://www.kaggle.com/competitions).
+Participate in a statistics or data science competition. You can participate individually or with a team. Kaggle and Drivendata both lead online competitions. This is a [comprehensive list](https://devpost.com/) of hackathons, and more information can be found [here](https://www.drivendata.org/competitions/) or [here](https://www.kaggle.com/competitions).
 
 ### Category 5: Read a book on statistics/data science
 
@@ -82,4 +82,4 @@ Include the following on your slide:
 
 ## Submission
 
-Submit the reflection as a PDF under the **HW 6 - Statistics Experience** assignment on Gradescope by **Tuesday, Nov 22 at 5 pm ET.** It must be submitted by the deadline on Gradescope to be considered for grading.
+Submit the reflection as a PDF under the **HW 6 - Statistics Experience** assignment on Gradescope by **Tuesday, Nov 22 at 5 pm ET.** It must be submitted by the deadline on Canvas to be considered for grading.
