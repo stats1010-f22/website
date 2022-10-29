@@ -4,13 +4,7 @@ output:
    html_document
 ---
 
-```{r}
-#| eval: false
-#| message: false
-#| echo: true
-library(tidyverse) # for data manipulation and plots
-library(praise) # for good vibes
-```
+Hello everyone! I know some of you are waiting so I wanted to get this to you now, I will update throughout the weekend so watch this space. I want to give you a place to start.
 
 Section A:
 
@@ -31,6 +25,8 @@ Section A:
 +------------------------------------------------+----------------------------+
 | 8.  Has standard deviation 1                   | h\. $p(x)$                 |
 +------------------------------------------------+----------------------------+
+
+9.  
 
 Section B:
 
