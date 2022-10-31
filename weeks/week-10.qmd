@@ -3,20 +3,13 @@ title: "Week 10"
 subtitle: "Revision & Exam 2"
 editor: visual
 ---
-
-## Prepare
-
-📖 Read
-
 ## Participate
 
-🖥️
-
-🖥️
+🖥️ [Happy Halloween](/slides/halloween.html)
 
 ## Practice
 
-📋
+📋 [Revision for exam 2](/ae/ae-10.html)
 
 ## Perform
 
