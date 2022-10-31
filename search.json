@@ -480,14 +480,21 @@
     "href": "weeks/week-10.html",
     "title": "Week 10",
     "section": "",
-    "text": "🖥️ Happy Halloween"
+    "text": "📖 Read"
+  },
+  {
+    "objectID": "weeks/week-10.html#participate",
+    "href": "weeks/week-10.html#participate",
+    "title": "Week 10",
+    "section": "Participate",
+    "text": "Participate\n🖥️\n🖥️"
   },
   {
     "objectID": "weeks/week-10.html#practice",
     "href": "weeks/week-10.html#practice",
     "title": "Week 10",
     "section": "Practice",
-    "text": "Practice\n📋 Revision for exam 2"
+    "text": "Practice\n📋"
   },
   {
     "objectID": "weeks/week-10.html#perform",
@@ -858,7 +865,7 @@
     "href": "supplemental/exam-2-studyguide.html#sampling-methods",
     "title": "Study list for exam 2",
     "section": "Sampling methods",
-    "text": "Sampling methods\nSRS, stratified, cluster, census, voluntary response, convenience benefits and drawbacks of all and where to apply each"
+    "text": "Sampling methods\nSRS, stratified, cluster, census, voluntary response, convienience benefits and drawbacks of all and where to apply each"
   },
   {
     "objectID": "supplemental/chi-squared.html",
