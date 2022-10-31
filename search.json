@@ -704,14 +704,14 @@
     "href": "supplemental/exam-2-studyguide.html#addition-rules",
     "title": "Study list for exam 2",
     "section": "Addition rules",
-    "text": "Addition rules\n\\(E(X \\pm c) = E(X) \\pm c\\) \\(SD(X \\pm c) = SD(X)\\) \\(Var(X \\pm c) = Var(X)\\)"
+    "text": "Addition rules\n-\\(E(X \\pm c) = E(X) \\pm c\\)\n-\\(SD(X \\pm c) = SD(X)\\)\n-\\(Var(X \\pm c) = Var(X)\\)"
   },
   {
     "objectID": "supplemental/exam-2-studyguide.html#multiplication-rules",
     "href": "supplemental/exam-2-studyguide.html#multiplication-rules",
     "title": "Study list for exam 2",
     "section": "Multiplication rules",
-    "text": "Multiplication rules\n\\(E(cX) = cE(X)\\) \\(SD(cX) = |c|SD(X)\\) \\(Var(cX) = c^2Var(X)\\) \\(E(cX \\pm a)=cE(X) \\pm a\\) \\(Var(cX \\pm a)=c^2Var(X)\\)"
+    "text": "Multiplication rules\n-\\(E(cX) = cE(X)\\)\n-\\(SD(cX) = |c|SD(X)\\)\n-\\(Var(cX) = c^2Var(X)\\)\n-\\(E(cX \\pm a)=cE(X) \\pm a\\)\n- \\(Var(cX \\pm a)=c^2Var(X)\\)"
   },
   {
     "objectID": "supplemental/exam-2-studyguide.html#which-variable-on-which-axis-and-what-are-the-names-for-each-variable",
