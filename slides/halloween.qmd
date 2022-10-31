@@ -1,0 +1,16 @@
+---
+title: "Chapter 14: Happy Halloween"
+subtitle: "STAT 1010 - Fall 2022"
+footer:  "[stat1010-f22.github.io/website](https://stats1010-f22.github.io/website/)"
+format: 
+  revealjs: 
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+editor: visual
+execute:
+  freeze: auto
+---
+
+#  {background-image="halloween/paranormal_dist.png" background-size="contain"}
+
