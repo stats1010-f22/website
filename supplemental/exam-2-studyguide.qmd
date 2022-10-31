@@ -32,11 +32,23 @@ How to define a pdf!
 
 ## Addition rules
 
-$E(X \pm c) = E(X) \pm c$ $SD(X \pm c) = SD(X)$ $Var(X \pm c) = Var(X)$
+\-$E(X \pm c) = E(X) \pm c$
+
+\-$SD(X \pm c) = SD(X)$
+
+\-$Var(X \pm c) = Var(X)$
 
 ## Multiplication rules
 
-$E(cX) = cE(X)$ $SD(cX) = |c|SD(X)$ $Var(cX) = c^2Var(X)$ $E(cX \pm a)=cE(X) \pm a$ $Var(cX \pm a)=c^2Var(X)$
+\-$E(cX) = cE(X)$
+
+\-$SD(cX) = |c|SD(X)$
+
+\-$Var(cX) = c^2Var(X)$
+
+\-$E(cX \pm a)=cE(X) \pm a$
+
+\- $Var(cX \pm a)=c^2Var(X)$
 
 # Lecture 8
 
