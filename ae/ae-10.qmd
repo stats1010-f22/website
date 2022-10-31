@@ -83,17 +83,13 @@ $Y$ is a binomial random variable with parameters $n$ and \$p\$, $X$ is a Poisso
 11. An auditor inspects 25 transactions processed by the business office of a company. The auditor selects these transactions at random from the thousands that were processed in the most recent three months. In the past, the auditor has found 10% of transactions at this type of company to have been processed incorrectly. True or False: A binomial model would be more appropriate for this problem if the auditor picked the first 25 transactions during the three-month period.
 12. Is the binomial model suited to these applications?
     a.  The next five cars that enter a gasoline filling stations get a fill-up.
-
     b.  A poll of the 15 members of the board of directors indicates that 6 are in favor of a proposal to change the salary of the CEO.
-
     c.  A company realizes that 10% of its packages are not being sealed properly. When examining a case of 24, it counts the number that are unsealed.
 13. Every now and then even a good diamonds cutter has a problem and the diamond shatters when being cut. For one cutter, the chance of such errors is 0.1%.
     a.  What is the probability model seems well suited to this problem? Why?
-
     b.  If this cutter works on 75 stones, what is the probability that he breaks 2 or more?
 14. A dairy farmer accidentally allowed some of his cows to graze in a pasture containing weeds that would contaminate the milk from his herd. The farmer estimates that there's a 10% chance of a cow grazing on some of the flavorful weeds.
     a.  Under these conditions, what is the probability that none of the 12 animals in this herd ate the weeds.
-
     b.  Does the poisson model give a good estimate of the probability that no animal ate the weeds?
 
 Section D:
@@ -126,15 +122,11 @@ $X$ denotes a normally distributed random variable: $X \sim N(\mu, \sigma^2)$. A
 12. If $X_1 \sim N(\mu, \sigma)$ and $X_2 \sim N(\mu, \sigma)$ are iid, then what is the distribution of $\frac{X_1-X_2}{\sqrt{2}\sigma}$
 13. A contractor built 30 similar homes in a suburban development. The homes have comparable size and amenities, but each has features that customize the appearance, landscape, and interior. The contractor expects the homes to sell for \$450,000. He expects that one-third of the homes will sell either for less than \$400,000 or more than \$500,000.
     a.  Would a normal model be appropriate to describe the distribution of sale prices?
-
     b.  What data would help you decide if a normal model is appropriate? (These homes are *unsold,* their prices are unavailable)
-
     c.  What normal model has properties that are consistent with the intuition of the contractor?
 14. A hurricane bond pays the holder a face amount, say \$1 million, if a hurricane causes major damage in the United States. Suppose that the chance for such a storm is 5% per year.
     a.  If a financial firm sells these bonds for \$60,000, what is the chance that the firm loses money if it only sells one?
-
     b.  If the firm sells 1,000 of these policies, each for \$60,000, what is the probability that it loses money.
-
     c.  How does the difference between the probabilities of parts a and b compare to the situation of an insurance company that writes coverage to homeowners who have accidents independently of one another?
 
 Section E:
@@ -161,6 +153,9 @@ Section E:
 | 10. Nonresponse          | j\. Sample chosen so that all subset of size $n$ are equally likely.  |
 +--------------------------+-----------------------------------------------------------------------+
 
+11. True or False: Bias due to the wording of questions causes different samples to present different impressions of the population.
+12. A school district has requested a survey be conducted on the socioeconomic status of their students. Their budget only allows them to conduct the survey in some of the schools, hence they need to first sample a few schools. Students living in this district generally attend a school in their neighbourhood. The district is broken into many distinct and unique neighbourhoods, some including large single-family homes and others with only low-income housing. What kind of sampling did they employ?
+
 Section F:
 
 1.  Which of the following $X$-bar charts indicate a process that is out of control?
@@ -180,3 +175,10 @@ Section F:
 4.  Which, if any, of these combinations of an $X$-bar and an $S$-chart suggest a problem? If there's a problem, in which chart did you find the problem?
 
     ![](images/chpt_14_ques_4.png)
+
+5.  The manager of a warehouse monitors shipments. A random sample of 25 packages is selected and weighed every day. The mean weight should be $\mu = 22$ pounds, and $\sigma = 5$ pounds. True or False: An $X$-bar chart with control limits 12 pounds and 32 pounds has a 5% chance of a Type I error.
+
+6.  Rather than stop the production when a mean crosses the control limits in the $X$-bar chart, a manager has decided to wait until two consecutive means lie outside the control limits before stopping the process. The control limits are $\mu \pm 2\sigma/ \sqrt{n}$.
+
+    a.  By waiting for two consecutive sample means to lie outside the control limits, has the manager increased or decreased the chance for a Type I error?
+    b.  What is the probability of a Type I error if this procedure is used?
