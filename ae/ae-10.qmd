@@ -4,8 +4,6 @@ output:
    html_document
 ---
 
-Hello everyone! I know some of you are waiting so I wanted to get this to you now, I will update throughout the weekend so watch this space. I want to give you a place to start.
-
 Section A:
 
 +------------------------------------------------+----------------------------+
@@ -182,3 +180,9 @@ Section F:
 
     a.  By waiting for two consecutive sample means to lie outside the control limits, has the manager increased or decreased the chance for a Type I error?
     b.  What is the probability of a Type I error if this procedure is used?
+
+7.  Where should the control limits for an $X$-bar chart be placed if the design of the process sets $\alpha = 0.0027$ with the following parameters (assume that the sample size condition for control charts has been verified)?
+
+    1.  $\mu = 10, \sigma = 5,$ and $n = 18$ cases per batch
+
+    2.  $\mu = -4, \sigma = 2,$ and $n = 12$ cases per batch
