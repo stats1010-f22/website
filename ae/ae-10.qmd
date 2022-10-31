@@ -54,7 +54,7 @@ Please review AE-9, the solutions are on the Canvas page.
 
 Section C:
 
-$Y$ is a binomial random variable with parameters $n$ and \$p\$, $X$ is a Poisson random variable with parameter $\lambda$ and $B_1$ and $B_2$ are Bernoulli trials with probability of success $p$.
+$Y$ is a binomial random variable with parameters $n$ and $p$, $X$ is a Poisson random variable with parameter $\lambda$ and $B_1$ and $B_2$ are Bernoulli trials with probability of success $p$.
 
 +--------------------------------------------------+----------------------------------------+
 | 1\. Expresssion for the variance of $Y$          | a\. $np$                               |
@@ -101,7 +101,7 @@ $X$ denotes a normally distributed random variable: $X \sim N(\mu, \sigma^2)$. A
 +---------------------------------------------------------------------------------+--------------------------+
 | 3.  Probability of $X$ being less than its mean                                 | c\. $0.05$               |
 +---------------------------------------------------------------------------------+--------------------------+
-| 4.  Probability of $X$ being less than $\mu +\sigma$                            | d\. \$\\frac{2}{3}       |
+| 4.  Probability of $X$ being less than $\mu +\sigma$                            | d\. $\frac{2}{3}$        |
 +---------------------------------------------------------------------------------+--------------------------+
 | 5.  Standard deviation of $Z$                                                   | e\. $\frac{1}{1 googol}$ |
 +---------------------------------------------------------------------------------+--------------------------+
