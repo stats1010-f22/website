@@ -148,4 +148,8 @@ sample, population, bias, representative, random, inference, cluster, strata, sa
 
 ## Sampling methods
 
-SRS, stratified, cluster, census, voluntary response, convienience benefits and drawbacks of all and where to apply each
+SRS, stratified, cluster, census, voluntary response, convenience benefits and drawbacks of all and where to apply each
+
+# Lecture 13
+
+distribution of the sample mean, standard error, control limits and types of errors, error rates with repeated testing, control charts for variation
