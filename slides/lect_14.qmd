@@ -31,7 +31,22 @@ library(tidyverse)
 
 ![](lect_07-images/parameter_estimate.png)
 
-## Shiny app
+#  {background-iframe="https://nzgwynn.shinyapps.io/CI_prop/"}
+
+
+## Variability
+
+::: notes
+ask them what they population mean should be
+
+we also need to think about the variability
+:::
+
+::: incremental
+- dependent on $p$ - fatter in middle, skinnier near 0 and 1
+- dependent on $n$, number of samples, higher sample, less variability
+
+:::
 
 ## Formula
 

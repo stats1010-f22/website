@@ -1,0 +1,13 @@
+name: CI_prop
+title: CI_prop
+username:
+account: nzgwynn
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7491101
+bundleId: 6464802
+url: https://nzgwynn.shinyapps.io/CI_prop/
+when: 1667339063.74042
+lastSyncTime: 1667339063.74044
+asMultiple: FALSE
+asStatic: FALSE

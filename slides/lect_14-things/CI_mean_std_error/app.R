@@ -53,17 +53,15 @@ server <- function(input, output) {
     ## 2000 samples from bernoulli trial each of size size with
     ## probability from input
     means <- tibble(a = colMeans(replicate(2000,
-                          rbinom(n = input$size, n = 1, prob = input$p))))
+                                           rbinom(n = input$size, size = 1, prob = input$p))))
 
 
-    # ggplot(means) +
-    #   geom_density(aes(x = a)) +
-    #   labs(x = "possible values of p", y = "count",
-    #        title = "Plot of proportion from 2000 Bernoulli trials",
-    #        subtitle = "Size of samples, and p from input") +
-    #   lims(x = c(-50, 50))
-
-
+    ggplot(means) +
+      geom_density(aes(x = a)) +
+      labs(x = "possible values of p", y = "count",
+           title = "Plot of mean from normal distribution",
+           subtitle = "Size of samples, and proportion from input") +
+      lims(x = c(0, 1))
   })
 
 }
