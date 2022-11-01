@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "STAT 1010: Introduction to Business Statistics",
     "section": "",
-    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct\nThe normal probability model\n\n🖥️\n\n\n\n\n\n\n\n9\nMon, 24 Oct\nSamples and surveys\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 26 Oct\nSampling variation and quality\n\n🖥️\n📋\n\n\n\n📂\n\n\n10\nMon, 31 Oct\nRevision for Exam 2\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 2 Nov\nExam 2\n\n\n\n\n✅"
+    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct\nThe normal probability model\n\n🖥️\n\n\n\n\n\n\n\n9\nMon, 24 Oct\nSamples and surveys\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 26 Oct\nSampling variation and quality\n\n🖥️\n📋\n\n\n\n📂\n\n\n10\nMon, 31 Oct\nRevision for Exam 2\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 2 Nov\nExam 2\n\n\n\n\n✅\n\n\n\n\n11\nMon, 7 Nov\nConfidence intervals\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 9 Nov\nExam 2\n\n\n\n\n✅"
   },
   {
     "objectID": "course-overview.html",
@@ -495,6 +495,27 @@
     "title": "Week 10",
     "section": "Perform",
     "text": "Perform\n✅ Exam 2\n\n\nBack to course schedule ⏎"
+  },
+  {
+    "objectID": "weeks/week-11.html",
+    "href": "weeks/week-11.html",
+    "title": "Week 11",
+    "section": "",
+    "text": "📖 Read Chpts 15 & 16 from Stine and Foster\n📖 Read FGLI: Chpts 15 & 16 from Stine and Foster"
+  },
+  {
+    "objectID": "weeks/week-11.html#participate",
+    "href": "weeks/week-11.html#participate",
+    "title": "Week 11",
+    "section": "Participate",
+    "text": "Participate\n🖥️ Lecture 14"
+  },
+  {
+    "objectID": "weeks/week-11.html#practice",
+    "href": "weeks/week-11.html#practice",
+    "title": "Week 11",
+    "section": "Practice",
+    "text": "Practice\n📋 Revision for exam 2\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-04.html",
@@ -1778,6 +1799,27 @@
     "text": "Importing data\n\n\n\nDouble click on the data you would like to install in the data folder in your project and select “Import Dataset.”\n\n\nIf this is the first time you are importing data, you may be prompted to download a package first. Follow the Graphical User Interface (GUI) to import the data. Check that the data is as you expect and update “Import Options” until it seems reasonable. Copy the coding from “Code Preview” and save put it in your document “so that when you restart R, you have coding that will import the data.\n\n\n\nWhen the data is imported, check the “Data Preview” to make sure it is what you expect. If not, change the “Import Options.”\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
+    "objectID": "slides/lect_14.html#revision",
+    "href": "slides/lect_14.html#revision",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Revision",
+    "text": "Revision"
+  },
+  {
+    "objectID": "slides/lect_14.html#shiny-app",
+    "href": "slides/lect_14.html#shiny-app",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Shiny app",
+    "text": "Shiny app"
+  },
+  {
+    "objectID": "slides/lect_14.html#section",
+    "href": "slides/lect_14.html#section",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "",
+    "text": "stat1010-f22.github.io/website"
+  },
+  {
     "objectID": "slides/lect_12.html#revision",
     "href": "slides/lect_12.html#revision",
     "title": "Chapter 13: Samples and surveys",
@@ -1925,6 +1967,300 @@
     "text": "The purpose of Exploratory Data Analysis (EDA)\n\nEDA is about learning the structure of a dataset through a series of numerical and graphical techniques.\nWhen you do EDA, you’ll look for both\n\ngeneral trends and\ninteresting outliers in your data.\n\n\ngenerate questions that will help inform subsequent analysis."
   },
   {
+    "objectID": "slides/lect_15.html#sampling",
+    "href": "slides/lect_15.html#sampling",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Sampling",
+    "text": "Sampling\n\n\nSRS\nStratified sampling\nCluster sampling\nit would be nice to sample repeatedly to see how the mean values compare"
+  },
+  {
+    "objectID": "slides/lect_15.html#benefits-of-averaging",
+    "href": "slides/lect_15.html#benefits-of-averaging",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Benefits of averaging",
+    "text": "Benefits of averaging\n\n\nreduces variation\nmore normal than the original distribution"
+  },
+  {
+    "objectID": "slides/lect_15.html#normal-model",
+    "href": "slides/lect_15.html#normal-model",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Normal model",
+    "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true."
+  },
+  {
+    "objectID": "slides/lect_15.html#standard-error",
+    "href": "slides/lect_15.html#standard-error",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Standard error",
+    "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}} \\]"
+  },
+  {
+    "objectID": "slides/lect_15.html#sampling-distribution",
+    "href": "slides/lect_15.html#sampling-distribution",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\]"
+  },
+  {
+    "objectID": "slides/lect_15.html#example",
+    "href": "slides/lect_15.html#example",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Example",
+    "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)"
+  },
+  {
+    "objectID": "slides/lect_15.html#control-limits",
+    "href": "slides/lect_15.html#control-limits",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Control limits",
+    "text": "Control limits\n\n\nif mean production is outside certain values, we may need to stop and recallibrate machinery\nthese values are called control limits\n\\(\\mu - L \\leq \\bar{X} \\leq \\mu + L\\)\n\\(\\mu - L\\) and \\(\\mu + L\\) are control limits"
+  },
+  {
+    "objectID": "slides/lect_15.html#types-of-errors",
+    "href": "slides/lect_15.html#types-of-errors",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Types of errors",
+    "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)"
+  },
+  {
+    "objectID": "slides/lect_15.html#setting-control-limits---1",
+    "href": "slides/lect_15.html#setting-control-limits---1",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 1",
+    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(10, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_15.html#setting-control-limits---1-contd",
+    "href": "slides/lect_15.html#setting-control-limits---1-contd",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 1 cont’d",
+    "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X} }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\n1 - pnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
+  },
+  {
+    "objectID": "slides/lect_15.html#setting-control-limits---2",
+    "href": "slides/lect_15.html#setting-control-limits---2",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 2",
+    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)\nqnorm(0.0125, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_15.html#setting-control-limits---2---contd",
+    "href": "slides/lect_15.html#setting-control-limits---2---contd",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 2 - cont’d",
+    "text": "Setting control limits - 2 - cont’d\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_15.html#repeated-testing",
+    "href": "slides/lect_15.html#repeated-testing",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Repeated testing",
+    "text": "Repeated testing\nWe are not testing once, but multiple times. Assuming independence:\n\n\n\\(\\begin{aligned}P(\\textrm{within limits for 10 days}) =& P(\\textrm{within limits for day 1}) \\cdot P(\\textrm{within limits for day 2}) \\cdot \\dots \\cdot P(\\textrm{within limits for day 10})\\\\ &= 0.975^{10} \\approx 0.7763296 \\end{aligned}\\)\nThere is a \\(1-0.7763296 = 0.2236704\\) percent false positive rate\nManagement must decide if there is a false positive by checking for mechanical errors and inspecting equipment\nAdjust \\(\\alpha\\) value to address this"
+  },
+  {
+    "objectID": "slides/lect_15.html#control-charts-for-variation",
+    "href": "slides/lect_15.html#control-charts-for-variation",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Control charts for variation",
+    "text": "Control charts for variation\nX-bar charts are slow to detect under or over filling\n\n\nS-Chart tracks the standard deviation from sample to sample\nR-Chart tracks the range from sample to sample\n\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "slides/lect_16.html#sampling",
+    "href": "slides/lect_16.html#sampling",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Sampling",
+    "text": "Sampling\n\n\nSRS\nStratified sampling\nCluster sampling\nit would be nice to sample repeatedly to see how the mean values compare"
+  },
+  {
+    "objectID": "slides/lect_16.html#benefits-of-averaging",
+    "href": "slides/lect_16.html#benefits-of-averaging",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Benefits of averaging",
+    "text": "Benefits of averaging\n\n\nreduces variation\nmore normal than the original distribution"
+  },
+  {
+    "objectID": "slides/lect_16.html#normal-model",
+    "href": "slides/lect_16.html#normal-model",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Normal model",
+    "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true."
+  },
+  {
+    "objectID": "slides/lect_16.html#standard-error",
+    "href": "slides/lect_16.html#standard-error",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Standard error",
+    "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}} \\]"
+  },
+  {
+    "objectID": "slides/lect_16.html#sampling-distribution",
+    "href": "slides/lect_16.html#sampling-distribution",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\]"
+  },
+  {
+    "objectID": "slides/lect_16.html#example",
+    "href": "slides/lect_16.html#example",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Example",
+    "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)"
+  },
+  {
+    "objectID": "slides/lect_16.html#control-limits",
+    "href": "slides/lect_16.html#control-limits",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Control limits",
+    "text": "Control limits\n\n\nif mean production is outside certain values, we may need to stop and recallibrate machinery\nthese values are called control limits\n\\(\\mu - L \\leq \\bar{X} \\leq \\mu + L\\)\n\\(\\mu - L\\) and \\(\\mu + L\\) are control limits"
+  },
+  {
+    "objectID": "slides/lect_16.html#types-of-errors",
+    "href": "slides/lect_16.html#types-of-errors",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Types of errors",
+    "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)"
+  },
+  {
+    "objectID": "slides/lect_16.html#setting-control-limits---1",
+    "href": "slides/lect_16.html#setting-control-limits---1",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 1",
+    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(10, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_16.html#setting-control-limits---1-contd",
+    "href": "slides/lect_16.html#setting-control-limits---1-contd",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 1 cont’d",
+    "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X} }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\n1 - pnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
+  },
+  {
+    "objectID": "slides/lect_16.html#setting-control-limits---2",
+    "href": "slides/lect_16.html#setting-control-limits---2",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 2",
+    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)\nqnorm(0.0125, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_16.html#setting-control-limits---2---contd",
+    "href": "slides/lect_16.html#setting-control-limits---2---contd",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 2 - cont’d",
+    "text": "Setting control limits - 2 - cont’d\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_16.html#repeated-testing",
+    "href": "slides/lect_16.html#repeated-testing",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Repeated testing",
+    "text": "Repeated testing\nWe are not testing once, but multiple times. Assuming independence:\n\n\n\\(\\begin{aligned}P(\\textrm{within limits for 10 days}) =& P(\\textrm{within limits for day 1}) \\cdot P(\\textrm{within limits for day 2}) \\cdot \\dots \\cdot P(\\textrm{within limits for day 10})\\\\ &= 0.975^{10} \\approx 0.7763296 \\end{aligned}\\)\nThere is a \\(1-0.7763296 = 0.2236704\\) percent false positive rate\nManagement must decide if there is a false positive by checking for mechanical errors and inspecting equipment\nAdjust \\(\\alpha\\) value to address this"
+  },
+  {
+    "objectID": "slides/lect_16.html#control-charts-for-variation",
+    "href": "slides/lect_16.html#control-charts-for-variation",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Control charts for variation",
+    "text": "Control charts for variation\nX-bar charts are slow to detect under or over filling\n\n\nS-Chart tracks the standard deviation from sample to sample\nR-Chart tracks the range from sample to sample\n\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "slides/lect_18.html#sampling",
+    "href": "slides/lect_18.html#sampling",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Sampling",
+    "text": "Sampling\n\n\nSRS\nStratified sampling\nCluster sampling\nit would be nice to sample repeatedly to see how the mean values compare"
+  },
+  {
+    "objectID": "slides/lect_18.html#benefits-of-averaging",
+    "href": "slides/lect_18.html#benefits-of-averaging",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Benefits of averaging",
+    "text": "Benefits of averaging\n\n\nreduces variation\nmore normal than the original distribution"
+  },
+  {
+    "objectID": "slides/lect_18.html#normal-model",
+    "href": "slides/lect_18.html#normal-model",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Normal model",
+    "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true."
+  },
+  {
+    "objectID": "slides/lect_18.html#standard-error",
+    "href": "slides/lect_18.html#standard-error",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Standard error",
+    "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}} \\]"
+  },
+  {
+    "objectID": "slides/lect_18.html#sampling-distribution",
+    "href": "slides/lect_18.html#sampling-distribution",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\]"
+  },
+  {
+    "objectID": "slides/lect_18.html#example",
+    "href": "slides/lect_18.html#example",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Example",
+    "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)"
+  },
+  {
+    "objectID": "slides/lect_18.html#control-limits",
+    "href": "slides/lect_18.html#control-limits",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Control limits",
+    "text": "Control limits\n\n\nif mean production is outside certain values, we may need to stop and recallibrate machinery\nthese values are called control limits\n\\(\\mu - L \\leq \\bar{X} \\leq \\mu + L\\)\n\\(\\mu - L\\) and \\(\\mu + L\\) are control limits"
+  },
+  {
+    "objectID": "slides/lect_18.html#types-of-errors",
+    "href": "slides/lect_18.html#types-of-errors",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Types of errors",
+    "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)"
+  },
+  {
+    "objectID": "slides/lect_18.html#setting-control-limits---1",
+    "href": "slides/lect_18.html#setting-control-limits---1",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 1",
+    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(10, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_18.html#setting-control-limits---1-contd",
+    "href": "slides/lect_18.html#setting-control-limits---1-contd",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 1 cont’d",
+    "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X} }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\n1 - pnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
+  },
+  {
+    "objectID": "slides/lect_18.html#setting-control-limits---2",
+    "href": "slides/lect_18.html#setting-control-limits---2",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 2",
+    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)\nqnorm(0.0125, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_18.html#setting-control-limits---2---contd",
+    "href": "slides/lect_18.html#setting-control-limits---2---contd",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 2 - cont’d",
+    "text": "Setting control limits - 2 - cont’d\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_18.html#repeated-testing",
+    "href": "slides/lect_18.html#repeated-testing",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Repeated testing",
+    "text": "Repeated testing\nWe are not testing once, but multiple times. Assuming independence:\n\n\n\\(\\begin{aligned}P(\\textrm{within limits for 10 days}) =& P(\\textrm{within limits for day 1}) \\cdot P(\\textrm{within limits for day 2}) \\cdot \\dots \\cdot P(\\textrm{within limits for day 10})\\\\ &= 0.975^{10} \\approx 0.7763296 \\end{aligned}\\)\nThere is a \\(1-0.7763296 = 0.2236704\\) percent false positive rate\nManagement must decide if there is a false positive by checking for mechanical errors and inspecting equipment\nAdjust \\(\\alpha\\) value to address this"
+  },
+  {
+    "objectID": "slides/lect_18.html#control-charts-for-variation",
+    "href": "slides/lect_18.html#control-charts-for-variation",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Control charts for variation",
+    "text": "Control charts for variation\nX-bar charts are slow to detect under or over filling\n\n\nS-Chart tracks the standard deviation from sample to sample\nR-Chart tracks the range from sample to sample\n\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
     "objectID": "slides/lect_13.html#sampling",
     "href": "slides/lect_13.html#sampling",
     "title": "Chapter 14: Sampling variation and quality",
@@ -2018,6 +2354,104 @@
   {
     "objectID": "slides/lect_13.html#control-charts-for-variation",
     "href": "slides/lect_13.html#control-charts-for-variation",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Control charts for variation",
+    "text": "Control charts for variation\nX-bar charts are slow to detect under or over filling\n\n\nS-Chart tracks the standard deviation from sample to sample\nR-Chart tracks the range from sample to sample\n\n\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "slides/lect_17.html#sampling",
+    "href": "slides/lect_17.html#sampling",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Sampling",
+    "text": "Sampling\n\n\nSRS\nStratified sampling\nCluster sampling\nit would be nice to sample repeatedly to see how the mean values compare"
+  },
+  {
+    "objectID": "slides/lect_17.html#benefits-of-averaging",
+    "href": "slides/lect_17.html#benefits-of-averaging",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Benefits of averaging",
+    "text": "Benefits of averaging\n\n\nreduces variation\nmore normal than the original distribution"
+  },
+  {
+    "objectID": "slides/lect_17.html#normal-model",
+    "href": "slides/lect_17.html#normal-model",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Normal model",
+    "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true."
+  },
+  {
+    "objectID": "slides/lect_17.html#standard-error",
+    "href": "slides/lect_17.html#standard-error",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Standard error",
+    "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}} \\]"
+  },
+  {
+    "objectID": "slides/lect_17.html#sampling-distribution",
+    "href": "slides/lect_17.html#sampling-distribution",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Sampling distribution",
+    "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\]"
+  },
+  {
+    "objectID": "slides/lect_17.html#example",
+    "href": "slides/lect_17.html#example",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Example",
+    "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)"
+  },
+  {
+    "objectID": "slides/lect_17.html#control-limits",
+    "href": "slides/lect_17.html#control-limits",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Control limits",
+    "text": "Control limits\n\n\nif mean production is outside certain values, we may need to stop and recallibrate machinery\nthese values are called control limits\n\\(\\mu - L \\leq \\bar{X} \\leq \\mu + L\\)\n\\(\\mu - L\\) and \\(\\mu + L\\) are control limits"
+  },
+  {
+    "objectID": "slides/lect_17.html#types-of-errors",
+    "href": "slides/lect_17.html#types-of-errors",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Types of errors",
+    "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)"
+  },
+  {
+    "objectID": "slides/lect_17.html#setting-control-limits---1",
+    "href": "slides/lect_17.html#setting-control-limits---1",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 1",
+    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(10, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_17.html#setting-control-limits---1-contd",
+    "href": "slides/lect_17.html#setting-control-limits---1-contd",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 1 cont’d",
+    "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X} }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\n1 - pnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
+  },
+  {
+    "objectID": "slides/lect_17.html#setting-control-limits---2",
+    "href": "slides/lect_17.html#setting-control-limits---2",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 2",
+    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)\nqnorm(0.0125, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_17.html#setting-control-limits---2---contd",
+    "href": "slides/lect_17.html#setting-control-limits---2---contd",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Setting control limits - 2 - cont’d",
+    "text": "Setting control limits - 2 - cont’d\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))"
+  },
+  {
+    "objectID": "slides/lect_17.html#repeated-testing",
+    "href": "slides/lect_17.html#repeated-testing",
+    "title": "Chapter 14: Sampling variation and quality",
+    "section": "Repeated testing",
+    "text": "Repeated testing\nWe are not testing once, but multiple times. Assuming independence:\n\n\n\\(\\begin{aligned}P(\\textrm{within limits for 10 days}) =& P(\\textrm{within limits for day 1}) \\cdot P(\\textrm{within limits for day 2}) \\cdot \\dots \\cdot P(\\textrm{within limits for day 10})\\\\ &= 0.975^{10} \\approx 0.7763296 \\end{aligned}\\)\nThere is a \\(1-0.7763296 = 0.2236704\\) percent false positive rate\nManagement must decide if there is a false positive by checking for mechanical errors and inspecting equipment\nAdjust \\(\\alpha\\) value to address this"
+  },
+  {
+    "objectID": "slides/lect_17.html#control-charts-for-variation",
+    "href": "slides/lect_17.html#control-charts-for-variation",
     "title": "Chapter 14: Sampling variation and quality",
     "section": "Control charts for variation",
     "text": "Control charts for variation\nX-bar charts are slow to detect under or over filling\n\n\nS-Chart tracks the standard deviation from sample to sample\nR-Chart tracks the range from sample to sample\n\n\n\n\nstat1010-f22.github.io/website"

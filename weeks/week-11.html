@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 - Fall 2022 - Week 8</title>
+<title>STAT 1010 - Fall 2022 - Week 11</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../weeks/week-09.html" rel="next">
-<link href="../weeks/week-07.html" rel="prev">
+<link href="../supplemental/chi-squared.html" rel="next">
+<link href="../weeks/week-10.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -63,11 +63,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Week 8">
-<meta property="og:description" content="Probability Models">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Week 11">
+<meta property="og:description" content="Confidence intervals and statistical tests">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Week 8">
-<meta name="twitter:description" content="Probability Models">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Week 11">
+<meta name="twitter:description" content="Confidence intervals and statistical tests">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Week 8</h1>
+      <h1 class="quarto-secondary-nav-title">Week 11</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -252,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-08.html" class="sidebar-item-text sidebar-link active">Week 8</a>
+  <a href="../weeks/week-08.html" class="sidebar-item-text sidebar-link">Week 8</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-11.html" class="sidebar-item-text sidebar-link">Week 11</a>
+  <a href="../weeks/week-11.html" class="sidebar-item-text sidebar-link active">Week 11</a>
   </div>
 </li>
       </ul>
@@ -313,17 +313,17 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#prepare" id="toc-prepare" class="nav-link active" data-scroll-target="#prepare">Prepare</a></li>
   <li><a href="#participate" id="toc-participate" class="nav-link" data-scroll-target="#participate">Participate</a></li>
-  <li><a href="#perform" id="toc-perform" class="nav-link" data-scroll-target="#perform">Perform</a></li>
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/weeks/week-08.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/weeks/week-11.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Week 8</h1>
-<p class="subtitle lead">Probability Models</p>
+<h1 class="title d-none d-lg-block">Week 11</h1>
+<p class="subtitle lead">Confidence intervals and statistical tests</p>
 </div>
 
 
@@ -339,17 +339,16 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="prepare" class="level2">
 <h2 class="anchored" data-anchor-id="prepare">Prepare</h2>
-<p>📖 Read <a href="https://www.pearson.com/store/en-us/pearsonplus/p/9780137399727.html">Chpts 11 &amp; 12 from Stine and Foster</a></p>
-<p>📖 Read FGLI: <a href="https://portal.mypearson.com/course-home/handout/sturdevant21135/Student_Registration_Handout_sturdevant21135.pdf">Chpts 11 &amp; 12 from Stine and Foster</a></p>
+<p>📖 Read <a href="https://www.pearson.com/store/en-us/pearsonplus/p/9780137399727.html">Chpts 15 &amp; 16 from Stine and Foster</a></p>
+<p>📖 Read FGLI: <a href="https://portal.mypearson.com/course-home/handout/sturdevant21135/Student_Registration_Handout_sturdevant21135.pdf">Chpts 15 &amp; 16 from Stine and Foster</a></p>
 </section>
 <section id="participate" class="level2">
 <h2 class="anchored" data-anchor-id="participate">Participate</h2>
-<p>🖥️ <a href="../slides/lect_07.html">Lect</a><a href="../slides/lect_10.html">ure 10</a></p>
-<p>🖥️ <a href="../slides/lect_11.html">Lecture 11</a></p>
+<p>🖥️ <a href="../slides/lect_14.html">Lecture 14</a></p>
 </section>
-<section id="perform" class="level2">
-<h2 class="anchored" data-anchor-id="perform">Perform</h2>
-<p>✍️ <a href="../hw/hw-2.html">HW 2 - Titanic</a></p>
+<section id="practice" class="level2">
+<h2 class="anchored" data-anchor-id="practice">Practice</h2>
+<p>📋 <a href="../ae/ae-10.html">Revision for exam 2</a></p>
 <p><br><br></p>
 <div style="font-size: 0.875em;">
 <p>Back to <a href="../" title="Course schedule">course schedule</a> ⏎</p>
@@ -572,13 +571,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../weeks/week-07.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 7</span>
+      <a href="../weeks/week-10.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 10</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../weeks/week-09.html" class="pagination-link">
-        <span class="nav-page-text">Week 9</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../supplemental/chi-squared.html" class="pagination-link">
+        <span class="nav-page-text">Chi squared expected counts</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
