@@ -1,5 +1,5 @@
 ---
-title: "Chapter 14: Sampling variation and quality"
+title: "Chapter 14: Statistical tests"
 subtitle: "STAT 1010 - Fall 2022"
 footer:  "[stat1010-f22.github.io/website](https://stats1010-f22.github.io/website/)"
 format: 
@@ -55,7 +55,7 @@ library(tidyverse)
 
 #  {background-iframe="https://nzgwynn.shinyapps.io/standard_error/"}
 
-# {background-image="lect_13-things/std_error.png" background-size="contain"}
+#  {background-image="lect_13-things/std_error.png" background-size="contain"}
 
 ## Standard error
 
@@ -71,17 +71,15 @@ $$ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) $$
 ## Example
 
 ::: incremental
-
 1.  Let $Y \sim N(\mu = 5, \sigma^2 = 16)$, find the distribution of the mean of repeated samples of size 4.
     -   $\bar{Y} \sim N(\mu = 5, \sigma^2 = 4)$
-    
 :::
 
-# {background-image="lect_13-things/EMtweet.png" background-size="contain"}
+#  {background-image="lect_13-things/EMtweet.png" background-size="contain"}
 
-# {background-image="lect_13-things/manufacturing_plant.png" background-size="contain"}
+#  {background-image="lect_13-things/manufacturing_plant.png" background-size="contain"}
 
-# {background-image="lect_13-things/error_classifications.png" background-size="contain"}
+#  {background-image="lect_13-things/error_classifications.png" background-size="contain"}
 
 ## Control limits
 
@@ -116,7 +114,6 @@ If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits
     -   `pnorm(10, mean = 12, sd = sqrt(2.3))`
 :::
 
-
 ## Setting control limits - 1 cont'd {.smaller}
 
 If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits?
@@ -129,7 +126,6 @@ If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits
     -   `1 - pnorm(14, mean = 12, sd = sqrt(2.3))`
     -   the $\alpha$ value is $19\%$ which is very high!
 :::
-
 
 ## Setting control limits - 2 {.smaller}
 
@@ -155,21 +151,20 @@ If $\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)$ how can we find the control limits
     -   `qnorm(1-0.0125, mean = 12, sd = sqrt(2.3))`
 :::
 
-
-# {background-image="lect_13-things/control_plot.png" background-size="contain"}
+#  {background-image="lect_13-things/control_plot.png" background-size="contain"}
 
 ## Repeated testing {.smaller}
-
 
 We are not testing once, but multiple times. Assuming independence:
 
 ::: incremental
+-   $\begin{aligned}P(\textrm{within limits for 10 days}) =& P(\textrm{within limits for day 1}) \cdot P(\textrm{within limits for day 2}) \cdot \dots \cdot P(\textrm{within limits for day 10})\\ &= 0.975^{10} \approx 0.7763296 \end{aligned}$
 
-- $\begin{aligned}P(\textrm{within limits for 10 days}) =& P(\textrm{within limits for day 1}) \cdot P(\textrm{within limits for day 2}) \cdot \dots \cdot P(\textrm{within limits for day 10})\\ &= 0.975^{10}  \approx 0.7763296 \end{aligned}$
+-   There is a $1-0.7763296 = 0.2236704$ percent false positive rate
 
-- There is a $1-0.7763296 = 0.2236704$ percent false positive rate 
-- Management must decide if there is a false positive by checking for mechanical errors and inspecting equipment
-- Adjust $\alpha$ value to address this
+-   Management must decide if there is a false positive by checking for mechanical errors and inspecting equipment
+
+-   Adjust $\alpha$ value to address this
 :::
 
 ## Control charts for variation
@@ -177,8 +172,6 @@ We are not testing once, but multiple times. Assuming independence:
 X-bar charts are slow to detect under or over filling
 
 ::: incremental
-- *S-Chart* tracks the standard deviation from sample to sample
-- *R-Chart* tracks the range from sample to sample
+-   *S-Chart* tracks the standard deviation from sample to sample
+-   *R-Chart* tracks the range from sample to sample
 :::
-
-
