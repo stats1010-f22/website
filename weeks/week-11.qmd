@@ -1,0 +1,25 @@
+---
+title: "Week 11"
+subtitle: "Confidence intervals and statistical tests"
+editor: visual
+---
+
+## Prepare
+
+📖 Read [Chpts 15 & 16 from Stine and Foster](https://www.pearson.com/store/en-us/pearsonplus/p/9780137399727.html)
+
+📖 Read FGLI: [Chpts 15 & 16 from Stine and Foster](https://portal.mypearson.com/course-home/handout/sturdevant21135/Student_Registration_Handout_sturdevant21135.pdf)
+
+## Participate
+
+🖥️ [Lecture 14](/slides/lect_14.html)
+
+## Practice
+
+📋 [Revision for exam 2](/ae/ae-10.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
