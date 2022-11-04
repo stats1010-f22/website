@@ -24,7 +24,7 @@ library(tidyverse)
 -   The shape of the normal distribution and why it is important
 -   The central limit theorem.
 -   Understand shift and scales and how to compute them to find $z$ scores
--  Basic tests of normality including qqplots and kurtosis
+-   Basic tests of normality including qqplots and kurtosis
 :::
 
 #  {background-iframe="https://nzgwynn.shinyapps.io/limit_bin_normal/"}
@@ -157,7 +157,9 @@ Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find th
     P(Y < 3) &= P(\frac{Y - \mu_Y}{\sigma_Y} < \frac{3-\mu_Y}{\sigma_Y}) \\ 
      & = P(Z < \frac{3-5}{2} = -1)
      \end{aligned}$$
+
 -   `pnorm(-1)` $0.1586553$
+
 -   `pnorm(-1, mean = 5, sd = 2)`
 :::
 
@@ -168,8 +170,7 @@ Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find th
 countdown(minutes = 2, seconds = 0)
 ```
 
-# {background-image="lect_11-things/p_less_neg_1.png" background-size="contain"}
-
+#  {background-image="lect_11-things/p_less_neg_1.png" background-size="contain"}
 
 ## Queen Bee
 
@@ -188,13 +189,15 @@ Both of these probabilities are the same because of *symmetry* of the normal dis
 Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find the probability:
 
 ::: incremental
--  $P(Y > 7)$
+-   $P(Y > 7)$
 
 -   $$\begin{aligned}
     P(Y > 7) &= P(\frac{Y - \mu_Y}{\sigma_Y} > \frac{7-\mu_Y}{\sigma_Y}) \\ 
      & = P(Z > \frac{7-5}{2} = 1)
      \end{aligned}$$
+
 -   `pnorm(1)` $0.8413447$
+
 -   `pnorm(1, mean = 5, sd = 2)`
 :::
 
@@ -205,20 +208,20 @@ Let $Y \sim N(\mu_Y = 5, \sigma_Y^2 = 4)$, standardize the following and find th
 countdown(minutes = 2, seconds = 0)
 ```
 
-## Graph  {background-image="lect_11-things/p_greater_1.png" background-size="contain"}
+## Graph {background-image="lect_11-things/p_greater_1.png" background-size="contain"}
 
 ## Example (cont'd)
+
 ::: notes
 This and the previous example have the same probabilities attached to them b/c the distribution is *symmetric*
 
 Since they generally have the same shape what other things are true?
 :::
 
-
 ::: incremental
- - $P(Z > 1) =  1 - P(Z<1)$
- -  `1 - pnorm(1)` $0.1586553$
- -  `1 - pnorm(1, mean = 5, sd = 2)`
+-   $P(Z > 1) = 1 - P(Z<1)$
+-   `1 - pnorm(1)` $0.1586553$
+-   `1 - pnorm(1, mean = 5, sd = 2)`
 :::
 
 ```{r}
@@ -236,7 +239,7 @@ This is true of all normal distributions, point of inflection, other things.
 We will also need to learn to undo things. If we have a probability go backwards and find the z-score.
 :::
 
-## Undo  {background-image="lect_11-things/q_norm.png" background-size="contain"}
+## Undo {background-image="lect_11-things/q_norm.png" background-size="contain"}
 
 # Percentiles {.smaller}
 
@@ -408,12 +411,13 @@ ggplot(diamonds, aes(sample=price)) +
 ```
 
 ## Skewness
+
 ::: incremental
-- find the $z$ scores for all data ($z_i = \frac{x_i - \bar{x}}{s}$)
-- $$K_3 = \frac{z_1^3 +z_2^3 + ... + z_n^3}{n}$$
-- If $K_3 \approx 0$, then $x$ is symmetric
-- As $K_3$ gets larger than 0, more right-skewed
-- As $K_3$ gets smaller than 0, more left-skewed
+-   find the $z$ scores for all data ($z_i = \frac{x_i - \bar{x}}{s}$)
+-   $$K_3 = \frac{z_1^3 +z_2^3 + ... + z_n^3}{n}$$
+-   If $K_3 \approx 0$, then $x$ is symmetric
+-   As $K_3$ gets larger than 0, more right-skewed
+-   As $K_3$ gets smaller than 0, more left-skewed
 :::
 
 ```{r kurtosis}
@@ -428,11 +432,11 @@ zs <- seq(-4, 4, 0.01)
 ## Kurtosis
 
 ::: incremental
-- find the $z$ scores for all data ($z_i = \frac{x_i - \bar{x}}{s}$)
-- $$K_4 = \frac{z_1^4 +z_2^4 + ... + z_n^4}{n} - 3$$
-- If $K_4 \approx 0$, then $x$ is approximately normal
-- As $K_4 < 0$ flat uniform distribution without tails
-- As $K_4 > 0$ many outliers
+-   find the $z$ scores for all data ($z_i = \frac{x_i - \bar{x}}{s}$)
+-   $$K_4 = \frac{z_1^4 +z_2^4 + ... + z_n^4}{n} - 3$$
+-   If $K_4 \approx 0$, then $x$ is approximately normal
+-   As $K_4 < 0$ flat uniform distribution without tails
+-   As $K_4 > 0$ many outliers
 :::
 
 ## Take home

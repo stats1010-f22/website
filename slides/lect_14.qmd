@@ -31,8 +31,20 @@ library(tidyverse)
 
 ![](lect_07-images/parameter_estimate.png)
 
+# Confidence interval for proportion
+
+::: incremental
+- What percent of customers are pleased with your service?
+- What percent of customers will refinance their loans?
+- What percentage of employees are in favor of a uniform change?
+:::
+
 #  {background-iframe="https://nzgwynn.shinyapps.io/CI_prop/"}
 
+::: notes
+- size of sample decreases variability
+- fatter in middle, skinnier near 0 and 1
+:::
 
 ## Variability
 
@@ -51,4 +63,54 @@ we also need to think about the variability
 ## Formula
 
 $$ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) $$
+::: incremental
+- variance is like that of a Binomial distribution
+- 
+:::
+
+# {background-iframe="https://nzgwynn.shinyapps.io/Ci_prop_with_alpha/"}
+
+
+## Example where we do this by hand
+
+## doing it in `R`
+
+
+# Confidence interval for mean
+
+::: incremental
+- example 1
+- example 2
+- example 3
+:::
+
+
+# {background-iframe="https://nzgwynn.shinyapps.io/CI_mean_std_error/"}
+
+
+## Variability
+
+
+
+# {background-iframe="https://nzgwynn.shinyapps.io/CI_mean_with_alpha/"}
+
+
+## Building CI
+
+## T - distribution
+
+
+::: incremental
+- $Z = \frac{X-\mu_X}{\sigma_X}$
+- $T_{n-1} = \frac{\bar{X}-\mu_X}{S/\sqrt{n}}$
+:::
+
+
+## {background-iframe="https://nzgwynn.shinyapps.io/t-distribution/"}
+
+::: notes
+- as df get bigger (a proxy for n) S approaches sigma
+:::
+
+
 

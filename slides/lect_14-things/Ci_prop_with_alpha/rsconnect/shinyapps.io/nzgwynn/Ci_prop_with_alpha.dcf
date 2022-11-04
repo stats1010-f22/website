@@ -1,0 +1,13 @@
+name: Ci_prop_with_alpha
+title: Ci_prop_with_alpha
+username:
+account: nzgwynn
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7513748
+bundleId: 6476122
+url: https://nzgwynn.shinyapps.io/Ci_prop_with_alpha/
+when: 1667580010.07672
+lastSyncTime: 1667580010.07673
+asMultiple: FALSE
+asStatic: FALSE

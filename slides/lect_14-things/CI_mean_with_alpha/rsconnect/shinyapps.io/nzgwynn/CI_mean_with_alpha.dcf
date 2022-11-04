@@ -1,0 +1,13 @@
+name: CI_mean_with_alpha
+title: CI_mean_with_alpha
+username:
+account: nzgwynn
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7519110
+bundleId: 6473394
+url: https://nzgwynn.shinyapps.io/CI_mean_with_alpha/
+when: 1667522254.86439
+lastSyncTime: 1667522254.8644
+asMultiple: FALSE
+asStatic: FALSE
