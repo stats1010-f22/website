@@ -1817,7 +1817,49 @@
     "href": "slides/lect_14.html#formula",
     "title": "Chapter 15: Confidence intervals",
     "section": "Formula",
-    "text": "Formula\n\\[ \\hat{p} \\sim N(\\mu = p, \\sigma^2 = \\frac{p(1-p)}{n}) \\]\n\n\nstat1010-f22.github.io/website"
+    "text": "Formula\n\\[ \\hat{p} \\sim N(\\mu = p, \\sigma^2 = \\frac{p(1-p)}{n}) \\] ::: incremental - variance is like that of a Binomial distribution - :::"
+  },
+  {
+    "objectID": "slides/lect_14.html#example-where-we-do-this-by-hand",
+    "href": "slides/lect_14.html#example-where-we-do-this-by-hand",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Example where we do this by hand",
+    "text": "Example where we do this by hand"
+  },
+  {
+    "objectID": "slides/lect_14.html#doing-it-in-r",
+    "href": "slides/lect_14.html#doing-it-in-r",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "doing it in R",
+    "text": "doing it in R"
+  },
+  {
+    "objectID": "slides/lect_14.html#variability-1",
+    "href": "slides/lect_14.html#variability-1",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Variability",
+    "text": "Variability"
+  },
+  {
+    "objectID": "slides/lect_14.html#building-ci",
+    "href": "slides/lect_14.html#building-ci",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Building CI",
+    "text": "Building CI"
+  },
+  {
+    "objectID": "slides/lect_14.html#t---distribution",
+    "href": "slides/lect_14.html#t---distribution",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "T - distribution",
+    "text": "T - distribution\n\n\n\\(Z = \\frac{X-\\mu_X}{\\sigma_X}\\)\n\\(T_{n-1} = \\frac{\\bar{X}-\\mu_X}{S/\\sqrt{n}}\\)"
+  },
+  {
+    "objectID": "slides/lect_14.html#section-4",
+    "href": "slides/lect_14.html#section-4",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "",
+    "text": "as df get bigger (a proxy for n) S approaches sigma\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_12.html#revision",

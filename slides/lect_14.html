@@ -350,10 +350,36 @@
 <h2>Revision</h2>
 
 <img data-src="lect_07-images/parameter_estimate.png" class="r-stretch"></section></section>
+<section id="confidence-interval-for-proportion" class="title-slide slide level1 center">
+<h1>Confidence interval for proportion</h1>
+<div>
+<ul>
+<li class="fragment">What percent of customers are pleased with your service?</li>
+<li class="fragment">What percent of customers will refinance their loans?</li>
+<li class="fragment">What percentage of employees are in favor of a uniform change?</li>
+</ul>
+</div>
+</section>
+
 <section>
 <section id="section" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/CI_prop/">
 <h1></h1>
-
+<aside class="notes">
+<ul>
+<li>size of sample decreases variability</li>
+<li>fatter in middle, skinnier near 0 and 1</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="variability" class="slide level2">
 <h2>Variability</h2>
@@ -380,7 +406,72 @@
 </section>
 <section id="formula" class="slide level2">
 <h2>Formula</h2>
-<p><span class="math display">\[ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) \]</span></p>
+<p><span class="math display">\[ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) \]</span> ::: incremental - variance is like that of a Binomial distribution - :::</p>
+</section></section>
+<section>
+<section id="section-1" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/Ci_prop_with_alpha/">
+<h1></h1>
+
+</section>
+<section id="example-where-we-do-this-by-hand" class="slide level2">
+<h2>Example where we do this by hand</h2>
+</section>
+<section id="doing-it-in-r" class="slide level2">
+<h2>doing it in <code>R</code></h2>
+</section></section>
+<section id="confidence-interval-for-mean" class="title-slide slide level1 center">
+<h1>Confidence interval for mean</h1>
+<div>
+<ul>
+<li class="fragment">example 1</li>
+<li class="fragment">example 2</li>
+<li class="fragment">example 3</li>
+</ul>
+</div>
+</section>
+
+<section>
+<section id="section-2" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/CI_mean_std_error/">
+<h1></h1>
+
+</section>
+<section id="variability-1" class="slide level2">
+<h2>Variability</h2>
+</section></section>
+<section>
+<section id="section-3" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/CI_mean_with_alpha/">
+<h1></h1>
+
+</section>
+<section id="building-ci" class="slide level2">
+<h2>Building CI</h2>
+</section>
+<section id="t---distribution" class="slide level2">
+<h2>T - distribution</h2>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(Z = \frac{X-\mu_X}{\sigma_X}\)</span></li>
+<li class="fragment"><span class="math inline">\(T_{n-1} = \frac{\bar{X}-\mu_X}{S/\sqrt{n}}\)</span></li>
+</ul>
+</div>
+</section>
+<section id="section-4" class="slide level2" data-background-iframe="https://nzgwynn.shinyapps.io/t-distribution/">
+<h2></h2>
+<aside class="notes">
+<ul>
+<li>as df get bigger (a proxy for n) S approaches sigma</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
