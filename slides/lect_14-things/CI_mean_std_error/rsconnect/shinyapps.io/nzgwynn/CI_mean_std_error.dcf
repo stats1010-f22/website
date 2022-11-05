@@ -5,9 +5,9 @@ account: nzgwynn
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7492332
-bundleId: 6473283
+bundleId: 6476308
 url: https://nzgwynn.shinyapps.io/CI_mean_std_error/
-when: 1667519234.41042
-lastSyncTime: 1667519234.41043
+when: 1667582480.00501
+lastSyncTime: 1667582480.00502
 asMultiple: FALSE
 asStatic: FALSE

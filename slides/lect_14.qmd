@@ -21,8 +21,9 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
--   Building confidence intervals for the populaiton proportion
+-   Building confidence intervals for the population proportion
 -   Building confidence intervals for the population mean
+-   Understanding $t$ distributions
 -   Interpreting confidence intervals
 -   Understand the margin of error and how to use it to compute sample sizes
 :::
@@ -37,6 +38,7 @@ library(tidyverse)
 - What percent of customers are pleased with your service?
 - What percent of customers will refinance their loans?
 - What percentage of employees are in favor of a uniform change?
+- What percentage of voters will vote for Fetterman?
 :::
 
 #  {background-iframe="https://nzgwynn.shinyapps.io/CI_prop/"}
@@ -57,31 +59,66 @@ we also need to think about the variability
 ::: incremental
 - dependent on $p$ - fatter in middle, skinnier near 0 and 1
 - dependent on $n$, number of samples, higher sample, less variability
-
 :::
 
-## Formula
+## Variability - math
 
 $$ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) $$
 ::: incremental
-- variance is like that of a Binomial distribution
-- 
+- numerator of the variance is similar to that of a Binomial distribution
+- as sample size increases, variance decreases
 :::
 
 # {background-iframe="https://nzgwynn.shinyapps.io/Ci_prop_with_alpha/"}
 
+## CI - math
 
-## Example where we do this by hand
+$$\hat{p} \pm z_{\alpha/2} \cdot \sqrt{\hat{p}(1-\hat{p})/n} $$
+For $95\%$ CI, $z_{\alpha/2} = 1.96$
 
-## doing it in `R`
+In `R`: `qnorm(0.025)`
+
+## Assumptions
+
+::: incremental 
+- *SRS condition* The observed sample is SRS from the appropriate population. If population is finite, less than 10\% of total population 
+- *Sample size condition (for proportion)* *both* $n\hat{p}$ and $n(1-\hat{p})$ are larger than 10.
+:::
+
+## Example 1
+
+
+::: incremental
+- Let $\hat{p}= 0.14$ and $n = 350$, find a $95\%$ CI for the proportion
+
+- $\begin{aligned} se(\hat{p}) &= \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} &=  \sqrt{\frac{0.14(1-0.14)}{350}}\end{aligned} \approx 0.0185$
+
+- lower value: $\hat{p} - 1.96 \cdot 0.0185 \approx 0.10374$
+- upper value: $\hat{p} + 1.96 \cdot 0.0185 \approx 0.17626$
+:::
+
+## Example 2
+
+An auditor checks a sample of 225 randomly chosen transactions from among the thousands processed in an office. Thirty-five contains errors in crediting or debiting the appropriate account
+a. Does this situation meet the conditions required for a $z$-interval for the proportion?
+b. Find the $95\%$ confidence interval for $p$, the proportion of all transactions processed in the this office that have these errors.
+c. Managers claim that the proportion of errors is about $10\%$. Does that seem reasonable?
+
+## Example 2 - solns
+
+
+::: incremental
+a. yes, $\hat{p} = 35/225 \approx 0.156 > 10\%$ 
+
+b. $\begin{aligned} \hat{p} \pm z_{\alpha/2} \cdot \sqrt{\hat{p}(1-\hat{p})/n} &= 0.156 \pm 1.96 \sqrt{0.156(1-0.156)/225} &=  0.156 \pm 1.96 \cdot 0.0242 &= 0.156 \pm 0.047, [0.109, 0.203]\end{aligned} $
+c. No $10\%$ is too low, with $95\%$ confidence it is higher
 
 
 # Confidence interval for mean
-
 ::: incremental
-- example 1
-- example 2
-- example 3
+- Average weight for filled ice cream containers
+- Average purchases from a website in US$
+- 
 :::
 
 
@@ -90,12 +127,29 @@ $$ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) $$
 
 ## Variability
 
+::: notes
+- to account for smaller sample size we use a different distribution
+:::
 
+::: incremental
+- standard deviation of distribution
+    - higher sd -> wider CI
+- sample size
+    - smaller sample size -> wider CI
+:::
+
+## {background-iframe="https://nzgwynn.shinyapps.io/t-distribution/"}
+
+::: notes
+- t distribution more density in tails
+:::
 
 # {background-iframe="https://nzgwynn.shinyapps.io/CI_mean_with_alpha/"}
 
 
 ## Building CI
+
+
 
 ## T - distribution
 
@@ -103,14 +157,14 @@ $$ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) $$
 ::: incremental
 - $Z = \frac{X-\mu_X}{\sigma_X}$
 - $T_{n-1} = \frac{\bar{X}-\mu_X}{S/\sqrt{n}}$
+- $t$ distribution has more density in the tails to account for smaller sample sizes
 :::
 
 
-## {background-iframe="https://nzgwynn.shinyapps.io/t-distribution/"}
+
 
 ::: notes
 - as df get bigger (a proxy for n) S approaches sigma
 :::
-
 
 

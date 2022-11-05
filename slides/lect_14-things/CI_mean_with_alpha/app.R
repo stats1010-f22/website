@@ -39,7 +39,7 @@ ui <- fluidPage(
                   max = 500,
                   value = 200),
 
-      sliderInput("alpha_1",
+      sliderInput("alpha",
                   "Level of confidence (1 - alpha):",
                   min = 0,
                   max = 1,
@@ -67,23 +67,19 @@ server <- function(input, output) {
 
     ## 2000 samples from normal distribution with
     ## size, mean, and sd from input
+    m_hat <- tibble(a = input$m)
+    conf_level <- (1 - input$alpha)/2
 
 
-    mean <- tibble(a = input$m)
+    # Calculate the critical z-score
+    t <- qt(conf_level, df = (input$size - 1))
 
-    means <- tibble(a = rnorm(n = input$size, mean = unlist(mean),
-                              sd = input$sd))
-
-
-    ## computing CI for the the mean
-    l.model <- lm(a ~ 1, means)
-
-    # Calculate the confidence interval
-    CI <- tibble(bounds = confint(l.model, level = input$alpha_1))
-
+    # Compute the CI
+    CI <- tibble(bounds = m_hat$a + c(-1,1)*t*input$sd*
+                   sqrt(1/input$size))
 
     ggplot() +
-      geom_point(data = mean, aes(x = a, y = 0), color = "red", size = 5) +
+      geom_point(data = m_hat, aes(x = a, y = 0), color = "red", size = 5) +
       geom_vline(xintercept = CI$bounds, color = "blue") +
       labs(x = "Estimate (red dot) and CI (blue lines) for estimate", y = "",
            title = "Plot of CI for mean",
@@ -105,7 +101,7 @@ server <- function(input, output) {
 
     ggplot(means) +
       geom_density(aes(x = a)) +
-      labs(x = "possible values of mean", y = "count",
+      labs(x = "possible values for mean", y = "likeliness of mean values",
            title = "Density plot of 2000 means from normal distribution",
            subtitle = "Size of samples, mean, and sd from input") +
       lims(x = c(0, 100))

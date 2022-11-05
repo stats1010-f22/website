@@ -66,7 +66,7 @@ server <- function(input, output) {
 
     ggplot(means) +
       geom_density(aes(x = a)) +
-      labs(x = "possible values of mean", y = "count",
+      labs(x = "possible mean values", y = "likeliness of possible mean values",
            title = "Plot of 2000 means from normal distribution",
            subtitle = "Size of samples, mean, and sd from input") +
       lims(x = c(0, 100))
