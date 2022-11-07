@@ -44,3 +44,14 @@ With 95.00% confidence, 70.8876 \< $\mu$ \< 74.4970
 
 \(d\) If the researcher had calculated a 99% confidence interval, would the output have shown a longer or shorter interval?
 
+**15.** Hoping to lure more shoppers downtown, a city builds a new public parking garage in the central business district. The city plans to pay for the structure through parking fees. During a two-month period (44 weekdays), daily fees collected averaged \$1,264 with a standard deviation of \$150.
+
+\(a\) What assumptions must you make in order to use these statistics for inference?
+
+\(b\) Write a 90% confidence interval for the mean daily income this parking garage will generate, rounded appropriately.
+
+\(c\) The consultant who advised the city on this project predicted that parking revenues would average \$1,300 per day. On the basis of your confidence interval, do you think the consultant was correct? Why or why not?
+
+\(d\) Give a 90% confidence interval for the total revenue earned during five weekdays.
+
+
