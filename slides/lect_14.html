@@ -408,7 +408,13 @@
 </section>
 <section id="variability---math" class="slide level2">
 <h2>Variability - math</h2>
-<p><span class="math display">\[ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) \]</span> ::: incremental - numerator of the variance is similar to that of a Binomial distribution - as sample size increases, variance decreases :::</p>
+<p><span class="math display">\[ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) \]</span></p>
+<div>
+<ul>
+<li class="fragment">numerator of the variance is similar to that of a Binomial distribution</li>
+<li class="fragment">as sample size increases, variance decreases</li>
+</ul>
+</div>
 </section></section>
 <section>
 <section id="section-1" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/Ci_prop_with_alpha/">
@@ -443,17 +449,23 @@
 </section>
 <section id="example-2" class="slide level2">
 <h2>Example 2</h2>
-<p>An auditor checks a sample of 225 randomly chosen transactions from among the thousands processed in an office. Thirty-five contains errors in crediting or debiting the appropriate account a. Does this situation meet the conditions required for a <span class="math inline">\(z\)</span>-interval for the proportion? b. Find the <span class="math inline">\(95\%\)</span> confidence interval for <span class="math inline">\(p\)</span>, the proportion of all transactions processed in the this office that have these errors. c.&nbsp;Managers claim that the proportion of errors is about <span class="math inline">\(10\%\)</span>. Does that seem reasonable?</p>
+<p>An auditor checks a sample of 225 randomly chosen transactions from among the thousands processed in an office. Thirty-five contains errors in crediting or debiting the appropriate account</p>
+<p>a. Does this situation meet the conditions required for a <span class="math inline">\(z\)</span>-interval for the proportion?</p>
+<p>b. Find the <span class="math inline">\(95\%\)</span> confidence interval for <span class="math inline">\(p\)</span>, the proportion of all transactions processed in the this office that have these errors.</p>
+<p>c. Managers claim that the proportion of errors is about <span class="math inline">\(10\%\)</span>. Does that seem reasonable?</p>
 </section>
 <section id="example-2---solns" class="slide level2">
 <h2>Example 2 - solns</h2>
 <div>
 <ol type="a">
 <li class="fragment"><p>yes, <span class="math inline">\(\hat{p} = 35/225 \approx 0.156 &gt; 10\%\)</span></p></li>
-<li class="fragment"><p>$</p>
-<span class="math display">\[\begin{aligned} \hat{p} \pm z_{\alpha/2} \cdot \sqrt{\hat{p}(1-\hat{p})/n} &amp;= 0.156 \pm 1.96 \sqrt{0.156(1-0.156)/225} &amp;=  0.156 \pm 1.96 \cdot 0.0242 &amp;= 0.156 \pm 0.047, [0.109, 0.203]\end{aligned}\]</span>
-<p>$</p></li>
-<li class="fragment"><p>No <span class="math inline">\(10\%\)</span> is too low, with <span class="math inline">\(95\%\)</span> confidence it is higher</p></li>
+<li class="fragment"><p><span class="math inline">\(\begin{aligned} \hat{p} \pm z_{\alpha/2} \cdot \sqrt{\hat{p}(1-\hat{p})/n} = 0.156 \pm 1.96 \sqrt{0.156(1-0.156)/225} = 0.156 \pm 1.96 \cdot 0.0242 = 0.156 \pm 0.047, [0.109, 0.203]\end{aligned}\)</span></p></li>
+</ol>
+<ul>
+<li class="fragment"><span class="math inline">\(0.156 \pm 0.047, [0.109, 0.203]\)</span></li>
+</ul>
+<ol start="3" type="a">
+<li class="fragment">No <span class="math inline">\(10\%\)</span> is too low, with <span class="math inline">\(95\%\)</span> confidence it is higher</li>
 </ol>
 </div>
 </section></section>
@@ -582,7 +594,7 @@
 <li class="fragment"><p><span class="math inline">\(\begin{aligned} se(\bar{x}) &amp;= s/\sqrt{n} &amp;= 238/\sqrt{150}\end{aligned} \approx 19.43262\)</span></p></li>
 <li class="fragment"><p><code>qt(.025, df = 149)</code> <span class="math inline">\(\approx -1.976\)</span></p></li>
 <li class="fragment"><p>lower value: <span class="math inline">\(3285 - 1.976 \cdot 19.43262 \approx \$3,320\)</span></p></li>
-<li class="fragment"><p>upper value: <span class="math inline">\(3285 + 1.976 \cdot 19.43262 \approx \$3,2\)</span></p></li>
+<li class="fragment"><p>upper value: <span class="math inline">\(3285 + 1.976 \cdot 19.43262 \approx \$3,247\)</span></p></li>
 <li class="fragment"><p><code>3285 + qt(.025, df = 149)* 238/sqrt(150)</code></p></li>
 </ul>
 </div>
