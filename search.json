@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "STAT 1010: Introduction to Business Statistics",
     "section": "",
-    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct\nThe normal probability model\n\n🖥️\n\n\n\n\n\n\n\n9\nMon, 24 Oct\nSamples and surveys\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 26 Oct\nSampling variation and quality\n\n🖥️\n📋\n\n\n\n📂\n\n\n10\nMon, 31 Oct\nRevision for Exam 2\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 2 Nov\nExam 2\n\n\n\n\n✅\n\n\n\n\n11\nMon, 7 Nov\nConfidence intervals\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 9 Nov\nExam 2"
+    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct\nThe normal probability model\n\n🖥️\n\n\n\n\n\n\n\n9\nMon, 24 Oct\nSamples and surveys\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 26 Oct\nSampling variation and quality\n\n🖥️\n📋\n\n\n\n📂\n\n\n10\nMon, 31 Oct\nRevision for Exam 2\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 2 Nov\nExam 2\n\n\n\n\n✅\n\n\n\n\n11\nMon, 7 Nov\nConfidence intervals\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 9 Nov\nStatistical tests"
   },
   {
     "objectID": "course-overview.html",
@@ -936,6 +936,13 @@
     "title": "The birthday simulation (AE-5)",
     "section": "",
     "text": "Computers let you assemble, manipulate, and visualize data sets, all at speeds that would have wowed yesterday’s scientists. In short, computers give you superpowers! But if you wish to use them, you’ll need to pick up some programming skills. Steve Job said that “computers are bicycles for our minds” because the efficiency rating of humans on bicycles is so incredible, and computers give us similar powers.\nOne reason computers are so incredible is that they allow us to simulate a multitude of events. Today we will simulate the probability that two of you in this section of Stat1010 have the same birthdays.\n\nlibrary(tidyverse) # for data manipulation\nlibrary(vctrs) # to find the length of a tibble\n\nSuppose you are in a classroom with 100 people. If we assume this is a randomly selected group of 100 people, what is the chance that at least two people have the same birthday? Although it is somewhat advanced, we can deduce this mathematically. We will do this later. Here we use a Monte Carlo simulation. For simplicity, we assume nobody was born on February 29. This actually doesn’t change the answer much.\nFirst, note that birthdays can be represented as numbers between 1 and 365, so a sample of 100 birthdays can be obtained like this:\n\nall_bdays <- as_tibble(1:365) # data from where we can sample\n\nbdays_class <- \n  all_bdays %>% # data from where to sample\n  slice_sample(n = 100, replace = TRUE) # sample of size 100 with replacement\n\nTo check if in this particular set of 100 people we have at least two with the same birthday, we can use the functions group_by and filter, which returns a tibble with a vector of duplicated dates. Here is an example:\n\nbdays_class %>% \n  group_by(value) %>% # for each birthday\n  count() %>% # count them\n  filter(n > 1) # those have more than 1\n\nTo estimate the probability of a shared birthday in the group, we repeat this experiment by sampling sets of 100 birthdays over and over. Prior to replicating, we need to write this as a function.\n\nbdays_dups <- \n  all_bdays %>% # data from where to sample\n  slice_sample(n = 100, replace = TRUE) %>% # take a sample of n 100\n  group_by(value) %>% # for each birthday\n  count() %>% # count them\n  filter(n > 1) %>% # those have more than 1\n  vec_n(.) # the number that are duplicated\n\nA function has an input (in this case \\(n\\))\n\nWhat does \\(n\\) represent in this coding?\n\n\nnum_of_same_birthdays <- function(n){\n  all_bdays %>% # data from where to sample\n  slice_sample(n = n, replace = TRUE) %>% # take a sample\n  group_by(value) %>% # for each birthday\n  count() %>% # count them\n  filter(n > 1) %>% # those have more than 1\n  vec_size(.)  # the number that are duplicated\n}\n\nTo run this function, we do this:\n\nnum_of_same_birthdays(10) # run the function\n\n\nHow many students are there in class today?\nRun the coding above but include the number of students in class today.\n\nThe law of large numbers says that if we do this many times we should have an estimate of the number of people that have the same birthdays in class today. The function replicate can be used to run functions multiple times.\n\nB <- 500 # the number of times to run\nresults <- replicate(B, # replicate this number of times\n          ifelse( # if there are some duplicated birthdays\n            num_of_same_birthdays(50) >= 1, # our function\n            1, # give me a 1\n            0)) # if not, give me a 0\n\nmean(results) # take the mean\n\nWere you expecting the probability to be this high?\nPeople tend to underestimate these probabilities. To get an intuition as to why it is so high, think about what happens when the group size is close to 365. At this stage, we run out of days and the probability is one.\nSay we want to use this knowledge to bet with friends about two people having the same birthday in a group of people. When are the chances larger than 50%? Larger than 75%?\nLet’s create a look-up table. We can create a function to compute this for any group size. This function runs our function \\(500\\) times for every value of $n$. Statisticians will usually do this \\(10000\\) times, but this will take a very very very very looooooooooonnnnnggggg time, so we are simplifying.\n\ncompute_prob <- # name the function\n  function(n, B = 500){ # function inputs\n  results <- # store results\n    replicate(B, # run num_of_same_birthdays B times \n              ifelse( # if there are some duplicated birthdays\n            num_of_same_birthdays(n) >= 1, # our function\n            1, # give me a 1\n            0)) # if not, give me a 0\n  \n  mean(results) # find the mean\n}\n\nUsing the function map_dbl, we can perform element-wise operations on any function. Note that this may take awhile to run.\n\nn <- seq(1, 60) # which values of n are important\nprob <- # save the results as prob\n  map_dbl(n,  # for each value of n \n          compute_prob) # run the function\n\nWe can now make a plot of the estimated probabilities of two people having the same birthday in a group of size n:\n\nas_tibble(n, prob) %>% # the format for ggplot\n  ggplot() + # draw a graph\n  geom_point(aes(x = n, y = prob)) # of points\n\nNow let’s compute the exact probabilities rather than use Monte Carlo approximations. Not only do we get the exact answer using math, but the computations are much faster since we don’t have to generate experiments.\nTo make the math simpler, instead of computing the probability of it happening, we will compute the probability of it not happening, or the compliment. For this, we use the multiplication rule.\nLet’s start with the first person. The probability that person 1 has a unique birthday is 1. The probability that person 2 has a unique birthday, given that person 1 already took one, is 364/365. Then, given that the first two people have unique birthdays, person 3 is left with 363 days to choose from. We continue this way and find the chances of all \\(n\\) people having a unique birthday is:\n\\[1×\\frac{364}{365}×\\frac{363}{365}…\\frac{365−n+1}{365}\\] We can write a function that does this for any number:\n\nexact_prob <- function(n){\n  1 - \n    prod(365:(365-n+1))/ # the product from the numerator above\n    365^(n) # the denominator from above\n}\n\n\nRun this coding for the number of people that are in class today.\n\nNow, we run this on multiple values of \\(n\\)\n\neprob <- map_dbl(n, exact_prob) # run on multiple values of n\n\nNext we plot the results.\n\nas_tibble(n, eprob) %>% # the format for ggplot\n  ggplot() + # draw a graph\n  geom_point(aes(x = n, y = eprob)) # of points\n\nOn mercury, the year is only 88 days. Update the coding above to simulate the expected number of people with the same birthdays on Mercury.\nAssuming we have the same number of people, would you expect the number of people with the same birthdays to be higher or lower than those on earth?"
+  },
+  {
+    "objectID": "ae/ae-11.html",
+    "href": "ae/ae-11.html",
+    "title": "Confidence intervals: AE - 10",
+    "section": "",
+    "text": "1.\\(y \\pm 2se(\\bar{y})\\) (a)  Sampling distribution of X\n2. \\(\\hat{p} \\pm se(\\hat{p})\\) (b)  Margin of error\n3. \\(2se (\\bar{X})\\) (c)  100% confidence interval for p\n4. \\(N(\\mu,\\sigma^2/n)\\) (d)  Estimated standard error of\n5. \\(s/\\sqrt{n}\\) (e)  Estimated standard error of 13\n6. \\(\\sigma/\\sqrt{n}\\) (f)  An interval with about 95% coverage\n7. \\(1/(0.05)^2\\) (g)  Actual standard error of\n8. [0, 1] (h) About 2 for moderate sample sizes\n9. \\(\\sqrt{\\hat{p}(1 -\\hat{p})/n}\\) (i)   An interval with 68% coverage\n10. \\(t_{0.025, n-1}\\) (j)   Sample size needed for 0.05 margin of error\n11. True or False: By increasing the sample size from \\(n = 100\\) to $n = 400$, we can reduce-the margin of error by \\(50\\%\\).\n12. If the 95% confidence interval for the average purchase of customers at a department store is $50 to $110, then $100 is a plausible value for the population mean at this level of confidence.\n13.  If zero lies inside the 95% confidence interval for \\(\\mu\\), then zero is also inside the 99% confidence interval for \\(\\mu\\).\n14. The clothing buyer for a department store wants to order the right mix of sizes. As part of a survey, she measured the height (in inches) of men who bought suits at this store. Her software reported the following confidence interval:\nWith 95.00% confidence, 70.8876 < \\(\\mu\\) < 74.4970\n(a) Explain carefully what the software output means.\n(b) What’s the margin of error for this interval?\n(c) How should the buyer round the endpoints of the interval to summarize the result in a report for store managers?\n(d) If the researcher had calculated a 99% confidence interval, would the output have shown a longer or shorter interval?"
   },
   {
     "objectID": "ae/ae-0-first_line_of_code.html",
@@ -1810,56 +1817,126 @@
     "href": "slides/lect_14.html#variability",
     "title": "Chapter 15: Confidence intervals",
     "section": "Variability",
-    "text": "Variability\n\nask them what they population mean should be\nwe also need to think about the variability\n\n\n\ndependent on \\(p\\) - fatter in middle, skinnier near 0 and 1\ndependent on \\(n\\), number of samples, higher sample, less variability"
+    "text": "Variability\n\nask them what they population mean should be\nwe also need to think about the variability\n\n\n\ndependent on \\(p\\) - fatter in middle, skinnier near 0 and 1\ndependent on \\(n\\), number of samples, bigger sample, less variability"
   },
   {
-    "objectID": "slides/lect_14.html#formula",
-    "href": "slides/lect_14.html#formula",
+    "objectID": "slides/lect_14.html#variability---math",
+    "href": "slides/lect_14.html#variability---math",
     "title": "Chapter 15: Confidence intervals",
-    "section": "Formula",
-    "text": "Formula\n\\[ \\hat{p} \\sim N(\\mu = p, \\sigma^2 = \\frac{p(1-p)}{n}) \\] ::: incremental - variance is like that of a Binomial distribution - :::"
+    "section": "Variability - math",
+    "text": "Variability - math\n\\[ \\hat{p} \\sim N(\\mu = p, \\sigma^2 = \\frac{p(1-p)}{n}) \\] ::: incremental - numerator of the variance is similar to that of a Binomial distribution - as sample size increases, variance decreases :::"
   },
   {
-    "objectID": "slides/lect_14.html#example-where-we-do-this-by-hand",
-    "href": "slides/lect_14.html#example-where-we-do-this-by-hand",
+    "objectID": "slides/lect_14.html#ci---math",
+    "href": "slides/lect_14.html#ci---math",
     "title": "Chapter 15: Confidence intervals",
-    "section": "Example where we do this by hand",
-    "text": "Example where we do this by hand"
+    "section": "CI - math",
+    "text": "CI - math\n\\[\\hat{p} \\pm z_{\\alpha/2} \\cdot \\sqrt{\\hat{p}(1-\\hat{p})/n} \\] For \\(95\\%\\) CI, \\(z_{\\alpha/2} = 1.96\\)\nAs confidence level increases, interval widens\nIn R: qnorm(0.025)"
   },
   {
-    "objectID": "slides/lect_14.html#doing-it-in-r",
-    "href": "slides/lect_14.html#doing-it-in-r",
+    "objectID": "slides/lect_14.html#assumptions",
+    "href": "slides/lect_14.html#assumptions",
     "title": "Chapter 15: Confidence intervals",
-    "section": "doing it in R",
-    "text": "doing it in R"
+    "section": "Assumptions",
+    "text": "Assumptions\n\n\nSRS condition The observed sample is SRS from the appropriate population. If population is finite, less than 10% of total population\nSample size condition (for proportion) both \\(n\\hat{p}\\) and \\(n(1-\\hat{p})\\) are larger than 10."
+  },
+  {
+    "objectID": "slides/lect_14.html#example-1",
+    "href": "slides/lect_14.html#example-1",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Example 1",
+    "text": "Example 1\n\n\nLet \\(\\hat{p}= 0.14\\) and \\(n = 350\\), find a \\(95\\%\\) CI for the proportion\n\\(\\begin{aligned} se(\\hat{p}) &= \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}} &= \\sqrt{\\frac{0.14(1-0.14)}{350}}\\end{aligned} \\approx 0.0185\\)\nlower value: \\(\\hat{p} - 1.96 \\cdot 0.0185 \\approx 0.10374\\)\nupper value: \\(\\hat{p} + 1.96 \\cdot 0.0185 \\approx 0.17626\\)"
+  },
+  {
+    "objectID": "slides/lect_14.html#example-2",
+    "href": "slides/lect_14.html#example-2",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Example 2",
+    "text": "Example 2\nAn auditor checks a sample of 225 randomly chosen transactions from among the thousands processed in an office. Thirty-five contains errors in crediting or debiting the appropriate account a. Does this situation meet the conditions required for a \\(z\\)-interval for the proportion? b. Find the \\(95\\%\\) confidence interval for \\(p\\), the proportion of all transactions processed in the this office that have these errors. c. Managers claim that the proportion of errors is about \\(10\\%\\). Does that seem reasonable?"
+  },
+  {
+    "objectID": "slides/lect_14.html#example-2---solns",
+    "href": "slides/lect_14.html#example-2---solns",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Example 2 - solns",
+    "text": "Example 2 - solns\n\n\nyes, \\(\\hat{p} = 35/225 \\approx 0.156 > 10\\%\\)\n$\n\\[\\begin{aligned} \\hat{p} \\pm z_{\\alpha/2} \\cdot \\sqrt{\\hat{p}(1-\\hat{p})/n} &= 0.156 \\pm 1.96 \\sqrt{0.156(1-0.156)/225} &=  0.156 \\pm 1.96 \\cdot 0.0242 &= 0.156 \\pm 0.047, [0.109, 0.203]\\end{aligned}\\]\n$\nNo \\(10\\%\\) is too low, with \\(95\\%\\) confidence it is higher"
   },
   {
     "objectID": "slides/lect_14.html#variability-1",
     "href": "slides/lect_14.html#variability-1",
     "title": "Chapter 15: Confidence intervals",
     "section": "Variability",
-    "text": "Variability"
+    "text": "Variability\n\n\nto account for smaller sample size we use a different distribution\n\n\n\n\nstandard deviation of distribution\n\nhigher sd -> wider CI\n\nsample size\n\nsmaller sample size -> wider CI"
   },
   {
-    "objectID": "slides/lect_14.html#building-ci",
-    "href": "slides/lect_14.html#building-ci",
+    "objectID": "slides/lect_14.html#section-3",
+    "href": "slides/lect_14.html#section-3",
     "title": "Chapter 15: Confidence intervals",
-    "section": "Building CI",
-    "text": "Building CI"
+    "section": "",
+    "text": "t distribution more density in tails"
+  },
+  {
+    "objectID": "slides/lect_14.html#ci---mean",
+    "href": "slides/lect_14.html#ci---mean",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "CI - mean",
+    "text": "CI - mean\n\\[\\bar{x} \\pm t_{\\alpha/2, n-1} \\cdot \\frac{s}{\\sqrt{n}} \\]"
   },
   {
     "objectID": "slides/lect_14.html#t---distribution",
     "href": "slides/lect_14.html#t---distribution",
     "title": "Chapter 15: Confidence intervals",
     "section": "T - distribution",
-    "text": "T - distribution\n\n\n\\(Z = \\frac{X-\\mu_X}{\\sigma_X}\\)\n\\(T_{n-1} = \\frac{\\bar{X}-\\mu_X}{S/\\sqrt{n}}\\)"
+    "text": "T - distribution\n\n\ndon’t know sigma so use s in it’s place\nas df get bigger (a proxy for n) S approaches sigma\n\n\n\n\n\\(Z = \\frac{X-\\mu_X}{\\sigma_X}\\)\n\\(\\bar{X} \\sim N(\\mu = \\mu\\_X, \\sigma^2 = \\frac{\\sigma_X^2}{n})\\)\n\\(T_{n-1} = \\frac{\\bar{X}-\\mu_X}{S/\\sqrt{n}}\\)\n\\(t\\) distribution has more density in the tails to account for smaller sample sizes"
   },
   {
-    "objectID": "slides/lect_14.html#section-4",
-    "href": "slides/lect_14.html#section-4",
+    "objectID": "slides/lect_14.html#variability-2",
+    "href": "slides/lect_14.html#variability-2",
     "title": "Chapter 15: Confidence intervals",
-    "section": "",
-    "text": "as df get bigger (a proxy for n) S approaches sigma\n\n\n\n\nstat1010-f22.github.io/website"
+    "section": "Variability",
+    "text": "Variability\n\n\ndependent on \\(confidence \\text{ }level\\) - as confidence level increases so does the width of the interval\ndependent on \\(n\\), number of samples, bigger sample, less variability"
+  },
+  {
+    "objectID": "slides/lect_14.html#assumptions-1",
+    "href": "slides/lect_14.html#assumptions-1",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Assumptions",
+    "text": "Assumptions\n\n\nSRS condition The observed sample is SRS from the appropriate population. If population is finite, less than 10% of total population\nSample size condition the sample size is larger than 10 times the absolute value of the kurtosis, \\(n>10|K_4|\\)."
+  },
+  {
+    "objectID": "slides/lect_14.html#example-1-1",
+    "href": "slides/lect_14.html#example-1-1",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Example 1",
+    "text": "Example 1\n\n\nLet \\(\\bar{x}= \\$3285\\), \\(n = 150\\), and \\(s = \\$238\\) find a \\(95\\%\\) CI for the mean\n\\(\\begin{aligned} se(\\bar{x}) &= s/\\sqrt{n} &= 238/\\sqrt{150}\\end{aligned} \\approx 19.43262\\)\nqt(.025, df = 149) \\(\\approx -1.976\\)\nlower value: \\(3285 - 1.976 \\cdot 19.43262 \\approx \\$3,320\\)\nupper value: \\(3285 + 1.976 \\cdot 19.43262 \\approx \\$3,2\\)\n3285 + qt(.025, df = 149)* 238/sqrt(150)"
+  },
+  {
+    "objectID": "slides/lect_14.html#example-2-1",
+    "href": "slides/lect_14.html#example-2-1",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Example 2",
+    "text": "Example 2\nOffice administrators claim that the average amount on a purchase order is $6,000. A SRS of 49 purchase orders averages \\(\\bar{x} = \\$4,200\\) with \\(s = \\$3,500\\).\n\nWhat is the relevant sampling distribution?\nFind the 95% confidence interval for \\(\\mu\\), the mean of purchase orders handled by this office during the sampling period.\nDo you think the administrators claim is reasonable?"
+  },
+  {
+    "objectID": "slides/lect_14.html#example-2---solns-1",
+    "href": "slides/lect_14.html#example-2---solns-1",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Example 2 - solns",
+    "text": "Example 2 - solns\n\n\n\\(N(\\mu, \\sigma^2/49)\\)\n\\[\\begin{aligned} 4200 \\pm 2.01 \\cdot 3500/\\sqrt{49} &= 4200 \\pm 2.01 \\cdot 500 &= 4200 \\pm -1005.317 \\approx [3195, 5205]\\end{aligned}\\]\n\n\n4200 + qt(.025, df = 48)*3500/sqrt(49)\n\n\nNo \\(\\$6,00\\) is way above the \\(95\\%\\) confidence interval"
+  },
+  {
+    "objectID": "slides/lect_14.html#example-2---solns-2",
+    "href": "slides/lect_14.html#example-2---solns-2",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Example 2 - solns",
+    "text": "Example 2 - solns\n\\(10 \\cdot [3195, 5205] = [31950, 52050]\\)"
+  },
+  {
+    "objectID": "slides/lect_14.html#sample-size---mean",
+    "href": "slides/lect_14.html#sample-size---mean",
+    "title": "Chapter 15: Confidence intervals",
+    "section": "Sample size - mean",
+    "text": "Sample size - mean\n\\[n = \\frac{4s^2}{\\text{(Margin of error)}^2} \\]\n\n\nFor \\(p\\) use \\(p = 0.5\\) for biggest variance"
   },
   {
     "objectID": "slides/lect_12.html#revision",
@@ -2007,104 +2084,6 @@
     "title": "Lec 4 - Exploring numeric data",
     "section": "The purpose of Exploratory Data Analysis (EDA)",
     "text": "The purpose of Exploratory Data Analysis (EDA)\n\nEDA is about learning the structure of a dataset through a series of numerical and graphical techniques.\nWhen you do EDA, you’ll look for both\n\ngeneral trends and\ninteresting outliers in your data.\n\n\ngenerate questions that will help inform subsequent analysis."
-  },
-  {
-    "objectID": "slides/lect_15.html#sampling",
-    "href": "slides/lect_15.html#sampling",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Sampling",
-    "text": "Sampling\n\n\nSRS\nStratified sampling\nCluster sampling\nit would be nice to sample repeatedly to see how the mean values compare"
-  },
-  {
-    "objectID": "slides/lect_15.html#benefits-of-averaging",
-    "href": "slides/lect_15.html#benefits-of-averaging",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Benefits of averaging",
-    "text": "Benefits of averaging\n\n\nreduces variation\nmore normal than the original distribution"
-  },
-  {
-    "objectID": "slides/lect_15.html#normal-model",
-    "href": "slides/lect_15.html#normal-model",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Normal model",
-    "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true."
-  },
-  {
-    "objectID": "slides/lect_15.html#standard-error",
-    "href": "slides/lect_15.html#standard-error",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Standard error",
-    "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}} \\]"
-  },
-  {
-    "objectID": "slides/lect_15.html#sampling-distribution",
-    "href": "slides/lect_15.html#sampling-distribution",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Sampling distribution",
-    "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\]"
-  },
-  {
-    "objectID": "slides/lect_15.html#example",
-    "href": "slides/lect_15.html#example",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Example",
-    "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)"
-  },
-  {
-    "objectID": "slides/lect_15.html#control-limits",
-    "href": "slides/lect_15.html#control-limits",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Control limits",
-    "text": "Control limits\n\n\nif mean production is outside certain values, we may need to stop and recallibrate machinery\nthese values are called control limits\n\\(\\mu - L \\leq \\bar{X} \\leq \\mu + L\\)\n\\(\\mu - L\\) and \\(\\mu + L\\) are control limits"
-  },
-  {
-    "objectID": "slides/lect_15.html#types-of-errors",
-    "href": "slides/lect_15.html#types-of-errors",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Types of errors",
-    "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)"
-  },
-  {
-    "objectID": "slides/lect_15.html#setting-control-limits---1",
-    "href": "slides/lect_15.html#setting-control-limits---1",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Setting control limits - 1",
-    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(10, mean = 12, sd = sqrt(2.3))"
-  },
-  {
-    "objectID": "slides/lect_15.html#setting-control-limits---1-contd",
-    "href": "slides/lect_15.html#setting-control-limits---1-contd",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Setting control limits - 1 cont’d",
-    "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X} }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\n1 - pnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
-  },
-  {
-    "objectID": "slides/lect_15.html#setting-control-limits---2",
-    "href": "slides/lect_15.html#setting-control-limits---2",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Setting control limits - 2",
-    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)\nqnorm(0.0125, mean = 12, sd = sqrt(2.3))"
-  },
-  {
-    "objectID": "slides/lect_15.html#setting-control-limits---2---contd",
-    "href": "slides/lect_15.html#setting-control-limits---2---contd",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Setting control limits - 2 - cont’d",
-    "text": "Setting control limits - 2 - cont’d\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))"
-  },
-  {
-    "objectID": "slides/lect_15.html#repeated-testing",
-    "href": "slides/lect_15.html#repeated-testing",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Repeated testing",
-    "text": "Repeated testing\nWe are not testing once, but multiple times. Assuming independence:\n\n\n\\(\\begin{aligned}P(\\textrm{within limits for 10 days}) =& P(\\textrm{within limits for day 1}) \\cdot P(\\textrm{within limits for day 2}) \\cdot \\dots \\cdot P(\\textrm{within limits for day 10})\\\\ &= 0.975^{10} \\approx 0.7763296 \\end{aligned}\\)\nThere is a \\(1-0.7763296 = 0.2236704\\) percent false positive rate\nManagement must decide if there is a false positive by checking for mechanical errors and inspecting equipment\nAdjust \\(\\alpha\\) value to address this"
-  },
-  {
-    "objectID": "slides/lect_15.html#control-charts-for-variation",
-    "href": "slides/lect_15.html#control-charts-for-variation",
-    "title": "Chapter 14: Statistical tests",
-    "section": "Control charts for variation",
-    "text": "Control charts for variation\nX-bar charts are slow to detect under or over filling\n\n\nS-Chart tracks the standard deviation from sample to sample\nR-Chart tracks the range from sample to sample\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_16.html#sampling",

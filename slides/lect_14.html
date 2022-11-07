@@ -339,8 +339,9 @@
 <h1>Learning outcomes</h1>
 <div>
 <ul>
-<li class="fragment">Building confidence intervals for the populaiton proportion</li>
+<li class="fragment">Building confidence intervals for the population proportion</li>
 <li class="fragment">Building confidence intervals for the population mean</li>
+<li class="fragment">Understanding the <span class="math inline">\(t\)</span> distributions</li>
 <li class="fragment">Interpreting confidence intervals</li>
 <li class="fragment">Understand the margin of error and how to use it to compute sample sizes</li>
 </ul>
@@ -357,6 +358,7 @@
 <li class="fragment">What percent of customers are pleased with your service?</li>
 <li class="fragment">What percent of customers will refinance their loans?</li>
 <li class="fragment">What percentage of employees are in favor of a uniform change?</li>
+<li class="fragment">What percentage of voters will vote for Fetterman?</li>
 </ul>
 </div>
 </section>
@@ -400,32 +402,67 @@
 <div>
 <ul>
 <li class="fragment">dependent on <span class="math inline">\(p\)</span> - fatter in middle, skinnier near 0 and 1</li>
-<li class="fragment">dependent on <span class="math inline">\(n\)</span>, number of samples, higher sample, less variability</li>
+<li class="fragment">dependent on <span class="math inline">\(n\)</span>, number of samples, bigger sample, less variability</li>
 </ul>
 </div>
 </section>
-<section id="formula" class="slide level2">
-<h2>Formula</h2>
-<p><span class="math display">\[ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) \]</span> ::: incremental - variance is like that of a Binomial distribution - :::</p>
+<section id="variability---math" class="slide level2">
+<h2>Variability - math</h2>
+<p><span class="math display">\[ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) \]</span> ::: incremental - numerator of the variance is similar to that of a Binomial distribution - as sample size increases, variance decreases :::</p>
 </section></section>
 <section>
 <section id="section-1" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/Ci_prop_with_alpha/">
 <h1></h1>
 
 </section>
-<section id="example-where-we-do-this-by-hand" class="slide level2">
-<h2>Example where we do this by hand</h2>
+<section id="ci---math" class="slide level2">
+<h2>CI - math</h2>
+<p><span class="math display">\[\hat{p} \pm z_{\alpha/2} \cdot \sqrt{\hat{p}(1-\hat{p})/n} \]</span> For <span class="math inline">\(95\%\)</span> CI, <span class="math inline">\(z_{\alpha/2} = 1.96\)</span></p>
+<p>As confidence level increases, interval widens</p>
+<p>In <code>R</code>: <code>qnorm(0.025)</code></p>
 </section>
-<section id="doing-it-in-r" class="slide level2">
-<h2>doing it in <code>R</code></h2>
+<section id="assumptions" class="slide level2">
+<h2>Assumptions</h2>
+<div>
+<ul>
+<li class="fragment"><em>SRS condition</em> The observed sample is SRS from the appropriate population. If population is finite, less than 10% of total population</li>
+<li class="fragment"><em>Sample size condition (for proportion)</em> <em>both</em> <span class="math inline">\(n\hat{p}\)</span> and <span class="math inline">\(n(1-\hat{p})\)</span> are larger than 10.</li>
+</ul>
+</div>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example 1</h2>
+<div>
+<ul>
+<li class="fragment"><p>Let <span class="math inline">\(\hat{p}= 0.14\)</span> and <span class="math inline">\(n = 350\)</span>, find a <span class="math inline">\(95\%\)</span> CI for the proportion</p></li>
+<li class="fragment"><p><span class="math inline">\(\begin{aligned} se(\hat{p}) &amp;= \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} &amp;= \sqrt{\frac{0.14(1-0.14)}{350}}\end{aligned} \approx 0.0185\)</span></p></li>
+<li class="fragment"><p>lower value: <span class="math inline">\(\hat{p} - 1.96 \cdot 0.0185 \approx 0.10374\)</span></p></li>
+<li class="fragment"><p>upper value: <span class="math inline">\(\hat{p} + 1.96 \cdot 0.0185 \approx 0.17626\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="example-2" class="slide level2">
+<h2>Example 2</h2>
+<p>An auditor checks a sample of 225 randomly chosen transactions from among the thousands processed in an office. Thirty-five contains errors in crediting or debiting the appropriate account a. Does this situation meet the conditions required for a <span class="math inline">\(z\)</span>-interval for the proportion? b. Find the <span class="math inline">\(95\%\)</span> confidence interval for <span class="math inline">\(p\)</span>, the proportion of all transactions processed in the this office that have these errors. c.&nbsp;Managers claim that the proportion of errors is about <span class="math inline">\(10\%\)</span>. Does that seem reasonable?</p>
+</section>
+<section id="example-2---solns" class="slide level2">
+<h2>Example 2 - solns</h2>
+<div>
+<ol type="a">
+<li class="fragment"><p>yes, <span class="math inline">\(\hat{p} = 35/225 \approx 0.156 &gt; 10\%\)</span></p></li>
+<li class="fragment"><p>$</p>
+<span class="math display">\[\begin{aligned} \hat{p} \pm z_{\alpha/2} \cdot \sqrt{\hat{p}(1-\hat{p})/n} &amp;= 0.156 \pm 1.96 \sqrt{0.156(1-0.156)/225} &amp;=  0.156 \pm 1.96 \cdot 0.0242 &amp;= 0.156 \pm 0.047, [0.109, 0.203]\end{aligned}\]</span>
+<p>$</p></li>
+<li class="fragment"><p>No <span class="math inline">\(10\%\)</span> is too low, with <span class="math inline">\(95\%\)</span> confidence it is higher</p></li>
+</ol>
+</div>
 </section></section>
 <section id="confidence-interval-for-mean" class="title-slide slide level1 center">
 <h1>Confidence interval for mean</h1>
 <div>
 <ul>
-<li class="fragment">example 1</li>
-<li class="fragment">example 2</li>
-<li class="fragment">example 3</li>
+<li class="fragment">Average weight for filled ice cream containers</li>
+<li class="fragment">Average purchases from a website in US$</li>
 </ul>
 </div>
 </section>
@@ -437,28 +474,61 @@
 </section>
 <section id="variability-1" class="slide level2">
 <h2>Variability</h2>
-</section></section>
-<section>
-<section id="section-3" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/CI_mean_with_alpha/">
-<h1></h1>
-
-</section>
-<section id="building-ci" class="slide level2">
-<h2>Building CI</h2>
-</section>
-<section id="t---distribution" class="slide level2">
-<h2>T - distribution</h2>
+<aside class="notes">
+<ul>
+<li>to account for smaller sample size we use a different distribution</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(Z = \frac{X-\mu_X}{\sigma_X}\)</span></li>
-<li class="fragment"><span class="math inline">\(T_{n-1} = \frac{\bar{X}-\mu_X}{S/\sqrt{n}}\)</span></li>
+<li class="fragment">standard deviation of distribution
+<ul>
+<li class="fragment">higher sd -&gt; wider CI</li>
+</ul></li>
+<li class="fragment">sample size
+<ul>
+<li class="fragment">smaller sample size -&gt; wider CI</li>
+</ul></li>
 </ul>
 </div>
 </section>
-<section id="section-4" class="slide level2" data-background-iframe="https://nzgwynn.shinyapps.io/t-distribution/">
+<section id="section-3" class="slide level2" data-background-iframe="https://nzgwynn.shinyapps.io/t-distribution/">
 <h2></h2>
 <aside class="notes">
 <ul>
+<li>t distribution more density in tails</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ci---mean" class="slide level2">
+<h2>CI - mean</h2>
+<p><span class="math display">\[\bar{x} \pm t_{\alpha/2, n-1} \cdot \frac{s}{\sqrt{n}} \]</span></p>
+</section>
+<section id="t---distribution" class="slide level2">
+<h2>T - distribution</h2>
+<aside class="notes">
+<ul>
+<li>don’t know sigma so use s in it’s place</li>
 <li>as df get bigger (a proxy for n) S approaches sigma</li>
 </ul>
 <style type="text/css">
@@ -472,11 +542,124 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-
-<div class="footer footer-default">
-<p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(Z = \frac{X-\mu_X}{\sigma_X}\)</span></li>
+<li class="fragment"><span class="math inline">\(\bar{X} \sim N(\mu = \mu\_X, \sigma^2 = \frac{\sigma_X^2}{n})\)</span></li>
+<li class="fragment"><span class="math inline">\(T_{n-1} = \frac{\bar{X}-\mu_X}{S/\sqrt{n}}\)</span></li>
+<li class="fragment"><span class="math inline">\(t\)</span> distribution has more density in the tails to account for smaller sample sizes</li>
+</ul>
 </div>
 </section></section>
+<section>
+<section id="section-4" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/CI_mean_with_alpha/">
+<h1></h1>
+
+</section>
+<section id="variability-2" class="slide level2">
+<h2>Variability</h2>
+<div>
+<ul>
+<li class="fragment">dependent on <span class="math inline">\(confidence \text{ }level\)</span> - as confidence level increases so does the width of the interval</li>
+<li class="fragment">dependent on <span class="math inline">\(n\)</span>, number of samples, bigger sample, less variability</li>
+</ul>
+</div>
+</section>
+<section id="assumptions-1" class="slide level2">
+<h2>Assumptions</h2>
+<div>
+<ul>
+<li class="fragment"><em>SRS condition</em> The observed sample is SRS from the appropriate population. If population is finite, less than 10% of total population</li>
+<li class="fragment"><em>Sample size condition</em> the sample size is larger than 10 times the absolute value of the <a href="https://stats1010-f22.github.io/website/slides/lect_11.html#/kurtosis">kurtosis</a>, <span class="math inline">\(n&gt;10|K_4|\)</span>.</li>
+</ul>
+</div>
+</section>
+<section id="example-1-1" class="slide level2">
+<h2>Example 1</h2>
+<div>
+<ul>
+<li class="fragment"><p>Let <span class="math inline">\(\bar{x}= \$3285\)</span>, <span class="math inline">\(n = 150\)</span>, and <span class="math inline">\(s = \$238\)</span> find a <span class="math inline">\(95\%\)</span> CI for the mean</p></li>
+<li class="fragment"><p><span class="math inline">\(\begin{aligned} se(\bar{x}) &amp;= s/\sqrt{n} &amp;= 238/\sqrt{150}\end{aligned} \approx 19.43262\)</span></p></li>
+<li class="fragment"><p><code>qt(.025, df = 149)</code> <span class="math inline">\(\approx -1.976\)</span></p></li>
+<li class="fragment"><p>lower value: <span class="math inline">\(3285 - 1.976 \cdot 19.43262 \approx \$3,320\)</span></p></li>
+<li class="fragment"><p>upper value: <span class="math inline">\(3285 + 1.976 \cdot 19.43262 \approx \$3,2\)</span></p></li>
+<li class="fragment"><p><code>3285 + qt(.025, df = 149)* 238/sqrt(150)</code></p></li>
+</ul>
+</div>
+</section>
+<section id="example-2-1" class="slide level2">
+<h2>Example 2</h2>
+<p>Office administrators claim that the average amount on a purchase order is $6,000. A SRS of 49 purchase orders averages <span class="math inline">\(\bar{x} = \$4,200\)</span> with <span class="math inline">\(s = \$3,500\)</span>.</p>
+<ol type="a">
+<li>What is the relevant sampling distribution?</li>
+<li>Find the 95% confidence interval for <span class="math inline">\(\mu\)</span>, the mean of purchase orders handled by this office during the sampling period.</li>
+<li>Do you think the administrators claim is reasonable?</li>
+</ol>
+</section>
+<section id="example-2---solns-1" class="slide level2">
+<h2>Example 2 - solns</h2>
+<div>
+<ol type="a">
+<li class="fragment"><p><span class="math inline">\(N(\mu, \sigma^2/49)\)</span></p></li>
+<li class="fragment"><p><span class="math display">\[\begin{aligned} 4200 \pm 2.01 \cdot 3500/\sqrt{49} &amp;= 4200 \pm 2.01 \cdot 500 &amp;= 4200 \pm -1005.317 \approx [3195, 5205]\end{aligned}\]</span></p></li>
+</ol>
+<ul>
+<li class="fragment"><code>4200 + qt(.025, df = 48)*3500/sqrt(49)</code></li>
+</ul>
+<ol start="3" type="a">
+<li class="fragment">No <span class="math inline">\(\$6,00\)</span> is way above the <span class="math inline">\(95\%\)</span> confidence interval</li>
+</ol>
+</div>
+</section></section>
+<section id="interpreting-ci" class="title-slide slide level1 center">
+<h1>Interpreting CI</h1>
+<p>“We can be <em>95% confident</em> that the <em>average purchase order</em> handled by <em>this office</em> lies between $3195 and $5205.”</p>
+</section>
+
+<section>
+<section id="manipulating-ci" class="title-slide slide level1 center">
+<h1>Manipulating CI</h1>
+<p>In example from means. How could we update the CI if we know we had 10 offices with similar purchase patterns.</p>
+<div>
+<ul>
+<li class="fragment"><p>If <span class="math inline">\([L \text{ to } U]\)</span> is a <span class="math inline">\(100(1 – \alpha)%\)</span> confidence interval for <span class="math inline">\(\mu\)</span></p></li>
+<li class="fragment"><p>then <span class="math inline">\([c \cdot L \text{ to } c \cdot U]\)</span> is a <span class="math inline">\(100 (1 – \alpha)%\)</span> confidence interval for <span class="math inline">\(c \cdot \mu\)</span></p></li>
+<li class="fragment"><p>and <span class="math inline">\([c + L \text{ to } c + U]\)</span> is a <span class="math inline">\(100(1 – \alpha)%\)</span> confidence interval for <span class="math inline">\(c + \mu\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="example-2---solns-2" class="slide level2">
+<h2>Example 2 - solns</h2>
+<p><span class="math inline">\(10 \cdot [3195, 5205] = [31950, 52050]\)</span></p>
+</section></section>
+<section>
+<section id="margin-of-error" class="title-slide slide level1 center">
+<h1>Margin of error</h1>
+<p><span class="math display">\[\bar{x} \pm \frac{2s}{\sqrt{n}} \]</span></p>
+<div>
+<ul>
+<li class="fragment">Margin of error = <span class="math inline">\(\frac{2s}{\sqrt{n}}\)</span></li>
+</ul>
+</div>
+</section>
+<section id="sample-size---mean" class="slide level2">
+<h2>Sample size - mean</h2>
+<p><span class="math display">\[n = \frac{4s^2}{\text{(Margin of error)}^2} \]</span></p>
+<div>
+<ul>
+<li class="fragment">For <span class="math inline">\(p\)</span> use <span class="math inline">\(p = 0.5\)</span> for biggest variance</li>
+</ul>
+</div>
+</section></section>
+<section id="your-turn" class="title-slide slide level1 center">
+<h1>Your turn</h1>
+<p><a href="https://stats1010-f22.github.io/website/ae/ae-11.html">Click here</a> or the qr code below</p>
+
+
+<img data-src="lect_14_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><div class="footer footer-default">
+<p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
+</div>
+</section>
     </div>
   </div>
 
