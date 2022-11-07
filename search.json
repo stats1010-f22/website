@@ -1859,7 +1859,7 @@
     "href": "slides/lect_14.html#example-2---solns",
     "title": "Chapter 15: Confidence intervals",
     "section": "Example 2 - solns",
-    "text": "Example 2 - solns\n\n\nyes, \\(\\hat{p} = 35/225 \\approx 0.156 > 10\\%\\)\n\\(\\begin{aligned} \\hat{p} \\pm z_{\\alpha/2} \\cdot \\sqrt{\\hat{p}(1-\\hat{p})/n} = 0.156 \\pm 1.96 \\sqrt{0.156(1-0.156)/225} = 0.156 \\pm 1.96 \\cdot 0.0242 = 0.156 \\pm 0.047, [0.109, 0.203]\\end{aligned}\\)\n\n\n\\(0.156 \\pm 0.047, [0.109, 0.203]\\)\n\n\nNo \\(10\\%\\) is too low, with \\(95\\%\\) confidence it is higher"
+    "text": "Example 2 - solns\n\n\nyes, \\(\\hat{p} = 35/225 \\approx 0.156 > 10\\%\\)\n\\(\\begin{aligned} \\hat{p} \\pm z_{\\alpha/2} \\cdot \\sqrt{\\hat{p}(1-\\hat{p})/n} = 0.156 \\pm 1.96 \\sqrt{0.156(1-0.156)/225} = 0.156 \\pm 1.96 \\cdot 0.0242 = 0.156 \\pm 0.047, [0.109, 0.203]\\end{aligned}\\)\n\n\n\\(0.156 \\pm 1.96 \\cdot 0.0242\\)\n\\(0.156 \\pm 0.047, [0.109, 0.203]\\)\n\n\nNo \\(10\\%\\) is too low, with \\(95\\%\\) confidence it is higher"
   },
   {
     "objectID": "slides/lect_14.html#variability-1",
@@ -1922,7 +1922,7 @@
     "href": "slides/lect_14.html#example-2---solns-1",
     "title": "Chapter 15: Confidence intervals",
     "section": "Example 2 - solns",
-    "text": "Example 2 - solns\n\n\n\\(N(\\mu, \\sigma^2/49)\\)\n\\[\\begin{aligned} 4200 \\pm 2.01 \\cdot 3500/\\sqrt{49} &= 4200 \\pm 2.01 \\cdot 500 &= 4200 \\pm -1005.317 \\approx [3195, 5205]\\end{aligned}\\]\n\n\n4200 + qt(.025, df = 48)*3500/sqrt(49)\n\n\nNo \\(\\$6,00\\) is way above the \\(95\\%\\) confidence interval"
+    "text": "Example 2 - solns\n\n\n\\(N(\\mu, \\sigma^2/49)\\)\n\\[\\begin{aligned} 4200 \\pm 2.01 \\cdot 3500/\\sqrt{49} = 4200 \\pm 2.01 \\cdot 500 = 4200 \\pm -1005.317 \\approx [3195, 5205]\\end{aligned}\\]\n\n\n\\([3195, 5205]\\)\n4200 + qt(.025, df = 48)*3500/sqrt(49)\n\n\nNo \\(\\$6,00\\) is way above the \\(95\\%\\) confidence interval"
   },
   {
     "objectID": "slides/lect_14.html#example-2---solns-2",
