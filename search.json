@@ -1859,7 +1859,7 @@
     "href": "slides/lect_14.html#example-2---solns",
     "title": "Chapter 15: Confidence intervals",
     "section": "Example 2 - solns",
-    "text": "Example 2 - solns\n\n\nyes, \\(\\hat{p} = 35/225 \\approx 0.156 > 10\\%\\)\n\\(\\begin{aligned} \\hat{p} \\pm z_{\\alpha/2} \\cdot \\sqrt{\\hat{p}(1-\\hat{p})/n} = 0.156 \\pm 1.96 \\sqrt{0.156(1-0.156)/225} = 0.156 \\pm 1.96 \\cdot 0.0242 = 0.156 \\pm 0.047, [0.109, 0.203]\\end{aligned}\\)\n\n\n\\(0.156 \\pm 1.96 \\cdot 0.0242\\)\n\\(0.156 \\pm 0.047, [0.109, 0.203]\\)\n\n\nNo \\(10\\%\\) is too low, with \\(95\\%\\) confidence it is higher"
+    "text": "Example 2 - solns\n\n\nyes, \\(\\hat{p} = 35/225 \\approx 0.156\\) so \\(n\\hat{p}, n(1-\\hat{p})> 10\\) and we assume sampled \\(<10\\%\\)\n\\(\\begin{aligned} \\hat{p} \\pm z_{\\alpha/2} \\cdot \\sqrt{\\hat{p}(1-\\hat{p})/n} = 0.156 \\pm 1.96 \\sqrt{0.156(1-0.156)/225} = 0.156 \\pm 1.96 \\cdot 0.0242 = 0.156 \\pm 0.047, [0.109, 0.203]\\end{aligned}\\)\n\n\n\\(0.156 \\pm 1.96 \\cdot 0.0242\\)\n\\(0.156 \\pm 0.047, [0.109, 0.203]\\)\n\n\nNo \\(10\\%\\) is too low, with \\(95\\%\\) confidence it is higher"
   },
   {
     "objectID": "slides/lect_14.html#variability-1",
