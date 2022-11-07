@@ -63,7 +63,12 @@ we also need to think about the variability
 
 ## Variability - math
 
-$$ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) $$ ::: incremental - numerator of the variance is similar to that of a Binomial distribution - as sample size increases, variance decreases :::
+$$ \hat{p} \sim N(\mu = p, \sigma^2 = \frac{p(1-p)}{n}) $$
+
+::: incremental
+-   numerator of the variance is similar to that of a Binomial distribution
+-   as sample size increases, variance decreases
+:::
 
 #  {background-iframe="https://nzgwynn.shinyapps.io/Ci_prop_with_alpha/"}
 
@@ -96,19 +101,22 @@ In `R`: `qnorm(0.025)`
 
 ## Example 2
 
-An auditor checks a sample of 225 randomly chosen transactions from among the thousands processed in an office. Thirty-five contains errors in crediting or debiting the appropriate account a. Does this situation meet the conditions required for a $z$-interval for the proportion? b. Find the $95\%$ confidence interval for $p$, the proportion of all transactions processed in the this office that have these errors. c. Managers claim that the proportion of errors is about $10\%$. Does that seem reasonable?
+An auditor checks a sample of 225 randomly chosen transactions from among the thousands processed in an office. Thirty-five contains errors in crediting or debiting the appropriate account
+
+a\. Does this situation meet the conditions required for a $z$-interval for the proportion?
+
+b\. Find the $95\%$ confidence interval for $p$, the proportion of all transactions processed in the this office that have these errors.
+
+c\. Managers claim that the proportion of errors is about $10\%$. Does that seem reasonable?
 
 ## Example 2 - solns
 
 ::: incremental
 a.  yes, $\hat{p} = 35/225 \approx 0.156 > 10\%$
 
-b.  \$
+b.  $\begin{aligned} \hat{p} \pm z_{\alpha/2} \cdot \sqrt{\hat{p}(1-\hat{p})/n} = 0.156 \pm 1.96 \sqrt{0.156(1-0.156)/225} = 0.156 \pm 1.96 \cdot 0.0242 = 0.156 \pm 0.047, [0.109, 0.203]\end{aligned}$
 
-    ```{=tex}
-    \begin{aligned} \hat{p} \pm z_{\alpha/2} \cdot \sqrt{\hat{p}(1-\hat{p})/n} &= 0.156 \pm 1.96 \sqrt{0.156(1-0.156)/225} &=  0.156 \pm 1.96 \cdot 0.0242 &= 0.156 \pm 0.047, [0.109, 0.203]\end{aligned}
-    ```
-    \$
+-   $0.156 \pm 0.047, [0.109, 0.203]$
 
 c.  No $10\%$ is too low, with $95\%$ confidence it is higher
 :::
@@ -186,7 +194,7 @@ $$\bar{x} \pm t_{\alpha/2, n-1} \cdot \frac{s}{\sqrt{n}} $$
 
 -   lower value: $3285 - 1.976 \cdot 19.43262 \approx \$3,320$
 
--   upper value: $3285 + 1.976 \cdot 19.43262 \approx \$3,2$
+-   upper value: $3285 + 1.976 \cdot 19.43262 \approx \$3,247$
 
 -   `3285 + qt(.025, df = 149)* 238/sqrt(150)`
 :::
