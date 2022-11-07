@@ -115,6 +115,7 @@ c\. Managers claim that the proportion of errors is about $10\%$. Does that seem
 a.  yes, $\hat{p} = 35/225 \approx 0.156 > 10\%$
 
 b.  $\begin{aligned} \hat{p} \pm z_{\alpha/2} \cdot \sqrt{\hat{p}(1-\hat{p})/n} = 0.156 \pm 1.96 \sqrt{0.156(1-0.156)/225} = 0.156 \pm 1.96 \cdot 0.0242 = 0.156 \pm 0.047, [0.109, 0.203]\end{aligned}$
+-  $0.156 \pm 1.96 \cdot 0.0242$
 
 -   $0.156 \pm 0.047, [0.109, 0.203]$
 
@@ -212,8 +213,8 @@ c.  Do you think the administrators claim is reasonable?
 ::: incremental
 a.  $N(\mu, \sigma^2/49)$
 
-b.  $$\begin{aligned} 4200 \pm 2.01 \cdot 3500/\sqrt{49} &= 4200 \pm 2.01 \cdot 500 &= 4200 \pm -1005.317 \approx [3195, 5205]\end{aligned}$$
-
+b.  $$\begin{aligned} 4200 \pm 2.01 \cdot 3500/\sqrt{49} = 4200 \pm 2.01 \cdot 500 = 4200 \pm -1005.317 \approx [3195, 5205]\end{aligned}$$
+-   $[3195, 5205]$ 
 -   `4200 + qt(.025, df = 48)*3500/sqrt(49)`
 
 c.  No $\$6,00$ is way above the $95\%$ confidence interval
