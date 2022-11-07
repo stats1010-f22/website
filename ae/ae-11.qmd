@@ -1,0 +1,46 @@
+---
+title: "Confidence intervals: AE - 10"
+output: 
+   html_document
+---
+
+Match each item on the left with its correct description on the right.
+
+1.$y \pm 2se(\bar{y})$ (a)  Sampling distribution of X
+
+**2.** $\hat{p} \pm se(\hat{p})$ (b)  Margin of error
+
+**3.** $2se (\bar{X})$ (c)  100% confidence interval for p
+
+**4.** $N(\mu,\sigma^2/n)$ (d)  Estimated standard error of
+
+**5.** $s/\sqrt{n}$ (e)  Estimated standard error of 13
+
+**6.** $\sigma/\sqrt{n}$ (f)  An interval with about 95% coverage
+
+**7.** $1/(0.05)^2$ (g)  Actual standard error of
+
+**8.** \[0, 1\] (h) About 2 for moderate sample sizes
+
+**9.** $\sqrt{\hat{p}(1 -\hat{p})/n}$ (i)   An interval with 68% coverage
+
+**10.** $t_{0.025, n-1}$ (j)   Sample size needed for 0.05 margin of error
+
+**11.** True or False: By increasing the sample size from $n = 100$ to \$n = 400\$, we can reduce-the margin of error by $50\%$.
+
+**12.** If the 95% confidence interval for the average purchase of customers at a department store is \$50 to \$110, then \$100 is a plausible value for the population mean at this level of confidence.
+
+**13. ** If zero lies inside the 95% confidence interval for $\mu$, then zero is also inside the 99% confidence interval for $\mu$.
+
+**14.** The clothing buyer for a department store wants to order the right mix of sizes. As part of a survey, she measured the height (in inches) of men who bought suits at this store. Her software reported the following confidence interval:
+
+With 95.00% confidence, 70.8876 \< $\mu$ \< 74.4970
+
+\(a\) Explain carefully what the software output means.
+
+\(b\) What's the margin of error for this interval?
+
+\(c\) How should the buyer round the endpoints of the interval to summarize the result in a report for store managers?
+
+\(d\) If the researcher had calculated a 99% confidence interval, would the output have shown a longer or shorter interval?
+
