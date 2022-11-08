@@ -93,8 +93,6 @@ What are the null and alternate hypothesis for these decisions?
 - A sales representative submits receipts from a recent business trip. Staff must determine whether the claims are legitimate.
 :::
 
-
-
 ## Do extremists see the world in black and white?
 
 Researcher Matt Motyl ran a study in 2010 with 2,000 participants. He wanted to determine if political moderates were able to perceive shades of grey more accurately than people on the far left or the far right. The p-value from the study was 0.01. Reject the null! Evidence in support of the idea that moderates can see grey better. 
@@ -105,7 +103,7 @@ What happened?!
 
 Via Regina Nuzzo's Nature article, [Scientific method: Statistical Errors](https://www.nature.com/news/scientific-method-statistical-errors-1.14700#)
 
-## Errors {.t}
+## Errors
 
 There are two types of errors defined in hypothesis testing:
 
