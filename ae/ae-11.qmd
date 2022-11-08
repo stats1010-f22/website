@@ -12,13 +12,13 @@ Match each item on the left with its correct description on the right.
 
 **3.** $2se (\bar{X})$ (c)  100% confidence interval for p
 
-**4.** $N(\mu,\sigma^2/n)$ (d)  Estimated standard error of
+**4.** $N(\mu,\sigma^2/n)$ (d)  Estimated standard error of $\bar{Y}$
 
 **5.** $s/\sqrt{n}$ (e)  Estimated standard error of 13
 
 **6.** $\sigma/\sqrt{n}$ (f)  An interval with about 95% coverage
 
-**7.** $1/(0.05)^2$ (g)  Actual standard error of
+**7.** $1/(0.05)^2$ (g)  Actual standard error of $\bar{Y}$
 
 **8.** \[0, 1\] (h) About 2 for moderate sample sizes
 
@@ -30,7 +30,7 @@ Match each item on the left with its correct description on the right.
 
 **12.** If the 95% confidence interval for the average purchase of customers at a department store is \$50 to \$110, then \$100 is a plausible value for the population mean at this level of confidence.
 
-**13. ** If zero lies inside the 95% confidence interval for $\mu$, then zero is also inside the 99% confidence interval for $\mu$.
+**13.** If zero lies inside the 95% confidence interval for $\mu$, then zero is also inside the 99% confidence interval for $\mu$.
 
 **14.** The clothing buyer for a department store wants to order the right mix of sizes. As part of a survey, she measured the height (in inches) of men who bought suits at this store. Her software reported the following confidence interval:
 
@@ -53,5 +53,3 @@ With 95.00% confidence, 70.8876 \< $\mu$ \< 74.4970
 \(c\) The consultant who advised the city on this project predicted that parking revenues would average \$1,300 per day. On the basis of your confidence interval, do you think the consultant was correct? Why or why not?
 
 \(d\) Give a 90% confidence interval for the total revenue earned during five weekdays.
-
-

@@ -1,5 +1,5 @@
 ---
-title: "Chapter 14: Statistical tests"
+title: "Chapter 16: Statistical tests"
 subtitle: "STAT 1010 - Fall 2022"
 footer:  "[stat1010-f22.github.io/website](https://stats1010-f22.github.io/website/)"
 format: 
@@ -21,14 +21,174 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
--   
--   When we can assume a normal distribution for the sample mean
--   Control charts and what they are used for
--   Find control limits
+-   Vocabulary: alternative hypothesis, null hupothesis, one-sided, two-sided hypotheses, and test statistic
+-   Understand the differences between a statistical test for proportions and for means.
+-   Recognize the different types of errors Type I and Type II when designing a test
+-   Distinguish between statistical and substantive significance
+-   Relate confidence intervals to two-sided tests
 :::
+
+# Does ESP exist?
+
+Some people believe in the presence of Extrasensory Perception, or ESP. How could we prove whether it does or doesn't exist?
+
+One test for ESP is with Zener cards.
+
+```{r,out.width="70%"}
+include_graphics("lect_15-things/zener-cards.jpg")
+```
+
+## Does ESP exist?
+
+Since there are 5 cards, it would be possible to guess the correct card at random $p=1/5$ times, or 20% of the time.
+
+A person with ESP should be able to guess the correct card more often than 20%. But how much more often do they need to get it right for us to believe that ESP exists?
+
+## Statistical test
+
+One way to determine something like this is to use a **statistical test**. A statistical test is a procedure to determine if the results from the sample are convincing enough to allow us to conclude something about the population.
+
+## Hypotheses
+
+When we perform a statistical test, we set out our **hypotheses** before we begin. There are two hypotheses,
+
+**null hypothesis** $H_0$, a statement about there being no effect, or no difference.
+
+**alternative hypothesis** $H_A$, the thing that we secretly hope will turn out to be true.
+
+## ESP hypotheses
+
+Thinking about the ESP experiment, we could use words to state our hypotheses
+
+$\begin{eqnarray*} &H_0:& \text{ ESP does not exist} \\ &H_A:& \text{ESP exists} \end{eqnarray*}$
+
+We could also write the hypotheses in terms of parameters,
+
+$\begin{eqnarray*} H_0: p \leq 1/5 \\ H_A: p > 1/5 \end{eqnarray*}$
+
+## Hypotheses
+
+::: incremental
+-   Hypotheses are always written about the population parameter ($\mu$, $p$, $\mu_1-\mu_2$, $p_1-p_2$), never about the sample statistics ($\bar{x}$, $\hat{p}$, $\bar{x}_1-\bar{x}_2$, $\hat{p}_1-\hat{p}_2$).
+-   The null hypothesis is the boring thing that we're trying to gather evidence against
+-   The alternative hypothesis is the exciting thing that would make headlines
+:::
+
+## One and two sided hypotheses
+
+::: incremental
+-   $H_A$ has a $>$ sign: upper tail, or "one-sided"
+-   $H_A$ has a $<$ sign: lower tail, or "one-sided"
+-   $H_A$ has a $\neq$ sign: both sides, or "two-sided"
+:::
+
+
+## Example
+
+What are the null and alternate hypothesis for these decisions?
+
+::: incremental
+- A person interviews for a job opening. The company has to decide whether to hire the person
+- An inventor proposes a new way to wrap packages that they say will speed up the manufacturing process. Should they adopt the new method?
+- A sales representative submits receipts from a recent business trip. Staff must determine whether the claims are legitimate.
+:::
+
+
+
+## Do extremists see the world in black and white?
+
+Researcher Matt Motyl ran a study in 2010 with 2,000 participants. He wanted to determine if political moderates were able to perceive shades of grey more accurately than people on the far left or the far right. The p-value from the study was 0.01. Reject the null! Evidence in support of the idea that moderates can see grey better. 
+
+But then... he re-ran the study. This time, the p-value was 0.59. Not even close to significant. 
+
+What happened?!
+
+Via Regina Nuzzo's Nature article, [Scientific method: Statistical Errors](https://www.nature.com/news/scientific-method-statistical-errors-1.14700#)
+
+## Errors {.t}
+
+There are two types of errors defined in hypothesis testing:
+
+- Type I error, rejecting a true null
+- Type II error, not rejecting a false null 
+
+## Law analogy 
+
+In the US, a person is innocent until proven guilty, and evidence of guilt must be beyond "the shadow of a doubt." We can make two types of mistakes:
+
+- Convict an innocent person (type I error)
+- Release a guilty person (type II error)
+
+## Extremists and black and white
+
+Two options:
+
+- the original study (p-value 0.01) made a Type I error, and the $H_0$ was really true
+- the second study (p-value 0.59) made a Type II error, and $H_A$ is really true
+
+or...
+
+- maybe there were no errors made, just different studies found different things
+
+
+## Multiple testing
+
+Because the probability of a Type I error is $\alpha$, if you do many tests you will find significance in $\alpha$ of them **just by chance**. 
+
+If you do 100 tests, you should expect to find 5 of them to be significant, just by chance. 
+
+This is the problem of **multiple testing.**
+
+## Jelly beans and acne?
+
+
+```{r,out.width="80%", fig.align='center'}
+include_graphics("lect_15-things/significant.png")
+```
+
+## Multiple testing + publication bias
+
+Okay, so $\alpha$ of all tests show significance, just by random chance.
+
+And things that look significant get published...
+
+That means that a fair number of things that are published are actually false! This is pretty scary.
+
+## How to fix the problem 
+
+As a researcher:
+
+- make sure your results can be replicated (like Motyl tried to do with the politics and grey study)
+- publish code and data so others can study your work
+
+As someone who reads about statistics:
+
+- be skeptical about claims that are just one of many tests
+- look for replication and reproducibility!
 
 
 #  {background-iframe="https://shiny.rit.albany.edu/stat/betaprob/"}
 
 
+## Reducing the probability of Type II error
 
+In order to reduce the probability of making a Type II error, we can either
+
+- increase the significance level
+- increase the sample size
+
+## Significance level and errors {.t}
+
+\begin{center}$\alpha$\end{center}
+
+## Statistical versus practical significance 
+
+Sometimes, you find something that is very statistically significant, but not practically significant. 
+
+Context is important!
+
+```{r,out.width="56%", fig.align='center'}
+include_graphics("img/p_value_mic_hog.jpg")
+```
+
+Illustration by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
