@@ -27,17 +27,16 @@ library(tidyverse)
 -   Find control limits
 :::
 
-
 ## Standard error
 
 The formula for standard error for $\hat{p}_1-\hat{p}_2$ is
 
+```{=tex}
 \begin{eqnarray*}
 \sqrt{\frac{p_1(1-p_1)}{n_1}+\frac{p_2(1-\hat{p}_2)}{n_2}}
 \end{eqnarray*}
-
-We need to check 
-\begin{eqnarray*}
+```
+We need to check \begin{eqnarray*}
 n_1\cdot p_1 \geq 10 \\
 n_1\cdot(1-p_1) \geq 10\\
 n_2\cdot p_2 \geq 10\\
@@ -50,41 +49,49 @@ But, we don't know $p_1$ and $p_1$. What do we do?
 
 In the case of hypothesis tests, as long as we are testing the hypotheses
 
+```{=tex}
 \begin{eqnarray*}
 H_0: p_1=p_2 \\
 H_A: p_1 \neq p_2
 \end{eqnarray*}
-
+```
 We approximate both $p_1$ and $p_2$ in the standard error formula with $\hat{p}$. What is $\hat{p}$?
 
 ## Pooled proportion
 
 A pooled proportion assumes the null hypothesis is true, and there really is no difference between the proportions. The differences we observed were just due to random chance. So, we compute $\hat{p}$ as the overall proportion,
 
+```{=tex}
 \begin{eqnarray*}
 \frac{\text{total \# of successes}}{\text{total sample size}}
 \end{eqnarray*}
-
+```
 Usually you can just read this off of a table. Sometimes you need a "formula,"
 
+```{=tex}
 \begin{eqnarray*}
 \hat{p}=\frac{\hat{p}_1n_1+\hat{p}_2n_2}{n_1+n_2}
 \end{eqnarray*}
-
+```
 ## Hypothesis test for a difference in proportions
 
+```{=tex}
 \begin{eqnarray*}
 z = \frac{(\hat{p}_1-\hat{p}_2)}{SE}
 \end{eqnarray*}
-
+```
 where
 
+```{=tex}
 \begin{eqnarray*}
 \sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+\frac{\hat{p}(1-\hat{p})}{n_2}}
 \end{eqnarray*}
-
+```
 ## Example {.t}
+
 Again, from a sample of 100 US adults, we know the following:
+
+```{=tex}
 \begin{table}[htbp]
 \begin{tabular}{ccc}
  & Government & Private \\
@@ -92,7 +99,7 @@ Self-employed & 1 & 11 \\
 Someone else & 20 & 68
 \end{tabular}
 \end{table}
-
-Let's test to see if the proportion of self-employed people is really different between government and private employees. 
+```
+Let's test to see if the proportion of self-employed people is really different between government and private employees.
 
 ## Example {.t}

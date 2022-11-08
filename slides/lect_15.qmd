@@ -34,9 +34,7 @@ Some people believe in the presence of Extrasensory Perception, or ESP. How coul
 
 One test for ESP is with Zener cards.
 
-```{r,out.width="70%"}
-include_graphics("lect_15-things/zener-cards.jpg")
-```
+![](lect_15-things/zener-cards.jpg){width="369"}
 
 ## Does ESP exist?
 
@@ -82,22 +80,53 @@ $\begin{eqnarray*} H_0: p \leq 1/5 \\ H_A: p > 1/5 \end{eqnarray*}$
 -   $H_A$ has a $\neq$ sign: both sides, or "two-sided"
 :::
 
-
-## Example
+## Example 1
 
 What are the null and alternate hypothesis for these decisions?
 
 ::: incremental
-- A person interviews for a job opening. The company has to decide whether to hire the person
-- An inventor proposes a new way to wrap packages that they say will speed up the manufacturing process. Should they adopt the new method?
-- A sales representative submits receipts from a recent business trip. Staff must determine whether the claims are legitimate.
+-   A person interviews for a job opening. The company has to decide whether to hire the person
+-   An inventor proposes a new way to wrap packages that they say will speed up the manufacturing process. Should they adopt the new method?
+-   A sales representative submits receipts from a recent business trip. Staff must determine whether the claims are legitimate.
 :::
+
+## Example 1 solns
+
+:: incremental - \$H_0 = \$ Person is not hired - \$H_0 = \$ Retain the current method - \$H_0 = \$ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found. :::
+
+## Past tests
+
+[Visual assocation tests](https://stats1010-f22.github.io/website/slides/lect_08.html#/price-vs-carat) [qqplots](https://stats1010-f22.github.io/website/slides/lect_11.html#/plot---normal) [$\Chi^2$ tests](https://stats1010-f22.github.io/website/supplemental/chi-squared.html)
+
+## Example 2
+
+A snack-food chain runs a promotion in which shoppers are told that 1 in 4 kids' meals includes a prize. A father buys two kids' meals, and neither has a prize. He concludes that because neither has a prize, the chain is being deceptive.
+
+a.  What is the null and alternative hypothesis?
+b.  Describe a Type I error?
+c.  Describe a Type II error?
+d.  What is the probability that the father has made a Type I error?
+
+## Example 2 - solns
+
+a.  $H_0$ = chain is being honest; $H_A$ = chain is not being honest
+b.  Falsely accusing the chain of being deceptive
+c.  Failting to realize that the chain is being deceptive
+d.  Father rejects if both are missing a prize. $P(neither has a prize) = (1 - 1/4)^2 \approx 0.56$
+
+## Test statistic
+
+In the previous example, we used probability to determine how likely it is to get two meals neither of which contain a prize. This process involves computing a *test statistic* ($0.56$).
+
+# Testing a proportion
+
+In the ESP example from before
 
 ## Do extremists see the world in black and white?
 
-Researcher Matt Motyl ran a study in 2010 with 2,000 participants. He wanted to determine if political moderates were able to perceive shades of grey more accurately than people on the far left or the far right. The p-value from the study was 0.01. Reject the null! Evidence in support of the idea that moderates can see grey better. 
+Researcher Matt Motyl ran a study in 2010 with 2,000 participants. He wanted to determine if political moderates were able to perceive shades of grey more accurately than people on the far left or the far right. The p-value from the study was 0.01. Reject the null! Evidence in support of the idea that moderates can see grey better.
 
-But then... he re-ran the study. This time, the p-value was 0.59. Not even close to significant. 
+But then... he re-ran the study. This time, the p-value was 0.59. Not even close to significant.
 
 What happened?!
 
@@ -107,38 +136,36 @@ Via Regina Nuzzo's Nature article, [Scientific method: Statistical Errors](https
 
 There are two types of errors defined in hypothesis testing:
 
-- Type I error, rejecting a true null
-- Type II error, not rejecting a false null 
+-   Type I error, rejecting a true null
+-   Type II error, not rejecting a false null
 
-## Law analogy 
+## Law analogy
 
 In the US, a person is innocent until proven guilty, and evidence of guilt must be beyond "the shadow of a doubt." We can make two types of mistakes:
 
-- Convict an innocent person (type I error)
-- Release a guilty person (type II error)
+-   Convict an innocent person (type I error)
+-   Release a guilty person (type II error)
 
 ## Extremists and black and white
 
 Two options:
 
-- the original study (p-value 0.01) made a Type I error, and the $H_0$ was really true
-- the second study (p-value 0.59) made a Type II error, and $H_A$ is really true
+-   the original study (p-value 0.01) made a Type I error, and the $H_0$ was really true
+-   the second study (p-value 0.59) made a Type II error, and $H_A$ is really true
 
 or...
 
-- maybe there were no errors made, just different studies found different things
-
+-   maybe there were no errors made, just different studies found different things
 
 ## Multiple testing
 
-Because the probability of a Type I error is $\alpha$, if you do many tests you will find significance in $\alpha$ of them **just by chance**. 
+Because the probability of a Type I error is $\alpha$, if you do many tests you will find significance in $\alpha$ of them **just by chance**.
 
-If you do 100 tests, you should expect to find 5 of them to be significant, just by chance. 
+If you do 100 tests, you should expect to find 5 of them to be significant, just by chance.
 
 This is the problem of **multiple testing.**
 
 ## Jelly beans and acne?
-
 
 ```{r,out.width="80%", fig.align='center'}
 include_graphics("lect_15-things/significant.png")
@@ -152,36 +179,30 @@ And things that look significant get published...
 
 That means that a fair number of things that are published are actually false! This is pretty scary.
 
-## How to fix the problem 
+## How to fix the problem
 
 As a researcher:
 
-- make sure your results can be replicated (like Motyl tried to do with the politics and grey study)
-- publish code and data so others can study your work
+-   make sure your results can be replicated (like Motyl tried to do with the politics and grey study)
+-   publish code and data so others can study your work
 
 As someone who reads about statistics:
 
-- be skeptical about claims that are just one of many tests
-- look for replication and reproducibility!
-
-
-#  {background-iframe="https://shiny.rit.albany.edu/stat/betaprob/"}
-
+-   be skeptical about claims that are just one of many tests
+-   look for replication and reproducibility!
 
 ## Reducing the probability of Type II error
 
 In order to reduce the probability of making a Type II error, we can either
 
-- increase the significance level
-- increase the sample size
+-   increase the significance level
+-   increase the sample size
 
-## Significance level and errors {.t}
+#  {background-iframe="https://shiny.rit.albany.edu/stat/betaprob/"}
 
-\begin{center}$\alpha$\end{center}
+# Statistical versus practical significance
 
-## Statistical versus practical significance 
-
-Sometimes, you find something that is very statistically significant, but not practically significant. 
+Sometimes, you find something that is very statistically significant, but not practically significant.
 
 Context is important!
 
