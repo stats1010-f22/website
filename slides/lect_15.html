@@ -459,10 +459,13 @@
 <section id="testing-a-proportion---contd" class="slide level2">
 <h2>Testing a proportion - contd</h2>
 <p>Under <span class="math inline">\(H_0\)</span>, we find</p>
-<p><span class="math display">\[z_0 = \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} \]</span> ## Assumptions</p>
+<p><span class="math display">\[z_0 = \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} \]</span></p>
+</section>
+<section id="assumptions" class="slide level2">
+<h2>Assumptions</h2>
 <div>
 <ul>
-<li class="fragment"><em>SRS</em></li>
+<li class="fragment"><em>SRS</em> and sample must be &lt; <span class="math inline">\(10\%\)</span> of population</li>
 <li class="fragment">Both <span class="math inline">\(np_0\)</span> and <span class="math inline">\(n(1-p_0)\)</span> are larger than 10</li>
 </ul>
 </div>
@@ -508,7 +511,59 @@
 <section>
 <section id="testing-a-mean" class="title-slide slide level1 center">
 <h1>Testing a mean</h1>
-
+<p>To test a mean, <span class="math inline">\(\bar{x}\)</span>, we must have a distribution with which to compare it. The distribution that we use is the distribution assumed in <span class="math inline">\(H_0\)</span> we use <span class="math inline">\(\mu_0\)</span> to denote this. Because we don’t know <span class="math inline">\(\sigma\)</span> we will once again use <span class="math inline">\(s\)</span> from the sample</p>
+</section>
+<section id="testing-a-mean---contd" class="slide level2">
+<h2>Testing a mean - contd</h2>
+<p>Under <span class="math inline">\(H_0\)</span>, we find</p>
+<p><span class="math display">\[t = \frac{\bar{X} - \mu_0} {s\sqrt{{n}}} \]</span></p>
+</section>
+<section id="assumptions-1" class="slide level2">
+<h2>Assumptions</h2>
+<div>
+<ul>
+<li class="fragment"><em>SRS</em> and sample must be &lt; <span class="math inline">\(10\%\)</span> of population</li>
+<li class="fragment">If we do not know if the population is normal, <span class="math inline">\(n &gt; 10|K_4|\)</span></li>
+</ul>
+</div>
+</section>
+<section id="example-4" class="slide level2">
+<h2>Example 4</h2>
+<p>Let <span class="math inline">\(\bar{x} = 3281\)</span>, <span class="math inline">\(s = 529\)</span>, and <span class="math inline">\(n = 59\)</span>. Perform a hypothesis test that this is using <span class="math inline">\(\mu_0 = 4000\)</span></p>
+</section>
+<section id="steps-for-a-hypothesis-test-1" class="slide level2">
+<h2>Steps for a hypothesis test</h2>
+<ol type="1">
+<li>State hypotheses</li>
+<li>Determine the level of significance</li>
+<li>Check conditions</li>
+<li>Calculate test statistic</li>
+<li>Compute p-value</li>
+<li>Generic conclusion</li>
+<li>Interpret in context</li>
+</ol>
+</section>
+<section id="example-4---solns" class="slide level2">
+<h2>Example 4 - solns</h2>
+<div>
+<ol type="1">
+<li class="fragment"><span class="math inline">\(H_0: p \leq 4000\)</span> and <span class="math inline">\(H_A: p &gt; 4000\)</span></li>
+<li class="fragment"><span class="math inline">\(\alpha = 0.05\)</span></li>
+<li class="fragment">Yes</li>
+<li class="fragment"><span class="math inline">\(\hat{p} = \frac{x}{n} = \frac{17}{36} =0.472\)</span></li>
+<li class="fragment"><span class="math inline">\(\begin{aligned} t &amp;= \frac{\bar{X} - \mu_0} {s\sqrt{{n}}}\\ &amp;= \frac{3281-4000}{529\sqrt{59}} \\ &amp;= \frac{-719}{4063.326} \approx -0.177 \end{aligned}\)</span></li>
+</ol>
+</div>
+</section>
+<section id="example-4---solns-1" class="slide level2">
+<h2>Example 4 - solns</h2>
+<div>
+<ol start="5" type="1">
+<li class="fragment"><code>pt(-0.177, df = 58)</code> or <code>pt((3281-4000)/(529*sqrt(59)), df = 58)</code></li>
+<li class="fragment">With <span class="math inline">\(\alpha = 0.05\)</span> this is not significant.</li>
+<li class="fragment">We <em>fail to reject</em> <span class="math inline">\(H_0\)</span>. There is no evidence that the mean value is less than 4000.</li>
+</ol>
+</div>
 </section>
 <section id="do-extremists-see-the-world-in-black-and-white" class="slide level2">
 <h2>Do extremists see the world in black and white?</h2>
@@ -583,6 +638,11 @@
 <p>Sometimes, you find something that is very statistically significant, but not practically significant.</p>
 <p>For example, a revision program might increase final exam grades with <span class="math inline">\(p-value &lt; 0.00001\)</span>, but it may only increase final exam grades by <span class="math inline">\(1\%\)</span>. This is statistically significant but not practically significant.</p>
 <p>Context is important!</p>
+</section>
+
+<section id="confidence-interval-or-test" class="title-slide slide level1 center">
+<h1>Confidence interval or test</h1>
+<p>These two are mostly interchangeable. However, tests only provide negative statements and does not give us much information about parameter values.</p>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>

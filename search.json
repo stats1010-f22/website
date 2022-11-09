@@ -2174,7 +2174,14 @@
     "href": "slides/lect_15.html#testing-a-proportion---contd",
     "title": "Chapter 16: Statistical tests",
     "section": "Testing a proportion - contd",
-    "text": "Testing a proportion - contd\nUnder \\(H_0\\), we find\n\\[z_0 = \\frac{\\hat{p} - p_0} {\\sqrt{\\frac{p_0(1-p_0)}{n}}} \\] ## Assumptions\n\n\nSRS\nBoth \\(np_0\\) and \\(n(1-p_0)\\) are larger than 10"
+    "text": "Testing a proportion - contd\nUnder \\(H_0\\), we find\n\\[z_0 = \\frac{\\hat{p} - p_0} {\\sqrt{\\frac{p_0(1-p_0)}{n}}} \\]"
+  },
+  {
+    "objectID": "slides/lect_15.html#assumptions",
+    "href": "slides/lect_15.html#assumptions",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Assumptions",
+    "text": "Assumptions\n\n\nSRS and sample must be < \\(10\\%\\) of population\nBoth \\(np_0\\) and \\(n(1-p_0)\\) are larger than 10"
   },
   {
     "objectID": "slides/lect_15.html#example-3",
@@ -2203,6 +2210,48 @@
     "title": "Chapter 16: Statistical tests",
     "section": "Example 3 - solns",
     "text": "Example 3 - solns\n\n\n1 -pnorm(1.2) or 1- pnorm((17/36- 9/24)/sqrt((0.375*(1-0.375))/36))\nWith \\(\\alpha = 0.05\\) this is not significant.\nWe fail to reject \\(H_0\\). The second score does not provide evidence that the intervention improved ESP."
+  },
+  {
+    "objectID": "slides/lect_15.html#testing-a-mean---contd",
+    "href": "slides/lect_15.html#testing-a-mean---contd",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Testing a mean - contd",
+    "text": "Testing a mean - contd\nUnder \\(H_0\\), we find\n\\[t = \\frac{\\bar{X} - \\mu_0} {s\\sqrt{{n}}} \\]"
+  },
+  {
+    "objectID": "slides/lect_15.html#assumptions-1",
+    "href": "slides/lect_15.html#assumptions-1",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Assumptions",
+    "text": "Assumptions\n\n\nSRS and sample must be < \\(10\\%\\) of population\nIf we do not know if the population is normal, \\(n > 10|K_4|\\)"
+  },
+  {
+    "objectID": "slides/lect_15.html#example-4",
+    "href": "slides/lect_15.html#example-4",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Example 4",
+    "text": "Example 4\nLet \\(\\bar{x} = 3281\\), \\(s = 529\\), and \\(n = 59\\). Perform a hypothesis test that this is using \\(\\mu_0 = 4000\\)"
+  },
+  {
+    "objectID": "slides/lect_15.html#steps-for-a-hypothesis-test-1",
+    "href": "slides/lect_15.html#steps-for-a-hypothesis-test-1",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Steps for a hypothesis test",
+    "text": "Steps for a hypothesis test\n\nState hypotheses\nDetermine the level of significance\nCheck conditions\nCalculate test statistic\nCompute p-value\nGeneric conclusion\nInterpret in context"
+  },
+  {
+    "objectID": "slides/lect_15.html#example-4---solns",
+    "href": "slides/lect_15.html#example-4---solns",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Example 4 - solns",
+    "text": "Example 4 - solns\n\n\n\\(H_0: p \\leq 4000\\) and \\(H_A: p > 4000\\)\n\\(\\alpha = 0.05\\)\nYes\n\\(\\hat{p} = \\frac{x}{n} = \\frac{17}{36} =0.472\\)\n\\(\\begin{aligned} t &= \\frac{\\bar{X} - \\mu_0} {s\\sqrt{{n}}}\\\\ &= \\frac{3281-4000}{529\\sqrt{59}} \\\\ &= \\frac{-719}{4063.326} \\approx -0.177 \\end{aligned}\\)"
+  },
+  {
+    "objectID": "slides/lect_15.html#example-4---solns-1",
+    "href": "slides/lect_15.html#example-4---solns-1",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Example 4 - solns",
+    "text": "Example 4 - solns\n\n\npt(-0.177, df = 58) or pt((3281-4000)/(529*sqrt(59)), df = 58)\nWith \\(\\alpha = 0.05\\) this is not significant.\nWe fail to reject \\(H_0\\). There is no evidence that the mean value is less than 4000."
   },
   {
     "objectID": "slides/lect_15.html#do-extremists-see-the-world-in-black-and-white",
