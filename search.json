@@ -1859,7 +1859,7 @@
     "href": "slides/lect_14.html#example-2---solns",
     "title": "Chapter 15: Confidence intervals",
     "section": "Example 2 - solns",
-    "text": "Example 2 - solns\n\n\nyes, \\(\\hat{p} = 35/225 \\approx 0.156\\) so \\(n\\hat{p}, n(1-\\hat{p})> 10\\) and we assume sampled \\(<10\\%\\)\n\\(\\begin{aligned} \\hat{p} \\pm z_{\\alpha/2} \\cdot \\sqrt{\\hat{p}(1-\\hat{p})/n} = 0.156 \\pm 1.96 \\sqrt{0.156(1-0.156)/225} = 0.156 \\pm 1.96 \\cdot 0.0242 = 0.156 \\pm 0.047, [0.109, 0.203]\\end{aligned}\\)\n\n\n\\(0.156 \\pm 1.96 \\cdot 0.0242\\)\n\\(0.156 \\pm 0.047, [0.109, 0.203]\\)\n\n\nNo \\(10\\%\\) is too low, with \\(95\\%\\) confidence it is higher"
+    "text": "Example 2 - solns\n\n\nyes, \\(\\hat{p} = 35/225 \\approx 0.156\\) so \\(n\\hat{p}, n(1-\\hat{p})> 10\\) and we assume sampled \\(<10\\%\\)\n\\(\\begin{aligned} \\hat{p} \\pm z_{\\alpha/2} \\cdot \\sqrt{\\hat{p}(1-\\hat{p})/n} &= 0.156 \\pm 1.96 \\sqrt{0.156(1-0.156)/225}\\\\ &= 0.156 \\pm 1.96 \\cdot 0.0242 \\\\ &= 0.156 \\pm 0.047\\\\ & [0.109, 0.203]\\end{aligned}\\)\nNo \\(10\\%\\) is too low, with \\(95\\%\\) confidence it is higher"
   },
   {
     "objectID": "slides/lect_14.html#variability-1",
@@ -1922,7 +1922,7 @@
     "href": "slides/lect_14.html#example-2---solns-1",
     "title": "Chapter 15: Confidence intervals",
     "section": "Example 2 - solns",
-    "text": "Example 2 - solns\n\n\n\\(N(\\mu, \\sigma^2/49)\\)\n\\[\\begin{aligned} 4200 \\pm 2.01 \\cdot 3500/\\sqrt{49} = 4200 \\pm 2.01 \\cdot 500 = 4200 \\pm -1005.317 \\approx [3195, 5205]\\end{aligned}\\]\n\n\n\\([3195, 5205]\\)\n4200 + qt(.025, df = 48)*3500/sqrt(49)\n\n\nNo \\(\\$6,00\\) is way above the \\(95\\%\\) confidence interval"
+    "text": "Example 2 - solns\n\n\n\\(N(\\mu, \\sigma^2/49)\\)\n\\[\\begin{aligned} 4200 \\pm 2.01 \\cdot 3500/\\sqrt{49} &= 4200 \\pm 2.01 \\cdot 500 \\\\ &= 4200 \\pm -1005.317 \\\\ &\\approx [3195, 5205]\\end{aligned}\\]\nNo \\(\\$6,00\\) is way above the \\(95\\%\\) confidence interval"
   },
   {
     "objectID": "slides/lect_14.html#example-2---solns-2",
@@ -2170,18 +2170,39 @@
     "text": "Test statistic\nIn the previous example, we used probability to determine how likely it is to get two meals neither of which contain a prize. This process involves computing a test statistic (\\(0.56\\))."
   },
   {
+    "objectID": "slides/lect_15.html#testing-a-proportion---contd",
+    "href": "slides/lect_15.html#testing-a-proportion---contd",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Testing a proportion - contd",
+    "text": "Testing a proportion - contd\nUnder \\(H_0\\), we find\n\\[z_0 = \\frac{\\hat{p} - p_0} {\\sqrt{\\frac{p_0(1-p_0)}{n}}} \\] ## Assumptions\n\n\nSRS\nBoth \\(np_0\\) and \\(n(1-p_0)\\) are larger than 10"
+  },
+  {
     "objectID": "slides/lect_15.html#example-3",
     "href": "slides/lect_15.html#example-3",
     "title": "Chapter 16: Statistical tests",
     "section": "Example 3",
-    "text": "Example 3\nIn the ESP example from before someone correctly guessed 15 out of 25 cards? Do they have ESP?"
+    "text": "Example 3\nIn the ESP example, an interested participant initially guessed 9 out of 24 cards and then took a training course to enhance their ESP. In the followup exam, they guessed 17 out of 36 cards. Did the course improve their ESP abilities?"
   },
   {
     "objectID": "slides/lect_15.html#steps-for-a-hypothesis-test",
     "href": "slides/lect_15.html#steps-for-a-hypothesis-test",
     "title": "Chapter 16: Statistical tests",
     "section": "Steps for a hypothesis test",
-    "text": "Steps for a hypothesis test\n\nState hypotheses\nCheck conditions\nCalculate test statistic\nCompute p-value\nGeneric conclusion\nInterpret in context"
+    "text": "Steps for a hypothesis test\n\nState hypotheses\nDetermine the level of significance\nCheck conditions\nCalculate test statistic\nCompute p-value\nGeneric conclusion\nInterpret in context"
+  },
+  {
+    "objectID": "slides/lect_15.html#example-3---solns",
+    "href": "slides/lect_15.html#example-3---solns",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Example 3 - solns",
+    "text": "Example 3 - solns\n\n\n\\(H_0: p \\geq 9/24\\) and \\(H_A: p < 9/24\\)\n\\(\\alpha = 0.05\\)\nYes\n\\(\\hat{p} = \\frac{x}{n} = \\frac{17}{36} =0.472\\)\n\\(\\begin{aligned} z_0 &= \\frac{\\hat{p} - p_0} {\\sqrt{\\frac{p_0(1-p_0)}{n}}} \\\\ &= \\frac{0.472 - 0.375} {\\sqrt{\\frac{0.375(1-0.375)}{36}}} \\\\ &= \\frac{0.0972}{0.0807} \\approx 1.2 \\end{aligned}\\)"
+  },
+  {
+    "objectID": "slides/lect_15.html#example-3---solns-1",
+    "href": "slides/lect_15.html#example-3---solns-1",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Example 3 - solns",
+    "text": "Example 3 - solns\n\n\n1 -pnorm(1.2) or 1- pnorm((17/36- 9/24)/sqrt((0.375*(1-0.375))/36))\nWith \\(\\alpha = 0.05\\) this is not significant.\nWe fail to reject \\(H_0\\). The second score does not provide evidence that the intervention improved ESP."
   },
   {
     "objectID": "slides/lect_15.html#do-extremists-see-the-world-in-black-and-white",
@@ -2217,13 +2238,6 @@
     "title": "Chapter 16: Statistical tests",
     "section": "Multiple testing",
     "text": "Multiple testing\nBecause the probability of a Type I error is \\(\\alpha\\), if you do many tests you will find significance in \\(\\alpha\\) of them just by chance.\nIf you do 100 tests, you should expect to find 5 of them to be significant, just by chance.\nThis is the problem of multiple testing."
-  },
-  {
-    "objectID": "slides/lect_15.html#jelly-beans-and-acne",
-    "href": "slides/lect_15.html#jelly-beans-and-acne",
-    "title": "Chapter 16: Statistical tests",
-    "section": "Jelly beans and acne?",
-    "text": "Jelly beans and acne?"
   },
   {
     "objectID": "slides/lect_15.html#multiple-testing-publication-bias",

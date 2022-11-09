@@ -453,16 +453,29 @@
 <section>
 <section id="testing-a-proportion" class="title-slide slide level1 center">
 <h1>Testing a proportion</h1>
-<p><span class="math display">\[\hat{p} \sim N(p,  \frac{{p}(1-{p})}{n}) \]</span></p>
+<p>To test a proportion, <span class="math inline">\(\hat{p}\)</span>, we must have a distribution with which to compare it. The distribution that we use is the distribution assumed in <span class="math inline">\(H_0\)</span> we use <span class="math inline">\(p_0\)</span> to denote this.</p>
+<p><span class="math display">\[p_0 \sim N(p_0,  \frac{{p_0}(1-{p_0})}{n}) \]</span></p>
+</section>
+<section id="testing-a-proportion---contd" class="slide level2">
+<h2>Testing a proportion - contd</h2>
+<p>Under <span class="math inline">\(H_0\)</span>, we find</p>
+<p><span class="math display">\[z_0 = \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} \]</span> ## Assumptions</p>
+<div>
+<ul>
+<li class="fragment"><em>SRS</em></li>
+<li class="fragment">Both <span class="math inline">\(np_0\)</span> and <span class="math inline">\(n(1-p_0)\)</span> are larger than 10</li>
+</ul>
+</div>
 </section>
 <section id="example-3" class="slide level2">
 <h2>Example 3</h2>
-<p>In the ESP example from before someone correctly guessed 15 out of 25 cards? Do they have ESP?</p>
+<p>In the ESP example, an interested participant initially guessed 9 out of 24 cards and then took a training course to enhance their ESP. In the followup exam, they guessed 17 out of 36 cards. Did the course improve their ESP abilities?</p>
 </section>
 <section id="steps-for-a-hypothesis-test" class="slide level2">
 <h2>Steps for a hypothesis test</h2>
 <ol type="1">
 <li>State hypotheses</li>
+<li>Determine the level of significance</li>
 <li>Check conditions</li>
 <li>Calculate test statistic</li>
 <li>Compute p-value</li>
@@ -470,8 +483,32 @@
 <li>Interpret in context</li>
 </ol>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="example-3---solns" class="slide level2">
+<h2>Example 3 - solns</h2>
+<div>
+<ol type="1">
+<li class="fragment"><span class="math inline">\(H_0: p \geq 9/24\)</span> and <span class="math inline">\(H_A: p &lt; 9/24\)</span></li>
+<li class="fragment"><span class="math inline">\(\alpha = 0.05\)</span></li>
+<li class="fragment">Yes</li>
+<li class="fragment"><span class="math inline">\(\hat{p} = \frac{x}{n} = \frac{17}{36} =0.472\)</span></li>
+<li class="fragment"><span class="math inline">\(\begin{aligned} z_0 &amp;= \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} \\ &amp;= \frac{0.472 - 0.375} {\sqrt{\frac{0.375(1-0.375)}{36}}} \\ &amp;= \frac{0.0972}{0.0807} \approx 1.2 \end{aligned}\)</span></li>
+</ol>
+</div>
+</section>
+<section id="example-3---solns-1" class="slide level2">
+<h2>Example 3 - solns</h2>
+<div>
+<ol start="5" type="1">
+<li class="fragment"><code>1 -pnorm(1.2)</code> or <code>1- pnorm((17/36- 9/24)/sqrt((0.375*(1-0.375))/36))</code></li>
+<li class="fragment">With <span class="math inline">\(\alpha = 0.05\)</span> this is not significant.</li>
+<li class="fragment">We <em>fail to reject</em> <span class="math inline">\(H_0\)</span>. The second score does not provide evidence that the intervention improved ESP.</li>
+</ol>
+</div>
+</section></section>
+<section>
+<section id="testing-a-mean" class="title-slide slide level1 center">
+<h1>Testing a mean</h1>
+
 </section>
 <section id="do-extremists-see-the-world-in-black-and-white" class="slide level2">
 <h2>Do extremists see the world in black and white?</h2>
@@ -513,9 +550,6 @@
 <p>Because the probability of a Type I error is <span class="math inline">\(\alpha\)</span>, if you do many tests you will find significance in <span class="math inline">\(\alpha\)</span> of them <strong>just by chance</strong>.</p>
 <p>If you do 100 tests, you should expect to find 5 of them to be significant, just by chance.</p>
 <p>This is the problem of <strong>multiple testing.</strong></p>
-</section>
-<section id="jelly-beans-and-acne" class="slide level2">
-<h2>Jelly beans and acne?</h2>
 </section>
 <section id="multiple-testing-publication-bias" class="slide level2">
 <h2>Multiple testing + publication bias</h2>
