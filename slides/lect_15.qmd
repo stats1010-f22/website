@@ -93,9 +93,9 @@ What are the null and alternate hypothesis for these decisions?
 ## Example 1 solns
 
 ::: incremental
--   \$H_0 = \$ Person is not hired
--   \$H_0 = \$ Retain the current method
--   \$H_0 = \$ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found.
+-   $H_0 = $ Person is not hired
+-   $H_0 = $ Retain the current method
+-   $H_0 = $ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found.
 :::
 
 ## Past tests
@@ -187,7 +187,7 @@ To test a mean, $\bar{x}$, we must have a distribution with which to compare it.
 
 Under $H_0$, we find
 
-$$t = \frac{\bar{X} - \mu_0} {s\sqrt{{n}}} $$ 
+$$t = \frac{\bar{X} - \mu_0} {s/\sqrt{{n}}} $$ 
 
 ## Assumptions
 
@@ -198,7 +198,7 @@ $$t = \frac{\bar{X} - \mu_0} {s\sqrt{{n}}} $$
 
 ## Example 4
 
-Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that this is less than $\mu_0 = 4000$
+Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that the sample comes from a distribution where the population mean is less than $\mu_0 = 4000$
 
 
 ## Steps for a hypothesis test
@@ -218,15 +218,15 @@ Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that th
 2.  $\alpha = 0.05$
 3.  Yes
 4.  $\bar{x} = 3281$
-5.  $\begin{aligned} t &= \frac{\bar{X} - \mu_0} {s\sqrt{{n}}}\\ &= \frac{3281-4000}{529\sqrt{59}} \\ &= \frac{-719}{4063.326} \approx -0.177 \end{aligned}$
+5.  $\begin{aligned} t &= \frac{\bar{X} - \mu_0} {s/\sqrt{{n}}}\\ &= \frac{3281-4000}{529/\sqrt{59}} \\ &= \frac{-719}{68.87} \approx -10.44 \end{aligned}$
 :::
 
 ## Example 4 - solns
 
 ::: incremental
-5.  `pt(-0.177, df = 58)` or `pt((3281-4000)/(529*sqrt(59)), df = 58)`
-6.  With $\alpha = 0.05$ this is not significant.
-7. We *fail to reject* $H_0$.  There is no evidence that the mean value is less than 4000.
+5.  `pt(-10.44, df = 58)` or `pt((3281-4000)/(529/sqrt(59)), df = 58)`
+6.  With $\alpha = 0.05$ this is significant.
+7. We *reject* $H_0$.  There is *very strong* evidence that the mean value is less than 4000.
 :::
 
 
