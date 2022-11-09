@@ -138,10 +138,12 @@ $$p_0 \sim N(p_0,  \frac{{p_0}(1-{p_0})}{n}) $$
 
 Under $H_0$, we find
 
-$$z_0 = \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} $$ \## Assumptions
+$$z_0 = \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} $$ 
+
+## Assumptions
 
 ::: incremental
--   *SRS*
+-   *SRS* and sample must be < $10\%$ of population
 -   Both $np_0$ and $n(1-p_0)$ are larger than 10
 :::
 
@@ -178,6 +180,54 @@ In the ESP example, an interested participant initially guessed 9 out of 24 card
 :::
 
 # Testing a mean
+
+To test a mean, $\bar{x}$, we must have a distribution with which to compare it. The distribution that we use is the distribution assumed in $H_0$ we use $\mu_0$ to denote this. Because we don't know $\sigma$ we will once again use $s$ from the sample
+
+## Testing a mean - contd
+
+Under $H_0$, we find
+
+$$t = \frac{\bar{X} - \mu_0} {s\sqrt{{n}}} $$ 
+
+## Assumptions
+
+::: incremental
+-   *SRS* and sample must be < $10\%$ of population
+-   If we do not know if the population is normal, $n > 10|K_4|$
+:::
+
+## Example 4
+
+Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that this is using $\mu_0 = 4000$
+
+
+## Steps for a hypothesis test
+
+1.  State hypotheses
+2.  Determine the level of significance
+3.  Check conditions
+4.  Calculate test statistic
+5.  Compute p-value
+6.  Generic conclusion
+7.  Interpret in context
+
+## Example 4 - solns
+
+::: incremental
+1.  $H_0: p \leq 4000$ and $H_A: p > 4000$
+2.  $\alpha = 0.05$
+3.  Yes
+4.  $\hat{p} = \frac{x}{n} = \frac{17}{36} =0.472$
+5.  $\begin{aligned} t &= \frac{\bar{X} - \mu_0} {s\sqrt{{n}}}\\ &= \frac{3281-4000}{529\sqrt{59}} \\ &= \frac{-719}{4063.326} \approx -0.177 \end{aligned}$
+:::
+
+## Example 4 - solns
+
+::: incremental
+5.  `pt(-0.177, df = 58)` or `pt((3281-4000)/(529*sqrt(59)), df = 58)`
+6.  With $\alpha = 0.05$ this is not significant.
+7. We *fail to reject* $H_0$.  There is no evidence that the mean value is less than 4000.
+:::
 
 
 ## Do extremists see the world in black and white?
@@ -257,3 +307,7 @@ Sometimes, you find something that is very statistically significant, but not pr
 For example, a revision program might increase final exam grades with $p-value < 0.00001$, but it may only increase final exam grades by $1\%$. This is statistically significant but not practically significant.
 
 Context is important!
+
+# Confidence interval or test
+
+These two are mostly interchangeable. However, tests only provide negative statements and does not give us much information about parameter values.
