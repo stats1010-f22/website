@@ -2216,7 +2216,7 @@
     "href": "slides/lect_15.html#testing-a-mean---contd",
     "title": "Chapter 16: Statistical tests",
     "section": "Testing a mean - contd",
-    "text": "Testing a mean - contd\nUnder \\(H_0\\), we find\n\\[t = \\frac{\\bar{X} - \\mu_0} {s\\sqrt{{n}}} \\]"
+    "text": "Testing a mean - contd\nUnder \\(H_0\\), we find\n\\[t = \\frac{\\bar{X} - \\mu_0} {s/\\sqrt{{n}}} \\]"
   },
   {
     "objectID": "slides/lect_15.html#assumptions-1",
@@ -2230,7 +2230,7 @@
     "href": "slides/lect_15.html#example-4",
     "title": "Chapter 16: Statistical tests",
     "section": "Example 4",
-    "text": "Example 4\nLet \\(\\bar{x} = 3281\\), \\(s = 529\\), and \\(n = 59\\). Perform a hypothesis test that this is less than \\(\\mu_0 = 4000\\)"
+    "text": "Example 4\nLet \\(\\bar{x} = 3281\\), \\(s = 529\\), and \\(n = 59\\). Perform a hypothesis test that the sample comes from a distribution where the population mean is less than \\(\\mu_0 = 4000\\)"
   },
   {
     "objectID": "slides/lect_15.html#steps-for-a-hypothesis-test-1",
@@ -2244,14 +2244,14 @@
     "href": "slides/lect_15.html#example-4---solns",
     "title": "Chapter 16: Statistical tests",
     "section": "Example 4 - solns",
-    "text": "Example 4 - solns\n\n\n\\(H_0: p \\leq 4000\\) and \\(H_A: p > 4000\\)\n\\(\\alpha = 0.05\\)\nYes\n\\(\\bar{x} = 3281\\)\n\\(\\begin{aligned} t &= \\frac{\\bar{X} - \\mu_0} {s\\sqrt{{n}}}\\\\ &= \\frac{3281-4000}{529\\sqrt{59}} \\\\ &= \\frac{-719}{4063.326} \\approx -0.177 \\end{aligned}\\)"
+    "text": "Example 4 - solns\n\n\n\\(H_0: p \\leq 4000\\) and \\(H_A: p > 4000\\)\n\\(\\alpha = 0.05\\)\nYes\n\\(\\bar{x} = 3281\\)\n\\(\\begin{aligned} t &= \\frac{\\bar{X} - \\mu_0} {s/\\sqrt{{n}}}\\\\ &= \\frac{3281-4000}{529/\\sqrt{59}} \\\\ &= \\frac{-719}{68.87} \\approx -10.44 \\end{aligned}\\)"
   },
   {
     "objectID": "slides/lect_15.html#example-4---solns-1",
     "href": "slides/lect_15.html#example-4---solns-1",
     "title": "Chapter 16: Statistical tests",
     "section": "Example 4 - solns",
-    "text": "Example 4 - solns\n\n\npt(-0.177, df = 58) or pt((3281-4000)/(529*sqrt(59)), df = 58)\nWith \\(\\alpha = 0.05\\) this is not significant.\nWe fail to reject \\(H_0\\). There is no evidence that the mean value is less than 4000."
+    "text": "Example 4 - solns\n\n\npt(-10.44, df = 58) or pt((3281-4000)/(529/sqrt(59)), df = 58)\nWith \\(\\alpha = 0.05\\) this is significant.\nWe reject \\(H_0\\). There is very strong evidence that the mean value is less than 4000."
   },
   {
     "objectID": "slides/lect_15.html#do-extremists-see-the-world-in-black-and-white",

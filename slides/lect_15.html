@@ -516,7 +516,7 @@
 <section id="testing-a-mean---contd" class="slide level2">
 <h2>Testing a mean - contd</h2>
 <p>Under <span class="math inline">\(H_0\)</span>, we find</p>
-<p><span class="math display">\[t = \frac{\bar{X} - \mu_0} {s\sqrt{{n}}} \]</span></p>
+<p><span class="math display">\[t = \frac{\bar{X} - \mu_0} {s/\sqrt{{n}}} \]</span></p>
 </section>
 <section id="assumptions-1" class="slide level2">
 <h2>Assumptions</h2>
@@ -529,7 +529,7 @@
 </section>
 <section id="example-4" class="slide level2">
 <h2>Example 4</h2>
-<p>Let <span class="math inline">\(\bar{x} = 3281\)</span>, <span class="math inline">\(s = 529\)</span>, and <span class="math inline">\(n = 59\)</span>. Perform a hypothesis test that this is less than <span class="math inline">\(\mu_0 = 4000\)</span></p>
+<p>Let <span class="math inline">\(\bar{x} = 3281\)</span>, <span class="math inline">\(s = 529\)</span>, and <span class="math inline">\(n = 59\)</span>. Perform a hypothesis test that the sample comes from a distribution where the population mean is less than <span class="math inline">\(\mu_0 = 4000\)</span></p>
 </section>
 <section id="steps-for-a-hypothesis-test-1" class="slide level2">
 <h2>Steps for a hypothesis test</h2>
@@ -551,7 +551,7 @@
 <li class="fragment"><span class="math inline">\(\alpha = 0.05\)</span></li>
 <li class="fragment">Yes</li>
 <li class="fragment"><span class="math inline">\(\bar{x} = 3281\)</span></li>
-<li class="fragment"><span class="math inline">\(\begin{aligned} t &amp;= \frac{\bar{X} - \mu_0} {s\sqrt{{n}}}\\ &amp;= \frac{3281-4000}{529\sqrt{59}} \\ &amp;= \frac{-719}{4063.326} \approx -0.177 \end{aligned}\)</span></li>
+<li class="fragment"><span class="math inline">\(\begin{aligned} t &amp;= \frac{\bar{X} - \mu_0} {s/\sqrt{{n}}}\\ &amp;= \frac{3281-4000}{529/\sqrt{59}} \\ &amp;= \frac{-719}{68.87} \approx -10.44 \end{aligned}\)</span></li>
 </ol>
 </div>
 </section>
@@ -559,9 +559,9 @@
 <h2>Example 4 - solns</h2>
 <div>
 <ol start="5" type="1">
-<li class="fragment"><code>pt(-0.177, df = 58)</code> or <code>pt((3281-4000)/(529*sqrt(59)), df = 58)</code></li>
-<li class="fragment">With <span class="math inline">\(\alpha = 0.05\)</span> this is not significant.</li>
-<li class="fragment">We <em>fail to reject</em> <span class="math inline">\(H_0\)</span>. There is no evidence that the mean value is less than 4000.</li>
+<li class="fragment"><code>pt(-10.44, df = 58)</code> or <code>pt((3281-4000)/(529/sqrt(59)), df = 58)</code></li>
+<li class="fragment">With <span class="math inline">\(\alpha = 0.05\)</span> this is significant.</li>
+<li class="fragment">We <em>reject</em> <span class="math inline">\(H_0\)</span>. There is <em>very strong</em> evidence that the mean value is less than 4000.</li>
 </ol>
 </div>
 </section>
