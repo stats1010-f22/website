@@ -217,7 +217,7 @@ Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that th
 1.  $H_0: p \leq 4000$ and $H_A: p > 4000$
 2.  $\alpha = 0.05$
 3.  Yes
-4.  $\hat{p} = \frac{x}{n} = \frac{17}{36} =0.472$
+4.  $\bar{x} = 3281$
 5.  $\begin{aligned} t &= \frac{\bar{X} - \mu_0} {s\sqrt{{n}}}\\ &= \frac{3281-4000}{529\sqrt{59}} \\ &= \frac{-719}{4063.326} \approx -0.177 \end{aligned}$
 :::
 
