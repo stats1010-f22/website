@@ -2139,14 +2139,14 @@
     "href": "slides/lect_15.html#example-1-solns",
     "title": "Chapter 16: Statistical tests",
     "section": "Example 1 solns",
-    "text": "Example 1 solns\n:: incremental - $H_0 = $ Person is not hired - $H_0 = $ Retain the current method - $H_0 = $ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found. :::"
+    "text": "Example 1 solns\n\n\n$H_0 = $ Person is not hired\n$H_0 = $ Retain the current method\n$H_0 = $ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found."
   },
   {
     "objectID": "slides/lect_15.html#past-tests",
     "href": "slides/lect_15.html#past-tests",
     "title": "Chapter 16: Statistical tests",
     "section": "Past tests",
-    "text": "Past tests\nVisual assocation tests qqplots \\(\\Chi^2\\) tests"
+    "text": "Past tests\n\n\nVisual assocation tests\nqqplots\n\\(\\chi^2\\) tests"
   },
   {
     "objectID": "slides/lect_15.html#example-2",
@@ -2168,6 +2168,20 @@
     "title": "Chapter 16: Statistical tests",
     "section": "Test statistic",
     "text": "Test statistic\nIn the previous example, we used probability to determine how likely it is to get two meals neither of which contain a prize. This process involves computing a test statistic (\\(0.56\\))."
+  },
+  {
+    "objectID": "slides/lect_15.html#example-3",
+    "href": "slides/lect_15.html#example-3",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Example 3",
+    "text": "Example 3\nIn the ESP example from before someone correctly guessed 15 out of 25 cards? Do they have ESP?"
+  },
+  {
+    "objectID": "slides/lect_15.html#steps-for-a-hypothesis-test",
+    "href": "slides/lect_15.html#steps-for-a-hypothesis-test",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Steps for a hypothesis test",
+    "text": "Steps for a hypothesis test\n\nState hypotheses\nCheck conditions\nCalculate test statistic\nCompute p-value\nGeneric conclusion\nInterpret in context"
   },
   {
     "objectID": "slides/lect_15.html#do-extremists-see-the-world-in-black-and-white",
