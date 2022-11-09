@@ -130,22 +130,55 @@ In the previous example, we used probability to determine how likely it is to ge
 
 # Testing a proportion
 
-$$\hat{p} \sim N(p,  \frac{{p}(1-{p})}{n}) $$
+To test a proportion, $\hat{p}$, we must have a distribution with which to compare it. The distribution that we use is the distribution assumed in $H_0$ we use $p_0$ to denote this.
+
+$$p_0 \sim N(p_0,  \frac{{p_0}(1-{p_0})}{n}) $$
+
+## Testing a proportion - contd
+
+Under $H_0$, we find
+
+$$z_0 = \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} $$ \## Assumptions
+
+::: incremental
+-   *SRS*
+-   Both $np_0$ and $n(1-p_0)$ are larger than 10
+:::
 
 ## Example 3
 
-In the ESP example from before someone correctly guessed 15 out of 25 cards? Do they have ESP?
+In the ESP example, an interested participant initially guessed 9 out of 24 cards and then took a training course to enhance their ESP. In the followup exam, they guessed 17 out of 36 cards. Did the course improve their ESP abilities?
 
 ## Steps for a hypothesis test
 
 1.  State hypotheses
-2.  Check conditions
-3.  Calculate test statistic
-4.  Compute p-value
-5.  Generic conclusion
-6.  Interpret in context
+2.  Determine the level of significance
+3.  Check conditions
+4.  Calculate test statistic
+5.  Compute p-value
+6.  Generic conclusion
+7.  Interpret in context
 
-## 
+## Example 3 - solns
+
+::: incremental
+1.  $H_0: p \geq 9/24$ and $H_A: p < 9/24$
+2.  $\alpha = 0.05$
+3.  Yes
+4.  $\hat{p} = \frac{x}{n} = \frac{17}{36} =0.472$
+5.  $\begin{aligned} z_0 &= \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} \\ &= \frac{0.472 - 0.375} {\sqrt{\frac{0.375(1-0.375)}{36}}} \\ &= \frac{0.0972}{0.0807} \approx 1.2 \end{aligned}$
+:::
+
+## Example 3 - solns
+
+::: incremental
+5.  `1 -pnorm(1.2)` or `1- pnorm((17/36- 9/24)/sqrt((0.375*(1-0.375))/36))`
+6.  With $\alpha = 0.05$ this is not significant.
+7. We *fail to reject* $H_0$.  The second score does not provide evidence that the intervention improved ESP.
+:::
+
+# Testing a mean
+
 
 ## Do extremists see the world in black and white?
 
@@ -189,8 +222,6 @@ Because the probability of a Type I error is $\alpha$, if you do many tests you 
 If you do 100 tests, you should expect to find 5 of them to be significant, just by chance.
 
 This is the problem of **multiple testing.**
-
-## Jelly beans and acne?
 
 ## Multiple testing + publication bias
 
