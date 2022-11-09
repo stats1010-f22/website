@@ -92,11 +92,21 @@ What are the null and alternate hypothesis for these decisions?
 
 ## Example 1 solns
 
-:: incremental - \$H_0 = \$ Person is not hired - \$H_0 = \$ Retain the current method - \$H_0 = \$ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found. :::
+::: incremental
+-   \$H_0 = \$ Person is not hired
+-   \$H_0 = \$ Retain the current method
+-   \$H_0 = \$ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found.
+:::
 
 ## Past tests
 
-[Visual assocation tests](https://stats1010-f22.github.io/website/slides/lect_08.html#/price-vs-carat) [qqplots](https://stats1010-f22.github.io/website/slides/lect_11.html#/plot---normal) [$\Chi^2$ tests](https://stats1010-f22.github.io/website/supplemental/chi-squared.html)
+::: incremental
+-   [Visual assocation tests](https://stats1010-f22.github.io/website/slides/lect_08.html#/price-vs-carat)
+
+-   [qqplots](https://stats1010-f22.github.io/website/slides/lect_11.html#/plot---normal)
+
+-   [$\chi^2$ tests](https://stats1010-f22.github.io/website/supplemental/chi-squared.html)
+:::
 
 ## Example 2
 
@@ -120,7 +130,22 @@ In the previous example, we used probability to determine how likely it is to ge
 
 # Testing a proportion
 
-In the ESP example from before our
+$$\hat{p} \sim N(p,  \frac{{p}(1-{p})}{n}) $$
+
+## Example 3
+
+In the ESP example from before someone correctly guessed 15 out of 25 cards? Do they have ESP?
+
+## Steps for a hypothesis test
+
+1.  State hypotheses
+2.  Check conditions
+3.  Calculate test statistic
+4.  Compute p-value
+5.  Generic conclusion
+6.  Interpret in context
+
+## 
 
 ## Do extremists see the world in black and white?
 
@@ -194,12 +219,10 @@ In order to reduce the probability of making a Type II error, we can either
 -   increase the significance level
 -   increase the sample size
 
-#  {background-iframe="https://shiny.rit.albany.edu/stat/betaprob/"}
-
 # Statistical versus practical significance
 
 Sometimes, you find something that is very statistically significant, but not practically significant.
 
-Context is important!
+For example, a revision program might increase final exam grades with $p-value < 0.00001$, but it may only increase final exam grades by $1\%$. This is statistically significant but not practically significant.
 
-Illustration by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+Context is important!
