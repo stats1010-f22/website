@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.1.251">
 
-  <title>STAT 1010 - Fall 2022 - Chapter 14: Sampling variation and quality</title>
+  <title>STAT 1010 - Fall 2022 - Chapter 17: Comparison</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -317,10 +317,10 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Chapter 14: Sampling variation and quality">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Chapter 17: Comparison">
 <meta property="og:description" content="STAT 1010 - Fall 2022">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Chapter 14: Sampling variation and quality">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Chapter 17: Comparison">
 <meta name="twitter:description" content="STAT 1010 - Fall 2022">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
@@ -330,7 +330,7 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Chapter 14: Sampling variation and quality</h1>
+  <h1 class="title">Chapter 17: Comparison</h1>
   <p class="subtitle">STAT 1010 - Fall 2022</p>
 </section>
 
@@ -346,207 +346,57 @@
 </ul>
 </div>
 </section>
-<section id="sampling" class="slide level2">
-<h2>Sampling</h2>
-<div>
-<ul>
-<li class="fragment">SRS</li>
-<li class="fragment">Stratified sampling</li>
-<li class="fragment">Cluster sampling</li>
-<li class="fragment">it would be nice to sample repeatedly to see how the mean values compare</li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="section" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/sample_from_uniform/">
-<h1></h1>
-
-</section>
-<section id="benefits-of-averaging" class="slide level2">
-<h2>Benefits of averaging</h2>
-<div>
-<ul>
-<li class="fragment">reduces variation</li>
-<li class="fragment">more normal than the original distribution</li>
-</ul>
-</div>
-</section>
-<section id="normal-model" class="slide level2">
-<h2>Normal model</h2>
-<div>
-<ul>
-<li class="fragment">Find <a href="https://stats1010-f22.github.io/website/slides/lect_11.html#/kurtosis">kurtosis</a>(<span class="math inline">\(K_4\)</span>)</li>
-<li class="fragment">If <span class="math inline">\(n &gt; 10 |K_4|\)</span>, where <span class="math inline">\(n\)</span> is the sample size, then a normal model adequately approximates the distribution of the sample mean <span class="math inline">\(\bar{X}\)</span>.</li>
-<li class="fragment">If we know the data come from a normal distribution this is also true.</li>
-</ul>
-</div>
-</section></section>
-<section id="section-1" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/standard_error/">
-<h1></h1>
-
-</section>
-
-<section>
-<section id="section-2" class="title-slide slide level1 center" data-background-image="lect_13-things/std_error.png" data-background-size="contain">
-<h1></h1>
-
-</section>
 <section id="standard-error" class="slide level2">
 <h2>Standard error</h2>
-<p><span class="math display">\[ SD(\bar{X}) = SE(\bar{X}) =
-\frac{\sigma}{\sqrt{n}} \]</span></p>
+<p>The formula for standard error for <span class="math inline">\(\hat{p}_1-\hat{p}_2\)</span> is</p>
+<span class="math display">\[\begin{eqnarray*}
+\sqrt{\frac{p_1(1-p_1)}{n_1}+\frac{p_2(1-\hat{p}_2)}{n_2}}
+\end{eqnarray*}\]</span>
+<p>We need to check <span class="math display">\[\begin{eqnarray*}
+n_1\cdot p_1 \geq 10 \\
+n_1\cdot(1-p_1) \geq 10\\
+n_2\cdot p_2 \geq 10\\
+n_2\cdot(1-p_2) \geq 10
+\end{eqnarray*}\]</span></p>
+<p>But, we don’t know <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_1\)</span>. What do we do?</p>
 </section>
-<section id="sampling-distribution" class="slide level2">
-<h2>Sampling distribution</h2>
-<p>If <span class="math inline">\(X \sim N(\mu_X, \sigma_X^2)\)</span></p>
-<p><span class="math display">\[ \bar{X} \sim N(\mu = \mu_X, \sigma^2 = \frac{\sigma_X^2}{n}) \]</span></p>
+<section id="hypothesis-test-for-a-difference-in-proportions" class="slide level2">
+<h2>Hypothesis test for a difference in proportions</h2>
+<p>In the case of hypothesis tests, as long as we are testing the hypotheses</p>
+<span class="math display">\[\begin{eqnarray*}
+H_0: p_1=p_2 \\
+H_A: p_1 \neq p_2
+\end{eqnarray*}\]</span>
+<p>We approximate both <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span> in the standard error formula with <span class="math inline">\(\hat{p}\)</span>. What is <span class="math inline">\(\hat{p}\)</span>?</p>
 </section>
-<section id="example" class="slide level2">
+<section id="pooled-proportion" class="slide level2">
+<h2>Pooled proportion</h2>
+<p>A pooled proportion assumes the null hypothesis is true, and there really is no difference between the proportions. The differences we observed were just due to random chance. So, we compute <span class="math inline">\(\hat{p}\)</span> as the overall proportion,</p>
+<span class="math display">\[\begin{eqnarray*}
+\frac{\text{total \# of successes}}{\text{total sample size}}
+\end{eqnarray*}\]</span>
+<p>Usually you can just read this off of a table. Sometimes you need a “formula,”</p>
+<span class="math display">\[\begin{eqnarray*}
+\hat{p}=\frac{\hat{p}_1n_1+\hat{p}_2n_2}{n_1+n_2}
+\end{eqnarray*}\]</span>
+</section>
+<section id="hypothesis-test-for-a-difference-in-proportions-1" class="slide level2">
+<h2>Hypothesis test for a difference in proportions</h2>
+<span class="math display">\[\begin{eqnarray*}
+z = \frac{(\hat{p}_1-\hat{p}_2)}{SE}
+\end{eqnarray*}\]</span>
+<p>where</p>
+<span class="math display">\[\begin{eqnarray*}
+\sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+\frac{\hat{p}(1-\hat{p})}{n_2}}
+\end{eqnarray*}\]</span>
+</section>
+<section id="example" class="slide level2 t">
 <h2>Example</h2>
-<div>
-<ol type="1">
-<li class="fragment">Let <span class="math inline">\(Y \sim N(\mu = 5, \sigma^2 = 16)\)</span>, find the distribution of the mean of repeated samples of size 4.
-<ul>
-<li class="fragment"><span class="math inline">\(\bar{Y} \sim N(\mu = 5, \sigma^2 = 4)\)</span></li>
-</ul></li>
-</ol>
-</div>
-</section></section>
-<section id="section-3" class="title-slide slide level1 center" data-background-image="lect_13-things/EMtweet.png" data-background-size="contain">
-<h1></h1>
-
+<p>Again, from a sample of 100 US adults, we know the following:</p>
+<p>Let’s test to see if the proportion of self-employed people is really different between government and private employees.</p>
 </section>
-
-<section id="section-4" class="title-slide slide level1 center" data-background-image="lect_13-things/manufacturing_plant.png" data-background-size="contain">
-<h1></h1>
-
-</section>
-
-<section>
-<section id="section-5" class="title-slide slide level1 center" data-background-image="lect_13-things/error_classifications.png" data-background-size="contain">
-<h1></h1>
-
-</section>
-<section id="control-limits" class="slide level2">
-<h2>Control limits</h2>
-<div>
-<ul>
-<li class="fragment">if mean production is outside certain values, we may need to stop and recallibrate machinery</li>
-<li class="fragment">these values are called <em>control limits</em></li>
-<li class="fragment"><span class="math inline">\(\mu - L \leq \bar{X} \leq \mu + L\)</span></li>
-<li class="fragment"><span class="math inline">\(\mu - L\)</span> and <span class="math inline">\(\mu + L\)</span> are <em>control limits</em></li>
-</ul>
-</div>
-</section>
-<section id="types-of-errors" class="slide level2">
-<h2>Types of errors</h2>
-<div>
-<ul>
-<li class="fragment">False positives - type 1 error
-<ul>
-<li class="fragment">act when you should not</li>
-<li class="fragment">probabiliy of occurence denoted <span class="math inline">\(\alpha\)</span></li>
-</ul></li>
-<li class="fragment">False negatives - type 2 error
-<ul>
-<li class="fragment">don’t act when you should</li>
-<li class="fragment">probabiliy of occurence denoted <span class="math inline">\(\beta\)</span></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="setting-control-limits---1" class="slide level2 smaller">
-<h2>Setting control limits - 1</h2>
-<p>If <span class="math inline">\(\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)\)</span> how can we find the control limits?</p>
-<div>
-<ol type="1">
-<li class="fragment">Set the control limits and find the <span class="math inline">\(\alpha\)</span> value
-<ul>
-<li class="fragment">We want the control limits to be between 10 and 14</li>
-<li class="fragment"><span class="math inline">\(Pr(\bar{X} &lt; 10 \textrm{ or } \bar{X} &gt; 14)\)</span></li>
-<li class="fragment"><span class="math inline">\(\begin{aligned}P(\bar{X} &lt; 10) &amp;= P(\frac{\bar{X} - \mu_\bar{X}}{\sigma_\bar{X}} &lt; \frac{10-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &lt; \frac{10-12}{\sqrt{2.3}} = -1.318761)\end{aligned}\)</span></li>
-<li class="fragment"><code>pnorm(-1.318761)</code> <span class="math inline">\(\approx 0.09362451\)</span></li>
-<li class="fragment"><code>pnorm(10, mean = 12, sd = sqrt(2.3))</code></li>
-</ul></li>
-</ol>
-</div>
-</section>
-<section id="setting-control-limits---1-contd" class="slide level2 smaller">
-<h2>Setting control limits - 1 cont’d</h2>
-<p>If <span class="math inline">\(\bar{X} \sim N(\mu = 12, \sigma^2 = 2.3)\)</span> how can we find the control limits?</p>
-<div>
-<ol type="1">
-<li class="fragment">Set the control limits and find the <span class="math inline">\(\alpha\)</span> value
-<ul>
-<li class="fragment">We want the control limits to be between 10 and 14</li>
-<li class="fragment"><span class="math inline">\(\begin{aligned}P(\bar{X} &gt; 14) &amp;= P(\frac{\bar{X} - \mu_\bar{X} }{\sigma_\bar{X}} &gt; \frac{14-\mu_\bar{X}}{\sigma_\bar{X}}) \\ &amp; = P(Z &gt; \frac{14-12}{\sqrt{2.3}} = 1.318761)\end{aligned}\)</span></li>
-<li class="fragment"><code>1 - pnorm(1.318761)</code> <span class="math inline">\(\approx 0.09362451\)</span></li>
-<li class="fragment"><code>1 - pnorm(14, mean = 12, sd = sqrt(2.3))</code></li>
-<li class="fragment">the <span class="math inline">\(\alpha\)</span> value is <span class="math inline">\(19\%\)</span> which is very high!</li>
-</ul></li>
-</ol>
-</div>
-</section>
-<section id="setting-control-limits---2" class="slide level2 smaller">
-<h2>Setting control limits - 2</h2>
-<div>
-<ol start="2" type="1">
-<li class="fragment">Set the <span class="math inline">\(\alpha\)</span> value and find the control limits</li>
-</ol>
-<ul>
-<li class="fragment">We want the <span class="math inline">\(\alpha\)</span> to be <span class="math inline">\(0.025\)</span>
-<ul>
-<li class="fragment"><span class="math inline">\(Pr(\bar{X} &lt; z_{0.0125} \textrm{ or } \bar{X} &gt; z_{0.0125})\)</span></li>
-<li class="fragment"><code>qnorm(0.0125)</code> <span class="math inline">\(\approx -2.241403\)</span></li>
-<li class="fragment"><span class="math inline">\(\begin{aligned}-2.241403 =&amp; \frac{X - \mu_\bar{X}}{\sigma_\bar{X}}\\ &amp; = \frac{X - 12}{\sqrt{2.3}} \\ &amp;= -2.241403\sqrt{2.3} +12 = 8.600744 \end{aligned}\)</span></li>
-<li class="fragment"><code>qnorm(0.0125, mean = 12, sd = sqrt(2.3))</code></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="setting-control-limits---2---contd" class="slide level2 smaller">
-<h2>Setting control limits - 2 - cont’d</h2>
-<div>
-<ol start="2" type="1">
-<li class="fragment">Set the <span class="math inline">\(\alpha\)</span> value and find the control limits</li>
-</ol>
-<ul>
-<li class="fragment">We want the <span class="math inline">\(\alpha\)</span> to be <span class="math inline">\(0.025\)</span>
-<ul>
-<li class="fragment"><span class="math inline">\(Pr(\bar{X} &lt; z_{0.0125} \textrm{ or } \bar{X} &gt; z_{0.0125})\)</span></li>
-<li class="fragment"><code>qnorm(1- 0.0125)</code> <span class="math inline">\(\approx 2.241403\)</span></li>
-<li class="fragment"><span class="math inline">\(\begin{aligned}2.241403 =&amp; \frac{X - \mu_\bar{X}}{\sigma_\bar{X}}\\ &amp; = \frac{X - 12}{\sqrt{2.3}} \\ &amp;= 2.241403\sqrt{2.3} +12 = 15.39926 \end{aligned}\)</span></li>
-<li class="fragment"><code>qnorm(1-0.0125, mean = 12, sd = sqrt(2.3))</code></li>
-</ul></li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="section-6" class="title-slide slide level1 center" data-background-image="lect_13-things/control_plot.png" data-background-size="contain">
-<h1></h1>
-
-</section>
-<section id="repeated-testing" class="slide level2 smaller">
-<h2>Repeated testing</h2>
-<p>We are not testing once, but multiple times. Assuming independence:</p>
-<div>
-<ul>
-<li class="fragment"><p><span class="math inline">\(\begin{aligned}P(\textrm{within limits for 10 days}) =&amp; P(\textrm{within limits for day 1}) \cdot P(\textrm{within limits for day 2}) \cdot \dots \cdot P(\textrm{within limits for day 10})\\ &amp;= 0.975^{10} \approx 0.7763296 \end{aligned}\)</span></p></li>
-<li class="fragment"><p>There is a <span class="math inline">\(1-0.7763296 = 0.2236704\)</span> percent false positive rate</p></li>
-<li class="fragment"><p>Management must decide if there is a false positive by checking for mechanical errors and inspecting equipment</p></li>
-<li class="fragment"><p>Adjust <span class="math inline">\(\alpha\)</span> value to address this</p></li>
-</ul>
-</div>
-</section>
-<section id="control-charts-for-variation" class="slide level2">
-<h2>Control charts for variation</h2>
-<p>X-bar charts are slow to detect under or over filling</p>
-<div>
-<ul>
-<li class="fragment"><em>S-Chart</em> tracks the standard deviation from sample to sample</li>
-<li class="fragment"><em>R-Chart</em> tracks the range from sample to sample</li>
-</ul>
-</div>
+<section id="example-1" class="slide level2 t">
+<h2>Example</h2>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>

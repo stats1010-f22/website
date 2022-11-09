@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.1.251">
 
-  <title>STAT 1010 - Fall 2022 - Chapter 14: Statistical tests</title>
+  <title>STAT 1010 - Fall 2022 - Chapter 16: Statistical tests</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -317,10 +317,10 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Chapter 14: Statistical tests">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Chapter 16: Statistical tests">
 <meta property="og:description" content="STAT 1010 - Fall 2022">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Chapter 14: Statistical tests">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Chapter 16: Statistical tests">
 <meta name="twitter:description" content="STAT 1010 - Fall 2022">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
@@ -330,7 +330,7 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Chapter 14: Statistical tests</h1>
+  <h1 class="title">Chapter 16: Statistical tests</h1>
   <p class="subtitle">STAT 1010 - Fall 2022</p>
 </section>
 
@@ -338,16 +338,192 @@
 <h1>Learning outcomes</h1>
 <div>
 <ul>
-<li class="fragment"></li>
-<li class="fragment">When we can assume a normal distribution for the sample mean</li>
-<li class="fragment">Control charts and what they are used for</li>
-<li class="fragment">Find control limits</li>
+<li class="fragment">Vocabulary: alternative hypothesis, null hupothesis, one-sided, two-sided hypotheses, and test statistic</li>
+<li class="fragment">Understand the differences between a statistical test for proportions and for means.</li>
+<li class="fragment">Recognize the different types of errors Type I and Type II when designing a test</li>
+<li class="fragment">Distinguish between statistical and substantive significance</li>
+<li class="fragment">Relate confidence intervals to two-sided tests</li>
 </ul>
 </div>
 </section>
 
+<section>
+<section id="does-esp-exist" class="title-slide slide level1 center">
+<h1>Does ESP exist?</h1>
+<p>Some people believe in the presence of Extrasensory Perception, or ESP. How could we prove whether it does or doesn’t exist?</p>
+<p>One test for ESP is with Zener cards.</p>
+
+<img data-src="lect_15-things/zener-cards.jpg" width="369" class="r-stretch"></section>
+<section id="does-esp-exist-1" class="slide level2">
+<h2>Does ESP exist?</h2>
+<p>Since there are 5 cards, it would be possible to guess the correct card at random <span class="math inline">\(p=1/5\)</span> times, or 20% of the time.</p>
+<p>A person with ESP should be able to guess the correct card more often than 20%. But how much more often do they need to get it right for us to believe that ESP exists?</p>
+</section>
+<section id="statistical-test" class="slide level2">
+<h2>Statistical test</h2>
+<p>One way to determine something like this is to use a <strong>statistical test</strong>. A statistical test is a procedure to determine if the results from the sample are convincing enough to allow us to conclude something about the population.</p>
+</section>
+<section id="hypotheses" class="slide level2">
+<h2>Hypotheses</h2>
+<p>When we perform a statistical test, we set out our <strong>hypotheses</strong> before we begin. There are two hypotheses,</p>
+<p><strong>null hypothesis</strong> <span class="math inline">\(H_0\)</span>, a statement about there being no effect, or no difference.</p>
+<p><strong>alternative hypothesis</strong> <span class="math inline">\(H_A\)</span>, the thing that we secretly hope will turn out to be true.</p>
+</section>
+<section id="esp-hypotheses" class="slide level2">
+<h2>ESP hypotheses</h2>
+<p>Thinking about the ESP experiment, we could use words to state our hypotheses</p>
+<p><span class="math inline">\(\begin{eqnarray*} &amp;H_0:&amp; \text{ ESP does not exist} \\ &amp;H_A:&amp; \text{ESP exists} \end{eqnarray*}\)</span></p>
+<p>We could also write the hypotheses in terms of parameters,</p>
+<p><span class="math inline">\(\begin{eqnarray*} H_0: p \leq 1/5 \\ H_A: p &gt; 1/5 \end{eqnarray*}\)</span></p>
+</section>
+<section id="hypotheses-1" class="slide level2">
+<h2>Hypotheses</h2>
+<div>
+<ul>
+<li class="fragment">Hypotheses are always written about the population parameter (<span class="math inline">\(\mu\)</span>, <span class="math inline">\(p\)</span>, <span class="math inline">\(\mu_1-\mu_2\)</span>, <span class="math inline">\(p_1-p_2\)</span>), never about the sample statistics (<span class="math inline">\(\bar{x}\)</span>, <span class="math inline">\(\hat{p}\)</span>, <span class="math inline">\(\bar{x}_1-\bar{x}_2\)</span>, <span class="math inline">\(\hat{p}_1-\hat{p}_2\)</span>).</li>
+<li class="fragment">The null hypothesis is the boring thing that we’re trying to gather evidence against</li>
+<li class="fragment">The alternative hypothesis is the exciting thing that would make headlines</li>
+</ul>
+</div>
+</section>
+<section id="one-and-two-sided-hypotheses" class="slide level2">
+<h2>One and two sided hypotheses</h2>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(H_A\)</span> has a <span class="math inline">\(&gt;\)</span> sign: upper tail, or “one-sided”</li>
+<li class="fragment"><span class="math inline">\(H_A\)</span> has a <span class="math inline">\(&lt;\)</span> sign: lower tail, or “one-sided”</li>
+<li class="fragment"><span class="math inline">\(H_A\)</span> has a <span class="math inline">\(\neq\)</span> sign: both sides, or “two-sided”</li>
+</ul>
+</div>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example 1</h2>
+<p>What are the null and alternate hypothesis for these decisions?</p>
+<div>
+<ul>
+<li class="fragment">A person interviews for a job opening. The company has to decide whether to hire the person</li>
+<li class="fragment">An inventor proposes a new way to wrap packages that they say will speed up the manufacturing process. Should they adopt the new method?</li>
+<li class="fragment">A sales representative submits receipts from a recent business trip. Staff must determine whether the claims are legitimate.</li>
+</ul>
+</div>
+</section>
+<section id="example-1-solns" class="slide level2">
+<h2>Example 1 solns</h2>
+<p>:: incremental - $H_0 = $ Person is not hired - $H_0 = $ Retain the current method - $H_0 = $ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found. :::</p>
+</section>
+<section id="past-tests" class="slide level2">
+<h2>Past tests</h2>
+<p><a href="https://stats1010-f22.github.io/website/slides/lect_08.html#/price-vs-carat">Visual assocation tests</a> <a href="https://stats1010-f22.github.io/website/slides/lect_11.html#/plot---normal">qqplots</a> <a href="https://stats1010-f22.github.io/website/supplemental/chi-squared.html"><span class="math inline">\(\Chi^2\)</span> tests</a></p>
+</section>
+<section id="example-2" class="slide level2">
+<h2>Example 2</h2>
+<p>A snack-food chain runs a promotion in which shoppers are told that 1 in 4 kids’ meals includes a prize. A father buys two kids’ meals, and neither has a prize. He concludes that because neither has a prize, the chain is being deceptive.</p>
+<ol type="a">
+<li>What is the null and alternative hypothesis?</li>
+<li>Describe a Type I error?</li>
+<li>Describe a Type II error?</li>
+<li>What is the probability that the father has made a Type I error?</li>
+</ol>
+</section>
+<section id="example-2---solns" class="slide level2">
+<h2>Example 2 - solns</h2>
+<ol type="a">
+<li><span class="math inline">\(H_0\)</span> = chain is being honest; <span class="math inline">\(H_A\)</span> = chain is not being honest</li>
+<li>Falsely accusing the chain of being deceptive</li>
+<li>Failting to realize that the chain is being deceptive</li>
+<li>Father rejects if both are missing a prize. <span class="math inline">\(P(neither has a prize) = (1 - 1/4)^2 \approx 0.56\)</span></li>
+</ol>
+</section>
+<section id="test-statistic" class="slide level2">
+<h2>Test statistic</h2>
+<p>In the previous example, we used probability to determine how likely it is to get two meals neither of which contain a prize. This process involves computing a <em>test statistic</em> (<span class="math inline">\(0.56\)</span>).</p>
+</section></section>
+<section>
+<section id="testing-a-proportion" class="title-slide slide level1 center">
+<h1>Testing a proportion</h1>
+<p>In the ESP example from before our</p>
+</section>
+<section id="do-extremists-see-the-world-in-black-and-white" class="slide level2">
+<h2>Do extremists see the world in black and white?</h2>
+<p>Researcher Matt Motyl ran a study in 2010 with 2,000 participants. He wanted to determine if political moderates were able to perceive shades of grey more accurately than people on the far left or the far right. The p-value from the study was 0.01. Reject the null! Evidence in support of the idea that moderates can see grey better.</p>
+<p>But then… he re-ran the study. This time, the p-value was 0.59. Not even close to significant.</p>
+<p>What happened?!</p>
+<p>Via Regina Nuzzo’s Nature article, <a href="https://www.nature.com/news/scientific-method-statistical-errors-1.14700#">Scientific method: Statistical Errors</a></p>
+</section>
+<section id="errors" class="slide level2">
+<h2>Errors</h2>
+<p>There are two types of errors defined in hypothesis testing:</p>
+<ul>
+<li>Type I error, rejecting a true null</li>
+<li>Type II error, not rejecting a false null</li>
+</ul>
+</section>
+<section id="law-analogy" class="slide level2">
+<h2>Law analogy</h2>
+<p>In the US, a person is innocent until proven guilty, and evidence of guilt must be beyond “the shadow of a doubt.” We can make two types of mistakes:</p>
+<ul>
+<li>Convict an innocent person (type I error)</li>
+<li>Release a guilty person (type II error)</li>
+</ul>
+</section>
+<section id="extremists-and-black-and-white" class="slide level2">
+<h2>Extremists and black and white</h2>
+<p>Two options:</p>
+<ul>
+<li>the original study (p-value 0.01) made a Type I error, and the <span class="math inline">\(H_0\)</span> was really true</li>
+<li>the second study (p-value 0.59) made a Type II error, and <span class="math inline">\(H_A\)</span> is really true</li>
+</ul>
+<p>or…</p>
+<ul>
+<li>maybe there were no errors made, just different studies found different things</li>
+</ul>
+</section>
+<section id="multiple-testing" class="slide level2">
+<h2>Multiple testing</h2>
+<p>Because the probability of a Type I error is <span class="math inline">\(\alpha\)</span>, if you do many tests you will find significance in <span class="math inline">\(\alpha\)</span> of them <strong>just by chance</strong>.</p>
+<p>If you do 100 tests, you should expect to find 5 of them to be significant, just by chance.</p>
+<p>This is the problem of <strong>multiple testing.</strong></p>
+</section>
+<section id="jelly-beans-and-acne" class="slide level2">
+<h2>Jelly beans and acne?</h2>
+</section>
+<section id="multiple-testing-publication-bias" class="slide level2">
+<h2>Multiple testing + publication bias</h2>
+<p>Okay, so <span class="math inline">\(\alpha\)</span> of all tests show significance, just by random chance.</p>
+<p>And things that look significant get published…</p>
+<p>That means that a fair number of things that are published are actually false! This is pretty scary.</p>
+</section>
+<section id="how-to-fix-the-problem" class="slide level2">
+<h2>How to fix the problem</h2>
+<p>As a researcher:</p>
+<ul>
+<li>make sure your results can be replicated (like Motyl tried to do with the politics and grey study)</li>
+<li>publish code and data so others can study your work</li>
+</ul>
+<p>As someone who reads about statistics:</p>
+<ul>
+<li>be skeptical about claims that are just one of many tests</li>
+<li>look for replication and reproducibility!</li>
+</ul>
+</section>
+<section id="reducing-the-probability-of-type-ii-error" class="slide level2">
+<h2>Reducing the probability of Type II error</h2>
+<p>In order to reduce the probability of making a Type II error, we can either</p>
+<ul>
+<li>increase the significance level</li>
+<li>increase the sample size</li>
+</ul>
+</section></section>
 <section id="section" class="title-slide slide level1 center" data-background-iframe="https://shiny.rit.albany.edu/stat/betaprob/">
 <h1></h1>
+
+</section>
+
+<section id="statistical-versus-practical-significance" class="title-slide slide level1 center">
+<h1>Statistical versus practical significance</h1>
+<p>Sometimes, you find something that is very statistically significant, but not practically significant.</p>
+<p>Context is important!</p>
+<p>Illustration by <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a></p>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>

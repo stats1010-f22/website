@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "STAT 1010: Introduction to Business Statistics",
     "section": "",
-    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct\nThe normal probability model\n\n🖥️\n\n\n\n\n\n\n\n9\nMon, 24 Oct\nSamples and surveys\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 26 Oct\nSampling variation and quality\n\n🖥️\n📋\n\n\n\n📂\n\n\n10\nMon, 31 Oct\nRevision for Exam 2\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 2 Nov\nExam 2\n\n\n\n\n✅\n\n\n\n\n11\nMon, 7 Nov\nConfidence intervals\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 9 Nov\nStatistical tests"
+    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct\nThe normal probability model\n\n🖥️\n\n\n\n\n\n\n\n9\nMon, 24 Oct\nSamples and surveys\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 26 Oct\nSampling variation and quality\n\n🖥️\n📋\n\n\n\n📂\n\n\n10\nMon, 31 Oct\nRevision for Exam 2\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 2 Nov\nExam 2\n\n\n\n\n✅\n\n\n\n\n11\nMon, 7 Nov\nConfidence intervals\n\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 9 Nov\nStatistical tests\n\n🖥️"
   },
   {
     "objectID": "course-overview.html",
@@ -942,7 +942,7 @@
     "href": "ae/ae-11.html",
     "title": "Confidence intervals: AE - 10",
     "section": "",
-    "text": "1.\\(y \\pm 2se(\\bar{y})\\) (a)  Sampling distribution of X\n2. \\(\\hat{p} \\pm se(\\hat{p})\\) (b)  Margin of error\n3. \\(2se (\\bar{X})\\) (c)  100% confidence interval for p\n4. \\(N(\\mu,\\sigma^2/n)\\) (d)  Estimated standard error of\n5. \\(s/\\sqrt{n}\\) (e)  Estimated standard error of 13\n6. \\(\\sigma/\\sqrt{n}\\) (f)  An interval with about 95% coverage\n7. \\(1/(0.05)^2\\) (g)  Actual standard error of\n8. [0, 1] (h) About 2 for moderate sample sizes\n9. \\(\\sqrt{\\hat{p}(1 -\\hat{p})/n}\\) (i)   An interval with 68% coverage\n10. \\(t_{0.025, n-1}\\) (j)   Sample size needed for 0.05 margin of error\n11. True or False: By increasing the sample size from \\(n = 100\\) to $n = 400$, we can reduce-the margin of error by \\(50\\%\\).\n12. If the 95% confidence interval for the average purchase of customers at a department store is $50 to $110, then $100 is a plausible value for the population mean at this level of confidence.\n13.  If zero lies inside the 95% confidence interval for \\(\\mu\\), then zero is also inside the 99% confidence interval for \\(\\mu\\).\n14. The clothing buyer for a department store wants to order the right mix of sizes. As part of a survey, she measured the height (in inches) of men who bought suits at this store. Her software reported the following confidence interval:\nWith 95.00% confidence, 70.8876 < \\(\\mu\\) < 74.4970\n(a) Explain carefully what the software output means.\n(b) What’s the margin of error for this interval?\n(c) How should the buyer round the endpoints of the interval to summarize the result in a report for store managers?\n(d) If the researcher had calculated a 99% confidence interval, would the output have shown a longer or shorter interval?\n15. Hoping to lure more shoppers downtown, a city builds a new public parking garage in the central business district. The city plans to pay for the structure through parking fees. During a two-month period (44 weekdays), daily fees collected averaged $1,264 with a standard deviation of $150.\n(a) What assumptions must you make in order to use these statistics for inference?\n(b) Write a 90% confidence interval for the mean daily income this parking garage will generate, rounded appropriately.\n(c) The consultant who advised the city on this project predicted that parking revenues would average $1,300 per day. On the basis of your confidence interval, do you think the consultant was correct? Why or why not?\n(d) Give a 90% confidence interval for the total revenue earned during five weekdays."
+    "text": "1.\\(y \\pm 2se(\\bar{y})\\) (a)  Sampling distribution of X\n2. \\(\\hat{p} \\pm se(\\hat{p})\\) (b)  Margin of error\n3. \\(2se (\\bar{X})\\) (c)  100% confidence interval for p\n4. \\(N(\\mu,\\sigma^2/n)\\) (d)  Estimated standard error of \\(\\bar{Y}\\)\n5. \\(s/\\sqrt{n}\\) (e)  Estimated standard error of 13\n6. \\(\\sigma/\\sqrt{n}\\) (f)  An interval with about 95% coverage\n7. \\(1/(0.05)^2\\) (g)  Actual standard error of \\(\\bar{Y}\\)\n8. [0, 1] (h) About 2 for moderate sample sizes\n9. \\(\\sqrt{\\hat{p}(1 -\\hat{p})/n}\\) (i)   An interval with 68% coverage\n10. \\(t_{0.025, n-1}\\) (j)   Sample size needed for 0.05 margin of error\n11. True or False: By increasing the sample size from \\(n = 100\\) to $n = 400$, we can reduce-the margin of error by \\(50\\%\\).\n12. If the 95% confidence interval for the average purchase of customers at a department store is $50 to $110, then $100 is a plausible value for the population mean at this level of confidence.\n13. If zero lies inside the 95% confidence interval for \\(\\mu\\), then zero is also inside the 99% confidence interval for \\(\\mu\\).\n14. The clothing buyer for a department store wants to order the right mix of sizes. As part of a survey, she measured the height (in inches) of men who bought suits at this store. Her software reported the following confidence interval:\nWith 95.00% confidence, 70.8876 < \\(\\mu\\) < 74.4970\n(a) Explain carefully what the software output means.\n(b) What’s the margin of error for this interval?\n(c) How should the buyer round the endpoints of the interval to summarize the result in a report for store managers?\n(d) If the researcher had calculated a 99% confidence interval, would the output have shown a longer or shorter interval?\n15. Hoping to lure more shoppers downtown, a city builds a new public parking garage in the central business district. The city plans to pay for the structure through parking fees. During a two-month period (44 weekdays), daily fees collected averaged $1,264 with a standard deviation of $150.\n(a) What assumptions must you make in order to use these statistics for inference?\n(b) Write a 90% confidence interval for the mean daily income this parking garage will generate, rounded appropriately.\n(c) The consultant who advised the city on this project predicted that parking revenues would average $1,300 per day. On the basis of your confidence interval, do you think the consultant was correct? Why or why not?\n(d) Give a 90% confidence interval for the total revenue earned during five weekdays."
   },
   {
     "objectID": "ae/ae-0-first_line_of_code.html",
@@ -2086,102 +2086,193 @@
     "text": "The purpose of Exploratory Data Analysis (EDA)\n\nEDA is about learning the structure of a dataset through a series of numerical and graphical techniques.\nWhen you do EDA, you’ll look for both\n\ngeneral trends and\ninteresting outliers in your data.\n\n\ngenerate questions that will help inform subsequent analysis."
   },
   {
-    "objectID": "slides/lect_16.html#sampling",
-    "href": "slides/lect_16.html#sampling",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Sampling",
-    "text": "Sampling\n\n\nSRS\nStratified sampling\nCluster sampling\nit would be nice to sample repeatedly to see how the mean values compare"
+    "objectID": "slides/lect_15.html#does-esp-exist-1",
+    "href": "slides/lect_15.html#does-esp-exist-1",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Does ESP exist?",
+    "text": "Does ESP exist?\nSince there are 5 cards, it would be possible to guess the correct card at random \\(p=1/5\\) times, or 20% of the time.\nA person with ESP should be able to guess the correct card more often than 20%. But how much more often do they need to get it right for us to believe that ESP exists?"
   },
   {
-    "objectID": "slides/lect_16.html#benefits-of-averaging",
-    "href": "slides/lect_16.html#benefits-of-averaging",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Benefits of averaging",
-    "text": "Benefits of averaging\n\n\nreduces variation\nmore normal than the original distribution"
+    "objectID": "slides/lect_15.html#statistical-test",
+    "href": "slides/lect_15.html#statistical-test",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Statistical test",
+    "text": "Statistical test\nOne way to determine something like this is to use a statistical test. A statistical test is a procedure to determine if the results from the sample are convincing enough to allow us to conclude something about the population."
   },
   {
-    "objectID": "slides/lect_16.html#normal-model",
-    "href": "slides/lect_16.html#normal-model",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Normal model",
-    "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true."
+    "objectID": "slides/lect_15.html#hypotheses",
+    "href": "slides/lect_15.html#hypotheses",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Hypotheses",
+    "text": "Hypotheses\nWhen we perform a statistical test, we set out our hypotheses before we begin. There are two hypotheses,\nnull hypothesis \\(H_0\\), a statement about there being no effect, or no difference.\nalternative hypothesis \\(H_A\\), the thing that we secretly hope will turn out to be true."
+  },
+  {
+    "objectID": "slides/lect_15.html#esp-hypotheses",
+    "href": "slides/lect_15.html#esp-hypotheses",
+    "title": "Chapter 16: Statistical tests",
+    "section": "ESP hypotheses",
+    "text": "ESP hypotheses\nThinking about the ESP experiment, we could use words to state our hypotheses\n\\(\\begin{eqnarray*} &H_0:& \\text{ ESP does not exist} \\\\ &H_A:& \\text{ESP exists} \\end{eqnarray*}\\)\nWe could also write the hypotheses in terms of parameters,\n\\(\\begin{eqnarray*} H_0: p \\leq 1/5 \\\\ H_A: p > 1/5 \\end{eqnarray*}\\)"
+  },
+  {
+    "objectID": "slides/lect_15.html#hypotheses-1",
+    "href": "slides/lect_15.html#hypotheses-1",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\n\nHypotheses are always written about the population parameter (\\(\\mu\\), \\(p\\), \\(\\mu_1-\\mu_2\\), \\(p_1-p_2\\)), never about the sample statistics (\\(\\bar{x}\\), \\(\\hat{p}\\), \\(\\bar{x}_1-\\bar{x}_2\\), \\(\\hat{p}_1-\\hat{p}_2\\)).\nThe null hypothesis is the boring thing that we’re trying to gather evidence against\nThe alternative hypothesis is the exciting thing that would make headlines"
+  },
+  {
+    "objectID": "slides/lect_15.html#one-and-two-sided-hypotheses",
+    "href": "slides/lect_15.html#one-and-two-sided-hypotheses",
+    "title": "Chapter 16: Statistical tests",
+    "section": "One and two sided hypotheses",
+    "text": "One and two sided hypotheses\n\n\n\\(H_A\\) has a \\(>\\) sign: upper tail, or “one-sided”\n\\(H_A\\) has a \\(<\\) sign: lower tail, or “one-sided”\n\\(H_A\\) has a \\(\\neq\\) sign: both sides, or “two-sided”"
+  },
+  {
+    "objectID": "slides/lect_15.html#example-1",
+    "href": "slides/lect_15.html#example-1",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Example 1",
+    "text": "Example 1\nWhat are the null and alternate hypothesis for these decisions?\n\n\nA person interviews for a job opening. The company has to decide whether to hire the person\nAn inventor proposes a new way to wrap packages that they say will speed up the manufacturing process. Should they adopt the new method?\nA sales representative submits receipts from a recent business trip. Staff must determine whether the claims are legitimate."
+  },
+  {
+    "objectID": "slides/lect_15.html#example-1-solns",
+    "href": "slides/lect_15.html#example-1-solns",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Example 1 solns",
+    "text": "Example 1 solns\n:: incremental - $H_0 = $ Person is not hired - $H_0 = $ Retain the current method - $H_0 = $ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found. :::"
+  },
+  {
+    "objectID": "slides/lect_15.html#past-tests",
+    "href": "slides/lect_15.html#past-tests",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Past tests",
+    "text": "Past tests\nVisual assocation tests qqplots \\(\\Chi^2\\) tests"
+  },
+  {
+    "objectID": "slides/lect_15.html#example-2",
+    "href": "slides/lect_15.html#example-2",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Example 2",
+    "text": "Example 2\nA snack-food chain runs a promotion in which shoppers are told that 1 in 4 kids’ meals includes a prize. A father buys two kids’ meals, and neither has a prize. He concludes that because neither has a prize, the chain is being deceptive.\n\nWhat is the null and alternative hypothesis?\nDescribe a Type I error?\nDescribe a Type II error?\nWhat is the probability that the father has made a Type I error?"
+  },
+  {
+    "objectID": "slides/lect_15.html#example-2---solns",
+    "href": "slides/lect_15.html#example-2---solns",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Example 2 - solns",
+    "text": "Example 2 - solns\n\n\\(H_0\\) = chain is being honest; \\(H_A\\) = chain is not being honest\nFalsely accusing the chain of being deceptive\nFailting to realize that the chain is being deceptive\nFather rejects if both are missing a prize. \\(P(neither has a prize) = (1 - 1/4)^2 \\approx 0.56\\)"
+  },
+  {
+    "objectID": "slides/lect_15.html#test-statistic",
+    "href": "slides/lect_15.html#test-statistic",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Test statistic",
+    "text": "Test statistic\nIn the previous example, we used probability to determine how likely it is to get two meals neither of which contain a prize. This process involves computing a test statistic (\\(0.56\\))."
+  },
+  {
+    "objectID": "slides/lect_15.html#do-extremists-see-the-world-in-black-and-white",
+    "href": "slides/lect_15.html#do-extremists-see-the-world-in-black-and-white",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Do extremists see the world in black and white?",
+    "text": "Do extremists see the world in black and white?\nResearcher Matt Motyl ran a study in 2010 with 2,000 participants. He wanted to determine if political moderates were able to perceive shades of grey more accurately than people on the far left or the far right. The p-value from the study was 0.01. Reject the null! Evidence in support of the idea that moderates can see grey better.\nBut then… he re-ran the study. This time, the p-value was 0.59. Not even close to significant.\nWhat happened?!\nVia Regina Nuzzo’s Nature article, Scientific method: Statistical Errors"
+  },
+  {
+    "objectID": "slides/lect_15.html#errors",
+    "href": "slides/lect_15.html#errors",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Errors",
+    "text": "Errors\nThere are two types of errors defined in hypothesis testing:\n\nType I error, rejecting a true null\nType II error, not rejecting a false null"
+  },
+  {
+    "objectID": "slides/lect_15.html#law-analogy",
+    "href": "slides/lect_15.html#law-analogy",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Law analogy",
+    "text": "Law analogy\nIn the US, a person is innocent until proven guilty, and evidence of guilt must be beyond “the shadow of a doubt.” We can make two types of mistakes:\n\nConvict an innocent person (type I error)\nRelease a guilty person (type II error)"
+  },
+  {
+    "objectID": "slides/lect_15.html#extremists-and-black-and-white",
+    "href": "slides/lect_15.html#extremists-and-black-and-white",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Extremists and black and white",
+    "text": "Extremists and black and white\nTwo options:\n\nthe original study (p-value 0.01) made a Type I error, and the \\(H_0\\) was really true\nthe second study (p-value 0.59) made a Type II error, and \\(H_A\\) is really true\n\nor…\n\nmaybe there were no errors made, just different studies found different things"
+  },
+  {
+    "objectID": "slides/lect_15.html#multiple-testing",
+    "href": "slides/lect_15.html#multiple-testing",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Multiple testing",
+    "text": "Multiple testing\nBecause the probability of a Type I error is \\(\\alpha\\), if you do many tests you will find significance in \\(\\alpha\\) of them just by chance.\nIf you do 100 tests, you should expect to find 5 of them to be significant, just by chance.\nThis is the problem of multiple testing."
+  },
+  {
+    "objectID": "slides/lect_15.html#jelly-beans-and-acne",
+    "href": "slides/lect_15.html#jelly-beans-and-acne",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Jelly beans and acne?",
+    "text": "Jelly beans and acne?"
+  },
+  {
+    "objectID": "slides/lect_15.html#multiple-testing-publication-bias",
+    "href": "slides/lect_15.html#multiple-testing-publication-bias",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Multiple testing + publication bias",
+    "text": "Multiple testing + publication bias\nOkay, so \\(\\alpha\\) of all tests show significance, just by random chance.\nAnd things that look significant get published…\nThat means that a fair number of things that are published are actually false! This is pretty scary."
+  },
+  {
+    "objectID": "slides/lect_15.html#how-to-fix-the-problem",
+    "href": "slides/lect_15.html#how-to-fix-the-problem",
+    "title": "Chapter 16: Statistical tests",
+    "section": "How to fix the problem",
+    "text": "How to fix the problem\nAs a researcher:\n\nmake sure your results can be replicated (like Motyl tried to do with the politics and grey study)\npublish code and data so others can study your work\n\nAs someone who reads about statistics:\n\nbe skeptical about claims that are just one of many tests\nlook for replication and reproducibility!"
+  },
+  {
+    "objectID": "slides/lect_15.html#reducing-the-probability-of-type-ii-error",
+    "href": "slides/lect_15.html#reducing-the-probability-of-type-ii-error",
+    "title": "Chapter 16: Statistical tests",
+    "section": "Reducing the probability of Type II error",
+    "text": "Reducing the probability of Type II error\nIn order to reduce the probability of making a Type II error, we can either\n\nincrease the significance level\nincrease the sample size"
   },
   {
     "objectID": "slides/lect_16.html#standard-error",
     "href": "slides/lect_16.html#standard-error",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 17: Comparison",
     "section": "Standard error",
-    "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}} \\]"
+    "text": "Standard error\nThe formula for standard error for \\(\\hat{p}_1-\\hat{p}_2\\) is\n\\[\\begin{eqnarray*}\n\\sqrt{\\frac{p_1(1-p_1)}{n_1}+\\frac{p_2(1-\\hat{p}_2)}{n_2}}\n\\end{eqnarray*}\\]\nWe need to check \\[\\begin{eqnarray*}\nn_1\\cdot p_1 \\geq 10 \\\\\nn_1\\cdot(1-p_1) \\geq 10\\\\\nn_2\\cdot p_2 \\geq 10\\\\\nn_2\\cdot(1-p_2) \\geq 10\n\\end{eqnarray*}\\]\nBut, we don’t know \\(p_1\\) and \\(p_1\\). What do we do?"
   },
   {
-    "objectID": "slides/lect_16.html#sampling-distribution",
-    "href": "slides/lect_16.html#sampling-distribution",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Sampling distribution",
-    "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\]"
+    "objectID": "slides/lect_16.html#hypothesis-test-for-a-difference-in-proportions",
+    "href": "slides/lect_16.html#hypothesis-test-for-a-difference-in-proportions",
+    "title": "Chapter 17: Comparison",
+    "section": "Hypothesis test for a difference in proportions",
+    "text": "Hypothesis test for a difference in proportions\nIn the case of hypothesis tests, as long as we are testing the hypotheses\n\\[\\begin{eqnarray*}\nH_0: p_1=p_2 \\\\\nH_A: p_1 \\neq p_2\n\\end{eqnarray*}\\]\nWe approximate both \\(p_1\\) and \\(p_2\\) in the standard error formula with \\(\\hat{p}\\). What is \\(\\hat{p}\\)?"
+  },
+  {
+    "objectID": "slides/lect_16.html#pooled-proportion",
+    "href": "slides/lect_16.html#pooled-proportion",
+    "title": "Chapter 17: Comparison",
+    "section": "Pooled proportion",
+    "text": "Pooled proportion\nA pooled proportion assumes the null hypothesis is true, and there really is no difference between the proportions. The differences we observed were just due to random chance. So, we compute \\(\\hat{p}\\) as the overall proportion,\n\\[\\begin{eqnarray*}\n\\frac{\\text{total \\# of successes}}{\\text{total sample size}}\n\\end{eqnarray*}\\]\nUsually you can just read this off of a table. Sometimes you need a “formula,”\n\\[\\begin{eqnarray*}\n\\hat{p}=\\frac{\\hat{p}_1n_1+\\hat{p}_2n_2}{n_1+n_2}\n\\end{eqnarray*}\\]"
+  },
+  {
+    "objectID": "slides/lect_16.html#hypothesis-test-for-a-difference-in-proportions-1",
+    "href": "slides/lect_16.html#hypothesis-test-for-a-difference-in-proportions-1",
+    "title": "Chapter 17: Comparison",
+    "section": "Hypothesis test for a difference in proportions",
+    "text": "Hypothesis test for a difference in proportions\n\\[\\begin{eqnarray*}\nz = \\frac{(\\hat{p}_1-\\hat{p}_2)}{SE}\n\\end{eqnarray*}\\]\nwhere\n\\[\\begin{eqnarray*}\n\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n_1}+\\frac{\\hat{p}(1-\\hat{p})}{n_2}}\n\\end{eqnarray*}\\]"
   },
   {
     "objectID": "slides/lect_16.html#example",
     "href": "slides/lect_16.html#example",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 17: Comparison",
     "section": "Example",
-    "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)"
+    "text": "Example\nAgain, from a sample of 100 US adults, we know the following:\nLet’s test to see if the proportion of self-employed people is really different between government and private employees."
   },
   {
-    "objectID": "slides/lect_16.html#control-limits",
-    "href": "slides/lect_16.html#control-limits",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Control limits",
-    "text": "Control limits\n\n\nif mean production is outside certain values, we may need to stop and recallibrate machinery\nthese values are called control limits\n\\(\\mu - L \\leq \\bar{X} \\leq \\mu + L\\)\n\\(\\mu - L\\) and \\(\\mu + L\\) are control limits"
-  },
-  {
-    "objectID": "slides/lect_16.html#types-of-errors",
-    "href": "slides/lect_16.html#types-of-errors",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Types of errors",
-    "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)"
-  },
-  {
-    "objectID": "slides/lect_16.html#setting-control-limits---1",
-    "href": "slides/lect_16.html#setting-control-limits---1",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Setting control limits - 1",
-    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(10, mean = 12, sd = sqrt(2.3))"
-  },
-  {
-    "objectID": "slides/lect_16.html#setting-control-limits---1-contd",
-    "href": "slides/lect_16.html#setting-control-limits---1-contd",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Setting control limits - 1 cont’d",
-    "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X} }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\n1 - pnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
-  },
-  {
-    "objectID": "slides/lect_16.html#setting-control-limits---2",
-    "href": "slides/lect_16.html#setting-control-limits---2",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Setting control limits - 2",
-    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)\nqnorm(0.0125, mean = 12, sd = sqrt(2.3))"
-  },
-  {
-    "objectID": "slides/lect_16.html#setting-control-limits---2---contd",
-    "href": "slides/lect_16.html#setting-control-limits---2---contd",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Setting control limits - 2 - cont’d",
-    "text": "Setting control limits - 2 - cont’d\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))"
-  },
-  {
-    "objectID": "slides/lect_16.html#repeated-testing",
-    "href": "slides/lect_16.html#repeated-testing",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Repeated testing",
-    "text": "Repeated testing\nWe are not testing once, but multiple times. Assuming independence:\n\n\n\\(\\begin{aligned}P(\\textrm{within limits for 10 days}) =& P(\\textrm{within limits for day 1}) \\cdot P(\\textrm{within limits for day 2}) \\cdot \\dots \\cdot P(\\textrm{within limits for day 10})\\\\ &= 0.975^{10} \\approx 0.7763296 \\end{aligned}\\)\nThere is a \\(1-0.7763296 = 0.2236704\\) percent false positive rate\nManagement must decide if there is a false positive by checking for mechanical errors and inspecting equipment\nAdjust \\(\\alpha\\) value to address this"
-  },
-  {
-    "objectID": "slides/lect_16.html#control-charts-for-variation",
-    "href": "slides/lect_16.html#control-charts-for-variation",
-    "title": "Chapter 14: Sampling variation and quality",
-    "section": "Control charts for variation",
-    "text": "Control charts for variation\nX-bar charts are slow to detect under or over filling\n\n\nS-Chart tracks the standard deviation from sample to sample\nR-Chart tracks the range from sample to sample\n\n\n\n\nstat1010-f22.github.io/website"
+    "objectID": "slides/lect_16.html#example-1",
+    "href": "slides/lect_16.html#example-1",
+    "title": "Chapter 17: Comparison",
+    "section": "Example",
+    "text": "Example\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_18.html#sampling",
