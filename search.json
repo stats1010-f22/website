@@ -2230,7 +2230,7 @@
     "href": "slides/lect_15.html#example-4",
     "title": "Chapter 16: Statistical tests",
     "section": "Example 4",
-    "text": "Example 4\nLet \\(\\bar{x} = 3281\\), \\(s = 529\\), and \\(n = 59\\). Perform a hypothesis test that this is using \\(\\mu_0 = 4000\\)"
+    "text": "Example 4\nLet \\(\\bar{x} = 3281\\), \\(s = 529\\), and \\(n = 59\\). Perform a hypothesis test that this is less than \\(\\mu_0 = 4000\\)"
   },
   {
     "objectID": "slides/lect_15.html#steps-for-a-hypothesis-test-1",
