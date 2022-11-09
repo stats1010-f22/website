@@ -198,7 +198,7 @@ $$t = \frac{\bar{X} - \mu_0} {s\sqrt{{n}}} $$
 
 ## Example 4
 
-Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that this is using $\mu_0 = 4000$
+Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that this is less than $\mu_0 = 4000$
 
 
 ## Steps for a hypothesis test
