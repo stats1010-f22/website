@@ -472,7 +472,7 @@
 </section>
 <section id="example-3" class="slide level2">
 <h2>Example 3</h2>
-<p>In the ESP example, an interested participant initially guessed 9 out of 24 cards and then took a training course to enhance their ESP. In the followup exam, they guessed 17 out of 36 cards. Did the course improve their ESP abilities?</p>
+<p>In the ESP example, we know that the population average for guessing ESP cards is 9 out of 24 cards. An interested participant took a training course to enhance their ESP. In the followup exam, they guessed 17 out of 36 cards. Did the course improve their ESP abilities?</p>
 </section>
 <section id="steps-for-a-hypothesis-test" class="slide level2">
 <h2>Steps for a hypothesis test</h2>
@@ -490,9 +490,9 @@
 <h2>Example 3 - solns</h2>
 <div>
 <ol type="1">
-<li class="fragment"><span class="math inline">\(H_0: p \geq 9/24\)</span> and <span class="math inline">\(H_A: p &lt; 9/24\)</span></li>
+<li class="fragment"><span class="math inline">\(H_0: p \leq 9/24\)</span> and <span class="math inline">\(H_A: p &gt; 9/24\)</span></li>
 <li class="fragment"><span class="math inline">\(\alpha = 0.05\)</span></li>
-<li class="fragment">Yes</li>
+<li class="fragment">Yes <code>9/24*36</code> and <code>(1-9/24)*36</code> both &gt; 10</li>
 <li class="fragment"><span class="math inline">\(\hat{p} = \frac{x}{n} = \frac{17}{36} =0.472\)</span></li>
 <li class="fragment"><span class="math inline">\(\begin{aligned} z_0 &amp;= \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} \\ &amp;= \frac{0.472 - 0.375} {\sqrt{\frac{0.375(1-0.375)}{36}}} \\ &amp;= \frac{0.0972}{0.0807} \approx 1.2 \end{aligned}\)</span></li>
 </ol>
@@ -502,9 +502,9 @@
 <h2>Example 3 - solns</h2>
 <div>
 <ol start="5" type="1">
-<li class="fragment"><code>1 -pnorm(1.2)</code> or <code>1- pnorm((17/36- 9/24)/sqrt((0.375*(1-0.375))/36))</code></li>
-<li class="fragment">With <span class="math inline">\(\alpha = 0.05\)</span> this is not significant.</li>
-<li class="fragment">We <em>fail to reject</em> <span class="math inline">\(H_0\)</span>. The second score does not provide evidence that the intervention improved ESP.</li>
+<li class="fragment"><code>1 -pnorm(1.2)</code> or <code>1- pnorm((17/36- 9/24)/sqrt((0.375*(1-0.375))/36))</code> <span class="math inline">\(\approx 0.115\)</span></li>
+<li class="fragment">Since <span class="math inline">\(0.115 &gt; \alpha = 0.05\)</span> this is not significant.</li>
+<li class="fragment">We <em>fail to reject</em> <span class="math inline">\(H_0\)</span>. The score does not provide evidence that the intervention improved ESP.</li>
 </ol>
 </div>
 </section></section>
@@ -547,7 +547,7 @@
 <h2>Example 4 - solns</h2>
 <div>
 <ol type="1">
-<li class="fragment"><span class="math inline">\(H_0: p \leq 4000\)</span> and <span class="math inline">\(H_A: p &gt; 4000\)</span></li>
+<li class="fragment"><span class="math inline">\(H_0: p \geq 4000\)</span> and <span class="math inline">\(H_A: p &lt; 4000\)</span></li>
 <li class="fragment"><span class="math inline">\(\alpha = 0.05\)</span></li>
 <li class="fragment">Yes</li>
 <li class="fragment"><span class="math inline">\(\bar{x} = 3281\)</span></li>
@@ -559,8 +559,8 @@
 <h2>Example 4 - solns</h2>
 <div>
 <ol start="5" type="1">
-<li class="fragment"><code>pt(-10.44, df = 58)</code> or <code>pt((3281-4000)/(529/sqrt(59)), df = 58)</code></li>
-<li class="fragment">With <span class="math inline">\(\alpha = 0.05\)</span> this is significant.</li>
+<li class="fragment"><code>pt(-10.44, df = 58)</code> or <code>pt((3281-4000)/(529/sqrt(59)), df = 58)</code> <span class="math inline">\(\approx 3.07e-15\)</span></li>
+<li class="fragment">Since <span class="math inline">\(3.07e-15 &lt; \alpha = 0.05\)</span> this is significant.</li>
 <li class="fragment">We <em>reject</em> <span class="math inline">\(H_0\)</span>. There is <em>very strong</em> evidence that the mean value is less than 4000.</li>
 </ol>
 </div>
