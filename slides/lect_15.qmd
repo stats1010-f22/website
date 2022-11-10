@@ -149,7 +149,7 @@ $$z_0 = \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} $$
 
 ## Example 3
 
-In the ESP example, an interested participant initially guessed 9 out of 24 cards and then took a training course to enhance their ESP. In the followup exam, they guessed 17 out of 36 cards. Did the course improve their ESP abilities?
+In the ESP example, we know that the population average for  guessing ESP cards is 9 out of 24 cards. An interested participant  took a training course to enhance their ESP. In the followup exam, they guessed 17 out of 36 cards. Did the course improve their ESP abilities?
 
 ## Steps for a hypothesis test
 
@@ -164,9 +164,9 @@ In the ESP example, an interested participant initially guessed 9 out of 24 card
 ## Example 3 - solns
 
 ::: incremental
-1.  $H_0: p \geq 9/24$ and $H_A: p < 9/24$
+1.  $H_0: p \leq 9/24$ and $H_A: p > 9/24$
 2.  $\alpha = 0.05$
-3.  Yes
+3.  Yes `9/24*36` and `(1-9/24)*36` both > 10
 4.  $\hat{p} = \frac{x}{n} = \frac{17}{36} =0.472$
 5.  $\begin{aligned} z_0 &= \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} \\ &= \frac{0.472 - 0.375} {\sqrt{\frac{0.375(1-0.375)}{36}}} \\ &= \frac{0.0972}{0.0807} \approx 1.2 \end{aligned}$
 :::
@@ -174,9 +174,9 @@ In the ESP example, an interested participant initially guessed 9 out of 24 card
 ## Example 3 - solns
 
 ::: incremental
-5.  `1 -pnorm(1.2)` or `1- pnorm((17/36- 9/24)/sqrt((0.375*(1-0.375))/36))`
-6.  With $\alpha = 0.05$ this is not significant.
-7. We *fail to reject* $H_0$.  The second score does not provide evidence that the intervention improved ESP.
+5.  `1 -pnorm(1.2)` or `1- pnorm((17/36- 9/24)/sqrt((0.375*(1-0.375))/36))` $\approx 0.115$
+6.  Since $0.115 > \alpha = 0.05$ this is not significant.
+7. We *fail to reject* $H_0$.  The score does not provide evidence that the intervention improved ESP.
 :::
 
 # Testing a mean
@@ -214,7 +214,7 @@ Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that th
 ## Example 4 - solns
 
 ::: incremental
-1.  $H_0: p \leq 4000$ and $H_A: p > 4000$
+1.  $H_0: p \geq 4000$ and $H_A: p < 4000$
 2.  $\alpha = 0.05$
 3.  Yes
 4.  $\bar{x} = 3281$
@@ -224,8 +224,9 @@ Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that th
 ## Example 4 - solns
 
 ::: incremental
-5.  `pt(-10.44, df = 58)` or `pt((3281-4000)/(529/sqrt(59)), df = 58)`
-6.  With $\alpha = 0.05$ this is significant.
+5.  `pt(-10.44, df = 58)` or 
+`pt((3281-4000)/(529/sqrt(59)), df = 58)` $\approx 3.07e-15$
+6.  Since  $3.07e-15 < \alpha = 0.05$ this is significant.
 7. We *reject* $H_0$.  There is *very strong* evidence that the mean value is less than 4000.
 :::
 
