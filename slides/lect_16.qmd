@@ -21,13 +21,43 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
--   The shape of the distribution of the sample mean and why it is important
--   When we can assume a normal distribution for the sample mean
--   Control charts and what they are used for
--   Find control limits
+-   Recognize confounding
+-   Formulate hypotheses for comparing two proportions
+-   Perform a z-test for the difference between two proportions
+-   Perform a t-test for the difference between two means
+-   Distinguish between paired and independent samples
+-   Use a CI for difference to compare two proportions or two means
 :::
 
-## Standard error
+## Different types of comparisons
+
+From our last lecture, there are two courses that participants can take to improve their ESP abilities. One series of courses focuses on somatic training of the participant and the other on eye contact between the sender and receiver. For the purposes of this exercise, we let S be the event that a person took the first somatic course, and I be the event that a person took the first eye training course. We follow 442 people who took one of these courses with data on their earnings from clarivoyant work. This lesson will teach us how to assess these two courses. We will answer these questions:
+
+::: incremental
+1. Does a higher proportion of people make more money after taking course I?
+1. What can we say about the differences in proportions of 
+:::
+
+# Data
+
+Let $p_i = \text{the proportion of students who continue the series of eye contact training courses}$ and  $p_s = \text{the proportion of students who continue the series of somatic training courses}$. To demonstrate that somatic course is better than the eye contact course, we want 10\% more students to reenroll. The null hypothesis is $$H_0: p_s - p_i \leq 0.1$$ 
+means that enrollment in subsequent somatic courses does not meet this criteria. If the data rejects $H_0$ in favor of $H_A: p_s - p_i > 0.1$, this suggests the somatic course is better.
+
+## Data - cont'd  
+
+There are a few ways that we can get data to explore these hypotheses:
+
+::: incremental
+1. Experiment: random sample, assigns treatment, compares between treatments.
+2. Obtain random samples from two populations.
+3. Compare two sets of observations: can be problematic
+:::
+
+## Confounding
+
+
+
+
 
 The formula for standard error for $\hat{p}_1-\hat{p}_2$ is
 
@@ -49,12 +79,10 @@ But, we don't know $p_1$ and $p_1$. What do we do?
 
 In the case of hypothesis tests, as long as we are testing the hypotheses
 
-```{=tex}
-\begin{eqnarray*}
-H_0: p_1=p_2 \\
-H_A: p_1 \neq p_2
-\end{eqnarray*}
-```
+
+$H_0: p_1=p_2 \\
+H_A: p_1 \neq p_2$
+
 We approximate both $p_1$ and $p_2$ in the standard error formula with $\hat{p}$. What is $\hat{p}$?
 
 ## Pooled proportion
@@ -102,4 +130,3 @@ Someone else & 20 & 68
 ```
 Let's test to see if the proportion of self-employed people is really different between government and private employees.
 
-## Example {.t}

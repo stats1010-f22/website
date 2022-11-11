@@ -14,9 +14,11 @@ editor: visual
 
 🖥️ [Lecture 14](/slides/lect_14.html)
 
+🖥️ [Lecture 15](/slides/lect_15.html)
+
 ## Practice
 
-📋 [Revision for exam 2](/ae/ae-10.html)
+📋 [AE - 10](/ae/ae-11.html)
 
 <br><br>
 
