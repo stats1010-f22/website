@@ -31,59 +31,103 @@ library(tidyverse)
 
 ## Different types of comparisons
 
-From our last lecture, there are two courses that participants can take to improve their ESP abilities. One series of courses focuses on somatic training of the participant and the other on eye contact between the sender and receiver. For the purposes of this exercise, we let S be the event that a person took the first somatic course, and I be the event that a person took the first eye training course. We follow 442 people who took one of these courses with data on their earnings from clarivoyant work. This lesson will teach us how to assess these two courses. We will answer these questions:
+From our last lecture, there are two courses that participants can take to improve their ESP abilities. One series of courses focuses on somatic training of the participant and the other on eye contact between the sender and receiver. For the purposes of this exercise, we let S be the event that a person took the first somatic course, and I be the event that a person took the first eye training course. This lesson will teach us how to assess these two courses. We will answer these questions:
 
 ::: incremental
-1. Does a higher proportion of people make more money after taking course I?
-1. What can we say about the differences in proportions of 
+1.  Does a higher proportion of people sign up for subsequent eye contact or somatic courses?
+1. 
 :::
 
 # Data
 
-Let $p_i = \text{the proportion of students who continue the series of eye contact training courses}$ and  $p_s = \text{the proportion of students who continue the series of somatic training courses}$. To demonstrate that somatic course is better than the eye contact course, we want 10\% more students to reenroll. The null hypothesis is $$H_0: p_s - p_i \leq 0.1$$ 
-means that enrollment in subsequent somatic courses does not meet this criteria. If the data rejects $H_0$ in favor of $H_A: p_s - p_i > 0.1$, this suggests the somatic course is better.
+Let $p_i = \text{the proportion of students who continue the series of eye contact training courses}$ and $p_s = \text{the proportion of students who continue the series of somatic training courses}$. To demonstrate that eye contact course is better than the somatic course, we want 10% more students to reenroll. The null hypothesis is $$H_0: p_s - p_i \leq 0.02$$ means that enrollment in subsequent somatic courses does not meet this criteria. If the data rejects $H_0$ in favor of $H_A: p_s - p_i > 0.02$, this suggests the eye contact course is better.
 
-## Data - cont'd  
+## Data - cont'd
 
 There are a few ways that we can get data to explore these hypotheses:
 
 ::: incremental
-1. Experiment: random sample, assigns treatment, compares between treatments.
-2. Obtain random samples from two populations.
-3. Compare two sets of observations: can be problematic
+1.  Experiment: random sample, assigns treatment, compares between treatments.
+2.  Obtain random samples from two populations.
+3.  Compare two sets of observations: can be problematic
 :::
 
 ## Confounding
 
+When levels of one variable are associated with levels of another the variables are said to be *confounded.*
 
+In our example, perhaps we run a course Sedona, AZ where belief in ESP is high and people are likely to take the whole course. If the other was run in Phoenix, AZ this would not be the case. The belief in ESP in the location is confounded with taking subsequent courses.
 
+## Example 1
 
+Which of the following appear safe from confounding and which appear to be contaminated?
+
+1.  A comparison of two promotional displays using average daily sales in one store with one type of display and another store with a different type.
+2.  A comparison of two promotional dsiplayes using average daily sales in one store with one type of display on Monday and the other display on Friday.
+3.  A comparison of two landscaping offers sent at random to potential customers in the same zip code.
+
+## Example 1 - solns
+
+1.  Confounded by differences between the store, such as location or sales volume
+2.  Confounded by differences in shopping patterns during the week.
+3.  Free of confounding, though may not generalize to other zip codes
+
+# Two-sample $z$-test for proportions
+
+$$ H_0: p_1 - p_2 \leq D_0 $$
 
 The formula for standard error for $\hat{p}_1-\hat{p}_2$ is
 
-```{=tex}
-\begin{eqnarray*}
-\sqrt{\frac{p_1(1-p_1)}{n_1}+\frac{p_2(1-\hat{p}_2)}{n_2}}
-\end{eqnarray*}
-```
-We need to check \begin{eqnarray*}
-n_1\cdot p_1 \geq 10 \\
-n_1\cdot(1-p_1) \geq 10\\
-n_2\cdot p_2 \geq 10\\
-n_2\cdot(1-p_2) \geq 10
-\end{eqnarray*}
+$se(\hat{p}_1 - \hat{p}_2) = \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}$
 
-But, we don't know $p_1$ and $p_1$. What do we do?
+## Assumptions
+
+1.  No obvious lurking variable or confounders
+2.  SRS condition, or independent random samples from two populations
+3.  We need to check $\begin{eqnarray*} n_1\cdot \hat{p}_1 \geq 10 \\ n_1\cdot(1-\hat{p}_1) \geq 10\\ n_2\cdot \hat{p}_2 \geq 10\\ n_2\cdot(1-\hat{p}_2) \geq 10 \end{eqnarray*}$
 
 ## Hypothesis test for a difference in proportions
 
-In the case of hypothesis tests, as long as we are testing the hypotheses
+$$ z = \frac{\hat{p}_1 - \hat{p}_2 - D_0}{se(\hat{p}_1 - \hat{p}_2)}$$
+## Example 2
+
+In the ESP example, spiritual groups decided to randomly assign members to either the eye contact ($n_s = 809$) or somatic group ($n_i = 646$). From those in the somatic contact group $280$ re-enrolled, subsequent eye contact groups had $197$. Perform a two sample $z$-test for proportions to determine if the enrollment in the somatic course was 2\% more, on average,  than that in the eye contact course.
 
 
-$H_0: p_1=p_2 \\
-H_A: p_1 \neq p_2$
+## Steps for a hypothesis test
 
-We approximate both $p_1$ and $p_2$ in the standard error formula with $\hat{p}$. What is $\hat{p}$?
+1.  State hypotheses
+2.  Determine the level of significance
+3.  Check conditions
+4.  Calculate test statistic
+5.  Compute p-value
+6.  Generic conclusion
+7.  Interpret in context
+
+## Example 2 - solns
+
+::: incremental
+1.  $H_0: p_s - p_i \leq 0.02$ and $H_0: p_s - p_i > 0.02$
+2.  $\alpha = 0.05$
+3.  Yes, `280/809*809` and `(1-280/809)*809` both > 10
+3.  Yes, `197/646*646` and `(1-197/646)*646` both > 10
+4.  $\hat{p_i} = \frac{x_i}{n_i} = \frac{197}{646} = 0.305$
+4.  $\hat{p_s} = \frac{x_s}{n_s} = \frac{208}{809} = 0.346$
+5.  $\begin{aligned} se(\hat{p}_s - \hat{p}_i) &= \sqrt{\frac{\hat{p}_s(1-\hat{p}_s)}{n_s}+\frac{\hat{p}_i(1-\hat{p}_i)}{n_i}} \\ &= \sqrt{\frac{0.305(1-0.305)}{646}+\frac{0.346(1-0.346)}{809}} \\ &= \sqrt{0.0003281 + 0.0002797} \approx 0.02465 \end{aligned}$
+:::
+
+## Example 2 - solns
+
+::: incremental
+5. $\begin{aligned} z_0 &= \frac{\hat{p_s} - \hat{p_i} - D_0} {se(\hat{p_s} - \hat{p_i})} \\ &= \frac{0.346 - 0.305 - 0.02} {0.02465} \\  &\approx 0.851927 \end{aligned}$
+5.  `1 - pnorm(0.851927)` or  $\approx 0.197$
+6.  Since $0.197 > \alpha = 0.05$ this is not significant.
+7. We *fail to reject* $H_0$. The reenrollment in the somatic course is not significantly more than the reenrollment in the eye contact course.
+:::
+
+# Two-sample confidence interval for proportions
+Sometimes we only want to estimate the difference, not determine if they is a statistically significant difference. We may not know which value 
+
 
 ## Pooled proportion
 
@@ -129,4 +173,3 @@ Someone else & 20 & 68
 \end{table}
 ```
 Let's test to see if the proportion of self-employed people is really different between government and private employees.
-
