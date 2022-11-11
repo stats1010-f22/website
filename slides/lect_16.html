@@ -339,15 +339,43 @@
 <h1>Learning outcomes</h1>
 <div>
 <ul>
-<li class="fragment">The shape of the distribution of the sample mean and why it is important</li>
-<li class="fragment">When we can assume a normal distribution for the sample mean</li>
-<li class="fragment">Control charts and what they are used for</li>
-<li class="fragment">Find control limits</li>
+<li class="fragment">Recognize confounding</li>
+<li class="fragment">Formulate hypotheses for comparing two proportions</li>
+<li class="fragment">Perform a z-test for the difference between two proportions</li>
+<li class="fragment">Perform a t-test for the difference between two means</li>
+<li class="fragment">Distinguish between paired and independent samples</li>
+<li class="fragment">Use a CI for difference to compare two proportions or two means</li>
 </ul>
 </div>
 </section>
-<section id="standard-error" class="slide level2">
-<h2>Standard error</h2>
+<section id="different-types-of-comparisons" class="slide level2">
+<h2>Different types of comparisons</h2>
+<p>From our last lecture, there are two courses that participants can take to improve their ESP abilities. One series of courses focuses on somatic training of the participant and the other on eye contact between the sender and receiver. For the purposes of this exercise, we let S be the event that a person took the first somatic course, and I be the event that a person took the first eye training course. We follow 442 people who took one of these courses with data on their earnings from clarivoyant work. This lesson will teach us how to assess these two courses. We will answer these questions:</p>
+<div>
+<ol type="1">
+<li class="fragment">Does a higher proportion of people make more money after taking course I?</li>
+<li class="fragment">What can we say about the differences in proportions of</li>
+</ol>
+</div>
+</section></section>
+<section>
+<section id="data" class="title-slide slide level1 center">
+<h1>Data</h1>
+<p>Let <span class="math inline">\(p_i = \text{the proportion of students who continue the series of eye contact training courses}\)</span> and <span class="math inline">\(p_s = \text{the proportion of students who continue the series of somatic training courses}\)</span>. To demonstrate that somatic course is better than the eye contact course, we want 10% more students to reenroll. The null hypothesis is <span class="math display">\[H_0: p_s - p_i \leq 0.1\]</span> means that enrollment in subsequent somatic courses does not meet this criteria. If the data rejects <span class="math inline">\(H_0\)</span> in favor of <span class="math inline">\(H_A: p_s - p_i &gt; 0.1\)</span>, this suggests the somatic course is better.</p>
+</section>
+<section id="data---contd" class="slide level2">
+<h2>Data - cont’d</h2>
+<p>There are a few ways that we can get data to explore these hypotheses:</p>
+<div>
+<ol type="1">
+<li class="fragment">Experiment: random sample, assigns treatment, compares between treatments.</li>
+<li class="fragment">Obtain random samples from two populations.</li>
+<li class="fragment">Compare two sets of observations: can be problematic</li>
+</ol>
+</div>
+</section>
+<section id="confounding" class="slide level2">
+<h2>Confounding</h2>
 <p>The formula for standard error for <span class="math inline">\(\hat{p}_1-\hat{p}_2\)</span> is</p>
 <span class="math display">\[\begin{eqnarray*}
 \sqrt{\frac{p_1(1-p_1)}{n_1}+\frac{p_2(1-\hat{p}_2)}{n_2}}
@@ -363,10 +391,7 @@ n_2\cdot(1-p_2) \geq 10
 <section id="hypothesis-test-for-a-difference-in-proportions" class="slide level2">
 <h2>Hypothesis test for a difference in proportions</h2>
 <p>In the case of hypothesis tests, as long as we are testing the hypotheses</p>
-<span class="math display">\[\begin{eqnarray*}
-H_0: p_1=p_2 \\
-H_A: p_1 \neq p_2
-\end{eqnarray*}\]</span>
+<p><span class="math inline">\(H_0: p_1=p_2 \\ H_A: p_1 \neq p_2\)</span></p>
 <p>We approximate both <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span> in the standard error formula with <span class="math inline">\(\hat{p}\)</span>. What is <span class="math inline">\(\hat{p}\)</span>?</p>
 </section>
 <section id="pooled-proportion" class="slide level2">
@@ -394,9 +419,6 @@ z = \frac{(\hat{p}_1-\hat{p}_2)}{SE}
 <h2>Example</h2>
 <p>Again, from a sample of 100 US adults, we know the following:</p>
 <p>Let’s test to see if the proportion of self-employed people is really different between government and private employees.</p>
-</section>
-<section id="example-1" class="slide level2 t">
-<h2>Example</h2>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
