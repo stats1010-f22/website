@@ -123,7 +123,7 @@
     "href": "index.html",
     "title": "STAT 1010: Introduction to Business Statistics",
     "section": "",
-    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct\nThe normal probability model\n\n🖥️\n\n\n\n\n\n\n\n9\nMon, 24 Oct\nSamples and surveys\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 26 Oct\nSampling variation and quality\n\n🖥️\n📋\n\n\n\n📂\n\n\n10\nMon, 31 Oct\nRevision for Exam 2\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 2 Nov\nExam 2\n\n\n\n\n✅\n\n\n\n\n11\nMon, 7 Nov\nConfidence intervals\n\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 9 Nov\nStatistical tests\n\n🖥️\n\n\n\n\n\n\n\n12\nMon, 14 Nov\nComparison\n\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 16 Nov\nInference for counts\n\n🖥️"
+    "text": "Week\nDate\nTopic\nPrepare\nSlides\nAE\nHW\nExam\nProject\n\n\n\n\n\n1\nMon, 29 Aug\nNo class - opening exercises\n\n\n\n\n\n\n\n\n\n\nWed, 31 Aug\nStarting with R\n\n🖥️\n📋\n\n\n\n\n\n\n2\nMon, 5 Sept\nNo class - Labor Day\n\n\n\n\n\n\n\n\n\n\nWed, 7 Sept\nContinuation of Intro to R\n📖\n🖥️\n\n\n\n\n\n\n\n3\nMon, 12 Sept\nCategorical variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 14 Sept\nNumeric variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n4\nMon, 19 Sept\nIntro to probability\n📖\n🖥️\n📋\n✍️\n\n\n\n\n\n\nWed, 21 Sept\nMore probability rules\n\n🖥️\n📋\n\n\n\n\n\n\n5\nMon, 26 Sept\nRevision of AE 1-4\n📖\n\n📋\n\n\n\n\n\n\n\nWed, 28 Sept\nRevision of HW-1\n📖\n\n📋\n\n\n\n\n\n\n6\nMon, 3 Oct\nExam 1\n\n\n\n\n✅\n\n\n\n\n\nWed, 5 Oct\nRandom variables\n📖\n🖥️\n📋\n\n\n\n\n\n\n7\nMon, 10 Oct\nAssociation between quantitative variables\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 12 Oct\nAssociation between random variables\n\n🖥️\n📋\n✍️\n\n\n\n\n\n8\nMon, 17 Oct\nProbability models for counts\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 19 Oct\nThe normal probability model\n\n🖥️\n\n\n\n\n\n\n\n9\nMon, 24 Oct\nSamples and surveys\n📖\n🖥️\n\n\n\n\n\n\n\n\nWed, 26 Oct\nSampling variation and quality\n\n🖥️\n📋\n\n\n\n📂\n\n\n10\nMon, 31 Oct\nRevision for Exam 2\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 2 Nov\nExam 2\n\n\n\n\n✅\n\n\n\n\n11\nMon, 7 Nov\nConfidence intervals\n\n🖥️\n📋\n\n\n\n\n\n\n\nWed, 9 Nov\nStatistical tests\n\n🖥️\n\n\n\n\n\n\n\n12\nMon, 14 Nov\nComparison\n\n🖥️\n\n\n\n\n\n\n\n\nWed, 16 Nov\nInference for counts\n\n🖥️"
   },
   {
     "objectID": "course-overview.html",
@@ -2335,7 +2335,7 @@
     "href": "slides/lect_16.html#different-types-of-comparisons",
     "title": "Chapter 17: Comparison",
     "section": "Different types of comparisons",
-    "text": "Different types of comparisons\nFrom our last lecture, there are two courses that participants can take to improve their ESP abilities. One series of courses focuses on somatic training of the participant and the other on eye contact between the sender and receiver. For the purposes of this exercise, we let S be the event that a person took the first somatic course, and I be the event that a person took the first eye training course. We follow 442 people who took one of these courses with data on their earnings from clarivoyant work. This lesson will teach us how to assess these two courses. We will answer these questions:\n\n\nDoes a higher proportion of people make more money after taking course I?\nWhat can we say about the differences in proportions of"
+    "text": "Different types of comparisons\nFrom our last lecture, there are two courses that participants can take to improve their ESP abilities. One series of courses focuses on somatic training of the participant and the other on eye contact between the sender and receiver. For the purposes of this exercise, we let S be the event that a person took the first somatic course, and I be the event that a person took the first eye training course. This lesson will teach us how to assess these two courses. We will answer these questions:\n\n\nDoes a higher proportion of people sign up for subsequent eye contact or somatic courses?"
   },
   {
     "objectID": "slides/lect_16.html#data---contd",
@@ -2349,14 +2349,56 @@
     "href": "slides/lect_16.html#confounding",
     "title": "Chapter 17: Comparison",
     "section": "Confounding",
-    "text": "Confounding\nThe formula for standard error for \\(\\hat{p}_1-\\hat{p}_2\\) is\n\\[\\begin{eqnarray*}\n\\sqrt{\\frac{p_1(1-p_1)}{n_1}+\\frac{p_2(1-\\hat{p}_2)}{n_2}}\n\\end{eqnarray*}\\]\nWe need to check \\[\\begin{eqnarray*}\nn_1\\cdot p_1 \\geq 10 \\\\\nn_1\\cdot(1-p_1) \\geq 10\\\\\nn_2\\cdot p_2 \\geq 10\\\\\nn_2\\cdot(1-p_2) \\geq 10\n\\end{eqnarray*}\\]\nBut, we don’t know \\(p_1\\) and \\(p_1\\). What do we do?"
+    "text": "Confounding\nWhen levels of one variable are associated with levels of another the variables are said to be confounded.\nIn our example, perhaps we run a course Sedona, AZ where belief in ESP is high and people are likely to take the whole course. If the other was run in Phoenix, AZ this would not be the case. The belief in ESP in the location is confounded with taking subsequent courses."
+  },
+  {
+    "objectID": "slides/lect_16.html#example-1",
+    "href": "slides/lect_16.html#example-1",
+    "title": "Chapter 17: Comparison",
+    "section": "Example 1",
+    "text": "Example 1\nWhich of the following appear safe from confounding and which appear to be contaminated?\n\nA comparison of two promotional displays using average daily sales in one store with one type of display and another store with a different type.\nA comparison of two promotional dsiplayes using average daily sales in one store with one type of display on Monday and the other display on Friday.\nA comparison of two landscaping offers sent at random to potential customers in the same zip code."
+  },
+  {
+    "objectID": "slides/lect_16.html#example-1---solns",
+    "href": "slides/lect_16.html#example-1---solns",
+    "title": "Chapter 17: Comparison",
+    "section": "Example 1 - solns",
+    "text": "Example 1 - solns\n\nConfounded by differences between the store, such as location or sales volume\nConfounded by differences in shopping patterns during the week.\nFree of confounding, though may not generalize to other zip codes"
+  },
+  {
+    "objectID": "slides/lect_16.html#assumptions",
+    "href": "slides/lect_16.html#assumptions",
+    "title": "Chapter 17: Comparison",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nNo obvious lurking variable or confounders\nSRS condition, or independent random samples from two populations\nWe need to check \\(\\begin{eqnarray*} n_1\\cdot \\hat{p}_1 \\geq 10 \\\\ n_1\\cdot(1-\\hat{p}_1) \\geq 10\\\\ n_2\\cdot \\hat{p}_2 \\geq 10\\\\ n_2\\cdot(1-\\hat{p}_2) \\geq 10 \\end{eqnarray*}\\)"
   },
   {
     "objectID": "slides/lect_16.html#hypothesis-test-for-a-difference-in-proportions",
     "href": "slides/lect_16.html#hypothesis-test-for-a-difference-in-proportions",
     "title": "Chapter 17: Comparison",
     "section": "Hypothesis test for a difference in proportions",
-    "text": "Hypothesis test for a difference in proportions\nIn the case of hypothesis tests, as long as we are testing the hypotheses\n\\(H_0: p_1=p_2 \\\\ H_A: p_1 \\neq p_2\\)\nWe approximate both \\(p_1\\) and \\(p_2\\) in the standard error formula with \\(\\hat{p}\\). What is \\(\\hat{p}\\)?"
+    "text": "Hypothesis test for a difference in proportions\n\\[ z = \\frac{\\hat{p}_1 - \\hat{p}_2 - D_0}{se(\\hat{p}_1 - \\hat{p}_2)}\\] ## Example 2\nIn the ESP example, spiritual groups decided to randomly assign members to either the eye contact (\\(n_s = 809\\)) or somatic group (\\(n_i = 646\\)). From those in the somatic contact group \\(280\\) re-enrolled, subsequent eye contact groups had \\(197\\). Perform a two sample \\(z\\)-test for proportions to determine if the enrollment in the somatic course was 2% more, on average, than that in the eye contact course."
+  },
+  {
+    "objectID": "slides/lect_16.html#steps-for-a-hypothesis-test",
+    "href": "slides/lect_16.html#steps-for-a-hypothesis-test",
+    "title": "Chapter 17: Comparison",
+    "section": "Steps for a hypothesis test",
+    "text": "Steps for a hypothesis test\n\nState hypotheses\nDetermine the level of significance\nCheck conditions\nCalculate test statistic\nCompute p-value\nGeneric conclusion\nInterpret in context"
+  },
+  {
+    "objectID": "slides/lect_16.html#example-2---solns",
+    "href": "slides/lect_16.html#example-2---solns",
+    "title": "Chapter 17: Comparison",
+    "section": "Example 2 - solns",
+    "text": "Example 2 - solns\n\n\n\\(H_0: p_s - p_i \\leq 0.02\\) and \\(H_0: p_s - p_i > 0.02\\)\n\\(\\alpha = 0.05\\)\nYes, 280/809*809 and (1-280/809)*809 both > 10\nYes, 197/646*646 and (1-197/646)*646 both > 10\n\\(\\hat{p_i} = \\frac{x_i}{n_i} = \\frac{197}{646} = 0.305\\)\n\\(\\hat{p_s} = \\frac{x_s}{n_s} = \\frac{208}{809} = 0.346\\)\n\\(\\begin{aligned} se(\\hat{p}_s - \\hat{p}_i) &= \\sqrt{\\frac{\\hat{p}_s(1-\\hat{p}_s)}{n_s}+\\frac{\\hat{p}_i(1-\\hat{p}_i)}{n_i}} \\\\ &= \\sqrt{\\frac{0.305(1-0.305)}{646}+\\frac{0.346(1-0.346)}{809}} \\\\ &= \\sqrt{0.0003281 + 0.0002797} \\approx 0.02465 \\end{aligned}\\)"
+  },
+  {
+    "objectID": "slides/lect_16.html#example-2---solns-1",
+    "href": "slides/lect_16.html#example-2---solns-1",
+    "title": "Chapter 17: Comparison",
+    "section": "Example 2 - solns",
+    "text": "Example 2 - solns\n\n\n\\(\\begin{aligned} z_0 &= \\frac{\\hat{p_s} - \\hat{p_i} - D_0} {se(\\hat{p_s} - \\hat{p_i})} \\\\ &= \\frac{0.346 - 0.305 - 0.02} {0.02465} \\\\ &\\approx 0.851927 \\end{aligned}\\)\n1 - pnorm(0.851927) or \\(\\approx 0.197\\)\nSince \\(0.197 > \\alpha = 0.05\\) this is not significant.\nWe fail to reject \\(H_0\\). The reenrollment in the somatic course is not significantly more than the reenrollment in the eye contact course."
   },
   {
     "objectID": "slides/lect_16.html#pooled-proportion",
