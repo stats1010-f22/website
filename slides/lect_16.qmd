@@ -29,16 +29,16 @@ library(tidyverse)
 -   Use a CI for difference to compare two proportions or two means
 :::
 
-## Different types of comparisons
+## Different types of comparisons {.smaller}
 
 From our last lecture, there are two courses that participants can take to improve their ESP abilities. One series of courses focuses on somatic training of the participant and the other on eye contact between the sender and receiver. For the purposes of this exercise, we let S be the event that a person took the first somatic course, and I be the event that a person took the first eye training course. This lesson will teach us how to assess these two courses. We will answer these questions:
 
 ::: incremental
 1.  Does a higher proportion of people sign up for subsequent eye contact or somatic courses?
-1. 
+2.  
 :::
 
-# Data
+# Data {.smaller}
 
 Let $p_i = \text{the proportion of students who continue the series of eye contact training courses}$ and $p_s = \text{the proportion of students who continue the series of somatic training courses}$. To demonstrate that eye contact course is better than the somatic course, we want 10% more students to reenroll. The null hypothesis is $$H_0: p_s - p_i \leq 0.02$$ means that enrollment in subsequent somatic courses does not meet this criteria. If the data rejects $H_0$ in favor of $H_A: p_s - p_i > 0.02$, this suggests the eye contact course is better.
 
@@ -89,10 +89,10 @@ $se(\hat{p}_1 - \hat{p}_2) = \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\frac{\hat
 ## Hypothesis test for a difference in proportions
 
 $$ z = \frac{\hat{p}_1 - \hat{p}_2 - D_0}{se(\hat{p}_1 - \hat{p}_2)}$$
+
 ## Example 2
 
-In the ESP example, spiritual groups decided to randomly assign members to either the eye contact ($n_s = 809$) or somatic group ($n_i = 646$). From those in the somatic contact group $280$ re-enrolled, subsequent eye contact groups had $197$. Perform a two sample $z$-test for proportions to determine if the enrollment in the somatic course was 2\% more, on average,  than that in the eye contact course.
-
+In the ESP example, spiritual groups decided to randomly assign members to either the eye contact ($n_s = 809$) or somatic group ($n_i = 646$). From those in the somatic contact group $280$ re-enrolled, subsequent eye contact groups had $197$. Perform a two sample $z$-test for proportions to determine if the enrollment in the somatic course was 2% more, on average, than that in the eye contact course.
 
 ## Steps for a hypothesis test
 
@@ -109,25 +109,38 @@ In the ESP example, spiritual groups decided to randomly assign members to eithe
 ::: incremental
 1.  $H_0: p_s - p_i \leq 0.02$ and $H_0: p_s - p_i > 0.02$
 2.  $\alpha = 0.05$
-3.  Yes, `280/809*809` and `(1-280/809)*809` both > 10
-3.  Yes, `197/646*646` and `(1-197/646)*646` both > 10
-4.  $\hat{p_i} = \frac{x_i}{n_i} = \frac{197}{646} = 0.305$
-4.  $\hat{p_s} = \frac{x_s}{n_s} = \frac{208}{809} = 0.346$
-5.  $\begin{aligned} se(\hat{p}_s - \hat{p}_i) &= \sqrt{\frac{\hat{p}_s(1-\hat{p}_s)}{n_s}+\frac{\hat{p}_i(1-\hat{p}_i)}{n_i}} \\ &= \sqrt{\frac{0.305(1-0.305)}{646}+\frac{0.346(1-0.346)}{809}} \\ &= \sqrt{0.0003281 + 0.0002797} \approx 0.02465 \end{aligned}$
+3.  Yes, `280/809*809` and `(1-280/809)*809` both \> 10 Yes, `197/646*646` and `(1-197/646)*646` both \> 10
+4.  $\hat{p_i} = \frac{x_i}{n_i} = \frac{197}{646} = 0.305$ $\hat{p_s} = \frac{x_s}{n_s} = \frac{208}{809} = 0.346$
 :::
 
 ## Example 2 - solns
 
 ::: incremental
-5. $\begin{aligned} z_0 &= \frac{\hat{p_s} - \hat{p_i} - D_0} {se(\hat{p_s} - \hat{p_i})} \\ &= \frac{0.346 - 0.305 - 0.02} {0.02465} \\  &\approx 0.851927 \end{aligned}$
-5.  `1 - pnorm(0.851927)` or  $\approx 0.197$
+5.  $\begin{aligned} se(\hat{p}_s - \hat{p}_i) &= \sqrt{\frac{\hat{p}_s(1-\hat{p}_s)}{n_s}+\frac{\hat{p}_i(1-\hat{p}_i)}{n_i}} \\ &= \sqrt{\frac{0.305(1-0.305)}{646}+\frac{0.346(1-0.346)}{809}} \\ &= \sqrt{0.0003281 + 0.0002797} \approx 0.02465 \end{aligned}$ $\begin{aligned} z_0 &= \frac{\hat{p_s} - \hat{p_i} - D_0} {se(\hat{p_s} - \hat{p_i})} \\ &= \frac{0.346 - 0.305 - 0.02} {0.02465} \\ &\approx 0.851927 \end{aligned}$ `1 - pnorm(0.851927)` or $\approx 0.197$
 6.  Since $0.197 > \alpha = 0.05$ this is not significant.
-7. We *fail to reject* $H_0$. The reenrollment in the somatic course is not significantly more than the reenrollment in the eye contact course.
+7.  We *fail to reject* $H_0$. The reenrollment in the somatic course is not significantly more than the reenrollment in the eye contact course.
 :::
 
 # Two-sample confidence interval for proportions
-Sometimes we only want to estimate the difference, not determine if they is a statistically significant difference. We may not know which value 
 
+Sometimes we only want to estimate the difference, not determine if they is a statistically significant difference. We may not know which value of $D_0$ to use.
+
+::: incremental
+1.  We can build 2 CIs (like we did [here](https://stats1010-f22.github.io/website/slides/lect_14.html#/ci---math)) to see if they overlap.
+2.  We can build a CI for the difference between the two proportions
+:::
+
+## Math
+
+$$ \hat{p}_1 - \hat{p}_2 - z_{\alpha/2} se(\hat{p}_1 - \hat{p}_2) \text{  to  }\\ \hat{p}_1 - \hat{p}_2 + z_{\alpha/2} se(\hat{p}_1 - \hat{p}_2)$$ \## Assumptions
+
+1.  No obvious lurking variables or confounders
+2.  SRS condition
+3.  Sample size condition
+
+## Example 3
+
+In the ESP example, spiritual groups decided to randomly assign members to either the eye contact ($n_s = 809$) or somatic group ($n_i = 646$). From those in the somatic contact group $280$ re-enrolled, subsequent eye contact groups had $197$. Find the 95% confidence interval for the difference between the proportions who take subsequent courses on the somatic and eye contact group.
 
 ## Pooled proportion
 
