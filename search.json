@@ -2377,7 +2377,14 @@
     "href": "slides/lect_16.html#hypothesis-test-for-a-difference-in-proportions",
     "title": "Chapter 17: Comparison",
     "section": "Hypothesis test for a difference in proportions",
-    "text": "Hypothesis test for a difference in proportions\n\\[ z = \\frac{\\hat{p}_1 - \\hat{p}_2 - D_0}{se(\\hat{p}_1 - \\hat{p}_2)}\\] ## Example 2\nIn the ESP example, spiritual groups decided to randomly assign members to either the eye contact (\\(n_s = 809\\)) or somatic group (\\(n_i = 646\\)). From those in the somatic contact group \\(280\\) re-enrolled, subsequent eye contact groups had \\(197\\). Perform a two sample \\(z\\)-test for proportions to determine if the enrollment in the somatic course was 2% more, on average, than that in the eye contact course."
+    "text": "Hypothesis test for a difference in proportions\n\\[ z = \\frac{\\hat{p}_1 - \\hat{p}_2 - D_0}{se(\\hat{p}_1 - \\hat{p}_2)}\\]"
+  },
+  {
+    "objectID": "slides/lect_16.html#example-2",
+    "href": "slides/lect_16.html#example-2",
+    "title": "Chapter 17: Comparison",
+    "section": "Example 2",
+    "text": "Example 2\nIn the ESP example, spiritual groups decided to randomly assign members to either the eye contact (\\(n_s = 809\\)) or somatic group (\\(n_i = 646\\)). From those in the somatic contact group \\(280\\) re-enrolled, subsequent eye contact groups had \\(197\\). Perform a two sample \\(z\\)-test for proportions to determine if the enrollment in the somatic course was 2% more, on average, than that in the eye contact course."
   },
   {
     "objectID": "slides/lect_16.html#steps-for-a-hypothesis-test",
@@ -2391,14 +2398,28 @@
     "href": "slides/lect_16.html#example-2---solns",
     "title": "Chapter 17: Comparison",
     "section": "Example 2 - solns",
-    "text": "Example 2 - solns\n\n\n\\(H_0: p_s - p_i \\leq 0.02\\) and \\(H_0: p_s - p_i > 0.02\\)\n\\(\\alpha = 0.05\\)\nYes, 280/809*809 and (1-280/809)*809 both > 10\nYes, 197/646*646 and (1-197/646)*646 both > 10\n\\(\\hat{p_i} = \\frac{x_i}{n_i} = \\frac{197}{646} = 0.305\\)\n\\(\\hat{p_s} = \\frac{x_s}{n_s} = \\frac{208}{809} = 0.346\\)\n\\(\\begin{aligned} se(\\hat{p}_s - \\hat{p}_i) &= \\sqrt{\\frac{\\hat{p}_s(1-\\hat{p}_s)}{n_s}+\\frac{\\hat{p}_i(1-\\hat{p}_i)}{n_i}} \\\\ &= \\sqrt{\\frac{0.305(1-0.305)}{646}+\\frac{0.346(1-0.346)}{809}} \\\\ &= \\sqrt{0.0003281 + 0.0002797} \\approx 0.02465 \\end{aligned}\\)"
+    "text": "Example 2 - solns\n\n\n\\(H_0: p_s - p_i \\leq 0.02\\) and \\(H_0: p_s - p_i > 0.02\\)\n\\(\\alpha = 0.05\\)\nYes, 280/809*809 and (1-280/809)*809 both > 10 Yes, 197/646*646 and (1-197/646)*646 both > 10\n\\(\\hat{p_i} = \\frac{x_i}{n_i} = \\frac{197}{646} = 0.305\\) \\(\\hat{p_s} = \\frac{x_s}{n_s} = \\frac{208}{809} = 0.346\\)"
   },
   {
     "objectID": "slides/lect_16.html#example-2---solns-1",
     "href": "slides/lect_16.html#example-2---solns-1",
     "title": "Chapter 17: Comparison",
     "section": "Example 2 - solns",
-    "text": "Example 2 - solns\n\n\n\\(\\begin{aligned} z_0 &= \\frac{\\hat{p_s} - \\hat{p_i} - D_0} {se(\\hat{p_s} - \\hat{p_i})} \\\\ &= \\frac{0.346 - 0.305 - 0.02} {0.02465} \\\\ &\\approx 0.851927 \\end{aligned}\\)\n1 - pnorm(0.851927) or \\(\\approx 0.197\\)\nSince \\(0.197 > \\alpha = 0.05\\) this is not significant.\nWe fail to reject \\(H_0\\). The reenrollment in the somatic course is not significantly more than the reenrollment in the eye contact course."
+    "text": "Example 2 - solns\n\n\n\\(\\begin{aligned} se(\\hat{p}_s - \\hat{p}_i) &= \\sqrt{\\frac{\\hat{p}_s(1-\\hat{p}_s)}{n_s}+\\frac{\\hat{p}_i(1-\\hat{p}_i)}{n_i}} \\\\ &= \\sqrt{\\frac{0.305(1-0.305)}{646}+\\frac{0.346(1-0.346)}{809}} \\\\ &= \\sqrt{0.0003281 + 0.0002797} \\approx 0.02465 \\end{aligned}\\) \\(\\begin{aligned} z_0 &= \\frac{\\hat{p_s} - \\hat{p_i} - D_0} {se(\\hat{p_s} - \\hat{p_i})} \\\\ &= \\frac{0.346 - 0.305 - 0.02} {0.02465} \\\\ &\\approx 0.851927 \\end{aligned}\\) 1 - pnorm(0.851927) or \\(\\approx 0.197\\)\nSince \\(0.197 > \\alpha = 0.05\\) this is not significant.\nWe fail to reject \\(H_0\\). The reenrollment in the somatic course is not significantly more than the reenrollment in the eye contact course."
+  },
+  {
+    "objectID": "slides/lect_16.html#math",
+    "href": "slides/lect_16.html#math",
+    "title": "Chapter 17: Comparison",
+    "section": "Math",
+    "text": "Math\n\\[ \\hat{p}_1 - \\hat{p}_2 - z_{\\alpha/2} se(\\hat{p}_1 - \\hat{p}_2) \\text{  to  }\\\\ \\hat{p}_1 - \\hat{p}_2 + z_{\\alpha/2} se(\\hat{p}_1 - \\hat{p}_2)\\] ## Assumptions\n\nNo obvious lurking variables or confounders\nSRS condition\nSample size condition"
+  },
+  {
+    "objectID": "slides/lect_16.html#example-3",
+    "href": "slides/lect_16.html#example-3",
+    "title": "Chapter 17: Comparison",
+    "section": "Example 3",
+    "text": "Example 3\nIn the ESP example, spiritual groups decided to randomly assign members to either the eye contact (\\(n_s = 809\\)) or somatic group (\\(n_i = 646\\)). From those in the somatic contact group \\(280\\) re-enrolled, subsequent eye contact groups had \\(197\\). Find the 95% confidence interval for the difference between the proportions who take subsequent courses on the somatic and eye contact group."
   },
   {
     "objectID": "slides/lect_16.html#pooled-proportion",
