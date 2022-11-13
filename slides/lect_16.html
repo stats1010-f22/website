@@ -27,6 +27,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -442,11 +506,14 @@
 </ol>
 </div>
 </section>
-<section id="example-2---solns-1" class="slide level2">
+<section id="example-2---solns-1" class="slide level2 smaller">
 <h2>Example 2 - solns</h2>
 <div>
 <ol start="5" type="1">
-<li class="fragment"><span class="math inline">\(\begin{aligned} se(\hat{p}_s - \hat{p}_i) &amp;= \sqrt{\frac{\hat{p}_s(1-\hat{p}_s)}{n_s}+\frac{\hat{p}_i(1-\hat{p}_i)}{n_i}} \\ &amp;= \sqrt{\frac{0.305(1-0.305)}{646}+\frac{0.346(1-0.346)}{809}} \\ &amp;= \sqrt{0.0003281 + 0.0002797} \approx 0.02465 \end{aligned}\)</span> <span class="math inline">\(\begin{aligned} z_0 &amp;= \frac{\hat{p_s} - \hat{p_i} - D_0} {se(\hat{p_s} - \hat{p_i})} \\ &amp;= \frac{0.346 - 0.305 - 0.02} {0.02465} \\ &amp;\approx 0.851927 \end{aligned}\)</span> <code>1 - pnorm(0.851927)</code> or <span class="math inline">\(\approx 0.197\)</span></li>
+<li class="fragment"><span class="math inline">\(\begin{aligned} se(\hat{p}_s - \hat{p}_i) &amp;= \sqrt{\frac{\hat{p}_s(1-\hat{p}_s)}{n_s}+\frac{\hat{p}_i(1-\hat{p}_i)}{n_i}} \\ &amp;= \sqrt{\frac{0.305(1-0.305)}{646}+\frac{0.346(1-0.346)}{809}} \\ &amp;= \sqrt{0.0003281 + 0.0002797} \approx 0.02465 \end{aligned}\)</span> <span class="math inline">\(\begin{aligned} z_0 &amp;= \frac{\hat{p_s} - \hat{p_i} - D_0} {se(\hat{p_s} - \hat{p_i})} \\ &amp;= \frac{0.346 - 0.305 - 0.02} {0.02465} \\ &amp;\approx 0.851927 \end{aligned}\)</span></li>
+</ol>
+<p><code>1 - pnorm(0.851927)</code> or <span class="math inline">\(\approx 0.197\)</span></p>
+<ol start="6" type="1">
 <li class="fragment">Since <span class="math inline">\(0.197 &gt; \alpha = 0.05\)</span> this is not significant.</li>
 <li class="fragment">We <em>fail to reject</em> <span class="math inline">\(H_0\)</span>. The reenrollment in the somatic course is not significantly more than the reenrollment in the eye contact course.</li>
 </ol>
@@ -463,9 +530,12 @@
 </ol>
 </div>
 </section>
-<section id="math" class="slide level2">
-<h2>Math</h2>
-<p><span class="math display">\[ \hat{p}_1 - \hat{p}_2 - z_{\alpha/2} se(\hat{p}_1 - \hat{p}_2) \text{  to  }\\ \hat{p}_1 - \hat{p}_2 + z_{\alpha/2} se(\hat{p}_1 - \hat{p}_2)\]</span> ## Assumptions</p>
+<section id="math---two-sample-ci-for-props" class="slide level2">
+<h2>Math - two sample CI for props</h2>
+<p><span class="math display">\[ \hat{p}_1 - \hat{p}_2 - z_{\alpha/2} se(\hat{p}_1 - \hat{p}_2) \text{  to  }\\ \hat{p}_1 - \hat{p}_2 + z_{\alpha/2} se(\hat{p}_1 - \hat{p}_2)\]</span></p>
+</section>
+<section id="assumptions-1" class="slide level2">
+<h2>Assumptions</h2>
 <ol type="1">
 <li>No obvious lurking variables or confounders</li>
 <li>SRS condition</li>
@@ -476,36 +546,88 @@
 <h2>Example 3</h2>
 <p>In the ESP example, spiritual groups decided to randomly assign members to either the eye contact (<span class="math inline">\(n_s = 809\)</span>) or somatic group (<span class="math inline">\(n_i = 646\)</span>). From those in the somatic contact group <span class="math inline">\(280\)</span> re-enrolled, subsequent eye contact groups had <span class="math inline">\(197\)</span>. Find the 95% confidence interval for the difference between the proportions who take subsequent courses on the somatic and eye contact group.</p>
 </section>
-<section id="pooled-proportion" class="slide level2">
-<h2>Pooled proportion</h2>
-<p>A pooled proportion assumes the null hypothesis is true, and there really is no difference between the proportions. The differences we observed were just due to random chance. So, we compute <span class="math inline">\(\hat{p}\)</span> as the overall proportion,</p>
-<span class="math display">\[\begin{eqnarray*}
-\frac{\text{total \# of successes}}{\text{total sample size}}
-\end{eqnarray*}\]</span>
-<p>Usually you can just read this off of a table. Sometimes you need a “formula,”</p>
-<span class="math display">\[\begin{eqnarray*}
-\hat{p}=\frac{\hat{p}_1n_1+\hat{p}_2n_2}{n_1+n_2}
-\end{eqnarray*}\]</span>
+<section id="example-3---solns" class="slide level2">
+<h2>Example 3 - solns</h2>
+<div>
+<ol type="1">
+<li class="fragment"><span class="math inline">\(\begin{aligned} \text{lower bound} &amp;= \hat{p}_s - \hat{p}_i - z_{\alpha/2} se(\hat{p}_s - \hat{p}_i) \\ &amp;= 0.346 - 0.305 - 1.96 \cdot 0.02465 \\ &amp;= 0.041 - 0.0483 \approx -0.0073 \end{aligned}\)</span></li>
+<li class="fragment"><span class="math inline">\(\begin{aligned} \text{upper bound} &amp;= \hat{p}_s - \hat{p}_i + z_{\alpha/2} se(\hat{p}_s - \hat{p}_i) \\ &amp;= 0.346 - 0.305 + 1.96 \cdot 0.02465 \\ &amp;= 0.041 + 0.0483 \approx 0.0893 \end{aligned}\)</span></li>
+</ol>
+</div>
 </section>
-<section id="hypothesis-test-for-a-difference-in-proportions-1" class="slide level2">
-<h2>Hypothesis test for a difference in proportions</h2>
-<span class="math display">\[\begin{eqnarray*}
-z = \frac{(\hat{p}_1-\hat{p}_2)}{SE}
-\end{eqnarray*}\]</span>
-<p>where</p>
-<span class="math display">\[\begin{eqnarray*}
-\sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+\frac{\hat{p}(1-\hat{p})}{n_2}}
-\end{eqnarray*}\]</span>
+<section id="interpretation" class="slide level2 smaller">
+<h2>Interpretation</h2>
+<p>Since <span class="math inline">\(0 \text{ is in } [-0.0073, 0.0893]\)</span> the difference is not statistically signficant at the <span class="math inline">\(95\%\)</span> significance level. It is possible that the reenrollment rates for eye contact and the somatic course come from populations with the same proportion. We do not know which is higher, either could be.</p>
+<p>If <span class="math inline">\(0\)</span> is not in the <span class="math inline">\(95\%\)</span> confidence interval, then the difference is significant and we can be <span class="math inline">\(95\%\)</span> confident that the difference is between the lower and upper bounds. Any value in the region could plausibly be the difference in proportions between the two populations.</p>
+</section></section>
+<section>
+<section id="two-sample-t-test" class="title-slide slide level1 center">
+<h1>Two sample t-test</h1>
+<p>Instead of reenrollment levels, perhaps we’re interested in the differences in earnings from the two ESP course. In that case, we’ll need to use a <em>two sample t-test</em>:</p>
+<p><span class="math display">\[ t = \frac{(\bar{X}_1 - \bar{X}_2) - D_0}{se(\bar{X}_1 - \bar{X}_2)} \]</span></p>
 </section>
-<section id="example" class="slide level2 t">
-<h2>Example</h2>
-<p>Again, from a sample of 100 US adults, we know the following:</p>
-<p>Let’s test to see if the proportion of self-employed people is really different between government and private employees.</p>
+<section id="assumptions-2" class="slide level2">
+<h2>Assumptions</h2>
+<ol type="1">
+<li>No lurking variables</li>
+<li>SRS condition</li>
+<li>Similar variances</li>
+<li>Each sample must exceed <span class="math inline">\(10|K_4|\)</span></li>
+</ol>
+</section>
+<section id="r" class="slide level2">
+<h2><code>R</code></h2>
+<p>This computation is long and complicated, so it’s best done in <code>R</code>: <code>t.test()</code></p>
+<p>Since we only have summary data for the ESP example, we’ll show with the diamonds dataset. In this situation, we’ll ask if there is a relationship between carat (weight of the diamond) and color (D is best and J is worst). Which color has on average the largest diamonds?</p>
+<p><span class="math display">\[ H_0: \mu_D - \mu_j \leq D_0\]</span></p>
+</section>
+<section id="r-1" class="slide level2">
+<h2><code>R</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="do">## install packages</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>d.color <span class="ot">&lt;-</span> diamonds <span class="sc">%&gt;%</span> </span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">filter</span>(color <span class="sc">==</span> <span class="st">"D"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">select</span>(carat)</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  </span>
+<span id="cb1-8"><a href="#cb1-8"></a>j.color <span class="ot">&lt;-</span> diamonds <span class="sc">%&gt;%</span> </span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="fu">filter</span>(color <span class="sc">==</span> <span class="st">"J"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="fu">select</span>(carat)</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="do">## 2 - sided test</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="do">## Alternative hypothesis: x != y</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="do">## Alternative hypothesis: x &lt; y by 0.1</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">alternative  =</span> <span class="st">"less"</span>, <span class="at">mu =</span> .<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="interpretation-1" class="slide level2 smaller">
+<h2>Interpretation</h2>
+<p>If the p-value is less than <span class="math inline">\(\alpha\)</span> there is evidence against <span class="math inline">\(H_0\)</span> and we can reject <span class="math inline">\(H_0\)</span> in favor of the alternative.</p>
+<p>“If the p-value is low then the null must go.”</p>
+<h3 id="sided">2 - sided</h3>
+<p>There is extremely strong evidence that the mean carat for diamonds with the best color (D) is not the same as that for diamonds with the worst color (J).</p>
+<h3 id="alternative-less">alternative = “less”</h3>
+<p>There is extremely strong evidence that the mean carat for diamonds with the best color (D) is smaller by at least 0.1 then diamonds with the worst color (J).</p>
+<p>But what is the magnitude of the difference?</p>
+</section></section>
+<section>
+<section id="ci-for-the-difference-between-two-means" class="title-slide slide level1 center">
+<h1>CI for the difference between two means</h1>
+<p><span class="math display">\[ \bar{X}_1 - \bar{X}_2 - t_{\alpha/2} se(\bar{X}_1 - \bar{X}_2) \text{  to  }\\ \bar{X}_1 - \bar{X}_2 + t_{\alpha/2} se(\bar{X}_1 - \bar{X}_2)\]</span> We use <code>R</code> to calculate. The assumptions are the same as those of the <a href="">2 sample t-test</a></p>
+</section>
+<section id="r-2" class="slide level2">
+<h2><code>R</code></h2>
+</section></section>
+<section id="paired-comparisons" class="title-slide slide level1 center">
+<h1>Paired comparisons</h1>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
