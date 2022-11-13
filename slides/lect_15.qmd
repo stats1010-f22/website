@@ -231,7 +231,7 @@ Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that th
 :::
 
 
-## Do extremists see the world in black and white?
+# Do extremists see the world in black and white?
 
 Researcher Matt Motyl ran a study in 2010 with 2,000 participants. He wanted to determine if political moderates were able to perceive shades of grey more accurately than people on the far left or the far right. The p-value from the study was 0.01. Reject the null! Evidence in support of the idea that moderates can see grey better.
 
@@ -247,6 +247,8 @@ There are two types of errors defined in hypothesis testing:
 
 -   Type I error, rejecting a true null
 -   Type II error, not rejecting a false null
+
+#  {background-iframe="https://shiny.rit.albany.edu/stat/betaprob/"}
 
 ## Law analogy
 
