@@ -179,6 +179,8 @@ In the ESP example, we know that the population average for  guessing ESP cards 
 7. We *fail to reject* $H_0$.  The score does not provide evidence that the intervention improved ESP.
 :::
 
+
+
 # Testing a mean
 
 To test a mean, $\bar{x}$, we must have a distribution with which to compare it. The distribution that we use is the distribution assumed in $H_0$ we use $\mu_0$ to denote this. Because we don't know $\sigma$ we will once again use $s$ from the sample
