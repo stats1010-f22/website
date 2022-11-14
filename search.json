@@ -2391,7 +2391,7 @@
     "href": "slides/lect_16.html#example-2---solns",
     "title": "Chapter 17: Comparison",
     "section": "Example 2 - solns",
-    "text": "Example 2 - solns\n\n\n\\(H_0: p_s - p_i \\leq 0.02\\) and \\(H_0: p_s - p_i > 0.02\\)\n\\(\\alpha = 0.05\\)\nYes, 280/809*809 and (1-280/809)*809 both > 10 Yes, 197/646*646 and (1-197/646)*646 both > 10\n\\(\\hat{p_i} = \\frac{x_i}{n_i} = \\frac{197}{646} = 0.305\\) \\(\\hat{p_s} = \\frac{x_s}{n_s} = \\frac{208}{809} = 0.346\\)"
+    "text": "Example 2 - solns\n\n\n\\(H_0: p_s - p_i \\leq 0.02\\) and \\(H_A: p_s - p_i > 0.02\\)\n\\(\\alpha = 0.05\\)\nYes, 280/809*809 and (1-280/809)*809 both > 10 Yes, 197/646*646 and (1-197/646)*646 both > 10\n\\(\\hat{p_i} = \\frac{x_i}{n_i} = \\frac{197}{646} = 0.305\\) \\(\\hat{p_s} = \\frac{x_s}{n_s} = \\frac{280}{809} = 0.346\\)"
   },
   {
     "objectID": "slides/lect_16.html#example-2---solns-1",
@@ -2419,7 +2419,7 @@
     "href": "slides/lect_16.html#example-3",
     "title": "Chapter 17: Comparison",
     "section": "Example 3",
-    "text": "Example 3\nIn the ESP example, spiritual groups decided to randomly assign members to either the eye contact (\\(n_s = 809\\)) or somatic group (\\(n_i = 646\\)). From those in the somatic contact group \\(280\\) re-enrolled, subsequent eye contact groups had \\(197\\). Find the 95% confidence interval for the difference between the proportions who take subsequent courses on the somatic and eye contact group."
+    "text": "Example 3\nIn the ESP example, spiritual groups decided to randomly assign members to either the somatic (\\(n_s = 809\\)) or eye contact group (\\(n_i = 646\\)). From those in the somatic contact group \\(280\\) re-enrolled, subsequent eye contact groups had \\(197\\). Find the 95% confidence interval for the difference between the proportions who take subsequent courses on the somatic and eye contact group."
   },
   {
     "objectID": "slides/lect_16.html#example-3---solns",
