@@ -2377,7 +2377,7 @@
     "href": "slides/lect_16.html#example-2",
     "title": "Chapter 17: Comparison",
     "section": "Example 2",
-    "text": "Example 2\nIn the ESP example, spiritual groups decided to randomly assign members to either the eye contact (\\(n_s = 809\\)) or somatic group (\\(n_i = 646\\)). From those in the somatic contact group \\(280\\) re-enrolled, subsequent eye contact groups had \\(197\\). Perform a two sample \\(z\\)-test for proportions to determine if the enrollment in the somatic course was 2% more, on average, than that in the eye contact course."
+    "text": "Example 2\nIn the ESP example, spiritual groups decided to randomly assign members to either the somatic (\\(n_s = 809\\)) or eye contact group (\\(n_i = 646\\)). From those in the somatic contact group \\(280\\) re-enrolled, subsequent eye contact groups had \\(197\\). Perform a two sample \\(z\\)-test for proportions to determine if the enrollment in the somatic course was 2% more, on average, than that in the eye contact course."
   },
   {
     "objectID": "slides/lect_16.html#steps-for-a-hypothesis-test",
