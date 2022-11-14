@@ -575,14 +575,14 @@
 <li>Each sample must exceed <span class="math inline">\(10|K_4|\)</span></li>
 </ol>
 </section>
-<section id="r" class="slide level2">
-<h2><code>R</code></h2>
+<section id="in-r" class="slide level2">
+<h2>In <code>R</code></h2>
 <p>This computation is long and complicated, so it’s best done in <code>R</code>: <code>t.test()</code></p>
 <p>Since we only have summary data for the ESP example, we’ll show with the diamonds dataset. In this situation, we’ll ask if there is a relationship between carat (weight of the diamond) and color (D is best and J is worst). Which color has on average the largest diamonds?</p>
 <p><span class="math display">\[ H_0: \mu_D - \mu_j \leq D_0\]</span></p>
 </section>
-<section id="r-1" class="slide level2">
-<h2><code>R</code></h2>
+<section id="in-r-1" class="slide level2">
+<h2>In <code>R</code></h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="do">## install packages</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
@@ -597,10 +597,35 @@
 <span id="cb1-11"><a href="#cb1-11"></a></span>
 <span id="cb1-12"><a href="#cb1-12"></a><span class="do">## 2 - sided test</span></span>
 <span id="cb1-13"><a href="#cb1-13"></a><span class="do">## Alternative hypothesis: x != y</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span>
-<span id="cb1-15"><a href="#cb1-15"></a></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="do">## Alternative hypothesis: x &lt; y by 0.1</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">alternative  =</span> <span class="st">"less"</span>, <span class="at">mu =</span> .<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  d.color and j.color
+t = -41.811, df = 3683.7, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.5279915 -0.4806923
+sample estimates:
+mean of x mean of y 
+0.6577948 1.1621368 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="do">## Alternative hypothesis: x &lt; y by 0.1</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">alternative  =</span> <span class="st">"less"</span>, <span class="at">mu =</span> .<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  d.color and j.color
+t = -50.101, df = 3683.7, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is less than 0.1
+95 percent confidence interval:
+       -Inf -0.4844961
+sample estimates:
+mean of x mean of y 
+0.6577948 1.1621368 </code></pre>
+</div>
 </div>
 </section>
 <section id="interpretation-1" class="slide level2 smaller">
@@ -616,18 +641,85 @@
 <section>
 <section id="ci-for-the-difference-between-two-means" class="title-slide slide level1 center">
 <h1>CI for the difference between two means</h1>
-<p><span class="math display">\[ \bar{X}_1 - \bar{X}_2 - t_{\alpha/2} se(\bar{X}_1 - \bar{X}_2) \text{  to  }\\ \bar{X}_1 - \bar{X}_2 + t_{\alpha/2} se(\bar{X}_1 - \bar{X}_2)\]</span> We use <code>R</code> to calculate. The assumptions are the same as those of the <a href="">2 sample t-test</a></p>
+<p><span class="math display">\[ \bar{X}_1 - \bar{X}_2 - t_{\alpha/2} se(\bar{X}_1 - \bar{X}_2) \text{  to  }\\ \bar{X}_1 - \bar{X}_2 + t_{\alpha/2} se(\bar{X}_1 - \bar{X}_2)\]</span></p>
+<p>We use <code>R</code> to calculate. The assumptions are the same as those of the <a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/assumptions-2">2 sample t-test</a></p>
+<p><span class="math inline">\(se(\bar{X}_1 - \bar{X}_2) = \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}\)</span></p>
 </section>
-<section id="r-2" class="slide level2">
-<h2><code>R</code></h2>
+<section id="in-r-2" class="slide level2">
+<h2>In <code>R</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">conf.level =</span> <span class="fl">0.95</span>)<span class="sc">$</span>conf.int</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.5279915 -0.4806923
+attr(,"conf.level")
+[1] 0.95</code></pre>
+</div>
+</div>
 </section></section>
-<section id="paired-comparisons" class="title-slide slide level1 center">
+<section>
+<section id="paired-comparisons" class="title-slide slide level1 smaller center">
 <h1>Paired comparisons</h1>
+<p>We’ll circle back to this <a href="https://stats1010-f22.github.io/website/slides/lect_15.html#/example-3">ESP example</a>, but without the editing subsequent to class:</p>
+<p>In the ESP example, an interested participant initially guessed 9 out of 24 cards and then took a training course to enhance their ESP. In the followup exam, they guessed 17 out of 36 cards. Did the course improve their ESP abilities?</p>
+<p>What is the difference between these questions and why will a <em>paired comparison</em> give us more accurate solutions?</p>
+</section>
+<section id="another-example" class="slide level2">
+<h2>Another example</h2>
+<p>Certain people refused to get vacinated from COVID-19. To compare COVID infection rates it’s best to <em>pair</em> people who are vaccinated and not vaccinated but who also have similar education levels, incomes, and risk of infection. This hapenned last year in a <a href="https://healthfeedback.org/claimreview/article-by-the-expose-failed-to-account-for-caveats-listed-in-u-k-vaccine-surveillance-reports-falsely-claims-fully-vaccinated-people-have-weakened-immunity/">UK government report</a>.</p>
+</section>
+<section id="math" class="slide level2">
+<h2>Math</h2>
+<p>Given the paired data we find the differences (<span class="math inline">\(d_i = x_i – y_i\)</span>)</p>
+<p>The <span class="math inline">\(100(1 - \alpha)%\)</span> confidence paired t- interval is</p>
+<p><span class="math display">\[\bar{d} \pm  t_{\alpha/2, n-1} \frac{s_d}{\sqrt{n}}\]</span></p>
+<p>Checklist: No obvious lurking variables. SRS condition. Sample size condition.</p>
+</section>
+<section id="in-r-3" class="slide level2">
+<h2>In <code>R</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Weight of mice before treatment</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>before <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fl">200.1</span>, <span class="fl">190.9</span>, <span class="fl">192.7</span>, <span class="dv">213</span>, <span class="fl">241.4</span>, <span class="fl">196.9</span>, <span class="fl">172.2</span>, <span class="fl">185.5</span>, <span class="fl">205.2</span>, <span class="fl">193.7</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="co"># Weight of mice after treatment</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>after <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fl">392.9</span>, <span class="fl">393.2</span>, <span class="fl">345.1</span>, <span class="dv">393</span>, <span class="dv">434</span>, <span class="fl">427.9</span>, <span class="dv">422</span>, <span class="fl">383.9</span>, <span class="fl">392.3</span>, <span class="fl">352.2</span>)</span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="co"># A tibble</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>mice <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="at">group =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"before"</span>, <span class="st">"after"</span>), <span class="at">each =</span> <span class="dv">10</span>),</span>
+<span id="cb7-9"><a href="#cb7-9"></a>  <span class="at">weight =</span> <span class="fu">c</span>(before, after)</span>
+<span id="cb7-10"><a href="#cb7-10"></a>  )</span>
+<span id="cb7-11"><a href="#cb7-11"></a></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="fu">t.test</span>(weight <span class="sc">~</span> group, <span class="at">data =</span> mice, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  weight by group
+t = 20.883, df = 9, p-value = 6.2e-09
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ 173.4219 215.5581
+sample estimates:
+mean difference 
+         194.49 </code></pre>
+</div>
+</div>
+</section>
+<section id="plot" class="slide level2">
+<h2>Plot</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mice) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> group, <span class="at">y =</span> weight))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="lect_16_files/figure-revealjs/plot-1.png" width="960" class="r-stretch"></section>
+<section id="interpretation-2" class="slide level2">
+<h2>Interpretation</h2>
+<p>There is very strong evidence that the underlying population means of the mice before and after treatment are not the same. On average, the mice are much heavier after treatment.</p>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

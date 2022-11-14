@@ -2443,18 +2443,18 @@
     "text": "Assumptions\n\nNo lurking variables\nSRS condition\nSimilar variances\nEach sample must exceed \\(10|K_4|\\)"
   },
   {
-    "objectID": "slides/lect_16.html#r",
-    "href": "slides/lect_16.html#r",
+    "objectID": "slides/lect_16.html#in-r",
+    "href": "slides/lect_16.html#in-r",
     "title": "Chapter 17: Comparison",
-    "section": "R",
-    "text": "R\nThis computation is long and complicated, so it’s best done in R: t.test()\nSince we only have summary data for the ESP example, we’ll show with the diamonds dataset. In this situation, we’ll ask if there is a relationship between carat (weight of the diamond) and color (D is best and J is worst). Which color has on average the largest diamonds?\n\\[ H_0: \\mu_D - \\mu_j \\leq D_0\\]"
+    "section": "In R",
+    "text": "In R\nThis computation is long and complicated, so it’s best done in R: t.test()\nSince we only have summary data for the ESP example, we’ll show with the diamonds dataset. In this situation, we’ll ask if there is a relationship between carat (weight of the diamond) and color (D is best and J is worst). Which color has on average the largest diamonds?\n\\[ H_0: \\mu_D - \\mu_j \\leq D_0\\]"
   },
   {
-    "objectID": "slides/lect_16.html#r-1",
-    "href": "slides/lect_16.html#r-1",
+    "objectID": "slides/lect_16.html#in-r-1",
+    "href": "slides/lect_16.html#in-r-1",
     "title": "Chapter 17: Comparison",
-    "section": "R",
-    "text": "R\n\n## install packages\nlibrary(tidyverse)\n\nd.color <- diamonds %>% \n  filter(color == \"D\") %>% \n  select(carat)\n  \nj.color <- diamonds %>% \n  filter(color == \"J\") %>% \n  select(carat)\n\n## 2 - sided test\n## Alternative hypothesis: x != y\nt.test(x = d.color, y = j.color, alternative = \"two.sided\")\n\n## Alternative hypothesis: x < y by 0.1\nt.test(x = d.color, y = j.color, alternative  = \"less\", mu = .1)"
+    "section": "In R",
+    "text": "In R\n\n## install packages\nlibrary(tidyverse)\n\nd.color <- diamonds %>% \n  filter(color == \"D\") %>% \n  select(carat)\n  \nj.color <- diamonds %>% \n  filter(color == \"J\") %>% \n  select(carat)\n\n## 2 - sided test\n## Alternative hypothesis: x != y\nt.test(x = d.color, y = j.color, alternative = \"two.sided\")\n\n\n    Welch Two Sample t-test\n\ndata:  d.color and j.color\nt = -41.811, df = 3683.7, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -0.5279915 -0.4806923\nsample estimates:\nmean of x mean of y \n0.6577948 1.1621368 \n\n## Alternative hypothesis: x < y by 0.1\nt.test(x = d.color, y = j.color, alternative  = \"less\", mu = .1)\n\n\n    Welch Two Sample t-test\n\ndata:  d.color and j.color\nt = -50.101, df = 3683.7, p-value < 2.2e-16\nalternative hypothesis: true difference in means is less than 0.1\n95 percent confidence interval:\n       -Inf -0.4844961\nsample estimates:\nmean of x mean of y \n0.6577948 1.1621368"
   },
   {
     "objectID": "slides/lect_16.html#interpretation-1",
@@ -2464,11 +2464,46 @@
     "text": "Interpretation\nIf the p-value is less than \\(\\alpha\\) there is evidence against \\(H_0\\) and we can reject \\(H_0\\) in favor of the alternative.\n“If the p-value is low then the null must go.”\n2 - sided\nThere is extremely strong evidence that the mean carat for diamonds with the best color (D) is not the same as that for diamonds with the worst color (J).\nalternative = “less”\nThere is extremely strong evidence that the mean carat for diamonds with the best color (D) is smaller by at least 0.1 then diamonds with the worst color (J).\nBut what is the magnitude of the difference?"
   },
   {
-    "objectID": "slides/lect_16.html#r-2",
-    "href": "slides/lect_16.html#r-2",
+    "objectID": "slides/lect_16.html#in-r-2",
+    "href": "slides/lect_16.html#in-r-2",
     "title": "Chapter 17: Comparison",
-    "section": "R",
-    "text": "R"
+    "section": "In R",
+    "text": "In R\n\nt.test(x = d.color, y = j.color, conf.level = 0.95)$conf.int\n\n[1] -0.5279915 -0.4806923\nattr(,\"conf.level\")\n[1] 0.95"
+  },
+  {
+    "objectID": "slides/lect_16.html#another-example",
+    "href": "slides/lect_16.html#another-example",
+    "title": "Chapter 17: Comparison",
+    "section": "Another example",
+    "text": "Another example\nCertain people refused to get vacinated from COVID-19. To compare COVID infection rates it’s best to pair people who are vaccinated and not vaccinated but who also have similar education levels, incomes, and risk of infection. This hapenned last year in a UK government report."
+  },
+  {
+    "objectID": "slides/lect_16.html#math",
+    "href": "slides/lect_16.html#math",
+    "title": "Chapter 17: Comparison",
+    "section": "Math",
+    "text": "Math\nGiven the paired data we find the differences (\\(d_i = x_i – y_i\\))\nThe \\(100(1 - \\alpha)%\\) confidence paired t- interval is\n\\[\\bar{d} \\pm  t_{\\alpha/2, n-1} \\frac{s_d}{\\sqrt{n}}\\]\nChecklist: No obvious lurking variables. SRS condition. Sample size condition."
+  },
+  {
+    "objectID": "slides/lect_16.html#in-r-3",
+    "href": "slides/lect_16.html#in-r-3",
+    "title": "Chapter 17: Comparison",
+    "section": "In R",
+    "text": "In R\n\n# Weight of mice before treatment\nbefore <-c(200.1, 190.9, 192.7, 213, 241.4, 196.9, 172.2, 185.5, 205.2, 193.7)\n# Weight of mice after treatment\nafter <-c(392.9, 393.2, 345.1, 393, 434, 427.9, 422, 383.9, 392.3, 352.2)\n\n# A tibble\nmice <- tibble(\n  group = rep(c(\"before\", \"after\"), each = 10),\n  weight = c(before, after)\n  )\n\nt.test(weight ~ group, data = mice, paired = TRUE)\n\n\n    Paired t-test\n\ndata:  weight by group\nt = 20.883, df = 9, p-value = 6.2e-09\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 173.4219 215.5581\nsample estimates:\nmean difference \n         194.49"
+  },
+  {
+    "objectID": "slides/lect_16.html#plot",
+    "href": "slides/lect_16.html#plot",
+    "title": "Chapter 17: Comparison",
+    "section": "Plot",
+    "text": "Plot\n\nggplot(data = mice) +\n  geom_boxplot(aes(x = group, y = weight))"
+  },
+  {
+    "objectID": "slides/lect_16.html#interpretation-2",
+    "href": "slides/lect_16.html#interpretation-2",
+    "title": "Chapter 17: Comparison",
+    "section": "Interpretation",
+    "text": "Interpretation\nThere is very strong evidence that the underlying population means of the mice before and after treatment are not the same. On average, the mice are much heavier after treatment.\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_18.html#sampling",
