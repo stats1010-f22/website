@@ -21,9 +21,12 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
--   The shape of the distribution of the sample mean and why it is important
--   When we can assume a normal distribution for the sample mean
--   Control charts and what they are used for
--   Find control limits
+- Test for independence in a contigency table using a chi-squared test
+- Check for a goodness of fit of a probability model using a chi-square test
+- Find the appropriate degrees of freedom for a chi-squared test.
+- Explain the similarities and differences between chi-squared tests and methods that compare two proportions
+- Determine the statistical significance of a chi-squared statistic from `R`
 :::
-
+ 
+ 
+ 

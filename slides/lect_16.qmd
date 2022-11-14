@@ -35,7 +35,7 @@ From our last lecture, there are two courses that participants can take to impro
 
 ::: incremental
 1.  Does a higher proportion of people sign up for subsequent eye contact or somatic courses?
-2.  
+2.  Are the earning for the somatic group higher than those of the eye contact group?
 :::
 
 # Data {.smaller}
@@ -124,7 +124,7 @@ In the ESP example, spiritual groups decided to randomly assign members to eithe
 7.  We *fail to reject* $H_0$. The reenrollment in the somatic course is not significantly more than the reenrollment in the eye contact course.
 :::
 
-# Two-sample confidence interval for proportions
+# Two-sample confidence interval for proportions {.smaller}
 
 Sometimes we only want to estimate the difference, not determine if they is a statistically significant difference. We may not know which value of $D_0$ to use.
 
@@ -185,6 +185,32 @@ $$ H_0: \mu_D - \mu_j \leq D_0$$
 
 ```{r, two-sided_t}
 #| echo: true
+#| eval: false
+
+## install packages
+library(tidyverse)
+
+d.color <- diamonds %>% 
+  filter(color == "D") %>% 
+  select(carat)
+  
+j.color <- diamonds %>% 
+  filter(color == "J") %>% 
+  select(carat)
+
+## 2 - sided test
+## Alternative hypothesis: x != y
+t.test(x = d.color, y = j.color, alternative = "two.sided")
+
+## Alternative hypothesis: x < y by 0.1
+t.test(x = d.color, y = j.color, alternative  = "less", mu = .1)
+```
+
+
+## In `R`
+
+```{r, two-sided_t}
+#| echo: false
 #| eval: true
 
 ## install packages
@@ -205,6 +231,7 @@ t.test(x = d.color, y = j.color, alternative = "two.sided")
 ## Alternative hypothesis: x < y by 0.1
 t.test(x = d.color, y = j.color, alternative  = "less", mu = .1)
 ```
+
 
 ## Interpretation {.smaller}
 
@@ -267,6 +294,27 @@ Checklist:	No obvious lurking variables.
 
 ```{r paired-test}
 #| echo: true
+#| eval: false
+
+# Weight of mice before treatment
+before <-c(200.1, 190.9, 192.7, 213, 241.4, 196.9, 172.2, 185.5, 205.2, 193.7)
+# Weight of mice after treatment
+after <-c(392.9, 393.2, 345.1, 393, 434, 427.9, 422, 383.9, 392.3, 352.2)
+
+# A tibble
+mice <- tibble(
+  group = rep(c("before", "after"), each = 10),
+  weight = c(before, after)
+  )
+
+t.test(weight ~ group, data = mice, paired = TRUE)
+```
+
+
+## In `R`
+
+```{r paired-test}
+#| echo: false
 #| eval: true
 
 # Weight of mice before treatment
@@ -282,6 +330,7 @@ mice <- tibble(
 
 t.test(weight ~ group, data = mice, paired = TRUE)
 ```
+
 
 
 ## Plot
