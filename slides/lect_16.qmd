@@ -209,7 +209,7 @@ t.test(x = d.color, y = j.color, alternative  = "less", mu = .1)
 
 ## In `R`
 
-```{r, two-sided_t}
+```{r, two-sided_t-2}
 #| echo: false
 #| eval: true
 
@@ -313,7 +313,7 @@ t.test(weight ~ group, data = mice, paired = TRUE)
 
 ## In `R`
 
-```{r paired-test}
+```{r paired-test - 2}
 #| echo: false
 #| eval: true
 
