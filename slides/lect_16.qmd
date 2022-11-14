@@ -92,7 +92,7 @@ $$ z = \frac{\hat{p}_1 - \hat{p}_2 - D_0}{se(\hat{p}_1 - \hat{p}_2)}$$
 
 ## Example 2
 
-In the ESP example, spiritual groups decided to randomly assign members to either the somatic ($n_s = 809$) or eye contact group ($n_i = 646$). From those in the somatic contact group $280$ re-enrolled, subsequent eye contact groups had $197$. Perform a two sample $z$-test for proportions to determine if the enrollment in the somatic course was 2% more, on average, than that in the eye contact course.
+In the ESP example, spiritual groups decided to randomly assign members to either the somatic ($n_s = 809$) or eye contact group ($n_i = 646$). From those in the somatic group $280$ re-enrolled, subsequent eye contact groups had $197$. Perform a two sample $z$-test for proportions to determine if the enrollment in the somatic course was 2% more, on average, than that in the eye contact course.
 
 ## Steps for a hypothesis test
 
