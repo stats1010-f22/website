@@ -63,7 +63,7 @@ In our example, perhaps we run a course Sedona, AZ where belief in ESP is high a
 Which of the following appear safe from confounding and which appear to be contaminated?
 
 1.  A comparison of two promotional displays using average daily sales in one store with one type of display and another store with a different type.
-2.  A comparison of two promotional dsiplayes using average daily sales in one store with one type of display on Monday and the other display on Friday.
+2.  A comparison of two promotional diplays using average daily sales in one store with one type of display on Monday and the other display on Friday.
 3.  A comparison of two landscaping offers sent at random to potential customers in the same zip code.
 
 ## Example 1 - solns
