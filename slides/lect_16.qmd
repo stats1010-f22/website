@@ -40,7 +40,7 @@ From our last lecture, there are two courses that participants can take to impro
 
 # Data {.smaller}
 
-Let $p_i = \text{the proportion of students who continue the series of eye contact training courses}$ and $p_s = \text{the proportion of students who continue the series of somatic training courses}$. To demonstrate that somatic coursee course is better than the eye contact, we want 2% more students to reenroll. The null hypothesis is $$H_0: p_s - p_i \leq 0.02$$ means that enrollment in subsequent somatic courses does not meet this criteria. If the data rejects $H_0$ in favor of $H_A: p_s - p_i > 0.02$, this suggests the eye contact course is better.
+Let $p_i = \text{the proportion of students who continue the series of eye contact training courses}$ and $p_s = \text{the proportion of students who continue the series of somatic training courses}$. To demonstrate that somatic course is better than the eye contact, we want 2% more students to reenroll. The null hypothesis is $$H_0: p_s - p_i \leq 0.02$$ means that enrollment in subsequent somatic courses does not meet this criteria. If the data rejects $H_0$ in favor of $H_A: p_s - p_i > 0.02$, this suggests the eye contact course is better.
 
 ## Data - cont'd
 
