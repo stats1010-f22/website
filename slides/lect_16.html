@@ -418,7 +418,7 @@
 <div>
 <ol type="1">
 <li class="fragment">Does a higher proportion of people sign up for subsequent eye contact or somatic courses?</li>
-<li class="fragment"></li>
+<li class="fragment">Are the earning for the somatic group higher than those of the eye contact group?</li>
 </ol>
 </div>
 </section></section>
@@ -520,7 +520,7 @@
 </div>
 </section></section>
 <section>
-<section id="two-sample-confidence-interval-for-proportions" class="title-slide slide level1 center">
+<section id="two-sample-confidence-interval-for-proportions" class="title-slide slide level1 smaller center">
 <h1>Two-sample confidence interval for proportions</h1>
 <p>Sometimes we only want to estimate the difference, not determine if they is a statistically significant difference. We may not know which value of <span class="math inline">\(D_0\)</span> to use.</p>
 <div>
@@ -597,7 +597,15 @@
 <span id="cb1-11"><a href="#cb1-11"></a></span>
 <span id="cb1-12"><a href="#cb1-12"></a><span class="do">## 2 - sided test</span></span>
 <span id="cb1-13"><a href="#cb1-13"></a><span class="do">## Alternative hypothesis: x != y</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="do">## Alternative hypothesis: x &lt; y by 0.1</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">alternative  =</span> <span class="st">"less"</span>, <span class="at">mu =</span> .<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="in-r-2" class="slide level2">
+<h2>In <code>R</code></h2>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Welch Two Sample t-test
@@ -611,8 +619,6 @@ sample estimates:
 mean of x mean of y 
 0.6577948 1.1621368 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="do">## Alternative hypothesis: x &lt; y by 0.1</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">alternative  =</span> <span class="st">"less"</span>, <span class="at">mu =</span> .<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Welch Two Sample t-test
@@ -645,10 +651,10 @@ mean of x mean of y
 <p>We use <code>R</code> to calculate. The assumptions are the same as those of the <a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/assumptions-2">2 sample t-test</a></p>
 <p><span class="math inline">\(se(\bar{X}_1 - \bar{X}_2) = \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}\)</span></p>
 </section>
-<section id="in-r-2" class="slide level2">
+<section id="in-r-3" class="slide level2">
 <h2>In <code>R</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">conf.level =</span> <span class="fl">0.95</span>)<span class="sc">$</span>conf.int</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">conf.level =</span> <span class="fl">0.95</span>)<span class="sc">$</span>conf.int</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -0.5279915 -0.4806923
 attr(,"conf.level")
@@ -674,21 +680,26 @@ attr(,"conf.level")
 <p><span class="math display">\[\bar{d} \pm  t_{\alpha/2, n-1} \frac{s_d}{\sqrt{n}}\]</span></p>
 <p>Checklist: No obvious lurking variables. SRS condition. Sample size condition.</p>
 </section>
-<section id="in-r-3" class="slide level2">
+<section id="in-r-4" class="slide level2">
 <h2>In <code>R</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Weight of mice before treatment</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>before <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fl">200.1</span>, <span class="fl">190.9</span>, <span class="fl">192.7</span>, <span class="dv">213</span>, <span class="fl">241.4</span>, <span class="fl">196.9</span>, <span class="fl">172.2</span>, <span class="fl">185.5</span>, <span class="fl">205.2</span>, <span class="fl">193.7</span>)</span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="co"># Weight of mice after treatment</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>after <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fl">392.9</span>, <span class="fl">393.2</span>, <span class="fl">345.1</span>, <span class="dv">393</span>, <span class="dv">434</span>, <span class="fl">427.9</span>, <span class="dv">422</span>, <span class="fl">383.9</span>, <span class="fl">392.3</span>, <span class="fl">352.2</span>)</span>
-<span id="cb7-5"><a href="#cb7-5"></a></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="co"># A tibble</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a>mice <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb7-8"><a href="#cb7-8"></a>  <span class="at">group =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"before"</span>, <span class="st">"after"</span>), <span class="at">each =</span> <span class="dv">10</span>),</span>
-<span id="cb7-9"><a href="#cb7-9"></a>  <span class="at">weight =</span> <span class="fu">c</span>(before, after)</span>
-<span id="cb7-10"><a href="#cb7-10"></a>  )</span>
-<span id="cb7-11"><a href="#cb7-11"></a></span>
-<span id="cb7-12"><a href="#cb7-12"></a><span class="fu">t.test</span>(weight <span class="sc">~</span> group, <span class="at">data =</span> mice, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Weight of mice before treatment</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>before <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fl">200.1</span>, <span class="fl">190.9</span>, <span class="fl">192.7</span>, <span class="dv">213</span>, <span class="fl">241.4</span>, <span class="fl">196.9</span>, <span class="fl">172.2</span>, <span class="fl">185.5</span>, <span class="fl">205.2</span>, <span class="fl">193.7</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Weight of mice after treatment</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>after <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fl">392.9</span>, <span class="fl">393.2</span>, <span class="fl">345.1</span>, <span class="dv">393</span>, <span class="dv">434</span>, <span class="fl">427.9</span>, <span class="dv">422</span>, <span class="fl">383.9</span>, <span class="fl">392.3</span>, <span class="fl">352.2</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># A tibble</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>mice <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="at">group =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"before"</span>, <span class="st">"after"</span>), <span class="at">each =</span> <span class="dv">10</span>),</span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="at">weight =</span> <span class="fu">c</span>(before, after)</span>
+<span id="cb6-10"><a href="#cb6-10"></a>  )</span>
+<span id="cb6-11"><a href="#cb6-11"></a></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="fu">t.test</span>(weight <span class="sc">~</span> group, <span class="at">data =</span> mice, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="in-r-5" class="slide level2">
+<h2>In <code>R</code></h2>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Paired t-test
@@ -707,8 +718,8 @@ mean difference
 <section id="plot" class="slide level2">
 <h2>Plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mice) <span class="sc">+</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> group, <span class="at">y =</span> weight))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mice) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> group, <span class="at">y =</span> weight))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="lect_16_files/figure-revealjs/plot-1.png" width="960" class="r-stretch"></section>

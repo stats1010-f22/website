@@ -2328,7 +2328,7 @@
     "href": "slides/lect_16.html#different-types-of-comparisons",
     "title": "Chapter 17: Comparison",
     "section": "Different types of comparisons",
-    "text": "Different types of comparisons\nFrom our last lecture, there are two courses that participants can take to improve their ESP abilities. One series of courses focuses on somatic training of the participant and the other on eye contact between the sender and receiver. For the purposes of this exercise, we let S be the event that a person took the first somatic course, and I be the event that a person took the first eye training course. This lesson will teach us how to assess these two courses. We will answer these questions:\n\n\nDoes a higher proportion of people sign up for subsequent eye contact or somatic courses?"
+    "text": "Different types of comparisons\nFrom our last lecture, there are two courses that participants can take to improve their ESP abilities. One series of courses focuses on somatic training of the participant and the other on eye contact between the sender and receiver. For the purposes of this exercise, we let S be the event that a person took the first somatic course, and I be the event that a person took the first eye training course. This lesson will teach us how to assess these two courses. We will answer these questions:\n\n\nDoes a higher proportion of people sign up for subsequent eye contact or somatic courses?\nAre the earning for the somatic group higher than those of the eye contact group?"
   },
   {
     "objectID": "slides/lect_16.html#data---contd",
@@ -2454,7 +2454,14 @@
     "href": "slides/lect_16.html#in-r-1",
     "title": "Chapter 17: Comparison",
     "section": "In R",
-    "text": "In R\n\n## install packages\nlibrary(tidyverse)\n\nd.color <- diamonds %>% \n  filter(color == \"D\") %>% \n  select(carat)\n  \nj.color <- diamonds %>% \n  filter(color == \"J\") %>% \n  select(carat)\n\n## 2 - sided test\n## Alternative hypothesis: x != y\nt.test(x = d.color, y = j.color, alternative = \"two.sided\")\n\n\n    Welch Two Sample t-test\n\ndata:  d.color and j.color\nt = -41.811, df = 3683.7, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -0.5279915 -0.4806923\nsample estimates:\nmean of x mean of y \n0.6577948 1.1621368 \n\n## Alternative hypothesis: x < y by 0.1\nt.test(x = d.color, y = j.color, alternative  = \"less\", mu = .1)\n\n\n    Welch Two Sample t-test\n\ndata:  d.color and j.color\nt = -50.101, df = 3683.7, p-value < 2.2e-16\nalternative hypothesis: true difference in means is less than 0.1\n95 percent confidence interval:\n       -Inf -0.4844961\nsample estimates:\nmean of x mean of y \n0.6577948 1.1621368"
+    "text": "In R\n\n## install packages\nlibrary(tidyverse)\n\nd.color <- diamonds %>% \n  filter(color == \"D\") %>% \n  select(carat)\n  \nj.color <- diamonds %>% \n  filter(color == \"J\") %>% \n  select(carat)\n\n## 2 - sided test\n## Alternative hypothesis: x != y\nt.test(x = d.color, y = j.color, alternative = \"two.sided\")\n\n## Alternative hypothesis: x < y by 0.1\nt.test(x = d.color, y = j.color, alternative  = \"less\", mu = .1)"
+  },
+  {
+    "objectID": "slides/lect_16.html#in-r-2",
+    "href": "slides/lect_16.html#in-r-2",
+    "title": "Chapter 17: Comparison",
+    "section": "In R",
+    "text": "In R\n\n\n\n    Welch Two Sample t-test\n\ndata:  d.color and j.color\nt = -41.811, df = 3683.7, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n -0.5279915 -0.4806923\nsample estimates:\nmean of x mean of y \n0.6577948 1.1621368 \n\n\n\n    Welch Two Sample t-test\n\ndata:  d.color and j.color\nt = -50.101, df = 3683.7, p-value < 2.2e-16\nalternative hypothesis: true difference in means is less than 0.1\n95 percent confidence interval:\n       -Inf -0.4844961\nsample estimates:\nmean of x mean of y \n0.6577948 1.1621368"
   },
   {
     "objectID": "slides/lect_16.html#interpretation-1",
@@ -2464,8 +2471,8 @@
     "text": "Interpretation\nIf the p-value is less than \\(\\alpha\\) there is evidence against \\(H_0\\) and we can reject \\(H_0\\) in favor of the alternative.\n“If the p-value is low then the null must go.”\n2 - sided\nThere is extremely strong evidence that the mean carat for diamonds with the best color (D) is not the same as that for diamonds with the worst color (J).\nalternative = “less”\nThere is extremely strong evidence that the mean carat for diamonds with the best color (D) is smaller by at least 0.1 then diamonds with the worst color (J).\nBut what is the magnitude of the difference?"
   },
   {
-    "objectID": "slides/lect_16.html#in-r-2",
-    "href": "slides/lect_16.html#in-r-2",
+    "objectID": "slides/lect_16.html#in-r-3",
+    "href": "slides/lect_16.html#in-r-3",
     "title": "Chapter 17: Comparison",
     "section": "In R",
     "text": "In R\n\nt.test(x = d.color, y = j.color, conf.level = 0.95)$conf.int\n\n[1] -0.5279915 -0.4806923\nattr(,\"conf.level\")\n[1] 0.95"
@@ -2485,11 +2492,18 @@
     "text": "Math\nGiven the paired data we find the differences (\\(d_i = x_i – y_i\\))\nThe \\(100(1 - \\alpha)%\\) confidence paired t- interval is\n\\[\\bar{d} \\pm  t_{\\alpha/2, n-1} \\frac{s_d}{\\sqrt{n}}\\]\nChecklist: No obvious lurking variables. SRS condition. Sample size condition."
   },
   {
-    "objectID": "slides/lect_16.html#in-r-3",
-    "href": "slides/lect_16.html#in-r-3",
+    "objectID": "slides/lect_16.html#in-r-4",
+    "href": "slides/lect_16.html#in-r-4",
     "title": "Chapter 17: Comparison",
     "section": "In R",
-    "text": "In R\n\n# Weight of mice before treatment\nbefore <-c(200.1, 190.9, 192.7, 213, 241.4, 196.9, 172.2, 185.5, 205.2, 193.7)\n# Weight of mice after treatment\nafter <-c(392.9, 393.2, 345.1, 393, 434, 427.9, 422, 383.9, 392.3, 352.2)\n\n# A tibble\nmice <- tibble(\n  group = rep(c(\"before\", \"after\"), each = 10),\n  weight = c(before, after)\n  )\n\nt.test(weight ~ group, data = mice, paired = TRUE)\n\n\n    Paired t-test\n\ndata:  weight by group\nt = 20.883, df = 9, p-value = 6.2e-09\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 173.4219 215.5581\nsample estimates:\nmean difference \n         194.49"
+    "text": "In R\n\n# Weight of mice before treatment\nbefore <-c(200.1, 190.9, 192.7, 213, 241.4, 196.9, 172.2, 185.5, 205.2, 193.7)\n# Weight of mice after treatment\nafter <-c(392.9, 393.2, 345.1, 393, 434, 427.9, 422, 383.9, 392.3, 352.2)\n\n# A tibble\nmice <- tibble(\n  group = rep(c(\"before\", \"after\"), each = 10),\n  weight = c(before, after)\n  )\n\nt.test(weight ~ group, data = mice, paired = TRUE)"
+  },
+  {
+    "objectID": "slides/lect_16.html#in-r-5",
+    "href": "slides/lect_16.html#in-r-5",
+    "title": "Chapter 17: Comparison",
+    "section": "In R",
+    "text": "In R\n\n\n\n    Paired t-test\n\ndata:  weight by group\nt = 20.883, df = 9, p-value = 6.2e-09\nalternative hypothesis: true mean difference is not equal to 0\n95 percent confidence interval:\n 173.4219 215.5581\nsample estimates:\nmean difference \n         194.49"
   },
   {
     "objectID": "slides/lect_16.html#plot",
