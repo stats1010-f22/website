@@ -110,7 +110,7 @@ In the ESP example, spiritual groups decided to randomly assign members to eithe
 1.  $H_0: p_s - p_i \leq 0.02$ and $H_A: p_s - p_i > 0.02$
 2.  $\alpha = 0.05$
 3.  Yes, `280/809*809` and `(1-280/809)*809` both \> 10 Yes, `197/646*646` and `(1-197/646)*646` both \> 10
-4.  $\hat{p_i} = \frac{x_i}{n_i} = \frac{197}{646} = 0.305$ $\hat{p_s} = \frac{x_s}{n_s} = \frac{208}{809} = 0.346$
+4.  $\hat{p_i} = \frac{x_i}{n_i} = \frac{197}{646} = 0.305$ $\hat{p_s} = \frac{x_s}{n_s} = \frac{280}{809} = 0.346$
 :::
 
 ## Example 2 - solns {.smaller}
@@ -145,7 +145,7 @@ $$ \hat{p}_1 - \hat{p}_2 - z_{\alpha/2} se(\hat{p}_1 - \hat{p}_2) \text{  to  }\
 
 ## Example 3
 
-In the ESP example, spiritual groups decided to randomly assign members to either the eye contact ($n_s = 809$) or somatic group ($n_i = 646$). From those in the somatic contact group $280$ re-enrolled, subsequent eye contact groups had $197$. Find the 95% confidence interval for the difference between the proportions who take subsequent courses on the somatic and eye contact group.
+In the ESP example, spiritual groups decided to randomly assign members to either the somatic ($n_s = 809$) or eye contact group ($n_i = 646$). From those in the somatic contact group $280$ re-enrolled, subsequent eye contact groups had $197$. Find the 95% confidence interval for the difference between the proportions who take subsequent courses on the somatic and eye contact group.
 
 ## Example 3 - solns
 
