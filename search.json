@@ -2716,6 +2716,48 @@
     "text": "Control charts for variation\nX-bar charts are slow to detect under or over filling\n\n\nS-Chart tracks the standard deviation from sample to sample\nR-Chart tracks the range from sample to sample\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
+    "objectID": "slides/lect_17.html#revision",
+    "href": "slides/lect_17.html#revision",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Revision",
+    "text": "Revision\nWe have discussed this before and now we will formalize this work. Like walking up a lighthouse."
+  },
+  {
+    "objectID": "slides/lect_17.html#test-of-independence",
+    "href": "slides/lect_17.html#test-of-independence",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Test of independence",
+    "text": "Test of independence\n\\[H_0: \\text{Qualitative variable 1 and Qualitative variable 2 are independent}\\]\n\\[H_A: \\text{Qualitative variable 1 and Qualitative variable 2 are not independent}\\]"
+  },
+  {
+    "objectID": "slides/lect_17.html#example-1",
+    "href": "slides/lect_17.html#example-1",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Example 1",
+    "text": "Example 1\nA manufacturing firm is considering a shift from a 5-day workweek (8 hours per day) to a 4-day workweek (10 hours per day). Samples of the preferences of 188 employees in four divisions produced the following contingency table:\nObserved counts\n\n\n\n\n\nDivisions\n\n\n\n\n\n\n\n\nClerical\nProduction\nTotal\n\n\nPreferences\n5-day\n17\n46\n63\n\n\n\n4-day\n28\n38\n66\n\n\n\nTotal\n45\n84\n129\n\n\n\na. What would it mean if the preference of employees is independent of division?\nb. State \\(H_0\\) for the \\(\\chi^2\\) test of independence in terms of the parameters of four segments of the population of employees."
+  },
+  {
+    "objectID": "slides/lect_17.html#example-1---solns",
+    "href": "slides/lect_17.html#example-1---solns",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Example 1 - solns",
+    "text": "Example 1 - solns\n\nIndependence means that all the percent of people who prefer a 5-day work week is the same in all divisions. Lack of independence implies different percentages across divisions\n\\(H_0: p_{cleric} = p_{main} = p_{manage} = p_{production}\\) \\(H_A: \\text{at least one of these differs}\\)"
+  },
+  {
+    "objectID": "slides/lect_17.html#calculating-chi2",
+    "href": "slides/lect_17.html#calculating-chi2",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Calculating \\(\\chi^2\\)",
+    "text": "Calculating \\(\\chi^2\\)\nIf one variable is independent of the other, then the variable should have the same proportion in each level as the totals have in each level.\nExpected counts\n\n\n\n\n\n\n\n\n\n\n\n\nDivisions\n\n\n\n\n\n\n\n\nClerical\nProduction\nTotal\n\n\nPreferences\n5-day\n\\(45/129\\cdot63 \\approx 22\\)\n\\(84/129\\cdot63 \\approx 41\\)\n63\n\n\n\n4-day\n\\(45/129\\cdot66 \\approx 23\\)\n\\(45/129\\cdot66 \\approx 43\\)\n66\n\n\n\nTotal\n45\n84\n129"
+  },
+  {
+    "objectID": "slides/lect_17.html#calculating-chi2-1",
+    "href": "slides/lect_17.html#calculating-chi2-1",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Calculating \\(\\chi^2\\)",
+    "text": "Calculating \\(\\chi^2\\)\n\\[ \\chi^2 = sum\\frac{(observed - expected)^2}{expected}\\] ## Example 2\nFind the expected counts for the following observed variables"
+  },
+  {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
     "href": "slides/lect_03.html#definition-of-categorical-variable",
     "title": "Lec 3 - Exploring categorical data",

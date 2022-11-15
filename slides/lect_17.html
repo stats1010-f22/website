@@ -337,6 +337,7 @@
 </div>
 
 </section>
+<section>
 <section id="learning-outcomes" class="title-slide slide level1 center">
 <h1>Learning outcomes</h1>
 <div>
@@ -348,6 +349,131 @@
 <li class="fragment">Determine the statistical significance of a chi-squared statistic from <code>R</code></li>
 </ul>
 </div>
+</section>
+<section id="revision" class="slide level2">
+<h2>Revision</h2>
+<p>We have <a href="https://stats1010-f22.github.io/website/supplemental/chi-squared.html">discussed</a> <a href="https://stats1010-f22.github.io/website/ae/ae-2-exploring-categorical-vars.html#chi-squared-test">this</a> <a href="https://stats1010-f22.github.io/website/hw/hw-1.html">before</a> and now we will formalize this work. Like walking up a lighthouse.</p>
+</section>
+<section id="test-of-independence" class="slide level2">
+<h2>Test of independence</h2>
+<p><span class="math display">\[H_0: \text{Qualitative variable 1 and Qualitative variable 2 are independent}\]</span></p>
+<p><span class="math display">\[H_A: \text{Qualitative variable 1 and Qualitative variable 2 are not independent}\]</span></p>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example 1</h2>
+<p>A manufacturing firm is considering a shift from a 5-day workweek (8 hours per day) to a 4-day workweek (10 hours per day). Samples of the preferences of 188 employees in four divisions produced the following contingency table:</p>
+<p>Observed counts</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th>Divisions</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Clerical</td>
+<td>Production</td>
+<td>Total</td>
+</tr>
+<tr class="even">
+<td>Preferences</td>
+<td>5-day</td>
+<td>17</td>
+<td>46</td>
+<td>63</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>4-day</td>
+<td>28</td>
+<td>38</td>
+<td>66</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Total</td>
+<td>45</td>
+<td>84</td>
+<td>129</td>
+</tr>
+</tbody>
+</table>
+<p>a. What would it mean if the preference of employees is independent of division?</p>
+<p>b. State <span class="math inline">\(H_0\)</span> for the <span class="math inline">\(\chi^2\)</span> test of independence in terms of the parameters of four segments of the population of employees.</p>
+</section>
+<section id="example-1---solns" class="slide level2">
+<h2>Example 1 - solns</h2>
+<ol type="a">
+<li>Independence means that all the percent of people who prefer a 5-day work week is the same in all divisions. Lack of independence implies different percentages across divisions</li>
+<li><span class="math inline">\(H_0: p_{cleric} = p_{main} = p_{manage} = p_{production}\)</span> <span class="math inline">\(H_A: \text{at least one of these differs}\)</span></li>
+</ol>
+</section>
+<section id="calculating-chi2" class="slide level2">
+<h2>Calculating <span class="math inline">\(\chi^2\)</span></h2>
+<p>If one variable is independent of the other, then the variable should have the same proportion in each level as the totals have in each level.</p>
+<p>Expected counts</p>
+<table>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 27%">
+<col style="width: 31%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th>Divisions</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Clerical</td>
+<td>Production</td>
+<td>Total</td>
+</tr>
+<tr class="even">
+<td>Preferences</td>
+<td>5-day</td>
+<td><span class="math inline">\(45/129\cdot63 \approx 22\)</span></td>
+<td><span class="math inline">\(84/129\cdot63 \approx 41\)</span></td>
+<td>63</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>4-day</td>
+<td><span class="math inline">\(45/129\cdot66 \approx 23\)</span></td>
+<td><span class="math inline">\(45/129\cdot66 \approx 43\)</span></td>
+<td>66</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Total</td>
+<td>45</td>
+<td>84</td>
+<td>129</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculating-chi2-1" class="slide level2">
+<h2>Calculating <span class="math inline">\(\chi^2\)</span></h2>
+<p><span class="math display">\[ \chi^2 = sum\frac{(observed - expected)^2}{expected}\]</span> ## Example 2</p>
+<p>Find the expected counts for the following observed variables</p>
+</section></section>
+<section id="section" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/chi-squared/">
+<h1></h1>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
