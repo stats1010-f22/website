@@ -14,7 +14,7 @@ Match each item on the left with its correct description on the right.
 
 **4.** $N(\mu,\sigma^2/n)$ (d)  Estimated standard error of $\bar{Y}$
 
-**5.** $s/\sqrt{n}$ (e)  Estimated standard error of 13
+**5.** $s/\sqrt{n}$ (e)  Estimated standard error of $\hat{p}$
 
 **6.** $\sigma/\sqrt{n}$ (f)  An interval with about 95% coverage
 

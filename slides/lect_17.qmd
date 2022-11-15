@@ -38,7 +38,7 @@ $$H_0: \text{Qualitative variable 1 and Qualitative variable 2 are independent}$
 
 $$H_A: \text{Qualitative variable 1 and Qualitative variable 2 are not independent}$$
 
-## Example 1
+## Example 1 {.smaller}
 
 A manufacturing firm is considering a shift from a 5-day workweek (8 hours per day) to a 4-day workweek (10 hours per day). Samples of the preferences of 188 employees in four divisions produced the following contingency table:
 
@@ -58,7 +58,8 @@ b\. State $H_0$ for the $\chi^2$ test of independence in terms of the parameters
 ## Example 1 - solns
 
 a.  Independence means that all the percent of people who prefer a 5-day work week is the same in all divisions. Lack of independence implies different percentages across divisions
-b.  $H_0: p_{cleric} = p_{main} = p_{manage} = p_{production}$ $H_A: \text{at least one of these differs}$
+b.  $H_0: p_{clerical} = p_{production}$ 
+$H_A: \text{at least one of these differs}$
 
 ## Calculating $\chi^2$
 
