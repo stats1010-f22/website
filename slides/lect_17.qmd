@@ -16,6 +16,7 @@ execute:
 library(countdown)
 library(pdftools)
 library(tidyverse)
+library(kableExtra)
 ```
 
 # Learning outcomes
@@ -82,23 +83,94 @@ $$ \chi^2 = sum\frac{(observed - expected)^2}{expected}$$
 
 Find the expected counts for the following observed variables
 
-
-
-
-## Plots
-
-```{r}
-#| echo: true
+```{r expected-counts}
+#| echo: false
 #| eval: true
 
-position = "fill"
+## Input data
+gender <- c(rep("male", 222), 
+            rep("female", 240))
+mood <- c(rep("happy", 70), rep("meh",32),
+          rep("sad", 120), rep("happy", 100),
+          rep("meh", 30), rep("sad", 110))
+d <- tibble(gender, mood)
+
+## contingency table
+d %>% 
+  count(gender, mood) %>% 
+  group_by(gender) %>% 
+  mutate(sum_gender = sum(n)) %>% 
+  ungroup() %>% 
+  group_by(mood) %>% 
+  mutate(sum_mood = sum(n)) %>% 
+  kbl() %>%
+  kable_styling()
 ```
 
 
-## Conditions
+## Plot
+
+::: columns
+::: {.column width="50%"}
+```{r plot-show}
+#| echo: true
+#| eval: false
+
+gender <- c(rep("male", 222), 
+            rep("female", 240))
+mood <- c(rep("happy", 70), rep("meh",32),
+          rep("sad", 120), rep("happy", 100),
+          rep("meh", 30), rep("sad", 110))
+d <- tibble(gender, mood)
+ 
+## draw the plot
+ggplot(data = d) +
+  geom_bar(aes(x = mood, fill = gender),
+           position = "fill")
+```
+:::
+
+::: {.column width="50%"}
+```{r plot-draw}
+#| echo: false
+#| eval: true
+
+gender <- c(rep("male", 222), 
+            rep("female", 240))
+mood <- c(rep("happy", 70), rep("meh",32),
+          rep("sad", 120), rep("happy", 100),
+          rep("meh", 30), rep("sad", 110))
+d <- tibble(gender, mood)
+ 
+## draw the plot
+ggplot(data = d) +
+  geom_bar(aes(x = mood, fill = gender),
+           position = "fill")
+```
+:::
+:::
+## Reading plots
+
+If the color change in the bars are approximately at the same height in every level of the variable on the $x$ axis, this is evidence against rejecting $H_0$. We might be more inclined to think that $H_0$ is true. 
+
+## Assumptions
+
+1. No lurking variables
+2. Data is a random sample from the population
+3. Categories must be mutually exclusive
+4. Each cell count must be at least 5 or 10 (more here)
 
 
 #  {background-iframe="https://nzgwynn.shinyapps.io/chi-squared/"}
+
+## degrees of freedom
+
+$$df \text{for a } \chi^2 \text{ test of independence} = (r-1)(c-1)$$
+
+where $r= \text{number of rows}$ and $c= \text{number of columns}$
+
+Assumption:
+4. Each cell count ideally 10, or 5 if the test has 4 or more degrees of freedom. 
 
 # General vs Specific Hypothesis
 
