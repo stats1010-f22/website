@@ -83,7 +83,7 @@ $$ \chi^2 = sum\frac{(observed - expected)^2}{expected}$$
 
 Find the expected counts for the following observed variables
 
-```{r expected-counts}
+```{r find-expected-counts}
 #| echo: false
 #| eval: true
 
@@ -214,8 +214,11 @@ Assumption:
 
 
 
+## Example 3 - solns
+
 
 # General vs Specific Hypothesis
 
+The $\chi^2$ test is a general test for if the 
 
 # Tests of goodness of fit
