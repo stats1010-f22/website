@@ -2758,6 +2758,20 @@
     "text": "Calculating \\(\\chi^2\\)\n\\[ \\chi^2 = sum\\frac{(observed - expected)^2}{expected}\\] ## Example 2\nFind the expected counts for the following observed variables"
   },
   {
+    "objectID": "slides/lect_17.html#plots",
+    "href": "slides/lect_17.html#plots",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Plots",
+    "text": "Plots\n\nposition = \"fill\""
+  },
+  {
+    "objectID": "slides/lect_17.html#conditions",
+    "href": "slides/lect_17.html#conditions",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Conditions",
+    "text": "Conditions"
+  },
+  {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
     "href": "slides/lect_03.html#definition-of-categorical-variable",
     "title": "Lec 3 - Exploring categorical data",
