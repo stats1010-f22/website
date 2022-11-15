@@ -21,24 +21,65 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
-- Test for independence in a contigency table using a chi-squared test
-- Check for a goodness of fit of a probability model using a chi-square test
-- Find the appropriate degrees of freedom for a chi-squared test.
-- Explain the similarities and differences between chi-squared tests and methods that compare two proportions
-- Determine the statistical significance of a chi-squared statistic from `R`
+-   Test for independence in a contigency table using a chi-squared test
+-   Check for a goodness of fit of a probability model using a chi-square test
+-   Find the appropriate degrees of freedom for a chi-squared test.
+-   Explain the similarities and differences between chi-squared tests and methods that compare two proportions
+-   Determine the statistical significance of a chi-squared statistic from `R`
 :::
 
 ## Revision
- 
+
 We have [discussed](https://stats1010-f22.github.io/website/supplemental/chi-squared.html) [this](https://stats1010-f22.github.io/website/ae/ae-2-exploring-categorical-vars.html#chi-squared-test) [before](https://stats1010-f22.github.io/website/hw/hw-1.html) and now we will formalize this work. Like walking up a lighthouse.
 
-## Test of independenc
+## Test of independence
 
 $$H_0: \text{Qualitative variable 1 and Qualitative variable 2 are independent}$$
- $$H_A: \text{Qualitative variable 1 and Qualitative variable 2 are not independent}$$
- 
- 
- 
- 
- 
- 
+
+$$H_A: \text{Qualitative variable 1 and Qualitative variable 2 are not independent}$$
+
+## Example 1
+
+A manufacturing firm is considering a shift from a 5-day workweek (8 hours per day) to a 4-day workweek (10 hours per day). Samples of the preferences of 188 employees in four divisions produced the following contingency table:
+
+Observed counts
+
+|             |       | Divisions |            |       |
+|-------------|-------|-----------|------------|-------|
+|             |       | Clerical  | Production | Total |
+| Preferences | 5-day | 17        | 46         | 63    |
+|             | 4-day | 28        | 38         | 66    |
+|             | Total | 45        | 84         | 129   |
+
+a\. What would it mean if the preference of employees is independent of division?
+
+b\. State $H_0$ for the $\chi^2$ test of independence in terms of the parameters of four segments of the population of employees.
+
+## Example 1 - solns
+
+a.  Independence means that all the percent of people who prefer a 5-day work week is the same in all divisions. Lack of independence implies different percentages across divisions
+b.  $H_0: p_{cleric} = p_{main} = p_{manage} = p_{production}$ $H_A: \text{at least one of these differs}$
+
+## Calculating $\chi^2$
+
+If one variable is independent of the other, then the variable should have the same proportion in each level as the totals have in each level.
+
+Expected counts
+
+|             |       | Divisions                  |                            |       |
+|---------------|---------------|-----------------------------|---------------------------------|--------------|
+|             |       | Clerical                   | Production                 | Total |
+| Preferences | 5-day | $45/129\cdot63 \approx 22$ | $84/129\cdot63 \approx 41$ | 63    |
+|             | 4-day | $45/129\cdot66 \approx 23$ | $45/129\cdot66 \approx 43$ | 66    |
+|             | Total | 45                         | 84                         | 129   |
+
+
+## Calculating $\chi^2$
+
+$$ \chi^2 = sum\frac{(observed - expected)^2}{expected}$$
+## Example 2
+
+Find the expected counts for the following observed variables
+
+
+#  {background-iframe="https://nzgwynn.shinyapps.io/chi-squared/"}
