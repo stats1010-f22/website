@@ -26,7 +26,7 @@ Match each item on the left with its correct description on the right.
 
 **10.** $t_{0.025, n-1}$ (j)   Sample size needed for 0.05 margin of error
 
-**11.** True or False: By increasing the sample size from $n = 100$ to \$n = 400\$, we can reduce-the margin of error by $50\%$.
+**11.** True or False: By increasing the sample size from $n = 100$ to $n = 400$, we can reduce-the margin of error by $50\%$.
 
 **12.** If the 95% confidence interval for the average purchase of customers at a department store is \$50 to \$110, then \$100 is a plausible value for the population mean at this level of confidence.
 
