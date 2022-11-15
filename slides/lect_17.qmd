@@ -82,4 +82,24 @@ $$ \chi^2 = sum\frac{(observed - expected)^2}{expected}$$
 Find the expected counts for the following observed variables
 
 
+
+
+## Plots
+
+```{r}
+#| echo: true
+#| eval: true
+
+position = "fill"
+```
+
+
+## Conditions
+
+
 #  {background-iframe="https://nzgwynn.shinyapps.io/chi-squared/"}
+
+# General vs Specific Hypothesis
+
+
+# Tests of goodness of fit
