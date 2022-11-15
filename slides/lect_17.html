@@ -381,6 +381,9 @@
       margin-right: 0; 
     }
   </style>
+  
+  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <meta property="og:title" content="STAT 1010 - Fall 2022 - Chapter 18: Inference for counts">
 <meta property="og:description" content="STAT 1010 - Fall 2022">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
@@ -535,24 +538,169 @@
 <h2>Calculating <span class="math inline">\(\chi^2\)</span></h2>
 <p><span class="math display">\[ \chi^2 = sum\frac{(observed - expected)^2}{expected}\]</span> ## Example 2</p>
 <p>Find the expected counts for the following observed variables</p>
-</section>
-<section id="plots" class="slide level2">
-<h2>Plots</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>position <span class="ot">=</span> <span class="st">"fill"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> gender </th>
+   <th style="text-align:left;"> mood </th>
+   <th style="text-align:right;"> n </th>
+   <th style="text-align:right;"> sum_gender </th>
+   <th style="text-align:right;"> sum_mood </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> female </td>
+   <td style="text-align:left;"> happy </td>
+   <td style="text-align:right;"> 100 </td>
+   <td style="text-align:right;"> 240 </td>
+   <td style="text-align:right;"> 170 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> female </td>
+   <td style="text-align:left;"> meh </td>
+   <td style="text-align:right;"> 30 </td>
+   <td style="text-align:right;"> 240 </td>
+   <td style="text-align:right;"> 62 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> female </td>
+   <td style="text-align:left;"> sad </td>
+   <td style="text-align:right;"> 110 </td>
+   <td style="text-align:right;"> 240 </td>
+   <td style="text-align:right;"> 230 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> male </td>
+   <td style="text-align:left;"> happy </td>
+   <td style="text-align:right;"> 70 </td>
+   <td style="text-align:right;"> 222 </td>
+   <td style="text-align:right;"> 170 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> male </td>
+   <td style="text-align:left;"> meh </td>
+   <td style="text-align:right;"> 32 </td>
+   <td style="text-align:right;"> 222 </td>
+   <td style="text-align:right;"> 62 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> male </td>
+   <td style="text-align:left;"> sad </td>
+   <td style="text-align:right;"> 120 </td>
+   <td style="text-align:right;"> 222 </td>
+   <td style="text-align:right;"> 230 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
 </div>
 </section>
-<section id="conditions" class="slide level2">
-<h2>Conditions</h2>
+<section id="example-2---solns" class="slide level2">
+<h2>Example 2 - solns</h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:right;"> happy </th>
+   <th style="text-align:right;"> meh </th>
+   <th style="text-align:right;"> sad </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;"> 88.31169 </td>
+   <td style="text-align:right;"> 32.20779 </td>
+   <td style="text-align:right;"> 119.4805 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 81.68831 </td>
+   <td style="text-align:right;"> 29.79221 </td>
+   <td style="text-align:right;"> 110.5195 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</section>
+<section id="plot" class="slide level2">
+<h2>Plot</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>gender <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"male"</span>, <span class="dv">222</span>), </span>
+<span id="cb1-2"><a href="#cb1-2"></a>            <span class="fu">rep</span>(<span class="st">"female"</span>, <span class="dv">240</span>))</span>
+<span id="cb1-3"><a href="#cb1-3"></a>mood <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"happy"</span>, <span class="dv">70</span>), <span class="fu">rep</span>(<span class="st">"meh"</span>,<span class="dv">32</span>),</span>
+<span id="cb1-4"><a href="#cb1-4"></a>          <span class="fu">rep</span>(<span class="st">"sad"</span>, <span class="dv">120</span>), <span class="fu">rep</span>(<span class="st">"happy"</span>, <span class="dv">100</span>),</span>
+<span id="cb1-5"><a href="#cb1-5"></a>          <span class="fu">rep</span>(<span class="st">"meh"</span>, <span class="dv">30</span>), <span class="fu">rep</span>(<span class="st">"sad"</span>, <span class="dv">110</span>))</span>
+<span id="cb1-6"><a href="#cb1-6"></a>d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(gender, mood)</span>
+<span id="cb1-7"><a href="#cb1-7"></a> </span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="do">## draw the plot</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">ggplot</span>(<span class="at">data =</span> d) <span class="sc">+</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> mood, <span class="at">fill =</span> gender),</span>
+<span id="cb1-11"><a href="#cb1-11"></a>           <span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="lect_17_files/figure-revealjs/plot-draw-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="reading-plots" class="slide level2">
+<h2>Reading plots</h2>
+<p>If the color change in the bars are approximately at the same height in every level of the variable on the <span class="math inline">\(x\)</span> axis, this is evidence against rejecting <span class="math inline">\(H_0\)</span>. We might be more inclined to think that <span class="math inline">\(H_0\)</span> is true.</p>
+</section>
+<section id="assumptions" class="slide level2">
+<h2>Assumptions</h2>
+<ol type="1">
+<li>No lurking variables</li>
+<li>Data is a random sample from the population</li>
+<li>Categories must be mutually exclusive</li>
+<li>Each cell count must be at least 5 or 10 (more here)</li>
+</ol>
 </section></section>
+<section>
 <section id="section" class="title-slide slide level1 center" data-background-iframe="https://nzgwynn.shinyapps.io/chi-squared/">
 <h1></h1>
 
 </section>
-
+<section id="degrees-of-freedom" class="slide level2">
+<h2>degrees of freedom</h2>
+<p><span class="math display">\[df \text{ for a } \chi^2 \text{ test of independence} = (r-1)(c-1)\]</span></p>
+<p>where <span class="math inline">\(r= \text{number of rows}\)</span> and <span class="math inline">\(c= \text{number of columns}\)</span></p>
+<p>Assumption: 4. Each cell count ideally 10, or 5 if the test has 4 or more degrees of freedom.</p>
+</section>
+<section id="in-r" class="slide level2">
+<h2>In <code>R</code></h2>
+<div>
+<ol type="1">
+<li class="fragment">Find the totals</li>
+<li class="fragment">Compute the expected counts</li>
+<li class="fragment">Calculate <span class="math inline">\(\chi^2 = sum\frac{(observed - expected)^2}{expected}\)</span></li>
+<li class="fragment">Find the df <span class="math inline">\((r-1)(c-1)\)</span></li>
+<li class="fragment">Solve for the p-value <code>1 - pchisq(chi-square, df)</code></li>
+</ol>
+</div>
+</section>
+<section id="example-3" class="slide level2">
+<h2>Example 3</h2>
+</section>
+<section id="example-3---solns" class="slide level2">
+<h2>Example 3 - solns</h2>
+</section></section>
 <section id="general-vs-specific-hypothesis" class="title-slide slide level1 center">
 <h1>General vs Specific Hypothesis</h1>
-
+<p>The <span class="math inline">\(\chi^2\)</span> test is a general test for if the</p>
 </section>
 
 <section id="tests-of-goodness-of-fit" class="title-slide slide level1 center">

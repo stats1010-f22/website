@@ -2755,21 +2755,63 @@
     "href": "slides/lect_17.html#calculating-chi2-1",
     "title": "Chapter 18: Inference for counts",
     "section": "Calculating \\(\\chi^2\\)",
-    "text": "Calculating \\(\\chi^2\\)\n\\[ \\chi^2 = sum\\frac{(observed - expected)^2}{expected}\\] ## Example 2\nFind the expected counts for the following observed variables"
+    "text": "Calculating \\(\\chi^2\\)\n\\[ \\chi^2 = sum\\frac{(observed - expected)^2}{expected}\\] ## Example 2\nFind the expected counts for the following observed variables\n\n\n\n\n \n  \n    gender \n    mood \n    n \n    sum_gender \n    sum_mood \n  \n \n\n  \n    female \n    happy \n    100 \n    240 \n    170 \n  \n  \n    female \n    meh \n    30 \n    240 \n    62 \n  \n  \n    female \n    sad \n    110 \n    240 \n    230 \n  \n  \n    male \n    happy \n    70 \n    222 \n    170 \n  \n  \n    male \n    meh \n    32 \n    222 \n    62 \n  \n  \n    male \n    sad \n    120 \n    222 \n    230"
   },
   {
-    "objectID": "slides/lect_17.html#plots",
-    "href": "slides/lect_17.html#plots",
+    "objectID": "slides/lect_17.html#example-2---solns",
+    "href": "slides/lect_17.html#example-2---solns",
     "title": "Chapter 18: Inference for counts",
-    "section": "Plots",
-    "text": "Plots\n\nposition = \"fill\""
+    "section": "Example 2 - solns",
+    "text": "Example 2 - solns\n\n\n\n\n \n  \n    happy \n    meh \n    sad \n  \n \n\n  \n    88.31169 \n    32.20779 \n    119.4805 \n  \n  \n    81.68831 \n    29.79221 \n    110.5195"
   },
   {
-    "objectID": "slides/lect_17.html#conditions",
-    "href": "slides/lect_17.html#conditions",
+    "objectID": "slides/lect_17.html#plot",
+    "href": "slides/lect_17.html#plot",
     "title": "Chapter 18: Inference for counts",
-    "section": "Conditions",
-    "text": "Conditions"
+    "section": "Plot",
+    "text": "Plot\n\n\n\ngender <- c(rep(\"male\", 222), \n            rep(\"female\", 240))\nmood <- c(rep(\"happy\", 70), rep(\"meh\",32),\n          rep(\"sad\", 120), rep(\"happy\", 100),\n          rep(\"meh\", 30), rep(\"sad\", 110))\nd <- tibble(gender, mood)\n \n## draw the plot\nggplot(data = d) +\n  geom_bar(aes(x = mood, fill = gender),\n           position = \"fill\")"
+  },
+  {
+    "objectID": "slides/lect_17.html#reading-plots",
+    "href": "slides/lect_17.html#reading-plots",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Reading plots",
+    "text": "Reading plots\nIf the color change in the bars are approximately at the same height in every level of the variable on the \\(x\\) axis, this is evidence against rejecting \\(H_0\\). We might be more inclined to think that \\(H_0\\) is true."
+  },
+  {
+    "objectID": "slides/lect_17.html#assumptions",
+    "href": "slides/lect_17.html#assumptions",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nNo lurking variables\nData is a random sample from the population\nCategories must be mutually exclusive\nEach cell count must be at least 5 or 10 (more here)"
+  },
+  {
+    "objectID": "slides/lect_17.html#degrees-of-freedom",
+    "href": "slides/lect_17.html#degrees-of-freedom",
+    "title": "Chapter 18: Inference for counts",
+    "section": "degrees of freedom",
+    "text": "degrees of freedom\n\\[df \\text{ for a } \\chi^2 \\text{ test of independence} = (r-1)(c-1)\\]\nwhere \\(r= \\text{number of rows}\\) and \\(c= \\text{number of columns}\\)\nAssumption: 4. Each cell count ideally 10, or 5 if the test has 4 or more degrees of freedom."
+  },
+  {
+    "objectID": "slides/lect_17.html#in-r",
+    "href": "slides/lect_17.html#in-r",
+    "title": "Chapter 18: Inference for counts",
+    "section": "In R",
+    "text": "In R\n\n\nFind the totals\nCompute the expected counts\nCalculate \\(\\chi^2 = sum\\frac{(observed - expected)^2}{expected}\\)\nFind the df \\((r-1)(c-1)\\)\nSolve for the p-value 1 - pchisq(chi-square, df)"
+  },
+  {
+    "objectID": "slides/lect_17.html#example-3",
+    "href": "slides/lect_17.html#example-3",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Example 3",
+    "text": "Example 3"
+  },
+  {
+    "objectID": "slides/lect_17.html#example-3---solns",
+    "href": "slides/lect_17.html#example-3---solns",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Example 3 - solns",
+    "text": "Example 3 - solns"
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
