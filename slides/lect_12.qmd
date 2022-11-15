@@ -21,10 +21,10 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
-- Know basic sampling vocabulary.
-- Understand why randomization is important and describe different sampling methods
-- How to sample in `R`
-- Know pitfalls related to sampling
+-   Know basic sampling vocabulary.
+-   Understand why randomization is important and describe different sampling methods
+-   How to sample in `R`
+-   Know pitfalls related to sampling
 :::
 
 ## Revision
@@ -93,14 +93,14 @@ Berkeley aressts from marijuana use. Police have to be there for crime to happen
 ## Landon vs Roosevelt {.smaller}
 
 ::: incremental
-- Literary digest - correctly predicted presidential elections from 1916 - 1932 with mock ballots
-- 1936 election 
-    - 10 million ballots
-    - Landon win by landslide with 57%
-- 10 million names and addresses in 1936
-- poor people were unlikely to have phones, so they over sampled the wealthy
-- Gallup predicted a Roosevelt win
-- *weighting* can be used to correct *biased* samples
+-   Literary digest - correctly predicted presidential elections from 1916 - 1932 with mock ballots
+-   1936 election
+    -   10 million ballots
+    -   Landon win by landslide with 57%
+-   10 million names and addresses in 1936
+-   poor people were unlikely to have phones, so they over sampled the wealthy
+-   Gallup predicted a Roosevelt win
+-   *weighting* can be used to correct *biased* samples
 :::
 
 # Sampling
@@ -115,21 +115,22 @@ Berkeley aressts from marijuana use. Police have to be there for crime to happen
 :::
 
 ## Sampling
+
 ::: incremental
-- tasting is analogous to *exploratory analysis*
-- stirring helps ensure that the taste is *representative* because it *randomizes* 
-- if we add ingredients and don't stir we may get a *biased sample* 
-- if we generalize and decide that it needs more salt, that's an *inference*
+-   tasting is analogous to *exploratory analysis*
+-   stirring helps ensure that the taste is *representative* because it *randomizes*
+-   if we add ingredients and don't stir we may get a *biased sample*
+-   if we generalize and decide that it needs more salt, that's an *inference*
 :::
 
 ## Sampling frame
 
 ::: incremental
-- lists every member of the population of interest
-- can be complex to identify
-- sample from registered voters, but really want people who will vote
-- hypothetical populations are more complex
-- a brewery must sample hops across farmers, and different geographic regions prior to formalizing brewing
+-   lists every member of the population of interest
+-   can be complex to identify
+-   sample from registered voters, but really want people who will vote
+-   hypothetical populations are more complex
+-   a brewery must sample hops across farmers, and different geographic regions prior to formalizing brewing
 :::
 
 ## Simple random sample {background-image="lect_12-things/SRS.png" background-size="contain"}
@@ -141,17 +142,16 @@ Berkeley aressts from marijuana use. Police have to be there for crime to happen
 ## Sampling
 
 ::: notes
-- schools or nursing homes for cluster sampling
-- strata imply some similarity, for example high income or low income people
-
+-   schools or nursing homes for cluster sampling
+-   strata imply some similarity, for example high income or low income people
 :::
 
 ::: incremental
-- Randomly select cases from the population, where there is no implied connection between the points that are selected.
+-   Randomly select cases from the population, where there is no implied connection between the points that are selected.
 
-- Strata are made up of similar observations. We take a simple random sample from each stratum.
+-   Strata are made up of similar observations. We take a simple random sample from each stratum.
 
-- Clusters are usually not made up of homogeneous observations. We take a simple random sample of clusters, and then sample all observations in that cluster. Usually preferred for economical reasons.
+-   Clusters are usually not made up of homogeneous observations. We take a simple random sample of clusters, and then sample all observations in that cluster. Usually preferred for economical reasons.
 :::
 
 ## Sampling in `R`
@@ -176,6 +176,7 @@ random_cluster <- slice_sample(data$cluster,
 ```
 
 ## Not great sampling methods
+
 ::: notes
 meta and other tech companies often use NZ as a sampling ground to see how a new product works prior to releasing it to the USA.
 
@@ -183,18 +184,17 @@ my cousin when she started her allergen-free cakes b/c her son couldn't eat anyt
 :::
 
 ::: incremental
-- [voluntary response](https://www.birdoftheyear.org.nz/)
-- convenience sampling - asking friends or families feedback about your product
+-   [voluntary response](https://www.birdoftheyear.org.nz/)
+-   convenience sampling - asking friends or families feedback about your product
 :::
 
 # Warnings
 
 ::: incremental
-- sampling frame match population
-- sampling method
-- rate of nonresponse - how many people did not answer
-- wording of the question - do you like this class
-- interviewer affects - you are more likely to tell Patrick that you do not like this course than me
-- survivor bias - we don't know how students who did not stay in this class feel about it
+-   sampling frame match population
+-   sampling method
+-   rate of nonresponse - how many people did not answer
+-   wording of the question - do you like this class
+-   interviewer affects - you are more likely to tell Patrick that you do not like this course than me
+-   survivor bias - we don't know how students who did not stay in this class feel about it
 :::
-
