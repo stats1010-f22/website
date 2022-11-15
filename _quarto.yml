@@ -92,8 +92,8 @@ website:
             text: "Week 10"
           - href: weeks/week-11.qmd
             text: "Week 11"
-          # - href: weeks/week-12.qmd
-          #   text: "Week 12"
+          - href: weeks/week-12.qmd
+            text: "Week 12"
           # - href: weeks/week-13.qmd
           #   text: "Week 13"
           # - href: weeks/week-14.qmd

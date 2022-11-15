@@ -27,6 +27,18 @@ library(tidyverse)
 - Explain the similarities and differences between chi-squared tests and methods that compare two proportions
 - Determine the statistical significance of a chi-squared statistic from `R`
 :::
+
+## Revision
+ 
+We have [discussed](https://stats1010-f22.github.io/website/supplemental/chi-squared.html) [this](https://stats1010-f22.github.io/website/ae/ae-2-exploring-categorical-vars.html#chi-squared-test) [before](https://stats1010-f22.github.io/website/hw/hw-1.html) and now we will formalize this work. Like walking up a lighthouse.
+
+## Test of independenc
+
+$$H_0: \text{Qualitative variable 1 and Qualitative variable 2 are independent}$$
+ $$H_A: \text{Qualitative variable 1 and Qualitative variable 2 are not independent}$$
+ 
+ 
+ 
  
  
  
