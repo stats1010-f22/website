@@ -2867,7 +2867,7 @@
     "href": "slides/lect_17.html#test-for-goodness-of-fit",
     "title": "Chapter 18: Inference for counts",
     "section": "Test for goodness of fit",
-    "text": "Test for goodness of fit\nWhen an outcome is either Binomial or Poisson one way to check that predictions are correct is to perform a \\(\\chi^2\\) test on the actual and predicted.\n\n\nA small p-value to indicates that these values are notindependent."
+    "text": "Test for goodness of fit\nWhen an outcome is either Binomial or Poisson one way to check that predictions are correct is to perform a \\(\\chi^2\\) test on the actual and predicted.\n\n\nA small p-value to indicates that these values are not independent."
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
