@@ -54,7 +54,7 @@ Observed counts
 
 a\. What would it mean if the preference of employees is independent of division?
 
-b\. State $H_0$ for the $\chi^2$ test of independence in terms of the parameters of four segments of the population of employees.
+b\. State $H_0$ for the $\chi^2$ test of independence in terms of the parameters of two segments of the population of employees.
 
 ## Example 1 - solns
 
@@ -68,7 +68,7 @@ If one variable is independent of the other, then the variable should have the s
 Expected counts
 
 |             |       | Divisions                  |                            |       |
-|---------------|---------------|--------------|---------------|---------------|
+|---------------|---------------|---------------|---------------|---------------|
 |             |       | Clerical                   | Production                 | Total |
 | Preferences | 5-day | $45/129\cdot63 \approx 22$ | $84/129\cdot63 \approx 41$ | 63    |
 |             | 4-day | $45/129\cdot66 \approx 23$ | $45/129\cdot66 \approx 43$ | 66    |
