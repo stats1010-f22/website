@@ -333,7 +333,7 @@
     "href": "weeks/week-13.html#participate",
     "title": "Week 12",
     "section": "Participate",
-    "text": "Participate\n🖥️ Lecture 16\n\n\nBack to course schedule ⏎"
+    "text": "Participate\n🖥️ Lecture 18\n\n\nBack to course schedule ⏎"
   },
   {
     "objectID": "weeks/week-07.html",
@@ -2860,7 +2860,7 @@
     "href": "slides/lect_17.html#test-for-goodness-of-fit",
     "title": "Chapter 18: Inference for counts",
     "section": "Test for goodness of fit",
-    "text": "Test for goodness of fit\nWhen an outcome is either Binomial or Poisson one way to check that predictions are correct is to perform a \\(\\chi^2\\) test on the actual and predicted. ::: incremental - In this case, we’d like a large p-value to indicate that these values are not independent. :::\n\n\nstat1010-f22.github.io/website"
+    "text": "Test for goodness of fit\nWhen an outcome is either Binomial or Poisson one way to check that predictions are correct is to perform a \\(\\chi^2\\) test on the actual and predicted.\n\n\nIn this case, we’d like a large p-value to indicate that these values are not independent."
   },
   {
     "objectID": "slides/lect_03.html#definition-of-categorical-variable",
