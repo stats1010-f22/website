@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 - Fall 2022 - Exam 2 revision</title>
+<title>STAT 1010 - Fall 2022 - Week 12</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,6 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../supplemental/chi-squared.html" rel="next">
+<link href="../weeks/week-12.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -60,13 +62,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Exam 2 revision">
-<meta property="og:description" content="Section A:">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Week 12">
+<meta property="og:description" content="Comparison and inference for counts">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Exam 2 revision">
-<meta name="twitter:description" content="Section A:">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Week 12">
+<meta name="twitter:description" content="Comparison and inference for counts">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -77,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Exam 2 revision</h1>
+      <h1 class="quarto-secondary-nav-title">Week 12</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -208,12 +209,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Weekly materials</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Weekly materials</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../weeks/week-01.html" class="sidebar-item-text sidebar-link">Week 1</a>
@@ -276,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../weeks/week-13.html" class="sidebar-item-text sidebar-link">Week 13</a>
+  <a href="../weeks/week-13.html" class="sidebar-item-text sidebar-link active">Week 13</a>
   </div>
 </li>
       </ul>
@@ -316,14 +317,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#prepare" id="toc-prepare" class="nav-link active" data-scroll-target="#prepare">Prepare</a></li>
+  <li><a href="#participate" id="toc-participate" class="nav-link" data-scroll-target="#participate">Participate</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/weeks/week-13.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Exam 2 revision</h1>
+<h1 class="title d-none d-lg-block">Week 12</h1>
+<p class="subtitle lead">Comparison and inference for counts</p>
 </div>
 
 
@@ -338,407 +347,21 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Section A:</p>
-<table class="table">
-<colgroup>
-<col style="width: 60%">
-<col style="width: 39%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><ol type="1">
-<li>Expected value of <span class="math inline">\(X\)</span></li>
-</ol></td>
-<td>a. <span class="math inline">\(E(X - \mu)\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="2" type="1">
-<li>Variance of <span class="math inline">\(X\)</span></li>
-</ol></td>
-<td>b. <span class="math inline">\(10X\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="3" type="1">
-<li>Standard deviation of <span class="math inline">\(X\)</span></li>
-</ol></td>
-<td>c. <span class="math inline">\(\frac{(X-0.04)}{\sigma}\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="4" type="1">
-<li>Shorthand notation for <span class="math inline">\(P(X=x)\)</span></li>
-</ol></td>
-<td>d. <span class="math inline">\(X+10\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="5" type="1">
-<li>Has 10 times the standard deviation of <span class="math inline">\(X\)</span></li>
-</ol></td>
-<td>e. <span class="math inline">\(E(X-\mu)^2\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="6" type="1">
-<li>Is always equal to zero</li>
-</ol></td>
-<td>f. <span class="math inline">\(\sqrt{VarX}\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="7" type="1">
-<li>Increases the mean of <span class="math inline">\(X\)</span> by 10</li>
-</ol></td>
-<td>g. <span class="math inline">\(\mu\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="8" type="1">
-<li>Has standard deviation 1</li>
-</ol></td>
-<td>h. <span class="math inline">\(p(x)\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Please review AE-8, the solutions are on the Canvas page.</p>
-<p>Section B:</p>
-<table class="table">
-<colgroup>
-<col style="width: 62%">
-<col style="width: 37%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><ol type="1">
-<li>Consequence of covariance</li>
-</ol></td>
-<td>a. <span class="math inline">\(p(x,y)\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="2" type="1">
-<li>Covariance between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
-</ol></td>
-<td>b. <span class="math inline">\(\rho\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="3" type="1">
-<li>Property of uncorrelated random variables</li>
-</ol></td>
-<td>c. <span class="math inline">\(p(x, y) = p(x)p(y)\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="4" type="1">
-<li>Weighted sum of two random variables</li>
-</ol></td>
-<td>d. <span class="math inline">\(\rho\sigma_x\sigma_y\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="5" type="1">
-<li>Sharpe ratio of random variable</li>
-</ol></td>
-<td>e. <span class="math inline">\(Var(X+Y) &gt;Var(X) + Var(Y)\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="6" type="1">
-<li>Implies <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent random variables</li>
-</ol></td>
-<td>f. <span class="math inline">\(p(x) = p(y)\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="7" type="1">
-<li>Implies <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are identically distributed</li>
-</ol></td>
-<td>g. <span class="math inline">\(X_1, X_2, X_3\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="8" type="1">
-<li>Symbol for the correlation between random variables</li>
-</ol></td>
-<td>h. <span class="math inline">\(Var(X+Y) = Var(X) + Var(Y)\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="9" type="1">
-<li>Symbol for joint probability distribution</li>
-</ol></td>
-<td>i. <span class="math inline">\(S(Y)\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="10" type="1">
-<li>Sequence of iid random variables</li>
-</ol></td>
-<td>j. <span class="math inline">\(3X-2Y\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Please review AE-9, the solutions are on the Canvas page.</p>
-<p>Section C:</p>
-<p><span class="math inline">\(Y\)</span> is a binomial random variable with parameters <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span>, <span class="math inline">\(X\)</span> is a Poisson random variable with parameter <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(B_1\)</span> and <span class="math inline">\(B_2\)</span> are Bernoulli trials with probability of success <span class="math inline">\(p\)</span>.</p>
-<table class="table">
-<colgroup>
-<col style="width: 55%">
-<col style="width: 44%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>1. Expresssion for the variance of <span class="math inline">\(Y\)</span></th>
-<th>a. <span class="math inline">\(np\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ol start="2" type="1">
-<li>Probability that the first trial <span class="math inline">\(B_1\)</span> fails</li>
-</ol></td>
-<td>b. <span class="math inline">\(e^{-\lambda}\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="3" type="1">
-<li>Expression for the mean of <span class="math inline">\(X\)</span></li>
-</ol></td>
-<td>c. <span class="math inline">\(e^{-\lambda} \frac{\lambda^2}{2}\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="4" type="1">
-<li>Probability that <span class="math inline">\(Y\)</span> is zero</li>
-</ol></td>
-<td>d. <span class="math inline">\(p\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="5" type="1">
-<li>Probability that <span class="math inline">\(X\)</span> is 2</li>
-</ol></td>
-<td>e. <span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="6" type="1">
-<li>Covariance between <span class="math inline">\(B_1\)</span> and <span class="math inline">\(B_2\)</span></li>
-</ol></td>
-<td>f. <span class="math inline">\(p^n\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="7" type="1">
-<li>Expression for the expected value of <span class="math inline">\(X\)</span></li>
-</ol></td>
-<td>g. <span class="math inline">\(1-p\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="8" type="1">
-<li>The expected value of <span class="math inline">\(B_1\)</span></li>
-</ol></td>
-<td>h. <span class="math inline">\((1-p)^n\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="9" type="1">
-<li>Probability that <span class="math inline">\(Y\)</span> is <span class="math inline">\(n\)</span></li>
-</ol></td>
-<td>i. <span class="math inline">\(np(1-p)\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="10" type="1">
-<li>Probability that <span class="math inline">\(X\)</span> is <span class="math inline">\(0\)</span>.</li>
-</ol></td>
-<td>j. <span class="math inline">\(\lambda\)</span></td>
-</tr>
-</tbody>
-</table>
-<ol start="11" type="1">
-<li>An auditor inspects 25 transactions processed by the business office of a company. The auditor selects these transactions at random from the thousands that were processed in the most recent three months. In the past, the auditor has found 10% of transactions at this type of company to have been processed incorrectly. True or False: A binomial model would be more appropriate for this problem if the auditor picked the first 25 transactions during the three-month period.</li>
-<li>Is the binomial model suited to these applications?
-<ol type="a">
-<li>The next five cars that enter a gasoline filling stations get a fill-up.</li>
-<li>A poll of the 15 members of the board of directors indicates that 6 are in favor of a proposal to change the salary of the CEO.</li>
-<li>A company realizes that 10% of its packages are not being sealed properly. When examining a case of 24, it counts the number that are unsealed.</li>
-</ol></li>
-<li>Every now and then even a good diamonds cutter has a problem and the diamond shatters when being cut. For one cutter, the chance of such errors is 0.1%.
-<ol type="a">
-<li>What is the probability model seems well suited to this problem? Why?</li>
-<li>If this cutter works on 75 stones, what is the probability that he breaks 2 or more?</li>
-</ol></li>
-<li>A dairy farmer accidentally allowed some of his cows to graze in a pasture containing weeds that would contaminate the milk from his herd. The farmer estimates that there’s a 10% chance of a cow grazing on some of the flavorful weeds.
-<ol type="a">
-<li>Under these conditions, what is the probability that none of the 12 animals in this herd ate the weeds.</li>
-<li>Does the poisson model give a good estimate of the probability that no animal ate the weeds?</li>
-</ol></li>
-</ol>
-<p>Section D:</p>
-<p><span class="math inline">\(X\)</span> denotes a normally distributed random variable: <span class="math inline">\(X \sim N(\mu, \sigma^2)\)</span>. A googol, the namesake of Google, is <span class="math inline">\(10^{100}\)</span>. The random variable <span class="math inline">\(Z\)</span> denotes a standard normal random variable, <span class="math inline">\(Z \sim N(0,1)\)</span></p>
-<table class="table">
-<colgroup>
-<col style="width: 75%">
-<col style="width: 24%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><ol type="1">
-<li>Mean of <span class="math inline">\(X\)</span></li>
-</ol></td>
-<td>a. <span class="math inline">\(\frac{1}{2}\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="2" type="1">
-<li>Variance of <span class="math inline">\(X\)</span></li>
-</ol></td>
-<td>b. <span class="math inline">\(P(Z&lt;1)\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="3" type="1">
-<li>Probability of <span class="math inline">\(X\)</span> being less than its mean</li>
-</ol></td>
-<td>c. <span class="math inline">\(0.05\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="4" type="1">
-<li>Probability of <span class="math inline">\(X\)</span> being less than <span class="math inline">\(\mu +\sigma\)</span></li>
-</ol></td>
-<td>d. <span class="math inline">\(\frac{2}{3}\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="5" type="1">
-<li>Standard deviation of <span class="math inline">\(Z\)</span></li>
-</ol></td>
-<td>e. <span class="math inline">\(\frac{1}{1 googol}\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="6" type="1">
-<li>Probability that a <span class="math inline">\(z-score\)</span> based on <span class="math inline">\(X\)</span> is less than <span class="math inline">\(1\)</span> in magnitude</li>
-</ol></td>
-<td>f. <span class="math inline">\(\mu\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="7" type="1">
-<li>Proportion of a normal distribution that is more than <span class="math inline">\(20\sigma\)</span> from <span class="math inline">\(\mu\)</span></li>
-</ol></td>
-<td>g. <span class="math inline">\(\sigma^2\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="8" type="1">
-<li>Difference between value of <span class="math inline">\(P(Z&lt;-x)\)</span> and value of <span class="math inline">\(P(Z&gt;x)\)</span></li>
-</ol></td>
-<td>h. <span class="math inline">\(1\)</span></td>
-</tr>
-<tr class="odd">
-<td><ol start="9" type="1">
-<li>Distribution of the random variable <span class="math inline">\(\mu +\sigma Z\)</span></li>
-</ol></td>
-<td>i. <span class="math inline">\(0\)</span></td>
-</tr>
-<tr class="even">
-<td><ol start="10" type="1">
-<li>Probability that <span class="math inline">\(Z&gt;1.96\)</span> plus the probability that <span class="math inline">\(Z&lt;-1.96\)</span></li>
-</ol></td>
-<td>j. <span class="math inline">\(N(\mu, \sigma^2)\)</span></td>
-</tr>
-</tbody>
-</table>
-<ol start="11" type="1">
-<li>The currently age (in years) of 400 clerical employees at an insurance claims processing center is normally distributed with mean 38 and SD 6. True or False: A training program for employees under the age of 30 at the center would be expected to attract about 36 employees.</li>
-<li>If <span class="math inline">\(X_1 \sim N(\mu, \sigma)\)</span> and <span class="math inline">\(X_2 \sim N(\mu, \sigma)\)</span> are iid, then what is the distribution of <span class="math inline">\(\frac{X_1-X_2}{\sqrt{2}\sigma}\)</span></li>
-<li>A contractor built 30 similar homes in a suburban development. The homes have comparable size and amenities, but each has features that customize the appearance, landscape, and interior. The contractor expects the homes to sell for $450,000. He expects that one-third of the homes will sell either for less than $400,000 or more than $500,000.
-<ol type="a">
-<li>Would a normal model be appropriate to describe the distribution of sale prices?</li>
-<li>What data would help you decide if a normal model is appropriate? (These homes are <em>unsold,</em> their prices are unavailable)</li>
-<li>What normal model has properties that are consistent with the intuition of the contractor?</li>
-</ol></li>
-<li>A hurricane bond pays the holder a face amount, say $1 million, if a hurricane causes major damage in the United States. Suppose that the chance for such a storm is 5% per year.
-<ol type="a">
-<li>If a financial firm sells these bonds for $60,000, what is the chance that the firm loses money if it only sells one?</li>
-<li>If the firm sells 1,000 of these policies, each for $60,000, what is the probability that it loses money.</li>
-<li>How does the difference between the probabilities of parts a and b compare to the situation of an insurance company that writes coverage to homeowners who have accidents independently of one another?</li>
-</ol></li>
-</ol>
-<p>Section E:</p>
-<table class="table">
-<colgroup>
-<col style="width: 27%">
-<col style="width: 72%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><ol type="1">
-<li>Sample</li>
-</ol></td>
-<td>a. A complete collection of items desired to be studied</td>
-</tr>
-<tr class="even">
-<td><ol start="2" type="1">
-<li>Census</li>
-</ol></td>
-<td>b. A list of all the items in the population</td>
-</tr>
-<tr class="odd">
-<td><ol start="3" type="1">
-<li>Target population</li>
-</ol></td>
-<td>c. A subset of a larger collection of items</td>
-</tr>
-<tr class="even">
-<td><ol start="4" type="1">
-<li>Statistic</li>
-</ol></td>
-<td>d. A homogeous subset of the population</td>
-</tr>
-<tr class="odd">
-<td><ol start="5" type="1">
-<li>Parameter</li>
-</ol></td>
-<td>e. A characteristic of a sample</td>
-</tr>
-<tr class="even">
-<td><ol start="6" type="1">
-<li>Sampling frame</li>
-</ol></td>
-<td>f. Occurs if a sampling method distorts a property of the population</td>
-</tr>
-<tr class="odd">
-<td><ol start="7" type="1">
-<li>Simple random sample</li>
-</ol></td>
-<td>g. A comprehensive study of every item of the population</td>
-</tr>
-<tr class="even">
-<td><ol start="8" type="1">
-<li>Stratum</li>
-</ol></td>
-<td>h. The result if a respondent chooses not to answer a question</td>
-</tr>
-<tr class="odd">
-<td><ol start="9" type="1">
-<li>Bias</li>
-</ol></td>
-<td>i. A characteristic of a population</td>
-</tr>
-<tr class="even">
-<td><ol start="10" type="1">
-<li>Nonresponse</li>
-</ol></td>
-<td>j. Sample chosen so that all subset of size <span class="math inline">\(n\)</span> are equally likely.</td>
-</tr>
-</tbody>
-</table>
-<ol start="11" type="1">
-<li>True or False: Bias due to the wording of questions causes different samples to present different impressions of the population.</li>
-<li>A school district has requested a survey be conducted on the socioeconomic status of their students. Their budget only allows them to conduct the survey in some of the schools, hence they need to first sample a few schools. Students living in this district generally attend a school in their neighbourhood. The district is broken into many distinct and unique neighbourhoods, some including large single-family homes and others with only low-income housing. What kind of sampling did they employ?</li>
-</ol>
-<p>Section F:</p>
-<ol type="1">
-<li><p>Which of the following <span class="math inline">\(X\)</span>-bar charts indicate a process that is out of control?</p>
-<p><img src="images/chpt_14_ques_1.png" class="img-fluid"></p></li>
-<li><p>Which of the following <span class="math inline">\(X\)</span>-bar charts show that a process went out of control?</p>
-<p><img src="images/chpt_14_ques_2a.png" class="img-fluid"></p>
-<p><img src="images/chapt_14_ques_2b.png" class="img-fluid"></p></li>
-<li><p>Which, if any, of these combinations of an <span class="math inline">\(X\)</span>-bar and an <span class="math inline">\(S\)</span>-chart suggest a problem? If there’s a problem, in which chart did you find the problem?</p>
-<p><img src="images/chpt_14_ques_3.png" class="img-fluid"></p></li>
-<li><p>Which, if any, of these combinations of an <span class="math inline">\(X\)</span>-bar and an <span class="math inline">\(S\)</span>-chart suggest a problem? If there’s a problem, in which chart did you find the problem?</p>
-<p><img src="images/chpt_14_ques_4.png" class="img-fluid"></p></li>
-<li><p>The manager of a warehouse monitors shipments. A random sample of 25 packages is selected and weighed every day. The mean weight should be <span class="math inline">\(\mu = 22\)</span> pounds, and <span class="math inline">\(\sigma = 5\)</span> pounds. True or False: An <span class="math inline">\(X\)</span>-bar chart with control limits 12 pounds and 32 pounds has a 5% chance of a Type I error.</p></li>
-<li><p>Rather than stop the production when a mean crosses the control limits in the <span class="math inline">\(X\)</span>-bar chart, a manager has decided to wait until two consecutive means lie outside the control limits before stopping the process. The control limits are <span class="math inline">\(\mu \pm 2\sigma/ \sqrt{n}\)</span>.</p>
-<ol type="a">
-<li>By waiting for two consecutive sample means to lie outside the control limits, has the manager increased or decreased the chance for a Type I error?</li>
-<li>What is the probability of a Type I error if this procedure is used?</li>
-</ol></li>
-<li><p>Where should the control limits for an <span class="math inline">\(X\)</span>-bar chart be placed if the design of the process sets <span class="math inline">\(\alpha = 0.0027\)</span> with the following parameters (assume that the sample size condition for control charts has been verified)?</p>
-<ol type="1">
-<li><p><span class="math inline">\(\mu = 10, \sigma = 5,\)</span> and <span class="math inline">\(n = 18\)</span> cases per batch</p></li>
-<li><p><span class="math inline">\(\mu = -4, \sigma = 2,\)</span> and <span class="math inline">\(n = 12\)</span> cases per batch</p></li>
-</ol></li>
-</ol>
+<section id="prepare" class="level2">
+<h2 class="anchored" data-anchor-id="prepare">Prepare</h2>
+<p>📖 Read <a href="https://www.pearson.com/store/en-us/pearsonplus/p/9780137399727.html">Chpts 19 from Stine and Foster</a></p>
+<p>📖 Read FGLI: <a href="https://portal.mypearson.com/course-home/handout/sturdevant21135/Student_Registration_Handout_sturdevant21135.pdf">Chpts 19 from Stine and Foster</a></p>
+</section>
+<section id="participate" class="level2">
+<h2 class="anchored" data-anchor-id="participate">Participate</h2>
+<p>🖥️ <a href="../slides/lect_18.html">Lecture 16</a></p>
+<p><br><br></p>
+<div style="font-size: 0.875em;">
+<p>Back to <a href="../" title="Course schedule">course schedule</a> ⏎</p>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -989,6 +612,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../weeks/week-12.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 12</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../supplemental/chi-squared.html" class="pagination-link">
+        <span class="nav-page-text">Chi squared expected counts</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
