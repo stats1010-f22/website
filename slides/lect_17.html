@@ -704,6 +704,23 @@
 <li class="fragment">We do not have evidence that gender and mood are associated, the data suggests they are independent.</li>
 </ol>
 </div>
+</section>
+<section id="example-3---solns-2" class="slide level2">
+<h2>Example 3 - solns</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>d <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">count</span>(mood, gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> mood, <span class="at">values_from =</span> n) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">select</span>(<span class="sc">-</span>gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="fu">chisq.test</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  .
+X-squared = 5.0999, df = 2, p-value = 0.07809</code></pre>
+</div>
+</div>
 </section></section>
 <section id="general-vs-specific-hypothesis" class="title-slide slide level1 center">
 <h1>General vs Specific Hypothesis</h1>

@@ -2856,6 +2856,13 @@
     "text": "Example 3 - solns\n\n\n1 - pchisq(5.099, df = 2)\\(\\approx 0.078\\)\nWe fail to reject \\(H_0\\)\nWe do not have evidence that gender and mood are associated, the data suggests they are independent."
   },
   {
+    "objectID": "slides/lect_17.html#example-3---solns-2",
+    "href": "slides/lect_17.html#example-3---solns-2",
+    "title": "Chapter 18: Inference for counts",
+    "section": "Example 3 - solns",
+    "text": "Example 3 - solns\n\nd %>% \n  count(mood, gender) %>% \n  pivot_wider(names_from = mood, values_from = n) %>% \n  select(-gender) %>% \n  chisq.test()\n\n\n    Pearson's Chi-squared test\n\ndata:  .\nX-squared = 5.0999, df = 2, p-value = 0.07809"
+  },
+  {
     "objectID": "slides/lect_17.html#test-for-goodness-of-fit",
     "href": "slides/lect_17.html#test-for-goodness-of-fit",
     "title": "Chapter 18: Inference for counts",
