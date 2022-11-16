@@ -12,7 +12,7 @@ editor: visual
 
 ## Participate
 
-🖥️ [Lecture 16](/slides/lect_18.html)
+🖥️ [Lecture 18](/slides/lect_18.html)
 
 <br><br>
 

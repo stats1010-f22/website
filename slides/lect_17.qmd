@@ -68,7 +68,7 @@ If one variable is independent of the other, then the variable should have the s
 Expected counts
 
 |             |       | Divisions                  |                            |       |
-|--------------|--------------|---------------|------------------|--------------|
+|---------------|---------------|--------------|---------------|---------------|
 |             |       | Clerical                   | Production                 | Total |
 | Preferences | 5-day | $45/129\cdot63 \approx 22$ | $84/129\cdot63 \approx 41$ | 63    |
 |             | 4-day | $45/129\cdot66 \approx 23$ | $45/129\cdot66 \approx 43$ | 66    |
@@ -227,9 +227,8 @@ In [example 2](https://stats1010-f22.github.io/website/slides/lect_17.html#/exam
 ::: incremental
 1.  $H_0: p_h = p_m = p_s$ and $H_A: \text{at least one differs}$
 2.  $\alpha = 0.05$
-3. [Yes](https://stats1010-f22.github.io/website/slides/lect_17.html#/example-2---solns).
-4.  $\begin{aligned} \chi^2 &= sum\frac{(observed - expected)^2}{expected} \\ &= \frac{(100-81.7)^2}{81.7} + \frac{(70-88.3)^2}{88.3} + ... + \frac{(120-199.5)^2}{119.5}\\ &\approx 5.0999\end{aligned}$
-$df = (3-1)\cdot(2-1)$
+3.  [Yes](https://stats1010-f22.github.io/website/slides/lect_17.html#/example-2---solns).
+4.  $\begin{aligned} \chi^2 &= sum\frac{(observed - expected)^2}{expected} \\ &= \frac{(100-81.7)^2}{81.7} + \frac{(70-88.3)^2}{88.3} + ... + \frac{(120-199.5)^2}{119.5}\\ &\approx 5.0999\end{aligned}$ $df = (3-1)\cdot(2-1)$
 :::
 
 ## Example 3 - solns
@@ -250,7 +249,20 @@ There are a few places where $\chi^2$ tests are particularly useful. For example
 
 ## Test for goodness of fit
 
-When an outcome is either Binomial or Poisson one way to check that predictions are correct is to perform a $\chi^2$ test on the actual and predicted. 
+When an outcome is either Binomial or Poisson one way to check that predictions are correct is to perform a $\chi^2$ test on the actual and predicted.
+
 ::: incremental
-- In this case, we'd like a large p-value to indicate that these values are *not* independent.
+-   In this case, we'd like a large p-value to indicate that these values are *not* independent.
 :::
+
+
+# Your turn
+
+[Click here](https://stats1010-f22.github.io/website/ae/ae-12.html) or the qr code below
+
+```{r, eval=TRUE, echo=FALSE}
+library(qrcode)
+qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-12.html")
+plot(qr)
+```
+
