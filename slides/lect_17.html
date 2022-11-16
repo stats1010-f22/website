@@ -711,12 +711,13 @@
 </section>
 
 <section>
-<section id="tests-of-goodness-of-fit" class="title-slide slide level1 center">
-<h1>Tests of goodness of fit</h1>
-<p>There are few places where <span class="math inline">\(\chi^2\)</span> tests are particularly useful. For example, in fraud detection. <a href="https://en.wikipedia.org/wiki/Benford%27s_law">Benford’s law</a> outlines the proportion of first digits that are 1 - 9 in a number.</p>
+<section id="tests-for-randomness" class="title-slide slide level1 center">
+<h1>Tests for randomness</h1>
+<p>There are a few places where <span class="math inline">\(\chi^2\)</span> tests are particularly useful. For example, in fraud detection. <a href="https://en.wikipedia.org/wiki/Benford%27s_law">Benford’s law</a> outlines the frequency of first digits (1-9) in a number. If the proportions are significantly different than Benford’s law there may be evidence of fraud.</p>
 </section>
-<section id="test-for-randomness" class="slide level2">
-<h2>Test for randomness</h2>
+<section id="test-for-goodness-of-fit" class="slide level2">
+<h2>Test for goodness of fit</h2>
+<p>When an outcome is either Binomial or Poisson one way to check that predictions are correct is to perform a <span class="math inline">\(\chi^2\)</span> test on the actual and predicted. ::: incremental - In this case, we’d like a large p-value to indicate that these values are <em>not</em> independent. :::</p>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
