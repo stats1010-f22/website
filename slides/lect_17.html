@@ -487,11 +487,11 @@
 <p>Expected counts</p>
 <table>
 <colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 27%">
-<col style="width: 31%">
-<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 24%">
+<col style="width: 18%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -536,7 +536,11 @@
 </section>
 <section id="calculating-chi2-1" class="slide level2">
 <h2>Calculating <span class="math inline">\(\chi^2\)</span></h2>
-<p><span class="math display">\[ \chi^2 = sum\frac{(observed - expected)^2}{expected}\]</span> ## Example 2</p>
+<p><span class="math display">\[ \chi^2 = sum\frac{(observed - expected)^2}{expected}\]</span></p>
+<p>We want to know how much this varies from the <em>expected</em> that is why the <em>expected</em> is the denominator.</p>
+</section>
+<section id="example-2" class="slide level2">
+<h2>Example 2</h2>
 <p>Find the expected counts for the following observed variables</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -545,54 +549,23 @@
  <thead>
   <tr>
    <th style="text-align:left;"> gender </th>
-   <th style="text-align:left;"> mood </th>
-   <th style="text-align:right;"> n </th>
-   <th style="text-align:right;"> sum_gender </th>
-   <th style="text-align:right;"> sum_mood </th>
+   <th style="text-align:right;"> happy </th>
+   <th style="text-align:right;"> meh </th>
+   <th style="text-align:right;"> sad </th>
   </tr>
  </thead>
 <tbody>
   <tr>
    <td style="text-align:left;"> female </td>
-   <td style="text-align:left;"> happy </td>
    <td style="text-align:right;"> 100 </td>
-   <td style="text-align:right;"> 240 </td>
-   <td style="text-align:right;"> 170 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> female </td>
-   <td style="text-align:left;"> meh </td>
    <td style="text-align:right;"> 30 </td>
-   <td style="text-align:right;"> 240 </td>
-   <td style="text-align:right;"> 62 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> female </td>
-   <td style="text-align:left;"> sad </td>
    <td style="text-align:right;"> 110 </td>
-   <td style="text-align:right;"> 240 </td>
-   <td style="text-align:right;"> 230 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> male </td>
-   <td style="text-align:left;"> happy </td>
    <td style="text-align:right;"> 70 </td>
-   <td style="text-align:right;"> 222 </td>
-   <td style="text-align:right;"> 170 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> male </td>
-   <td style="text-align:left;"> meh </td>
    <td style="text-align:right;"> 32 </td>
-   <td style="text-align:right;"> 222 </td>
-   <td style="text-align:right;"> 62 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> male </td>
-   <td style="text-align:left;"> sad </td>
    <td style="text-align:right;"> 120 </td>
-   <td style="text-align:right;"> 222 </td>
-   <td style="text-align:right;"> 230 </td>
   </tr>
 </tbody>
 </table>
@@ -666,7 +639,7 @@
 <li>No lurking variables</li>
 <li>Data is a random sample from the population</li>
 <li>Categories must be mutually exclusive</li>
-<li>Each cell count must be at least 5 or 10 (more here)</li>
+<li>Each cell count must be at least 5 or 10 (more <a href="https://stats1010-f22.github.io/website/slides/lect_17.html#/degrees-of-freedom">here</a>)</li>
 </ol>
 </section></section>
 <section>
@@ -678,7 +651,10 @@
 <h2>degrees of freedom</h2>
 <p><span class="math display">\[df \text{ for a } \chi^2 \text{ test of independence} = (r-1)(c-1)\]</span></p>
 <p>where <span class="math inline">\(r= \text{number of rows}\)</span> and <span class="math inline">\(c= \text{number of columns}\)</span></p>
-<p>Assumption: 4. Each cell count ideally 10, or 5 if the test has 4 or more degrees of freedom.</p>
+<p>Assumptions:</p>
+<ol start="4" type="1">
+<li>Each cell count ideally 10, or 5 if the test has 4 or more degrees of freedom.</li>
+</ol>
 </section>
 <section id="in-r" class="slide level2">
 <h2>In <code>R</code></h2>
@@ -694,22 +670,58 @@
 </section>
 <section id="example-3" class="slide level2">
 <h2>Example 3</h2>
+<p>In <a href="https://stats1010-f22.github.io/website/slides/lect_17.html#/example-2">example 2</a>, perform a hypothesis test and find the <span class="math inline">\(\chi^2\)</span> value and the p-value. Are gender and mood independent?</p>
+</section>
+<section id="steps-for-a-hypothesis-test" class="slide level2">
+<h2>Steps for a hypothesis test</h2>
+<ol type="1">
+<li>State hypotheses</li>
+<li>Determine the level of significance</li>
+<li>Check conditions</li>
+<li>Calculate test statistic</li>
+<li>Compute p-value</li>
+<li>Generic conclusion</li>
+<li>Interpret in context</li>
+</ol>
 </section>
 <section id="example-3---solns" class="slide level2">
 <h2>Example 3 - solns</h2>
+<div>
+<ol type="1">
+<li class="fragment"><span class="math inline">\(H_0: p_h = p_m = p_s\)</span> and <span class="math inline">\(H_A: \text{at least one differs}\)</span></li>
+<li class="fragment"><span class="math inline">\(\alpha = 0.05\)</span></li>
+<li class="fragment"><a href="https://stats1010-f22.github.io/website/slides/lect_17.html#/example-2---solns">Yes</a>.</li>
+<li class="fragment"><span class="math inline">\(\begin{aligned} \chi^2 &amp;= sum\frac{(observed - expected)^2}{expected} \\ &amp;= \frac{(100-81.7)^2}{81.7} + \frac{(70-88.3)^2}{88.3} + ... + \frac{(120-199.5)^2}{119.5}\\ &amp;\approx 5.0999\end{aligned}\)</span> <span class="math inline">\(df = (3-1)\cdot(2-1)\)</span></li>
+</ol>
+</div>
+</section>
+<section id="example-3---solns-1" class="slide level2">
+<h2>Example 3 - solns</h2>
+<div>
+<ol start="5" type="1">
+<li class="fragment"><code>1 - pchisq(5.099, df = 2)</code><span class="math inline">\(\approx 0.078\)</span></li>
+<li class="fragment">We fail to reject <span class="math inline">\(H_0\)</span></li>
+<li class="fragment">We do not have evidence that gender and mood are associated, the data suggests they are independent.</li>
+</ol>
+</div>
 </section></section>
 <section id="general-vs-specific-hypothesis" class="title-slide slide level1 center">
 <h1>General vs Specific Hypothesis</h1>
-<p>The <span class="math inline">\(\chi^2\)</span> test is a general test for if the</p>
+<p>The <span class="math inline">\(\chi^2\)</span> test is a general test that provides evidence that one of the proportions might differ. To estimate which proportion differs we will need to build a confidence intervals like we did <a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/two-sample-z-test-for-proportions">here</a>.</p>
 </section>
 
+<section>
 <section id="tests-of-goodness-of-fit" class="title-slide slide level1 center">
 <h1>Tests of goodness of fit</h1>
+<p>There are few places where <span class="math inline">\(\chi^2\)</span> tests are particularly useful. For example, in fraud detection. <a href="https://en.wikipedia.org/wiki/Benford%27s_law">Benford’s law</a> outlines the proportion of first digits that are 1 - 9 in a number.</p>
+</section>
+<section id="test-for-randomness" class="slide level2">
+<h2>Test for randomness</h2>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
