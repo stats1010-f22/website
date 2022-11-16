@@ -59,8 +59,7 @@ b\. State $H_0$ for the $\chi^2$ test of independence in terms of the parameters
 ## Example 1 - solns
 
 a.  Independence means that all the percent of people who prefer a 5-day work week is the same in all divisions. Lack of independence implies different percentages across divisions
-b.  $H_0: p_{clerical} = p_{production}$ 
-$H_A: \text{at least one of these differs}$
+b.  $H_0: p_{clerical} = p_{production}$ $H_A: \text{at least one of these differs}$
 
 ## Calculating $\chi^2$
 
@@ -69,16 +68,18 @@ If one variable is independent of the other, then the variable should have the s
 Expected counts
 
 |             |       | Divisions                  |                            |       |
-|---------------|---------------|-----------------------------|---------------------------------|--------------|
+|--------------|--------------|---------------|------------------|--------------|
 |             |       | Clerical                   | Production                 | Total |
 | Preferences | 5-day | $45/129\cdot63 \approx 22$ | $84/129\cdot63 \approx 41$ | 63    |
 |             | 4-day | $45/129\cdot66 \approx 23$ | $45/129\cdot66 \approx 43$ | 66    |
 |             | Total | 45                         | 84                         | 129   |
 
-
 ## Calculating $\chi^2$
 
 $$ \chi^2 = sum\frac{(observed - expected)^2}{expected}$$
+
+We want to know how much this varies from the *expected* that is why the *expected* is the denominator.
+
 ## Example 2
 
 Find the expected counts for the following observed variables
@@ -98,11 +99,8 @@ d <- tibble(gender, mood)
 ## contingency table
 d %>% 
   count(gender, mood) %>% 
-  group_by(gender) %>% 
-  mutate(sum_gender = sum(n)) %>% 
-  ungroup() %>% 
-  group_by(mood) %>% 
-  mutate(sum_mood = sum(n)) %>% 
+  pivot_wider(names_from = mood, 
+              values_from = n) %>% 
   kbl() %>%
   kable_styling()
 ```
@@ -134,7 +132,6 @@ chi$expected %>%
   kbl() %>% 
   kable_styling()
 ```
-
 
 ## Plot
 
@@ -177,17 +174,17 @@ ggplot(data = d) +
 ```
 :::
 :::
+
 ## Reading plots
 
-If the color change in the bars are approximately at the same height in every level of the variable on the $x$ axis, this is evidence against rejecting $H_0$. We might be more inclined to think that $H_0$ is true. 
+If the color change in the bars are approximately at the same height in every level of the variable on the $x$ axis, this is evidence against rejecting $H_0$. We might be more inclined to think that $H_0$ is true.
 
 ## Assumptions
 
-1. No lurking variables
-2. Data is a random sample from the population
-3. Categories must be mutually exclusive
-4. Each cell count must be at least 5 or 10 (more here)
-
+1.  No lurking variables
+2.  Data is a random sample from the population
+3.  Categories must be mutually exclusive
+4.  Each cell count must be at least 5 or 10 (more [here](https://stats1010-f22.github.io/website/slides/lect_17.html#/degrees-of-freedom))
 
 #  {background-iframe="https://nzgwynn.shinyapps.io/chi-squared/"}
 
@@ -197,28 +194,59 @@ $$df \text{ for a } \chi^2 \text{ test of independence} = (r-1)(c-1)$$
 
 where $r= \text{number of rows}$ and $c= \text{number of columns}$
 
-Assumption:
-4. Each cell count ideally 10, or 5 if the test has 4 or more degrees of freedom.
+Assumptions:
+
+4.  Each cell count ideally 10, or 5 if the test has 4 or more degrees of freedom.
 
 ## In `R`
 
 ::: incremental
-1. Find the totals
-2. Compute the expected counts
-3. Calculate $\chi^2 = sum\frac{(observed - expected)^2}{expected}$
-1. Find the df $(r-1)(c-1)$
-4. Solve for the p-value `1 - pchisq(chi-square, df)`
+1.  Find the totals
+2.  Compute the expected counts
+3.  Calculate $\chi^2 = sum\frac{(observed - expected)^2}{expected}$
+4.  Find the df $(r-1)(c-1)$
+5.  Solve for the p-value `1 - pchisq(chi-square, df)`
 :::
 
 ## Example 3
 
+In [example 2](https://stats1010-f22.github.io/website/slides/lect_17.html#/example-2), perform a hypothesis test and find the $\chi^2$ value and the p-value. Are gender and mood independent?
 
+## Steps for a hypothesis test
+
+1.  State hypotheses
+2.  Determine the level of significance
+3.  Check conditions
+4.  Calculate test statistic
+5.  Compute p-value
+6.  Generic conclusion
+7.  Interpret in context
 
 ## Example 3 - solns
+
+::: incremental
+1.  $H_0: p_h = p_m = p_s$ and $H_A: \text{at least one differs}$
+2.  $\alpha = 0.05$
+3. [Yes](https://stats1010-f22.github.io/website/slides/lect_17.html#/example-2---solns).
+4.  $\begin{aligned} \chi^2 &= sum\frac{(observed - expected)^2}{expected} \\ &= \frac{(100-81.7)^2}{81.7} + \frac{(70-88.3)^2}{88.3} + ... + \frac{(120-199.5)^2}{119.5}\\ &\approx 5.0999\end{aligned}$
+$df = (3-1)\cdot(2-1)$
+:::
+
+## Example 3 - solns
+
+::: incremental
+5.  `1 - pchisq(5.099, df = 2)`$\approx 0.078$
+6.  We fail to reject $H_0$
+7.  We do not have evidence that gender and mood are associated, the data suggests they are independent.
+:::
 
 
 # General vs Specific Hypothesis
 
-The $\chi^2$ test is a general test for if the 
+The $\chi^2$ test is a general test that provides evidence that one of the proportions might differ. To estimate which proportion differs we will need to build a confidence intervals like we did [here](https://stats1010-f22.github.io/website/slides/lect_16.html#/two-sample-z-test-for-proportions).
 
 # Tests of goodness of fit
+
+There are few places where $\chi^2$ tests are particularly useful. For example, in fraud detection. [Benford's law](https://en.wikipedia.org/wiki/Benford%27s_law)  outlines the proportion of first digits that are 1 - 9 in a number.  
+
+## Test for randomness
