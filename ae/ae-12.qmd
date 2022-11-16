@@ -1,0 +1,56 @@
+---
+title: "$\chi^2 test: AE - 11"
+output: 
+   html_document
+---
+
+::: callout-important
+This application exercise is due on 21 Nov at 5:00pm.
+:::
+
+Match each item on the left with its correct description on the right.
+
+1.  Number of degrees of freedom in the chi-squared test of independence in a 2 × 2 table
+2.  Number of constraints on frequencies in the chi-squared test of goodness of fit of a binomial distribution
+3.  P-value if $\chi^2$ = 9.488 when testing for independence in a 3 × 3 table
+4.  P-value if $\chi^2$ = 16.812 when testing the null hypothesis that a categorical variable with 7 levels has a uniform distribution
+5.  Smallest possible value of $\chi^2$
+6.  Impossible value for $\chi^2$
+7.  Reject the null hypothesis of independence in a 3 × 4 contingency table if $\chi^2$ is larger than this value and $\alpha = 0.05$
+8.  Reject the null hypothesis of independence in a 6 × 3 contingency table if $\chi^2$ is larger than this value and $\alpha = 0.01$
+9.  The expected cell count in a table should be larger than this number when using $\chi^2$
+10. Number of degrees of freedom if using chi-squared to test whether four proportions are the same
+
+|       |          |            |        |       |          |       |       |            |        |
+|-------|----------|------------|--------|-------|----------|-------|-------|------------|--------|
+| a\. 0 | b\. 0.01 | c\. 23.209 | d\. 10 | e\. 1 | f\. 0.05 | g\. 3 | h\. 2 | i\. 12.592 | j\. -1 |
+
+True/False
+
+11. The chi-squared test of independence only detects linear association between the variables in a contingency table.
+
+12. A statistically significant $\chi^2$ in the test of independence implies a causal relationship between the variables that define a contingency table.
+
+13. The expected size of the chi-squared statistic $\chi^2$ increases with the number of observations $n$ in the table.
+
+14. A stock market analyst recorded the number of stocks that went up or went down each day for 5 consecutive days, producing a contingency table with two rows (up or down) and five columns (Monday through Friday). Are these data suitable for applying the chi-squared test of independence?
+
+15. The human resources group regularly interviews prospective clerical employees and tests their skill at data entry. The following table shows the number of errors made by 60 prospective clerks when entering a form with 80 numbers. (Five clerks made four errors.) Test the null hypothesis that the number of errors follows a Poisson distribution. Find the
+
+    | errors    | Clerks |
+    |-----------|--------|
+    | 0         | 12     |
+    | 1         | 20     |
+    | 2         | 9      |
+    | 3         | 14     |
+    | 4 or more | 5      |
+
+    a\. Rate (or mean) of the Poisson distribution
+
+    b\. Expected number of employees who do not make an error
+
+    c\. Degrees of freedom of $\chi^2$
+
+    d\. $\chi^2$
+
+    e\. p-value for testing H~0~.

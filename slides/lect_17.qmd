@@ -250,4 +250,7 @@ There are a few places where $\chi^2$ tests are particularly useful. For example
 
 ## Test for goodness of fit
 
-There are times when modeling 
+When an outcome is either Binomial or Poisson one way to check that predictions are correct is to perform a $\chi^2$ test on the actual and predicted. 
+::: incremental
+- In this case, we'd like a large p-value to indicate that these values are *not* independent.
+:::
