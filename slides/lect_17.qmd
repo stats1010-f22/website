@@ -41,7 +41,7 @@ $$H_A: \text{Qualitative variable 1 and Qualitative variable 2 are not independe
 
 ## Example 1 {.smaller}
 
-A manufacturing firm is considering a shift from a 5-day workweek (8 hours per day) to a 4-day workweek (10 hours per day). Samples of the preferences of 188 employees in four divisions produced the following contingency table:
+A manufacturing firm is considering a shift from a 5-day workweek (8 hours per day) to a 4-day workweek (10 hours per day). Samples of the preferences of 188 employees in two divisions produced the following contingency table:
 
 Observed counts
 
@@ -255,7 +255,6 @@ When an outcome is either Binomial or Poisson one way to check that predictions 
 -   In this case, we'd like a large p-value to indicate that these values are *not* independent.
 :::
 
-
 # Your turn
 
 [Click here](https://stats1010-f22.github.io/website/ae/ae-12.html) or the qr code below
@@ -265,4 +264,3 @@ library(qrcode)
 qr <- qr_code("https://stats1010-f22.github.io/website/ae/ae-12.html")
 plot(qr)
 ```
-
