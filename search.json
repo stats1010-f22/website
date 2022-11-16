@@ -2755,7 +2755,7 @@
     "href": "slides/lect_17.html#example-1",
     "title": "Chapter 18: Inference for counts",
     "section": "Example 1",
-    "text": "Example 1\nA manufacturing firm is considering a shift from a 5-day workweek (8 hours per day) to a 4-day workweek (10 hours per day). Samples of the preferences of 188 employees in four divisions produced the following contingency table:\nObserved counts\n\n\n\n\n\nDivisions\n\n\n\n\n\n\n\n\nClerical\nProduction\nTotal\n\n\nPreferences\n5-day\n17\n46\n63\n\n\n\n4-day\n28\n38\n66\n\n\n\nTotal\n45\n84\n129\n\n\n\na. What would it mean if the preference of employees is independent of division?\nb. State \\(H_0\\) for the \\(\\chi^2\\) test of independence in terms of the parameters of four segments of the population of employees."
+    "text": "Example 1\nA manufacturing firm is considering a shift from a 5-day workweek (8 hours per day) to a 4-day workweek (10 hours per day). Samples of the preferences of 188 employees in two divisions produced the following contingency table:\nObserved counts\n\n\n\n\n\nDivisions\n\n\n\n\n\n\n\n\nClerical\nProduction\nTotal\n\n\nPreferences\n5-day\n17\n46\n63\n\n\n\n4-day\n28\n38\n66\n\n\n\nTotal\n45\n84\n129\n\n\n\na. What would it mean if the preference of employees is independent of division?\nb. State \\(H_0\\) for the \\(\\chi^2\\) test of independence in terms of the parameters of four segments of the population of employees."
   },
   {
     "objectID": "slides/lect_17.html#example-1---solns",
