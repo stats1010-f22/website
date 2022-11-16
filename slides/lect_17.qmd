@@ -239,6 +239,20 @@ In [example 2](https://stats1010-f22.github.io/website/slides/lect_17.html#/exam
 7.  We do not have evidence that gender and mood are associated, the data suggests they are independent.
 :::
 
+## Example 3 - solns
+
+```{r chi-square-R}
+#| echo: true
+#| eval: true
+
+d %>% 
+  count(mood, gender) %>% 
+  pivot_wider(names_from = mood, values_from = n) %>% 
+  select(-gender) %>% 
+  chisq.test()
+```
+
+
 # General vs Specific Hypothesis
 
 The $\chi^2$ test is a general test that provides evidence that one of the proportions might differ. To estimate which proportion differs we will need to build a confidence intervals like we did [here](https://stats1010-f22.github.io/website/slides/lect_16.html#/two-sample-z-test-for-proportions).
