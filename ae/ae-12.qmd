@@ -1,5 +1,5 @@
 ---
-title: "$\chi^2 test: AE - 11"
+title: "Chi-squared test: AE - 11"
 output: 
    html_document
 ---
@@ -22,7 +22,7 @@ Match each item on the left with its correct description on the right.
 10. Number of degrees of freedom if using chi-squared to test whether four proportions are the same
 
 |       |          |            |        |       |          |       |       |            |        |
-|-------|----------|------------|--------|-------|----------|-------|-------|------------|--------|
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 | a\. 0 | b\. 0.01 | c\. 23.209 | d\. 10 | e\. 1 | f\. 0.05 | g\. 3 | h\. 2 | i\. 12.592 | j\. -1 |
 
 True/False
