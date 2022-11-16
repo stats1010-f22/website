@@ -240,13 +240,14 @@ $df = (3-1)\cdot(2-1)$
 7.  We do not have evidence that gender and mood are associated, the data suggests they are independent.
 :::
 
-
 # General vs Specific Hypothesis
 
 The $\chi^2$ test is a general test that provides evidence that one of the proportions might differ. To estimate which proportion differs we will need to build a confidence intervals like we did [here](https://stats1010-f22.github.io/website/slides/lect_16.html#/two-sample-z-test-for-proportions).
 
-# Tests of goodness of fit
+# Tests for randomness
 
-There are few places where $\chi^2$ tests are particularly useful. For example, in fraud detection. [Benford's law](https://en.wikipedia.org/wiki/Benford%27s_law)  outlines the proportion of first digits that are 1 - 9 in a number.  
+There are a few places where $\chi^2$ tests are particularly useful. For example, in fraud detection. [Benford's law](https://en.wikipedia.org/wiki/Benford%27s_law) outlines the frequency of first digits (1-9) in a number. If the proportions are significantly different than Benford's law there may be evidence of fraud.
 
-## Test for randomness
+## Test for goodness of fit
+
+There are times when modeling 
