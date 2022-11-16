@@ -1,0 +1,21 @@
+---
+title: "Week 12"
+subtitle: "Comparison and inference for counts"
+editor: visual
+---
+
+## Prepare
+
+📖 Read [Chpts 19 from Stine and Foster](https://www.pearson.com/store/en-us/pearsonplus/p/9780137399727.html)
+
+📖 Read FGLI: [Chpts 19 from Stine and Foster](https://portal.mypearson.com/course-home/handout/sturdevant21135/Student_Registration_Handout_sturdevant21135.pdf)
+
+## Participate
+
+🖥️ [Lecture 16](/slides/lect_18.html)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Back to [course schedule](/ "Course schedule") ⏎
+:::
