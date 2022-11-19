@@ -92,6 +92,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../supplemental/exam-1-studyguide.html" rel="next">
+<link href="../supplemental/poisson.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -359,12 +361,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">Supplemental notes</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Supplemental notes</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../supplemental/chi-squared.html" class="sidebar-item-text sidebar-link">Chi squared expected counts</a>
@@ -377,7 +379,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exam3_R.qmd" class="sidebar-item-text sidebar-link">CIs, tests, and comparison in <code>R</code></a>
+  <a href="../supplemental/tests_R.html" class="sidebar-item-text sidebar-link active">CIs, tests, and comparison in <code>R</code></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -529,13 +531,13 @@ sample estimates:
     1-sample proportions test with continuity correction
 
 data:  heads out of 100, null probability 0.5
-X-squared = 0.81, df = 1, p-value = 0.3681
+X-squared = 0.49, df = 1, p-value = 0.4839
 alternative hypothesis: true p is not equal to 0.5
 95 percent confidence interval:
- 0.4475426 0.6485719
+ 0.3608720 0.5622361
 sample estimates:
    p 
-0.55 </code></pre>
+0.46 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For a 89% confidence interval</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> heads, <span class="at">n =</span> <span class="dv">100</span>, <span class="at">conf.level =</span> <span class="fl">0.89</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -544,13 +546,13 @@ sample estimates:
     1-sample proportions test with continuity correction
 
 data:  heads out of 100, null probability 0.5
-X-squared = 0.81, df = 1, p-value = 0.3681
+X-squared = 0.49, df = 1, p-value = 0.4839
 alternative hypothesis: true p is not equal to 0.5
 89 percent confidence interval:
- 0.4652832 0.6320715
+ 0.3775247 0.5445912
 sample estimates:
    p 
-0.55 </code></pre>
+0.46 </code></pre>
 </div>
 </div>
 </section>
@@ -977,6 +979,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../supplemental/poisson.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Poisson derivation</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../supplemental/exam-1-studyguide.html" class="pagination-link">
+        <span class="nav-page-text">Exam 1 study guide</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
