@@ -5,7 +5,7 @@ author: "Team name <br> Names of team members"
 institute: "Wharton School of Business"
 date: "`r Sys.Date()`"
 output:
-  format: revealjs:
+  format: revealjs
   xaringan::moon_reader:
     css: xaringan-themer.css
     lib_dir: libs
