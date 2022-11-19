@@ -742,46 +742,172 @@
     "text": "Taking the Limit\nThe formula we have reads \\[\\frac{n(n-1)(n-14)}{15!}\\cdot\\frac{12^{15}}{n^{15}}\\cdot\\left(1-\\frac{12}{n}\\right)^n\\cdot\\frac{1}{\\left(1-\\frac{12}{n}\\right)^{15}}.\\] I can see how parts of this formula change as \\(n\\) grows larger and larger.\nFor instance \\[ \\frac{1}{\\left(1-\\frac{12}{n}\\right)^{15}}\\to\\frac{1}{(1-0)^{15}}=1\\] as \\(n\\) grows.\nAlso, \\[ \\frac{n(n-1)\\cdots(n-14)}{n^{15}}=\\left(1-\\frac{1}{n}\\right)\\left(1-\\frac{2}{n}\\right)\\cdots\\left(1-\\frac{14}{n}\\right)\\to1\\cdot\\cdots 1 = 1\\] as \\(n\\) grows.\nAnd the formula \\(\\left(1-\\frac{12}{n}\\right)^{n}\\) is reminiscent of the famous compound-interest formula \\[ \\lim_{n\\to\\infty}\\left(1+\\frac{1}{n}\\right)^n=e\\] or more generally, \\[ \\lim_{n\\to\\infty}\\left(1+\\frac{x}{n}\\right)^n=e^x\\] So we have that \\[ \\left(1-\\frac{12}{n}\\right)^n\\to e^{-12}\\] as \\(n\\) grows.\nSo we see that our formula, \\[\n\\left(\\begin{array}{c}\nn \\\\\n15\n\\end{array}\\right)\\left(\\frac{12}{n}\\right)^{15}\\left(1-\\frac{12}{n}\\right)^{n-15}\n\\] in the absolute ideal of looking at finer and finer intervals over the hour, becomes the formula \\[\n1 \\cdot \\frac{12^{15}}{15 !} \\cdot e^{-12} \\cdot 1=\\frac{12^{15}}{15 !} e^{-12}.\n\\] This has value \\(\\approx 0.072\\). There is about a \\(7\\)% chance I will see \\(15\\) cars over any given hour.\nMost important, this work has led us to the Poisson probability distribution formula!\nIf you have a phenomenon that seems to occur at a more-or-less steady rate, with the number occurrences during any set time length seeming to be more-or-less the same over all periods of that length, and no two events can occur at exactly the same instant, then, if you have good reason to believe that, for a given period length, on average \\(\\lambda\\) events occur, the probability that you will see \\(k\\) events during any particular time period of that length is \\[\\frac{\\lambda^k}{k !} e^{-\\lambda}.\\]\nThis is the Poisson distribution.\nI am guessing that many astronomical phenomena occur at more-or-less steady rates, on average—meteor strikes to the Earth, appearance of Sun spots—and so maybe close to everything in astronomy is indeed Poisson?\nAside: From \\(\\lim_{n\\to\\infty}\\left(1+\\frac{1}{n}\\right)^n=e\\) we see that \\[\n\\left(1+\\frac{x}{n}\\right)^n=\\left(\\left(1+\\frac{1}{n / x}\\right)^{n / x}\\right)^x \\rightarrow(e)^x\n\\]\nif \\(x\\) is positive (since \\(n/x\\) grows large and positive if \\(n\\) does). We also establish \\[\\lim _{n \\rightarrow \\infty}\\left(1-\\frac{1}{n}\\right)^n=e^{-1}\\]\nby observing that \\[\\begin{aligned}\\left(1-\\frac{1}{n}\\right)^n &=\\left(\\frac{n-1}{n}\\right)^n=\\frac{1}{\\left(\\frac{n}{n-1}\\right)^n} \\\\ &=\\frac{1}{\\left(1+\\frac{1}{n-1}\\right)^{n-1} \\cdot\\left(1+\\frac{1}{n-1}\\right)} \\\\ & \\rightarrow \\frac{1}{e \\cdot(1+0)}=\\frac{1}{e} \\end{aligned}\\]\nas \\(n\\) grows.\nFollowing similar algebra, we see that for negative \\(x\\), setting \\(y=-x\\), \\[ \\left(1+\\frac{x}{n}\\right)^n=\\left(1-\\frac{y}{n}\\right)^n=\\left(\\left(1-\\frac{1}{n/y}\\right)^{n/y}\\right)^y\\to e^{-y}=e^{x}.\\] Therefore \\[\n\\lim_{n\\to\\infty}\\left(1+\\frac{x}{n}\\right)^n=e^x\n\\] even if \\(x\\) is negative.\n© 2017 James Tanton tanton.math@gmail.com"
   },
   {
-    "objectID": "supplemental/model-diagnostics-matrix.html",
-    "href": "supplemental/model-diagnostics-matrix.html",
-    "title": "Model Diagnostics",
+    "objectID": "supplemental/exam-3-studyguide.html",
+    "href": "supplemental/exam-3-studyguide.html",
+    "title": "Study list for exam 3",
     "section": "",
-    "text": "Note\n\n\n\nThe following supplemental notes were created by Dr. Maria Tackett for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.\nThis document discusses some of the mathematical details of the model diagnostics - leverage, standardized residuals, and Cook’s distance. We assume the reader knowledge of the matrix form for multiple linear regression. Please see Matrix Form of Linear Regression for a review."
+    "text": "The R functions we have discussed in these weeks:"
   },
   {
-    "objectID": "supplemental/model-diagnostics-matrix.html#introduction",
-    "href": "supplemental/model-diagnostics-matrix.html#introduction",
-    "title": "Model Diagnostics",
-    "section": "Introduction",
-    "text": "Introduction\nSuppose we have \\(n\\) observations. Let the \\(i^{th}\\) be \\((x_{i1}, \\ldots, x_{ip}, y_i)\\), such that \\(x_{i1}, \\ldots, x_{ip}\\) are the explanatory variables (predictors) and \\(y_i\\) is the response variable. We assume the data can be modeled using the least-squares regression model, such that the mean response for a given combination of explanatory variables follows the form in Equation 1.\n\\[\ny = \\beta_0 + \\beta_1 x_1 + \\dots + \\beta_p x_p\n\\tag{1}\\]\nWe can write the response for the \\(i^{th}\\) observation as shown in Equation 2.\n\\[\ny_i = \\beta_0 + \\beta_1 x_{i1} + \\dots + \\beta_p x_{ip} + \\epsilon_i\n\\tag{2}\\]\nsuch that \\(\\epsilon_i\\) is the amount \\(y_i\\) deviates from \\(\\mu\\{y|x_{i1}, \\ldots, x_{ip}\\}\\), the mean response for a given combination of explanatory variables. We assume each \\(\\epsilon_i \\sim N(0,\\sigma^2)\\), where \\(\\sigma^2\\) is a constant variance for the distribution of the response \\(y\\) for any combination of explanatory variables \\(x_1, \\ldots, x_p\\)."
+    "objectID": "supplemental/exam-3-studyguide.html#addition-rules",
+    "href": "supplemental/exam-3-studyguide.html#addition-rules",
+    "title": "Study list for exam 3",
+    "section": "Addition rules",
+    "text": "Addition rules\n-\\(E(X \\pm c) = E(X) \\pm c\\)\n-\\(SD(X \\pm c) = SD(X)\\)\n-\\(Var(X \\pm c) = Var(X)\\)"
   },
   {
-    "objectID": "supplemental/model-diagnostics-matrix.html#matrix-form-for-the-regression-model",
-    "href": "supplemental/model-diagnostics-matrix.html#matrix-form-for-the-regression-model",
-    "title": "Model Diagnostics",
-    "section": "Matrix Form for the Regression Model",
-    "text": "Matrix Form for the Regression Model\nWe can represent the Equation 1 and Equation 2 using matrix notation. Let\n\\[\n\\mathbf{Y} = \\begin{bmatrix}y_1 \\\\ y_2 \\\\ \\vdots \\\\y_n\\end{bmatrix}\n\\hspace{15mm}\n\\mathbf{X} = \\begin{bmatrix}x_{11} & x_{12} & \\dots & x_{1p} \\\\\nx_{21} & x_{22} & \\dots & x_{2p} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots\\\\\nx_{n1} & x_{n2} & \\dots & x_{np} \\end{bmatrix}\n\\hspace{15mm}\n\\boldsymbol{\\beta}= \\begin{bmatrix}\\beta_0 \\\\ \\beta_1 \\\\ \\vdots \\\\ \\beta_p \\end{bmatrix}\n\\hspace{15mm}\n\\boldsymbol{\\epsilon}= \\begin{bmatrix}\\epsilon_1 \\\\ \\epsilon_2 \\\\ \\vdots \\\\ \\epsilon_n \\end{bmatrix}\n\\tag{3}\\]\nThus,\n\\[\\mathbf{Y} = \\mathbf{X}\\boldsymbol{\\beta} + \\mathbf{\\epsilon}\\]\nTherefore the estimated response for a given combination of explanatory variables and the associated residuals can be written as\n\\[\n\\hat{\\mathbf{Y}} = \\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\hspace{10mm} \\mathbf{e} = \\mathbf{Y} - \\mathbf{X}\\hat{\\boldsymbol{\\beta}}\n\\tag{4}\\]"
+    "objectID": "supplemental/exam-3-studyguide.html#multiplication-rules",
+    "href": "supplemental/exam-3-studyguide.html#multiplication-rules",
+    "title": "Study list for exam 3",
+    "section": "Multiplication rules",
+    "text": "Multiplication rules\n-\\(E(cX) = cE(X)\\)\n-\\(SD(cX) = |c|SD(X)\\)\n-\\(Var(cX) = c^2Var(X)\\)\n-\\(E(cX \\pm a)=cE(X) \\pm a\\)\n- \\(Var(cX \\pm a)=c^2Var(X)\\)"
   },
   {
-    "objectID": "supplemental/model-diagnostics-matrix.html#hat-matrix-leverage",
-    "href": "supplemental/model-diagnostics-matrix.html#hat-matrix-leverage",
-    "title": "Model Diagnostics",
-    "section": "Hat Matrix & Leverage",
-    "text": "Hat Matrix & Leverage\nRecall from the notes Matrix Form of Linear Regression that \\(\\hat{\\boldsymbol{\\beta}}\\) can be written as the following:\n\\[\n\\hat{\\boldsymbol{\\beta}} = (\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\n\\tag{5}\\]\nCombining Equation 4 and Equation 5, we can write \\(\\hat{\\mathbf{Y}}\\) as the following:\n\\[\n\\begin{aligned}\n\\hat{\\mathbf{Y}} &= \\mathbf{X}\\hat{\\boldsymbol{\\beta}} \\\\[10pt]\n&= \\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\mathbf{Y}\\\\\n\\end{aligned}\n\\tag{6}\\]\nWe define the hat matrix as an \\(n \\times n\\) matrix of the form \\(\\mathbf{H} = \\mathbf{X}(\\mathbf{X}^T\\mathbf{X})^{-1}\\mathbf{X}^T\\). Thus Equation 6 becomes\n\\[\n\\hat{\\mathbf{Y}} = \\mathbf{H}\\mathbf{Y}\n\\tag{7}\\]\nThe diagonal elements of the hat matrix are a measure of how far the predictor variables of each observation are from the means of the predictor variables. For example, \\(h_{ii}\\) is a measure of how far the values of the predictor variables for the \\(i^{th}\\) observation, \\(x_{i1}, x_{i2}, \\ldots, x_{ip}\\), are from the mean values of the predictor variables, \\(\\bar{x}_1, \\bar{x}_2, \\ldots, \\bar{x}_p\\). In the case of simple linear regression, the \\(i^{th}\\) diagonal, \\(h_{ii}\\), can be written as\n\\[\nh_{ii} =  \\frac{1}{n} + \\frac{(x_i - \\bar{x})^2}{\\sum_{j=1}^{n}(x_j-\\bar{x})^2}\n\\]\nWe call these diagonal elements, the leverage of each observation.\nThe diagonal elements of the hat matrix have the following properties:\n\n\\(0 \\leq h_ii \\leq 1\\)\n\\(\\sum\\limits_{i=1}^{n} h_{ii} = p+1\\), where \\(p\\) is the number of predictor variables in the model.\nThe mean hat value is \\(\\bar{h} = \\frac{\\sum\\limits_{i=1}^{n} h_{ii}}{n} = \\frac{p+1}{n}\\).\n\nUsing these properties, we consider a point to have high leverage if it has a leverage value that is more than 2 times the average. In other words, observations with leverage greater than \\(\\frac{2(p+1)}{n}\\) are considered to be high leverage points, i.e. outliers in the predictor variables. We are interested in flagging high leverage points, because they may have an influence on the regression coefficients.\nWhen there are high leverage points in the data, the regression line will tend towards those points; therefore, one property of high leverage points is that they tend to have small residuals. We will show this by rewriting the residuals from Equation 4 using Equation 7.\n\\[\n\\begin{aligned}\n\\mathbf{e} &= \\mathbf{Y} - \\hat{\\mathbf{Y}} \\\\[10pt]\n& = \\mathbf{Y} - \\mathbf{H}\\mathbf{Y} \\\\[10pt]\n&= (1-\\mathbf{H})\\mathbf{Y}\n\\end{aligned}\n\\tag{8}\\]\nNote that the identity matrix and hat matrix are idempotent, i.e. \\(\\mathbf{I}\\mathbf{I} = \\mathbf{I}\\), \\(\\mathbf{H}\\mathbf{H} = \\mathbf{H}\\). Thus, \\((\\mathbf{I} - \\mathbf{H})\\) is also idempotent. These matrices are also symmetric. Using these properties and Equation 8, we have that the variance-covariance matrix of the residuals \\(\\boldsymbol{e}\\), is\n\\[\n\\begin{aligned}\nVar(\\mathbf{e}) &= \\mathbf{e}\\mathbf{e}^T \\\\[10pt]\n&=  (1-\\mathbf{H})Var(\\mathbf{Y})^T(1-\\mathbf{H})^T \\\\[10pt]\n&= (1-\\mathbf{H})\\hat{\\sigma}^2(1-\\mathbf{H})^T  \\\\[10pt]\n&= \\hat{\\sigma}^2(1-\\mathbf{H})(1-\\mathbf{H})  \\\\[10pt]\n&= \\hat{\\sigma}^2(1-\\mathbf{H})\n\\end{aligned}\n\\tag{9}\\]\nwhere \\(\\hat{\\sigma}^2 = \\frac{\\sum_{i=1}^{n}e_i^2}{n-p-1}\\) is the estimated regression variance. Thus, the variance of the \\(i^{th}\\) residual is \\(Var(e_i) = \\hat{\\sigma}^2(1-h_{ii})\\). Therefore, the higher the leverage, the smaller the variance of the residual. Because the expected value of the residuals is 0, we conclude that points with high leverage tend to have smaller residuals than points with lower leverage."
+    "objectID": "supplemental/exam-3-studyguide.html#which-variable-on-which-axis-and-what-are-the-names-for-each-variable",
+    "href": "supplemental/exam-3-studyguide.html#which-variable-on-which-axis-and-what-are-the-names-for-each-variable",
+    "title": "Study list for exam 3",
+    "section": "Which variable on which axis and what are the names for each variable?",
+    "text": "Which variable on which axis and what are the names for each variable?"
   },
   {
-    "objectID": "supplemental/model-diagnostics-matrix.html#standardized-residuals",
-    "href": "supplemental/model-diagnostics-matrix.html#standardized-residuals",
-    "title": "Model Diagnostics",
-    "section": "Standardized Residuals",
-    "text": "Standardized Residuals\nIn general, we standardize a value by shifting by the expected value and rescaling by the standard deviation (or standard error). Thus, the \\(i^{th}\\) standardized residual takes the form\n\\[\nstd.res_i = \\frac{e_i - E(e_i)}{SE(e_i)}\n\\]\nThe expected value of the residuals is 0, i.e. \\(E(e_i) = 0\\). From Equation 9), the standard error of the residual is \\(SE(e_i) = \\hat{\\sigma}\\sqrt{1-h_{ii}}\\). Therefore,\n\\[\nstd.res_i = \\frac{e_i}{\\hat{\\sigma}\\sqrt{1-h_{ii}}}\n\\tag{10}\\]"
+    "objectID": "supplemental/exam-3-studyguide.html#describing-scatter-plots",
+    "href": "supplemental/exam-3-studyguide.html#describing-scatter-plots",
+    "title": "Study list for exam 3",
+    "section": "Describing scatter plots",
+    "text": "Describing scatter plots\n\nHomo and heteroskedastic"
   },
   {
-    "objectID": "supplemental/model-diagnostics-matrix.html#cooks-distance",
-    "href": "supplemental/model-diagnostics-matrix.html#cooks-distance",
-    "title": "Model Diagnostics",
-    "section": "Cook’s Distance",
-    "text": "Cook’s Distance\nCook’s distance is a measure of how much each observation influences the model coefficients, and thus the predicted values. The Cook’s distance for the \\(i^{th}\\) observation can be written as\n\\[\nD_i = \\frac{(\\hat{\\mathbf{Y}} -\\hat{\\mathbf{Y}}_{(i)})^T(\\hat{\\mathbf{Y}} -\\hat{\\mathbf{Y}}_{(i)})}{(p+1)\\hat{\\sigma}}\n\\tag{11}\\]\nwhere \\(\\hat{\\mathbf{Y}}_{(i)}\\) is the vector of predicted values from the model fitted when the \\(i^{th}\\) observation is deleted. Cook’s Distance can be calculated without deleting observations one at a time, since Equation 12 below is mathematically equivalent to Equation 11.\n\\[\nD_i = \\frac{1}{p+1}std.res_i^2\\Bigg[\\frac{h_{ii}}{(1-h_{ii})}\\Bigg] = \\frac{e_i^2}{(p+1)\\hat{\\sigma}^2(1-h_{ii})}\\Bigg[\\frac{h_{ii}}{(1-h_{ii})}\\Bigg]\n\\tag{12}\\]"
+    "objectID": "supplemental/exam-3-studyguide.html#covariance-look-at-a-plot-and-know-if-positive-or-negative",
+    "href": "supplemental/exam-3-studyguide.html#covariance-look-at-a-plot-and-know-if-positive-or-negative",
+    "title": "Study list for exam 3",
+    "section": "Covariance look at a plot and know if positive or negative",
+    "text": "Covariance look at a plot and know if positive or negative\n\\(cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 - \\bar{x})(y_2 - \\bar{y}) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\)"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#correlation---look-at-a-plot-and-approximate",
+    "href": "supplemental/exam-3-studyguide.html#correlation---look-at-a-plot-and-approximate",
+    "title": "Study list for exam 3",
+    "section": "Correlation - look at a plot and approximate",
+    "text": "Correlation - look at a plot and approximate\n\\[corr(x, y) = \\frac{cov(x, y)}{s_x \\cdot s_y}\\]\n\nReferred to as \\(r\\)\nStrength of linear association\n\\(r\\) is always between \\(-1\\) and \\(+1\\), \\(-1 \\leq r \\leq 1\\).\n\\(r\\) does not have units"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#fitting-a-line",
+    "href": "supplemental/exam-3-studyguide.html#fitting-a-line",
+    "title": "Study list for exam 3",
+    "section": "Fitting a line",
+    "text": "Fitting a line\n\\(m = \\frac{r \\cdot s_y}{s_x}\\)\n\\(b = \\bar{y} - m \\bar{x}\\)"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#predicting",
+    "href": "supplemental/exam-3-studyguide.html#predicting",
+    "title": "Study list for exam 3",
+    "section": "Predicting",
+    "text": "Predicting\n\nlibrary(tidymodels)\n\n## Assign the least\n## squares line\nleast_squares_fit <- \n  linear_reg() %>% \n  set_engine(\"lm\") %>% \n  fit(price ~ carat, data = diamonds) \n## NOTE: outcome first, predictor second\n\n## Find the prediction\npredict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))\n\n# A tibble: 4 × 1\n   .pred\n   <dbl>\n1  5500.\n2 13256.\n3 17135.\n4 28769."
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#spurious-correlations",
+    "href": "supplemental/exam-3-studyguide.html#spurious-correlations",
+    "title": "Study list for exam 3",
+    "section": "Spurious correlations",
+    "text": "Spurious correlations\nbirth order associated with increased risk of downs syndrome, etc…"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#the-sharpe-ratio",
+    "href": "supplemental/exam-3-studyguide.html#the-sharpe-ratio",
+    "title": "Study list for exam 3",
+    "section": "The Sharpe ratio",
+    "text": "The Sharpe ratio\n\\(S(X) = \\frac{\\mu_X - r_f}{\\sigma_X}\\) - higher better - how to compute with a calculator from a pdf and also with just \\(\\mu\\) and \\(\\sigma\\) - computing in R"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#joint-pdfs",
+    "href": "supplemental/exam-3-studyguide.html#joint-pdfs",
+    "title": "Study list for exam 3",
+    "section": "Joint pdfs",
+    "text": "Joint pdfs\nFind probability given values Are they independent or not? What do increasing and decreasing joint pdfs look like?\n\\(E(X+Y) = E(X) + E(Y)\\) regardless of independence"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#rules-of-independence",
+    "href": "supplemental/exam-3-studyguide.html#rules-of-independence",
+    "title": "Study list for exam 3",
+    "section": "3 Rules of independence",
+    "text": "3 Rules of independence"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#covariance-of-rv",
+    "href": "supplemental/exam-3-studyguide.html#covariance-of-rv",
+    "title": "Study list for exam 3",
+    "section": "Covariance of RV",
+    "text": "Covariance of RV\n\\(Cov(X, Y) = E((X - \\mu_X)(Y - \\mu_Y))\\) \\(Var(X + Y) = Var(X) + Var(Y) + 2Cov(X, Y)\\) If \\(X\\),\\(Y\\) are independent, then \\(Cov(X, Y) = 0\\), opposite not true If \\(X\\), \\(Y\\) are independent, \\(Cov(X, Y) = 0\\), so \\(Var(X+ Y) = Var(X) + Var(Y)\\)"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#correlation",
+    "href": "supplemental/exam-3-studyguide.html#correlation",
+    "title": "Study list for exam 3",
+    "section": "Correlation",
+    "text": "Correlation\n\\(corr(x, y) = \\frac{cov(x, y)}{s_x \\cdot s_y}\\) \\[\\rho = Corr(X, Y) = \\frac{Cov(X, Y)}{\\sigma_X \\cdot \\sigma_Y}\\] ## IID variables \\(E(aX + bY + c) = aE(X) + bE(Y) + c\\) \\(Var(aX + bY + c) = a^2Var(X) + b^2Var(Y) + 2abCov(X, Y)\\)"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#bernoulli-trial",
+    "href": "supplemental/exam-3-studyguide.html#bernoulli-trial",
+    "title": "Study list for exam 3",
+    "section": "Bernoulli trial",
+    "text": "Bernoulli trial\nexpectation and variance"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#binomial",
+    "href": "supplemental/exam-3-studyguide.html#binomial",
+    "title": "Study list for exam 3",
+    "section": "Binomial",
+    "text": "Binomial\n\\(Y = B_1 + B_2 + ... + B_n\\), where \\(B_1, B_2, ..., B_n\\) Bernoulli trials FIST expectation and variance binomial pdf limiting of \\(p\\) approaches Poisson distribution use R to find these probabilities"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#poisson",
+    "href": "supplemental/exam-3-studyguide.html#poisson",
+    "title": "Study list for exam 3",
+    "section": "Poisson",
+    "text": "Poisson\nRIPS expectation and variance use R to find these probabilities"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#shifts-and-scales-of-normal-distribution",
+    "href": "supplemental/exam-3-studyguide.html#shifts-and-scales-of-normal-distribution",
+    "title": "Study list for exam 3",
+    "section": "Shifts and scales of normal distribution",
+    "text": "Shifts and scales of normal distribution\nZ score and standardization Use symmetry to find probabilities, finding them in R Percentiles to Z values, finding them in R"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#rule",
+    "href": "supplemental/exam-3-studyguide.html#rule",
+    "title": "Study list for exam 3",
+    "section": "68 - 95 - 99.7 rule",
+    "text": "68 - 95 - 99.7 rule"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#normality-tests-and-qqplots",
+    "href": "supplemental/exam-3-studyguide.html#normality-tests-and-qqplots",
+    "title": "Study list for exam 3",
+    "section": "Normality tests and qqplots",
+    "text": "Normality tests and qqplots"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#skewness-and-kurtosis",
+    "href": "supplemental/exam-3-studyguide.html#skewness-and-kurtosis",
+    "title": "Study list for exam 3",
+    "section": "Skewness and Kurtosis",
+    "text": "Skewness and Kurtosis"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#vocabulary-related-to-sampling",
+    "href": "supplemental/exam-3-studyguide.html#vocabulary-related-to-sampling",
+    "title": "Study list for exam 3",
+    "section": "Vocabulary related to sampling",
+    "text": "Vocabulary related to sampling\nsample, population, bias, representative, random, inference, cluster, strata, sampling frame, nonresponse rate, interviewer affects, survivor bias, …"
+  },
+  {
+    "objectID": "supplemental/exam-3-studyguide.html#sampling-methods",
+    "href": "supplemental/exam-3-studyguide.html#sampling-methods",
+    "title": "Study list for exam 3",
+    "section": "Sampling methods",
+    "text": "Sampling methods\nSRS, stratified, cluster, census, voluntary response, convenience benefits and drawbacks of all and where to apply each"
   },
   {
     "objectID": "supplemental/exam-2-studyguide.html",
@@ -957,6 +1083,34 @@
     "title": "Chi-squared test expected values",
     "section": "",
     "text": "Information about the Chi-Squared test can be found here. We have two hypotheses:\n\\(H_0\\) = the variables are independent, there is no relationship between the two categorical variables.\n\\(H_A\\) = Knowing the value of one variable helps to predict the value of the other variable.\nUnder the null hypothesis, the distribution of one variable is independent to the distribution of the other. This means that the expected count for one cell, can be found using the column total times the row total divided by the total number of observations."
+  },
+  {
+    "objectID": "supplemental/tests_R.html",
+    "href": "supplemental/tests_R.html",
+    "title": "Confidence intervals, statistical tests, and comparison in R",
+    "section": "",
+    "text": "Note\n\n\n\nThis supplemental notes addends the following lectures: Confidence intervals, Statistical tests, and Comparison. It demonstrates how to do some of the in class examples in R, and how to do the same tests but with data instead of calculations. This will be useful for homework and projects."
+  },
+  {
+    "objectID": "supplemental/tests_R.html#confidence-intervals-for-the-proportion",
+    "href": "supplemental/tests_R.html#confidence-intervals-for-the-proportion",
+    "title": "Confidence intervals, statistical tests, and comparison in R",
+    "section": "confidence intervals for the proportion",
+    "text": "confidence intervals for the proportion\nFor confidence intervals for the proportion use prop.test():\nThe solution to example 1 is:\n\n## The expected counts (x) is .14*35\nprop.test(x = .14*350, n = 350, correct = FALSE)\n\n\n    1-sample proportions test without continuity correction\n\ndata:  0.14 * 350 out of 350, null probability 0.5\nX-squared = 181.44, df = 1, p-value < 2.2e-16\nalternative hypothesis: true p is not equal to 0.5\n95 percent confidence interval:\n 0.1075436 0.1802730\nsample estimates:\n   p \n0.14 \n\n\nThe solution to example 2 is:\n\nprop.test(x = 35, n = 225, correct = FALSE)\n\n\n    1-sample proportions test without continuity correction\n\ndata:  35 out of 225, null probability 0.5\nX-squared = 106.78, df = 1, p-value < 2.2e-16\nalternative hypothesis: true p is not equal to 0.5\n95 percent confidence interval:\n 0.1140250 0.2086502\nsample estimates:\n        p \n0.1555556 \n\n\nThe solutions in the slides are not exactly those given by R. The slides are using a normal approximation to compute the confidence interval while R uses the Wilson interval. The interval from R is more accurate.\nAnother way to compute a confidence interval in R (from the data and not just proportions) is here:\n\n## Simulate flipping a fair coin 100 times\nheads <- rbinom(1, size = 100, prob = .5)\n\n## The default confidence level is 95%\nprop.test(x = heads, n = 100)\n\n\n    1-sample proportions test with continuity correction\n\ndata:  heads out of 100, null probability 0.5\nX-squared = 1.69, df = 1, p-value = 0.1936\nalternative hypothesis: true p is not equal to 0.5\n95 percent confidence interval:\n 0.3326536 0.5327873\nsample estimates:\n   p \n0.43 \n\n## For a 89% confidence interval\nprop.test(x = heads, n = 100, conf.level = 0.89)\n\n\n    1-sample proportions test with continuity correction\n\ndata:  heads out of 100, null probability 0.5\nX-squared = 1.69, df = 1, p-value = 0.1936\nalternative hypothesis: true p is not equal to 0.5\n89 percent confidence interval:\n 0.3488301 0.5148743\nsample estimates:\n   p \n0.43"
+  },
+  {
+    "objectID": "supplemental/tests_R.html#confidence-intervals-for-the-mean",
+    "href": "supplemental/tests_R.html#confidence-intervals-for-the-mean",
+    "title": "Confidence intervals, statistical tests, and comparison in R",
+    "section": "confidence intervals for the mean",
+    "text": "confidence intervals for the mean\nFor confidence intervals for the mean use t.test():\nExample 1 and example 2 do not have a built-in function in R to automagically compute it. Instead, I show you how to compute one directly from the data:\n\n## default confidence level is 95%\nt.test(diamonds$price)\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 228.95, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 0\n95 percent confidence interval:\n 3899.132 3966.467\nsample estimates:\nmean of x \n   3932.8 \n\n## a 70% confidence level\nt.test(diamonds$price, conf.level = 0.72)\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 228.95, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 0\n72 percent confidence interval:\n 3914.243 3951.357\nsample estimates:\nmean of x \n   3932.8"
+  },
+  {
+    "objectID": "supplemental/tests_R.html#statistical-tests",
+    "href": "supplemental/tests_R.html#statistical-tests",
+    "title": "Confidence intervals, statistical tests, and comparison in R",
+    "section": "statistical tests",
+    "text": "statistical tests\nThe solution for example 3 follows:\n\n## default is 95%\nprop.test(x = 17, n = 36, p = 9/24, alternative = \"greater\")\n\n\n    1-sample proportions test with continuity correction\n\ndata:  17 out of 36, null probability 9/24\nX-squared = 1.0667, df = 1, p-value = 0.1508\nalternative hypothesis: true p is greater than 0.375\n95 percent confidence interval:\n 0.3294798 1.0000000\nsample estimates:\n        p \n0.4722222 \n\n\nAgain, this is not quite the same as our calculations because R is more accurate.\nThe following code does this directly from the data:\n\n## alternative: true mean is not equal to 2000\nt.test(diamonds$price, mu = 2000, alternate = \"two.sided\")\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 112.52, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 2000\n95 percent confidence interval:\n 3899.132 3966.467\nsample estimates:\nmean of x \n   3932.8 \n\n## alternative: true mean is greater than 2000\nt.test(diamonds$price, mu = 2000, alternate = \"greater\")\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 112.52, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 2000\n95 percent confidence interval:\n 3899.132 3966.467\nsample estimates:\nmean of x \n   3932.8 \n\n## a 70% confidence level\nt.test(diamonds$price, conf.level = 0.72)\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 228.95, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 0\n72 percent confidence interval:\n 3914.243 3951.357\nsample estimates:\nmean of x \n   3932.8"
   },
   {
     "objectID": "supplemental/model-selection-criteria.html",
@@ -2578,98 +2732,98 @@
   {
     "objectID": "slides/lect_18.html#sampling",
     "href": "slides/lect_18.html#sampling",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Sampling",
     "text": "Sampling\n\n\nSRS\nStratified sampling\nCluster sampling\nit would be nice to sample repeatedly to see how the mean values compare"
   },
   {
     "objectID": "slides/lect_18.html#benefits-of-averaging",
     "href": "slides/lect_18.html#benefits-of-averaging",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Benefits of averaging",
     "text": "Benefits of averaging\n\n\nreduces variation\nmore normal than the original distribution"
   },
   {
     "objectID": "slides/lect_18.html#normal-model",
     "href": "slides/lect_18.html#normal-model",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Normal model",
     "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true."
   },
   {
     "objectID": "slides/lect_18.html#standard-error",
     "href": "slides/lect_18.html#standard-error",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Standard error",
     "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}} \\]"
   },
   {
     "objectID": "slides/lect_18.html#sampling-distribution",
     "href": "slides/lect_18.html#sampling-distribution",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Sampling distribution",
     "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\]"
   },
   {
     "objectID": "slides/lect_18.html#example",
     "href": "slides/lect_18.html#example",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Example",
     "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)"
   },
   {
     "objectID": "slides/lect_18.html#control-limits",
     "href": "slides/lect_18.html#control-limits",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Control limits",
     "text": "Control limits\n\n\nif mean production is outside certain values, we may need to stop and recallibrate machinery\nthese values are called control limits\n\\(\\mu - L \\leq \\bar{X} \\leq \\mu + L\\)\n\\(\\mu - L\\) and \\(\\mu + L\\) are control limits"
   },
   {
     "objectID": "slides/lect_18.html#types-of-errors",
     "href": "slides/lect_18.html#types-of-errors",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Types of errors",
     "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)"
   },
   {
     "objectID": "slides/lect_18.html#setting-control-limits---1",
     "href": "slides/lect_18.html#setting-control-limits---1",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Setting control limits - 1",
     "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(10, mean = 12, sd = sqrt(2.3))"
   },
   {
     "objectID": "slides/lect_18.html#setting-control-limits---1-contd",
     "href": "slides/lect_18.html#setting-control-limits---1-contd",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Setting control limits - 1 cont’d",
     "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X} }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\n1 - pnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
   },
   {
     "objectID": "slides/lect_18.html#setting-control-limits---2",
     "href": "slides/lect_18.html#setting-control-limits---2",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Setting control limits - 2",
     "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)\nqnorm(0.0125, mean = 12, sd = sqrt(2.3))"
   },
   {
     "objectID": "slides/lect_18.html#setting-control-limits---2---contd",
     "href": "slides/lect_18.html#setting-control-limits---2---contd",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Setting control limits - 2 - cont’d",
     "text": "Setting control limits - 2 - cont’d\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))"
   },
   {
     "objectID": "slides/lect_18.html#repeated-testing",
     "href": "slides/lect_18.html#repeated-testing",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Repeated testing",
     "text": "Repeated testing\nWe are not testing once, but multiple times. Assuming independence:\n\n\n\\(\\begin{aligned}P(\\textrm{within limits for 10 days}) =& P(\\textrm{within limits for day 1}) \\cdot P(\\textrm{within limits for day 2}) \\cdot \\dots \\cdot P(\\textrm{within limits for day 10})\\\\ &= 0.975^{10} \\approx 0.7763296 \\end{aligned}\\)\nThere is a \\(1-0.7763296 = 0.2236704\\) percent false positive rate\nManagement must decide if there is a false positive by checking for mechanical errors and inspecting equipment\nAdjust \\(\\alpha\\) value to address this"
   },
   {
     "objectID": "slides/lect_18.html#control-charts-for-variation",
     "href": "slides/lect_18.html#control-charts-for-variation",
-    "title": "Chapter 14: Sampling variation and quality",
+    "title": "Chapter 19: Linear patterns",
     "section": "Control charts for variation",
     "text": "Control charts for variation\nX-bar charts are slow to detect under or over filling\n\n\nS-Chart tracks the standard deviation from sample to sample\nR-Chart tracks the range from sample to sample\n\n\n\n\nstat1010-f22.github.io/website"
   },

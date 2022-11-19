@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 - Fall 2022 - Model Diagnostics</title>
+<title>STAT 1010 - Fall 2022 - Confidence intervals, statistical tests, and comparison in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -60,13 +123,12 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Model Diagnostics">
-<meta property="og:description" content="This document discusses some of the mathematical details of the model diagnostics - leverage, standardized residuals, and Cook’s distance.">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Confidence intervals, statistical tests, and comparison in R">
+<meta property="og:description" content="For confidence intervals for the proportion use prop.test():">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Model Diagnostics">
-<meta name="twitter:description" content="This document discusses some of the mathematical details of the model diagnostics - leverage, standardized residuals, and Cook’s distance.">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Confidence intervals, statistical tests, and comparison in R">
+<meta name="twitter:description" content="For confidence intervals for the proportion use prop.test():">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -77,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Model Diagnostics</h1>
+      <h1 class="quarto-secondary-nav-title">Confidence intervals, statistical tests, and comparison in <code>R</code></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -316,12 +378,22 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../tests_R.qmd" class="sidebar-item-text sidebar-link">CIs, tests, and comparison in <code>R</code></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../supplemental/exam-1-studyguide.html" class="sidebar-item-text sidebar-link">Exam 1 study guide</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../supplemental/exam-2-studyguide.html" class="sidebar-item-text sidebar-link">Exam 2 study guide</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplemental/exam-3-studyguide.html" class="sidebar-item-text sidebar-link">Exam 3 study guide</a>
   </div>
 </li>
       </ul>
@@ -335,20 +407,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#matrix-form-for-the-regression-model" id="toc-matrix-form-for-the-regression-model" class="nav-link" data-scroll-target="#matrix-form-for-the-regression-model">Matrix Form for the Regression Model</a></li>
-  <li><a href="#hat-matrix-leverage" id="toc-hat-matrix-leverage" class="nav-link" data-scroll-target="#hat-matrix-leverage">Hat Matrix &amp; Leverage</a></li>
-  <li><a href="#standardized-residuals" id="toc-standardized-residuals" class="nav-link" data-scroll-target="#standardized-residuals">Standardized Residuals</a></li>
-  <li><a href="#cooks-distance" id="toc-cooks-distance" class="nav-link" data-scroll-target="#cooks-distance">Cook’s Distance</a></li>
+  <li><a href="#confidence-intervals-for-the-proportion" id="toc-confidence-intervals-for-the-proportion" class="nav-link active" data-scroll-target="#confidence-intervals-for-the-proportion">confidence intervals for the proportion</a></li>
+  <li><a href="#confidence-intervals-for-the-mean" id="toc-confidence-intervals-for-the-mean" class="nav-link" data-scroll-target="#confidence-intervals-for-the-mean">confidence intervals for the mean</a></li>
+  <li><a href="#statistical-tests" id="toc-statistical-tests" class="nav-link" data-scroll-target="#statistical-tests">statistical tests</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/supplemental/model-diagnostics-matrix.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/supplemental/tests_R.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Model Diagnostics</h1>
+<h1 class="title d-none d-lg-block">Confidence intervals, statistical tests, and comparison in <code>R</code></h1>
 </div>
 
 
@@ -373,114 +443,207 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The following supplemental notes were created by <a href="https://www.mariatackett.net/">Dr.&nbsp;Maria Tackett</a> for STA 210. They are provided for students who want to dive deeper into the mathematics behind regression and reflect some of the material covered in STA 211: Mathematics of Regression. Additional supplemental notes will be added throughout the semester.</p>
+<p>This supplemental notes addends the following lectures: <a href="https://stats1010-f22.github.io/website/slides/lect_14.html#/title-slide">Confidence intervals</a>, <a href="https://stats1010-f22.github.io/website/slides/lect_15.html#/title-slide">Statistical tests</a>, and <a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/title-slide">Comparison</a>. It demonstrates how to do some of the in class examples in <code>R</code>, and how to do the same tests but with data instead of calculations. This will be useful for homework and projects.</p>
 </div>
 </div>
-<p>This document discusses some of the mathematical details of the model diagnostics - leverage, standardized residuals, and Cook’s distance. We assume the reader knowledge of the matrix form for multiple linear regression. Please see <a href="../supplemental/mlr-matrix.html">Matrix Form of Linear Regression</a> for a review.</p>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Suppose we have <span class="math inline">\(n\)</span> observations. Let the <span class="math inline">\(i^{th}\)</span> be <span class="math inline">\((x_{i1}, \ldots, x_{ip}, y_i)\)</span>, such that <span class="math inline">\(x_{i1}, \ldots, x_{ip}\)</span> are the explanatory variables (predictors) and <span class="math inline">\(y_i\)</span> is the response variable. We assume the data can be modeled using the least-squares regression model, such that the mean response for a given combination of explanatory variables follows the form in <a href="#eq-basic_model">Equation&nbsp;1</a>.</p>
-<p><span id="eq-basic_model"><span class="math display">\[
-y = \beta_0 + \beta_1 x_1 + \dots + \beta_p x_p
-\tag{1}\]</span></span></p>
-<p>We can write the response for the <span class="math inline">\(i^{th}\)</span> observation as shown in <a href="#eq-ind_response">Equation&nbsp;2</a>.</p>
-<p><span id="eq-ind_response"><span class="math display">\[
-y_i = \beta_0 + \beta_1 x_{i1} + \dots + \beta_p x_{ip} + \epsilon_i
-\tag{2}\]</span></span></p>
-<p>such that <span class="math inline">\(\epsilon_i\)</span> is the amount <span class="math inline">\(y_i\)</span> deviates from <span class="math inline">\(\mu\{y|x_{i1}, \ldots, x_{ip}\}\)</span>, the mean response for a given combination of explanatory variables. We assume each <span class="math inline">\(\epsilon_i \sim N(0,\sigma^2)\)</span>, where <span class="math inline">\(\sigma^2\)</span> is a constant variance for the distribution of the response <span class="math inline">\(y\)</span> for any combination of explanatory variables <span class="math inline">\(x_1, \ldots, x_p\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|echo: false</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#|eval: true</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.3.6     ✔ purrr   0.3.4
+✔ tibble  3.1.8     ✔ dplyr   1.0.9
+✔ tidyr   1.2.0     ✔ stringr 1.4.0
+✔ readr   2.1.2     ✔ forcats 0.5.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+</div>
+<section id="confidence-intervals-for-the-proportion" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-intervals-for-the-proportion">confidence intervals for the proportion</h2>
+<p>For confidence intervals for the proportion use <code>prop.test()</code>:</p>
+<p>The solution to <a href="https://stats1010-f22.github.io/website/slides/lect_14.html#/example-1">example 1</a> is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## The expected counts (x) is .14*35</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> .<span class="dv">14</span><span class="sc">*</span><span class="dv">350</span>, <span class="at">n =</span> <span class="dv">350</span>, <span class="at">correct =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    1-sample proportions test without continuity correction
+
+data:  0.14 * 350 out of 350, null probability 0.5
+X-squared = 181.44, df = 1, p-value &lt; 2.2e-16
+alternative hypothesis: true p is not equal to 0.5
+95 percent confidence interval:
+ 0.1075436 0.1802730
+sample estimates:
+   p 
+0.14 </code></pre>
+</div>
+</div>
+<p>The solution to <a href="https://stats1010-f22.github.io/website/slides/lect_14.html#/example-2">example 2</a> is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">35</span>, <span class="at">n =</span> <span class="dv">225</span>, <span class="at">correct =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    1-sample proportions test without continuity correction
+
+data:  35 out of 225, null probability 0.5
+X-squared = 106.78, df = 1, p-value &lt; 2.2e-16
+alternative hypothesis: true p is not equal to 0.5
+95 percent confidence interval:
+ 0.1140250 0.2086502
+sample estimates:
+        p 
+0.1555556 </code></pre>
+</div>
+</div>
+<p>The solutions in the slides are not exactly those given by <code>R</code>. The slides are using a <a href="https://en.m.wikipedia.org/wiki/Binomial_proportion_confidence_interval">normal approximation</a> to compute the confidence interval while <code>R</code> uses the Wilson interval. The interval from <code>R</code> is more accurate.</p>
+<p>Another way to compute a confidence interval in <code>R</code> (from the data and not just proportions) is here:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Simulate flipping a fair coin 100 times</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>heads <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1</span>, <span class="at">size =</span> <span class="dv">100</span>, <span class="at">prob =</span> .<span class="dv">5</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">## The default confidence level is 95%</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> heads, <span class="at">n =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    1-sample proportions test with continuity correction
+
+data:  heads out of 100, null probability 0.5
+X-squared = 1.69, df = 1, p-value = 0.1936
+alternative hypothesis: true p is not equal to 0.5
+95 percent confidence interval:
+ 0.3326536 0.5327873
+sample estimates:
+   p 
+0.43 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For a 89% confidence interval</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> heads, <span class="at">n =</span> <span class="dv">100</span>, <span class="at">conf.level =</span> <span class="fl">0.89</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    1-sample proportions test with continuity correction
+
+data:  heads out of 100, null probability 0.5
+X-squared = 1.69, df = 1, p-value = 0.1936
+alternative hypothesis: true p is not equal to 0.5
+89 percent confidence interval:
+ 0.3488301 0.5148743
+sample estimates:
+   p 
+0.43 </code></pre>
+</div>
+</div>
 </section>
-<section id="matrix-form-for-the-regression-model" class="level2">
-<h2 class="anchored" data-anchor-id="matrix-form-for-the-regression-model">Matrix Form for the Regression Model</h2>
-<p>We can represent the <a href="#eq-basic_model">Equation&nbsp;1</a> and <a href="#eq-ind_response">Equation&nbsp;2</a> using matrix notation. Let</p>
-<p><span id="eq-matrix-notation"><span class="math display">\[
-\mathbf{Y} = \begin{bmatrix}y_1 \\ y_2 \\ \vdots \\y_n\end{bmatrix}
-\hspace{15mm}
-\mathbf{X} = \begin{bmatrix}x_{11} &amp; x_{12} &amp; \dots &amp; x_{1p} \\
-x_{21} &amp; x_{22} &amp; \dots &amp; x_{2p} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-x_{n1} &amp; x_{n2} &amp; \dots &amp; x_{np} \end{bmatrix}
-\hspace{15mm}
-\boldsymbol{\beta}= \begin{bmatrix}\beta_0 \\ \beta_1 \\ \vdots \\ \beta_p \end{bmatrix}
-\hspace{15mm}
-\boldsymbol{\epsilon}= \begin{bmatrix}\epsilon_1 \\ \epsilon_2 \\ \vdots \\ \epsilon_n \end{bmatrix}
-\tag{3}\]</span></span></p>
-<p>Thus,</p>
-<p><span class="math display">\[\mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \mathbf{\epsilon}\]</span></p>
-<p>Therefore the estimated response for a given combination of explanatory variables and the associated residuals can be written as</p>
-<p><span id="eq-matrix_mean"><span class="math display">\[
-\hat{\mathbf{Y}} = \mathbf{X}\hat{\boldsymbol{\beta}} \hspace{10mm} \mathbf{e} = \mathbf{Y} - \mathbf{X}\hat{\boldsymbol{\beta}}
-\tag{4}\]</span></span></p>
+<section id="confidence-intervals-for-the-mean" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-intervals-for-the-mean">confidence intervals for the mean</h2>
+<p>For confidence intervals for the mean use <code>t.test()</code>:</p>
+<p><a href="https://stats1010-f22.github.io/website/slides/lect_14.html#/example-1-1">Example 1</a> and <a href="https://stats1010-f22.github.io/website/slides/lect_14.html#/example-2-1">example 2</a> do not have a built-in function in <code>R</code> to automagically compute it. Instead, I show you how to compute one directly from the data:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## default confidence level is 95%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(diamonds<span class="sc">$</span>price)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One Sample t-test
+
+data:  diamonds$price
+t = 228.95, df = 53939, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ 3899.132 3966.467
+sample estimates:
+mean of x 
+   3932.8 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## a 70% confidence level</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(diamonds<span class="sc">$</span>price, <span class="at">conf.level =</span> <span class="fl">0.72</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One Sample t-test
+
+data:  diamonds$price
+t = 228.95, df = 53939, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is not equal to 0
+72 percent confidence interval:
+ 3914.243 3951.357
+sample estimates:
+mean of x 
+   3932.8 </code></pre>
+</div>
+</div>
 </section>
-<section id="hat-matrix-leverage" class="level2">
-<h2 class="anchored" data-anchor-id="hat-matrix-leverage">Hat Matrix &amp; Leverage</h2>
-<p>Recall from the notes <a href="../supplemental/mlr-matrix.html">Matrix Form of Linear Regression</a> that <span class="math inline">\(\hat{\boldsymbol{\beta}}\)</span> can be written as the following:</p>
-<p><span id="eq-beta-hat"><span class="math display">\[
-\hat{\boldsymbol{\beta}} = (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{Y}
-\tag{5}\]</span></span></p>
-<p>Combining <a href="#eq-matrix_mean">Equation&nbsp;4</a> and <a href="#eq-beta-hat">Equation&nbsp;5</a>, we can write <span class="math inline">\(\hat{\mathbf{Y}}\)</span> as the following:</p>
-<p><span id="eq-y-hat"><span class="math display">\[
-\begin{aligned}
-\hat{\mathbf{Y}} &amp;= \mathbf{X}\hat{\boldsymbol{\beta}} \\[10pt]
-&amp;= \mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{Y}\\
-\end{aligned}
-\tag{6}\]</span></span></p>
-<p>We define the <strong>hat matrix</strong> as an <span class="math inline">\(n \times n\)</span> matrix of the form <span class="math inline">\(\mathbf{H} = \mathbf{X}(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\)</span>. Thus <a href="#eq-y-hat">Equation&nbsp;6</a> becomes</p>
-<p><span id="eq-y-hat-matrix"><span class="math display">\[
-\hat{\mathbf{Y}} = \mathbf{H}\mathbf{Y}
-\tag{7}\]</span></span></p>
-<p>The diagonal elements of the hat matrix are a measure of how far the predictor variables of each observation are from the means of the predictor variables. For example, <span class="math inline">\(h_{ii}\)</span> is a measure of how far the values of the predictor variables for the <span class="math inline">\(i^{th}\)</span> observation, <span class="math inline">\(x_{i1}, x_{i2}, \ldots, x_{ip}\)</span>, are from the mean values of the predictor variables, <span class="math inline">\(\bar{x}_1, \bar{x}_2, \ldots, \bar{x}_p\)</span>. In the case of simple linear regression, the <span class="math inline">\(i^{th}\)</span> diagonal, <span class="math inline">\(h_{ii}\)</span>, can be written as</p>
-<p><span class="math display">\[
-h_{ii} =  \frac{1}{n} + \frac{(x_i - \bar{x})^2}{\sum_{j=1}^{n}(x_j-\bar{x})^2}
-\]</span></p>
-<p>We call these diagonal elements, the <strong>leverage</strong> of each observation.</p>
-<p>The diagonal elements of the hat matrix have the following properties:</p>
-<ul>
-<li><span class="math inline">\(0 \leq h_ii \leq 1\)</span></li>
-<li><span class="math inline">\(\sum\limits_{i=1}^{n} h_{ii} = p+1\)</span>, where <span class="math inline">\(p\)</span> is the number of predictor variables in the model.</li>
-<li>The mean hat value is <span class="math inline">\(\bar{h} = \frac{\sum\limits_{i=1}^{n} h_{ii}}{n} = \frac{p+1}{n}\)</span>.</li>
-</ul>
-<p>Using these properties, we consider a point to have <strong>high leverage</strong> if it has a leverage value that is more than 2 times the average. In other words, observations with leverage greater than <span class="math inline">\(\frac{2(p+1)}{n}\)</span> are considered to be <strong>high leverage</strong> points, i.e.&nbsp;outliers in the predictor variables. We are interested in flagging high leverage points, because they may have an influence on the regression coefficients.</p>
-<p>When there are high leverage points in the data, the regression line will tend towards those points; therefore, one property of high leverage points is that they tend to have small residuals. We will show this by rewriting the residuals from <a href="#eq-matrix_mean">Equation&nbsp;4</a> using <a href="#eq-y-hat-matrix">Equation&nbsp;7</a>.</p>
-<p><span id="eq-resid-hat"><span class="math display">\[
-\begin{aligned}
-\mathbf{e} &amp;= \mathbf{Y} - \hat{\mathbf{Y}} \\[10pt]
-&amp; = \mathbf{Y} - \mathbf{H}\mathbf{Y} \\[10pt]
-&amp;= (1-\mathbf{H})\mathbf{Y}
-\end{aligned}
-\tag{8}\]</span></span></p>
-<p>Note that the identity matrix and hat matrix are <strong>idempotent</strong>, i.e.&nbsp;<span class="math inline">\(\mathbf{I}\mathbf{I} = \mathbf{I}\)</span>, <span class="math inline">\(\mathbf{H}\mathbf{H} = \mathbf{H}\)</span>. Thus, <span class="math inline">\((\mathbf{I} - \mathbf{H})\)</span> is also idempotent. These matrices are also symmetric. Using these properties and <a href="#eq-resid-hat">Equation&nbsp;8</a>, we have that the variance-covariance matrix of the residuals <span class="math inline">\(\boldsymbol{e}\)</span>, is</p>
-<p><span id="eq-resid-var"><span class="math display">\[
-\begin{aligned}
-Var(\mathbf{e}) &amp;= \mathbf{e}\mathbf{e}^T \\[10pt]
-&amp;=  (1-\mathbf{H})Var(\mathbf{Y})^T(1-\mathbf{H})^T \\[10pt]
-&amp;= (1-\mathbf{H})\hat{\sigma}^2(1-\mathbf{H})^T  \\[10pt]
-&amp;= \hat{\sigma}^2(1-\mathbf{H})(1-\mathbf{H})  \\[10pt]
-&amp;= \hat{\sigma}^2(1-\mathbf{H})
-\end{aligned}
-\tag{9}\]</span></span></p>
-<p>where <span class="math inline">\(\hat{\sigma}^2 = \frac{\sum_{i=1}^{n}e_i^2}{n-p-1}\)</span> is the estimated regression variance. Thus, the variance of the <span class="math inline">\(i^{th}\)</span> residual is <span class="math inline">\(Var(e_i) = \hat{\sigma}^2(1-h_{ii})\)</span>. Therefore, the higher the leverage, the smaller the variance of the residual. Because the expected value of the residuals is 0, we conclude that points with high leverage tend to have smaller residuals than points with lower leverage.</p>
-</section>
-<section id="standardized-residuals" class="level2">
-<h2 class="anchored" data-anchor-id="standardized-residuals">Standardized Residuals</h2>
-<p>In general, we standardize a value by shifting by the expected value and rescaling by the standard deviation (or standard error). Thus, the <span class="math inline">\(i^{th}\)</span> standardized residual takes the form</p>
-<p><span class="math display">\[
-std.res_i = \frac{e_i - E(e_i)}{SE(e_i)}
-\]</span></p>
-<p>The expected value of the residuals is 0, i.e.&nbsp;<span class="math inline">\(E(e_i) = 0\)</span>. From <a href="#eq-resid-var">Equation&nbsp;9</a>), the standard error of the residual is <span class="math inline">\(SE(e_i) = \hat{\sigma}\sqrt{1-h_{ii}}\)</span>. Therefore,</p>
-<p><span id="eq-std-resid"><span class="math display">\[
-std.res_i = \frac{e_i}{\hat{\sigma}\sqrt{1-h_{ii}}}
-\tag{10}\]</span></span></p>
-</section>
-<section id="cooks-distance" class="level2">
-<h2 class="anchored" data-anchor-id="cooks-distance">Cook’s Distance</h2>
-<p>Cook’s distance is a measure of how much each observation influences the model coefficients, and thus the predicted values. The Cook’s distance for the <span class="math inline">\(i^{th}\)</span> observation can be written as</p>
-<p><span id="eq-cooksd"><span class="math display">\[
-D_i = \frac{(\hat{\mathbf{Y}} -\hat{\mathbf{Y}}_{(i)})^T(\hat{\mathbf{Y}} -\hat{\mathbf{Y}}_{(i)})}{(p+1)\hat{\sigma}}
-\tag{11}\]</span></span></p>
-<p>where <span class="math inline">\(\hat{\mathbf{Y}}_{(i)}\)</span> is the vector of predicted values from the model fitted when the <span class="math inline">\(i^{th}\)</span> observation is deleted. Cook’s Distance can be calculated without deleting observations one at a time, since <a href="#eq-cooksd-v2">Equation&nbsp;12</a> below is mathematically equivalent to <a href="#eq-cooksd">Equation&nbsp;11</a>.</p>
-<p><span id="eq-cooksd-v2"><span class="math display">\[
-D_i = \frac{1}{p+1}std.res_i^2\Bigg[\frac{h_{ii}}{(1-h_{ii})}\Bigg] = \frac{e_i^2}{(p+1)\hat{\sigma}^2(1-h_{ii})}\Bigg[\frac{h_{ii}}{(1-h_{ii})}\Bigg]
-\tag{12}\]</span></span></p>
+<section id="statistical-tests" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-tests">statistical tests</h2>
+<p>The solution for <a href="https://stats1010-f22.github.io/website/slides/lect_15.html#/example-3">example 3</a> follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## default is 95%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">17</span>, <span class="at">n =</span> <span class="dv">36</span>, <span class="at">p =</span> <span class="dv">9</span><span class="sc">/</span><span class="dv">24</span>, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    1-sample proportions test with continuity correction
+
+data:  17 out of 36, null probability 9/24
+X-squared = 1.0667, df = 1, p-value = 0.1508
+alternative hypothesis: true p is greater than 0.375
+95 percent confidence interval:
+ 0.3294798 1.0000000
+sample estimates:
+        p 
+0.4722222 </code></pre>
+</div>
+</div>
+<p>Again, this is not quite the same as our calculations because <code>R</code> is more accurate.</p>
+<p>The following code does this directly from the data:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## alternative: true mean is not equal to 2000</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(diamonds<span class="sc">$</span>price, <span class="at">mu =</span> <span class="dv">2000</span>, <span class="at">alternate =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One Sample t-test
+
+data:  diamonds$price
+t = 112.52, df = 53939, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is not equal to 2000
+95 percent confidence interval:
+ 3899.132 3966.467
+sample estimates:
+mean of x 
+   3932.8 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## alternative: true mean is greater than 2000</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(diamonds<span class="sc">$</span>price, <span class="at">mu =</span> <span class="dv">2000</span>, <span class="at">alternate =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One Sample t-test
+
+data:  diamonds$price
+t = 112.52, df = 53939, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is not equal to 2000
+95 percent confidence interval:
+ 3899.132 3966.467
+sample estimates:
+mean of x 
+   3932.8 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## a 70% confidence level</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(diamonds<span class="sc">$</span>price, <span class="at">conf.level =</span> <span class="fl">0.72</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One Sample t-test
+
+data:  diamonds$price
+t = 228.95, df = 53939, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is not equal to 0
+72 percent confidence interval:
+ 3914.243 3951.357
+sample estimates:
+mean of x 
+   3932.8 </code></pre>
+</div>
+</div>
 
 
 </section>

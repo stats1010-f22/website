@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.269">
 
-  <title>STAT 1010 - Fall 2022 - Chapter 14: Sampling variation and quality</title>
+  <title>STAT 1010 - Fall 2022 - Chapter 19: Linear patterns</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -317,10 +317,10 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Chapter 14: Sampling variation and quality">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - Chapter 19: Linear patterns">
 <meta property="og:description" content="STAT 1010 - Fall 2022">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Chapter 14: Sampling variation and quality">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Chapter 19: Linear patterns">
 <meta name="twitter:description" content="STAT 1010 - Fall 2022">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
@@ -330,7 +330,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Chapter 14: Sampling variation and quality</h1>
+  <h1 class="title">Chapter 19: Linear patterns</h1>
   <p class="subtitle">STAT 1010 - Fall 2022</p>
 
 <div class="quarto-title-authors">
@@ -342,10 +342,10 @@
 <h1>Learning outcomes</h1>
 <div>
 <ul>
-<li class="fragment">The shape of the distribution of the sample mean and why it is important</li>
-<li class="fragment">When we can assume a normal distribution for the sample mean</li>
-<li class="fragment">Control charts and what they are used for</li>
-<li class="fragment">Find control limits</li>
+<li class="fragment">Identify and graph the response and explanatory variable associate with a linear regression equation</li>
+<li class="fragment">Interpret the intercept and slope that define a linear regression</li>
+<li class="fragment">Summarize the precision of a fitted regression equation using the <span class="math inline">\(r^2\)</span> statistic and standard deviation of the residuals</li>
+<li class="fragment">Use residuals from the regression equation to check that the equation is an appropriate summary of the data</li>
 </ul>
 </div>
 </section>
@@ -772,12 +772,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -788,13 +791,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
