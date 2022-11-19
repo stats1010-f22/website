@@ -403,7 +403,7 @@
 <div>
 <p>By the end of this lesson you should:</p>
 <ul>
-<li class="fragment"><p>Perform a visual assocation test</p></li>
+<li class="fragment"><p>Perform a visual association test</p></li>
 <li class="fragment"><p>Know how to read a scatterplot to describe associations between quantitative variables</p></li>
 <li class="fragment"><p>Know how to quantify associations in quantitative variables</p></li>
 <li class="fragment"><p>Use a line to describe associations in linear relationships</p></li>
@@ -431,7 +431,7 @@
 <div>
 <ul>
 <li class="fragment"><span class="math inline">\(\chi^2\)</span> tests are used for associations in categorical data</li>
-<li class="fragment">What is used to find associations in numerical data?</li>
+<li class="fragment">What is used to find associations in numeric data?</li>
 </ul>
 </div>
 </section>
@@ -459,17 +459,19 @@
 <ul>
 <li class="fragment">dependent</li>
 <li class="fragment">response</li>
+<li class="fragment">outcome</li>
 </ul></li>
 <li class="fragment">variable on the <span class="math inline">\(x\)</span> axis
 <ul>
 <li class="fragment">independent</li>
 <li class="fragment">explanatory</li>
+<li class="fragment">predictor</li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="price-vs-x" class="slide level2">
-<h2>Price vs <span class="math inline">\(x\)</span></h2>
+<section id="price-vs-carat" class="slide level2">
+<h2>Price vs carat</h2>
 
 <img data-src="lect_08_files/figure-revealjs/scatterplot-1.png" width="960" class="r-stretch"></section>
 <section id="visual-association-test" class="slide level2">
@@ -504,7 +506,7 @@
 <span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="co"># into ggplot</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> ...<span class="dv">2</span>, <span class="at">x =</span> ...<span class="dv">1</span>)) <span class="sc">+</span> <span class="co"># using the new names</span></span>
 <span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulated association test"</span>, </span>
-<span id="cb1-8"><a href="#cb1-8"></a>       <span class="at">x =</span> <span class="st">"Weigh of diamond in carat"</span>, </span>
+<span id="cb1-8"><a href="#cb1-8"></a>       <span class="at">x =</span> <span class="st">"Weight of diamond in carat"</span>, </span>
 <span id="cb1-9"><a href="#cb1-9"></a>       <span class="at">y =</span> <span class="st">"Price of diamonds in US$"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
@@ -568,12 +570,21 @@
 </section>
 <section id="describe-these-plots" class="slide level2">
 <h2>Describe these plots</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>diamonds <span class="sc">%&gt;%</span> </span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">select_if</span>(is.numeric) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">ggpairs</span>(.)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<p>What are the relationships between each plot?</p>
+<p>What do the numbers mean?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
-</div>
 <img data-src="lect_08_files/figure-revealjs/pairs_plots-1.png" width="960" class="r-stretch"></section></section>
 <section>
 <section id="measuring-association" class="title-slide slide level1 center">
@@ -619,7 +630,87 @@
 <section id="covariance" class="slide level2">
 <h2>Covariance</h2>
 <aside class="notes">
-<p>Remind them of the variance and what we did with the squares. What squares could we use now?</p>
+<p>If the product is negative then there it contributes to a negative trend - downhill from left to right.</p>
+<p>Same if positive</p>
+<p>hard to get ones that are negative for this dataset b/c tbere is a really strong positive association</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+<img data-src="lect_08_files/figure-revealjs/covariance_squares-1.png" width="960" class="r-stretch"></section>
+<section id="covariance-math" class="slide level2">
+<h2>Covariance math</h2>
+<aside class="notes">
+<p>This is a measure of the squares. We’d like a measure that is one dimensional. We want to look at more than just squares.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><span class="math inline">\(cov(x, y) = \frac{(x_1 - \bar{x})(y_1 - \bar{y}) + (x_2 - \bar{x})(y_2 - \bar{y}) + \ldots + (x_n - \bar{x})(y_n - \bar{y})}{n-1}\)</span></p>
+</section>
+<section id="correlation-math" class="slide level2">
+<h2>Correlation math</h2>
+<aside class="notes">
+<p>Standardizes the strength of the association</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><span class="math display">\[corr(x, y) = \frac{cov(x, y)}{s_x \cdot s_y}\]</span></p>
+</section>
+<section id="correlation-characteristics" class="slide level2">
+<h2>Correlation characteristics</h2>
+<aside class="notes">
+<p>Standardizes the strength of the association</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ol type="1">
+<li class="fragment">Referred to as <span class="math inline">\(r\)</span></li>
+<li class="fragment">Strength of linear association</li>
+<li class="fragment"><span class="math inline">\(r\)</span> is always between <span class="math inline">\(-1\)</span> and <span class="math inline">\(+1\)</span>, <span class="math inline">\(-1 \leq r \leq 1\)</span>.</li>
+<li class="fragment"><span class="math inline">\(r\)</span> does not have units</li>
+</ol>
+</div>
+</section>
+<section id="section-1" class="slide level2" data-background-image="lect-08_things/correlation_coef.png" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="computing-in-r" class="slide level2">
+<h2>Computing in <code>R</code></h2>
+<aside class="notes">
+<p>Standardizes the strength of the association</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -632,32 +723,207 @@
           display:block!important;
       }</style></aside>
 <div class="cell">
-<div class="cell-output-display">
-<p><img data-src="lect_08_files/figure-revealjs/covariance_squares-1.png" width="960"></p>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># covariance of price and carat</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">cov</span>(diamonds<span class="sc">$</span>price, diamonds<span class="sc">$</span>carat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1742.765</code></pre>
 </div>
-<div class="cell-output-display">
-<p><img data-src="lect_08_files/figure-revealjs/covariance_squares-2.png" width="960"></p>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># correlation of price and carat</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">cor</span>(diamonds<span class="sc">$</span>price, diamonds<span class="sc">$</span>carat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9215913</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># coding for the pairs plots</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="co"># library(GGally)</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># diamonds %&gt;% # dataset</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">#  select_if(is.numeric) %&gt;% # numeric variables</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">#  filter(y &lt; 20, # y less than 20</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co">#         z &lt; 20, # z less than 20</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co">#         table &lt; 90) %&gt;% # table less than 90</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="co">#  ggpairs(.) # make the plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
-<section id="spurious-correlations" class="title-slide slide level1 center">
-<h1>Spurious correlations</h1>
-<p>Might lurking variables explain these relationships?</p>
+<section>
+<section id="line-of-association" class="title-slide slide level1 center">
+<h1>Line of association</h1>
+<aside class="notes">
+<p>What do these numbers mean?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><span class="math display">\[ y = mx + b \]</span></p>
 <div>
 <ul>
+<li class="fragment"><span class="math inline">\(m\)</span> is gradient <span class="math inline">\(b\)</span> is the <span class="math inline">\(y\)</span> intercept</li>
+</ul>
+</div>
+</section>
+<section id="gradient-and-slope" class="slide level2">
+<h2>Gradient and slope</h2>
+<aside class="notes">
+<p>Pull out your calculators and work on this</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><span class="math display">\[ m = \frac{r \cdot s_y}{s_x} \]</span> <span class="math display">\[ b = \bar{y} - m \bar{x} \]</span></p>
+</section>
+<section id="fitting-by-hand" class="slide level2">
+<h2>Fitting by hand</h2>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(r = 0.9215913\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(s_{price} = 3989.44\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(s_{carat} = 0.4740112\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(m = \frac{r \cdot s_{price}}{s_{carat}}\)</span></p></li>
+<li class="fragment"><p><span class="math display">\[\begin{aligned}
+   m &amp;= \frac{r \cdot s_{price}}{s_{carat}} \\
+&amp;= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\
+&amp;= 7756.426
+\end{aligned}\]</span></p></li>
+</ul>
+</div>
+</section>
+<section id="fitting-by-hand-1" class="slide level2">
+<h2>Fitting by hand</h2>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(b = \overline{price} - m \cdot \overline{carat}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\overline{price} = 3932.8\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\overline{carat} = 0.7979397\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(m = 7756.426\)</span></p></li>
+<li class="fragment"><p><span class="math display">\[\begin{aligned}
+b &amp;= \overline{price} - m \cdot \overline{carat} \\
+&amp;= 3932.8 - 7756.426 \cdot 0.7979397\\
+&amp;= -2256.36
+\end{aligned}\]</span></p></li>
+<li class="fragment"><p>Our model is: <span class="math inline">\(\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="prediction-by-hand" class="slide level2">
+<h2>Prediction by hand</h2>
+<aside class="notes">
+<p>Pull out your calculators and work on this</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p>for carat values <span class="math inline">\(2.5\)</span></p>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}\)</span></p></li>
+<li class="fragment"><p><span class="math display">\[\begin{aligned}
+\widehat{\text{price}}  &amp;= -2256.36 + 7756.426 \cdot \text{carat} \\
+&amp;= -2256.36 + 7756.426 \cdot 2.5 \\
+&amp;= \$17135
+\end{aligned}\]</span></p></li>
+</ul>
+</div>
+</section>
+<section id="fit-predict-in-r" class="slide level2">
+<h2>Fit &amp; predict in <code>R</code></h2>
+<aside class="notes">
+<p>first use of tidymodels package</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="|2|6|7|8|9|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># library tidymodels</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="do">## Assign the least</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="do">## squares line</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>least_squares_fit <span class="ot">&lt;-</span> </span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-9"><a href="#cb7-9"></a>  <span class="fu">fit</span>(price <span class="sc">~</span> carat, <span class="at">data =</span> diamonds) </span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="do">## </span><span class="al">NOTE</span><span class="do">: outcome first, predictor second</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="do">## Find the prediction</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="fu">predict</span>(least_squares_fit, <span class="fu">tibble</span>(<span class="at">carat =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">2.5</span>, <span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 1
+   .pred
+   &lt;dbl&gt;
+1  5500.
+2 13256.
+3 17135.
+4 28769.</code></pre>
+</div>
+</div>
+</section>
+<section id="warnings" class="slide level2">
+<h2>Warnings</h2>
+<div>
+<ul>
+<li class="fragment">ALWAYS draw plots first</li>
+<li class="fragment">numeric variables</li>
+<li class="fragment">Linear relationship</li>
+<li class="fragment">Check for outliers</li>
+<li class="fragment">Lurking variables</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="spurious-correlations" class="title-slide slide level1 center">
+<h1>Spurious correlations</h1>
+<div>
+<ul>
+<li class="fragment">100% of people who eat ketchup die</li>
 <li class="fragment">amount of sunscreen used and probability of getting skin cancer</li>
 <li class="fragment">birth order and probability of down syndrome</li>
-<li class="fragment">countries where people smoke more also have higher life expectancy</li>
+<li class="fragment">countries with more smokers also have higher life expectancy</li>
 <li class="fragment">More shark attacks are associated with higher levels of ice cream sales.</li>
 <li class="fragment">The more volunteers at a natural disaster, the more destruction</li>
 </ul>
 </div>
-<p><a href="https://www.tylervigen.com/spurious-correlations">Click here</a> for more spurious correlations</p>
 </section>
-
+<section id="more-spurious-correlations" class="slide level2">
+<h2>More spurious correlations</h2>
+<div>
+<ul>
+<li class="fragment"><p>These variables are called lurking variables or confounders.</p></li>
+<li class="fragment"><p>Lurking variables are not considered in the statistical analysis</p></li>
+<li class="fragment"><p>Confounders are considered</p></li>
+<li class="fragment"><p>There are both known and unknown confounders, uknown confounders are lurking variables.</p></li>
+</ul>
+</div>
+<p><a href="https://www.tylervigen.com/spurious-correlations">Click here</a> for more spurious correlations</p>
+</section></section>
 <section id="your-turn" class="title-slide slide level1 center">
 <h1>Your turn</h1>
-<p><a href="https://stats1010-f22.github.io/website/ae/ae-8.html">Click here</a> or the qr code below</p>
+<p><a href="https://stats1010-f22.github.io/website/ae/ae-9.html">Click here</a> or the qr code below</p>
 
 
 <img data-src="lect_08_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><div class="footer footer-default">

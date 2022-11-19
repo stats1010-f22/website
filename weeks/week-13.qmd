@@ -1,5 +1,5 @@
 ---
-title: "Week 12"
+title: "Week 13"
 subtitle: "Comparison and inference for counts"
 editor: visual
 ---

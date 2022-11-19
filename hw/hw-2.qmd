@@ -36,6 +36,7 @@ The following packages will be used in this assignment:
 
 library(tidyverse) # for data manipulation and data visualization
 library(here) # to organize files
+library(GGally) # for the pairs plot
 ```
 
 ## Data: Titanic
@@ -58,7 +59,7 @@ The [titanic.csv](https://github.com/stats1010-f22/website/blob/main/hw/data/tit
 This may be a good time to render your document.
 :::
 
-4.  Draw a pairs plot of all numeric variables in the dataset and comment on all scatterplots and histograms. Be sure to use variable names.
+4.  Draw a pairs plot of all numeric variables in the dataset and comment on all scatterplots and densities. Be sure to use variable names.
 5.  Explore any outliers by filtering and looking at the data. Answer questions like this, but include others that spark your curiosity. Include a minimum of 2 additional outliers.
     a.  Which was the biggest family aboard?
 
