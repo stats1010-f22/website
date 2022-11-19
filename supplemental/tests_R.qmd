@@ -76,6 +76,8 @@ t.test(diamonds$price, conf.level = 0.72)
 
 ## statistical tests
 
+### for proportions
+
 The solution for [example 3](https://stats1010-f22.github.io/website/slides/lect_15.html#/example-3) follows:
 
 ```{r lect_15-example_3}
@@ -88,6 +90,7 @@ prop.test(x = 17, n = 36, p = 9/24, alternative = "greater")
 
 Again, this is not quite the same as our calculations because `R` is more accurate.
 
+### for means, directly from the data
 
 The following code does this directly from the data:
 ```{r lect_15-example_data}
@@ -103,3 +106,40 @@ t.test(diamonds$price, mu = 2000, alternate = "greater")
 ## a 70% confidence level
 t.test(diamonds$price, conf.level = 0.72)
 ```
+
+## comparison
+
+### two sample $z$ test for proportions
+[Example 2](https://stats1010-f22.github.io/website/slides/lect_16.html#/example-2) can almost be done in `R`. This does not specify the difference, just that the  $H_A:p_s>p_i$: the population average estimated by $\hat{p_s}$ input first (280/809) is greater than the population average estimated by $\hat{p_i}$ the fraction input second (197/646))
+
+```{r lect_16-example_2}
+#| echo: true
+#| eval: true
+
+## alternative: true mean is not equal to 2000
+prop.test(x = c(280, 197), n = c(809, 646), alternative = "greater")
+```
+
+
+### two sample $z$ test for proportions
+
+[example 3](https://stats1010-f22.github.io/website/slides/lect_16.html#/example-3). Again, the calculation in `R` is more accurate. 
+```{r lect_16-example_3}
+#| echo: true
+#| eval: true
+
+## default is 95% confidence interval
+prop.test(x = c(280, 197), n = c(809, 646))
+```
+
+### two sample $t$ test for means
+
+[example 4](https://stats1010-f22.github.io/website/slides/lect_16.html#/in-r) is already done in `R`
+
+### CI for the difference between two means
+
+[example 5](https://stats1010-f22.github.io/website/slides/lect_16.html#/in-r-3) is already done in `R`
+
+### Paired comparisons
+
+[example 6](https://stats1010-f22.github.io/website/slides/lect_16.html#/in-r-4) is already done in `R`
