@@ -123,6 +123,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="STAT 1010 - Fall 2022 - Confidence intervals, statistical tests, and comparison in R">
 <meta property="og:description" content="For confidence intervals for the proportion use prop.test():">
@@ -409,7 +410,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#confidence-intervals-for-the-proportion" id="toc-confidence-intervals-for-the-proportion" class="nav-link active" data-scroll-target="#confidence-intervals-for-the-proportion">confidence intervals for the proportion</a></li>
   <li><a href="#confidence-intervals-for-the-mean" id="toc-confidence-intervals-for-the-mean" class="nav-link" data-scroll-target="#confidence-intervals-for-the-mean">confidence intervals for the mean</a></li>
-  <li><a href="#statistical-tests" id="toc-statistical-tests" class="nav-link" data-scroll-target="#statistical-tests">statistical tests</a></li>
+  <li><a href="#statistical-tests" id="toc-statistical-tests" class="nav-link" data-scroll-target="#statistical-tests">statistical tests</a>
+  <ul class="collapse">
+  <li><a href="#for-proportions" id="toc-for-proportions" class="nav-link" data-scroll-target="#for-proportions">for proportions</a></li>
+  <li><a href="#for-means-directly-from-the-data" id="toc-for-means-directly-from-the-data" class="nav-link" data-scroll-target="#for-means-directly-from-the-data">for means, directly from the data</a></li>
+  </ul></li>
+  <li><a href="#comparison" id="toc-comparison" class="nav-link" data-scroll-target="#comparison">comparison</a>
+  <ul class="collapse">
+  <li><a href="#two-sample-z-test-for-proportions" id="toc-two-sample-z-test-for-proportions" class="nav-link" data-scroll-target="#two-sample-z-test-for-proportions">two sample <span class="math inline">\(z\)</span> test for proportions</a></li>
+  <li><a href="#two-sample-z-test-for-proportions-1" id="toc-two-sample-z-test-for-proportions-1" class="nav-link" data-scroll-target="#two-sample-z-test-for-proportions-1">two sample <span class="math inline">\(z\)</span> test for proportions</a></li>
+  <li><a href="#two-sample-t-test-for-means" id="toc-two-sample-t-test-for-means" class="nav-link" data-scroll-target="#two-sample-t-test-for-means">two sample <span class="math inline">\(t\)</span> test for means</a></li>
+  <li><a href="#ci-for-the-difference-between-two-means" id="toc-ci-for-the-difference-between-two-means" class="nav-link" data-scroll-target="#ci-for-the-difference-between-two-means">CI for the difference between two means</a></li>
+  <li><a href="#paired-comparisons" id="toc-paired-comparisons" class="nav-link" data-scroll-target="#paired-comparisons">Paired comparisons</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/stats1010-f22/website/edit/main/supplemental/tests_R.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/stats1010-f22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -513,13 +526,13 @@ sample estimates:
     1-sample proportions test with continuity correction
 
 data:  heads out of 100, null probability 0.5
-X-squared = 1.69, df = 1, p-value = 0.1936
+X-squared = 0.09, df = 1, p-value = 0.7642
 alternative hypothesis: true p is not equal to 0.5
 95 percent confidence interval:
- 0.3326536 0.5327873
+ 0.3798722 0.5816817
 sample estimates:
    p 
-0.43 </code></pre>
+0.48 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For a 89% confidence interval</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> heads, <span class="at">n =</span> <span class="dv">100</span>, <span class="at">conf.level =</span> <span class="fl">0.89</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -528,13 +541,13 @@ sample estimates:
     1-sample proportions test with continuity correction
 
 data:  heads out of 100, null probability 0.5
-X-squared = 1.69, df = 1, p-value = 0.1936
+X-squared = 0.09, df = 1, p-value = 0.7642
 alternative hypothesis: true p is not equal to 0.5
 89 percent confidence interval:
- 0.3488301 0.5148743
+ 0.3968106 0.5642472
 sample estimates:
    p 
-0.43 </code></pre>
+0.48 </code></pre>
 </div>
 </div>
 </section>
@@ -577,6 +590,8 @@ mean of x
 </section>
 <section id="statistical-tests" class="level2">
 <h2 class="anchored" data-anchor-id="statistical-tests">statistical tests</h2>
+<section id="for-proportions" class="level3">
+<h3 class="anchored" data-anchor-id="for-proportions">for proportions</h3>
 <p>The solution for <a href="https://stats1010-f22.github.io/website/slides/lect_15.html#/example-3">example 3</a> follows:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## default is 95%</span></span>
@@ -596,6 +611,9 @@ sample estimates:
 </div>
 </div>
 <p>Again, this is not quite the same as our calculations because <code>R</code> is more accurate.</p>
+</section>
+<section id="for-means-directly-from-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="for-means-directly-from-the-data">for means, directly from the data</h3>
 <p>The following code does this directly from the data:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## alternative: true mean is not equal to 2000</span></span>
@@ -644,8 +662,66 @@ mean of x
    3932.8 </code></pre>
 </div>
 </div>
+</section>
+</section>
+<section id="comparison" class="level2">
+<h2 class="anchored" data-anchor-id="comparison">comparison</h2>
+<section id="two-sample-z-test-for-proportions" class="level3">
+<h3 class="anchored" data-anchor-id="two-sample-z-test-for-proportions">two sample <span class="math inline">\(z\)</span> test for proportions</h3>
+<p><a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/example-2">Example 2</a> can almost be done in <code>R</code>. This does not specify the difference, just that the <span class="math inline">\(H_A:p_s&gt;p_i\)</span>: the population average estimated by <span class="math inline">\(\hat{p_s}\)</span> input first (280/809) is greater than the population average estimated by <span class="math inline">\(\hat{p_i}\)</span> the fraction input second (197/646))</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="do">## alternative: true mean is not equal to 2000</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">280</span>, <span class="dv">197</span>), <span class="at">n =</span> <span class="fu">c</span>(<span class="dv">809</span>, <span class="dv">646</span>), <span class="at">alternative =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    2-sample test for equality of proportions with continuity correction
+
+data:  c(280, 197) out of c(809, 646)
+X-squared = 2.5769, df = 1, p-value = 0.05422
+alternative hypothesis: greater
+95 percent confidence interval:
+ -0.0007927079  1.0000000000
+sample estimates:
+   prop 1    prop 2 
+0.3461063 0.3049536 </code></pre>
+</div>
+</div>
+</section>
+<section id="two-sample-z-test-for-proportions-1" class="level3">
+<h3 class="anchored" data-anchor-id="two-sample-z-test-for-proportions-1">two sample <span class="math inline">\(z\)</span> test for proportions</h3>
+<p><a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/example-3">example 3</a>. Again, the calculation in <code>R</code> is more accurate.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="do">## default is 95% confidence interval</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">280</span>, <span class="dv">197</span>), <span class="at">n =</span> <span class="fu">c</span>(<span class="dv">809</span>, <span class="dv">646</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    2-sample test for equality of proportions with continuity correction
+
+data:  c(280, 197) out of c(809, 646)
+X-squared = 2.5769, df = 1, p-value = 0.1084
+alternative hypothesis: two.sided
+95 percent confidence interval:
+ -0.008561667  0.090867154
+sample estimates:
+   prop 1    prop 2 
+0.3461063 0.3049536 </code></pre>
+</div>
+</div>
+</section>
+<section id="two-sample-t-test-for-means" class="level3">
+<h3 class="anchored" data-anchor-id="two-sample-t-test-for-means">two sample <span class="math inline">\(t\)</span> test for means</h3>
+<p><a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/in-r">example 4</a> is already done in <code>R</code></p>
+</section>
+<section id="ci-for-the-difference-between-two-means" class="level3">
+<h3 class="anchored" data-anchor-id="ci-for-the-difference-between-two-means">CI for the difference between two means</h3>
+<p><a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/in-r-3">example 5</a> is already done in <code>R</code></p>
+</section>
+<section id="paired-comparisons" class="level3">
+<h3 class="anchored" data-anchor-id="paired-comparisons">Paired comparisons</h3>
+<p><a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/in-r-4">example 6</a> is already done in <code>R</code></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
