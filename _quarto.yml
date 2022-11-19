@@ -108,7 +108,7 @@ website:
               text: Chi squared expected counts
             - href: supplemental/poisson.qmd
               text: Poisson derivation
-            - href: tests_R.qmd
+            - href: exam3_R.qmd
               text: CIs, tests, and comparison in `R`
             - href: supplemental/exam-1-studyguide.qmd
               text: Exam 1 study guide

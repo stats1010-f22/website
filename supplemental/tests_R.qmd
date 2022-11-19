@@ -13,8 +13,9 @@ This supplemental notes addends the following lectures: [Confidence intervals](h
 library(tidyverse)
 ```
 
+## confidence intervals 
 
-## confidence intervals for the proportion
+### for the proportion
 
 For confidence intervals for the proportion use `prop.test()`:
 
@@ -56,11 +57,11 @@ prop.test(x = heads, n = 100)
 prop.test(x = heads, n = 100, conf.level = 0.89)
 ```
 
-## confidence intervals for the mean
+### for the mean
 
 For confidence intervals for the mean use `t.test()`:
 
-[Example 1](https://stats1010-f22.github.io/website/slides/lect_14.html#/example-1-1) and [example 2](https://stats1010-f22.github.io/website/slides/lect_14.html#/example-2-1) do not have a built-in function in `R` to automagically compute it. Instead, I show you how to compute one directly from the data:
+[Example 1](https://stats1010-f22.github.io/website/slides/lect_14.html#/example-1-1) and [example 2](https://stats1010-f22.github.io/website/slides/lect_14.html#/example-2-1) do not have a built-in function in `R` to automagically compute them. Instead, I show you how to compute them directly from the data:
 
 ```{r lecture_14-mean_data}
 #| echo: true
@@ -72,7 +73,6 @@ t.test(diamonds$price)
 ## a 70% confidence level
 t.test(diamonds$price, conf.level = 0.72)
 ```
-
 
 ## statistical tests
 
@@ -93,6 +93,7 @@ Again, this is not quite the same as our calculations because `R` is more accura
 ### for means, directly from the data
 
 The following code does this directly from the data:
+
 ```{r lect_15-example_data}
 #| echo: true
 #| eval: true
@@ -110,7 +111,8 @@ t.test(diamonds$price, conf.level = 0.72)
 ## comparison
 
 ### two sample $z$ test for proportions
-[Example 2](https://stats1010-f22.github.io/website/slides/lect_16.html#/example-2) can almost be done in `R`. This does not specify the difference, just that the  $H_A:p_s>p_i$: the population average estimated by $\hat{p_s}$ input first (280/809) is greater than the population average estimated by $\hat{p_i}$ the fraction input second (197/646))
+
+[Example 2](https://stats1010-f22.github.io/website/slides/lect_16.html#/example-2) can almost be done in `R`. This does not specify the difference, just that the $H_A:p_s>p_i$: the population average estimated by $\hat{p_s}$ input first (280/809) is greater than the population average estimated by $\hat{p_i}$ the fraction input second (197/646))
 
 ```{r lect_16-example_2}
 #| echo: true
@@ -120,10 +122,10 @@ t.test(diamonds$price, conf.level = 0.72)
 prop.test(x = c(280, 197), n = c(809, 646), alternative = "greater")
 ```
 
-
 ### two sample $z$ test for proportions
 
-[example 3](https://stats1010-f22.github.io/website/slides/lect_16.html#/example-3). Again, the calculation in `R` is more accurate. 
+[example 3](https://stats1010-f22.github.io/website/slides/lect_16.html#/example-3). Again, the calculation in `R` is more accurate.
+
 ```{r lect_16-example_3}
 #| echo: true
 #| eval: true
