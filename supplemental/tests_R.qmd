@@ -6,6 +6,14 @@ title: "Confidence intervals, statistical tests, and comparison in `R`"
 This supplemental notes addends the following lectures: [Confidence intervals](https://stats1010-f22.github.io/website/slides/lect_14.html#/title-slide), [Statistical tests](https://stats1010-f22.github.io/website/slides/lect_15.html#/title-slide), and [Comparison](https://stats1010-f22.github.io/website/slides/lect_16.html#/title-slide). It demonstrates how to do some of the in class examples in `R`, and how to do the same tests but with data instead of calculations. This will be useful for homework and projects.
 :::
 
+```{r import_packages}
+#|echo: false
+#|eval: true
+
+library(tidyverse)
+```
+
+
 ## confidence intervals for the proportion
 
 For confidence intervals for the proportion use `prop.test()`:
