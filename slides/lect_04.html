@@ -424,9 +424,19 @@
 
 <section id="a-few-of-the-squares" class="title-slide slide level1 center">
 <h1>A few of the “squares”</h1>
-<pre><code>::: {.notes}
-Due to the aspect ratio of the plot these squares are not square. Ask the students if these are really squares or not.
-:::</code></pre>
+<aside class="notes">
+<p>Due to the aspect ratio of the plot these squares are not square. Ask the students if these are really squares or not.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 <img data-src="lect_04_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
 
@@ -672,15 +682,12 @@ Due to the aspect ratio of the plot these squares are not square. Ask the studen
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -691,6 +698,13 @@ Due to the aspect ratio of the plot these squares are not square. Ask the studen
               window.jQuery(currentSlide).trigger("shown");
             }
           }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
         }
 
         // hookup for slidy
