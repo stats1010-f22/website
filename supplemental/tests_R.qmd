@@ -1,0 +1,97 @@
+---
+title: "Confidence intervals, statistical tests, and comparison in `R`"
+---
+
+::: callout-note
+This supplemental notes addends the following lectures: [Confidence intervals](https://stats1010-f22.github.io/website/slides/lect_14.html#/title-slide), [Statistical tests](https://stats1010-f22.github.io/website/slides/lect_15.html#/title-slide), and [Comparison](https://stats1010-f22.github.io/website/slides/lect_16.html#/title-slide). It demonstrates how to do some of the in class examples in `R`, and how to do the same tests but with data instead of calculations. This will be useful for homework and projects.
+:::
+
+## confidence intervals for the proportion
+
+For confidence intervals for the proportion use `prop.test()`:
+
+The solution to [example 1](https://stats1010-f22.github.io/website/slides/lect_14.html#/example-1) is:
+
+```{r lect_14-prop_example_1}
+#| echo: true
+#| eval: true
+
+## The expected counts (x) is .14*35
+prop.test(x = .14*350, n = 350, correct = FALSE)
+```
+
+The solution to [example 2](https://stats1010-f22.github.io/website/slides/lect_14.html#/example-2) is:
+
+```{r lect_14-prop_example_2}
+#| echo: true
+#| eval: true
+
+
+prop.test(x = 35, n = 225, correct = FALSE)
+```
+
+The solutions in the slides are not exactly those given by `R`. The slides are using a [normal approximation](https://en.m.wikipedia.org/wiki/Binomial_proportion_confidence_interval) to compute the confidence interval while `R` uses the Wilson interval. The interval from `R` is more accurate.
+
+Another way to compute a confidence interval in `R` (from the data and not just proportions) is here:
+
+```{r lecture_14-prop_data}
+#| echo: true
+#| eval: true
+
+## Simulate flipping a fair coin 100 times
+heads <- rbinom(1, size = 100, prob = .5)
+
+## The default confidence level is 95%
+prop.test(x = heads, n = 100)
+
+## For a 89% confidence interval
+prop.test(x = heads, n = 100, conf.level = 0.89)
+```
+
+## confidence intervals for the mean
+
+For confidence intervals for the mean use `t.test()`:
+
+[Example 1](https://stats1010-f22.github.io/website/slides/lect_14.html#/example-1-1) and [example 2](https://stats1010-f22.github.io/website/slides/lect_14.html#/example-2-1) do not have a built-in function in `R` to automagically compute it. Instead, I show you how to compute one directly from the data:
+
+```{r lecture_14-mean_data}
+#| echo: true
+#| eval: true
+
+## default confidence level is 95%
+t.test(diamonds$price)
+
+## a 70% confidence level
+t.test(diamonds$price, conf.level = 0.72)
+```
+
+
+## statistical tests
+
+The solution for [example 3](https://stats1010-f22.github.io/website/slides/lect_15.html#/example-3) follows:
+
+```{r lect_15-example_3}
+#| echo: true
+#| eval: true
+
+## default is 95%
+prop.test(x = 17, n = 36, p = 9/24, alternative = "greater")
+```
+
+Again, this is not quite the same as our calculations because `R` is more accurate.
+
+
+The following code does this directly from the data:
+```{r lect_15-example_data}
+#| echo: true
+#| eval: true
+
+## alternative: true mean is not equal to 2000
+t.test(diamonds$price, mu = 2000, alternate = "two.sided")
+
+## alternative: true mean is greater than 2000
+t.test(diamonds$price, mu = 2000, alternate = "greater")
+
+## a 70% confidence level
+t.test(diamonds$price, conf.level = 0.72)
+```

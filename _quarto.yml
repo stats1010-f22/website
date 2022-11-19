@@ -108,12 +108,14 @@ website:
               text: Chi squared expected counts
             - href: supplemental/poisson.qmd
               text: Poisson derivation
-      #     - href: supplemental/mlr-matrix.qmd
-      #       text: MLR matrix notation
+            - href: tests_R.qmd
+              text: CIs, tests, and comparison in `R`
             - href: supplemental/exam-1-studyguide.qmd
               text: Exam 1 study guide
             - href: supplemental/exam-2-studyguide.qmd
               text: Exam 2 study guide
+            - href: supplemental/exam-3-studyguide.qmd
+              text: Exam 3 study guide
 
 format:
   html:
