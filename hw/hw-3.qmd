@@ -12,7 +12,6 @@ For this homework assignment we will be exploring the [Diamonds](https://www.dia
 
 In this assignment, you will...
 
--   Import data into R
 -   Find confidence intervals and perform hypothesis tests for means in `R`
 -   Interpret confidence intervals and hypothesis tests for the mean.
 -   Perform a $\chi^2$ test and determine which cells contribute most to a test statistic.
