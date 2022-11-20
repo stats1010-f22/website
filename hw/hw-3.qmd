@@ -43,7 +43,7 @@ The diamonds dataset, from the `tidyverse()` set of packages, contains informati
 
 1.  In `R`, compute a 92% confidence interval for the average `Price` for a diamond and interpret it in context.
 
-2.  In `R`, test the hypothesis that the `Price` of a diamond is greater than \$3500 and interpret it. Include all hypotheses, and the test statistic.
+2.  In `R`, test the hypothesis that the average `Price` of a diamond is greater than \$3500 and interpret it. Include all hypotheses, and the test statistic.
 
 3.  The variable cut has 5 levels: fair, good, very good, premium, and ideal. Choose one level to compare to Fair and find the 95% confidence interval for the differences in prices between the level-of-your-choice and Fair diamonds. Interpret it in context.
 
