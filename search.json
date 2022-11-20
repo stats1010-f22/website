@@ -116,14 +116,14 @@
     "href": "hw/hw-3.html#data-diamonds",
     "title": "HW - 3 Diamonds dataset",
     "section": "Data: Diamonds",
-    "text": "Data: Diamonds\nThe diamonds dataset, from the tidyverse() set of packages, contains information on 53,940 round diamonds from the Loose Diamonds Search Engine.\n\nIn R, compute a 92% confidence interval for the average Price for a diamond and interpret it in context.\nIn R, test the hypothesis that the Price of a diamond is greater than $3500 and interpret it. Include all hypotheses, and the test statistic.\nThe variable cut has 5 levels: fair, good, very good, premium, and ideal. Choose one level to compare to Fair and find the 95% confidence interval for the differences in prices between the level-of-your-choice and Fair diamonds. Interpret it in context.\nPerform a \\(\\chi^2\\) test on the variables cut and clarity in diamonds and interpret it in context. Include all hypotheses, expected counts, degrees of freedom, and the test statistic. Which cell(s) contributed to the value of the test statistic?\nPerform 3 hypothesis tests to see if any of the variables length (\\(x\\)), width (\\(y\\)), and depth (\\(z\\)) of a diamond are the same. State all hypotheses, p-values, and test statistics, then interpret the results in context. Draw a box plot suitable for each test."
+    "text": "Data: Diamonds\nThe diamonds dataset, from the tidyverse() set of packages, contains information on 53,940 round diamonds from the Loose Diamonds Search Engine.\n\nIn R, compute a 92% confidence interval for the average Price for a diamond and interpret it in context.\nIn R, test the hypothesis that the Price of a diamond is greater than $3500 and interpret it. Include all hypotheses, and the test statistic.\nThe variable cut has 5 levels: fair, good, very good, premium, and ideal. Choose one level to compare to Fair and find the 95% confidence interval for the differences in prices between the level-of-your-choice and Fair diamonds. Interpret it in context.\nPerform a \\(\\chi^2\\) test on the variables cut and clarity in diamonds and interpret it in context. Include all hypotheses, expected counts, degrees of freedom, and the test statistic. Which cell(s) contributed to the value of the test statistic?\nPerform 3 hypothesis tests to see if any of the variables length (\\(x\\)), width (\\(y\\)), and depth (\\(z\\)) of a diamond come from populations with the same mean. State all hypotheses, p-values, and test statistics, then interpret the results in context. Draw a suitable plot that shows the distribution of the 3 variables and comment on it."
   },
   {
     "objectID": "hw/hw-3.html#section",
     "href": "hw/hw-3.html#section",
     "title": "HW - 3 Diamonds dataset",
     "section": "",
-    "text": "Component\nPoints\n\n\n\n\n1\n2\n\n\n2\n3\n\n\n3\n3\n\n\n4\n9\n\n\n5\n18"
+    "text": "Component\nPoints\n\n\n\n\n1\n2\n\n\n2\n3\n\n\n3\n3\n\n\n4\n9\n\n\n5\n15"
   },
   {
     "objectID": "hw/hw-6.html",
