@@ -50,7 +50,7 @@ The diamonds dataset, from the `tidyverse()` set of packages, contains informati
 
 4.  Perform a $\chi^2$ test on the variables cut and clarity in diamonds and interpret it in context. Include all hypotheses, expected counts, degrees of freedom, and the test statistic. Which cell(s) contributed to the value of the test statistic?
 
-5.  Perform 3 hypothesis tests to see if any of the variables length ($x$), width ($y$), and depth ($z$) of a diamond are the same. State all hypotheses, p-values, and test statistics, then interpret the results in context. Draw plots suitable for each hypotheses.
+5.  Perform 3 hypothesis tests to see if any of the variables length ($x$), width ($y$), and depth ($z$) of a diamond are the same. State all hypotheses, p-values, and test statistics, then interpret the results in context. Draw a box plot suitable for each test.
 
 ## 
 
