@@ -543,7 +543,7 @@ sample estimates:
 mean of x 
    3932.8 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## a 70% confidence level</span></span>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## a 72% confidence level</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(diamonds<span class="sc">$</span>price, <span class="at">conf.level =</span> <span class="fl">0.72</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -567,8 +567,7 @@ mean of x
 <h3 class="anchored" data-anchor-id="for-proportions">for proportions</h3>
 <p>The solution for <a href="https://stats1010-f22.github.io/website/slides/lect_15.html#/example-3">example 3</a> follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## default is 95%</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">17</span>, <span class="at">n =</span> <span class="dv">36</span>, <span class="at">p =</span> <span class="dv">9</span><span class="sc">/</span><span class="dv">24</span>, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="dv">17</span>, <span class="at">n =</span> <span class="dv">36</span>, <span class="at">p =</span> <span class="dv">9</span><span class="sc">/</span><span class="dv">24</span>, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     1-sample proportions test with continuity correction
@@ -583,7 +582,7 @@ sample estimates:
 0.4722222 </code></pre>
 </div>
 </div>
-<p>Again, this is not quite the same as our calculations because <code>R</code> is more accurate.</p>
+<p>Again, this is not the same as our calculations because <code>R</code> is more accurate.</p>
 </section>
 <section id="for-means-directly-from-the-data" class="level3">
 <h3 class="anchored" data-anchor-id="for-means-directly-from-the-data">for means, directly from the data</h3>
@@ -619,7 +618,7 @@ sample estimates:
 mean of x 
    3932.8 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## a 70% confidence level</span></span>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## a 72% confidence level</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(diamonds<span class="sc">$</span>price, <span class="at">conf.level =</span> <span class="fl">0.72</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>

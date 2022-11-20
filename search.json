@@ -91,6 +91,41 @@
     "text": "Grading\nTotal points available: 25 points.\n\n\n\nComponent\nPoints\n\n\n\n\nPart 1 Qu 1\n2\n\n\nPart 1 Qu 2\n3\n\n\nPart 2 Qu 1\n2\n\n\nPart 2 Qu 2\n2\n\n\nPart 2 Qu 3\n1\n\n\nPart 2 Qu 4\n2\n\n\nPart 2 Qu 5 Pt 1\n1\n\n\nPart 2 Qu 5 Pt 2\n1\n\n\nPart 2 Qu 6\n3\n\n\nPart 2 Qu 7\n4\n\n\nPart 2 Qu 8\n4"
   },
   {
+    "objectID": "hw/hw-3.html",
+    "href": "hw/hw-3.html",
+    "title": "HW - 3 Diamonds dataset",
+    "section": "",
+    "text": "For this homework assignment we will be exploring the Diamonds dataset. You will find this document which introduces R commands necessary for this homework indispensable. Please review it thoroughly.\n\n\nIn this assignment, you will…\n\nImport data into R\nFind confidence intervals and perform hypothesis tests for means in R\nInterpret confidence intervals and hypothesis tests for the mean.\nPerform a \\(\\chi^2\\) test and determine which cells contribute most to a test statistic.\nPerform paired tests and interpret them."
+  },
+  {
+    "objectID": "hw/hw-3.html#getting-started",
+    "href": "hw/hw-3.html#getting-started",
+    "title": "HW - 3 Diamonds dataset",
+    "section": "Getting started",
+    "text": "Getting started\n\nLog in to RStudio\nClick on your Stat1010.Rproj that we made the first day of class.\nGo to File ➛ New File ➛ Quarto Document and name the document hw-3 click create."
+  },
+  {
+    "objectID": "hw/hw-3.html#packages",
+    "href": "hw/hw-3.html#packages",
+    "title": "HW - 3 Diamonds dataset",
+    "section": "Packages",
+    "text": "Packages\nThe following packages will be used in this assignment:\n\nlibrary(tidyverse) # for data manipulation and data visualization\nlibrary(here) # to organize files"
+  },
+  {
+    "objectID": "hw/hw-3.html#data-diamonds",
+    "href": "hw/hw-3.html#data-diamonds",
+    "title": "HW - 3 Diamonds dataset",
+    "section": "Data: Diamonds",
+    "text": "Data: Diamonds\nThe diamonds dataset, from the tidyverse() set of packages, contains information on 53,940 round diamonds from the Loose Diamonds Search Engine.\n\nIn R, compute a 92% confidence interval for the average Price for a diamond and interpret it in context.\nIn R, test the hypothesis that the Price of a diamond is greater than $3500 and interpret it. Include all hypotheses, and the test statistic.\nThe variable cut has 5 levels: fair, good, very good, premium, and ideal. Choose one level to compare to Fair and find the 95% confidence interval for the differences in prices between the level-of-your-choice and Fair diamonds. Interpret it in context.\nPerform a \\(\\chi^2\\) test on the variables cut and clarity in diamonds and interpret it in context. Include all hypotheses, expected counts, degrees of freedom, and the test statistic. Which cell(s) contributed to the value of the test statistic?\nPerform 3 hypothesis tests to see if any of the variables length (\\(x\\)), width (\\(y\\)), and depth (\\(z\\)) of a diamond are the same. State all hypotheses, p-values, and test statistics, then interpret the results in context. Draw plots suitable for each hypotheses."
+  },
+  {
+    "objectID": "hw/hw-3.html#section",
+    "href": "hw/hw-3.html#section",
+    "title": "HW - 3 Diamonds dataset",
+    "section": "",
+    "text": "Component\nPoints\n\n\n\n\n1\n2\n\n\n2\n3\n\n\n3\n3\n\n\n4\n9\n\n\n5\n18"
+  },
+  {
     "objectID": "hw/hw-6.html",
     "href": "hw/hw-6.html",
     "title": "HW 6 - Statistics Experience",
@@ -1096,14 +1131,14 @@
     "href": "supplemental/tests_R.html#confidence-intervals",
     "title": "Confidence intervals, statistical tests, and comparison in R",
     "section": "confidence intervals",
-    "text": "confidence intervals\n\nfor the proportion\nFor confidence intervals for the proportion use prop.test():\nThe solution to example 1 is:\n\n## The expected counts (x) is .14*35\nprop.test(x = .14*350, n = 350, correct = FALSE)\n\n\n    1-sample proportions test without continuity correction\n\ndata:  0.14 * 350 out of 350, null probability 0.5\nX-squared = 181.44, df = 1, p-value < 2.2e-16\nalternative hypothesis: true p is not equal to 0.5\n95 percent confidence interval:\n 0.1075436 0.1802730\nsample estimates:\n   p \n0.14 \n\n\nThe solution to example 2 is:\n\nprop.test(x = 35, n = 225, correct = FALSE)\n\n\n    1-sample proportions test without continuity correction\n\ndata:  35 out of 225, null probability 0.5\nX-squared = 106.78, df = 1, p-value < 2.2e-16\nalternative hypothesis: true p is not equal to 0.5\n95 percent confidence interval:\n 0.1140250 0.2086502\nsample estimates:\n        p \n0.1555556 \n\n\nThe solutions in the slides are not exactly those given by R. The slides are using a normal approximation to compute the confidence interval while R uses the Wilson interval. The interval from R is more accurate because it does two things:\n1. It’s wider around \\(0.5\\) than away from \\(0.5\\). This is important because an estimate for the proportion can not be below \\(0\\) or above \\(1\\). It makes sense that it should be shorter at the edges and wider in the middle.\n2. It lets the variance change along the interval. At p_low it uses \\(p_{low}(1-p_{low})\\) and at \\(p_{high}\\) it uses \\(p_{high}(1-p_{high})\\) where as the approximation we use has fixed variance.\n\n\nfor the mean\nTo find confidence intervals for the mean use t.test():\nExample 1 and example 2 do not have a built-in function in R to automagically compute them. Instead, I show you how to compute them directly from the data:\n\n## default confidence level is 95%\nt.test(diamonds$price)\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 228.95, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 0\n95 percent confidence interval:\n 3899.132 3966.467\nsample estimates:\nmean of x \n   3932.8 \n\n## a 70% confidence level\nt.test(diamonds$price, conf.level = 0.72)\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 228.95, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 0\n72 percent confidence interval:\n 3914.243 3951.357\nsample estimates:\nmean of x \n   3932.8"
+    "text": "confidence intervals\n\nfor the proportion\nFor confidence intervals for the proportion use prop.test():\nThe solution to example 1 is:\n\n## The expected counts (x) is .14*35\nprop.test(x = .14*350, n = 350, correct = FALSE)\n\n\n    1-sample proportions test without continuity correction\n\ndata:  0.14 * 350 out of 350, null probability 0.5\nX-squared = 181.44, df = 1, p-value < 2.2e-16\nalternative hypothesis: true p is not equal to 0.5\n95 percent confidence interval:\n 0.1075436 0.1802730\nsample estimates:\n   p \n0.14 \n\n\nThe solution to example 2 is:\n\nprop.test(x = 35, n = 225, correct = FALSE)\n\n\n    1-sample proportions test without continuity correction\n\ndata:  35 out of 225, null probability 0.5\nX-squared = 106.78, df = 1, p-value < 2.2e-16\nalternative hypothesis: true p is not equal to 0.5\n95 percent confidence interval:\n 0.1140250 0.2086502\nsample estimates:\n        p \n0.1555556 \n\n\nThe solutions in the slides are not exactly those given by R. The slides are using a normal approximation to compute the confidence interval while R uses the Wilson interval. The interval from R is more accurate because it does two things:\n1. It’s wider around \\(0.5\\) than away from \\(0.5\\). This is important because an estimate for the proportion can not be below \\(0\\) or above \\(1\\). It makes sense that it should be shorter at the edges and wider in the middle.\n2. It lets the variance change along the interval. At p_low it uses \\(p_{low}(1-p_{low})\\) and at \\(p_{high}\\) it uses \\(p_{high}(1-p_{high})\\) where as the approximation we use has fixed variance.\n\n\nfor the mean\nTo find confidence intervals for the mean use t.test():\nExample 1 and example 2 do not have a built-in function in R to automagically compute them. Instead, I show you how to compute them directly from the data:\n\n## default confidence level is 95%\nt.test(diamonds$price)\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 228.95, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 0\n95 percent confidence interval:\n 3899.132 3966.467\nsample estimates:\nmean of x \n   3932.8 \n\n## a 72% confidence level\nt.test(diamonds$price, conf.level = 0.72)\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 228.95, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 0\n72 percent confidence interval:\n 3914.243 3951.357\nsample estimates:\nmean of x \n   3932.8"
   },
   {
     "objectID": "supplemental/tests_R.html#statistical-tests",
     "href": "supplemental/tests_R.html#statistical-tests",
     "title": "Confidence intervals, statistical tests, and comparison in R",
     "section": "statistical tests",
-    "text": "statistical tests\n\nfor proportions\nThe solution for example 3 follows:\n\n## default is 95%\nprop.test(x = 17, n = 36, p = 9/24, alternative = \"greater\")\n\n\n    1-sample proportions test with continuity correction\n\ndata:  17 out of 36, null probability 9/24\nX-squared = 1.0667, df = 1, p-value = 0.1508\nalternative hypothesis: true p is greater than 0.375\n95 percent confidence interval:\n 0.3294798 1.0000000\nsample estimates:\n        p \n0.4722222 \n\n\nAgain, this is not quite the same as our calculations because R is more accurate.\n\n\nfor means, directly from the data\nThe following code does this directly from the data:\n\n## alternative: true mean is not equal to 2000\nt.test(diamonds$price, mu = 2000, alternate = \"two.sided\")\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 112.52, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 2000\n95 percent confidence interval:\n 3899.132 3966.467\nsample estimates:\nmean of x \n   3932.8 \n\n## alternative: true mean is greater than 2000\nt.test(diamonds$price, mu = 2000, alternate = \"greater\")\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 112.52, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 2000\n95 percent confidence interval:\n 3899.132 3966.467\nsample estimates:\nmean of x \n   3932.8 \n\n## a 70% confidence level\nt.test(diamonds$price, conf.level = 0.72)\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 228.95, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 0\n72 percent confidence interval:\n 3914.243 3951.357\nsample estimates:\nmean of x \n   3932.8"
+    "text": "statistical tests\n\nfor proportions\nThe solution for example 3 follows:\n\nprop.test(x = 17, n = 36, p = 9/24, alternative = \"greater\")\n\n\n    1-sample proportions test with continuity correction\n\ndata:  17 out of 36, null probability 9/24\nX-squared = 1.0667, df = 1, p-value = 0.1508\nalternative hypothesis: true p is greater than 0.375\n95 percent confidence interval:\n 0.3294798 1.0000000\nsample estimates:\n        p \n0.4722222 \n\n\nAgain, this is not the same as our calculations because R is more accurate.\n\n\nfor means, directly from the data\nThe following code does this directly from the data:\n\n## alternative: true mean is not equal to 2000\nt.test(diamonds$price, mu = 2000, alternate = \"two.sided\")\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 112.52, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 2000\n95 percent confidence interval:\n 3899.132 3966.467\nsample estimates:\nmean of x \n   3932.8 \n\n## alternative: true mean is greater than 2000\nt.test(diamonds$price, mu = 2000, alternate = \"greater\")\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 112.52, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 2000\n95 percent confidence interval:\n 3899.132 3966.467\nsample estimates:\nmean of x \n   3932.8 \n\n## a 72% confidence level\nt.test(diamonds$price, conf.level = 0.72)\n\n\n    One Sample t-test\n\ndata:  diamonds$price\nt = 228.95, df = 53939, p-value < 2.2e-16\nalternative hypothesis: true mean is not equal to 0\n72 percent confidence interval:\n 3914.243 3951.357\nsample estimates:\nmean of x \n   3932.8"
   },
   {
     "objectID": "supplemental/tests_R.html#comparison",
@@ -2728,104 +2763,6 @@
     "title": "Chapter 17: Comparison",
     "section": "Interpretation",
     "text": "Interpretation\nThere is very strong evidence that the underlying population means of the mice before and after treatment are not the same. On average, the mice are much heavier after treatment.\n\n\nstat1010-f22.github.io/website"
-  },
-  {
-    "objectID": "slides/lect_18.html#sampling",
-    "href": "slides/lect_18.html#sampling",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Sampling",
-    "text": "Sampling\n\n\nSRS\nStratified sampling\nCluster sampling\nit would be nice to sample repeatedly to see how the mean values compare"
-  },
-  {
-    "objectID": "slides/lect_18.html#benefits-of-averaging",
-    "href": "slides/lect_18.html#benefits-of-averaging",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Benefits of averaging",
-    "text": "Benefits of averaging\n\n\nreduces variation\nmore normal than the original distribution"
-  },
-  {
-    "objectID": "slides/lect_18.html#normal-model",
-    "href": "slides/lect_18.html#normal-model",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Normal model",
-    "text": "Normal model\n\n\nFind kurtosis(\\(K_4\\))\nIf \\(n > 10 |K_4|\\), where \\(n\\) is the sample size, then a normal model adequately approximates the distribution of the sample mean \\(\\bar{X}\\).\nIf we know the data come from a normal distribution this is also true."
-  },
-  {
-    "objectID": "slides/lect_18.html#standard-error",
-    "href": "slides/lect_18.html#standard-error",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Standard error",
-    "text": "Standard error\n\\[ SD(\\bar{X}) = SE(\\bar{X}) =\n\\frac{\\sigma}{\\sqrt{n}} \\]"
-  },
-  {
-    "objectID": "slides/lect_18.html#sampling-distribution",
-    "href": "slides/lect_18.html#sampling-distribution",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Sampling distribution",
-    "text": "Sampling distribution\nIf \\(X \\sim N(\\mu_X, \\sigma_X^2)\\)\n\\[ \\bar{X} \\sim N(\\mu = \\mu_X, \\sigma^2 = \\frac{\\sigma_X^2}{n}) \\]"
-  },
-  {
-    "objectID": "slides/lect_18.html#example",
-    "href": "slides/lect_18.html#example",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Example",
-    "text": "Example\n\n\nLet \\(Y \\sim N(\\mu = 5, \\sigma^2 = 16)\\), find the distribution of the mean of repeated samples of size 4.\n\n\\(\\bar{Y} \\sim N(\\mu = 5, \\sigma^2 = 4)\\)"
-  },
-  {
-    "objectID": "slides/lect_18.html#control-limits",
-    "href": "slides/lect_18.html#control-limits",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Control limits",
-    "text": "Control limits\n\n\nif mean production is outside certain values, we may need to stop and recallibrate machinery\nthese values are called control limits\n\\(\\mu - L \\leq \\bar{X} \\leq \\mu + L\\)\n\\(\\mu - L\\) and \\(\\mu + L\\) are control limits"
-  },
-  {
-    "objectID": "slides/lect_18.html#types-of-errors",
-    "href": "slides/lect_18.html#types-of-errors",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Types of errors",
-    "text": "Types of errors\n\n\nFalse positives - type 1 error\n\nact when you should not\nprobabiliy of occurence denoted \\(\\alpha\\)\n\nFalse negatives - type 2 error\n\ndon’t act when you should\nprobabiliy of occurence denoted \\(\\beta\\)"
-  },
-  {
-    "objectID": "slides/lect_18.html#setting-control-limits---1",
-    "href": "slides/lect_18.html#setting-control-limits---1",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Setting control limits - 1",
-    "text": "Setting control limits - 1\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(Pr(\\bar{X} < 10 \\textrm{ or } \\bar{X} > 14)\\)\n\\(\\begin{aligned}P(\\bar{X} < 10) &= P(\\frac{\\bar{X} - \\mu_\\bar{X}}{\\sigma_\\bar{X}} < \\frac{10-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z < \\frac{10-12}{\\sqrt{2.3}} = -1.318761)\\end{aligned}\\)\npnorm(-1.318761) \\(\\approx 0.09362451\\)\npnorm(10, mean = 12, sd = sqrt(2.3))"
-  },
-  {
-    "objectID": "slides/lect_18.html#setting-control-limits---1-contd",
-    "href": "slides/lect_18.html#setting-control-limits---1-contd",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Setting control limits - 1 cont’d",
-    "text": "Setting control limits - 1 cont’d\nIf \\(\\bar{X} \\sim N(\\mu = 12, \\sigma^2 = 2.3)\\) how can we find the control limits?\n\n\nSet the control limits and find the \\(\\alpha\\) value\n\nWe want the control limits to be between 10 and 14\n\\(\\begin{aligned}P(\\bar{X} > 14) &= P(\\frac{\\bar{X} - \\mu_\\bar{X} }{\\sigma_\\bar{X}} > \\frac{14-\\mu_\\bar{X}}{\\sigma_\\bar{X}}) \\\\ & = P(Z > \\frac{14-12}{\\sqrt{2.3}} = 1.318761)\\end{aligned}\\)\n1 - pnorm(1.318761) \\(\\approx 0.09362451\\)\n1 - pnorm(14, mean = 12, sd = sqrt(2.3))\nthe \\(\\alpha\\) value is \\(19\\%\\) which is very high!"
-  },
-  {
-    "objectID": "slides/lect_18.html#setting-control-limits---2",
-    "href": "slides/lect_18.html#setting-control-limits---2",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Setting control limits - 2",
-    "text": "Setting control limits - 2\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(0.0125) \\(\\approx -2.241403\\)\n\\(\\begin{aligned}-2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= -2.241403\\sqrt{2.3} +12 = 8.600744 \\end{aligned}\\)\nqnorm(0.0125, mean = 12, sd = sqrt(2.3))"
-  },
-  {
-    "objectID": "slides/lect_18.html#setting-control-limits---2---contd",
-    "href": "slides/lect_18.html#setting-control-limits---2---contd",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Setting control limits - 2 - cont’d",
-    "text": "Setting control limits - 2 - cont’d\n\n\nSet the \\(\\alpha\\) value and find the control limits\n\n\nWe want the \\(\\alpha\\) to be \\(0.025\\)\n\n\\(Pr(\\bar{X} < z_{0.0125} \\textrm{ or } \\bar{X} > z_{0.0125})\\)\nqnorm(1- 0.0125) \\(\\approx 2.241403\\)\n\\(\\begin{aligned}2.241403 =& \\frac{X - \\mu_\\bar{X}}{\\sigma_\\bar{X}}\\\\ & = \\frac{X - 12}{\\sqrt{2.3}} \\\\ &= 2.241403\\sqrt{2.3} +12 = 15.39926 \\end{aligned}\\)\nqnorm(1-0.0125, mean = 12, sd = sqrt(2.3))"
-  },
-  {
-    "objectID": "slides/lect_18.html#repeated-testing",
-    "href": "slides/lect_18.html#repeated-testing",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Repeated testing",
-    "text": "Repeated testing\nWe are not testing once, but multiple times. Assuming independence:\n\n\n\\(\\begin{aligned}P(\\textrm{within limits for 10 days}) =& P(\\textrm{within limits for day 1}) \\cdot P(\\textrm{within limits for day 2}) \\cdot \\dots \\cdot P(\\textrm{within limits for day 10})\\\\ &= 0.975^{10} \\approx 0.7763296 \\end{aligned}\\)\nThere is a \\(1-0.7763296 = 0.2236704\\) percent false positive rate\nManagement must decide if there is a false positive by checking for mechanical errors and inspecting equipment\nAdjust \\(\\alpha\\) value to address this"
-  },
-  {
-    "objectID": "slides/lect_18.html#control-charts-for-variation",
-    "href": "slides/lect_18.html#control-charts-for-variation",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Control charts for variation",
-    "text": "Control charts for variation\nX-bar charts are slow to detect under or over filling\n\n\nS-Chart tracks the standard deviation from sample to sample\nR-Chart tracks the range from sample to sample\n\n\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_13.html#sampling",
