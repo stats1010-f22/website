@@ -42,6 +42,10 @@ prop.test(x = 35, n = 225, correct = FALSE)
 
 The solutions in the slides are not exactly those given by `R`. The slides are using a [normal approximation](https://en.m.wikipedia.org/wiki/Binomial_proportion_confidence_interval) to compute the confidence interval while `R` uses the Wilson interval. The interval from `R` is more accurate.
 
+It is more accurate because it does two things: 
+1. It's  longer wider around $0.5$ than away from $0.5$. 
+1. It's better because it lets the variance change along the interval. At p_low it used $p_{low}(1-p_{low})$ and at $p_{high}$ it uses $p_{high}(1-p_{high})$ where as the approximation we use has fixed variance.
+
 Another way to compute a confidence interval in `R` (from the data and not just proportions) is here:
 
 ```{r lecture_14-prop_data}
