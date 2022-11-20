@@ -459,14 +459,15 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This supplemental notes addends the following lectures: <a href="https://stats1010-f22.github.io/website/slides/lect_14.html#/title-slide">Confidence intervals</a>, <a href="https://stats1010-f22.github.io/website/slides/lect_15.html#/title-slide">Statistical tests</a>, and <a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/title-slide">Comparison</a>. It demonstrates how to do some of the in class examples in <code>R</code>, and how to do the same tests but with data instead of calculations. This will be useful for homework and projects.</p>
+<p>These supplemental notes addends the following lectures: <a href="https://stats1010-f22.github.io/website/slides/lect_14.html#/title-slide">Confidence intervals</a>, <a href="https://stats1010-f22.github.io/website/slides/lect_15.html#/title-slide">Statistical tests</a>, and <a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/title-slide">Comparison</a>. It demonstrates how to do some of the in class examples in <code>R</code>, and how to do the same tests but with data instead of calculations. This will be useful for homework and projects.</p>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|echo: false</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#|eval: true</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#|message: false</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
 ✔ ggplot2 3.3.6     ✔ purrr   0.3.4
@@ -531,13 +532,13 @@ sample estimates:
     1-sample proportions test with continuity correction
 
 data:  heads out of 100, null probability 0.5
-X-squared = 0.49, df = 1, p-value = 0.4839
+X-squared = 0.09, df = 1, p-value = 0.7642
 alternative hypothesis: true p is not equal to 0.5
 95 percent confidence interval:
- 0.3608720 0.5622361
+ 0.3798722 0.5816817
 sample estimates:
    p 
-0.46 </code></pre>
+0.48 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For a 89% confidence interval</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> heads, <span class="at">n =</span> <span class="dv">100</span>, <span class="at">conf.level =</span> <span class="fl">0.89</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -546,13 +547,13 @@ sample estimates:
     1-sample proportions test with continuity correction
 
 data:  heads out of 100, null probability 0.5
-X-squared = 0.49, df = 1, p-value = 0.4839
+X-squared = 0.09, df = 1, p-value = 0.7642
 alternative hypothesis: true p is not equal to 0.5
 89 percent confidence interval:
- 0.3775247 0.5445912
+ 0.3968106 0.5642472
 sample estimates:
    p 
-0.46 </code></pre>
+0.48 </code></pre>
 </div>
 </div>
 </section>
@@ -716,15 +717,99 @@ sample estimates:
 </section>
 <section id="two-sample-t-test-for-means" class="level3">
 <h3 class="anchored" data-anchor-id="two-sample-t-test-for-means">two sample <span class="math inline">\(t\)</span> test for means</h3>
-<p><a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/in-r">example 4</a> is already done in <code>R</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>d.color <span class="ot">&lt;-</span> diamonds <span class="sc">%&gt;%</span> </span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(color <span class="sc">==</span> <span class="st">"D"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(carat)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>j.color <span class="ot">&lt;-</span> diamonds <span class="sc">%&gt;%</span> </span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(color <span class="sc">==</span> <span class="st">"J"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(carat)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 - sided test</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Alternative hypothesis: x != y</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, </span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  d.color and j.color
+t = -41.811, df = 3683.7, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.5279915 -0.4806923
+sample estimates:
+mean of x mean of y 
+0.6577948 1.1621368 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Alternative hypothesis: x &lt; y by 0.1</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, </span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">alternative  =</span> <span class="st">"less"</span>, <span class="at">mu =</span> .<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  d.color and j.color
+t = -50.101, df = 3683.7, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is less than 0.1
+95 percent confidence interval:
+       -Inf -0.4844961
+sample estimates:
+mean of x mean of y 
+0.6577948 1.1621368 </code></pre>
+</div>
+</div>
 </section>
 <section id="ci-for-the-difference-between-two-means" class="level3">
 <h3 class="anchored" data-anchor-id="ci-for-the-difference-between-two-means">CI for the difference between two means</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> d.color, <span class="at">y =</span> j.color, <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  d.color and j.color
+t = -41.811, df = 3683.7, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.5279915 -0.4806923
+sample estimates:
+mean of x mean of y 
+0.6577948 1.1621368 </code></pre>
+</div>
+</div>
 <p><a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/in-r-3">example 5</a> is already done in <code>R</code></p>
 </section>
 <section id="paired-comparisons" class="level3">
 <h3 class="anchored" data-anchor-id="paired-comparisons">Paired comparisons</h3>
-<p><a href="https://stats1010-f22.github.io/website/slides/lect_16.html#/in-r-4">example 6</a> is already done in <code>R</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Weight of mice before treatment</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>before <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fl">200.1</span>, <span class="fl">190.9</span>, <span class="fl">192.7</span>, <span class="dv">213</span>, <span class="fl">241.4</span>, <span class="fl">196.9</span>, <span class="fl">172.2</span>, <span class="fl">185.5</span>, <span class="fl">205.2</span>, <span class="fl">193.7</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Weight of mice after treatment</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>after <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fl">392.9</span>, <span class="fl">393.2</span>, <span class="fl">345.1</span>, <span class="dv">393</span>, <span class="dv">434</span>, <span class="fl">427.9</span>, <span class="dv">422</span>, <span class="fl">383.9</span>, <span class="fl">392.3</span>, <span class="fl">352.2</span>)</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>mice <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"before"</span>, <span class="st">"after"</span>), <span class="at">each =</span> <span class="dv">10</span>),</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">weight =</span> <span class="fu">c</span>(before, after)</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(weight <span class="sc">~</span> group, <span class="at">data =</span> mice, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  weight by group
+t = 20.883, df = 9, p-value = 6.2e-09
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ 173.4219 215.5581
+sample estimates:
+mean difference 
+         194.49 </code></pre>
+</div>
+</div>
 
 
 </section>
