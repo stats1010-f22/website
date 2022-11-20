@@ -520,6 +520,7 @@ sample estimates:
 </div>
 </div>
 <p>The solutions in the slides are not exactly those given by <code>R</code>. The slides are using a <a href="https://en.m.wikipedia.org/wiki/Binomial_proportion_confidence_interval">normal approximation</a> to compute the confidence interval while <code>R</code> uses the Wilson interval. The interval from <code>R</code> is more accurate.</p>
+<p>It is more accurate because it does two things: 1. It’s longer wider around <span class="math inline">\(0.5\)</span> than away from <span class="math inline">\(0.5\)</span>. 1. It’s better because it lets the variance change along the interval. At p_low it used <span class="math inline">\(p_{low}(1-p_{low})\)</span> and at <span class="math inline">\(p_{high}\)</span> it uses <span class="math inline">\(p_{high}(1-p_{high})\)</span> where as the approximation we use has fixed variance.</p>
 <p>Another way to compute a confidence interval in <code>R</code> (from the data and not just proportions) is here:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Simulate flipping a fair coin 100 times</span></span>
@@ -532,13 +533,13 @@ sample estimates:
     1-sample proportions test with continuity correction
 
 data:  heads out of 100, null probability 0.5
-X-squared = 2.89, df = 1, p-value = 0.08913
+X-squared = 3.61, df = 1, p-value = 0.05743
 alternative hypothesis: true p is not equal to 0.5
 95 percent confidence interval:
- 0.3140323 0.5129652
+ 0.4970036 0.6952199
 sample estimates:
-   p 
-0.41 </code></pre>
+  p 
+0.6 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For a 89% confidence interval</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> heads, <span class="at">n =</span> <span class="dv">100</span>, <span class="at">conf.level =</span> <span class="fl">0.89</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -547,13 +548,13 @@ sample estimates:
     1-sample proportions test with continuity correction
 
 data:  heads out of 100, null probability 0.5
-X-squared = 2.89, df = 1, p-value = 0.08913
+X-squared = 3.61, df = 1, p-value = 0.05743
 alternative hypothesis: true p is not equal to 0.5
 89 percent confidence interval:
- 0.3298591 0.4949055
+ 0.5151269 0.6795779
 sample estimates:
-   p 
-0.41 </code></pre>
+  p 
+0.6 </code></pre>
 </div>
 </div>
 </section>
