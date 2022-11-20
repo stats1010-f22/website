@@ -95,7 +95,7 @@
     "href": "hw/hw-3.html",
     "title": "HW - 3 Diamonds dataset",
     "section": "",
-    "text": "For this homework assignment we will be exploring the Diamonds dataset. You will find this document which introduces R commands necessary for this homework indispensable. Please review it thoroughly.\n\n\nIn this assignment, you will…\n\nImport data into R\nFind confidence intervals and perform hypothesis tests for means in R\nInterpret confidence intervals and hypothesis tests for the mean.\nPerform a \\(\\chi^2\\) test and determine which cells contribute most to a test statistic.\nPerform paired tests and interpret them."
+    "text": "For this homework assignment we will be exploring the Diamonds dataset. You will find this document which introduces R commands necessary for this homework indispensable. Please review it thoroughly.\n\n\nIn this assignment, you will…\n\nFind confidence intervals and perform hypothesis tests for means in R\nInterpret confidence intervals and hypothesis tests for the mean.\nPerform a \\(\\chi^2\\) test and determine which cells contribute most to a test statistic.\nPerform paired tests and interpret them."
   },
   {
     "objectID": "hw/hw-3.html#getting-started",
