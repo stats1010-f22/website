@@ -1,0 +1,63 @@
+---
+title: "HW - 3 Diamonds dataset"
+subtitle: "Due Monday, 28 November, 8pm on Gradescope"
+editor: visual
+---
+
+## Introduction
+
+For this homework assignment we will be exploring the [Diamonds](https://www.diamondse.info/) dataset. You will find [this document](https://stats1010-f22.github.io/website/supplemental/tests_R.html#comparison) which introduces `R` commands necessary for this homework indispensable. Please review it thoroughly.
+
+### Learning goals
+
+In this assignment, you will...
+
+-   Import data into R
+-   Find confidence intervals and perform hypothesis tests for means in `R`
+-   Interpret confidence intervals and hypothesis tests for the mean.
+-   Perform a $\chi^2$ test and determine which cells contribute most to a test statistic.
+-   Perform paired tests and interpret them.
+
+## Getting started
+
+### Log in to RStudio
+
+Click on your *Stat1010.Rproj* that we made the first day of class.
+
+Go to *File* ➛ *New File* ➛ *Quarto Document* and name the document *hw-3* click *create.*
+
+## Packages
+
+The following packages will be used in this assignment:
+
+```{r}
+#| message: false
+#| eval: false
+
+library(tidyverse) # for data manipulation and data visualization
+library(here) # to organize files
+```
+
+## Data: Diamonds
+
+The diamonds dataset, from the `tidyverse()` set of packages, contains information on 53,940 round diamonds from the [Loose Diamonds Search Engine](https://www.diamondse.info/).
+
+1.  In `R`, compute a 92% confidence interval for the average `Price` for a diamond and interpret it in context.
+
+2.  In `R`, test the hypothesis that the `Price` of a diamond is greater than \$3500 and interpret it. Include all hypotheses, and the test statistic.
+
+3.  The variable cut has 5 levels: fair, good, very good, premium, and ideal. Choose one level to compare to Fair and find the 95% confidence interval for the differences in prices between the level-of-your-choice and Fair diamonds. Interpret it in context.
+
+4.  Perform a $\chi^2$ test on the variables cut and clarity in diamonds and interpret it in context. Include all hypotheses, expected counts, degrees of freedom, and the test statistic. Which cell(s) contributed to the value of the test statistic?
+
+5.  Perform 3 hypothesis tests to see if any of the variables length ($x$), width ($y$), and depth ($z$) of a diamond are the same. State all hypotheses, p-values, and test statistics, then interpret the results in context. Draw plots suitable for each hypotheses.
+
+## 
+
+| Component | Points |
+|-----------|--------|
+| 1         | 2      |
+| 2         | 3      |
+| 3         | 3      |
+| 4         | 9      |
+| 5         | 18     |

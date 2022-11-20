@@ -59,7 +59,7 @@ To find confidence intervals for the mean use `t.test()`:
 ## default confidence level is 95%
 t.test(diamonds$price)
 
-## a 70% confidence level
+## a 72% confidence level
 t.test(diamonds$price, conf.level = 0.72)
 ```
 
@@ -73,11 +73,10 @@ The solution for [example 3](https://stats1010-f22.github.io/website/slides/lect
 #| echo: true
 #| eval: true
 
-## default is 95%
 prop.test(x = 17, n = 36, p = 9/24, alternative = "greater")
 ```
 
-Again, this is not quite the same as our calculations because `R` is more accurate.
+Again, this is not the same as our calculations because `R` is more accurate.
 
 ### for means, directly from the data
 
@@ -93,7 +92,7 @@ t.test(diamonds$price, mu = 2000, alternate = "two.sided")
 ## alternative: true mean is greater than 2000
 t.test(diamonds$price, mu = 2000, alternate = "greater")
 
-## a 70% confidence level
+## a 72% confidence level
 t.test(diamonds$price, conf.level = 0.72)
 ```
 
