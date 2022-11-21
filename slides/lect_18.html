@@ -661,13 +661,39 @@
 <p><span class="math display">\[ s_e = \sqrt{\frac{e_1^2 + e_2^2 + ... + e_n^2}{n-2}}\]</span> the denominator is <span class="math inline">\(n-2\)</span> because we need two estimates for the line of best fit: <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span>.</p>
 <p>Also known as <strong>RMSE</strong> root mean squared error. This can be used to compare multiple models to see which model best explains the variation in the data.</p>
 </section></section>
+<section>
 <section id="explaining-variation" class="title-slide slide level1 center">
 <h1>Explaining variation</h1>
 <p>A regression line splits the response into two parts, a fitted value and a residual</p>
 <p><span class="math display">\[y = \hat{y} + e\]</span> <span class="math inline">\(\hat{y}\)</span> represents the variation in <span class="math inline">\(y\)</span> that is associated with <span class="math inline">\(x\)</span> <span class="math inline">\(e\)</span> represents variation in <span class="math inline">\(y\)</span> due to other factors.</p>
 <p>The <a href="https://stats1010-f22.github.io/website/slides/lect_08.html#/correlation-math">sample correlation</a> <span class="math inline">\(0\leq r\leq 1\)</span>. The squared-correlation <span class="math inline">\(r^2\)</span> determines the fraction of the variation that can be accounted for by the model. <span class="math inline">\(1-r^2\)</span> is the amounted of variation left in the residuals.</p>
 </section>
+<section id="in-r-2" class="slide level2">
+<h2>In <code>R</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">summary</span>(lm_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = price ~ carat, data = diamonds)
 
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-18585.3   -804.8    -18.9    537.4  12731.7 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -2256.36      13.06  -172.8   &lt;2e-16 ***
+carat        7756.43      14.07   551.4   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1549 on 53938 degrees of freedom
+Multiple R-squared:  0.8493,    Adjusted R-squared:  0.8493 
+F-statistic: 3.041e+05 on 1 and 53938 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section></section>
 <section id="conditions" class="title-slide slide level1 center">
 <h1>Conditions</h1>
 <div>

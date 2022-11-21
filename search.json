@@ -2723,6 +2723,13 @@
     "text": "sd of residuals\nIf the residuals are nearly normal, we can summarise them with the mean and standard deviation.\n\\[ s_e = \\sqrt{\\frac{e_1^2 + e_2^2 + ... + e_n^2}{n-2}}\\] the denominator is \\(n-2\\) because we need two estimates for the line of best fit: \\(b_0\\) and \\(b_1\\).\nAlso known as RMSE root mean squared error. This can be used to compare multiple models to see which model best explains the variation in the data."
   },
   {
+    "objectID": "slides/lect_18.html#in-r-2",
+    "href": "slides/lect_18.html#in-r-2",
+    "title": "Chapter 19: Linear patterns",
+    "section": "In R",
+    "text": "In R\n\nsummary(lm_fit)\n\n\nCall:\nlm(formula = price ~ carat, data = diamonds)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-18585.3   -804.8    -18.9    537.4  12731.7 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept) -2256.36      13.06  -172.8   <2e-16 ***\ncarat        7756.43      14.07   551.4   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1549 on 53938 degrees of freedom\nMultiple R-squared:  0.8493,    Adjusted R-squared:  0.8493 \nF-statistic: 3.041e+05 on 1 and 53938 DF,  p-value: < 2.2e-16"
+  },
+  {
     "objectID": "slides/lect_13.html#sampling",
     "href": "slides/lect_13.html#sampling",
     "title": "Chapter 14: Sampling variation and quality",
