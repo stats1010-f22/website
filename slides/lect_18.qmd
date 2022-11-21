@@ -171,7 +171,7 @@ Find the residual for the pair $(2.5, 16955)$
 ```{r model_fit}
 #| echo: true
 #| eval: true
-#| code-line-numbers: "|2|6|10"
+#| code-line-numbers: "|2|7|11"
 
 # for model fitting and to get residuals
 library(tidymodels)
@@ -249,7 +249,7 @@ If the least squares line captures the association between $x$ and $y$, then a p
 
 ## In `R`
 
-This plot has an obvious trend, the model does not fit the data well. Can use the [visual association test](https://stats1010-f22.github.io/website/slides/lect_08.html#/section) to check.
+This plot has an obvious trend, the model does not fit the data well. We can use the [visual association test](https://stats1010-f22.github.io/website/slides/lect_08.html#/section) to check.
 
 ```{r, plot_resids}
 #| echo: true
