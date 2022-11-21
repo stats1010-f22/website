@@ -600,8 +600,8 @@
 <img data-src="lect_18_files/figure-revealjs/visual_interpret-1.png" width="960" class="r-stretch"></section>
 <section id="extrapolation" class="slide level2">
 <h2>Extrapolation</h2>
-<p>This <a href="https://www.callingbullshit.org/case_studies/case_study_gender_gap_running.html">classic example</a> is one of my favorites.</p>
-<p>The model is only useful <em>near</em> the values for which we have data. Outside of those values anything could happen.</p>
+<p>This <a href="https://www.callingbullshit.org/case_studies/case_study_gender_gap_running.html">classic example</a> is my favorite.</p>
+<p>The model is only useful <em>inside</em> the values for which we have data. Outside of those values anything could happen.</p>
 </section>
 <section id="example-3" class="slide level2 smaller">
 <h2>Example 3</h2>
@@ -635,13 +635,35 @@
 </ol>
 </div>
 </section></section>
+<section>
 <section id="properties-of-residuals" class="title-slide slide level1 center">
 <h1>Properties of residuals</h1>
+<p>If the least squares line captures the association between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, then a plot of residuals versus <span class="math inline">\(x\)</span> should stretch out horizontally with consistent vertical scatter.</p>
+</section>
+<section id="in-r-1" class="slide level2">
+<h2>In <code>R</code></h2>
+<p>This plot has an obvious trend, the model does not fit the data well. Can use the <a href="https://stats1010-f22.github.io/website/slides/lect_08.html#/section">visual association test</a> to check.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="do">## plotting residuals</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">augment</span>(lm_fit) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> carat, </span>
+<span id="cb3-5"><a href="#cb3-5"></a>                 <span class="at">y =</span> .resid))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="lect_18_files/figure-revealjs/plot_resids-1.png" width="960" class="r-stretch"></section></section>
+<section>
+<section id="section-1" class="title-slide slide level1 center" data-background-image="lect_18-things/nice_residuals.png" data-background-size="contain">
+<h1></h1>
+
+</section>
+<section id="sd-of-residuals" class="slide level2">
+<h2>sd of residuals</h2>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

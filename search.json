@@ -959,6 +959,13 @@
     "text": "Information about the Chi-Squared test can be found here. We have two hypotheses:\n\\(H_0\\) = the variables are independent, there is no relationship between the two categorical variables.\n\\(H_A\\) = Knowing the value of one variable helps to predict the value of the other variable.\nUnder the null hypothesis, the distribution of one variable is independent to the distribution of the other. This means that the expected count for one cell, can be found using the column total times the row total divided by the total number of observations."
   },
   {
+    "objectID": "supplemental/exam-revision-3.html",
+    "href": "supplemental/exam-revision-3.html",
+    "title": "Study list for exam 3",
+    "section": "",
+    "text": "The R functions we have discussed in these weeks:\n\n\n\nqt()\n\n\nt.test()\n\n\npchisq()\n\n\nchisq.test()\n\n\nlm()\n\n\n\n\nLecture 15 Confidence Intervals\nDistribution of proportion estimate\nConfidence Intervals for Proportions\nSRS Assumption\nCI manipulations\nConfidence Interval for Mean\nt-distributions\nMargin of Error\nSRS condition and Sample size condition\n\n\nLecture 16 Statistical Tests\nNull and alternative hypotheses\nType I and II Errors for Tests Testing a proportion: \\[ \\hat p\\sim \\mathcal{N}\\left(p_0, \\frac{p_0(1-p_0)}{n}\\right)\\] Multiple testing, impact and motivation\n\n\nLecture 17 Comparison\nTwo sample z-test for proportions\nStandard Error formula\nAssumptions for two-sample z-test for proportions\nConfidence Interval for Difference between Means\n\\[(\\bar X_1 - X_2 - t_{\\alpha/2}\\text{se}(\\bar X_1-\\bar X_2),\\bar X_1 - X_2 + t_{\\alpha/2}\\text{se}(\\bar X_1-\\bar X_2))\\]\n\\[\\text{se}(\\bar X_1-\\bar X_2) = \\sqrt{\\frac{s_1^2}{n_1}+\\frac{s_2^2}{n_2}}.\\]\nCode for paired t-test in R\nPaired comparisons\n\n\nLecture 18 Inference for Counts\nTesting for independence using \\(\\chi^2\\) test\nTesting for goodness of fit using \\(\\chi^2\\) test\nDegrees of freedom: \\[\\text{df}=(r-1)(c-1)\\]\nR code to perform \\(\\chi^2\\) test and get p-value from test statistic\n\n\nLecture 19 Linear Patterns\nResponse and explanatory variables\n\\(R^2\\) for linear models\nSlope and intercept for linear models\nMathematical formulas for slope and intercept\nResiduals of linear model\nR code for fitting linear models"
+  },
+  {
     "objectID": "supplemental/tests_R.html",
     "href": "supplemental/tests_R.html",
     "title": "Confidence intervals, statistical tests, and comparison in R",
@@ -2685,7 +2692,7 @@
     "href": "slides/lect_18.html#extrapolation",
     "title": "Chapter 19: Linear patterns",
     "section": "Extrapolation",
-    "text": "Extrapolation\nThis classic example is one of my favorites.\nThe model is only useful near the values for which we have data. Outside of those values anything could happen."
+    "text": "Extrapolation\nThis classic example is my favorite.\nThe model is only useful inside the values for which we have data. Outside of those values anything could happen."
   },
   {
     "objectID": "slides/lect_18.html#example-3",
@@ -2700,6 +2707,20 @@
     "title": "Chapter 19: Linear patterns",
     "section": "Example 3 - solns",
     "text": "Example 3 - solns\n\n\nThe intercept (2.1 hrs) is the estimated time for any orders, regardless of size (to set up production)\nOnce it is running, the estimated tiem for an order is 0.031 hours per unit (or 60 * 0.031 = 1.9 minutes)\n\\(2.1 + 0.031\\cdot 100 = 5.2 hours\\), 100 units is inside the range\nFifty more units would need \\(0.031\\cdot 50 = 1.55\\) more hours"
+  },
+  {
+    "objectID": "slides/lect_18.html#in-r-1",
+    "href": "slides/lect_18.html#in-r-1",
+    "title": "Chapter 19: Linear patterns",
+    "section": "In R",
+    "text": "In R\nThis plot has an obvious trend, the model does not fit the data well. Can use the visual association test to check.\n\n## plotting residuals\naugment(lm_fit) %>%\n  ggplot() + \n  geom_point(aes(x = carat, \n                 y = .resid))"
+  },
+  {
+    "objectID": "slides/lect_18.html#sd-of-residuals",
+    "href": "slides/lect_18.html#sd-of-residuals",
+    "title": "Chapter 19: Linear patterns",
+    "section": "sd of residuals",
+    "text": "sd of residuals\n\n\nstat1010-f22.github.io/website"
   },
   {
     "objectID": "slides/lect_13.html#sampling",
