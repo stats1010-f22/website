@@ -442,8 +442,8 @@
 <h2>Plot the data</h2>
 
 <img data-src="lect_18_files/figure-revealjs/price_vs_carat-1.png" width="960" class="r-stretch"></section>
-<section id="least-squares" class="slide level2">
-<h2>Least squares</h2>
+<section id="fit" class="slide level2">
+<h2>Fit</h2>
 <p><span class="math display">\[ \hat{y} = b_0 + b_1\cdot x \]</span></p>
 <div>
 <ul>
@@ -455,10 +455,11 @@
 <section id="possible-fits" class="slide level2">
 <h2>Possible fits</h2>
 
-<img data-src="lect_18_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="least-squares-1" class="slide level2">
+<img data-src="lect_18_files/figure-revealjs/poss_fits-1.png" width="960" class="r-stretch"></section>
+<section id="least-squares" class="slide level2">
 <h2>Least squares</h2>
-</section>
+
+<img data-src="lect_18_files/figure-revealjs/first_squares-1.png" width="960" class="r-stretch"></section>
 <section id="gradient-and-slope" class="slide level2">
 <h2>Gradient and slope</h2>
 <aside class="notes">
@@ -529,9 +530,16 @@
 </section>
 <section id="residuals" class="slide level2">
 <h2>Residuals</h2>
-<p><span class="math display">\[ \begin{aligned} e &amp;= y - \hat{y} \\
-&amp;= y - b_0 - b_1 \cdot x
+<p>The residual for the <span class="math inline">\(i^{th}\)</span> observation is <span class="math display">\[ \begin{aligned} e_i &amp;= y_i - \hat{y_i} \\
+&amp;= y_i - b_0 - b_1 \cdot x_i
 \end{aligned}\]</span></p>
+<ul>
+<li>The <strong>sum of squared</strong> residuals is</li>
+</ul>
+<p><span class="math display">\[e^2_1 + e^2_2 + \dots + e^2_n\]</span></p>
+<ul>
+<li>The <strong>least squares line</strong> is the one that minimizes the sum of squared residuals</li>
+</ul>
 </section>
 <section id="example-2" class="slide level2">
 <h2>Example 2</h2>
@@ -549,7 +557,7 @@
 <section id="in-r" class="slide level2">
 <h2>In <code>R</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2|6|7|8|9|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># for model fitting and to get residuals</span></span>
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2|6|10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># for model fitting and to get residuals</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidymodels)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
@@ -579,8 +587,56 @@
 </div>
 </div>
 </section></section>
+<section>
 <section id="interpretations" class="title-slide slide level1 center">
 <h1>Interpretations</h1>
+<p><span class="math display">\[\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}\]</span></p>
+<p><strong>Intercept:</strong> For a diamonds that weighs <strong>0</strong> carats, we <strong>expect</strong> the price to be US$<span class="math inline">\(-2256.36\)</span>.</p>
+<p><strong>Slope:</strong> For every 0.1 carat increase in diamond weight, we <strong>expect</strong> the price in $US to increase by 776, on <strong>average</strong>.</p>
+</section>
+<section id="visual-interpretation" class="slide level2">
+<h2>Visual interpretation</h2>
+
+<img data-src="lect_18_files/figure-revealjs/visual_interpret-1.png" width="960" class="r-stretch"></section>
+<section id="extrapolation" class="slide level2">
+<h2>Extrapolation</h2>
+<p>This <a href="https://www.callingbullshit.org/case_studies/case_study_gender_gap_running.html">classic example</a> is one of my favorites.</p>
+<p>The model is only useful <em>near</em> the values for which we have data. Outside of those values anything could happen.</p>
+</section>
+<section id="example-3" class="slide level2 smaller">
+<h2>Example 3</h2>
+<aside class="notes">
+<p>think about this in a manufacturing sense</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p>A manufacturing plant receives orders for customized mechanical parts. The orders vary in size, from about 30 to 130 units. After configuring the production line, a supervisor oversees the production. The least squares regression line that predicts time in hours using number of units to produce is:</p>
+<p><span class="math display">\[\widehat{\text{time}} = 2.1 + 0.031 \cdot \text{Number of units}\]</span> a. Interpret the intercept of the estimated line.</p>
+<p>b. Interpret the slope of the estimated line.</p>
+<p>c. Using the fitted line, estimate the amount of time needed for an order with 100 unit. Is this estimate an extrapolation?</p>
+<p>d. Based on the fitted line, how much more time does an order with 100 units require over an order with 50 units?</p>
+</section>
+<section id="example-3---solns" class="slide level2">
+<h2>Example 3 - solns</h2>
+<div>
+<ol type="a">
+<li class="fragment">The intercept (2.1 hrs) is the estimated time for any orders, regardless of size (to set up production)</li>
+<li class="fragment">Once it is running, the estimated tiem for an order is 0.031 hours per unit (or 60 * 0.031 = 1.9 minutes)</li>
+<li class="fragment"><span class="math inline">\(2.1 + 0.031\cdot 100 = 5.2 hours\)</span>, 100 units is inside the range</li>
+<li class="fragment">Fifty more units would need <span class="math inline">\(0.031\cdot 50 = 1.55\)</span> more hours</li>
+</ol>
+</div>
+</section></section>
+<section id="properties-of-residuals" class="title-slide slide level1 center">
+<h1>Properties of residuals</h1>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>

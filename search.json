@@ -2618,11 +2618,11 @@
     "text": "Plot the data"
   },
   {
-    "objectID": "slides/lect_18.html#least-squares",
-    "href": "slides/lect_18.html#least-squares",
+    "objectID": "slides/lect_18.html#fit",
+    "href": "slides/lect_18.html#fit",
     "title": "Chapter 19: Linear patterns",
-    "section": "Least squares",
-    "text": "Least squares\n\\[ \\hat{y} = b_0 + b_1\\cdot x \\]\n\n\n\\(b-1\\) is gradient \\(b_0\\) is the \\(y\\) intercept\n$ $ is the fitted value, the result of the fitted line"
+    "section": "Fit",
+    "text": "Fit\n\\[ \\hat{y} = b_0 + b_1\\cdot x \\]\n\n\n\\(b-1\\) is gradient \\(b_0\\) is the \\(y\\) intercept\n$ $ is the fitted value, the result of the fitted line"
   },
   {
     "objectID": "slides/lect_18.html#possible-fits",
@@ -2632,8 +2632,8 @@
     "text": "Possible fits"
   },
   {
-    "objectID": "slides/lect_18.html#least-squares-1",
-    "href": "slides/lect_18.html#least-squares-1",
+    "objectID": "slides/lect_18.html#least-squares",
+    "href": "slides/lect_18.html#least-squares",
     "title": "Chapter 19: Linear patterns",
     "section": "Least squares",
     "text": "Least squares"
@@ -2657,7 +2657,7 @@
     "href": "slides/lect_18.html#residuals",
     "title": "Chapter 19: Linear patterns",
     "section": "Residuals",
-    "text": "Residuals\n\\[ \\begin{aligned} e &= y - \\hat{y} \\\\\n&= y - b_0 - b_1 \\cdot x\n\\end{aligned}\\]"
+    "text": "Residuals\nThe residual for the \\(i^{th}\\) observation is \\[ \\begin{aligned} e_i &= y_i - \\hat{y_i} \\\\\n&= y_i - b_0 - b_1 \\cdot x_i\n\\end{aligned}\\]\n\nThe sum of squared residuals is\n\n\\[e^2_1 + e^2_2 + \\dots + e^2_n\\]\n\nThe least squares line is the one that minimizes the sum of squared residuals"
   },
   {
     "objectID": "slides/lect_18.html#example-2",
@@ -2672,6 +2672,34 @@
     "title": "Chapter 19: Linear patterns",
     "section": "In R",
     "text": "In R\n\n# for model fitting and to get residuals\nlibrary(tidymodels)\n\n\n## Assign the least\n## squares line\nlm_fit<- lm(price ~ carat, diamonds) \n## NOTE: outcome first, predictor second\n\n## find predictions and residuals\naugment(lm_fit)\n\n# A tibble: 53,940 × 8\n   price carat .fitted .resid      .hat .sigma     .cooksd .std.resid\n   <int> <dbl>   <dbl>  <dbl>     <dbl>  <dbl>       <dbl>      <dbl>\n 1   326  0.23 -472.     798. 0.0000452  1549. 0.00000600       0.516\n 2   326  0.21 -628.     954. 0.0000471  1549. 0.00000892       0.616\n 3   327  0.23 -472.     799. 0.0000452  1549. 0.00000602       0.516\n 4   334  0.29   -7.00   341. 0.0000398  1549. 0.000000966      0.220\n 5   335  0.31  148.     187. 0.0000382  1549. 0.000000278      0.121\n 6   336  0.24 -395.     731. 0.0000442  1549. 0.00000493       0.472\n 7   336  0.24 -395.     731. 0.0000442  1549. 0.00000493       0.472\n 8   337  0.26 -240.     577. 0.0000424  1549. 0.00000294       0.372\n 9   337  0.22 -550.     887. 0.0000461  1549. 0.00000756       0.573\n10   338  0.23 -472.     810. 0.0000452  1549. 0.00000618       0.523\n# … with 53,930 more rows\n# ℹ Use `print(n = ...)` to see more rows"
+  },
+  {
+    "objectID": "slides/lect_18.html#visual-interpretation",
+    "href": "slides/lect_18.html#visual-interpretation",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Visual interpretation",
+    "text": "Visual interpretation"
+  },
+  {
+    "objectID": "slides/lect_18.html#extrapolation",
+    "href": "slides/lect_18.html#extrapolation",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Extrapolation",
+    "text": "Extrapolation\nThis classic example is one of my favorites.\nThe model is only useful near the values for which we have data. Outside of those values anything could happen."
+  },
+  {
+    "objectID": "slides/lect_18.html#example-3",
+    "href": "slides/lect_18.html#example-3",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Example 3",
+    "text": "Example 3\n\nthink about this in a manufacturing sense\n\nA manufacturing plant receives orders for customized mechanical parts. The orders vary in size, from about 30 to 130 units. After configuring the production line, a supervisor oversees the production. The least squares regression line that predicts time in hours using number of units to produce is:\n\\[\\widehat{\\text{time}} = 2.1 + 0.031 \\cdot \\text{Number of units}\\] a. Interpret the intercept of the estimated line.\nb. Interpret the slope of the estimated line.\nc. Using the fitted line, estimate the amount of time needed for an order with 100 unit. Is this estimate an extrapolation?\nd. Based on the fitted line, how much more time does an order with 100 units require over an order with 50 units?"
+  },
+  {
+    "objectID": "slides/lect_18.html#example-3---solns",
+    "href": "slides/lect_18.html#example-3---solns",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Example 3 - solns",
+    "text": "Example 3 - solns\n\n\nThe intercept (2.1 hrs) is the estimated time for any orders, regardless of size (to set up production)\nOnce it is running, the estimated tiem for an order is 0.031 hours per unit (or 60 * 0.031 = 1.9 minutes)\n\\(2.1 + 0.031\\cdot 100 = 5.2 hours\\), 100 units is inside the range\nFifty more units would need \\(0.031\\cdot 50 = 1.55\\) more hours"
   },
   {
     "objectID": "slides/lect_13.html#sampling",
