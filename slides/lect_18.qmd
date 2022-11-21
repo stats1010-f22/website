@@ -21,21 +21,17 @@ library(tidyverse)
 # Learning outcomes
 
 ::: incremental
-- Identify and graph the response and explanatory variable associate with a linear regression equation
-- Interpret the intercept and slope that define a linear regression
-- Summarize the precision of a fitted regression equation using the $r^2$ statistic and standard deviation of the residuals
-- Use residuals from the regression equation to check that the equation is an appropriate summary of the data
+-   Identify and graph the response and explanatory variable associate with a linear regression equation
+-   Interpret the intercept and slope that define a linear regression
+-   Summarize the precision of a fitted regression equation using the $r^2$ statistic and standard deviation of the residuals
+-   Use residuals from the regression equation to check that the equation is an appropriate summary of the data
 :::
 
 # Reminders
 
-We have [fit a line](https://stats1010-f22.github.io/website/slides/lect_08.html#/line-of-association) to data already. Today we will discuss this in more detail. 
+We have [fit a line](https://stats1010-f22.github.io/website/slides/lect_08.html#/line-of-association) to data already. Today we will discuss this in more detail.
 
-For the diamonds dataset:
-::: incremental
-1. Which variable would we want to predict?
-2. Which [variable](https://stats1010-f22.github.io/website/slides/lect_08.html#/describe-these-plots) is a good predicter for it?
-:::
+For the diamonds dataset: ::: incremental 1. Which variable would we want to predict? 2. Which [variable](https://stats1010-f22.github.io/website/slides/lect_08.html#/describe-these-plots) is a good predicter for it? :::
 
 ## Variable names
 
@@ -49,7 +45,6 @@ For the diamonds dataset:
     -   explanatory
     -   predictor
 :::
-
 
 ## Plot the data
 
@@ -65,18 +60,20 @@ diamonds %>%
        y = "Price of diamonds in US$")
 ```
 
-## Least squares
+## Fit
 
 $$ \hat{y} = b_0 + b_1\cdot x $$
 
 ::: incremental
 -   $b-1$ is gradient $b_0$ is the $y$ intercept
--   $ \hat{y}$ is the fitted value, the result of the fitted line
+-   \$ \hat{y}\$ is the fitted value, the result of the fitted line
 :::
 
 ## Possible fits
 
-```{r}
+```{r poss_fits}
+#| echo: false
+#| eval: true
 
 diamonds %>% 
   ggplot() +
@@ -97,14 +94,38 @@ diamonds %>%
 
 ## Least squares
 
+```{r first_squares}
+#| echo: false
+#| eval: true
+
+diamonds %>% 
+  slice_sample(n = 200) %>% 
+  mutate(yhat = 7756*carat -2258,
+         to_square = abs(price - yhat),
+         new_carat = carat + to_square) %>% 
+  ggplot() +
+  geom_point(aes(y = price, x = carat)) +
+  labs(title = "Price vs carat", 
+       x = "Carat of diamond", 
+       y = "Price of diamonds in US$") +
+  geom_abline(aes(intercept = -2258, 
+                  slope = 7756), 
+              color = "blue") +
+  geom_rect(aes(xmin = carat, 
+                xmax = new_carat, 
+                ymin = price, 
+                ymax = yhat),
+            fill = "lightblue",
+            color = "grey30") 
+```
+
 ## Gradient and slope
 
 ::: notes
 Pull out your calculators and work on this
 :::
 
-$$ m = \frac{r \cdot s_y}{s_x} $$ $$ b = \bar{y} - m \bar{x} $$
-## Example 1
+$$ m = \frac{r \cdot s_y}{s_x} $$ $$ b = \bar{y} - m \bar{x} $$ \## Example 1
 
 ::: notes
 carat is on the bottom b/c it is the x, always x on the bottom.
@@ -120,7 +141,7 @@ carat is on the bottom b/c it is the x, always x on the bottom.
 -   $m = \frac{r \cdot s_{price}}{s_{carat}}$
 
 -   $\begin{aligned} m &= \frac{r \cdot s_{price}}{s_{carat}} \\ &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\ &= 7756.426 \end{aligned}$
-:::  
+:::
 
 ## Example 1
 
@@ -133,29 +154,35 @@ for carat values $2.5$
 ::: incremental
 -   $\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}$
 
-- $\hat{y} = -2256.36 + 7756.426 \cdot x$
+-   $\hat{y} = -2256.36 + 7756.426 \cdot x$
 
--   $\begin{aligned}\hat{y}  &= -2256.36 + 7756.426 \cdot x \\ &= -2256.36 + 7756.426 \cdot 2.5 \\&= \$17135 \end{aligned}$
+-   $\begin{aligned}\hat{y} &= -2256.36 + 7756.426 \cdot x \\ &= -2256.36 + 7756.426 \cdot 2.5 \\&= \$17135 \end{aligned}$
 :::
 
 #  {background-image="lect_18-things/error_term.jpg" background-size="contain"}
 
 ## Residuals
 
-$$ \begin{aligned} e &= y - \hat{y} \\
-&= y - b_0 - b_1 \cdot x
+The residual for the $i^{th}$ observation is $$ \begin{aligned} e_i &= y_i - \hat{y_i} \\
+&= y_i - b_0 - b_1 \cdot x_i
 \end{aligned}$$
+
+-   The **sum of squared** residuals is
+
+$$e^2_1 + e^2_2 + \dots + e^2_n$$
+
+-   The **least squares line** is the one that minimizes the sum of squared residuals
 
 ## Example 2
 
-Find the residual for the pair $(2.5, 16955)$ 
+Find the residual for the pair $(2.5, 16955)$
 
 ::: incremental
-- $$ \begin{aligned} e &= y - \hat{y} \\
-&= 16955 - (2256.36 + 7756.426 \cdot 2.5) \\
-&= 16955 - 21647.43\\
-&= -4692.425
-\end{aligned}$$
+-   $$ \begin{aligned} e &= y - \hat{y} \\
+    &= 16955 - (2256.36 + 7756.426 \cdot 2.5) \\
+    &= 16955 - 21647.43\\
+    &= -4692.425
+    \end{aligned}$$
 :::
 
 ## In `R`
@@ -163,7 +190,7 @@ Find the residual for the pair $(2.5, 16955)$
 ```{r model_fit}
 #| echo: true
 #| eval: true
-#| code-line-numbers: "|2|6|7|8|9|13"
+#| code-line-numbers: "|2|6|10"
 
 # for model fitting and to get residuals
 library(tidymodels)
@@ -180,4 +207,59 @@ augment(lm_fit)
 
 # Interpretations
 
+$$\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}$$
 
+**Intercept:** For a diamonds that weighs **0** carats, we **expect** the price to be US\$$-2256.36$.
+
+**Slope:** For every 0.1 carat increase in diamond weight, we **expect** the price in \$US to increase by 776, on **average**.
+
+## Visual interpretation
+
+```{r visual_interpret}
+#| echo: false
+#| eval: true
+
+diamonds %>% 
+  ggplot() +
+  geom_point(aes(y = price, x = carat)) +
+  labs(title = "Price vs carat", 
+       x = "Carat of diamond", 
+       y = "Price of diamonds in US$") +
+  geom_abline(aes(intercept = -2258, 
+                  slope = 7756), 
+              color = "blue") +
+  ylim(-3000, 19000)
+```
+
+## Extrapolation
+
+This [classic example](https://www.callingbullshit.org/case_studies/case_study_gender_gap_running.html) is one of my favorites.
+
+The model is only useful *near* the values for which we have data. Outside of those values anything could happen.
+
+## Example 3 {.smaller}
+
+::: notes
+think about this in a manufacturing sense
+:::
+
+A manufacturing plant receives orders for customized mechanical parts. The orders vary in size, from about 30 to 130 units. After configuring the production line, a supervisor oversees the production. The least squares regression line that predicts time in hours using number of units to produce is:
+
+$$\widehat{\text{time}} = 2.1 + 0.031 \cdot \text{Number of units}$$ a. Interpret the intercept of the estimated line.
+
+b\. Interpret the slope of the estimated line.
+
+c\. Using the fitted line, estimate the amount of time needed for an order with 100 unit. Is this estimate an extrapolation?
+
+d\. Based on the fitted line, how much more time does an order with 100 units require over an order with 50 units?
+
+## Example 3 - solns
+
+::: incremental
+a.  The intercept (2.1 hrs) is the estimated time for any orders, regardless of size (to set up production)
+b.  Once it is running, the estimated tiem for an order is 0.031 hours per unit (or 60 \* 0.031 = 1.9 minutes)
+c.  $2.1 + 0.031\cdot 100 = 5.2 hours$, 100 units is inside the range
+d.  Fifty more units would need $0.031\cdot 50 = 1.55$ more hours
+:::
+
+# Properties of residuals
