@@ -417,7 +417,13 @@
 <section id="reminders" class="title-slide slide level1 center">
 <h1>Reminders</h1>
 <p>We have <a href="https://stats1010-f22.github.io/website/slides/lect_08.html#/line-of-association">fit a line</a> to data already. Today we will discuss this in more detail.</p>
-<p>For the diamonds dataset: ::: incremental 1. Which variable would we want to predict? 2. Which <a href="https://stats1010-f22.github.io/website/slides/lect_08.html#/describe-these-plots">variable</a> is a good predicter for it? :::</p>
+<p>For the diamonds dataset:</p>
+<div>
+<ul>
+<li class="fragment"><p>Which variable would we want to predict?</p></li>
+<li class="fragment"><p>Which <a href="https://stats1010-f22.github.io/website/slides/lect_08.html#/describe-these-plots">variable</a> is a good predictor for it?</p></li>
+</ul>
+</div>
 </section>
 <section id="variable-names" class="slide level2">
 <h2>Variable names</h2>
@@ -448,7 +454,7 @@
 <div>
 <ul>
 <li class="fragment"><span class="math inline">\(b-1\)</span> is gradient <span class="math inline">\(b_0\)</span> is the <span class="math inline">\(y\)</span> intercept</li>
-<li class="fragment">$ $ is the fitted value, the result of the fitted line</li>
+<li class="fragment"><span class="math inline">\(\hat{y}\)</span> is the fitted value, the result of the fitted line</li>
 </ul>
 </div>
 </section>
@@ -475,7 +481,10 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p><span class="math display">\[ m = \frac{r \cdot s_y}{s_x} \]</span> <span class="math display">\[ b = \bar{y} - m \bar{x} \]</span> ## Example 1</p>
+<p><span class="math display">\[ m = \frac{r \cdot s_y}{s_x} \]</span> <span class="math display">\[ b = \bar{y} - m \bar{x} \]</span></p>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example 1</h2>
 <aside class="notes">
 <p>carat is on the bottom b/c it is the x, always x on the bottom.</p>
 <style type="text/css">
@@ -499,7 +508,7 @@
 </ul>
 </div>
 </section>
-<section id="example-1" class="slide level2">
+<section id="example-1-1" class="slide level2">
 <h2>Example 1</h2>
 <aside class="notes">
 <p>Pull out your calculators and work on this</p>
@@ -567,23 +576,16 @@
 <span id="cb1-8"><a href="#cb1-8"></a><span class="do">## </span><span class="al">NOTE</span><span class="do">: outcome first, predictor second</span></span>
 <span id="cb1-9"><a href="#cb1-9"></a></span>
 <span id="cb1-10"><a href="#cb1-10"></a><span class="do">## find predictions and residuals</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">augment</span>(lm_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">head</span>(<span class="fu">augment</span>(lm_fit), <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 53,940 × 8
-   price carat .fitted .resid      .hat .sigma     .cooksd .std.resid
-   &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;
- 1   326  0.23 -472.     798. 0.0000452  1549. 0.00000600       0.516
- 2   326  0.21 -628.     954. 0.0000471  1549. 0.00000892       0.616
- 3   327  0.23 -472.     799. 0.0000452  1549. 0.00000602       0.516
- 4   334  0.29   -7.00   341. 0.0000398  1549. 0.000000966      0.220
- 5   335  0.31  148.     187. 0.0000382  1549. 0.000000278      0.121
- 6   336  0.24 -395.     731. 0.0000442  1549. 0.00000493       0.472
- 7   336  0.24 -395.     731. 0.0000442  1549. 0.00000493       0.472
- 8   337  0.26 -240.     577. 0.0000424  1549. 0.00000294       0.372
- 9   337  0.22 -550.     887. 0.0000461  1549. 0.00000756       0.573
-10   338  0.23 -472.     810. 0.0000452  1549. 0.00000618       0.523
-# … with 53,930 more rows
-# ℹ Use `print(n = ...)` to see more rows</code></pre>
+<pre><code># A tibble: 5 × 8
+  price carat .fitted .resid      .hat .sigma     .cooksd .std.resid
+  &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;
+1   326  0.23 -472.     798. 0.0000452  1549. 0.00000600       0.516
+2   326  0.21 -628.     954. 0.0000471  1549. 0.00000892       0.616
+3   327  0.23 -472.     799. 0.0000452  1549. 0.00000602       0.516
+4   334  0.29   -7.00   341. 0.0000398  1549. 0.000000966      0.220
+5   335  0.31  148.     187. 0.0000382  1549. 0.000000278      0.121</code></pre>
 </div>
 </div>
 </section></section>
@@ -661,8 +663,14 @@
 <h2>sd of residuals</h2>
 <p>If the residuals are nearly normal, we can summarise them with the mean and standard deviation.</p>
 <p><span class="math display">\[ s_e = \sqrt{\frac{e_1^2 + e_2^2 + ... + e_n^2}{n-2}}\]</span> the denominator is <span class="math inline">\(n-2\)</span> because we need two estimates for the line of best fit: <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span>.</p>
-<p>Also known as <strong>RMSE</strong> root mean squared error.</p>
+<p>Also known as <strong>RMSE</strong> root mean squared error. This can be used to compare multiple models to see which model best explains the variation in the data.</p>
 </section></section>
+<section id="explaining-variation" class="title-slide slide level1 center">
+<h1>Explaining variation</h1>
+<p>A regression line splits the response into two parts, a fitted value and a residual</p>
+<p><span class="math display">\[y = \hat{y} + e\]</span> <span class="math inline">\(\hat{y}\)</span> represents the variation in <span class="math inline">\(y\)</span> that is associated with <span class="math inline">\(x\)</span> <span class="math inline">\(e\)</span> represents variation in <span class="math inline">\(y\)</span> due to other factors</p>
+</section>
+
 <section id="conditions" class="title-slide slide level1 center">
 <h1>Conditions</h1>
 <div>

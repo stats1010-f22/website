@@ -2629,7 +2629,7 @@
     "href": "slides/lect_18.html#fit",
     "title": "Chapter 19: Linear patterns",
     "section": "Fit",
-    "text": "Fit\n\\[ \\hat{y} = b_0 + b_1\\cdot x \\]\n\n\n\\(b-1\\) is gradient \\(b_0\\) is the \\(y\\) intercept\n$ $ is the fitted value, the result of the fitted line"
+    "text": "Fit\n\\[ \\hat{y} = b_0 + b_1\\cdot x \\]\n\n\n\\(b-1\\) is gradient \\(b_0\\) is the \\(y\\) intercept\n\\(\\hat{y}\\) is the fitted value, the result of the fitted line"
   },
   {
     "objectID": "slides/lect_18.html#possible-fits",
@@ -2650,11 +2650,18 @@
     "href": "slides/lect_18.html#gradient-and-slope",
     "title": "Chapter 19: Linear patterns",
     "section": "Gradient and slope",
-    "text": "Gradient and slope\n\nPull out your calculators and work on this\n\n\\[ m = \\frac{r \\cdot s_y}{s_x} \\] \\[ b = \\bar{y} - m \\bar{x} \\] ## Example 1\n\ncarat is on the bottom b/c it is the x, always x on the bottom.\n\n\n\n\\(r = 0.9215913\\)\n\\(s_{price} = 3989.44\\)\n\\(s_{carat} = 0.4740112\\)\n\\(m = \\frac{r \\cdot s_{price}}{s_{carat}}\\)\n\\(\\begin{aligned} m &= \\frac{r \\cdot s_{price}}{s_{carat}} \\\\ &= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\ &= 7756.426 \\end{aligned}\\)"
+    "text": "Gradient and slope\n\nPull out your calculators and work on this\n\n\\[ m = \\frac{r \\cdot s_y}{s_x} \\] \\[ b = \\bar{y} - m \\bar{x} \\]"
   },
   {
     "objectID": "slides/lect_18.html#example-1",
     "href": "slides/lect_18.html#example-1",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Example 1",
+    "text": "Example 1\n\ncarat is on the bottom b/c it is the x, always x on the bottom.\n\n\n\n\\(r = 0.9215913\\)\n\\(s_{price} = 3989.44\\)\n\\(s_{carat} = 0.4740112\\)\n\\(m = \\frac{r \\cdot s_{price}}{s_{carat}}\\)\n\\(\\begin{aligned} m &= \\frac{r \\cdot s_{price}}{s_{carat}} \\\\ &= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\ &= 7756.426 \\end{aligned}\\)"
+  },
+  {
+    "objectID": "slides/lect_18.html#example-1-1",
+    "href": "slides/lect_18.html#example-1-1",
     "title": "Chapter 19: Linear patterns",
     "section": "Example 1",
     "text": "Example 1\n\nPull out your calculators and work on this\n\nfor carat values \\(2.5\\)\n\n\n\\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)\n\\(\\hat{y} = -2256.36 + 7756.426 \\cdot x\\)\n\\(\\begin{aligned}\\hat{y} &= -2256.36 + 7756.426 \\cdot x \\\\ &= -2256.36 + 7756.426 \\cdot 2.5 \\\\&= \\$17135 \\end{aligned}\\)"
@@ -2678,7 +2685,7 @@
     "href": "slides/lect_18.html#in-r",
     "title": "Chapter 19: Linear patterns",
     "section": "In R",
-    "text": "In R\n\n# for model fitting and to get residuals\nlibrary(tidymodels)\n\n\n## Assign the least\n## squares line\nlm_fit<- lm(price ~ carat, diamonds) \n## NOTE: outcome first, predictor second\n\n## find predictions and residuals\naugment(lm_fit)\n\n# A tibble: 53,940 × 8\n   price carat .fitted .resid      .hat .sigma     .cooksd .std.resid\n   <int> <dbl>   <dbl>  <dbl>     <dbl>  <dbl>       <dbl>      <dbl>\n 1   326  0.23 -472.     798. 0.0000452  1549. 0.00000600       0.516\n 2   326  0.21 -628.     954. 0.0000471  1549. 0.00000892       0.616\n 3   327  0.23 -472.     799. 0.0000452  1549. 0.00000602       0.516\n 4   334  0.29   -7.00   341. 0.0000398  1549. 0.000000966      0.220\n 5   335  0.31  148.     187. 0.0000382  1549. 0.000000278      0.121\n 6   336  0.24 -395.     731. 0.0000442  1549. 0.00000493       0.472\n 7   336  0.24 -395.     731. 0.0000442  1549. 0.00000493       0.472\n 8   337  0.26 -240.     577. 0.0000424  1549. 0.00000294       0.372\n 9   337  0.22 -550.     887. 0.0000461  1549. 0.00000756       0.573\n10   338  0.23 -472.     810. 0.0000452  1549. 0.00000618       0.523\n# … with 53,930 more rows\n# ℹ Use `print(n = ...)` to see more rows"
+    "text": "In R\n\n# for model fitting and to get residuals\nlibrary(tidymodels)\n\n\n## Assign the least\n## squares line\nlm_fit<- lm(price ~ carat, diamonds) \n## NOTE: outcome first, predictor second\n\n## find predictions and residuals\nhead(augment(lm_fit), 5)\n\n# A tibble: 5 × 8\n  price carat .fitted .resid      .hat .sigma     .cooksd .std.resid\n  <int> <dbl>   <dbl>  <dbl>     <dbl>  <dbl>       <dbl>      <dbl>\n1   326  0.23 -472.     798. 0.0000452  1549. 0.00000600       0.516\n2   326  0.21 -628.     954. 0.0000471  1549. 0.00000892       0.616\n3   327  0.23 -472.     799. 0.0000452  1549. 0.00000602       0.516\n4   334  0.29   -7.00   341. 0.0000398  1549. 0.000000966      0.220\n5   335  0.31  148.     187. 0.0000382  1549. 0.000000278      0.121"
   },
   {
     "objectID": "slides/lect_18.html#visual-interpretation",
@@ -2720,7 +2727,7 @@
     "href": "slides/lect_18.html#sd-of-residuals",
     "title": "Chapter 19: Linear patterns",
     "section": "sd of residuals",
-    "text": "sd of residuals\nIf the residuals are nearly normal, we can summarise them with the mean and standard deviation.\n\\[ s_e = \\sqrt{\\frac{e_1^2 + e_2^2 + ... + e_n^2}{n-2}}\\] the denominator is \\(n-2\\) because we need two estimates for the line of best fit: \\(b_0\\) and \\(b_1\\).\nAlso known as RMSE root mean squared error."
+    "text": "sd of residuals\nIf the residuals are nearly normal, we can summarise them with the mean and standard deviation.\n\\[ s_e = \\sqrt{\\frac{e_1^2 + e_2^2 + ... + e_n^2}{n-2}}\\] the denominator is \\(n-2\\) because we need two estimates for the line of best fit: \\(b_0\\) and \\(b_1\\).\nAlso known as RMSE root mean squared error. This can be used to compare multiple models to see which model best explains the variation in the data."
   },
   {
     "objectID": "slides/lect_13.html#sampling",
