@@ -444,6 +444,10 @@
 </ul>
 </div>
 </section>
+<section id="least-squares" class="slide level2">
+<h2>Least squares</h2>
+
+<img data-src="lect_18_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
 <section id="plot-the-data" class="slide level2">
 <h2>Plot the data</h2>
 
@@ -482,7 +486,7 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p><span class="math display">\[ m = \frac{r \cdot s_y}{s_x} \]</span> <span class="math display">\[ b = \bar{y} - m \bar{x} \]</span></p>
+<p><span class="math display">\[ b_1 = \frac{r \cdot s_y}{s_x} \]</span> <span class="math display">\[ b_0 = \bar{y} - b_1 \bar{x} \]</span></p>
 </section>
 <section id="example-1" class="slide level2">
 <h2>Example 1</h2>
@@ -504,8 +508,8 @@
 <li class="fragment"><p><span class="math inline">\(r = 0.9215913\)</span></p></li>
 <li class="fragment"><p><span class="math inline">\(s_{price} = 3989.44\)</span></p></li>
 <li class="fragment"><p><span class="math inline">\(s_{carat} = 0.4740112\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(m = \frac{r \cdot s_{price}}{s_{carat}}\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\begin{aligned} m &amp;= \frac{r \cdot s_{price}}{s_{carat}} \\ &amp;= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\ &amp;= 7756.426 \end{aligned}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(b_1 = \frac{r \cdot s_{price}}{s_{carat}}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\begin{aligned} b_1 &amp;= \frac{r \cdot s_{price}}{s_{carat}} \\ &amp;= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\ &amp;= 7756.426 \end{aligned}\)</span></p></li>
 </ul>
 </div>
 </section>
@@ -513,12 +517,12 @@
 <h2>Example 1</h2>
 <div>
 <ul>
-<li class="fragment"><p><span class="math inline">\(b = \overline{price} - m \cdot \overline{carat}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(b_0 = \overline{price} - b_1 \cdot \overline{carat}\)</span></p></li>
 <li class="fragment"><p><span class="math inline">\(\overline{price} = 3932.8\)</span></p></li>
 <li class="fragment"><p><span class="math inline">\(\overline{carat} = 0.7979397\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(m = 7756.426\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(b_1 = 7756.426\)</span></p></li>
 <li class="fragment"><p><span class="math display">\[\begin{aligned}
-b &amp;= \overline{price} - m \cdot \overline{carat} \\
+b_0 &amp;= \overline{price} - b_1 \cdot \overline{carat} \\
 &amp;= 3932.8 - 7756.426 \cdot 0.7979397\\
 &amp;= -2256.36
 \end{aligned}\]</span></p></li>
@@ -569,9 +573,9 @@ b &amp;= \overline{price} - m \cdot \overline{carat} \\
 <div>
 <ul>
 <li class="fragment"><span class="math display">\[ \begin{aligned} e &amp;= y - \hat{y} \\
-&amp;= 16955 - (2256.36 + 7756.426 \cdot 2.5) \\
-&amp;= 16955 - 21647.43\\
-&amp;= -4692.425
+&amp;= 16955 - (-2256.36 + 7756.426 \cdot 2.5) \\
+&amp;= 16955 - 17134.71\\
+&amp;= -179.705
 \end{aligned}\]</span></li>
 </ul>
 </div>
