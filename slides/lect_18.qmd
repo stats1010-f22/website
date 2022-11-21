@@ -98,32 +98,7 @@ diamonds %>%
               col = "yellow")
 ```
 
-## Least squares
-
-```{r first_squares}
-#| echo: false
-#| eval: true
-
-diamonds %>% 
-  slice_sample(n = 200) %>% 
-  mutate(yhat = 7756*carat -2258,
-         to_square = abs(price - yhat),
-         new_carat = carat + to_square) %>% 
-  ggplot() +
-  geom_point(aes(y = price, x = carat)) +
-  labs(title = "Price vs carat", 
-       x = "Carat of diamond", 
-       y = "Price of diamonds in US$") +
-  geom_abline(aes(intercept = -2258, 
-                  slope = 7756), 
-              color = "blue") +
-  geom_rect(aes(xmin = carat, 
-                xmax = new_carat, 
-                ymin = price, 
-                ymax = yhat),
-            fill = "lightblue",
-            color = "grey30") 
-```
+#  {background-image="lect_18-things/error_term.jpg" background-size="contain"}
 
 ## Gradient and slope
 
@@ -166,8 +141,6 @@ for carat values $2.5$
 
 -   $\begin{aligned}\hat{y} &= -2256.36 + 7756.426 \cdot x \\ &= -2256.36 + 7756.426 \cdot 2.5 \\&= \$17135 \end{aligned}$
 :::
-
-#  {background-image="lect_18-things/error_term.jpg" background-size="contain"}
 
 ## Residuals
 
@@ -303,7 +276,9 @@ Also known as **RMSE** root mean squared error. This can be used to compare mult
 
 A regression line splits the response into two parts, a fitted value and a residual
 
-$$y = \hat{y} + e$$ $\hat{y}$ represents the variation in $y$ that is associated with $x$ $e$ represents variation in $y$ due to other factors
+$$y = \hat{y} + e$$ $\hat{y}$ represents the variation in $y$ that is associated with $x$ $e$ represents variation in $y$ due to other factors.
+
+The [sample correlation](https://stats1010-f22.github.io/website/slides/lect_08.html#/correlation-math) $0\leq r\leq 1$. The squared-correlation $r^2$ determines the fraction of the variation that can be accounted for by the model.  $1-r^2$ is the amounted of variation left in the residuals.
 
 # Conditions
 
