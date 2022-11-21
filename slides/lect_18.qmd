@@ -26,3 +26,158 @@ library(tidyverse)
 - Summarize the precision of a fitted regression equation using the $r^2$ statistic and standard deviation of the residuals
 - Use residuals from the regression equation to check that the equation is an appropriate summary of the data
 :::
+
+# Reminders
+
+We have [fit a line](https://stats1010-f22.github.io/website/slides/lect_08.html#/line-of-association) to data already. Today we will discuss this in more detail. 
+
+For the diamonds dataset:
+::: incremental
+1. Which variable would we want to predict?
+2. Which [variable](https://stats1010-f22.github.io/website/slides/lect_08.html#/describe-these-plots) is a good predicter for it?
+:::
+
+## Variable names
+
+::: incremental
+-   variable on the $y$ axis
+    -   dependent
+    -   response
+    -   outcome
+-   variable on the $x$ axis
+    -   independent (not this kind of [independence](https://stats1010-f22.github.io/website/ae/ae-4.html))
+    -   explanatory
+    -   predictor
+:::
+
+
+## Plot the data
+
+```{r price_vs_carat}
+#| echo: false
+#| eval: true
+
+diamonds %>% 
+  ggplot() +
+  geom_point(aes(y = price, x = carat)) +
+  labs(title = "Price vs carat", 
+       x = "Carat of diamond", 
+       y = "Price of diamonds in US$")
+```
+
+## Least squares
+
+$$ \hat{y} = b_0 + b_1\cdot x $$
+
+::: incremental
+-   $b-1$ is gradient $b_0$ is the $y$ intercept
+-   $ \hat{y}$ is the fitted value, the result of the fitted line
+:::
+
+## Possible fits
+
+```{r}
+
+diamonds %>% 
+  ggplot() +
+  geom_point(aes(y = price, x = carat)) +
+  labs(title = "Price vs carat", 
+       x = "Carat of diamond", 
+       y = "Price of diamonds in US$") +
+  geom_abline(aes(intercept = -2258, 
+                  slope = 7756), 
+              color = "blue")  +
+  geom_abline(aes(intercept = 5200, 
+                  slope = -1587.719),
+              col = "red") +
+  geom_abline(aes(intercept = 8403.846, 
+                  slope = -5602.564),
+              col = "yellow")
+```
+
+## Least squares
+
+## Gradient and slope
+
+::: notes
+Pull out your calculators and work on this
+:::
+
+$$ m = \frac{r \cdot s_y}{s_x} $$ $$ b = \bar{y} - m \bar{x} $$
+## Example 1
+
+::: notes
+carat is on the bottom b/c it is the x, always x on the bottom.
+:::
+
+::: incremental
+-   $r = 0.9215913$
+
+-   $s_{price} = 3989.44$
+
+-   $s_{carat} = 0.4740112$
+
+-   $m = \frac{r \cdot s_{price}}{s_{carat}}$
+
+-   $\begin{aligned} m &= \frac{r \cdot s_{price}}{s_{carat}} \\ &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\ &= 7756.426 \end{aligned}$
+:::  
+
+## Example 1
+
+::: notes
+Pull out your calculators and work on this
+:::
+
+for carat values $2.5$
+
+::: incremental
+-   $\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}$
+
+- $\hat{y} = -2256.36 + 7756.426 \cdot x$
+
+-   $\begin{aligned}\hat{y}  &= -2256.36 + 7756.426 \cdot x \\ &= -2256.36 + 7756.426 \cdot 2.5 \\&= \$17135 \end{aligned}$
+:::
+
+#  {background-image="lect_18-things/error_term.jpg" background-size="contain"}
+
+## Residuals
+
+$$ \begin{aligned} e &= y - \hat{y} \\
+&= y - b_0 - b_1 \cdot x
+\end{aligned}$$
+
+## Example 2
+
+Find the residual for the pair $(2.5, 16955)$ 
+
+::: incremental
+- $$ \begin{aligned} e &= y - \hat{y} \\
+&= 16955 - (2256.36 + 7756.426 \cdot 2.5) \\
+&= 16955 - 21647.43\\
+&= -4692.425
+\end{aligned}$$
+:::
+
+## In `R`
+
+```{r model_fit}
+#| echo: true
+#| eval: true
+#| code-line-numbers: "|2|6|7|8|9|13"
+
+# for model fitting and to get residuals
+library(tidymodels)
+
+
+## Assign the least
+## squares line
+lm_fit<- lm(price ~ carat, diamonds) 
+## NOTE: outcome first, predictor second
+
+## find predictions and residuals
+augment(lm_fit)
+```
+
+# Interpretations
+
+

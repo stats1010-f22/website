@@ -7,9 +7,10 @@ These supplemental notes addends the following lectures: [Confidence intervals](
 :::
 
 ```{r import_packages}
-#|echo: false
-#|eval: true
-#|message: false
+#| echo: false
+#| eval: true
+#| message: false
+#| include: false
 
 library(tidyverse)
 ```
