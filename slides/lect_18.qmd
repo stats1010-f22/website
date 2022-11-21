@@ -52,6 +52,30 @@ For the diamonds dataset:
     -   predictor
 :::
 
+## Least squares
+```{r}
+diamonds %>% 
+  slice_sample(n = 200) %>% 
+  mutate(yhat = 7756*carat -2258,
+         to_square = abs(price - yhat),
+         new_carat = carat + to_square) %>% 
+  ggplot() +
+  geom_point(aes(y = price, x = carat)) +
+  labs(title = "Price vs carat", 
+       x = "Carat of diamond", 
+       y = "Price of diamonds in US$") +
+  geom_abline(aes(intercept = -2258, 
+                  slope = 7756), 
+              color = "blue") +
+  geom_rect(aes(xmin = carat, 
+                xmax = new_carat, 
+                ymin = price, 
+                ymax = yhat),
+            fill = "lightblue",
+            color = "grey30") 
+```
+
+
 ## Plot the data
 
 ```{r price_vs_carat}
@@ -181,9 +205,9 @@ Find the residual for the pair $(2.5, 16955)$
 
 ::: incremental
 -   $$ \begin{aligned} e &= y - \hat{y} \\
-    &= 16955 - (2256.36 + 7756.426 \cdot 2.5) \\
-    &= 16955 - 21647.43\\
-    &= -4692.425
+    &= 16955 - (-2256.36 + 7756.426 \cdot 2.5) \\
+    &= 16955 - 17134.71\\
+    &= -179.705
     \end{aligned}$$
 :::
 
