@@ -114,7 +114,7 @@ website:
               text: Exam 1 study guide
             - href: supplemental/exam-2-studyguide.qmd
               text: Exam 2 study guide
-            - href: supplemental/exam-3-studyguide.qmd
+            - href: supplemental/exam-revision-3.qmd
               text: Exam 3 study guide
 
 format:

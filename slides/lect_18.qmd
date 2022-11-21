@@ -233,9 +233,9 @@ diamonds %>%
 
 ## Extrapolation
 
-This [classic example](https://www.callingbullshit.org/case_studies/case_study_gender_gap_running.html) is one of my favorites.
+This [classic example](https://www.callingbullshit.org/case_studies/case_study_gender_gap_running.html) is my favorite.
 
-The model is only useful *near* the values for which we have data. Outside of those values anything could happen.
+The model is only useful *inside* the values for which we have data. Outside of those values anything could happen.
 
 ## Example 3 {.smaller}
 
@@ -263,3 +263,27 @@ d.  Fifty more units would need $0.031\cdot 50 = 1.55$ more hours
 :::
 
 # Properties of residuals
+
+If the least squares line captures the association between $x$ and $y$, then a plot of residuals versus $x$ should stretch out horizontally with consistent vertical scatter.  
+
+
+## In `R`
+
+This plot has an obvious trend, the model does not fit the data well. Can use the [visual association test](https://stats1010-f22.github.io/website/slides/lect_08.html#/section) to check.
+```{r, plot_resids}
+#| echo: true
+#| eval: true
+
+## plotting residuals
+augment(lm_fit) %>%
+  ggplot() + 
+  geom_point(aes(x = carat, 
+                 y = .resid))
+```
+
+#  {background-image="lect_18-things/nice_residuals.png" background-size="contain"}
+
+## sd of residuals
+
+
+

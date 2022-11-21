@@ -1,0 +1,63 @@
+---
+title: "Study list for exam 3"
+execute: 
+  echo: false
+---
+
+The R functions we have discussed in these weeks:
+
+|                |
+|----------------|
+| qt()           |
+| t.test()       |
+| pchisq()       |
+| chisq.test()   |
+| lm()           |
+
+
+# Lecture 15 Confidence Intervals
+
+Distribution of proportion estimate   
+Confidence Intervals for Proportions  
+SRS Assumption  
+CI manipulations  
+Confidence Interval for Mean  
+t-distributions  
+Margin of Error  
+SRS condition and Sample size condition  
+
+# Lecture 16 Statistical Tests
+Null and alternative hypotheses  
+Type I and II Errors for Tests
+Testing a proportion: 
+$$ \hat p\sim \mathcal{N}\left(p_0, \frac{p_0(1-p_0)}{n}\right)$$
+Multiple testing, impact and motivation 
+
+# Lecture 17 Comparison 
+ Two sample z-test for proportions   
+Standard Error formula  
+Assumptions for two-sample z-test for proportions  
+Confidence Interval for Difference between Means  
+$$(\bar X_1 - X_2 - t_{\alpha/2}\text{se}(\bar X_1-\bar X_2),\bar X_1 - X_2 + t_{\alpha/2}\text{se}(\bar X_1-\bar X_2))$$
+
+$$\text{se}(\bar X_1-\bar X_2) = \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}.$$
+
+Code for paired t-test in R
+
+
+Paired comparisons  
+
+# Lecture 18 Inference for Counts
+Testing for independence using $\chi^2$ test  
+Testing for goodness of fit using $\chi^2$ test  
+Degrees of freedom: $$\text{df}=(r-1)(c-1)$$  
+R code to perform $\chi^2$ test and get p-value from test statistic  
+
+
+# Lecture 19 Linear Patterns
+Response and explanatory variables  
+$R^2$ for linear models  
+Slope and intercept for linear models  
+Mathematical formulas for slope and intercept  
+Residuals of linear model  
+R code for fitting linear models  
