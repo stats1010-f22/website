@@ -71,7 +71,7 @@ diamonds %>%
 $$ \hat{y} = b_0 + b_1\cdot x $$
 
 ::: incremental
--   $b-1$ is gradient $b_0$ is the $y$ intercept
+-   $b_1$ is gradient $b_0$ is the $y$ intercept
 -   $\hat{y}$ is the fitted value, the result of the fitted line
 :::
 
@@ -125,6 +125,27 @@ carat is on the bottom b/c it is the x, always x on the bottom.
 
 -   $\begin{aligned} m &= \frac{r \cdot s_{price}}{s_{carat}} \\ &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\ &= 7756.426 \end{aligned}$
 :::
+
+## Example 1
+
+::: incremental
+-   $b = \overline{price} - m \cdot \overline{carat}$
+
+-   $\overline{price} = 3932.8$
+
+-   $\overline{carat} = 0.7979397$
+
+-   $m = 7756.426$
+
+-   $$\begin{aligned}
+    b &= \overline{price} - m \cdot \overline{carat} \\
+    &= 3932.8 - 7756.426 \cdot 0.7979397\\
+    &= -2256.36
+    \end{aligned}$$
+
+-   Our model is: $\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}$
+:::
+
 
 ## Example 1
 
@@ -278,16 +299,16 @@ A regression line splits the response into two parts, a fitted value and a resid
 
 $$y = \hat{y} + e$$ $\hat{y}$ represents the variation in $y$ that is associated with $x$ $e$ represents variation in $y$ due to other factors.
 
-The [sample correlation](https://stats1010-f22.github.io/website/slides/lect_08.html#/correlation-math) $0\leq r\leq 1$. The squared-correlation $r^2$ determines the fraction of the variation that can be accounted for by the model.  $1-r^2$ is the amounted of variation left in the residuals.
+The [sample correlation](https://stats1010-f22.github.io/website/slides/lect_08.html#/correlation-math) $0\leq r\leq 1$. The squared-correlation $r^2$ determines the fraction of the variation that can be accounted for by the model. $1-r^2$ is the amounted of variation left in the residuals.
 
 ## In `R`
+
 ```{r r_squared}
 #| echo: true
 #| eval: true
 
 summary(lm_fit)
 ```
- 
 
 # Conditions
 
