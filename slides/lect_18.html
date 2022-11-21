@@ -27,6 +27,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -347,6 +411,176 @@
 <li class="fragment">Use residuals from the regression equation to check that the equation is an appropriate summary of the data</li>
 </ul>
 </div>
+</section>
+
+<section>
+<section id="reminders" class="title-slide slide level1 center">
+<h1>Reminders</h1>
+<p>We have <a href="https://stats1010-f22.github.io/website/slides/lect_08.html#/line-of-association">fit a line</a> to data already. Today we will discuss this in more detail.</p>
+<p>For the diamonds dataset: ::: incremental 1. Which variable would we want to predict? 2. Which <a href="https://stats1010-f22.github.io/website/slides/lect_08.html#/describe-these-plots">variable</a> is a good predicter for it? :::</p>
+</section>
+<section id="variable-names" class="slide level2">
+<h2>Variable names</h2>
+<div>
+<ul>
+<li class="fragment">variable on the <span class="math inline">\(y\)</span> axis
+<ul>
+<li class="fragment">dependent</li>
+<li class="fragment">response</li>
+<li class="fragment">outcome</li>
+</ul></li>
+<li class="fragment">variable on the <span class="math inline">\(x\)</span> axis
+<ul>
+<li class="fragment">independent (not this kind of <a href="https://stats1010-f22.github.io/website/ae/ae-4.html">independence</a>)</li>
+<li class="fragment">explanatory</li>
+<li class="fragment">predictor</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="plot-the-data" class="slide level2">
+<h2>Plot the data</h2>
+
+<img data-src="lect_18_files/figure-revealjs/price_vs_carat-1.png" width="960" class="r-stretch"></section>
+<section id="least-squares" class="slide level2">
+<h2>Least squares</h2>
+<p><span class="math display">\[ \hat{y} = b_0 + b_1\cdot x \]</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(b-1\)</span> is gradient <span class="math inline">\(b_0\)</span> is the <span class="math inline">\(y\)</span> intercept</li>
+<li class="fragment">$ $ is the fitted value, the result of the fitted line</li>
+</ul>
+</div>
+</section>
+<section id="possible-fits" class="slide level2">
+<h2>Possible fits</h2>
+
+<img data-src="lect_18_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="least-squares-1" class="slide level2">
+<h2>Least squares</h2>
+</section>
+<section id="gradient-and-slope" class="slide level2">
+<h2>Gradient and slope</h2>
+<aside class="notes">
+<p>Pull out your calculators and work on this</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><span class="math display">\[ m = \frac{r \cdot s_y}{s_x} \]</span> <span class="math display">\[ b = \bar{y} - m \bar{x} \]</span> ## Example 1</p>
+<aside class="notes">
+<p>carat is on the bottom b/c it is the x, always x on the bottom.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(r = 0.9215913\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(s_{price} = 3989.44\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(s_{carat} = 0.4740112\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(m = \frac{r \cdot s_{price}}{s_{carat}}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\begin{aligned} m &amp;= \frac{r \cdot s_{price}}{s_{carat}} \\ &amp;= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\ &amp;= 7756.426 \end{aligned}\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example 1</h2>
+<aside class="notes">
+<p>Pull out your calculators and work on this</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p>for carat values <span class="math inline">\(2.5\)</span></p>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\hat{y} = -2256.36 + 7756.426 \cdot x\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\begin{aligned}\hat{y} &amp;= -2256.36 + 7756.426 \cdot x \\ &amp;= -2256.36 + 7756.426 \cdot 2.5 \\&amp;= \$17135 \end{aligned}\)</span></p></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="section" class="title-slide slide level1 center" data-background-image="lect_18-things/error_term.jpg" data-background-size="contain">
+<h1></h1>
+
+</section>
+<section id="residuals" class="slide level2">
+<h2>Residuals</h2>
+<p><span class="math display">\[ \begin{aligned} e &amp;= y - \hat{y} \\
+&amp;= y - b_0 - b_1 \cdot x
+\end{aligned}\]</span></p>
+</section>
+<section id="example-2" class="slide level2">
+<h2>Example 2</h2>
+<p>Find the residual for the pair <span class="math inline">\((2.5, 16955)\)</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math display">\[ \begin{aligned} e &amp;= y - \hat{y} \\
+&amp;= 16955 - (2256.36 + 7756.426 \cdot 2.5) \\
+&amp;= 16955 - 21647.43\\
+&amp;= -4692.425
+\end{aligned}\]</span></li>
+</ul>
+</div>
+</section>
+<section id="in-r" class="slide level2">
+<h2>In <code>R</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2|6|7|8|9|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># for model fitting and to get residuals</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="do">## Assign the least</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="do">## squares line</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>lm_fit<span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> carat, diamonds) </span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="do">## </span><span class="al">NOTE</span><span class="do">: outcome first, predictor second</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="do">## find predictions and residuals</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">augment</span>(lm_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 53,940 × 8
+   price carat .fitted .resid      .hat .sigma     .cooksd .std.resid
+   &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;
+ 1   326  0.23 -472.     798. 0.0000452  1549. 0.00000600       0.516
+ 2   326  0.21 -628.     954. 0.0000471  1549. 0.00000892       0.616
+ 3   327  0.23 -472.     799. 0.0000452  1549. 0.00000602       0.516
+ 4   334  0.29   -7.00   341. 0.0000398  1549. 0.000000966      0.220
+ 5   335  0.31  148.     187. 0.0000382  1549. 0.000000278      0.121
+ 6   336  0.24 -395.     731. 0.0000442  1549. 0.00000493       0.472
+ 7   336  0.24 -395.     731. 0.0000442  1549. 0.00000493       0.472
+ 8   337  0.26 -240.     577. 0.0000424  1549. 0.00000294       0.372
+ 9   337  0.22 -550.     887. 0.0000461  1549. 0.00000756       0.573
+10   338  0.23 -472.     810. 0.0000452  1549. 0.00000618       0.523
+# … with 53,930 more rows
+# ℹ Use `print(n = ...)` to see more rows</code></pre>
+</div>
+</div>
+</section></section>
+<section id="interpretations" class="title-slide slide level1 center">
+<h1>Interpretations</h1>
 
 <div class="footer footer-default">
 <p><a href="https://stats1010-f22.github.io/website/">stat1010-f22.github.io/website</a></p>

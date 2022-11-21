@@ -781,168 +781,7 @@
     "href": "supplemental/exam-3-studyguide.html",
     "title": "Study list for exam 3",
     "section": "",
-    "text": "The R functions we have discussed in these weeks:"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#addition-rules",
-    "href": "supplemental/exam-3-studyguide.html#addition-rules",
-    "title": "Study list for exam 3",
-    "section": "Addition rules",
-    "text": "Addition rules\n-\\(E(X \\pm c) = E(X) \\pm c\\)\n-\\(SD(X \\pm c) = SD(X)\\)\n-\\(Var(X \\pm c) = Var(X)\\)"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#multiplication-rules",
-    "href": "supplemental/exam-3-studyguide.html#multiplication-rules",
-    "title": "Study list for exam 3",
-    "section": "Multiplication rules",
-    "text": "Multiplication rules\n-\\(E(cX) = cE(X)\\)\n-\\(SD(cX) = |c|SD(X)\\)\n-\\(Var(cX) = c^2Var(X)\\)\n-\\(E(cX \\pm a)=cE(X) \\pm a\\)\n- \\(Var(cX \\pm a)=c^2Var(X)\\)"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#which-variable-on-which-axis-and-what-are-the-names-for-each-variable",
-    "href": "supplemental/exam-3-studyguide.html#which-variable-on-which-axis-and-what-are-the-names-for-each-variable",
-    "title": "Study list for exam 3",
-    "section": "Which variable on which axis and what are the names for each variable?",
-    "text": "Which variable on which axis and what are the names for each variable?"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#describing-scatter-plots",
-    "href": "supplemental/exam-3-studyguide.html#describing-scatter-plots",
-    "title": "Study list for exam 3",
-    "section": "Describing scatter plots",
-    "text": "Describing scatter plots\n\nHomo and heteroskedastic"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#covariance-look-at-a-plot-and-know-if-positive-or-negative",
-    "href": "supplemental/exam-3-studyguide.html#covariance-look-at-a-plot-and-know-if-positive-or-negative",
-    "title": "Study list for exam 3",
-    "section": "Covariance look at a plot and know if positive or negative",
-    "text": "Covariance look at a plot and know if positive or negative\n\\(cov(x, y) = \\frac{(x_1 - \\bar{x})(y_1 - \\bar{y}) + (x_2 - \\bar{x})(y_2 - \\bar{y}) + \\ldots + (x_n - \\bar{x})(y_n - \\bar{y})}{n-1}\\)"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#correlation---look-at-a-plot-and-approximate",
-    "href": "supplemental/exam-3-studyguide.html#correlation---look-at-a-plot-and-approximate",
-    "title": "Study list for exam 3",
-    "section": "Correlation - look at a plot and approximate",
-    "text": "Correlation - look at a plot and approximate\n\\[corr(x, y) = \\frac{cov(x, y)}{s_x \\cdot s_y}\\]\n\nReferred to as \\(r\\)\nStrength of linear association\n\\(r\\) is always between \\(-1\\) and \\(+1\\), \\(-1 \\leq r \\leq 1\\).\n\\(r\\) does not have units"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#fitting-a-line",
-    "href": "supplemental/exam-3-studyguide.html#fitting-a-line",
-    "title": "Study list for exam 3",
-    "section": "Fitting a line",
-    "text": "Fitting a line\n\\(m = \\frac{r \\cdot s_y}{s_x}\\)\n\\(b = \\bar{y} - m \\bar{x}\\)"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#predicting",
-    "href": "supplemental/exam-3-studyguide.html#predicting",
-    "title": "Study list for exam 3",
-    "section": "Predicting",
-    "text": "Predicting\n\nlibrary(tidymodels)\n\n## Assign the least\n## squares line\nleast_squares_fit <- \n  linear_reg() %>% \n  set_engine(\"lm\") %>% \n  fit(price ~ carat, data = diamonds) \n## NOTE: outcome first, predictor second\n\n## Find the prediction\npredict(least_squares_fit, tibble(carat = c(1, 2, 2.5, 4)))\n\n# A tibble: 4 × 1\n   .pred\n   <dbl>\n1  5500.\n2 13256.\n3 17135.\n4 28769."
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#spurious-correlations",
-    "href": "supplemental/exam-3-studyguide.html#spurious-correlations",
-    "title": "Study list for exam 3",
-    "section": "Spurious correlations",
-    "text": "Spurious correlations\nbirth order associated with increased risk of downs syndrome, etc…"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#the-sharpe-ratio",
-    "href": "supplemental/exam-3-studyguide.html#the-sharpe-ratio",
-    "title": "Study list for exam 3",
-    "section": "The Sharpe ratio",
-    "text": "The Sharpe ratio\n\\(S(X) = \\frac{\\mu_X - r_f}{\\sigma_X}\\) - higher better - how to compute with a calculator from a pdf and also with just \\(\\mu\\) and \\(\\sigma\\) - computing in R"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#joint-pdfs",
-    "href": "supplemental/exam-3-studyguide.html#joint-pdfs",
-    "title": "Study list for exam 3",
-    "section": "Joint pdfs",
-    "text": "Joint pdfs\nFind probability given values Are they independent or not? What do increasing and decreasing joint pdfs look like?\n\\(E(X+Y) = E(X) + E(Y)\\) regardless of independence"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#rules-of-independence",
-    "href": "supplemental/exam-3-studyguide.html#rules-of-independence",
-    "title": "Study list for exam 3",
-    "section": "3 Rules of independence",
-    "text": "3 Rules of independence"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#covariance-of-rv",
-    "href": "supplemental/exam-3-studyguide.html#covariance-of-rv",
-    "title": "Study list for exam 3",
-    "section": "Covariance of RV",
-    "text": "Covariance of RV\n\\(Cov(X, Y) = E((X - \\mu_X)(Y - \\mu_Y))\\) \\(Var(X + Y) = Var(X) + Var(Y) + 2Cov(X, Y)\\) If \\(X\\),\\(Y\\) are independent, then \\(Cov(X, Y) = 0\\), opposite not true If \\(X\\), \\(Y\\) are independent, \\(Cov(X, Y) = 0\\), so \\(Var(X+ Y) = Var(X) + Var(Y)\\)"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#correlation",
-    "href": "supplemental/exam-3-studyguide.html#correlation",
-    "title": "Study list for exam 3",
-    "section": "Correlation",
-    "text": "Correlation\n\\(corr(x, y) = \\frac{cov(x, y)}{s_x \\cdot s_y}\\) \\[\\rho = Corr(X, Y) = \\frac{Cov(X, Y)}{\\sigma_X \\cdot \\sigma_Y}\\] ## IID variables \\(E(aX + bY + c) = aE(X) + bE(Y) + c\\) \\(Var(aX + bY + c) = a^2Var(X) + b^2Var(Y) + 2abCov(X, Y)\\)"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#bernoulli-trial",
-    "href": "supplemental/exam-3-studyguide.html#bernoulli-trial",
-    "title": "Study list for exam 3",
-    "section": "Bernoulli trial",
-    "text": "Bernoulli trial\nexpectation and variance"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#binomial",
-    "href": "supplemental/exam-3-studyguide.html#binomial",
-    "title": "Study list for exam 3",
-    "section": "Binomial",
-    "text": "Binomial\n\\(Y = B_1 + B_2 + ... + B_n\\), where \\(B_1, B_2, ..., B_n\\) Bernoulli trials FIST expectation and variance binomial pdf limiting of \\(p\\) approaches Poisson distribution use R to find these probabilities"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#poisson",
-    "href": "supplemental/exam-3-studyguide.html#poisson",
-    "title": "Study list for exam 3",
-    "section": "Poisson",
-    "text": "Poisson\nRIPS expectation and variance use R to find these probabilities"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#shifts-and-scales-of-normal-distribution",
-    "href": "supplemental/exam-3-studyguide.html#shifts-and-scales-of-normal-distribution",
-    "title": "Study list for exam 3",
-    "section": "Shifts and scales of normal distribution",
-    "text": "Shifts and scales of normal distribution\nZ score and standardization Use symmetry to find probabilities, finding them in R Percentiles to Z values, finding them in R"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#rule",
-    "href": "supplemental/exam-3-studyguide.html#rule",
-    "title": "Study list for exam 3",
-    "section": "68 - 95 - 99.7 rule",
-    "text": "68 - 95 - 99.7 rule"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#normality-tests-and-qqplots",
-    "href": "supplemental/exam-3-studyguide.html#normality-tests-and-qqplots",
-    "title": "Study list for exam 3",
-    "section": "Normality tests and qqplots",
-    "text": "Normality tests and qqplots"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#skewness-and-kurtosis",
-    "href": "supplemental/exam-3-studyguide.html#skewness-and-kurtosis",
-    "title": "Study list for exam 3",
-    "section": "Skewness and Kurtosis",
-    "text": "Skewness and Kurtosis"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#vocabulary-related-to-sampling",
-    "href": "supplemental/exam-3-studyguide.html#vocabulary-related-to-sampling",
-    "title": "Study list for exam 3",
-    "section": "Vocabulary related to sampling",
-    "text": "Vocabulary related to sampling\nsample, population, bias, representative, random, inference, cluster, strata, sampling frame, nonresponse rate, interviewer affects, survivor bias, …"
-  },
-  {
-    "objectID": "supplemental/exam-3-studyguide.html#sampling-methods",
-    "href": "supplemental/exam-3-studyguide.html#sampling-methods",
-    "title": "Study list for exam 3",
-    "section": "Sampling methods",
-    "text": "Sampling methods\nSRS, stratified, cluster, census, voluntary response, convenience benefits and drawbacks of all and where to apply each"
+    "text": "The R functions we have discussed in these weeks:\n\n\n\nfunctions\n\n\nqnorm()\n\n\npnorm()"
   },
   {
     "objectID": "supplemental/exam-2-studyguide.html",
@@ -2763,6 +2602,76 @@
     "title": "Chapter 17: Comparison",
     "section": "Interpretation",
     "text": "Interpretation\nThere is very strong evidence that the underlying population means of the mice before and after treatment are not the same. On average, the mice are much heavier after treatment.\n\n\nstat1010-f22.github.io/website"
+  },
+  {
+    "objectID": "slides/lect_18.html#variable-names",
+    "href": "slides/lect_18.html#variable-names",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Variable names",
+    "text": "Variable names\n\n\nvariable on the \\(y\\) axis\n\ndependent\nresponse\noutcome\n\nvariable on the \\(x\\) axis\n\nindependent (not this kind of independence)\nexplanatory\npredictor"
+  },
+  {
+    "objectID": "slides/lect_18.html#plot-the-data",
+    "href": "slides/lect_18.html#plot-the-data",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Plot the data",
+    "text": "Plot the data"
+  },
+  {
+    "objectID": "slides/lect_18.html#least-squares",
+    "href": "slides/lect_18.html#least-squares",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Least squares",
+    "text": "Least squares\n\\[ \\hat{y} = b_0 + b_1\\cdot x \\]\n\n\n\\(b-1\\) is gradient \\(b_0\\) is the \\(y\\) intercept\n$ $ is the fitted value, the result of the fitted line"
+  },
+  {
+    "objectID": "slides/lect_18.html#possible-fits",
+    "href": "slides/lect_18.html#possible-fits",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Possible fits",
+    "text": "Possible fits"
+  },
+  {
+    "objectID": "slides/lect_18.html#least-squares-1",
+    "href": "slides/lect_18.html#least-squares-1",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Least squares",
+    "text": "Least squares"
+  },
+  {
+    "objectID": "slides/lect_18.html#gradient-and-slope",
+    "href": "slides/lect_18.html#gradient-and-slope",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Gradient and slope",
+    "text": "Gradient and slope\n\nPull out your calculators and work on this\n\n\\[ m = \\frac{r \\cdot s_y}{s_x} \\] \\[ b = \\bar{y} - m \\bar{x} \\] ## Example 1\n\ncarat is on the bottom b/c it is the x, always x on the bottom.\n\n\n\n\\(r = 0.9215913\\)\n\\(s_{price} = 3989.44\\)\n\\(s_{carat} = 0.4740112\\)\n\\(m = \\frac{r \\cdot s_{price}}{s_{carat}}\\)\n\\(\\begin{aligned} m &= \\frac{r \\cdot s_{price}}{s_{carat}} \\\\ &= \\frac{0.9215913 \\cdot 3989.44}{0.4740112} \\\\ &= 7756.426 \\end{aligned}\\)"
+  },
+  {
+    "objectID": "slides/lect_18.html#example-1",
+    "href": "slides/lect_18.html#example-1",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Example 1",
+    "text": "Example 1\n\nPull out your calculators and work on this\n\nfor carat values \\(2.5\\)\n\n\n\\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)\n\\(\\hat{y} = -2256.36 + 7756.426 \\cdot x\\)\n\\(\\begin{aligned}\\hat{y} &= -2256.36 + 7756.426 \\cdot x \\\\ &= -2256.36 + 7756.426 \\cdot 2.5 \\\\&= \\$17135 \\end{aligned}\\)"
+  },
+  {
+    "objectID": "slides/lect_18.html#residuals",
+    "href": "slides/lect_18.html#residuals",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Residuals",
+    "text": "Residuals\n\\[ \\begin{aligned} e &= y - \\hat{y} \\\\\n&= y - b_0 - b_1 \\cdot x\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/lect_18.html#example-2",
+    "href": "slides/lect_18.html#example-2",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Example 2",
+    "text": "Example 2\nFind the residual for the pair \\((2.5, 16955)\\)\n\n\n\\[ \\begin{aligned} e &= y - \\hat{y} \\\\\n&= 16955 - (2256.36 + 7756.426 \\cdot 2.5) \\\\\n&= 16955 - 21647.43\\\\\n&= -4692.425\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/lect_18.html#in-r",
+    "href": "slides/lect_18.html#in-r",
+    "title": "Chapter 19: Linear patterns",
+    "section": "In R",
+    "text": "In R\n\n# for model fitting and to get residuals\nlibrary(tidymodels)\n\n\n## Assign the least\n## squares line\nlm_fit<- lm(price ~ carat, diamonds) \n## NOTE: outcome first, predictor second\n\n## find predictions and residuals\naugment(lm_fit)\n\n# A tibble: 53,940 × 8\n   price carat .fitted .resid      .hat .sigma     .cooksd .std.resid\n   <int> <dbl>   <dbl>  <dbl>     <dbl>  <dbl>       <dbl>      <dbl>\n 1   326  0.23 -472.     798. 0.0000452  1549. 0.00000600       0.516\n 2   326  0.21 -628.     954. 0.0000471  1549. 0.00000892       0.616\n 3   327  0.23 -472.     799. 0.0000452  1549. 0.00000602       0.516\n 4   334  0.29   -7.00   341. 0.0000398  1549. 0.000000966      0.220\n 5   335  0.31  148.     187. 0.0000382  1549. 0.000000278      0.121\n 6   336  0.24 -395.     731. 0.0000442  1549. 0.00000493       0.472\n 7   336  0.24 -395.     731. 0.0000442  1549. 0.00000493       0.472\n 8   337  0.26 -240.     577. 0.0000424  1549. 0.00000294       0.372\n 9   337  0.22 -550.     887. 0.0000461  1549. 0.00000756       0.573\n10   338  0.23 -472.     810. 0.0000452  1549. 0.00000618       0.523\n# … with 53,930 more rows\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "slides/lect_13.html#sampling",
