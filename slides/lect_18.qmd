@@ -130,7 +130,7 @@ diamonds %>%
 Pull out your calculators and work on this
 :::
 
-$$ m = \frac{r \cdot s_y}{s_x} $$ $$ b = \bar{y} - m \bar{x} $$
+$$ b_1 = \frac{r \cdot s_y}{s_x} $$ $$ b_0 = \bar{y} - b_1 \bar{x} $$
 
 ## Example 1
 
@@ -145,24 +145,24 @@ carat is on the bottom b/c it is the x, always x on the bottom.
 
 -   $s_{carat} = 0.4740112$
 
--   $m = \frac{r \cdot s_{price}}{s_{carat}}$
+-   $b_1 = \frac{r \cdot s_{price}}{s_{carat}}$
 
--   $\begin{aligned} m &= \frac{r \cdot s_{price}}{s_{carat}} \\ &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\ &= 7756.426 \end{aligned}$
+-   $\begin{aligned} b_1 &= \frac{r \cdot s_{price}}{s_{carat}} \\ &= \frac{0.9215913 \cdot 3989.44}{0.4740112} \\ &= 7756.426 \end{aligned}$
 :::
 
 ## Example 1
 
 ::: incremental
--   $b = \overline{price} - m \cdot \overline{carat}$
+-   $b_0 = \overline{price} - b_1 \cdot \overline{carat}$
 
 -   $\overline{price} = 3932.8$
 
 -   $\overline{carat} = 0.7979397$
 
--   $m = 7756.426$
+-   $b_1 = 7756.426$
 
 -   $$\begin{aligned}
-    b &= \overline{price} - m \cdot \overline{carat} \\
+    b_0 &= \overline{price} - b_1 \cdot \overline{carat} \\
     &= 3932.8 - 7756.426 \cdot 0.7979397\\
     &= -2256.36
     \end{aligned}$$
