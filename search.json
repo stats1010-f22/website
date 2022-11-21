@@ -2618,13 +2618,6 @@
     "text": "Variable names\n\n\nvariable on the \\(y\\) axis\n\ndependent\nresponse\noutcome\n\nvariable on the \\(x\\) axis\n\nindependent (not this kind of independence)\nexplanatory\npredictor"
   },
   {
-    "objectID": "slides/lect_18.html#least-squares",
-    "href": "slides/lect_18.html#least-squares",
-    "title": "Chapter 19: Linear patterns",
-    "section": "Least squares",
-    "text": "Least squares"
-  },
-  {
     "objectID": "slides/lect_18.html#plot-the-data",
     "href": "slides/lect_18.html#plot-the-data",
     "title": "Chapter 19: Linear patterns",
@@ -2644,6 +2637,13 @@
     "title": "Chapter 19: Linear patterns",
     "section": "Possible fits",
     "text": "Possible fits"
+  },
+  {
+    "objectID": "slides/lect_18.html#least-squares",
+    "href": "slides/lect_18.html#least-squares",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Least squares",
+    "text": "Least squares"
   },
   {
     "objectID": "slides/lect_18.html#gradient-and-slope",
