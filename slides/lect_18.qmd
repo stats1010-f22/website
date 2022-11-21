@@ -280,6 +280,15 @@ $$y = \hat{y} + e$$ $\hat{y}$ represents the variation in $y$ that is associated
 
 The [sample correlation](https://stats1010-f22.github.io/website/slides/lect_08.html#/correlation-math) $0\leq r\leq 1$. The squared-correlation $r^2$ determines the fraction of the variation that can be accounted for by the model.  $1-r^2$ is the amounted of variation left in the residuals.
 
+## In `R`
+```{r r_squared}
+#| echo: true
+#| eval: true
+
+summary(lm_fit)
+```
+ 
+
 # Conditions
 
 ::: incremental
