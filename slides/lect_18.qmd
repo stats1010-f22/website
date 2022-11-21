@@ -289,6 +289,8 @@ If the residuals are nearly normal, we can summarise them with the mean and stan
 $$ s_e = \sqrt{\frac{e_1^2 + e_2^2 + ... + e_n^2}{n-2}}$$
 the denominator is $n-2$ because we need two estimates for the line of best fit: $b_0$ and $b_1$.
 
+Also known as **RMSE** root mean squared error. 
+
 
 
 # Conditions

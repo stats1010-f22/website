@@ -1,6 +1,6 @@
 ---
 title: "Week 13"
-subtitle: "Comparison and inference for counts"
+subtitle: "Linear patters"
 editor: visual
 ---
 
