@@ -284,6 +284,17 @@ augment(lm_fit) %>%
 #  {background-image="lect_18-things/nice_residuals.png" background-size="contain"}
 
 ## sd of residuals
+If the residuals are nearly normal, we can summarise them with the mean and standard deviation.
+
+$$ s_e = \sqrt{\frac{e_1^2 + e_2^2 + ... + e_n^2}{n-2}}$$
+the denominator is $n-2$ because we need two estimates for the line of best fit: $b_0$ and $b_1$.
 
 
 
+# Conditions
+
+::: incremental
+1. No obvious lurking variable:  need to think about whether other explanatory variables might better explain the linear association between x and y.
+2. Linear:  use scatterplot to see if pattern resembles a straight line.
+3. Random residual variation:  use the residual plot to make sure no pattern exists.
+:::
