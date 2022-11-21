@@ -2713,7 +2713,7 @@
     "href": "slides/lect_18.html#in-r-1",
     "title": "Chapter 19: Linear patterns",
     "section": "In R",
-    "text": "In R\nThis plot has an obvious trend, the model does not fit the data well. Can use the visual association test to check.\n\n## plotting residuals\naugment(lm_fit) %>%\n  ggplot() + \n  geom_point(aes(x = carat, \n                 y = .resid))"
+    "text": "In R\nThis plot has an obvious trend, the model does not fit the data well. We can use the visual association test to check.\n\n## plotting residuals\naugment(lm_fit) %>%\n  ggplot() + \n  geom_point(aes(x = carat, \n                 y = .resid))"
   },
   {
     "objectID": "slides/lect_18.html#sd-of-residuals",

@@ -562,7 +562,7 @@
 <section id="in-r" class="slide level2">
 <h2>In <code>R</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2|6|10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># for model fitting and to get residuals</span></span>
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2|7|11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># for model fitting and to get residuals</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidymodels)</span>
 <span id="cb1-3"><a href="#cb1-3"></a></span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
@@ -640,7 +640,7 @@
 </section>
 <section id="in-r-1" class="slide level2">
 <h2>In <code>R</code></h2>
-<p>This plot has an obvious trend, the model does not fit the data well. Can use the <a href="https://stats1010-f22.github.io/website/slides/lect_08.html#/section">visual association test</a> to check.</p>
+<p>This plot has an obvious trend, the model does not fit the data well. We can use the <a href="https://stats1010-f22.github.io/website/slides/lect_08.html#/section">visual association test</a> to check.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="do">## plotting residuals</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="fu">augment</span>(lm_fit) <span class="sc">%&gt;%</span></span>
