@@ -453,7 +453,7 @@
 <p><span class="math display">\[ \hat{y} = b_0 + b_1\cdot x \]</span></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(b-1\)</span> is gradient <span class="math inline">\(b_0\)</span> is the <span class="math inline">\(y\)</span> intercept</li>
+<li class="fragment"><span class="math inline">\(b_1\)</span> is gradient <span class="math inline">\(b_0\)</span> is the <span class="math inline">\(y\)</span> intercept</li>
 <li class="fragment"><span class="math inline">\(\hat{y}\)</span> is the fitted value, the result of the fitted line</li>
 </ul>
 </div>
@@ -510,6 +510,23 @@
 </div>
 </section>
 <section id="example-1-1" class="slide level2">
+<h2>Example 1</h2>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(b = \overline{price} - m \cdot \overline{carat}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\overline{price} = 3932.8\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\overline{carat} = 0.7979397\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(m = 7756.426\)</span></p></li>
+<li class="fragment"><p><span class="math display">\[\begin{aligned}
+b &amp;= \overline{price} - m \cdot \overline{carat} \\
+&amp;= 3932.8 - 7756.426 \cdot 0.7979397\\
+&amp;= -2256.36
+\end{aligned}\]</span></p></li>
+<li class="fragment"><p>Our model is: <span class="math inline">\(\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}\)</span></p></li>
+</ul>
+</div>
+</section>
+<section id="example-1-2" class="slide level2">
 <h2>Example 1</h2>
 <aside class="notes">
 <p>Pull out your calculators and work on this</p>

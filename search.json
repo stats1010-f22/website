@@ -2629,7 +2629,7 @@
     "href": "slides/lect_18.html#fit",
     "title": "Chapter 19: Linear patterns",
     "section": "Fit",
-    "text": "Fit\n\\[ \\hat{y} = b_0 + b_1\\cdot x \\]\n\n\n\\(b-1\\) is gradient \\(b_0\\) is the \\(y\\) intercept\n\\(\\hat{y}\\) is the fitted value, the result of the fitted line"
+    "text": "Fit\n\\[ \\hat{y} = b_0 + b_1\\cdot x \\]\n\n\n\\(b_1\\) is gradient \\(b_0\\) is the \\(y\\) intercept\n\\(\\hat{y}\\) is the fitted value, the result of the fitted line"
   },
   {
     "objectID": "slides/lect_18.html#possible-fits",
@@ -2655,6 +2655,13 @@
   {
     "objectID": "slides/lect_18.html#example-1-1",
     "href": "slides/lect_18.html#example-1-1",
+    "title": "Chapter 19: Linear patterns",
+    "section": "Example 1",
+    "text": "Example 1\n\n\n\\(b = \\overline{price} - m \\cdot \\overline{carat}\\)\n\\(\\overline{price} = 3932.8\\)\n\\(\\overline{carat} = 0.7979397\\)\n\\(m = 7756.426\\)\n\\[\\begin{aligned}\nb &= \\overline{price} - m \\cdot \\overline{carat} \\\\\n&= 3932.8 - 7756.426 \\cdot 0.7979397\\\\\n&= -2256.36\n\\end{aligned}\\]\nOur model is: \\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)"
+  },
+  {
+    "objectID": "slides/lect_18.html#example-1-2",
+    "href": "slides/lect_18.html#example-1-2",
     "title": "Chapter 19: Linear patterns",
     "section": "Example 1",
     "text": "Example 1\n\nPull out your calculators and work on this\n\nfor carat values \\(2.5\\)\n\n\n\\(\\widehat{\\text{price}} = -2256.36 + 7756.426 \\cdot \\text{carat}\\)\n\\(\\hat{y} = -2256.36 + 7756.426 \\cdot x\\)\n\\(\\begin{aligned}\\hat{y} &= -2256.36 + 7756.426 \\cdot x \\\\ &= -2256.36 + 7756.426 \\cdot 2.5 \\\\&= \\$17135 \\end{aligned}\\)"
