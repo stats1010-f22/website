@@ -52,29 +52,6 @@ For the diamonds dataset:
     -   predictor
 :::
 
-## Least squares
-```{r}
-diamonds %>% 
-  slice_sample(n = 200) %>% 
-  mutate(yhat = 7756*carat -2258,
-         to_square = abs(price - yhat),
-         new_carat = carat + to_square) %>% 
-  ggplot() +
-  geom_point(aes(y = price, x = carat)) +
-  labs(title = "Price vs carat", 
-       x = "Carat of diamond", 
-       y = "Price of diamonds in US$") +
-  geom_abline(aes(intercept = -2258, 
-                  slope = 7756), 
-              color = "blue") +
-  geom_rect(aes(xmin = carat, 
-                xmax = new_carat, 
-                ymin = price, 
-                ymax = yhat),
-            fill = "lightblue",
-            color = "grey30") 
-```
-
 
 ## Plot the data
 
@@ -123,6 +100,31 @@ diamonds %>%
 ```
 
 #  {background-image="lect_18-things/error_term.jpg" background-size="contain"}
+
+## Least squares
+```{r}
+diamonds %>% 
+  slice_sample(n = 200) %>% 
+  mutate(yhat = 7756*carat -2258,
+         to_square = abs(price - yhat),
+         new_carat = carat + to_square) %>% 
+  ggplot() +
+  geom_point(aes(y = price, x = carat)) +
+  labs(title = "Price vs carat", 
+       x = "Carat of diamond", 
+       y = "Price of diamonds in US$") +
+  geom_abline(aes(intercept = -2258, 
+                  slope = 7756), 
+              color = "blue") +
+  geom_rect(aes(xmin = carat, 
+                xmax = new_carat, 
+                ymin = price, 
+                ymax = yhat),
+            fill = "lightblue",
+            color = "grey30") +
+  xlim(0, 5)
+  
+```
 
 ## Gradient and slope
 
