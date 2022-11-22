@@ -10,9 +10,10 @@ The R functions we have discussed in these weeks:
 |--------------|
 | qt()         |
 | t.test()     |
-| augment()    |
+| pchisq()     |
 | chisq.test() |
 | lm()         |
+| augment()    |
 
 # Lecture 15 Confidence Intervals
 
