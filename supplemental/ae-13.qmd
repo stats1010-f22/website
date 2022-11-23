@@ -480,7 +480,6 @@ Exercises 19-26. An accounting firm is considering offering investment advice in
 
     \(d\) Find the *p*-value of the test. Do the data supply enough evidence to reject the null hypothesis if *α* = 0.05?
 
-    ![](images/Screenshot%202022-11-06%20at%2015.26.16.png)
 
 46. Brand managers become concerned if they discover that customers are again and moving out of the high-spending age groups. For example, the average Cadillac buyer is older than 60, past the prime middle years that typically are associated with more spending. Part of the importance to Cadillac of the success of the Escalade model has been its ability to draw in younger customers. If a sample of 50 Escalade purchasers has average age 45 (with standard deviation 25), is this compelling evidence that Escalade buyers are younger on average than the typical Cadillac buyer? (Assume that the data meet the sample size condition.)
 
@@ -530,16 +529,16 @@ Exercises 19-26. An accounting firm is considering offering investment advice in
 
 Match each definition on thee left with a mathematical expression or term on the right.
 
-1.  Plot used for visual comparison of results in two (or more) groups (a)  t = -4.6
-2.  Difference between the averages in two samples (b)  t = 1.3
-3.  Difference between the averages in two populations (c)  $\mu_1 - \mu_2$
-4.  Name given to the variable that specifies the treatments in an experiment (d)  $\sqrt{s_1^2/n_1+s_2^2/n_2}$
-5.  Estimate of the standard error of the difference between two sample means (e)  n - 1
-6.  Avoids confounding in a two-sample comparison (f)  $\bar{x}_1 - \bar{x}_2$
-7.  Test statistic indicating a statistically significant result if $\alpha$ = 0.05 and $H_0$:$\mu_1 - \mu_2 \geq 0$ (g)  Confounding
-8.  Test statistic indicating that a mean difference is not statistically significant if $\alpha$ = 0.05 (h)  Randomization
-9.  The number of degrees of freedom in a paired t-test (i)  Factor
-10. Multiple factors explain the difference between two samples (j)  Comparison boxplot
+1.  Plot used for visual comparison of results in two (or more) groups (a) t = -4.6
+2.  Difference between the averages in two samples (b) t = 1.3
+3.  Difference between the averages in two populations (c) $\mu_1 - \mu_2$
+4.  Name given to the variable that specifies the treatments in an experiment (d) $\sqrt{s_1^2/n_1+s_2^2/n_2}$
+5.  Estimate of the standard error of the difference between two sample means (e) n - 1
+6.  Avoids confounding in a two-sample comparison (f) $\bar{x}_1 - \bar{x}_2$
+7.  Test statistic indicating a statistically significant result if $\alpha$ = 0.05 and $H_0$:$\mu_1 - \mu_2 \geq 0$ (g) Confounding
+8.  Test statistic indicating that a mean difference is not statistically significant if $\alpha$ = 0.05 (h) Randomization
+9.  The number of degrees of freedom in a paired t-test (i) Factor
+10. Multiple factors explain the difference between two samples (j) Comparison boxplot
 
 ## **True/False**
 
@@ -976,6 +975,8 @@ Match the description of each concept with the correct symbol or term.
 
 Mark each statement True or False. If you believe that a statement is false, briefly explain why you think it is false.
 
+![](ae_13-images/chpt_19-ques_28.png){width="177"}
+
 11. In a scatterplot, the response is shown on the horizontal axis with the explanatory variable on the vertical axis.
 
 12. Regression analysis requires several values of the response for each value of the predictor so that we can calculate averages for each $x$.
@@ -1012,11 +1013,10 @@ Mark each statement True or False. If you believe that a statement is false, bri
 26. In what special case does the regression of *Y* on *X* math the regression of *X* on *Y,* so that if two fitted lines were drawn on the same plot, the lines would coincide?
 27. From looking at this plot of the residuals from a linear equation, estimate the value of $s_e$.
 
-![](images/Screenshot%202022-11-21%20at%2012.44.16.png)
 
 28. This histogram summarizes residuals from a fit that regresses the number of items produced by 50 employees during a shift on the number of years with the company. Estimate $s_e$ from this plot.
+![](ae_13-imachpt_19-scatterplot.png.png){width="177"}
 
-![](images/Screenshot%202022-11-21%20at%2012.44.22.png)
 
 29. A package delivery service uses a regression equation to estimate the fuel costs of its trucks based on the number of mile driven. The equation is of the form $\text{Estimated Dollars} = b_0 + b_1$ Miles. If gasoline prices go up, how would you expect the fit of this equation to change?
 
@@ -1124,11 +1124,11 @@ The name shown with each question identifies the data table to be used for the p
 
     \(f\) Given a goal of getting data transferred in no more than 15 seconds, how many data do you think can typically be transmitted in this length of time? Would the equation provided in part (b) be useful, or can you offer a better approach?
 
-40. **Production Costs** A manufacturer produces custom metal blanks that are used by its customers for com­ puter-aided machining. **The** customer sends a design via computer (a 3-D blueprint), and the manufacturer comes up with an estimated cost per unit, which is then used to determine a price for the customer. This analysis considers the factors that affect the cost to manufacture these blanks. The data for the analysis were sampled from the accounting records of 195 pre­vious orders that were filled during the last 3 months.
+40. **Production Costs** A manufacturer produces custom metal blanks that are used by its customers for computer-aided machining. **The** customer sends a design via computer (a 3-D blueprint), and the manufacturer comes up with an estimated cost per unit, which is then used to determine a price for the customer. This analysis considers the factors that affect the cost to manufacture these blanks. The data for the analysis were sampled from the accounting records of 195 previous orders that were filled during the last 3 months.
 
     \(a\) Create a scatterplot for the average cost per item on the material cost per item. Do you find a linear pattern?
 
-    \(b\) Estimate the linear equation using least squares. Interpret the fitted intercept and slope. Be sure to include their units. Note if either estimate rep­ resents a large extrapolation and is consequently not reliable.
+    \(b\) Estimate the linear equation using least squares. Interpret the fitted intercept and slope. Be sure to include their units. Note if either estimate represents a large extrapolation and is consequently not reliable.
 
     \(c\) Interpret the summary values $r^2$ and $s_e$ associated with the fitted equation. Attach units to these summary statistics as appropriate.
 
