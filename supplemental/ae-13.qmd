@@ -339,7 +339,7 @@ Exercises 11-18. A retailer maintains a Web site that it uses to attract shopper
 11. The appropriate null hypothesis for testing the profitability of the new design sets *μ*~0~ = \$80.
 12. The appropriate null hypothesis for testing the profitability of the new design is H~0~: *μ* **≤** *μ*~0~.
 13. If the *α*-level of the test is *α* = 0.05, then there is at most a 5% chance of incorrectly rejecting H~0~.
-14. If the *p*-value of the test of H~0~ is than *α*, then the test has produced a Type II error.
+14. If the *p*-value of the test of H~0~ is less than *α*, then the test has produced a Type II error.
 15. If the test used by the retailer rejects *H~0~* with the *α*-level set to *α* = 0.05, then it would also reject *H~0~* with *α* = 0.01.
 16. The larger the sample size used to evaluate the new design, the larger the chance for a Type II error.
 17. If the standard deviation is estimated from the data, then a *z*-statistic determines the *p*-value.
@@ -348,7 +348,7 @@ Exercises 11-18. A retailer maintains a Web site that it uses to attract shopper
 Exercises 19-26. An accounting firm is considering offering investment advice in addition to its current focus on tax planning. Its analysis of the costs and benefits of adding this service indicates that it will be profitable if 40% or more of its current customer base use it. The firm pans to survey its customer who will use the service if offered, and let *p̂* denote the proportion who say in a survey that they will use this service. The firm does not want to invest in the expansion unless data show that it will be profitable.
 
 19. If *H~0~* holds, then *p̂* in the sample will be less than 0.4.
-20. By setting a small *α*-level, the accounting firm reduces the chance of a test indicating that is should add this new service even though it is not profitable.
+20. By setting a small *α*-level, the accounting firm reduces the chance of a test indicating that it should add this new service even though it is not profitable.
 21. If *p̂* is larger than 0.4, a test will reject the appropriate null hypothesis for this context.
 22. The larger the absolute value of the *z*-statistic that compares *p̂* to *p*, the smaller the *p-*value.
 23. The mean of the sampling distribution of *p̂* that is used to determine whether a statistically significant result has been obtained in this example is 0.4.
@@ -479,7 +479,6 @@ Exercises 19-26. An accounting firm is considering offering investment advice in
     \(c\) How large could the kurtosis be without violating the CLT condition?
 
     \(d\) Find the *p*-value of the test. Do the data supply enough evidence to reject the null hypothesis if *α* = 0.05?
-
 
 46. Brand managers become concerned if they discover that customers are again and moving out of the high-spending age groups. For example, the average Cadillac buyer is older than 60, past the prime middle years that typically are associated with more spending. Part of the importance to Cadillac of the success of the Escalade model has been its ability to draw in younger customers. If a sample of 50 Escalade purchasers has average age 45 (with standard deviation 25), is this compelling evidence that Escalade buyers are younger on average than the typical Cadillac buyer? (Assume that the data meet the sample size condition.)
 
@@ -947,35 +946,35 @@ d.  What's the advantage of using a normal quantile plot to check for normality?
 
 Match the description of each concept with the correct symbol or term.
 
-+-----------------------------------------------------+-----------------+
-| Concept                                             | Term/Symbol     |
-+=====================================================+=================+
-| Symbol for the explanatory variable in a regression | $r^2$           |
-+-----------------------------------------------------+-----------------+
-| Symbol for the response in a regression             | *b*~0~          |
-+-----------------------------------------------------+-----------------+
-| Fitted value from an estimated regression equation  | *ȳ*             |
-+-----------------------------------------------------+-----------------+
-| Residsual from an estimated regression equation     | *b*~1~          |
-+-----------------------------------------------------+-----------------+
-| Identifies the intercept in a fitted line           | *X*             |
-+-----------------------------------------------------+-----------------+
-| Identifies the slope in a fitted line               | *ŷ*             |
-+-----------------------------------------------------+-----------------+
-| Percentage variation described by a fitted line     | *b*~0~ *+ b*~1~ |
-+-----------------------------------------------------+-----------------+
-| Symbol for the standard deviation of the residuals  | *Y*             |
-+-----------------------------------------------------+-----------------+
-| Prediction from a fitted line is *x = x̄*            | *y - ŷ*         |
-+-----------------------------------------------------+-----------------+
-| Prediction from a fitted line is *x = 1*            | *s*~e~          |
-+-----------------------------------------------------+-----------------+
++---------------------------------------------------------+-----------------+
+| Concept                                                 | Term/Symbol     |
++=========================================================+=================+
+| 1.  Symbol for the explanatory variable in a regression | $r^2$           |
++---------------------------------------------------------+-----------------+
+| 2.  Symbol for the response in a regression             | *b*~0~          |
++---------------------------------------------------------+-----------------+
+| 3.  Fitted value from an estimated regression equation  | *ȳ*             |
++---------------------------------------------------------+-----------------+
+| 4.  Residsual from an estimated regression equation     | *b*~1~          |
++---------------------------------------------------------+-----------------+
+| 5.  Identifies the intercept in a fitted line           | *X*             |
++---------------------------------------------------------+-----------------+
+| 6.  Identifies the slope in a fitted line               | *ŷ*             |
++---------------------------------------------------------+-----------------+
+| 7.  Percentage variation described by a fitted line     | *b*~0~ *+ b*~1~ |
++---------------------------------------------------------+-----------------+
+| 8.  Symbol for the standard deviation of the residuals  | *Y*             |
++---------------------------------------------------------+-----------------+
+| 9.  Prediction from a fitted line is *x = x̄*            | *y - ŷ*         |
++---------------------------------------------------------+-----------------+
+| 10. Prediction from a fitted line is *x = 1*            | *s*~e~          |
++---------------------------------------------------------+-----------------+
 
 ## True or False
 
 Mark each statement True or False. If you believe that a statement is false, briefly explain why you think it is false.
 
-![](ae_13-images/chpt_19-ques_28.png){width="177"}
+![](ae_13-images/chpt_19-scatterplot.png){width="177"}
 
 11. In a scatterplot, the response is shown on the horizontal axis with the explanatory variable on the vertical axis.
 
@@ -1008,15 +1007,16 @@ Mark each statement True or False. If you believe that a statement is false, bri
 ## Think About It
 
 23. If the correlation between X and Y is *r* = 0.5, do *X* and *Y* share half of their variation in common?
+
 24. The value of $r^2 = 1$ if data lie along a simple line. Is it possible to fit a linear regression for which $r^2$ is exactly equal to zero?
+
 25. In general, is the linear least squares regression equation of *Y* on *X* the same as the equation for regressing *X* on *Y*?
-26. In what special case does the regression of *Y* on *X* math the regression of *X* on *Y,* so that if two fitted lines were drawn on the same plot, the lines would coincide?
+
+26. In what special case does the regression of *Y* on *X* match the regression of *X* on *Y,* so that if two fitted lines were drawn on the same plot, the lines would coincide?
+
 27. From looking at this plot of the residuals from a linear equation, estimate the value of $s_e$.
 
-
-28. This histogram summarizes residuals from a fit that regresses the number of items produced by 50 employees during a shift on the number of years with the company. Estimate $s_e$ from this plot.
-![](ae_13-imachpt_19-scatterplot.png.png){width="177"}
-
+28. This histogram summarizes residuals from a fit that regresses the number of items produced by 50 employees during a shift on the number of years with the company. Estimate $s_e$ from this plot. ![](ae_13-images/chpt_19-ques_28.png)
 
 29. A package delivery service uses a regression equation to estimate the fuel costs of its trucks based on the number of mile driven. The equation is of the form $\text{Estimated Dollars} = b_0 + b_1$ Miles. If gasoline prices go up, how would you expect the fit of this equation to change?
 
@@ -1036,7 +1036,7 @@ Mark each statement True or False. If you believe that a statement is false, bri
 
     \(d\) Do you expect patterns in the variation around the equation?
 
-34. Costs for building a new elementary school in the United States average about \$100 per square foot. In a review of school construction projects in Arizona, the head of the Department of Education exam- ined a scatterplot of the cost of recently completed schools (*Y)* versus the size of the school (in square feet, X).
+34. Costs for building a new elementary school in the United States average about \$100 per square foot. In a review of school construction projects in Arizona, the head of the Department of Education examined a scatterplot of the cost of recently completed schools (*Y)* versus the size of the school (in square feet, X).
 
     \(a\) Would you expect a linear equation to describe these data?
 

@@ -3,3 +3,135 @@ title: "Exam 3 revision - reduced version"
 output: 
    html_document
 ---
+
+Some of you asked for the population of all possible questions for the next exam. It is [here](https://stats1010-f22.github.io/website/supplemental/ae-13.html).
+
+Please review [AE-10](https://stats1010-f22.github.io/website/ae/ae-11.html) and [AE-11](https://stats1010-f22.github.io/website/ae/ae-12.html). Some additional questions for your perusal are below:
+
+# Chapter 16
+
++-------------------------------------------------------------------------------------------------------+--------------------+
+| Concept                                                                                               | Term/Symbol        |
++=======================================================================================================+====================+
+| 1.  One-sided null hypothesis                                                                         | *t*-statistic      |
++-------------------------------------------------------------------------------------------------------+--------------------+
+| 2.  Identifies the alternative hypothesis                                                             | μ~0~               |
++-------------------------------------------------------------------------------------------------------+--------------------+
+| 3.  Maximum tolerance for incorrectly rejecting H~0~                                                  | *p-*value          |
++-------------------------------------------------------------------------------------------------------+--------------------+
+| 4.  Number of standard errors that separate an observed statistic from the boundary of H~0~           | *p-*value \< *α*   |
++-------------------------------------------------------------------------------------------------------+--------------------+
+| 5.  Number of estimated standard errors that separate an observed statistic from the boundary of H~0~ | Type I error       |
++-------------------------------------------------------------------------------------------------------+--------------------+
+| 6.  Largest α-level for which a test rejects the null hypothesis                                      | z-statistic        |
++-------------------------------------------------------------------------------------------------------+--------------------+
+| 7.  Occurs if the *p-*value is less than α when H~0~ is true                                          | Type II error      |
++-------------------------------------------------------------------------------------------------------+--------------------+
+| 8.  Occurs if the *p-*value is larger than α when H~0~ is false                                       | α-level            |
++-------------------------------------------------------------------------------------------------------+--------------------+
+| 9.  Symbol for the largest or smallest mean specified by the null hypothesis                          | H~0~: μ ≥ 0        |
++-------------------------------------------------------------------------------------------------------+--------------------+
+| 10. Indicates a statistically significant result                                                      | H~a~,H1            |
++-------------------------------------------------------------------------------------------------------+--------------------+
+
+11. A retailer maintains a Web site that it uses to attract shoppers. The average purchase amount is \$80. The retailer is evaluating a new Web site intended to encourage shoppers to spend more. Let *μ* represent the average amount spent per customer at its redesigned Web site. True or False: If the *p*-value of the test of H~0~ is less than *α*, then the test has produced a Type II error.
+
+12. An accounting firm is considering offering investment advice in addition to its current focus on tax planning. Its analysis of the costs and benefits of adding this service indicates that it will be profitable if 40% or more of its current customer base use it. The firm pans to survey its customer who will use the service if offered, and let *p̂* denote the proportion who say in a survey that they will use this service. The firm does not want to invest in the expansion unless data show that it will be profitable. True or False: If *p̂* is larger than 0.4, a test will reject the appropriate null hypothesis for this context.
+
+13. Consider the following test of whether a coin is fair. Toss the coin three times. If the coin lands either all heads or all tails, reject *H~0~* : *p* = 1/2. (The *p* denotes the chance for the coin to land on heads.)
+
+    \(a\) What is the probability of a Type I error for this procedure?
+
+    \(b\) If *p* = 3/4, what is the probability of a Type II error for this procedure? (The null hypothesis remains the same.)
+
+14. The Human Resources (HR) group gives job applicants at a firm a personality test to assess how well they will fit into the firm and get along with colleagues. Historically, test scores have been normally distribution with mean *μ* and standard deviation σ = 25. The HR group wants to hire applicants whose true personality rating *μ* is greater than 200 points. (Test scores are an imperfect measure of true personality.)
+
+    \(a\) Before seeing test result, should the HR group assert as the null hypothesis that *μ* for an applicants is greater than 200 or less than 200?
+
+    \(b\) If the HR group chooses H~0~: μ **≤** 200, then for what test scores (approximately) will the HR group reject *H~0~* if *α* = 2.5%?
+
+    \(c\) What is the chance of a Type II error using the procedure in part (b) if the true score of an applicant is 225?
+
+15. Field test of a low-calorie sport drink found that 80 of the 100 who tasted the beverage preferred it to the regular higher-calorie drink. A break-even analysis indicates that the launch of this product will be profitable if the beverage is preferred by more than 75% of all customers.
+
+    \(a\) State the null and alternative hypotheses.
+
+    \(b\) Describe a Type I error and a Type II error in this context.
+
+    \(c\) Find the *p*-value for a test of the null hypothesis. If *α* = 0.10, does the test reject *H~0~?*
+
+# Chapter 17
+
+1.  Plot used for visual comparison of results in two (or more) groups (a) t = -4.6
+
+2.  Difference between the averages in two samples (b) t = 1.3
+
+3.  Difference between the averages in two populations (c) $\mu_1 - \mu_2$
+
+4.  Name given to the variable that specifies the treatments in an experiment (d) $\sqrt{s_1^2/n_1+s_2^2/n_2}$
+
+5.  Estimate of the standard error of the difference between two sample means (e) n - 1
+
+6.  Avoids confounding in a two-sample comparison (f) $\bar{x}_1 - \bar{x}_2$
+
+7.  Test statistic indicating a statistically significant result if $\alpha$ = 0.05 and $H_0$:$\mu_1 - \mu_2 \geq 0$ (g) Confounding
+
+8.  Test statistic indicating that a mean difference is not statistically significant if $\alpha$ = 0.05 (h) Randomization
+
+9.  The number of degrees of freedom in a paired t-test (i) Factor
+
+10. Multiple factors explain the difference between two samples (j) Comparison boxplot
+
+11. True or False: The t-statistic in a two-sample test does not depend on units.
+
+12. A business offers its employees free membership in a local fitness center. Rather than ask the employees if they like this benefit, the company developed a measure of productivity for each employee based on the number of claims handled. To assess the program, managers measured productivity of staff members both before and after the introduction of this program. How should these data be analyzed in order to judge the effect of the exercise program?
+
+13. Members of a sales force were randomly assigned to two management groups. Each group employed a different technique for motivating and supporting the sales team. Let's label these groups A and B, and let $\mu_A$ and $\mu_A$ denote the mean weekly sales generated by members of the two groups. The 95% confidence interval for $\mu_A - \mu_B$ was found to be \[\$500, \$2,200\].
+
+    \(a\) If profits are 40% of sales, what's the 95% confidence interval for the difference in profits generated by the two methods?
+
+    \(b\) Assuming the usual conditions, should we conclude that the approach taken by Group A sells more than that taken by Group B, or can we dismiss the observed difference as due to chance?
+
+    \(c\) The manager responsible for Group B complained that his group had been assigned the "poor performers" and that the results were not his fault. How would you respond?
+
+# Chapter 19
+
++---------------------------------------------------------+-----------------+
+| Concept                                                 | Term/Symbol     |
++=========================================================+=================+
+| 1.  Symbol for the explanatory variable in a regression | $r^2$           |
++---------------------------------------------------------+-----------------+
+| 2.  Symbol for the response in a regression             | *b*~0~          |
++---------------------------------------------------------+-----------------+
+| 3.  Fitted value from an estimated regression equation  | *ȳ*             |
++---------------------------------------------------------+-----------------+
+| 4.  Residsual from an estimated regression equation     | *b*~1~          |
++---------------------------------------------------------+-----------------+
+| 5.  Identifies the intercept in a fitted line           | *X*             |
++---------------------------------------------------------+-----------------+
+| 6.  Identifies the slope in a fitted line               | *ŷ*             |
++---------------------------------------------------------+-----------------+
+| 7.  Percentage variation described by a fitted line     | *b*~0~ *+ b*~1~ |
++---------------------------------------------------------+-----------------+
+| 8.  Symbol for the standard deviation of the residuals  | *Y*             |
++---------------------------------------------------------+-----------------+
+| 9.  Prediction from a fitted line is *x = x̄*            | *y - ŷ*         |
++---------------------------------------------------------+-----------------+
+| 10. Prediction from a fitted line is *x = 1*            | *s*~e~          |
++---------------------------------------------------------+-----------------+
+
+11. True or False: The use of a linear equation to describe the association between price and sales implies that we expect equal differences in sales when comparing periods with prices \$10 and \$11 and periods with prices \$20 and \$21.
+
+12. True or False: The sum of the fitted value $\hat{y}$ plus the residual $e$ is equal to the original data value $y$.
+
+13. The value of $r^2 = 1$ if data lie along a simple line. Is it possible to fit a linear regression for which $r^2$ is exactly equal to zero?
+
+14. Costs for building a new elementary school in the United States average about \$100 per square foot. In a review of school construction projects in Arizona, the head of the Department of Education examined a scatterplot of the cost of recently completed schools (*Y)* versus the size of the school (in square feet, X).
+
+    \(a\) Would you expect a linear equation to describe these data?
+
+    \(b\) What would you expect for the intercept of the linear model?
+
+    \(c\) What would you expect for the slope?
+
+    \(d\) Do you expect patterns in the variation around the equation?
