@@ -1,6 +1,5 @@
 ---
-title: "Exam 3 revision"
+title: "Exam 3 revision - reduced version"
 output: 
    html_document
 ---
-
