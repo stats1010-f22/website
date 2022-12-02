@@ -35,7 +35,7 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 ```{r load-data}
 #| include: false
 # Load your data here
-titanic <- read_csv(here("repo-structure/data/titanic.csv"))
+titanic <- read_csv(here("data/titanic.csv"))
 ```
 
 ## A statement of the overall goal / research question
@@ -136,7 +136,7 @@ If you want to generate a table, make sure it is in the HTML format (instead of 
 kable(head(titanic), format = "html")
 ```
 
-# Some text {background-image="https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_boston-terrier_desktop.jpg?h=475&la=en&w=825&hash=DC3F38D08CCE086118327D827C002A62" background-size="cover"}
+# Some text {background-image="https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_boston-terrier_desktop.jpg?h" background-size="cover"}
 
 # Math Expressions
 
