@@ -35,7 +35,7 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 ```{r load-data}
 #| include: false
 # Load your data here
-titanic <- read_csv(here("data/titanic.csv"))
+# titanic <- read_csv(here("data/titanic.csv"))
 ```
 
 ## A statement of the overall goal / research question
