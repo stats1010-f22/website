@@ -1,0 +1,27 @@
+---
+title: "Active listening tool - 1"
+output: 
+   html_document
+---
+
+::: callout-important
+This application exercise is due on 8 Sept at 2:00pm.
+:::
+
+| Group | Title | Comments ((I notice..., I wonder...)) |
+|-------|-------|---------------------------------------|
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
+|       |       |                                       |
