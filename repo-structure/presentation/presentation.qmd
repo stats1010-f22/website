@@ -118,7 +118,7 @@ diamonds_modified <-
 ggplot(data = diamonds_modified, 
        mapping = aes(x = carat, 
                      y = price, 
-                     color = sum_cut_color)) +
+                     color = sum_cut_color_x)) +
   geom_point() + 
   theme_minimal() # theme options: https://ggplot2.tidyverse.org/reference/ggtheme.html
 ```
