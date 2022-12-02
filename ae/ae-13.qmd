@@ -10,29 +10,29 @@ Please review [AE-10](https://stats1010-f22.github.io/website/ae/ae-11.html) and
 
 # Chapter 16
 
-+-------------------------------------------------------------------------------------------------------+--------------------+
-| Concept                                                                                               | Term/Symbol        |
-+=======================================================================================================+====================+
-| 1.  One-sided null hypothesis                                                                         | *t*-statistic      |
-+-------------------------------------------------------------------------------------------------------+--------------------+
-| 2.  Identifies the alternative hypothesis                                                             | μ~0~               |
-+-------------------------------------------------------------------------------------------------------+--------------------+
-| 3.  Maximum tolerance for incorrectly rejecting H~0~                                                  | *p-*value          |
-+-------------------------------------------------------------------------------------------------------+--------------------+
-| 4.  Number of standard errors that separate an observed statistic from the boundary of H~0~           | *p-*value \< *α*   |
-+-------------------------------------------------------------------------------------------------------+--------------------+
-| 5.  Number of estimated standard errors that separate an observed statistic from the boundary of H~0~ | Type I error       |
-+-------------------------------------------------------------------------------------------------------+--------------------+
-| 6.  Largest α-level for which a test rejects the null hypothesis                                      | z-statistic        |
-+-------------------------------------------------------------------------------------------------------+--------------------+
-| 7.  Occurs if the *p-*value is less than α when H~0~ is true                                          | Type II error      |
-+-------------------------------------------------------------------------------------------------------+--------------------+
-| 8.  Occurs if the *p-*value is larger than α when H~0~ is false                                       | α-level            |
-+-------------------------------------------------------------------------------------------------------+--------------------+
-| 9.  Symbol for the largest or smallest mean specified by the null hypothesis                          | H~0~: μ ≥ 0        |
-+-------------------------------------------------------------------------------------------------------+--------------------+
-| 10. Indicates a statistically significant result                                                      | H~a~,H1            |
-+-------------------------------------------------------------------------------------------------------+--------------------+
++-------------------------------------------------------------------------------------------------------+------------------+
+| Concept                                                                                               | Term/Symbol      |
++=======================================================================================================+==================+
+| 1.  One-sided null hypothesis                                                                         | *t*-statistic    |
++-------------------------------------------------------------------------------------------------------+------------------+
+| 2.  Identifies the alternative hypothesis                                                             | μ~0~             |
++-------------------------------------------------------------------------------------------------------+------------------+
+| 3.  Maximum tolerance for incorrectly rejecting H~0~                                                  | *p-*value        |
++-------------------------------------------------------------------------------------------------------+------------------+
+| 4.  Number of standard errors that separate an observed statistic from the boundary of H~0~           | *p-*value \< *α* |
++-------------------------------------------------------------------------------------------------------+------------------+
+| 5.  Number of estimated standard errors that separate an observed statistic from the boundary of H~0~ | Type I error     |
++-------------------------------------------------------------------------------------------------------+------------------+
+| 6.  Largest α-level for which a test rejects the null hypothesis                                      | z-statistic      |
++-------------------------------------------------------------------------------------------------------+------------------+
+| 7.  Occurs if the *p-*value is less than α when H~0~ is true                                          | Type II error    |
++-------------------------------------------------------------------------------------------------------+------------------+
+| 8.  Occurs if the *p-*value is larger than α when H~0~ is false                                       | α-level          |
++-------------------------------------------------------------------------------------------------------+------------------+
+| 9.  Symbol for the largest or smallest mean specified by the null hypothesis                          | H~0~: μ ≥ 0      |
++-------------------------------------------------------------------------------------------------------+------------------+
+| 10. Indicates a statistically significant result                                                      | H~a~,H1          |
++-------------------------------------------------------------------------------------------------------+------------------+
 
 11. A retailer maintains a Web site that it uses to attract shoppers. The average purchase amount is \$80. The retailer is evaluating a new Web site intended to encourage shoppers to spend more. Let *μ* represent the average amount spent per customer at its redesigned Web site. True or False: If the *p*-value of the test of H~0~ is less than *α*, then the test has produced a Type II error.
 

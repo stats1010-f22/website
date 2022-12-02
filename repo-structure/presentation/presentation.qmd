@@ -11,25 +11,31 @@ output:
     lib_dir: libs
     nature:
       ratio: "16:9"
-      highlightStyle: github
+      highlightStyle: solarized-dark
       highlightLines: true
       countIncrementalSlides: false
 ---
 
-```{r load-packages, include = FALSE}
+```{r load-packages}
+#| include: false
 # Add any additional packages you need to this chunk
 library(tidyverse)
 library(tidymodels)
 library(knitr)
 ```
 
-```{r setup, include=FALSE}
+```{r setup}
+#| include: false
+#| 
 # For better figure resolution
 knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618, out.width = "80%")
 ```
 
-```{r load-data, include=FALSE}
+```{r load-data}
+#| include: false
 # Load your data here
+
+titanic <- 
 ```
 
 ## A statement of the overall goal / research question
@@ -87,8 +93,6 @@ words here
 
 # a boring regression
 model <- lm(dist ~ speed, data = cars)
-tidy(model)
-glance(model)
 ```
 
 # Plots

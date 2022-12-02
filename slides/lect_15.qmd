@@ -93,9 +93,9 @@ What are the null and alternate hypothesis for these decisions?
 ## Example 1 solns
 
 ::: incremental
--   $H_0 = $ Person is not hired
--   $H_0 = $ Retain the current method
--   $H_0 = $ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found.
+-   \$H_0 = \$ Person is not hired
+-   \$H_0 = \$ Retain the current method
+-   \$H_0 = \$ Treat claims as legitimate. The employee is innocent until evidence to the contrary is found.
 :::
 
 ## Past tests
@@ -121,7 +121,7 @@ d.  What is the probability that the father has made a Type I error?
 
 a.  $H_0$ = chain is being honest; $H_A$ = chain is not being honest
 b.  Falsely accusing the chain of being deceptive
-c.  Failting to realize that the chain is being deceptive
+c.  Failing to realize that the chain is being deceptive
 d.  Father rejects if both are missing a prize. $P(neither has a prize) = (1 - 1/4)^2 \approx 0.56$
 
 ## Test statistic
@@ -138,18 +138,18 @@ $$p_0 \sim N(p_0,  \frac{{p_0}(1-{p_0})}{n}) $$
 
 Under $H_0$, we find
 
-$$z_0 = \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} $$ 
+$$z_0 = \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} $$
 
 ## Assumptions
 
 ::: incremental
--   *SRS* and sample must be < $10\%$ of population
+-   *SRS* and sample must be \< $10\%$ of population
 -   Both $np_0$ and $n(1-p_0)$ are larger than 10
 :::
 
 ## Example 3
 
-In the ESP example, we know that the population average for  guessing ESP cards is 9 out of 24 cards. An interested participant  took a training course to enhance their ESP. In the followup exam, they guessed 17 out of 36 cards. Did the course improve their ESP abilities?
+In the ESP example, we know that the population average for guessing ESP cards is 9 out of 24 cards. An interested participant took a training course to enhance their ESP. In the followup exam, they guessed 17 out of 36 cards. Did the course improve their ESP abilities?
 
 ## Steps for a hypothesis test
 
@@ -166,7 +166,7 @@ In the ESP example, we know that the population average for  guessing ESP cards 
 ::: incremental
 1.  $H_0: p \leq 9/24$ and $H_A: p > 9/24$
 2.  $\alpha = 0.05$
-3.  Yes `9/24*36` and `(1-9/24)*36` both > 10
+3.  Yes `9/24*36` and `(1-9/24)*36` both \> 10
 4.  $\hat{p} = \frac{x}{n} = \frac{17}{36} =0.472$
 5.  $\begin{aligned} z_0 &= \frac{\hat{p} - p_0} {\sqrt{\frac{p_0(1-p_0)}{n}}} \\ &= \frac{0.472 - 0.375} {\sqrt{\frac{0.375(1-0.375)}{36}}} \\ &= \frac{0.0972}{0.0807} \approx 1.2 \end{aligned}$
 :::
@@ -176,10 +176,8 @@ In the ESP example, we know that the population average for  guessing ESP cards 
 ::: incremental
 5.  `1 -pnorm(1.2)` or `1- pnorm((17/36- 9/24)/sqrt((0.375*(1-0.375))/36))` $\approx 0.115$
 6.  Since $0.115 > \alpha = 0.05$ this is not significant.
-7. We *fail to reject* $H_0$.  The score does not provide evidence that the intervention improved ESP.
+7.  We *fail to reject* $H_0$. The score does not provide evidence that the intervention improved ESP.
 :::
-
-
 
 # Testing a mean
 
@@ -189,19 +187,18 @@ To test a mean, $\bar{x}$, we must have a distribution with which to compare it.
 
 Under $H_0$, we find
 
-$$t = \frac{\bar{X} - \mu_0} {s/\sqrt{{n}}} $$ 
+$$t = \frac{\bar{X} - \mu_0} {s/\sqrt{{n}}} $$
 
 ## Assumptions
 
 ::: incremental
--   *SRS* and sample must be < $10\%$ of population
+-   *SRS* and sample must be \< $10\%$ of population
 -   If we do not know if the population is normal, $n > 10|K_4|$
 :::
 
 ## Example 4
 
 Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that the sample comes from a distribution where the population mean is less than $\mu_0 = 4000$
-
 
 ## Steps for a hypothesis test
 
@@ -226,12 +223,10 @@ Let $\bar{x} = 3281$, $s = 529$, and $n = 59$. Perform a hypothesis test that th
 ## Example 4 - solns
 
 ::: incremental
-5.  `pt(-10.44, df = 58)` or 
-`pt((3281-4000)/(529/sqrt(59)), df = 58)` $\approx 3.07e-15$
-6.  Since  $3.07e-15 < \alpha = 0.05$ this is significant.
-7. We *reject* $H_0$.  There is *very strong* evidence that the mean value is less than 4000.
+5.  `pt(-10.44, df = 58)` or `pt((3281-4000)/(529/sqrt(59)), df = 58)` $\approx 3.07e-15$
+6.  Since $3.07e-15 < \alpha = 0.05$ this is significant.
+7.  We *reject* $H_0$. There is *very strong* evidence that the mean value is less than 4000.
 :::
-
 
 # Do extremists see the world in black and white?
 
