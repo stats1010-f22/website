@@ -22,9 +22,6 @@ Make a plot
 #| echo: true
 #| eval: true
 
-# Code hidden with echo: FALSE
-# Uses modified titanic dataset from previous chunk
-# Play around with height and width until you're happy with the look
 ggplot(data = diamonds, 
        mapping = aes(x = carat, 
                      y = price, 
