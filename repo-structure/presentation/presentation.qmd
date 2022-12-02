@@ -22,7 +22,7 @@ output:
 library(tidyverse)
 library(tidymodels)
 library(knitr)
-library(here)
+# library(here)
 ```
 
 ```{r setup}
