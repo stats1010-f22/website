@@ -543,7 +543,7 @@
     "href": "ae/ae-14.html",
     "title": "Downloading plots from R",
     "section": "",
-    "text": "Load packages, data\n\n\n\nMake a plot\n\n# Code hidden with echo: FALSE\n# Uses modified titanic dataset from previous chunk\n# Play around with height and width until you're happy with the look\nggplot(data = diamonds, \n       mapping = aes(x = carat, \n                     y = price, \n                     color = cut)) +\n  geom_point() + \n  theme_minimal() # add a theme of your choice!\n\n\n\n\nExport to add to your presentation."
+    "text": "Load packages, data\n\n\n\nMake a plot\n\nggplot(data = diamonds, \n       mapping = aes(x = carat, \n                     y = price, \n                     color = cut)) +\n  geom_point() + \n  theme_minimal() # add a theme of your choice!\n\n\n\n\nExport to add to your presentation."
   },
   {
     "objectID": "ae/ae-4.html",
