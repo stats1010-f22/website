@@ -96,30 +96,29 @@ model <- lm(price ~ carat, data = diamonds)
 
 # Plots
 
-```{r titanic_modified}
+```{r diamonds_modified}
 #| echo: false
 #| eval: true
 
 # In this chunk I'm doing a bunch of analysis that I don't want to present 
 # in my slides. But I need the resulting data frame for a plot I want to present.
-titanic_modified <- 
-    titanic %>%
-    group_by(Pclass) %>%
-    mutate(total_class_fare = sum(Fare),
-           Survived_num = ifelse(Survived == "yes", 1, 0))
+diamonds_modified <- 
+    diamonds %>%
+    group_by(cut, color) %>%
+    mutate(sum_cut_color_x = sum(x))
 ```
 
-```{r plot-titanic_modified}
+```{r plot-diamonds_modified}
 #| echo: false
 #| eval: true
 
 # Code hidden with echo: FALSE
 # Uses modified titanic dataset from previous chunk
 # Play around with height and width until you're happy with the look
-ggplot(data = titanic_modified, 
-       mapping = aes(x = Age, 
-                     y = Survived_num, 
-                     color = total_class_fare)) +
+ggplot(data = diamonds_modified, 
+       mapping = aes(x = carat, 
+                     y = price, 
+                     color = sum_cut_color)) +
   geom_point() + 
   theme_minimal() # theme options: https://ggplot2.tidyverse.org/reference/ggtheme.html
 ```
@@ -130,10 +129,10 @@ ggplot(data = titanic_modified,
 
 If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
 
-```{r head-titanic}
+```{r head-diamonds}
 #| echo: false
 #| eval: true
-kable(head(titanic), format = "html")
+kable(head(diamonds), format = "html")
 ```
 
 # Some text {background-image="https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_boston-terrier_desktop.jpg?h" background-size="cover"}
