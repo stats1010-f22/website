@@ -139,11 +139,11 @@ kable(head(diamonds), format = "html")
 
 # Math Expressions
 
-You can write LaTeX math expressions inside a pair of dollar signs, e.g. \$\alpha+\beta\$ renders $\alpha+\beta$. You can use the display style with double dollar signs:
+You can write LaTeX math expressions inside a pair of dollar signs, e.g. \$b_0+b_1\$ renders $b_0+b_1$. You can use the display style with double dollar signs:
 
     $$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
 
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+$$\bar{X}=\frac{1}{n}sumX_i$$
 
 Limitations:
 

@@ -1,0 +1,36 @@
+---
+title: "Downloading plots from `R`"
+output: 
+   html_document
+---
+
+# Load packages, data
+
+```{r load-packages, eval=FALSE, echo=TRUE}
+#| warning: false
+#| message: false
+
+## loading libraries
+library(tidyverse) # for data analysis and visualisation
+```
+
+Make a plot
+
+```{r plot-diamonds_modified}
+#| echo: true
+#| eval: true
+
+# Code hidden with echo: FALSE
+# Uses modified titanic dataset from previous chunk
+# Play around with height and width until you're happy with the look
+ggplot(data = diamonds, 
+       mapping = aes(x = carat, 
+                     y = price, 
+                     color = cut)) +
+  geom_point() + 
+  theme_minimal() # add a theme of your choice!
+```
+
+Export to add to your presentation.
+
+![](ae-14_images/export.png)
