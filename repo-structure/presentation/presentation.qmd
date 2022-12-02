@@ -1,7 +1,7 @@
 ---
-title: "Presentation title"
-subtitle: "Presentation subtitle (if any)"
-author: "Team name <br> Names of team members"
+title: "R is a great language"
+subtitle: "and the praise package is the best package"
+author: "gwynn and Patrick"
 institute: "Wharton School of Business"
 date: "`r Sys.Date()`"
 output:
@@ -22,11 +22,12 @@ output:
 library(tidyverse)
 library(tidymodels)
 library(knitr)
+library(here)
 ```
 
 ```{r setup}
 #| include: false
-#| 
+
 # For better figure resolution
 knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618, out.width = "80%")
 ```
@@ -34,8 +35,7 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 ```{r load-data}
 #| include: false
 # Load your data here
-
-titanic <- 
+titanic <- read_csv(here("repo-structure/data/titanic.csv"))
 ```
 
 ## A statement of the overall goal / research question
@@ -68,8 +68,7 @@ Our project will demonstrate that the `praise` package is by far the best `R` pa
 You can use plain text
 
 -   or bullet points
-
-.footnote\[ \[\*\] And add footnotes\]
+-   another thing
 
 # Two columns
 
@@ -92,28 +91,35 @@ words here
 #| eval: true
 
 # a boring regression
-model <- lm(dist ~ speed, data = cars)
+model <- lm(price ~ carat, data = diamonds)
 ```
 
 # Plots
 
-```{r recode-species}
-#| echo: false
-
-# In this chunk I'm doing a bunch of analysis that I don't want to present 
-# in my slides. But I need the resulting data frame for a plot I want to present.
-iris_modified <- iris %>%
-  mutate(Species = fct_other(Species, keep = "setosa"))
-```
-
-```{r plot-iris}
+```{r titanic_modified}
 #| echo: false
 #| eval: true
 
-# Code hidden with echo = FALSE
-# Uses modified iris dataset from previous chunk
+# In this chunk I'm doing a bunch of analysis that I don't want to present 
+# in my slides. But I need the resulting data frame for a plot I want to present.
+titanic_modified <- 
+    titanic %>%
+    group_by(Pclass) %>%
+    mutate(total_class_fare = sum(Fare),
+           Survived_num = ifelse(Survived == "yes", 1, 0))
+```
+
+```{r plot-titanic_modified}
+#| echo: false
+#| eval: true
+
+# Code hidden with echo: FALSE
+# Uses modified titanic dataset from previous chunk
 # Play around with height and width until you're happy with the look
-ggplot(data = iris_modified, mapping = aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
+ggplot(data = titanic_modified, 
+       mapping = aes(x = Age, 
+                     y = Survived_num, 
+                     color = total_class_fare)) +
   geom_point() + 
   theme_minimal() # theme options: https://ggplot2.tidyverse.org/reference/ggtheme.html
 ```
@@ -124,10 +130,10 @@ ggplot(data = iris_modified, mapping = aes(x = Sepal.Width, y = Sepal.Length, co
 
 If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
 
-```{r iris-table}
+```{r head-titanic}
 #| echo: false
 #| eval: true
-kable(head(diamonds), format = "html")
+kable(head(titanic), format = "html")
 ```
 
 # Some text {background-image="https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_boston-terrier_desktop.jpg?h=475&la=en&w=825&hash=DC3F38D08CCE086118327D827C002A62" background-size="cover"}

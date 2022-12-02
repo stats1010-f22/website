@@ -9,9 +9,9 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.1.251">
 
-  <meta name="author" content="Team name   Names of team members">
+  <meta name="author" content="gwynn and Patrick">
   <meta name="dcterms.date" content="2022-12-01">
-  <title>STAT 1010 - Fall 2022 - Presentation title</title>
+  <title>STAT 1010 - Fall 2022 - R is a great language</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -383,11 +383,11 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Presentation title">
-<meta property="og:description" content="Presentation subtitle (if any)">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - R is a great language">
+<meta property="og:description" content="and the praise package is the best package">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Presentation title">
-<meta name="twitter:description" content="Presentation subtitle (if any)">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - R is a great language">
+<meta name="twitter:description" content="and the praise package is the best package">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -396,9 +396,9 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Presentation title</h1>
-  <p class="subtitle">Presentation subtitle (if any)</p>
-  <p class="author">Team name <br> Names of team members</p>
+  <h1 class="title">R is a great language</h1>
+  <p class="subtitle">and the praise package is the best package</p>
+  <p class="author">gwynn and Patrick</p>
   <p class="institute">Wharton School of Business</p>
   <p class="date">2022-12-01</p>
 </section>
@@ -444,8 +444,8 @@
 <p>You can use plain text</p>
 <ul>
 <li>or bullet points</li>
+<li>another thing</li>
 </ul>
-<p>.footnote[ [*] And add footnotes]</p>
 </section>
 
 <section>
@@ -466,7 +466,7 @@
 <h1>Code</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># a boring regression</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> carat, <span class="at">data =</span> diamonds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 
@@ -477,7 +477,7 @@
 
 </div>
 
-<img data-src="presentation_files/figure-revealjs/plot-iris-1.png" style="width:80.0%" class="r-stretch"></section>
+<img data-src="presentation_files/figure-revealjs/plot-titanic_modified-1.png" style="width:80.0%" class="r-stretch"></section>
 <section class="slide level2">
 
 </section></section>
@@ -490,90 +490,76 @@
 <table>
  <thead>
   <tr>
-   <th style="text-align:right;"> carat </th>
-   <th style="text-align:left;"> cut </th>
-   <th style="text-align:left;"> color </th>
-   <th style="text-align:left;"> clarity </th>
-   <th style="text-align:right;"> depth </th>
-   <th style="text-align:right;"> table </th>
-   <th style="text-align:right;"> price </th>
-   <th style="text-align:right;"> x </th>
-   <th style="text-align:right;"> y </th>
-   <th style="text-align:right;"> z </th>
+   <th style="text-align:left;"> Name </th>
+   <th style="text-align:left;"> Sex </th>
+   <th style="text-align:right;"> Age </th>
+   <th style="text-align:right;"> Siblings/Spouses Aboard </th>
+   <th style="text-align:right;"> Parents/Children Aboard </th>
+   <th style="text-align:right;"> Fare </th>
+   <th style="text-align:left;"> Pclass </th>
+   <th style="text-align:left;"> Survived </th>
   </tr>
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:right;"> 0.23 </td>
-   <td style="text-align:left;"> Ideal </td>
-   <td style="text-align:left;"> E </td>
-   <td style="text-align:left;"> SI2 </td>
-   <td style="text-align:right;"> 61.5 </td>
-   <td style="text-align:right;"> 55 </td>
-   <td style="text-align:right;"> 326 </td>
-   <td style="text-align:right;"> 3.95 </td>
-   <td style="text-align:right;"> 3.98 </td>
-   <td style="text-align:right;"> 2.43 </td>
+   <td style="text-align:left;"> Mr. Owen Harris Braund </td>
+   <td style="text-align:left;"> male </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 7.2500 </td>
+   <td style="text-align:left;"> 3rd </td>
+   <td style="text-align:left;"> no </td>
   </tr>
   <tr>
-   <td style="text-align:right;"> 0.21 </td>
-   <td style="text-align:left;"> Premium </td>
-   <td style="text-align:left;"> E </td>
-   <td style="text-align:left;"> SI1 </td>
-   <td style="text-align:right;"> 59.8 </td>
-   <td style="text-align:right;"> 61 </td>
-   <td style="text-align:right;"> 326 </td>
-   <td style="text-align:right;"> 3.89 </td>
-   <td style="text-align:right;"> 3.84 </td>
-   <td style="text-align:right;"> 2.31 </td>
+   <td style="text-align:left;"> Mrs. John Bradley (Florence Briggs Thayer) Cumings </td>
+   <td style="text-align:left;"> female </td>
+   <td style="text-align:right;"> 38 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 71.2833 </td>
+   <td style="text-align:left;"> 1st </td>
+   <td style="text-align:left;"> yes </td>
   </tr>
   <tr>
-   <td style="text-align:right;"> 0.23 </td>
-   <td style="text-align:left;"> Good </td>
-   <td style="text-align:left;"> E </td>
-   <td style="text-align:left;"> VS1 </td>
-   <td style="text-align:right;"> 56.9 </td>
-   <td style="text-align:right;"> 65 </td>
-   <td style="text-align:right;"> 327 </td>
-   <td style="text-align:right;"> 4.05 </td>
-   <td style="text-align:right;"> 4.07 </td>
-   <td style="text-align:right;"> 2.31 </td>
+   <td style="text-align:left;"> Miss. Laina Heikkinen </td>
+   <td style="text-align:left;"> female </td>
+   <td style="text-align:right;"> 26 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 7.9250 </td>
+   <td style="text-align:left;"> 3rd </td>
+   <td style="text-align:left;"> yes </td>
   </tr>
   <tr>
-   <td style="text-align:right;"> 0.29 </td>
-   <td style="text-align:left;"> Premium </td>
-   <td style="text-align:left;"> I </td>
-   <td style="text-align:left;"> VS2 </td>
-   <td style="text-align:right;"> 62.4 </td>
-   <td style="text-align:right;"> 58 </td>
-   <td style="text-align:right;"> 334 </td>
-   <td style="text-align:right;"> 4.20 </td>
-   <td style="text-align:right;"> 4.23 </td>
-   <td style="text-align:right;"> 2.63 </td>
+   <td style="text-align:left;"> Mrs. Jacques Heath (Lily May Peel) Futrelle </td>
+   <td style="text-align:left;"> female </td>
+   <td style="text-align:right;"> 35 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 53.1000 </td>
+   <td style="text-align:left;"> 1st </td>
+   <td style="text-align:left;"> yes </td>
   </tr>
   <tr>
-   <td style="text-align:right;"> 0.31 </td>
-   <td style="text-align:left;"> Good </td>
-   <td style="text-align:left;"> J </td>
-   <td style="text-align:left;"> SI2 </td>
-   <td style="text-align:right;"> 63.3 </td>
-   <td style="text-align:right;"> 58 </td>
-   <td style="text-align:right;"> 335 </td>
-   <td style="text-align:right;"> 4.34 </td>
-   <td style="text-align:right;"> 4.35 </td>
-   <td style="text-align:right;"> 2.75 </td>
+   <td style="text-align:left;"> Mr. William Henry Allen </td>
+   <td style="text-align:left;"> male </td>
+   <td style="text-align:right;"> 35 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 8.0500 </td>
+   <td style="text-align:left;"> 3rd </td>
+   <td style="text-align:left;"> no </td>
   </tr>
   <tr>
-   <td style="text-align:right;"> 0.24 </td>
-   <td style="text-align:left;"> Very Good </td>
-   <td style="text-align:left;"> J </td>
-   <td style="text-align:left;"> VVS2 </td>
-   <td style="text-align:right;"> 62.8 </td>
-   <td style="text-align:right;"> 57 </td>
-   <td style="text-align:right;"> 336 </td>
-   <td style="text-align:right;"> 3.94 </td>
-   <td style="text-align:right;"> 3.96 </td>
-   <td style="text-align:right;"> 2.48 </td>
+   <td style="text-align:left;"> Mr. James Moran </td>
+   <td style="text-align:left;"> male </td>
+   <td style="text-align:right;"> 27 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 8.4583 </td>
+   <td style="text-align:left;"> 3rd </td>
+   <td style="text-align:left;"> no </td>
   </tr>
 </tbody>
 </table>
