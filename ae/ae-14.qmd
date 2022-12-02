@@ -6,9 +6,11 @@ output:
 
 # Load packages, data
 
-```{r load-packages, eval=FALSE, echo=TRUE}
+```{r load-packages}
 #| warning: false
 #| message: false
+#| eval: true
+#| echo: false
 
 ## loading libraries
 library(tidyverse) # for data analysis and visualisation
