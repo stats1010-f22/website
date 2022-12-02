@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Team name   Names of team members">
-<meta name="dcterms.date" content="2022-11-27">
+<meta name="author" content="gwynn and Patrick">
+<meta name="dcterms.date" content="2022-12-02">
 
-<title>STAT 1010 - Fall 2022 - Presentation title</title>
+<title>STAT 1010 - Fall 2022 - R is a great language</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,11 +127,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="STAT 1010 - Fall 2022 - Presentation title">
-<meta property="og:description" content="Presentation subtitle (if any)">
+<meta property="og:title" content="STAT 1010 - Fall 2022 - R is a great language">
+<meta property="og:description" content="and the praise package is the best package">
 <meta property="og:site-name" content="STAT 1010 - Fall 2022">
-<meta name="twitter:title" content="STAT 1010 - Fall 2022 - Presentation title">
-<meta name="twitter:description" content="Presentation subtitle (if any)">
+<meta name="twitter:title" content="STAT 1010 - Fall 2022 - R is a great language">
+<meta name="twitter:description" content="and the praise package is the best package">
 <meta name="twitter:creator" content="@nzgwynn">
 <meta name="twitter:card" content="summary">
 </head>
@@ -142,7 +142,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Presentation title</h1>
+      <h1 class="quarto-secondary-nav-title">R is a great language</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -439,8 +439,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Presentation title</h1>
-<p class="subtitle lead">Presentation subtitle (if any)</p>
+<h1 class="title d-none d-lg-block">R is a great language</h1>
+<p class="subtitle lead">and the praise package is the best package</p>
 </div>
 
 
@@ -449,7 +449,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    Team name <br> Names of team members 
+    gwynn and Patrick 
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -464,7 +464,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 27, 2022</p>
+      <p class="date">December 2, 2022</p>
     </div>
   </div>
   
@@ -510,8 +510,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You can use plain text</p>
 <ul>
 <li>or bullet points</li>
+<li>another thing</li>
 </ul>
-<p>.footnote[ [*] And add footnotes]</p>
 </section>
 <section id="two-columns" class="level1">
 <h1>Two columns</h1>
@@ -530,25 +530,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Code</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a boring regression</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(dist <span class="sc">~</span> speed, <span class="at">data =</span> cars)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic  p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-1 (Intercept)   -17.6      6.76      -2.60 1.23e- 2
-2 speed           3.93     0.416      9.46 1.49e-12</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 12
-  r.squared adj.r.squa…¹ sigma stati…²  p.value    df logLik   AIC   BIC devia…³
-      &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
-1     0.651        0.644  15.4    89.6 1.49e-12     1  -207.  419.  425.  11354.
-# … with 2 more variables: df.residual &lt;int&gt;, nobs &lt;int&gt;, and abbreviated
-#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance
-# ℹ Use `colnames()` to see all variable names</code></pre>
-</div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> carat, <span class="at">data =</span> diamonds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="plots" class="level1">
@@ -558,7 +540,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="presentation_files/figure-html/plot-iris-1.png" class="img-fluid" style="width:80.0%"></p>
+<p><img src="presentation_files/figure-html/plot-diamonds_modified-1.png" class="img-fluid" style="width:80.0%"></p>
 </div>
 </div>
 <hr>
@@ -663,8 +645,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="some-text" class="level1" data-background-image="https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_boston-terrier_desktop.jpg?h=475&amp;la=en&amp;w=825&amp;hash=DC3F38D08CCE086118327D827C002A62" data-background-size="cover">
-<h1 data-background-image="https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_boston-terrier_desktop.jpg?h=475&amp;la=en&amp;w=825&amp;hash=DC3F38D08CCE086118327D827C002A62" data-background-size="cover">Some text</h1>
+<section id="some-text" class="level1" data-background-image="https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_boston-terrier_desktop.jpg?h" data-background-size="cover">
+<h1 data-background-image="https://www.purina.com.au/-/media/project/purina/main/breeds/dog/dog_boston-terrier_desktop.jpg?h" data-background-size="cover">Some text</h1>
 </section>
 <section id="math-expressions" class="level1">
 <h1>Math Expressions</h1>
