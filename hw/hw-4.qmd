@@ -1,0 +1,58 @@
+---
+title: "hw-4-instructions"
+format: html
+editor: visual
+---
+
+## Introduction
+
+For this homework assignment we will be exploring the [Diamonds](https://www.diamondse.info/) dataset. You will find [this document](https://stats1010-f22.github.io/website/supplemental/tests_R.html#comparison) which introduces `R` commands necessary for this homework indispensable. Please review it thoroughly.
+
+### Learning goals
+
+In this assignment, you will...
+
+-   Find confidence intervals and perform hypothesis tests for proportions in `R`.
+-   Interpret confidence intervals and hypothesis tests for the proportions.
+-   Fit a linear model to data in `R`.
+-   Find and plot residuals in `R`.
+
+## Getting started
+
+### Log in to RStudio
+
+Click on your *Stat1010.Rproj* that we made the first day of class.
+
+Go to *File* ➛ *New File* ➛ *Quarto Document* and name the document *hw-4* click *create.*
+
+## Packages
+
+The following packages will be used in this assignment:
+
+```{r}
+#| message: false
+#| eval: false
+
+library(tidyverse) # for data manipulation and data visualization
+library(tidymodels) # for model fitting and to get residuals
+
+```
+
+## Data: Diamonds
+
+The diamonds dataset, from the `tidyverse()` set of packages, contains information on 53,940 round diamonds from the [Loose Diamonds Search Engine](https://www.diamondse.info/).
+
+1.  In `R`, compute a 97% confidence interval for the population proportion of diamonds that have an `Ideal` `cut` and interpret it in context.
+
+2.  In `R`, test the hypothesis that the population proportion of `Fair` diamonds is not equal to 3.5% and interpret it. Include all hypotheses, and the test statistic.
+
+3.  In `R`, test the hypothesis that the population proportion of diamonds with `Very Good` cut and the `best colour` and is equal to the population proportion of diamonds with `Premium` cut and the `best colour`. Include all hypotheses, and the test statistic, and interpret the test in context.
+
+4.  Use `R` to fit a least squares line of best fit to predict the `price` of a diamond using `x`. Interpret $b_0$, $b_1$, and $R^2$ in context, then plot the residuals and comment on the plot. Find the predicted value of price for $x = 1.5$ and comment on the validity of this prediction. If a diamonds length increased by 5mm, our model predicts what increase in price?
+
+| Component | Points |
+|-----------|--------|
+| 1         | 2      |
+| 2         | 4      |
+| 3         | 3      |
+| 4         | 10     |
