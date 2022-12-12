@@ -52,7 +52,6 @@ For the diamonds dataset:
     -   predictor
 :::
 
-
 ## Plot the data
 
 ```{r price_vs_carat}
@@ -102,6 +101,7 @@ diamonds %>%
 #  {background-image="lect_18-things/error_term.jpg" background-size="contain"}
 
 ## Least squares
+
 ```{r}
 diamonds %>% 
   slice_sample(n = 200) %>% 
@@ -171,7 +171,6 @@ carat is on the bottom b/c it is the x, always x on the bottom.
 
 -   Our model is: $\widehat{\text{price}} = -2256.36 + 7756.426 \cdot \text{carat}$
 :::
-
 
 ## Example 1
 

@@ -1,0 +1,24 @@
+---
+title: "Revision for last exam"
+output: 
+   html_document
+---
+
+These materials may be useful:
+
+[Revision 1 for exam 1](https://stats1010-f22.github.io/website/ae/ae-6.html)
+
+[Revision 2 for exam 1](https://stats1010-f22.github.io/website/ae/ae-7.html)
+
+[Exam 1 study guide](https://stats1010-f22.github.io/website/supplemental/exam-1-studyguide.html)
+
+[Exam 2 revison](https://stats1010-f22.github.io/website/ae/ae-10.html)
+
+[Exam 2 study guide](https://stats1010-f22.github.io/website/supplemental/exam-2-studyguide.html)
+
+[Exam 3 revison - short](https://stats1010-f22.github.io/website/ae/ae-13.html)
+
+[Exam 3 revison - comprehensive](https://stats1010-f22.github.io/website/supplemental/ae-13.html)
+
+[Exam 3 studyguide](https://stats1010-f22.github.io/website/supplemental/exam-revision-3.html)
+
