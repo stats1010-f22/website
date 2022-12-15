@@ -46,7 +46,7 @@ The diamonds dataset, from the `tidyverse()` set of packages, contains informati
 
 2.  In `R`, test the hypothesis that the population proportion of `Fair` diamonds is not equal to 3.5% and interpret it. Include all hypotheses, and the test statistic.
 
-3.  In `R`, test the hypothesis that the population proportion of diamonds with `Very Good` cut and the `best colour` and is equal to the population proportion of diamonds with `Premium` cut and the `best colour`. Include all hypotheses, and the test statistic, and interpret the test in context.
+3.  In `R`, test the hypothesis that the population proportion of diamonds with `Very Good` cut and the `best colour` is equal to the population proportion of diamonds with `Premium` cut and the `best colour`. Include all hypotheses, and the test statistic, and interpret the test in context.
 
 4.  Use `R` to fit a least squares line of best fit to predict the `price` of a diamond using `x`. Interpret $b_0$, $b_1$, and $R^2$ in context, then plot the residuals and comment on the plot. Find the predicted value of price for $x = 1.5$ and comment on the validity of this prediction. If a diamonds length increased by 5mm, our model predicts what increase in price?
 
